@@ -22,6 +22,7 @@
 - Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder.
 - Reset to default buttons
 - Restart Firefox.<br>
+
 ![312928271-02aa4ab1-466c-4e23-9d45-36d47d5f32b5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/00a16ca6-5abb-4348-beb8-5e581b2fdcb1)
 ![312928291-c7eb12a0-9703-4d59-a044-73ab54146e15](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/d3dc1665-b34e-4643-af20-b1545eb6250f)
 
