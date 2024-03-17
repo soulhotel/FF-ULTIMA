@@ -23,11 +23,24 @@
 ![312928271-02aa4ab1-466c-4e23-9d45-36d47d5f32b5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/00a16ca6-5abb-4348-beb8-5e581b2fdcb1)
 ![312928291-c7eb12a0-9703-4d59-a044-73ab54146e15](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/d3dc1665-b34e-4643-af20-b1545eb6250f)
 
+### Preview
+![Screenshot_2 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/24e63f2f-db73-41d9-807e-960e0317fa90)
+![1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/1c35e238-c3e2-49ca-93f9-171b7cb483c6)
+![3](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/ae37f749-0f94-4ef8-b235-533dea6f3b59)
+![4](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c68efbf7-545e-4850-8e3b-57cdb94b6cb8)
+![Screenshot_1 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/29d23c09-4164-4f86-bfb8-c2d48ee75626)
+![5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/19f0cbf3-6490-453c-86c7-df937598839a)
+![6](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/4440ad6b-2240-4b9f-86cf-f58d5dcb2e58)
+
+
 ### Notes
 - sharing this to give some of you guys a resource to work off of, a lot of work went into this
 - im handing this off to you now, you got this. 🤝
-<br>
+- the mini button bar works with the following buttons:
+
+![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
 - and yes, you can collapse the tabs, although improvements can be made:
+
 ![collapsed works (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cf4ce7e0-34ed-4f9c-8168-f7e9215deafc)
 <br>
 <br>
