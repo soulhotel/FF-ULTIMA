@@ -1,4 +1,4 @@
-# <p align="center"> FF CSS ULTIMA... </p>
+# <p align="center"> FF ULTIMA... </p>
 ###### <p align="center">. . . a sequel to [Perfection FF CSS Theme](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme) </p>
 ###### <p align="center">Beautiful. light-weight. a 100% CSS. and a 100% over-the-top name to break the fourth wall!</p>
 
