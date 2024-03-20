@@ -10,7 +10,7 @@
 
 ---
 
-## Switching between color schemees
+## Switching between color schemes
 
 ### /theme/switch color scheme/
 ###### there are two options. Full Moon Ultima. Dusky Ultima.
@@ -25,7 +25,21 @@
 ---
 ---
 
+### I was able to create Dusky, just like this.
+- Open up Live Debugger `ctrl+shift+alt+I`
+- Type `--uc-ultima-window`
+- Find the full list of my variables
+- start tinkering.
+#### Note: When creating color schemes its important to use consistent layers of colors. For Dusky I had to Invert every white and every black. Then I had to coordinate proper accent colors to compliment the white backgrounds i decided on.
+
+![Screenshot_7](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/88e4ac9e-68e0-48de-a9bc-517c14f1a23f)
+
+---
+---
+
 ## Modifications for power users
+
+
 ### /theme/all-global-positioning.css
 
 - adjust the size of the tabs, line 6, set your desired value `--uc-vertical-tabs-width`MINIMUM '40px'
