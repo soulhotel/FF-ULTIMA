@@ -20,7 +20,7 @@
 ### Installation
 ###### Firefox 60+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
 - Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder.
-- Please have system theme enabled, not firefox dakr/light, they are different.
+- Please have system theme enabled for first install, not firefox dark/light, they are different.
 - Reset to default buttons
 - Restart Firefox.<br>
 
