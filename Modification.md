@@ -1,6 +1,33 @@
+## Switching between XS, S, L
+
+## /theme/switch color scheme/
+###### there are two options. Full Moon Ultima. Dusky Ultima.
+
+- copy and paste the all-global-theme.css file from one of these folders,
+- copy it into your [ chrome > theme ] folder.
+- it should replace the file there.
+- restart firefox.
+- enjoy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Modifications for power users
 
-## /themes/all-global-positioning.css
+## /theme/all-global-positioning.css
 
 - adjust the size of the tabs, line 99, set your desired value `--uc-vertical-tabs-width`
 - remove tabs, set `--uc-vertical-tabs-width` to `0.1` not 0
@@ -17,12 +44,9 @@
 - you can adjust when the buttons dissappear, line 93
 - with minor adjustments you can adjust the number of buttons allowed, and size them based on view height
 
-## /themes/all-global-positioning.css
+## /theme/all-global-positioning.css
 
 - everything related to color, borders, shadows, are located here
-- line 6 to 11
+- line 21 to 36
   - `--uc-tabs-background`, sidebar header: `--uc-sb-themed`, sidebar body: `--uc-sb-themed-two`, `--uc-sb-background`
-- line 14 to 21
-  - scroll bar color, and customize toolbar page color
-- the rest is pretty simple, theme the window using the properties above
-- and when themes are used from add on store, the windows will be themed using `--lwt-accent-color`
+
