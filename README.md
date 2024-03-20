@@ -11,16 +11,16 @@
 ![preview](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/b821b649-bdbb-4da2-9a50-f57f08d8f53a)
 
 ### Features
-- NO extensions used, NO sidebar needed.
+- NO extensions used, NO sidebar needed
 - `Vertical Tabs` and a `One Line Nav Bar`
 - a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone
 - Can personalize colors in `all-global-theme.css`, or just go to the addon store, it works with all themes
 - Thats it really, previews below.
 
 ### Installation
-###### Firefox 60+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
-- Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder.
-- Please have system theme enabled for first install, not firefox dark/light, they are different.
+###### Firefox 60+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
+- Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder
+- Please have system theme enabled for first install, not firefox dark/light, they are different
 - Reset to default buttons
 - Restart Firefox.<br>
 
