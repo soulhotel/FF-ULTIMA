@@ -1,9 +1,9 @@
 ## Switching between XS, S, L
 ### /userChrome.css
 - very simple. in userChrome change `all-global-positioning.css` to: <br>
-[XS, 40px] --> `all-global-positioning-xs.css` <br>
-[S, 140px] --> `all-global-positioning-s.css` <br>
-[L, 250px] --> `all-global-positioning.css` <br>
+[XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
+[S, 140px TABS] --> `all-global-positioning-s.css` <br>
+[L, 250px TABS] --> `all-global-positioning.css` <br>
 
 ![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/bc163429-8cc5-4bf2-9f05-c24913840756)
 ![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cda8598e-7725-475d-9966-bdfc277c7797)
