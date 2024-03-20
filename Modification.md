@@ -14,13 +14,12 @@
 - all-global-positioning-s.css
 - all-global-positioning-xs.css
 - all-global-positioning.css
+![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/bc163429-8cc5-4bf2-9f05-c24913840756)
+![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cda8598e-7725-475d-9966-bdfc277c7797)
 
-
-
-
-
-
-
+---
+---
+---
 
 ## Modifications for power users
 ### /theme/all-global-positioning.css
