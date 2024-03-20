@@ -1,35 +1,41 @@
-## Switching between color schemees
-
-### /theme/switch color scheme/
-###### there are two options. Full Moon Ultima. Dusky Ultima.
-- copy and paste the all-global-theme.css file from one of these folders,
-- copy it into your [ chrome > theme ] folder.
-- it should replace the file there.
-- restart firefox.
-- enjoy.
-
 ## Switching between XS, S, L
 ### /userChrome.css
-- very simple. in userChrome change all-global-positioning, three options.
-- all-global-positioning-s.css
-- all-global-positioning-xs.css
-- all-global-positioning.css
+- very simple. in userChrome change `all-global-positioning.css` to: <br>
+[XS, 40px] --> `all-global-positioning-xs.css` <br>
+[S, 140px] --> `all-global-positioning-s.css` <br>
+[L, 250px] --> `all-global-positioning.css` <br>
+
 ![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/bc163429-8cc5-4bf2-9f05-c24913840756)
 ![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cda8598e-7725-475d-9966-bdfc277c7797)
 
 ---
+
+## Switching between color schemees
+
+### /theme/switch color scheme/
+###### there are two options. Full Moon Ultima. Dusky Ultima.
+- find the `switch color scheme folder` located in chrome/theme/switchcolorscheme/
+- copy and paste the `all-global-theme.css` file from one of these folders,
+- copy it into your [ chrome > theme ] folder.
+- it should replace the file there.
+- same for [ icons ] folder
+- restart firefox.
+- enjoy.
+
 ---
 ---
 
 ## Modifications for power users
 ### /theme/all-global-positioning.css
 
-- adjust the size of the tabs, line 99, set your desired value `--uc-vertical-tabs-width`
+- adjust the size of the tabs, line 6, set your desired value `--uc-vertical-tabs-width`MINIMUM '40px'
 - remove tabs, set `--uc-vertical-tabs-width` to `0.1` not 0
-- remove rounded window borders, line 8 `--uc-all-border-radius`
-- adjust spacing between windows, line 9 `--uc-all-margins`
-- sidebar margins, line 16 `--uc-sb-margins`
-- bookmarks toolbar height, line 18 `--uc-bookbar-height`
+- bookmarks toolbar height `--uc-bookbar-height` line 16
+- all rounded corners `--uc-all-border-radius` line 25-26
+- all margins, "spacing between windows" `--uc-all-margins` line 31-37
+- inidividual tabs height `--tab-min-height` line 41
+- do not touch tabs width.
+- fatter, skinnier tabs `--tab-block-margin` line 45
 
 ### /verttab/mini-button-bar
 
