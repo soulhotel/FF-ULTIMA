@@ -31,7 +31,7 @@
 - Type `--uc-ultima-window`
 - Find the full list of my variables
 - Start tinkering.
-- And when you find color combinations that you like, copy and replace them in the original file. `global-theme.css`
+- And when you find color combinations that you like, copy and replace them in the original file. `all-global-theme.css`
 ##### Note: When creating color schemes its important to use consistent layers of colors. For Dusky I had to Invert every white and every black. Then I had to coordinate proper accent colors to compliment the white backgrounds i decided on.
 
 ![Screenshot_7](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/88e4ac9e-68e0-48de-a9bc-517c14f1a23f)
