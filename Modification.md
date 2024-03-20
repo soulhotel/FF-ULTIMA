@@ -1,22 +1,19 @@
-## Switching between XS, S, L
+## Switching between color schemees
 
-## /theme/switch color scheme/
+### /theme/switch color scheme/
 ###### there are two options. Full Moon Ultima. Dusky Ultima.
-
 - copy and paste the all-global-theme.css file from one of these folders,
 - copy it into your [ chrome > theme ] folder.
 - it should replace the file there.
 - restart firefox.
 - enjoy.
 
-
-
-
-
-
-
-
-
+## Switching between XS, S, L
+### /userChrome.css
+- very simple. in userChrome change all-global-positioning, three options.
+- all-global-positioning-s.css
+- all-global-positioning-xs.css
+- all-global-positioning.css
 
 
 
@@ -26,8 +23,7 @@
 
 
 ## Modifications for power users
-
-## /theme/all-global-positioning.css
+### /theme/all-global-positioning.css
 
 - adjust the size of the tabs, line 99, set your desired value `--uc-vertical-tabs-width`
 - remove tabs, set `--uc-vertical-tabs-width` to `0.1` not 0
@@ -36,7 +32,7 @@
 - sidebar margins, line 16 `--uc-sb-margins`
 - bookmarks toolbar height, line 18 `--uc-bookbar-height`
 
-## /verttab/mini-button-bar
+### /verttab/mini-button-bar
 
 - delete the mini button bar BUT, you can also drag all buttons out and it will be gone
 - the following buttons work for the button bar, NO EXTENSIONS:
@@ -44,7 +40,7 @@
 - you can adjust when the buttons dissappear, line 93
 - with minor adjustments you can adjust the number of buttons allowed, and size them based on view height
 
-## /theme/all-global-positioning.css
+### /theme/all-global-positioning.css
 
 - everything related to color, borders, shadows, are located here
 - line 21 to 36
