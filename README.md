@@ -46,7 +46,10 @@
 - sharing this to give some of you guys a resource to work off of, a lot of work went into this
 - im handing this off to you now, you got this. 🤝
 
-- and yes, you can collapse the tabs, refer to the [Modifications](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md) page
+- yes, you can collapse the tabs
+- yes, you can remove tabs completely
+- yes, you can create your own color scheme, very recommended to make this project your own :)
+- refer to the [Modifications](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md) page for all the above.
 
 <br>
 <br>
