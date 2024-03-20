@@ -25,7 +25,7 @@
 ---
 ---
 
-### I was able to create Dusky, just like this.
+### Create a theme. I was able to create Dusky, just like this.
 ##### You atleast need to have knowledge on what live debugging is to proceed.
 - Open up Live Debugger `ctrl+shift+alt+I`
 - Type `--uc-ultima-window`
