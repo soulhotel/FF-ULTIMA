@@ -30,7 +30,7 @@
 
 
 ### Previews
-###### You can create your own themes live, with the (--uc-ultima) variables in debugging tool.
+###### Create your own color schemes live, in debugging tool. Use the [Modifications Page](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md)
 ![Screenshot_2 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/24e63f2f-db73-41d9-807e-960e0317fa90)
 ![Screenshot_4 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/5b981852-da3b-4e74-83a0-e61fa49af6ef)
 ![3](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/ae37f749-0f94-4ef8-b235-533dea6f3b59)
@@ -44,13 +44,11 @@
 - the mini button bar works with the following buttons:
 
 ![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
-- sharing this to give some of you guys a resource to work off of, a lot of work went into this
-- im handing this off to you now, you got this. 🤝
-
 - yes, you can collapse the tabs
 - yes, you can remove tabs completely
 - yes, you can create your own color scheme, very recommended to make this project your own :)
 - refer to the [Modifications](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md) page for all the above.
-
+- this isnt meant to be a product release, but a tool/resource, an idea and a foundation to work off of. thats why it is so light-weight.
+- im handing this off to you now, you got this. 🤝
 <br>
 <br>
