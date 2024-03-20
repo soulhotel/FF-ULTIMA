@@ -5,6 +5,7 @@
 [S, 140px TABS] --> `all-global-positioning-s.css` <br>
 [L, 250px TABS] --> `all-global-positioning.css` <br>
 
+![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/9a75ae49-2217-4757-ba89-15d99b545a26)
 ![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/bc163429-8cc5-4bf2-9f05-c24913840756)
 ![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cda8598e-7725-475d-9966-bdfc277c7797)
 
