@@ -20,10 +20,12 @@
 ### Installation
 ###### Firefox 60+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
 - Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder.
+- For consistency, please remove any, even dark/light theme you may have installed on firefox. You can put it back on after.
 - Reset to default buttons
 - Restart Firefox.<br>
 
 ![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/75b8bd2e-cb7c-457d-a9b1-7c5ee2023b05)
+![Screenshot_5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/70c3ea54-e464-4778-9ad3-934c4214f235)
 
 
 ### Previews
