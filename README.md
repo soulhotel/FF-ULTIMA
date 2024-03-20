@@ -8,12 +8,14 @@
 
 </div>
 
+![preview](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/b821b649-bdbb-4da2-9a50-f57f08d8f53a)
+
 ### Features
+- NO extensions used, NO sidebar needed.
 - `Vertical Tabs` and a `One Line Nav Bar`
-- no extensions needed, no sidebar used
 - a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone
-- Can personalize colors, or just go to the addon store, it works with all themes
-- Thats it really
+- Can personalize colors in `all-global-theme.css`, or just go to the addon store, it works with all themes
+- Thats it really, previews below.
 
 ### Installation
 ###### Firefox 60+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
@@ -24,9 +26,10 @@
 ![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/75b8bd2e-cb7c-457d-a9b1-7c5ee2023b05)
 
 
-### Preview
+### Previews
+###### You can create your own themes live, with the (--uc-ultima) variables in debugging tool.
 ![Screenshot_2 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/24e63f2f-db73-41d9-807e-960e0317fa90)
-![1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/1c35e238-c3e2-49ca-93f9-171b7cb483c6)
+![Screenshot_4 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/5b981852-da3b-4e74-83a0-e61fa49af6ef)
 ![3](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/ae37f749-0f94-4ef8-b235-533dea6f3b59)
 ![4](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c68efbf7-545e-4850-8e3b-57cdb94b6cb8)
 ![Screenshot_1 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/29d23c09-4164-4f86-bfb8-c2d48ee75626)
@@ -35,13 +38,13 @@
 
 
 ### Notes
-- sharing this to give some of you guys a resource to work off of, a lot of work went into this
-- im handing this off to you now, you got this. 🤝
 - the mini button bar works with the following buttons:
 
 ![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
-- and yes, you can collapse the tabs, although improvements can be made:
+- sharing this to give some of you guys a resource to work off of, a lot of work went into this
+- im handing this off to you now, you got this. 🤝
 
-![collapsed works (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cf4ce7e0-34ed-4f9c-8168-f7e9215deafc)
+- and yes, you can collapse the tabs, refer to the [Modifications](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md) page
+
 <br>
 <br>
