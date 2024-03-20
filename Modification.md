@@ -48,8 +48,12 @@
 
 ![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/4e3a989c-8366-4fcc-8933-d42449c8f51c)
 </details>
+<details>
+  <summary>(Using 'Firefox Colors app' to create themes)</summary>
 
----
+![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/50ede808-227d-4ef0-b49b-692c8cf70b64)
+</details>
+
 ---
 
 ## Modifications for power users
