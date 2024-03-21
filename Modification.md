@@ -19,6 +19,7 @@
 
 ### /theme/switch color scheme/
 ###### there are two options. Full Moon Ultima. Dusky Ultima.
+###### (Reccomended) Download the themes individually from the release page.
 - find the `switch color scheme folder` located in [ chrome/theme/switch color scheme/ ]
 - copy and paste the `all-global-theme.css` file from one of these folders,
 - copy it into your [ chrome > theme ] folder.
