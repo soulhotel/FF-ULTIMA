@@ -93,4 +93,5 @@
 - everything related to color, borders, shadows, are located here
 - line 21 to 36
   - `--uc-tabs-background`, sidebar header: `--uc-sb-themed`, sidebar body: `--uc-sb-themed-two`, `--uc-sb-background`
-
+- tabs auto collapse on full screen, line 290
+- tabs auto collapse when screen width falls below 850px, line 313
