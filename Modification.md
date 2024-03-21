@@ -75,7 +75,7 @@
 ### /verttab/mini-button-bar.css
 
 - for deletion, you can just drag all buttons out and it will be gone
-- change the color on the customize toolbar page, line 12, defaults to black for 'Full Moon', yellow for 'Dusky'
+- Color of Bar on customize-toolbar page, line 12, defaults black in `Full Moon`, yellow in `Dusky`
 - the following buttons work for the button bar, NO EXTENSIONS:
 ![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c0322340-9c81-47f3-bdda-44bd520cb14a)
 - you can adjust when the buttons dissappear, line 93
