@@ -61,14 +61,14 @@
 
 ### /theme/all-global-positioning.css
 
-- adjust the size of the tabs, line 6, set your desired value `--uc-vertical-tabs-width`MINIMUM '40px'
-- remove tabs, set `--uc-vertical-tabs-width` to `0.1` not 0
+- adjust the width of the tabs panel, line 6, set your desired value `--uc-vertical-tabs-width`MINIMUM '40px'
+- remove tabs, set `--uc-vertical-tabs-width` to `0.1` not '0'
 - bookmarks toolbar height `--uc-bookbar-height` line 16
 - all rounded corners `--uc-all-border-radius` line 25-26
 - all margins, "spacing between windows" `--uc-all-margins` line 31-37
 - inidividual tabs height `--tab-min-height` line 41
-- do not touch tabs width.
-- fatter, skinnier tabs `--tab-block-margin` line 45
+- do not touch (individual) tabs width.
+- fatter/skinnier tabs `--tab-block-margin` line 45
 
 ---
 
