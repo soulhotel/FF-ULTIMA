@@ -16,6 +16,7 @@
 - a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone
 - Can personalize colors in `all-global-theme.css`, or just go to the addon store, it works with all themes
 - Thats it really, previews below.
+- (New) (Optional) Autohide Tabs
 
 ### Installation
 ###### Firefox 120+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
