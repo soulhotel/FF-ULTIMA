@@ -11,23 +11,43 @@
 ![preview](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/b821b649-bdbb-4da2-9a50-f57f08d8f53a)
 
 ### Features
-- NO extensions used, NO sidebar needed
-- `Vertical Tabs` and a `One Line Nav Bar`
-- a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone
-- Can personalize colors in `all-global-theme.css`, or just go to the addon store, it works with all themes
-- Thats it really, previews below.
-- (New) (Optional) Autohide Tabs
+► NO extensions used, NO sidebar needed<br>
+► `Vertical Tabs` and a `One Line Nav Bar`<br>
+► a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone<br>
+► Can personalize colors in `all-global-theme.css`, or just go to the addon store<br>
+<details>
+<summary>(Click me) choose default size(Optional - 3 Options)</summary>
+  
+![choose size (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/59e43f2e-0da9-487d-842f-044cfdacbd84)
+</details>
+<details>
+<summary>(Click me) autohide tabs (Optional - 2 Options)</summary>
+  
+![optional-autohide-tabs](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/3e8c77eb-7e90-486a-89ca-5a3e608f97db)
+</details>
+<details>
+<summary>(Click me) clean new tab page</summary>
+  
+![clean new tab page](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c66a044f-186a-458f-b3c3-52b7be5c2528)
+</details>
 
 ### Installation
 ###### Firefox 120+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
-- Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder
-- Please have system theme enabled for first install, not firefox dark/light, they are different
-- Reset to default buttons
-- Restart Firefox.<br>
-
-![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/75b8bd2e-cb7c-457d-a9b1-7c5ee2023b05)
-![Screenshot_5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/70c3ea54-e464-4778-9ad3-934c4214f235)<br>
+► Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder<br>
+<details>
+<summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different</summary>
+  
+![Screenshot_5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/70c3ea54-e464-4778-9ad3-934c4214f235)
 ![Screenshot_8](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/019729c5-826a-4450-9d78-aec61ac3b4b1)
+</details>
+<details>
+<summary>(Click me) Reset toolbar to default buttons</summary>
+  
+![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/75b8bd2e-cb7c-457d-a9b1-7c5ee2023b05)
+</details>
+► Restart Firefox.<br>
+
+
 
 
 ### Previews
