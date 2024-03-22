@@ -26,7 +26,7 @@
 ![optional-autohide-tabs](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/3e8c77eb-7e90-486a-89ca-5a3e608f97db)
 </details>
 <details>
-<summary>(Click me) clean new tab page</summary>
+<summary>(Click me) cleaned the new tab page</summary>
   
 ![clean new tab page](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c66a044f-186a-458f-b3c3-52b7be5c2528)
 </details>
