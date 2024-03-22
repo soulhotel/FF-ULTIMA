@@ -13,7 +13,6 @@
 ### Features
 ► NO extensions used, NO sidebar needed<br>
 ► `Vertical Tabs` and a `One Line Nav Bar`<br>
-► a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone<br>
 ► Can personalize colors in `all-global-theme.css`, or just go to the addon store<br>
 <details>
 <summary>(Click me) choose default size (Optional - 3 Options)</summary>
@@ -24,6 +23,13 @@
 <summary>(Click me) autohide tabs (Optional - 2 Options)</summary>
   
 ![optional-autohide-tabs](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/3e8c77eb-7e90-486a-89ca-5a3e608f97db)
+</details>
+<details>
+<summary>(Click me) the Mini Button Bar</summary>
+pin/unpin up to 15 buttons, drag and drop functional, easily disable by dragging all buttons out.<br>
+works with the following buttons:<br> 
+
+![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
 </details>
 <details>
 <summary>(Click me) cleaned the new tab page</summary>
@@ -61,15 +67,3 @@
 ![6](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/4440ad6b-2240-4b9f-86cf-f58d5dcb2e58)
 
 
-### Notes
-- the mini button bar works with the following buttons:
-
-![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
-- yes, you can collapse the tabs
-- yes, you can remove tabs completely
-- yes, you can create your own color scheme, very recommended to make this project your own :)
-- refer to the [Modifications](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md) page for all the above.
-- this isnt meant to be a product release, but a tool/resource, an idea and a foundation to work off of. thats why it is so light-weight.
-- im handing this off to you now, you got this. 🤝
-<br>
-<br>
