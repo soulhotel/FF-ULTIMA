@@ -16,7 +16,7 @@
 ► a `Mini Button Bar` can pin/unpin 15 buttons, just drag and drop, simply remove all buttons and it is gone<br>
 ► Can personalize colors in `all-global-theme.css`, or just go to the addon store<br>
 <details>
-<summary>(Click me) choose default size(Optional - 3 Options)</summary>
+<summary>(Click me) choose default size (Optional - 3 Options)</summary>
   
 ![choose size (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/59e43f2e-0da9-487d-842f-044cfdacbd84)
 </details>
