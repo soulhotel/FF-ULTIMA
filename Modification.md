@@ -1,32 +1,20 @@
 ## Switching between XS, S, L
 ### /userChrome.css
-- very simple. in userChrome change `all-global-positioning.css` to: <br>
+- very simple. in userChrome change `all-global-positioning-L` to: <br>
 [XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
 [S, 140px TABS] --> `all-global-positioning-s.css` <br>
-[L, 250px TABS] --> `all-global-positioning.css` <br>
+[L, 250px TABS] --> `all-global-positioning-l.css` <br>
 
 ![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/9a75ae49-2217-4757-ba89-15d99b545a26)
-<details>
-  <summary>(Click me for picture instruction)</summary>
-
-![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/bc163429-8cc5-4bf2-9f05-c24913840756)
-![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/cda8598e-7725-475d-9966-bdfc277c7797)
-</details>
+![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/df0ddb4f-e8bf-46ff-8846-f7118739d874)
 
 ---
 
-## Switching between color schemes
+## Switching between color schemes - Picture above ^
 
-### /theme/switch color scheme/
-###### there are two options. Full Moon Ultima. Dusky Ultima.
-###### (Reccomended) Download the themes individually from the release page.
-- find the `switch color scheme folder` located in [ chrome/theme/switch color scheme/ ]
-- copy and paste the `all-global-theme.css` file from one of these folders,
-- copy it into your [ chrome > theme ] folder.
-- it should replace the file there.
-- same for [ icons ] folder
-- restart firefox.
-- enjoy.
+- very simple. in userChrome change `all-global-theme-fullmoon` to: <br>
+[Dark, Full Moon] --> `all-global-theme-fullmoon` <br>
+[Light, Dusky] --> `all-global-theme-dusky.css` <br>
 
 ---
 
@@ -57,7 +45,7 @@
 
 ---
 
-## Modifications for power users
+## Modifications for power users (Outdated line #'s, however the variables are still in the respected file)
 
 ### /theme/all-global-positioning.css
 
@@ -72,7 +60,7 @@
 
 ---
 
-### /verttab/mini-button-bar.css
+### /theme/function-mini-button-bar.css (Outdated line #'s, however the variables are still in the respected file)
 
 - for deletion, you can just drag all buttons out and it will be gone
 - Color of Bar on customize-toolbar page, line 12, defaults black in `Full Moon`, yellow in `Dusky`
@@ -88,7 +76,7 @@
 
 ---
 
-### /theme/all-global-positioning.css
+### /theme/all-global-theme.css (Outdated line #'s, however the variables are still in the respected file)
 
 - everything related to color, borders, shadows, are located here
 - line 21 to 36
