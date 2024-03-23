@@ -29,7 +29,7 @@
 ![Screenshot_7](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/88e4ac9e-68e0-48de-a9bc-517c14f1a23f)
 
 - Window-Color is only active for [ Dusky ] not for [ Full Moon ], to change window-color with the Full Moon Edition add this line to the list:
-- `--toolbar-bgcolor: var(--uc-ultima-window);`
+- `--toolbar-bgcolor: var(--uc-ultima-window);`, my variables will target the rest of the body and take care of the rest.
 - When creating color schemes its important to use consistent layers of colors. For Dusky I had to Invert every white and every black. Then I had to coordinate proper accent colors to compliment the white backgrounds i decided on.
 
 <details>
