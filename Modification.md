@@ -73,6 +73,7 @@
   - then, remove mouse events `.tabbrowser-tab{pointer-events: none !important;}`
   - then, increase the number of buttons in the mini-button-bar.css file
   - and use sidebery or treestyle tabs for your tabs instead
+  - you can use the S(40px tabs) Version of the theme, and the button bar will already be positioned to sit inside of the unused tabs space.
 
 ---
 
