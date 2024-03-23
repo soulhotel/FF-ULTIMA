@@ -67,7 +67,7 @@ works with the following buttons:<br>
 ![6](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/4440ad6b-2240-4b9f-86cf-f58d5dcb2e58)
 
 ##### (3/22/24) Linking the Modification page once more, this theme has a lot of potential for the community.
-##### Having the sidebar free to use, is a BIG thing, hopefully I can further improve it in the future. I've only been doing this CSS stuff about two months, Javascript for about a month.
+##### Having the sidebar free to use is a BIG thing, hopefully I can further improve it in the future. I've only been doing this CSS stuff about two months, Javascript for about a month.
 ##### If anyone out there has good experience with CSS flexboxs, feel free to fork/recreate this theme, Ive managed to get the tabs free flowing but some more can be done.
 ##### Custom Variables (--uc-ultima-etc) are used to target everything effected. Seperated and organized in a `global-theme` and `global-positioning` file.
 ##### Anyone that likes to design color schemes, it is supported using these variables in Live Debugger.
