@@ -21,6 +21,7 @@
 </details>
 <details>
 <summary>(Click me) autohide tabs (Optional - 2 Options)</summary>
+Move content to the side, or tabs overlay content.
   
 ![optional-autohide-tabs](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/3e8c77eb-7e90-486a-89ca-5a3e608f97db)
 </details>
