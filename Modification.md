@@ -1,12 +1,24 @@
 ## Switching between XS, S, L
-### /userChrome.css
+#### /userChrome.css
 - very simple. in userChrome change `all-global-positioning-L` to: <br>
 [XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
 [S, 140px TABS] --> `all-global-positioning-s.css` <br>
 [L, 250px TABS] --> `all-global-positioning-l.css` <br>
 
 ![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/9a75ae49-2217-4757-ba89-15d99b545a26)
-![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/df0ddb4f-e8bf-46ff-8846-f7118739d874)
+
+<details>
+  <summary>(Click me) File preview and animated toggling preview</summary>
+
+changing size to L, and enabling autohide  
+![changing settings](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/8c471fac-a96a-45b6-85d2-48b4f111fd81)
+
+the outcome: 250 size tabs, that auto collapse, autohiding is optional you do not need it
+![outcome](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/978d6c07-7d31-41e2-88b6-fae566fce387)
+
+these 4 lines contain everything<br>
+![Screenshot_3](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/cf2f256d-26e8-4248-b28a-e21281590ac7)
+</details>
 
 ---
 
@@ -19,7 +31,7 @@
 ---
 
 ### Create a theme. I was able to create Dusky, just like this.
-##### You atleast need to have knowledge on what live debugging is to proceed.
+###### You atleast need to have knowledge on what live debugging is to proceed.
 - Open up Live Debugger `ctrl+shift+alt+I`
 - Type `--uc-ultima-window` on the right side searchbar for css properties
 - Find the full list of my variables
