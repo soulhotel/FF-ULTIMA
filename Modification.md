@@ -41,7 +41,7 @@
 - Find color combinations that you like, copy them into your custom theme file
 - Congrats.
 
-![Screenshot_7](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/88e4ac9e-68e0-48de-a9bc-517c14f1a23f)
+![hQGFbQ4wcK](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/e95de06b-40d1-4ceb-aa42-b2afcb97d5e1)
 
 - Note: The variable `--uc-ultima-window` is only active for [ Dusky ] not for [ Full Moon ]
 - to change window-color in dark themes add this line to the list of variables:
