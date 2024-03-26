@@ -44,7 +44,7 @@
 ![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
 </details>
 <details>
-<summary>(BONUS) For those who read :) </summary>
+<summary>(BONUS) For Firefox 123+ Users</summary>
   
   ###### for Firefox 123, there's a cool little way to see tab previews on hover. This is in beta apparently: 
   ###### in URL bar goto `about:config` search for `Set browser.tabs.cardPreview.enabled` make it `true`
