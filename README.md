@@ -8,36 +8,42 @@
 
 </div>
 
-![preview](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/b821b649-bdbb-4da2-9a50-f57f08d8f53a)
+![K0PO17oNoZ](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/7a8c2a7c-205e-4ca4-a476-bba04d438576)
 
 ### Features
 ► NO extensions used, NO sidebar needed<br>
 ► `Vertical Tabs` and a `One Line Nav Bar`<br>
-► Can personalize colors in `all-global-theme.css`, or just go to the addon store<br>
+► Can create your own color schemes, or just go to the addon store<br>
+► `NEW` Full Moon (Dark) and Dusky (Light) automatically cycle depending on your systems current Color Mode
 <details>
-<summary>(Click me) choose default size (Optional - 3 Options)</summary>
+<summary>(Click me) Showing off free Sidebar, Bookmarks toolbar, Menubar, Find bar</summary>
   
+  ###### Can drag/resize the Sidebar to be tiny or up to 50% screen width.
+  
+![Qs0spmpmqv](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d42c2545-ca59-4259-9d07-899a3d17947d)
+</details>
+<details>
+<summary>(Click me) choose size of tabs (Optional - 3 Options)</summary>
+
+  ###### Picture only shows two, but there are three options.
+
 ![choose size (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/59e43f2e-0da9-487d-842f-044cfdacbd84)
 </details>
 <details>
 <summary>(Click me) autohide tabs (Optional - 2 Options)</summary>
-Move content to the side, or tabs overlay content.
+
+  ###### Move content to the side, or tabs overlay content.
   
 ![optional-autohide-tabs](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/3e8c77eb-7e90-486a-89ca-5a3e608f97db)
 </details>
 <details>
 <summary>(Click me) the Mini Button Bar</summary>
-pin/unpin up to 15 buttons, drag and drop functional, easily disable by dragging all buttons out.<br>
-works with the following buttons:<br> 
+  
+  ###### pin/unpin up to 15 buttons, drag and drop functional, easily disable by dragging all buttons out. works with the following buttons: 
 
 ![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
 </details>
-<details>
-<summary>(Click me) cleaned the new tab page</summary>
   
-![clean new tab page](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c66a044f-186a-458f-b3c3-52b7be5c2528)
-</details>
-
 ### Installation
 ###### Firefox 120+ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
 ► Copy and paste the [Theme](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) into your chrome folder<br>
@@ -65,7 +71,6 @@ works with the following buttons:<br>
 ![Screenshot_4 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/5b981852-da3b-4e74-83a0-e61fa49af6ef)
 ![Screenshot_1 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/29d23c09-4164-4f86-bfb8-c2d48ee75626)
 ![5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/19f0cbf3-6490-453c-86c7-df937598839a)
-![6](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/4440ad6b-2240-4b9f-86cf-f58d5dcb2e58)
 
 ##### (3/22/24) Linking the Modification page once more, this theme has a lot of potential for the community.
 ##### I wanted to keep this relatively simple/lightweight, so others can pick/choose what they want, and add whatever they please later on. Anyway..
