@@ -4,7 +4,7 @@ Simply find the feature/file you want back, then replace it.
 
 ---
 
-###### chrome/themes/function-urlbar.css
+###### ← chrome/themes/function-urlbar.css
 
 return the "this time search with" URL BAR
 
