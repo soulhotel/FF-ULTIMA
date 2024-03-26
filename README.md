@@ -47,7 +47,7 @@
 <summary>(BONUS) For Firefox 123+ Users</summary>
   
   ###### for Firefox 123, there's a cool little way to see tab previews on hover. This is in beta apparently: 
-  ###### in URL bar goto `about:config` search for `Set browser.tabs.cardPreview.enabled` make it `true`
+  ###### in URL bar goto `about:config` search for `browser.tabs.cardPreview.enabled` make it `true`
 ![firefox_TZoHeF7NWe](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d857304a-efde-472d-ad43-17d4915d951b)
 </details>
   
