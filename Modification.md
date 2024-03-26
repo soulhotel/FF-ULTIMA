@@ -1,5 +1,5 @@
 ## Switching between XS, S, L
-#### /userChrome.css
+###### chrome/userChrome.css
 - very simple. in userChrome change `all-global-positioning-L` to: <br>
 [XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
 [S, 140px TABS] --> `all-global-positioning-s.css` <br>
@@ -10,48 +10,51 @@
 <details>
   <summary>(Click me) File preview and animated toggling preview</summary>
 
-changing size to L, and enabling autohide  
+###### changing size to L, and enabling autohide if you want that too.  
 ![changing settings](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/8c471fac-a96a-45b6-85d2-48b4f111fd81)
 
-the outcome: 250 size tabs, that auto collapse, autohiding is optional you do not need it
+###### the outcome: 250px size tabs, and they auto collapse to 40px if you add autohiding feature.
 ![outcome](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/978d6c07-7d31-41e2-88b6-fae566fce387)
 
-these 4 lines contain everything<br>
-![Screenshot_3](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/cf2f256d-26e8-4248-b28a-e21281590ac7)
 </details>
 
 ---
 
-## Switching between color schemes - Picture above ^
+## Switch color schemes `NEW` Color will automatically match system settings. You no longer need to manually switch files.
 
-- very simple. in userChrome change `all-global-theme-fullmoon` to: <br>
-[Dark, Full Moon] --> `all-global-theme-fullmoon` <br>
-[Light, Dusky] --> `all-global-theme-dusky.css` <br>
+![K0PO17oNoZ](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/28eb5cc1-d930-481e-851d-2457c0f4ecf2)
 
 ---
 
-### Create a theme. I was able to create Dusky, just like this.
-###### You atleast need to have knowledge on what live debugging is to proceed.
+## Create a theme. I was able to create Dusky, just like this.
+###### You atleast need to have knowledge on what live debugging is, to proceed.
+###### chrome/theme/all-global-theme-dusky.css
+- Make a copy of `all-global-theme-dusky.css`, for a light color scheme
+- And/Or a copy of `all-global-theme-fullmoon.css`, for a dark color scheme
+- Name your theme file `all-global-theme-dracula.css` ( just an example :/ )
+- In userChrome, rename the theme file above with the one you just created
 - Open up Live Debugger `ctrl+shift+alt+I`
 - Type `--uc-ultima-window` on the right side searchbar for css properties
-- Find the full list of my variables
+- Here you will find the full list of all theming variables used
 - Start tinkering.
-- And when you find color combinations that you like, copy and replace them in the original file. `all-global-theme.css`
+- You can create your theme live and see how the windows, colors, all look
+- Find color combinations that you like, copy them into your custom theme file
+- Congrats.
 
 ![Screenshot_7](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/88e4ac9e-68e0-48de-a9bc-517c14f1a23f)
 
-- Window-Color is only active for [ Dusky ] not for [ Full Moon ], to change window-color with the Full Moon Edition add this line to the list:
-- `--toolbar-bgcolor: var(--uc-ultima-window);`, my variables will target the rest of the body and take care of the rest.
-- When creating color schemes its important to use consistent layers of colors. For Dusky I had to Invert every white and every black. Then I had to coordinate proper accent colors to compliment the white backgrounds i decided on.
-
+- Note: The variable `--uc-ultima-window` is only active for [ Dusky ] not for [ Full Moon ]
+- to change window-color in dark themes add this line to the list of variables:
+- `--toolbar-bgcolor: var(--uc-ultima-window);`, my variables will ensure the rest of the body, backgrounds, etc, match your desired color.
 <details>
-  <summary>(Click me for example of themes file)</summary>
+  <summary>(Click me) All the variables used in the theme file</summary>
 
 ![Screenshot_2](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/4e3a989c-8366-4fcc-8933-d42449c8f51c)
 </details>
 <details>
   <summary>(Using 'Firefox Colors app' to create themes)</summary>
 
+###### Did this in 2 minutes, just showing that it is definitely possible.
 ![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/50ede808-227d-4ef0-b49b-692c8cf70b64)
 </details>
 
