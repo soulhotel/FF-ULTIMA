@@ -1,0 +1,160 @@
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+YT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+@-moz-document domain("youtube.com") {
+yt-icon.ytd-topbar-logo-renderer,
+yt-icon.ytd-logo { fill-opacity: 0;
+background: url("site-icons/yt.png") center center/100% no-repeat !important;
+max-width: 100%; max-height: 100px; position: relative !important;}
+
+/*SEEKBAR COLOR*/
+.ytp-swatch-background-color { background-color: #fffd80 !important; }
+
+/* ----------- notifications badge color now yellow ----------- */
+.yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
+background-color: #fffd80 !important; color: #2b2b2b !important;}
+.yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
+border: 0px solid rgba(0,0,0,0.8) !important;}
+
+/* ----------- live video indicator under thumbnails color ----------- */
+.badge-style-type-live-now-alternate.ytd-badge-supported-renderer {
+background: rgba(92, 198, 223, 0.9) !important;
+color: var(--yt-spec-static-brand-white) !important;}
+
+/* ----------- video toolbar, watching live red dot, settings badge ----------- */
+
+.ytp-live-badge[disabled]::before {background: #00e3fb !important;}
+  
+.ytp-settings-button.ytp-hd-quality-badge::after, .ytp-settings-button.ytp-hdr-quality-badge::after, .ytp-settings-button.ytp-4k-quality-badge::after, .ytp-settings-button.ytp-5k-quality-badge::after, .ytp-settings-button.ytp-8k-quality-badge::after, .ytp-settings-button.ytp-3d-badge-grey::after, .ytp-settings-button.ytp-3d-badge::after {background-color: #313131 !important;}
+
+yt-live-chat-poll-renderer[updated-modern-visuals] { background: rgba(255,255,0,0.3) !important;}
+
+.ytp-popup.ytp-contextmenu { border-radius: 10px !important; }
+
+} /* <---- dont delete this closes out youtube customization */
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+REDDIT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+@-moz-document domain(reddit.com) {
+._31N0dvxfpsO6Ur5AKx4O5d,
+._3ozFtOe6WpJEMUtxDOIvtU,
+._1gVVmSnHZpkUgVShsn7-ua,
+._29IbETWb5VVDcfk_-GumWz,
+.theme-beta {
+background-attachment: fixed; background-image: url("https://i.imgur.com/JrcxxQ8.gif") !important; /*black space*/
+background-size: cover !important;}
+
+/* ----------- global color schemes ----------- */
+/* these were all 🟠 */
+*, :root {
+--color-global-orangered: #5268bb;
+--color-brand-background: #5268bb !important;
+--color-brand-background-hover: #91DFF0 !important;
+--color-global-brand-orangered: #5268bb !important;
+
+--post-icon-color
+--color-action-upvote: #91DFF0 !important;
+--color-upvote-background: #5268bb !important;
+--color-upvote-background-hover: #91DFF0 !important;
+--newCommunityTheme-voteText-upvote: #5268bb !important;
+--newCommunityTheme-voteText-upvoteShaded80: #5268bb !important;
+--newCommunityTheme-voteText-upvoteTinted80: #5268bb !important;
+--newRedditTheme-voteText-upvote: #5268bb !important;
+--newRedditTheme-voteText-upvoteShaded80: #5268bb;
+--newRedditTheme-voteText-upvoteTinted80: #5268bb;
+--newCommunityTheme-postIcon: #5268bb !important;
+--newCommunityTheme-postLine: #5268bb !important;
+
+}
+
+/*number of upvotes color, many instances not using the color  variables above*/
+._1rZYMD_4xY3gRcSS3p8ODO, ._3a2ZHWaih05DgAOtvu6cIo,
+_25IkBM0rRUqWX5ZojEMAFQ, _3ChHiOyYyUkpZ_Nm3ZyM2M
+{color: white !important;}
+
+/*notification badge color*/
+._1-nIsCaWhGBFN-L4ZHnbGp {background: #5268bb !important;}
+
+/* ----------- header icon ----------- */
+
+.snoo-cls-10 {
+fill: #5268bb !important;}
+
+.snoo-cls-4 {
+fill: #5268bb !important; /*they fill each eye seperately for some reason*/
+}
+.snoo-cls-7 {
+fill: #5268bb !important; /* right eye*/
+}
+
+/* ----------- try premium button then icon ----------- */
+
+._10BQ7pjWbeYP63SAPNS8Ts.q_unSaY23rpdd3lDvGZ- {
+background-color: #5268bb !important;}
+  
+.icon._3-m5rOa3loUClNwpCv1uWU {
+color: #5268bb !important;}
+  
+/* ----------- karma icon ----------- */
+
+.icon._2wYneOcJEB6o4mj1NedmsR {
+color: #5268bb !important;}
+
+/* ----------- Home side panel reddit icon ----------- */
+
+._2KqgQ5WzoQRJqjjoznu22o {
+background: url("site-icons/redd2.png") 0% 0% / 40px 68px !important;
+height: 68px; width: 40px !important !important;}
+
+/* home header image was https://www.redditstatic.com/desktop2x/img/id-cards/home-banner@2x.png */
+/* remove the following if desired. */
+.hpxKmfWP2ZiwdKaWpefMn {
+background-image: url("site-icons/homebanner.png") !important;}
+} /*<----close out reddit*/
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RUMBLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+@-moz-document domain("rumble.com") {
+* { --rumble-green: #00f9e2 !important; } /*change rumble green across site to cyan*/
+.header-logo { content:url("site-icons/rumb2.png"); } /*logo*/
+.header-upload svg { fill: #00f9e2 !important; } /*upload btn*/
+.bg-green:hover { background: #00f9e2 !important; } /*comment btn in comments*/
+.thumbnail__thumb--live { border: 2px solid #eeff59 !important; }
+.videostream__status--live { background-color: #bd2b2b !important; }
+.rating-bar__fill { background: #00f9e2 !important; } /*like dislike color*/
+.bg-ghost:hover { border: 2px solid #02c2b1 !important; } /*follow btn hover*/
+.video-header-live-info { color: #00f9e2 !important; } /*live viewer count*/
+.mediaList-live { background: #002e2a !important; }
+[data-theme="dark"] .media-description-info-stream-time, [data-theme="dark"] .media-description-info-views {
+color: #00f9e2 !important; font-size: 20px !important;} /*views count*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ANIWAVE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+@-moz-document domain("aniwave.to") {
+
+/*fix background colors*/
+#w-player #w-servers .tip { background: #0e0e0e; !important; }
+#w-info .brating .rating .stars span.full i::before { color: #00cfff !important; }
+.bsharing { background: #0e0e0e !important; }
+
+}
+

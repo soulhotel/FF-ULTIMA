@@ -1,0 +1,10 @@
+ /* -------------------------------------------------------------
+-for userContent
+- the PIP button is a distraction on playing videos
+- I just made the button a little smaller
+ ------------------------------------------------------------- */
+
+.pip-wrapper {transform: scale(0.7);}
+
+* {scrollbar-width: auto !important;
+scrollbar-color: rgba(170, 170, 170, 0.4) rgba(255,255,255, 0) !important;}

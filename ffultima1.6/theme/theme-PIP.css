@@ -1,0 +1,28 @@
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+PIP PLAYER IN PLAYER WINDOW CUSTOMIZATION
+
+cant round the corners, tried
+micaforeveryone if you want rounded corners
+cant 'display none' the fwd/back buttons
+
+theres more you can edit, but this is all i wanted to change
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+                                          /*seek bar progress bar*/
+
+#scrubber::-moz-range-progress {
+background-color: #FBF268 !important;}
+
+#scrubber::-moz-range-thumb {
+background-color: #FBF268 !important;
+border: 3px solid #FBF268 !important;}
+
+                                      /*close and PIP buttons are hovered*/
+
+#close, #unpip {
+background-color: rgba(255, 255, 255, 0.1) !important;
+fill: #fff !important;}
+
+#close:is(:hover, :focus-visible), #unpip:is(:hover, :focus-visible) {
+background-color: rgba(255, 245, 91, 0.8) !important;
+fill: #1c1c1c !important;}
