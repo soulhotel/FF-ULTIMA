@@ -1,0 +1,49 @@
+/*---what a pain--*/
+/*-----do not touch this file or i will eat your soul-----*/
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#titlebar{order: 2;
+-moz-appearance: none !important;--tabs-navbar-shadow-size: 0px;
+--uc-menubar-vertical-overlap: 19px;
+}
+
+#navigator-toolbox > div{ display: contents }
+.global-notificationbox, #tab-notification-deck
+{order: 2;}
+#TabsToolbar .titlebar-spacer{ display: none; }
+#navigator-toolbox::after{ display: none !important; }
+
+
+toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
+#navigator-toolbox:hover #TabsToolbar{ animation: slidein ease-out 48ms 1 }
+
+#navigator-toolbox:not(:-moz-lwtheme){ background-color: -moz-dialog }
+
+
+/*-----------------------------------------*/
+/*--to return the title bar buttons--*/
+/*-----------------------------------------*/
+
+:root[tabsintitlebar] .titlebar-buttonbox {
+position: fixed !important; display: flex !important; z-index: 1;
+top: 2px !important;
+right: 1px !important;
+/* left instead of right, if you want it on left side */
+}
+
+/* adjust nav bar margin for fixed button */
+#nav-bar { margin-right: 105px; } /* margin-left if you have it on left side*/
+
+/* 40px button, match nav bar */
+.titlebar-buttonbox .titlebar-button {padding: 11px 11px !important;}
+
+/* (optional) flip button order
+.titlebar-buttonbox-container{ direction: rtl;}
+*/
+
+/* --- */
+
+#navigator-toolbox[inFullscreen="true"] .titlebar-buttonbox,
+#navigator-toolbox[fullscreenShouldAnimate="true"] .titlebar-buttonbox .titlebar-button
+{display: none !important;}

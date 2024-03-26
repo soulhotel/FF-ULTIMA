@@ -1,0 +1,7 @@
+/*--Cleaning up the URL bar--*/
+
+/*-- sourced from Mod Blur https://github.com/datguypiko/Firefox-Mod-Blur --*/
+
+#urlbar .search-one-offs:not([hidden]) {
+  display:none !important;
+}
