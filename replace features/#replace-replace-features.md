@@ -11,3 +11,9 @@ return the "this time search with" URL BAR options<br>
 ![Screenshot_1 (Custom)](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/8c0d5cba-d59b-4c59-80c0-179269031ae6)
 
 ---
+
+###### ← chrome/themes/theme-return-window-controls.css
+
+LINUX Users, this fixes the positioning of the min max close buttons<br>
+
+---
