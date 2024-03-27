@@ -1,14 +1,14 @@
-## Switching between XS, S, L
+## Switching Tab Size, Turning Autohide On/Off
 ###### chrome/userChrome.css
-- very simple. in userChrome change `all-global-positioning-L` to: <br>
-[XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
-[S, 140px TABS] --> `all-global-positioning-s.css` <br>
-[L, 250px TABS] --> `all-global-positioning-l.css` <br>
+► first tab size, in userChrome change `all-global-positioning-L` to: <br>
+- [XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
+- [S, 140px TABS] --> `all-global-positioning-s.css` <br>
+- [L, 250px TABS] --> `all-global-positioning-l.css` <br>
 
 ![Untitled](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/9a75ae49-2217-4757-ba89-15d99b545a26)
 
 <details>
-  <summary>(Click me) File preview and animated toggling preview</summary>
+  <summary>(Click me) Then Autohiding + animated example</summary>
 
 ###### changing size to L, and enabling autohide if you want that too.  
 ![changing settings](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/8c471fac-a96a-45b6-85d2-48b4f111fd81)
@@ -17,12 +17,6 @@
 ![outcome](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/978d6c07-7d31-41e2-88b6-fae566fce387)
 
 </details>
-
----
-
-## Switch color schemes `NEW` Color will automatically match system settings. You no longer need to manually switch files.
-
-![K0PO17oNoZ](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/28eb5cc1-d930-481e-851d-2457c0f4ecf2)
 
 ---
 
