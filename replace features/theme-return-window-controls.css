@@ -97,7 +97,7 @@ appearance: auto !important;
 border: 0 solid !important;border-inline-end-width: 1px !important;
 border-color: transparent !important;min-width: 1px !important;
 width: 4px !important;background-color: transparent !important;
-margin-inline-start: -4px !important; } }
+margin-inline-start: -4px !important; }
 
 :root:where([tabsintitlebar]) {
 --toolbox-non-lwt-textcolor: var(--uc-light-dark);
