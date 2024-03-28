@@ -26,7 +26,7 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
 :root[tabsintitlebar] .titlebar-buttonbox {
 position: fixed !important; display: flex !important; z-index: 1;
-top: 12px !important;
+top: 8px !important;
 right: 1px !important;
 /* left instead of right, if you want it on left side */
 }
@@ -50,14 +50,55 @@ right: 1px !important;
 
 @media (-moz-os-version: linux) {
 :root[tabsintitlebar] .titlebar-buttonbox {
-top: 12px !important;
+top: 9px !important;
 }
 }
 
 @media not (-moz-platform: windows) {
 :root[tabsintitlebar] .titlebar-buttonbox {
-top: 12px !important;
+top: 9px !important;
 }
 }
 
+/*--More Linux targetted tweaks--*/
+
+@media (-moz-platform: linux) {
+
+:root {--inactive-titlebar-opacity: 1 !important;}
+  
+#nav-bar { margin-right: 80px !important; }
+
+.titlebar-button{
+list-style-image: none !important;
+appearance: auto !important;
+}
+
+.titlebar-min {
+-moz-default-appearance: -moz-window-button-minimize !important;
+}
+
+.titlebar-max {
+-moz-default-appearance: -moz-window-button-maximize !important;
+}
+.titlebar-restore {
+-moz-default-appearance: -moz-window-button-restore !important;
+}
+.titlebar-close {
+-moz-default-appearance: -moz-window-button-close !important;
+}
+
+#main-window:not([lwtheme="true"]) .titlebar-button
+{stroke: var(--uc-ultima-accent-iii) !important;}
+
+#main-window[lwtheme="true"] .titlebar-button
+{stroke: var(--toolbarbutton-icon-fill) !important;}
+
+.sidebar-splitter {background-color: transparent !important;}
+
+:root:where([tabsintitlebar]) {
+--toolbox-non-lwt-textcolor: var(--uc-light-dark);
+--toolbox-non-lwt-textcolor-inactive: var(--uc-light-dark);
+}
+
+} /*--<--end linux query--*/
 
