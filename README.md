@@ -79,10 +79,4 @@
 ![Screenshot_1 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/29d23c09-4164-4f86-bfb8-c2d48ee75626)
 ![5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/19f0cbf3-6490-453c-86c7-df937598839a)
 
-##### (3/22/24) Linking the Modification page once more, this theme has a lot of potential for the community.
-##### I wanted to keep this relatively simple/lightweight, so others can pick/choose what they want, and add whatever they please later on. Anyway..
-##### Having the sidebar free to use is a BIG thing, hopefully I can further improve the native tabs in the future. I've only been doing this CSS stuff about two months, Javascript for about a month, so we'll see.
-##### If anyone out there has good experience with CSS flexboxs, feel free to fork/recreate this theme, Ive managed to get the tabs free flowing but some more can be done.
-##### Custom Variables (--uc-ultima-etc) are used to target everything effected. Seperated and organized in a `global-theme` and `global-positioning` file.
-##### Anyone that likes to design color schemes, it is supported using these variables in Live Debugger.
 ##### [Modifications Page](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md)
