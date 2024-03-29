@@ -9,19 +9,13 @@
 </div>
 
 ![K0PO17oNoZ](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/7a8c2a7c-205e-4ca4-a476-bba04d438576)
+![Qs0spmpmqv](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d42c2545-ca59-4259-9d07-899a3d17947d)
 
 ### Features
 ► NO extensions used, NO sidebar needed<br>
 ► `Vertical Tabs` and a `One Line Nav Bar`<br>
 ► Can create your own color schemes, or just go to the addon store<br>
 ► `NEW` Full Moon (Dark) and Dusky (Light) automatically cycle depending on your systems current Color Mode
-<details>
-<summary>(Click me) Showing off free Sidebar, Bookmarks toolbar, Menubar, Find bar</summary>
-  
-  ###### Can drag/resize the Sidebar to be tiny or up to 50% screen width.
-  
-![Qs0spmpmqv](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d42c2545-ca59-4259-9d07-899a3d17947d)
-</details>
 <details>
 <summary>(Click me) choose size of tabs (Optional - 3 Options)</summary>
 
