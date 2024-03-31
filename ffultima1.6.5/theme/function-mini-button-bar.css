@@ -1,0 +1,101 @@
+/* ------------------------------- MINI button bar-------------------------------------- */
+
+/* first to utilize the unused tabs toolbar space */
+/* This is GREAT because You can move this around to access your buttons when customizing */
+/* Warning DO NOT MOVE IT FROM TOP 40PX, only left, right */
+
+#TabsToolbar-customization-target
+{ position: fixed; top: 40px; border-radius: 4px; background: rgba(0,0,0,0.4); }
+
+/* visual indicator, when on customize toolbar screen */
+#TabsToolbar:is([customizing="true"]) #TabsToolbar-customization-target
+{background: var(--uc-ultima-background-iii) !important;
+padding-right:32px !important; min-width: 135px; top:450px; left: 30px; }
+
+#TabsToolbar:is([customizing="true"]) #tabbrowser-tabs {display: none;}
+#TabsToolbar:is([customizing="true"]) #tabbrowser-arrowscrollbox {display: none;}
+
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(1),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(4),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(5),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(6),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(7),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(8),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(9),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(10),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(11),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(12),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(13),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(14),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(15),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(16),
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(17)
+ {
+position: absolute; display: flex;
+z-index: 2; top: 1px; left:6px;
+}
+
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(1) {
+  top: calc(100vh - 85px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(4) {
+  top: calc(100vh - 122px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(5) {
+  top: calc(100vh - 159px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(6) {
+  top: calc(100vh - 196px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(7) {
+  top: calc(100vh - 233px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(8) {
+  top: calc(100vh - 270px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(9) {
+  top: calc(100vh - 307px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(10) {
+  top: calc(100vh - 344px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(11) {
+  top: calc(100vh - 381px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(12) {
+  top: calc(100vh - 418px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(13) {
+  top: calc(100vh - 455px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(14) {
+  top: calc(100vh - 492px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(15) {
+  top: calc(100vh - 529px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(16) {
+  top: calc(100vh - 566px);}
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(17) {
+  top: calc(100vh - 603px);}
+
+
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(1),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(4),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(5),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(6),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(7),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(8),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(9),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(10),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(11),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(12),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(13),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(14),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(15),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(16),
+#TabsToolbar:is([customizing="true"]) .toolbarbutton-1[removable="true"]:nth-of-type(17)
+ {
+position: initial;
+display: flex;
+background: rgba(255,255,255,0.2);
+z-index: 1;
+top: initial;
+}
+
+#titlebar {z-index: 1 !important;}
+@media (max-height:600px) {
+
+#TabsToolbar:not([customizing="true"]) .toolbarbutton-1[removable="true"]
+{ display: none !important; }
+#new-tab-button { display: none !important; }
+}
+
+
