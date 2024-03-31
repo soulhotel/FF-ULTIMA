@@ -20,6 +20,10 @@
 
 ---
 
+[Options to replace](https://github.com/soulhotel/FF-ULTIMA/blob/main/replace%20features/%23replace-replace-features.md) certain features, list will be updated as time progresses.
+
+---
+
 ## Create a theme. I was able to create Dusky, just like this.
 ###### You atleast need to have knowledge on what live debugging is, to proceed.
 ###### chrome/theme/all-global-theme-dusky.css
