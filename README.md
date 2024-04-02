@@ -15,7 +15,16 @@
 ► NO extensions used, NO sidebar needed<br>
 ► `Vertical Tabs` and a `One Line Nav Bar`<br>
 ► Can create your own color schemes, or just go to the addon store<br>
-► `NEW` Full Moon (Dark) and Dusky (Light) automatically cycle depending on your systems current Color Mode
+► Full Moon (Dark) and Dusky (Light) automatically cycle depending on your systems current Color Mode
+<details>
+<summary>(NEW) New Tab Overhaul.</summary>
+  
+  ##### [Beautiful-newtab-Firefox](https://github.com/hachikoharuno/Beautiful-newtab-Firefox) is implemented into the theme. So MAJOR Thank You to @hachikoharuno (check out their theme!)
+  ###### For full compatibility: goto `about:config` -> search for `svg.context-properties.content.enabled` -> set it to `true`
+  
+![ntffuprev](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/57d066bf-2934-4eee-9033-767aee86967f)
+</details>
+
 <details>
 <summary>(Click me) choose size of tabs (Optional - 3 Options)</summary>
 
@@ -36,13 +45,6 @@
   ###### pin/unpin up to 15 buttons, drag and drop functional, easily disable by dragging all buttons out. works with the following buttons: 
 
 ![mini button bar](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/037051e3-158c-4bd0-a8c8-d91cb6acf30a)
-</details>
-<details>
-<summary>(BONUS) For Firefox 123+ Users</summary>
-  
-  ###### for Firefox 123, there's a cool little way to see tab previews on hover. This is in beta apparently: 
-  ###### in URL bar goto `about:config` search for `browser.tabs.cardPreview.enabled` make it `true`
-![firefox_TZoHeF7NWe](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d857304a-efde-472d-ad43-17d4915d951b)
 </details>
   
 ### Installation
@@ -66,6 +68,7 @@
 
 ### Previews
 ###### Create your own color schemes live, in debugging tool. Use the [Modifications Page](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md)
+###### New up to date previews coming...
 ![Screenshot_2 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/24e63f2f-db73-41d9-807e-960e0317fa90)
 ![3](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/ae37f749-0f94-4ef8-b235-533dea6f3b59)
 ![4](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c68efbf7-545e-4850-8e3b-57cdb94b6cb8)
