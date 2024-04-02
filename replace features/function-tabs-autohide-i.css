@@ -2,6 +2,8 @@
 
 /*--option 1 - tabs overlay browser content instead of pushing it to the side--*/
 
+/*--animation handling is present in positionverttab.css--*/
+
 /*--added autohide on hover support--*/
 
 :root:not([customizing]) #tabbrowser-tabs:not(hover)
