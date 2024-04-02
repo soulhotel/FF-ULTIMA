@@ -9,7 +9,6 @@
 </div>
 
 ![K0PO17oNoZ](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/7a8c2a7c-205e-4ca4-a476-bba04d438576)
-![Qs0spmpmqv](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d42c2545-ca59-4259-9d07-899a3d17947d)
 
 ### Features
 ► NO extensions used, NO sidebar needed<br>
@@ -68,12 +67,13 @@
 
 ### Previews
 ###### Create your own color schemes live, in debugging tool. Use the [Modifications Page](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md)
-###### New up to date previews coming...
-![Screenshot_2 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/24e63f2f-db73-41d9-807e-960e0317fa90)
-![3](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/ae37f749-0f94-4ef8-b235-533dea6f3b59)
-![4](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/c68efbf7-545e-4850-8e3b-57cdb94b6cb8)
-![Screenshot_4 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/5b981852-da3b-4e74-83a0-e61fa49af6ef)
-![Screenshot_1 (Custom)](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/29d23c09-4164-4f86-bfb8-c2d48ee75626)
-![5](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/19f0cbf3-6490-453c-86c7-df937598839a)
+
+![firefox_uSH3BZLvwI](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/619145f1-1889-462f-b123-e78c16597dfb)
+![firefox_tLUL7HJc7o](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/68e3492d-8c69-4997-97c2-c61609fe73d6)
+![firefox_zYZJK2G8qR](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/59f206cf-20cb-4e52-ae38-00dccfc49e6a)
+![firefox_KoPg04Ve32](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/b60672ea-15cb-420b-bfbc-73672e5d1455)
+![firefox_l2zQC57q5u](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6a0ca8d4-5c98-4177-abed-d36f2c540d71)
+![firefox_fZEinQq7fi](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/179efb92-ee25-4632-b0f4-76f234f7305e)
+![Qs0spmpmqv](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d42c2545-ca59-4259-9d07-899a3d17947d)
 
 ##### [Modifications Page](https://github.com/soulhotel/FF-CSS-ULTIMA/blob/main/Modification.md)
