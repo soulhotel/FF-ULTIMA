@@ -26,6 +26,7 @@ this has been implemented into the latest release.
 - this deletes the verticle tabs and allows users to use the sidebar `sidebery/treestyletabs` in its place
 - this adds autohiding to the sidebar, and light styling to center the header
 - `users are responsible for handling styling of the sidebar, since this is not a default feature of the theme`
+<br>
 
 ![firefox_m79XItmB13](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/57a67072-e8a8-47e9-a91b-c56320178577)
 
