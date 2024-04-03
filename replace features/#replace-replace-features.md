@@ -21,8 +21,9 @@ this has been implemented into the latest release.
 
 ###### ← chrome/themes/position-verttab.css
 
-- this new file will replace the function of verticle tabs
-- deleting the verticle tabs and allowing users to use the sidebar `sidebery/treestyletabs` in its place
+- remove verticle tabs for sidebery/sidebar uses instead<br>
+- ← download your new file from the list, and replace the old
+- this deletes the verticle tabs and allows users to use the sidebar `sidebery/treestyletabs` in its place
 - this adds autohiding to the sidebar, and light styling to center the header
 - `users are responsible for handling styling of the sidebar, since this is not a default feature of the theme`
 
