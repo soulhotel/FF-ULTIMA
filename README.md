@@ -87,6 +87,9 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
    2. If the paragraph above profile says `This is the profile in use and it cannot be deleted.`, then that's your actual profile.
    3. Click on **Open Directory** button just right to the side of **Root Directory** row.
    4. It will take you to your firefox profile folder.
+
+![alt text](help/preview/profile_location.png)
+
 2. In that location, there should be folder called `chrome`, if not, just create it.
 3. Open terminal in that `chrome` folder.
    1. Copy location from address bar in your file manager.
