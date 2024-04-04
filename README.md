@@ -59,24 +59,26 @@
 
 ###### Firefox 120+ | Win11/Lin/Mac ✅ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
 
-There are 2 ways of installing this theme, they have their drawbacks and strengths.
+There are 2 ways of installing this theme, they have their drawbacks and strengths. Choose one.
 
-#### First, easier way:
+#### The easy way, get it and go:
 
-1. Download latest version of this theme.
-   1. Go [here](https://github.com/soulhotel/FF-ULTIMA/releases/tag/1.6.7).
-   2. On that page, down below you will be presents with **Assets** paragraph, and below it you can notice `ffultimaX.X.X.zip`, where X are numbers representing current version.
-   3. Clicking on it should download it for you
-2. Locate your firefox profile folder.
-   1. Go to `about:profiles`
-   2. If the paragraph above profile says `This is the profile in use and it cannot be deleted.`, then that's your actual profile.
-   3. Click on **Open Directory** button just right to the side of **Root Directory** row.
-   4. It will take you to your firefox profile folder.
-3. In that location, there should be folder called `chrome`, if not, just create it.
-4. Extract download file into that **chrome** folder.
-5. Restart Firefox.
+1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) of the theme. You can click this button at the top, or scroll down to assets.
 
-#### Second, harder way, using Git:
+![Button to download latest version](help/preview/release_download.png)
+
+2. You will now have a zip file named `ffultimaX.X.X.zip`.
+3. Locate your firefox profile folder.
+4. The easiest way is to go to `about:support` in the URL BAR.
+5. At `about:support` there will be a list option pointing to your current firefox profile, open the folder.
+
+![alt text](help/preview/profile_location.png)
+
+6. In that folder create a new folder named `chrome` (if you don't have the folder already).
+7. Extract the downloaded theme `ffultimaX.X.X.zip`. And paste the files inside the `ffultimaX.X.X` folder into the chrome folder.
+8. Restart Firefox.
+
+#### The hard way, using Git:
 
 > :warning: To use this method you should be accustomed to the basic of Git and Terminal usage, and have Git installed.
 
