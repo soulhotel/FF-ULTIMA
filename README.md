@@ -65,30 +65,32 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 
 1. Download latest version of this theme.
    1. Go [here](https://github.com/soulhotel/FF-ULTIMA/releases/tag/1.6.7).
-   2. On that page, down below you will be presents with **_Assets_** paragraph, and below it you can notice `ffultimaX.X.X.zip`, where X are numbers representing current version.
+   2. On that page, down below you will be presents with **Assets** paragraph, and below it you can notice `ffultimaX.X.X.zip`, where X are numbers representing current version.
    3. Clicking on it should download it for you
 2. Locate your firefox profile folder.
    1. Go to `about:profiles`
    2. If the paragraph above profile says `This is the profile in use and it cannot be deleted.`, then that's your actual profile.
-   3. Click on ***Open Directory*** button just right to the side of ***Root Directory*** row.
+   3. Click on **Open Directory** button just right to the side of **Root Directory** row.
    4. It will take you to your firefox profile folder.
 3. In that location, there should be folder called `chrome`, if not, just create it.
-4. Extract download file into that **_chrome_** folder.
+4. Extract download file into that **chrome** folder.
 5. Restart Firefox.
 
 #### Second, harder way, using Git:
+
 > :warning: To use this method you should be accustomed to the basic of Git and Terminal usage, and have Git installed.
+
 1. Locate your firefox profile folder.
    1. Go to `about:profiles`
    2. If the paragraph above profile says `This is the profile in use and it cannot be deleted.`, then that's your actual profile.
-   3. Click on ***Open Directory*** button just right to the side of ***Root Directory*** row.
+   3. Click on **Open Directory** button just right to the side of **Root Directory** row.
    4. It will take you to your firefox profile folder.
 2. In that location, there should be folder called `chrome`, if not, just create it.
 3. Open terminal in that `chrome` folder.
-	1. Copy location from address bar in your file manager.
-	2. Open terminal.
-	3. In the terminal write `cd XXX`, where in the place of *XXX*, you should paste that copied address.
-	4. You should be now in the `chrome` folder in the terminal.
+   1. Copy location from address bar in your file manager.
+   2. Open terminal.
+   3. In the terminal write `cd XXX`, where in the place of `XXX`, you should paste that copied address.
+   4. You should be now in the `chrome` folder in the terminal.
 4. Copy and paste into your terminal `git clone https://github.com/soulhotel/FF-ULTIMA.git .`
 5. Press Enter, and cloning should begin.
 6. After cloning is completed, restart Firefox.
@@ -109,6 +111,7 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 </details>
 
 ### Update and customization instructions
+
 > :warning: Work In Progress
 
 ### Previews
