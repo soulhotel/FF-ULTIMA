@@ -1,0 +1,26 @@
+/*--note: this file has been implemented into the latest release.--*/
+
+/*--option 1 - tabs overlay browser content instead of pushing it to the side--*/
+
+/*--animation handling is present in positionverttab.css--*/
+
+/*--added autohide on hover support--*/
+
+:root:not([customizing]) #tabbrowser-tabs:not(hover)
+{width: var(--uc-collapsed-tabs-width);}
+
+:root:not([customizing]) #tabbrowser-tabs:hover
+{width: var(--uc-vertical-tabs-width-revert);}
+
+/*--browser content will not move to the side--*/
+
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser
+{margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;}
+
+/*--background, and visibility--*/
+
+:root:not([customizing]) #tabbrowser-arrowscrollbox
+{background: var(--uc-ultima-background-iii) !important;}
+
+#navigator-toolbox {z-index: 2 !important;}
