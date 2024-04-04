@@ -95,7 +95,7 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 
 > This way enables you easier updates, although is harder to set up for less technical people.
 
-### Additional instrutions
+### Additional instructions
 
 <details>
 <summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different</summary>
