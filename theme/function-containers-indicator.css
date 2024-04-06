@@ -9,16 +9,16 @@
 /* Style 1 */
 /* Simply changing border to the left side of tab icon */
 
-/* .tabbrowser-tab .tab-context-line {
+.tabbrowser-tab .tab-context-line {
   width: 3px;
   height: 35px !important;
   margin: 0 !important;
-} */
+}
 
 /* Style 2 */
 /* Border around full tab */
 
-.tabbrowser-tab .tab-context-line {
+/* .tabbrowser-tab .tab-context-line {
   border: 2px solid var(--identity-icon-color);
   margin: 0 !important;
   width: 100%;
@@ -26,7 +26,7 @@
   background: transparent !important;
   border-radius: var(--tab-border-radius) !important;
   opacity: 0.6;
-}
+} */
 
 /* Style 3 */
 /* Full color overlay */
