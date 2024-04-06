@@ -1,5 +1,5 @@
 /* 
-https://github.com/soulhotel/FF-CSS-ULTIMA
+https://github.com/soulhotel/FF-ULTIMA/blob/main/help/Modification.md
 
 Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 
@@ -10,15 +10,18 @@ Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 
 /*-------------------------- Change tab size: ------------------------*/
 
-@import url(theme/all-global-positioning-s.css);
+@import url(theme/all-global-positioning-l.css);
 
 /*----------------------------------------------------------------------*/
 
 
 /*---------------------(Optional) autohide tabs-------------------------*/
 
-/*@import url(theme/function-tabs-autohide-i.css);*/ /*--tabs overlay content--*/
-/*@import url(theme/function-tabs-autohide-ii.css);*/ /*--tabs push content to the side--*/
+/*--tabs overlay content--*/
+/*@import url(theme/function-tabs-autohide-i.css);*/ 
+
+/*--tabs push content to the side--*/
+/*@import url(theme/function-tabs-autohide-ii.css);*/ 
 
 /*----------------------------------------------------------------------*/
 
