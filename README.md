@@ -57,7 +57,7 @@
 
 ## Installation
 
-###### Firefox 120+ | Win11/Lin/Mac ✅ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
+> Firefox 120+ | Win11/Lin/Mac ✅ | User Chrome ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13) | Follow every step!
 
 There are 2 ways of installing this theme, they have their drawbacks and strengths. Choose one.
 
