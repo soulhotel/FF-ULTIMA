@@ -72,7 +72,7 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 4. The easiest way is to go to `about:support` in the URL BAR.
 5. At `about:support` there will be a list option pointing to your current firefox profile, open the folder.
 
-![alt text](help/preview/aboutsupport.png)
+![alt text](help/preview/about_support.png)
 
 6. In that folder create a new folder named `chrome` (if you don't have the folder already).
 7. Extract the downloaded theme `ffultimaX.X.X.zip`. And paste the files inside the `ffultimaX.X.X` folder into the chrome folder.
@@ -88,7 +88,7 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
    3. Click on **Open Directory** button just right to the side of **Root Directory** row.
    4. It will take you to your firefox profile folder.
 
-![alt text](help/preview/profile_location.png)
+![alt text](help/preview/profilelocation.png)
 
 2. In that location, there should be folder called `chrome`, if not, just create it.
 3. Open terminal in that `chrome` folder.
