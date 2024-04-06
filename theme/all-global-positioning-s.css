@@ -3,8 +3,8 @@
 /*---------------Global variables for quick custom modifications-------------*/
 
 :root:not([customizing],[chromehidden~="menubar"]){
---uc-vertical-tabs-width: 140px;
---uc-vertical-tabs-width-revert: 140px;
+--uc-vertical-tabs-width: 165px;
+--uc-vertical-tabs-width-revert: 165px;
 --uc-navbar-height: 40px;
 --uc-collapsed-tabs-width: 41px;
 } /*--DO NOT GO LOWER THAN 41PX--*/
