@@ -65,18 +65,17 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 
 1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) of the theme. You can click this button at the top, or scroll down to assets.
 
-![Button to download latest version](help/preview/releasedownload.png)
+![Button to download latest version](help/preview/release_button.png)
 
 2. You will now have a zip file named `ffultimaX.X.X.zip`.
-3. Locate your firefox profile folder.
-4. The easiest way is to go to `about:support` in the URL BAR.
-5. At `about:support` there will be a list option pointing to your current firefox profile, open the folder.
+3. Locate your firefox profile folde by typing `about:support` in the URL BAR.
+4. On the `about:support` page, on the 11th row in the table is your currently active Profile Folder. Open it.
 
 ![alt text](help/preview/about_support.png)
 
-6. In that folder create a new folder named `chrome` (if you don't have the folder already).
-7. Extract the downloaded theme `ffultimaX.X.X.zip`. And paste the files inside the `ffultimaX.X.X` folder into the chrome folder.
-8. Restart Firefox.
+5. In that folder create a new folder named `chrome` (if you don't have the folder already).
+6. Extract the downloaded theme `ffultimaX.X.X.zip`. Paste the files from the `ffultimaX.X.X` folder into the chrome folder.
+7. Restart Firefox.
 
 #### The hard way, using Git:
 
