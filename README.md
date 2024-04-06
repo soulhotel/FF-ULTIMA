@@ -68,7 +68,7 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 ![Button to download latest version](help/preview/release_button.png)
 
 2. You will now have a zip file named `ffultimaX.X.X.zip`.
-3. Locate your firefox profile folde by typing `about:support` in the URL BAR.
+3. Locate your firefox profile folder by typing `about:support` in the URL BAR.
 4. On the `about:support` page, on the 11th row in the table is your currently active Profile Folder. Open it.
 
 ![alt text](help/preview/about_support.png)
