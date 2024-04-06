@@ -65,7 +65,7 @@ There are 2 ways of installing this theme, they have their drawbacks and strengt
 
 1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) of the theme. You can click this button at the top, or scroll down to assets.
 
-![Button to download latest version](help/preview/release_download.png)
+![Button to download latest version](help/preview/releasedownload.png)
 
 2. You will now have a zip file named `ffultimaX.X.X.zip`.
 3. Locate your firefox profile folder.
