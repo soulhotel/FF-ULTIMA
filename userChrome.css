@@ -46,3 +46,4 @@ Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
 
+@import url(theme/override-linux.css);
