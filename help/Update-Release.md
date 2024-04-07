@@ -14,9 +14,14 @@ Turn on Autohide, change Tab size? Creating Color Schemes? Something else? [Come
 
 > LINUX users:
 - Ive overridden the default light grey for Gnome dark themes, dark themes are now color accurate/identical cross-platform.
-- Titlebar buttons recieve improved positioning, padding, to parallel toolbar buttons
-![lintitle.png]
+- Titlebar buttons recieve improved positioning, padding, to parallel toolbar buttons<br>
+![lintitle](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/62e418ed-f2f4-4f74-81f5-8429a2ed9d2d)
 
 >  [Beautiful-newtab-Firefox](https://github.com/hachikoharuno/Beautiful-newtab-Firefox). Thank you [@hachikoharuno](https://github.com/hachikoharuno)
 
 > For GITHUB FORKERS I have structured my workflow for easier accessibility when forking, pulling
+
+
+# :warning: TEMPORARY PICTURE, REMOVE SOON:
+
+ ![2024-04-07_01-53](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/7c227735-45b2-4b21-b095-0e0b2c552e5e)
