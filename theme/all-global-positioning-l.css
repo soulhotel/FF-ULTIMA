@@ -32,7 +32,7 @@ calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margi
 /*tabs get there own margins*/
 --uc-all-margins: 0px 6px 6px 6px; 
 --uc-margin-inline: 6px; /* < > */
---uc-margin-top:3px;     
+--uc-margin-top:0px;     
 --uc-margin-bottom:6px;      
 --uc-tab-margins: 0px 0px 6px 6px;
 --uc-sb-margin-leftside: 0px 3px 6px 6px;
