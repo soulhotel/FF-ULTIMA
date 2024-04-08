@@ -27,7 +27,7 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
 :root[tabsintitlebar] .titlebar-buttonbox {
 position: fixed !important; display: flex !important; z-index: 1;
-top: 2.2px !important;
+top: 2.6px !important;
 right: 1px !important;
 /* left instead of right, if you want it on left side */
 }
