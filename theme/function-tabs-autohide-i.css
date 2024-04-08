@@ -36,3 +36,13 @@
 { background: var(--uc-tabs-lwt) !important; }
 
 }
+
+/*--minibuttonbar buttons expand tabs accordingly--*/
+
+:root:not([customizing]) toolbarbutton:hover + #tabbrowser-tabs {
+    width: var(--uc-vertical-tabs-width-revert);
+}
+
+:root:not([customizing]) toolbarbutton:hover ~ #tabbrowser-tabs {
+    width: var(--uc-vertical-tabs-width-revert);
+}
