@@ -75,6 +75,15 @@ may require the user to comment out gnome and comment-in KDE if so.
 } /*--<--end media query--*/
 
 
+/*--mac--*/
+
+@media not (-moz-platform: windows) {
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 9px !important;
+    }
+} /*--<--end media query--*/
+
+
 
 
 
