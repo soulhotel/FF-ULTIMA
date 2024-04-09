@@ -46,3 +46,7 @@
 :root:not([customizing]) toolbarbutton:hover ~ #tabbrowser-tabs {
     width: var(--uc-vertical-tabs-width-revert);
 }
+
+:root:not([customizing]) #TabsToolbar-customization-target:hover #tabbrowser-tabs {
+    width: var(--uc-vertical-tabs-width-revert);
+}
