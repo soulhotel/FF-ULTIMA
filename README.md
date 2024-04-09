@@ -22,7 +22,7 @@
 - Three options for Tab size - [live preview](https://github.com/soulhotel/FF-ULTIMA/blob/main/help/Modification.md)
 - Two options to Autohide Tabs - [live preview](https://github.com/soulhotel/FF-ULTIMA/blob/main/help/Modification.md)
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. :warning: works with the following buttons:
-![prevautohide](help/preview/prevminibar.png)
+![prevautohide](help/preview/prev-minibar.png)
 
 ## Requirements
 
