@@ -50,7 +50,7 @@
 3. Locate your firefox profile folder by typing `about:support` in the URL BAR.
 4. On the `about:support` page, the 11th row in the table is your currently active Profile Folder. Open it.
 
-![alt text](help/preview/about_support.png)
+![aboutsupport](help/preview/prev-aboutsupport.png)
 
 5. In that folder create a new folder named `chrome` (if you don't have the folder already).
 6. Extract the downloaded theme `ffultimaX.X.X.zip`. Paste the files from the `ffultimaX.X.X` folder into the chrome folder.
