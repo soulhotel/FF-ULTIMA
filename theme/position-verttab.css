@@ -373,7 +373,7 @@ scrollbox[orient="horizontal"] {
 /* Source code for shadow inspired by */
 /* https://css-tricks.com/books/greatest-css-tricks/scroll-shadows/ */
 
-#TabsToolbar-customization-target scrollbox {
+scrollbox {
   background:
     /* Shadow Cover TOP */
     /* TODO: Need to be changed to variable */

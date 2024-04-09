@@ -2,10 +2,10 @@
 Note:
 this file is a replacement for position-verttab.css
 See the replace features page for more info:
-https://github.com/soulhotel/FF-ULTIMA/blob/main/replace%20features/%23replace-replace-features.md#-chromethemesposition-verttabcss
+https://github.com/soulhotel/FF-ULTIMA/blob/main/help/%23replace-features.md
 
 In this file:
-I will basically revert the implementation of verticle tabs by
+I will basically revert the implementation of verticle tabs by,
 keeping the titlebar displayed, and collapsing the tabs width to 0
 then I will implement autohiding for the native Sidebar
 */
@@ -13,10 +13,10 @@ then I will implement autohiding for the native Sidebar
 /*--POOF tabs gone--*/
 
 :root:not([customizing],[chromehidden~="menubar"]){
---uc-vertical-tabs-width: 0px;
---uc-vertical-tabs-width-revert: 0px;
---uc-navbar-height: 40px;
---uc-collapsed-tabs-width: 0px;
+    --uc-vertical-tabs-width: 0px;
+    --uc-vertical-tabs-width-revert: 0px;
+    --uc-navbar-height: 40px;
+    --uc-collapsed-tabs-width: 0px;
 }
 
 /*--adjust browser content margins for no tabs--*/

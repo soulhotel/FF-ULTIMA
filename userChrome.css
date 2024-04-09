@@ -10,7 +10,7 @@ Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 
 /*-------------------------- Change tab size: ------------------------*/
 
-@import url(theme/all-global-positioning-l.css);
+@import url(theme/all-global-positioning-s.css);
 
 /*----------------------------------------------------------------------*/
 
@@ -18,7 +18,7 @@ Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 /*---------------------(Optional) autohide tabs-------------------------*/
 
 /*--tabs overlay content--*/
-/*@import url(theme/function-tabs-autohide-i.css);*/ 
+@import url(theme/function-tabs-autohide-i.css); 
 
 /*--tabs push content to the side--*/
 /*@import url(theme/function-tabs-autohide-ii.css);*/ 

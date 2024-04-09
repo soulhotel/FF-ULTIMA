@@ -170,11 +170,11 @@ color: var(--toolbox-non-lwt-textcolor-inactive) !important; }}
 
 /*-------------------tabs-------------------*/
 
-#tabbrowser-tabs
-{ background: var(--uc-tabs-background); box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);}
+#main-window:not([lwtheme="true"]) #tabbrowser-tabs
+{ background: var(--uc-tabs-background); --tab-loading-fill: var(--uc-ultima-accent-i) !important;}
 
-#main-window:not([lwtheme="true"]) #tabbrowser-tabs {
-  --tab-loading-fill: var(--uc-ultima-accent-i) !important;
+#main-window:not([lwtheme="true"]) #TabsToolbar-customization-target {
+  box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.65);
 }
 
 #main-window:not([lwtheme="true"]) .tabbrowser-tab

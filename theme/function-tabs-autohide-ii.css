@@ -25,16 +25,3 @@ transition: margin-left 80ms linear 150ms !important;
 will-change: margin-left !important;
 transition-delay: 100ms !important;}
 
-/*--minibuttonbar buttons expand tabs accordingly--*/
-
-:root:not([customizing]) toolbarbutton:hover + #tabbrowser-tabs {
-    width: var(--uc-vertical-tabs-width-revert);
-}
-
-:root:not([customizing]) toolbarbutton:hover ~ #tabbrowser-tabs {
-    width: var(--uc-vertical-tabs-width-revert);
-}
-
-:root:not([customizing]) #TabsToolbar-customization-target:hover #tabbrowser-tabs {
-    width: var(--uc-vertical-tabs-width-revert);
-}

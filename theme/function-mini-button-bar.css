@@ -11,8 +11,10 @@
 
   margin: var(--uc-tab-margins) !important;
   border-radius: var(--uc-all-border-radius);
-  background: red;
+  background: var(--uc-ultima-background-iv);
 }
+
+
 
 /* tabs relative to siblings */
 
