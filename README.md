@@ -26,10 +26,10 @@
 
 ## Requirements
 
-1. Firefox 120+
-2. Win11/Lin/Mac ✅ compatible
-3. User Chrome Stylesheets ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
-4. `svg.context-properties.content.enabled` ✅
+- Firefox 120+
+- Win11/Lin/Mac ✅ compatible
+- User Chrome Stylesheets ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
+- `svg.context-properties.content.enabled` ✅
 <details>
 <summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different</summary>
   
