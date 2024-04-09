@@ -170,11 +170,11 @@ color: var(--toolbox-non-lwt-textcolor-inactive) !important; }}
 
 /*-------------------tabs-------------------*/
 
-#tabbrowser-tabs
-{ background: var(--uc-tabs-background); box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);}
+#main-window:not([lwtheme="true"]) #tabbrowser-tabs
+{ background: var(--uc-tabs-background); --tab-loading-fill: var(--uc-ultima-accent-i) !important;}
 
-#main-window:not([lwtheme="true"]) #tabbrowser-tabs {
-  --tab-loading-fill: var(--uc-ultima-accent-i) !important;
+#main-window:not([lwtheme="true"]) #TabsToolbar-customization-target {
+  box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.65);
 }
 
 #main-window:not([lwtheme="true"]) .tabbrowser-tab
@@ -217,16 +217,12 @@ border-radius: 10px !important;}
 #main-window:not([lwtheme="true"]) #urlbar[open] > #urlbar-background
 {border-color: var(--uc-ultima-background-i) !important;}
 
-#urlbar[breakout][breakout-extend] {top: 2px !important;}
-
 #main-window:not([lwtheme="true"]) #urlbar[breakout][breakout-extend]{
 background-color: var(--uc-context-menu) !important;
 border-radius: 10px;}
 
 #main-window:not([lwtheme="true"]) #urlbar-zoom-button
 {background-color: var(--uc-active) !important;}
-
-#urlbar-container, #search-container {top: 2px !important;}
 
 /*---------customize toolbar page-----------*/
 
