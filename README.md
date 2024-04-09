@@ -77,7 +77,7 @@
 5. Press Enter, and cloning should begin.
 6. After cloning is completed, restart Firefox.
 
-> This way enables easier updating, although it is harder to set up for less technical people.
+###### 🔄 This way enables easier updating, although it is harder to set up for less technical people.
 
 ### Extra Modifications
 
