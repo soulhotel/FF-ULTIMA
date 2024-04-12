@@ -36,7 +36,7 @@ color-scheme: dark !important; /*--<--dont touch--*/
 --uc-text: rgb(255, 255, 255);
 --uc-panel-border: rgba(25, 25, 25, 1);
 --uc-panel-border-ii: rgba(45, 45, 45, 0.5);
---uc-context-menu: rgba(28, 27, 34,0.97);
+--uc-context-menu: rgba(28, 27, 34,1);
 --uc-tabs-background: var(--uc-ultima-background-i);
 --uc-sb-themed: var(--uc-ultima-background-i);
 --uc-sb-themed-ii: var(--uc-ultima-accent-iv);
@@ -186,7 +186,8 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 .tabbrowser-tab[pinned=""] .tab-background, .tabbrowser-tab[pinned="true"] .tab-background{
 background: var(--tab-selected-bgcolor) !important;
-box-shadow: 0 0 4px rgba(0,0,0,.4);}
+box-shadow: 0 0 4px rgba(0,0,0,.4);
+}
 
 .tab-preview-container {
   background-color: var(--uc-context-menu) !important;

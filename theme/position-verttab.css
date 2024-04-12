@@ -370,10 +370,15 @@ scrollbox[orient="horizontal"] {
 
 /*-----------------------------------END OF ADJUSTMENTS-------------------------------------*/
 
+
+/*------------------------------Scrollbox Shadow--------------------------------------------*/
+
+
 /* Source code for shadow inspired by */
 /* https://css-tricks.com/books/greatest-css-tricks/scroll-shadows/ */
 
-scrollbox {
+@media (prefers-color-scheme: dark) {
+.scrollbox-clip scrollbox[smoothscroll="true"] {
   background:
     /* Shadow Cover TOP */
     /* TODO: Need to be changed to variable */
@@ -381,18 +386,46 @@ scrollbox {
       rgba(255, 255, 255, 0)) center top,
     /* Shadow Cover BOTTOM */
     linear-gradient(#23232A,
-    #23232A 70%) center bottom,
+    #242430 70%) center bottom,
     /* Shadow TOP */
     /* TODO: Change to variable indicating scrollable area */
     radial-gradient(farthest-side at 50% 0,
-      red,
+      black,
       rgba(0, 0, 0, 0)) center top,
     /* Shadow BOTTOM */
     radial-gradient(farthest-side at 50% 100%,
-      red,
+      black,
       rgba(0, 0, 0, 0)) center bottom;
 
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
   background-attachment: local, local, scroll, scroll;
 }
+}
+
+@media (prefers-color-scheme: light) {
+.scrollbox-clip scrollbox[smoothscroll="true"] {
+  background:
+    /* Shadow Cover TOP */
+    /* TODO: Need to be changed to variable */
+    linear-gradient(#b7b7da 30%,
+      rgba(0, 0, 0, 0)) center top,
+    /* Shadow Cover BOTTOM */
+    linear-gradient(var(--uc-ultima-background-iv),
+    var(--uc-ultima-background-iv) 70%) center bottom,
+    /* Shadow TOP */
+    /* TODO: Change to variable indicating scrollable area */
+    radial-gradient(farthest-side at 50% 0,
+      rgb(129, 129, 129),
+      rgba(255, 255, 255, 0)) center top,
+    /* Shadow BOTTOM */
+    radial-gradient(farthest-side at 50% 100%,
+      rgb(129, 129, 129),
+      rgba(255, 255, 255, 0)) center bottom;
+
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+}
+

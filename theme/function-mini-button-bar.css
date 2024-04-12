@@ -14,8 +14,6 @@
   background: var(--uc-ultima-background-iv);
 }
 
-
-
 /* tabs relative to siblings */
 
 #tabbrowser-tabs {
@@ -35,7 +33,7 @@
   background: var(--uc-ultima-background-iii) !important;
   padding-bottom: 32px !important;
   min-width: 42px;
-  top: 100px;
+  top: 120px;
   left: 0px;
 }
 

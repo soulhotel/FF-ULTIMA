@@ -1,0 +1,22 @@
+/* 
+https://github.com/soulhotel/FF-ULTIMA
+
+z-sites-newtab.css ~ NEW TABS
+
+z-sites.css ~ themes YOUTUBE and REDDIT
+
+z-site-scrollbars-and-pip.css ~ themes the scrollbar inside of your browser tab content
+
+To remove a certain feature, simple delete its line below, open website in new tab, no restart needed.
+*/
+
+@import url(theme/z-site-scrollbars-and-pip.css);
+
+@import url(theme/z-site-newtab.css);
+
+@import url(theme/z-site-reddit.css);
+
+@import url(theme/z-site-yt.css);
+
+/*@import url(theme/z-sites.css);*/
+
