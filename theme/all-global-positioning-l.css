@@ -3,10 +3,10 @@
 /*---------------Global variables for quick modifications-------------*/
 
 :root:not([customizing],[chromehidden~="menubar"]){
---uc-vertical-tabs-width: 250px;
---uc-vertical-tabs-width-revert: 250px;
---uc-navbar-height: 40px;
---uc-collapsed-tabs-width: 41px;
+    --uc-vertical-tabs-width: 250px;
+    --uc-vertical-tabs-width-revert: 250px;
+    --uc-navbar-height: 40px;
+    --uc-collapsed-tabs-width: 41px;
 } /*--DO NOT GO LOWER THAN 41PX--*/
 
 :root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {
@@ -15,45 +15,49 @@
 
 :root, body, * {
 
-/*bookmarkbar height*/
---uc-bookbar-height: 22px;
-/*calculate tab height based on nav bar*/
-/*then adjust for bookmark being active*/
---uc-tabbar-height:
-calc(100vh - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
---uc-tabbar-height-adjust:
-calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
+    /*bookmarkbar height*/
+    --uc-bookbar-height: 22px;
+    /*calculate tab height based on nav bar*/
+    /*then adjust for bookmark being active*/
+    --uc-tabbar-height:
+    calc(100vh - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
+    --uc-tabbar-height-adjust:
+    calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
 
-/*rounded corners*/
---uc-all-border-radius: 10px;
---tab-border-radius: 10px;
---uc-button-border: 4px;
+    /*rounded corners*/
+    --uc-all-border-radius: 10px;
+    --tab-border-radius: 10px;
+    --uc-button-border: 4px;
 
-/* ^ > v < (space the windows from each other) */
-/*tabs get there own margins*/
---uc-all-margins: 0px 6px 6px 6px; 
---uc-margin-inline: 6px; /* < > */
---uc-margin-top:0px;     
---uc-margin-bottom:6px;      
---uc-tab-margins: 0px 0px 6px 6px;
---uc-sb-margin-leftside: 0px 3px 6px 6px;
---uc-sb-margin-rightside: 0px 6px 6px 0px;
---uc-tab-padding: 2px;
+    /* ^ > v < (space the windows from each other) */
+    /*tabs get there own margins*/
+    --uc-all-margins: 0px 6px 6px 6px; 
+    --uc-margin-inline: 6px; /* < > */
+    --uc-margin-top:0px;     
+    --uc-margin-bottom:6px;      
+    --uc-tab-margins: 0px 0px 6px 6px;
+    --uc-sb-margin-leftside: 0px 3px 6px 6px;
+    --uc-sb-margin-rightside: 0px 6px 6px 0px;
+    --uc-tab-padding: 2px;
 
-/*individual tabs*/
---tab-min-height: 35px;
---tab-min-width: initial !important; /*dont touch*/
---tab-overflow-pinned-tabs-width: initial !important; /*dont touch*/
---inline-tab-padding: 10px;
---tab-block-margin: 2px;
+    /*individual tabs*/
+    --tab-min-height: 35px;
+    --tab-min-width: initial !important; /*dont touch*/
+    --tab-overflow-pinned-tabs-width: initial !important; /*dont touch*/
+    --inline-tab-padding: 10px;
+    --tab-block-margin: 2px;
 }
 
 /*---------------Browser - Side bar---------------*/
 
 /*--quick hack, bigger sidebar, 50vw = 50% of the screen width--*/
 /*--great for view-tab-in-sidebar extensions--*/
-#sidebar-box { max-width: 50vw !important; }
-#sidebar-box { min-width: 14em; width: 18em; } /*defaults*/
+#sidebar-box {
+    max-width: 50vw !important;
+} #sidebar-box {
+    min-width: 14em;
+    width: 18em;
+}   /*defaults*/
 
 /*--default left side--<--*/
 #sidebar-box {
@@ -61,8 +65,8 @@ calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margi
     margin: var(--uc-sb-margin-leftside) !important;
 }
 /*--right side-->--*/
-#sidebar-box[positionend="true"]
-{margin: var(--uc-sb-margin-rightside) !important;}
+#sidebar-box[positionend="true"]{
+    margin: var(--uc-sb-margin-rightside) !important;}
 
 #sidebar-header {
     border-top-left-radius: var(--uc-all-border-radius) !important;
@@ -83,19 +87,20 @@ calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margi
     border-inline-end-width: 0px !important;
 }
 
-.sidebar-splitter
-{width: 2px !important;}
+.sidebar-splitter {
+width: 2px !important;}
 
 /*---------------Browser - Browser content---------------*/
 
 /*browser is the container, browser stack is the content*/
 
 #browser, #appcontent, #tabbrowser-tabbox,
-#tabbrowser-tabpanels, .browserSidebarContainer,
-.browserStack{
-    border-radius: var(--uc-all-border-radius) !important;}
+#tabbrowser-tabpanels, .browserSidebarContainer, .browserStack{
+    border-radius: var(--uc-all-border-radius) !important;
+}
 
-.browserContainer {border-radius: var(--uc-all-border-radius) !important;}
+.browserContainer {
+    border-radius: var(--uc-all-border-radius) !important;}
 
 #main-window
 #tabbrowser-tabpanels { browser[type] {
@@ -118,8 +123,8 @@ calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margi
     padding-bottom: 2px !important;
 }
 
-#personal-toolbar-empty-description, #personal-toolbar-empty-description .text-link, a
-{cursor: auto !important; opacity: 0 !important;}
+#personal-toolbar-empty-description, #personal-toolbar-empty-description .text-link, a {
+cursor: auto !important; opacity: 0 !important;}
 
 /*-------------------menu bar--------------------*/
 
