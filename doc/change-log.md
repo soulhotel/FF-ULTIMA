@@ -23,7 +23,7 @@
 
 - [Beautiful-newtab-Firefox](https://github.com/hachikoharuno/Beautiful-newtab-Firefox). Thank you [@hachikoharuno](https://github.com/hachikoharuno)
 
-TEMPORARY, just a format for variables:
+:warning: temporary, just a format for variables:
 
 https://docs.google.com/spreadsheets/d/1djIl2jeAsbOBBUH6hNU2l_jyY2sAjSU5Poi6X6QsX8M/edit?usp=sharing
 
