@@ -17,7 +17,8 @@
 - Git: Workflow structured, for users who fork/pull.
 
 - Default setting adjustments
-	- tabs default to L (250px)
-	- the S option (140px) has been increased to (165px)
+  - tabs default to L (250px)
+  - the S option (140px) has been increased to (165px)
+  - autohide on by default
 
 - [Beautiful-newtab-Firefox](https://github.com/hachikoharuno/Beautiful-newtab-Firefox). Thank you [@hachikoharuno](https://github.com/hachikoharuno)
