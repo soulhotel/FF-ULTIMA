@@ -82,7 +82,11 @@ https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-
    - Press enter to submit the navigation to your folder path.
 4. Now write or copy/paste `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update the theme to the latest version
 5. Press Enter, and cloning should begin.
-6. After cloning is completed, restart Firefox.
+6. After cloning is completed, open the chrome folder.
+7. Copy and paste the `user.js` file into your Profile Folder.
+8. For `user.js` to apply, restart Firefox THEN delete the `user.js` files
+9. `user.js` lets you change settings like tab size and autohiding from the about:config page using `ultima` variables
+8. Restart Firefox one more time.
 
 ###### 🔄 This way enables easier updating, although it is harder to set up for less technical people.
 
