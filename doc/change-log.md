@@ -4,7 +4,7 @@
 
 ## Change Log:
 
-- :exclamation: New/Easier format for [changing settings](https://github.com/soulhotel/FF-ULTIMA/blob/1.7/doc/Modification.md). No longer have to go into the userChrome file. 
+- :exclamation: New/Easier format for [changing settings](Modification.md). No longer have to go into the userChrome file. 
 - wip: fix the alignment of bottom buttons
 - wip: spreadsheet for variables in the global-theme, and global-positioning files
 - Navigation bar spacing, centering of the url bar AND buttons
