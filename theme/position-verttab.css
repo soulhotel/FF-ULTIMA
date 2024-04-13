@@ -416,11 +416,11 @@ scrollbox[orient="horizontal"] {
     /* Shadow TOP */
     /* TODO: Change to variable indicating scrollable area */
     radial-gradient(farthest-side at 50% 0,
-      rgb(129, 129, 129),
+      rgb(162, 153, 182),
       rgba(255, 255, 255, 0)) center top,
     /* Shadow BOTTOM */
     radial-gradient(farthest-side at 50% 100%,
-      rgb(129, 129, 129),
+      rgb(162, 153, 182),
       rgba(255, 255, 255, 0)) center bottom;
 
   background-repeat: no-repeat;
