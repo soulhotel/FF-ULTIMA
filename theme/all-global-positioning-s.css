@@ -169,7 +169,7 @@ border-radius: var(--uc-all-border-radius) !important;}
 /*--centering buttons vertically--*/
 
 #nav-bar toolbarbutton {
-	margin-top: 3px !important;
+	margin-top: 1px !important;
 }
 
 
