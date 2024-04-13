@@ -84,7 +84,6 @@ https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-
 5. After cloning is completed, open the chrome folder.
 6. Copy and paste the `user.js` file into your Profile Folder. :warning: you're bringing this file **out** of the chrome folder, and **into the Profile Folder**.
 7. Restart Firefox, THEN delete the `user.js` file, this will apply it to your profile.
-8. `user.js` lets you change settings like tab size and autohiding from the about:config page using `ultima` preferences.
 
 ### Extra Modifications
 
