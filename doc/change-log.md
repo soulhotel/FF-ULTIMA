@@ -22,9 +22,3 @@
 	- the S option (140px) has been increased to (165px)
 
 - [Beautiful-newtab-Firefox](https://github.com/hachikoharuno/Beautiful-newtab-Firefox). Thank you [@hachikoharuno](https://github.com/hachikoharuno)
-
-:warning: temporary, just a format for variables:
-
-https://docs.google.com/spreadsheets/d/1djIl2jeAsbOBBUH6hNU2l_jyY2sAjSU5Poi6X6QsX8M/edit?usp=sharing
-
-https://docs.google.com/spreadsheets/d/16IHxeOR-lqffWNmw9dO68N8mBjkUcKlbNLe3j3_EsK4/edit?usp=sharing
