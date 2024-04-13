@@ -57,7 +57,15 @@
 5. In that folder create a new folder named `chrome` (if you don't have the folder already).
 6. Extract the downloaded theme `ffultimaX.X.X.zip`. Paste the files from the `ffultimaX.X.X` folder into the chrome folder.
 7. Restart Firefox.
+8. CHANGES INBOUND 5oclock
 
+<details>
+<summary>(Click me) Installation Video </summary>
+  
+
+https://github.com/soulhotel/FF-ULTIMA/assets/155501797/cab1e363-2ede-4048-b1a0-1527223a7c6b
+
+</details>
 #### The hard way, using Git:
 
 > :warning: To use this method you should be accustomed to the basic of Git and Terminal usage, and have Git installed.
