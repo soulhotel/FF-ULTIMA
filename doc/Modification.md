@@ -94,7 +94,7 @@
 - Color of Bar on customize-toolbar page, line 12, defaults black in `Full Moon`, yellow in `Dusky`
 - the following buttons work for the button bar, NO EXTENSIONS:
 
-![prevminibar](preview/prevminibar.png)
+![prevminibar](preview/prevmini-bar.png)
 
 - adjust when the buttons dissappear, line 93
 - 15 buttons are allowed, you can edit the file to increase this number, and size them based on view height
