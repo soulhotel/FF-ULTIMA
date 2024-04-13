@@ -23,7 +23,7 @@
 - Two options to Autohide Tabs - [live preview](doc/Modification.md)
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
 
-![prevautohide](doc/preview/prevminibar.png)
+![prevautohide](doc/preview/prevmini-bar.png)
 
 ## Requirements
 
