@@ -188,7 +188,7 @@ body {background: var(--toolbar-bgcolor) !important;}
 /*--tabs toolbar container that wraps around the area--*/
 
 #main-window:not([lwtheme="true"]) #TabsToolbar-customization-target {
-  box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+  box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
   background: var(--uc-ultima-background-iv);
 }
 
