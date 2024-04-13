@@ -1,4 +1,4 @@
-
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
 /*--option 1 - tabs overlay browser content instead of pushing it to the side--*/
 
 /*--added autohide on hover support--*/
@@ -40,7 +40,7 @@
     background: var(--uc-tabs-lwt) !important;
 }
 
-}
+}}
 
 
 /*--minibuttonbar buttons expand tabs accordingly--*/

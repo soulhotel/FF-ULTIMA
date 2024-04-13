@@ -1,5 +1,7 @@
 /*---------------------------------vertical tabs-------------------------------------*/
 
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
+
 /*--first, the body margin should match the tabs width--*/
 
 #tab-notification-deck,
@@ -429,3 +431,4 @@ scrollbox[orient="horizontal"] {
 }
 }
 
+}

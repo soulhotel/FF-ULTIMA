@@ -1,4 +1,4 @@
-
+@media (-moz-bool-pref: "ultima.tabs.l") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") {
 /*--------------------------Global positioning--------------------------*/
 /*---------------Global variables for quick modifications-------------*/
 
@@ -175,5 +175,24 @@ cursor: auto !important; opacity: 0 !important;}
 }
 
 
-
+}}}
 /*-------------------fin--------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

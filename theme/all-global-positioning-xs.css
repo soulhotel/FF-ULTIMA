@@ -1,4 +1,4 @@
-
+@media (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.l") {
 /*--------------------------Global positioning--------------------------*/
 /*---------------Global variables for quick modifications-------------*/
 
@@ -174,5 +174,5 @@
 }
 
 
-
+}}}
 /*-------------------fin--------------------*/
