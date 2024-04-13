@@ -17,7 +17,7 @@
 - Linux: Titlebar buttons recieve improved positioning & padding, Window color overridden to match the theme
 - Git: Workflow structured, for users who fork/pull.
 
-- Default setting adjustments [@Kaedriz](https://github.com/Kaedriz)
+- Default setting adjustments
 	- tabs default to L (250px)
 	- the S option (140px) has been increased to (165px)
 
