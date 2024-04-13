@@ -21,41 +21,49 @@ then I will implement autohiding for the native Sidebar
 
 /*--adjust browser content margins for no tabs--*/
 
-#tab-notification-deck, .global-notificationbox, #main-window:not([inDOMFullscreen]) #browser
-{ margin-left: 0 !important; }
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser{
+    margin-left: 0 !important;
+}
 
 /*--adjust spacing, margins for everything--*/
 
-:root, body, * {
-/*bookmarkbar height*/
---uc-bookbar-height: 22px;
-/*rounded corners*/
---uc-all-border-radius: 10px;
---uc-all-margins: 3px 6px 6px 6px;
-/*--sidebar margins--*/
---uc-sb-margin-leftside: 3px 3px 6px 6px;
---uc-sb-margin-rightside: 3px 6px 6px 0px;
+:root, body, *{
+    /*bookmarkbar height*/
+    --uc-bookbar-height: 22px;
+    /*rounded corners*/
+    --uc-all-border-radius: 10px;
+    --uc-all-margins: 3px 6px 6px 6px;
+    /*--sidebar margins--*/
+    --uc-sb-margin-leftside: 3px 3px 6px 6px;
+    --uc-sb-margin-rightside: 3px 6px 6px 0px;
 }
 
 /*-------------------------------------------------------------------------------*/
 /*--adjustments. dont display none title bar, just remove siblings individually--*/
 
-#titlebar
-{will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;}
+#titlebar{
+    will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;
+}
 
-#alltabs-button, #new-tab-button, #tabs-newtab-button
-{display: none !important;}
+#alltabs-button, #new-tab-button, #tabs-newtab-button{
+    display: none !important;
+}
 
-#tabbrowser-arrowscrollbox * /*--<--should cover everything but we'll do more below--*/
-{display: none !important; width: 0 !important;}
+/*--v--should cover everything but we'll do more below--*/
+#tabbrowser-arrowscrollbox *{
+    display: none !important; width: 0 !important;
+}
 
 tabbrowser-arrowscrollbox-periphery,
-#tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down)
-{display: none !important; width: 0 !important;}}
+#tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down){
+    display: none !important; width: 0 !important;
+}}
 
 :root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser tabs, 
-:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs
-{ border-inline-start: 0px; padding-inline-start: 0px; margin-inline-start: 0px; }
+:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs{
+    border-inline-start: 0px; padding-inline-start: 0px; margin-inline-start: 0px;
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -74,16 +82,17 @@ so you can keep the ability to switch from left to right--*/
 /*--sidebar is a sibling to the browser content, no need to make it absolute--*/
 
 #sidebar-box {
---uc-sidebar-width: 38px; /*width when not in view*/
---uc-sidebar-hover-width: 240px; /*width when in full view*/
---uc-autohide-sidebar-delay: 300ms;
---uc-autohide-transition-duration: 80ms;
---uc-autohide-transition-type: linear;
-position: relative;
-min-width: var(--uc-sidebar-width) !important;
-width: var(--uc-sidebar-width) !important;
-max-width: var(--uc-sidebar-width) !important;
-z-index:1;}
+    --uc-sidebar-width: 38px; /*width when not in view*/
+    --uc-sidebar-hover-width: 240px; /*width when in full view*/
+    --uc-autohide-sidebar-delay: 300ms;
+    --uc-autohide-transition-duration: 80ms;
+    --uc-autohide-transition-type: linear;
+    position: relative;
+    min-width: var(--uc-sidebar-width) !important;
+    width: var(--uc-sidebar-width) !important;
+    max-width: var(--uc-sidebar-width) !important;
+    z-index:1;
+}
 
 #sidebar-box[positionend] { direction: rtl }
 #sidebar-box[positionend] > * { direction: ltr }
@@ -97,37 +106,45 @@ z-index:1;}
 #main-window[sizemode="fullscreen"] #sidebar-box { margin-inline:0px !important; }
 #main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
 
-#sidebar-header
-{ overflow: hidden; padding-inline: 0 !important; }
+#sidebar-header{
+    overflow: hidden; padding-inline: 0 !important;
+}
 
 #sidebar-header::before,
-#sidebar-header::after
-{ content: ""; display: flex; padding-left: 1px; }
+#sidebar-header::after{ 
+    content: ""; display: flex; padding-left: 1px;
+}
 
-#sidebar-header, #sidebar {
-transition:
-min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
-min-width: var(--uc-sidebar-width) !important;
-will-change: min-width;
+#sidebar-header, #sidebar{
+    transition:
+        min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
+    min-width: var(--uc-sidebar-width) !important;
+    will-change: min-width;
 }
   
-#sidebar-box:hover > #sidebar-header, #sidebar-box:hover > #sidebar {
-min-width: var(--uc-sidebar-hover-width) !important;
-transition-delay: 0ms !important;}
+#sidebar-box:hover > #sidebar-header, #sidebar-box:hover > #sidebar{
+    min-width: var(--uc-sidebar-hover-width) !important;
+    transition-delay: 0ms !important;
+}
 
 /* Visible Divider for the sidebar to window I set it to 0px */
 
-#sidebar, #sidebar-header {border-inline: 1px solid rgba(0,0,0,0);border-inline-width: 0px 0px;}
+#sidebar, #sidebar-header{
+    border-inline: 1px solid rgba(0,0,0,0);
+    border-inline-width: 0px 0px;
+}
 
-#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl), #sidebar-box[positionend] > *
-{border-inline-width: 1px 0px;}
+#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl), #sidebar-box[positionend] > *{
+    border-inline-width: 1px 0px;
+}
 
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel
-{inset-inline: auto 0px !important;}
+#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel{
+    inset-inline: auto 0px !important;
+}
 
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label
-{margin-inline: 0px !important;border-left-style: solid !important; }
-
+#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label{
+    margin-inline: 0px !important;border-left-style: solid !important;
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -139,23 +156,21 @@ transition-delay: 0ms !important;}
 
 .close-icon { border-radius: 7px !important; margin-right: 7px !important; }
 
-
 /*--color correction for overlapping windows--*/
 
 @media (prefers-color-scheme: dark) {
 
-#sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important; }
-
-#main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-tabs-lwt) !important; }
+#sidebar-header, #sidebar{
+    background: var(--uc-ultima-background-iv) !important;
+} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar{
+    background: var(--uc-tabs-lwt) !important;
+}
 
 } @media (prefers-color-scheme: light) {
 
 #sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important; }
-
-#main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
+{ background: var(--uc-ultima-background-iv) !important;
+} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
 { background: var(--uc-tabs-lwt) !important; }
 
 }

@@ -39,13 +39,14 @@ menupopup, panel {
   }
 }
 menuitem:hover{
-background-color: var(--uc-active) !important;
-color: var(--uc-light-dark) !important;
+  background-color: var(--uc-active) !important;
+  color: var(--uc-light-dark) !important;
  }
 
-menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-background-color: var(--uc-active) !important;
-color: var(--uc-light-dark) !important;
+menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+  background-color: var(--uc-active) !important;
+  color: var(--uc-light-dark) !important;
 }
 
 
