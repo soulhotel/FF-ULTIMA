@@ -1,6 +1,6 @@
 ###### Please follow the installation instructions on main page.
 
-###### Changing tab sizes and autohide? Creating Color Schemes? Something else? [Come over to the modification page...](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+###### Changing tab sizes and autohide? Creating Color Schemes? Something else? [Come over to the modification page...](Modification.md)
 
 ## Change Log:
 
