@@ -27,10 +27,10 @@
 
 ## Requirements
 
-- Firefox 120+
-- Win11/Lin/Mac ✅ compatible
-- User Chrome Stylesheets ✅ [Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13)
-- `svg.context-properties.content.enabled` ✅
+- ✅ Firefox 120+
+- ✅ Win11/Lin/Mac
+- ✅ User Chrome Stylesheets ([Need help?](https://gist.github.com/soulhotel/80c1ac8d41e45b910158a26d31d48c13))
+- ✅ `svg.context-properties.content.enabled`
 
 <details>
 <summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different</summary>
@@ -42,23 +42,32 @@
 
 ###### There are 2 ways to install this theme, both have their drawbacks and strengths. Choose one.
 
-#### The easy way, get it and go:
+### The easy way, get it and go:
 
 1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) from the release page. At the top of the page you'll see this: 
 
 ![Button to download latest version](doc/preview/release_button.png)
 
-2. You should now have a zip file named `ffultimaX.X.X.zip`.
-3. Locate your firefox profile folder by typing `about:support` in the URL BAR.
-4. On the `about:support` page, the 11th row in the table is your currently active Profile Folder. Open it.
+2. Locate your firefox profile folder by typing `about:support` in the URL BAR.
+3. On the `about:support` page, the 11th row in the table is your currently active Profile Folder. Open it.
 
 ![aboutsupport](doc/preview/about_support.png)
 
-5. In that folder create a new folder named `chrome` (if you don't have the folder already).
-6. Extract the downloaded theme `ffultimaX.X.X.zip`. Paste the files from the `ffultimaX.X.X` folder into the chrome folder.
-7. Restart Firefox.
+4. In that folder create a new folder named `chrome` (if you don't have the folder already).
+5. Extract the downloaded theme `ffultimaX.X.X.zip`. Paste the files from the `ffultimaX.X.X` folder into the chrome folder.
+6. Inside the chrome folder you should have a file called `user.js` copy and paste it into your profile folder.
+7. For `user.js` to apply, restart Firefox. then delete the `user.js` file
+8. `user.js` lets you change settings like tab size and autohiding from the about:config page
+8. Restart Firefox one more time. Video below.
 
-#### The hard way, using Git:
+<details>
+<summary>(Click me) Installation Video</summary>
+
+![installation video](doc/preview/install.mp4)
+
+</details>
+
+### The hard way, using Git:
 
 > :warning: To use this method you should be accustomed to the basic of Git and Terminal usage, and have Git installed.
 
@@ -83,7 +92,7 @@
 
 ### Extra Modifications
 
-###### :warning: Help turning on autohide? Changing the tab size? Want to create your own color scheme? Something else? [Come over to the modification page...](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+###### :warning: Help turning on autohide? Changing the tab size? Want to create your own color scheme? Something else? [Come over to the modification page...](doc/Modification.md)
 
 ### Previews
 
