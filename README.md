@@ -20,7 +20,7 @@
 - Full Moon (Dark) and Dusky (Light) cycle depending on your systems current color mode
 - New Tab Page Overhaul. [@hachikoharuno](https://github.com/hachikoharuno/Beautiful-newtab-Firefox) 
 - Three options for Tab size - [live preview](doc/Modification.md)
-- Two options to Autohide Tabs - [live preview](doc/Modification.md)
+- Autohide Tabs - [enable/disable](doc/Modification.md)
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
 
 ![prevautohide](doc/preview/prevmini-bar.png)
