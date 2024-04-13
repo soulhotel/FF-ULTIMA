@@ -59,9 +59,8 @@
 
 <details>
 <summary>(Click me) Installation Video</summary>
-
-![installation video](doc/preview/install.mp4)
-
+  
+https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e
 </details>
 
 ### The hard way, using Git:
