@@ -44,18 +44,18 @@
 
 ### The easy way, get it and go:
 
-1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) from the release page. Theres a download button at the top of the page.
-2. Locate your firefox profile folder by typing `about:support` in the URL BAR.
-3. On the `about:support` page, the 11th row in the table is your currently active Profile Folder. Open it.
+1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest). Theres a download button at the top of the page.
+2. Find your firefox profile folder by typing `about:support` in the URL BAR.
+3. On the `about:support` page, youll see your profile folder in the blue table. Open it.
 
 ![aboutsupport](doc/preview/about_support.png)
 
 4. In that folder create a new folder named `chrome` (if you don't have the folder already).
-5. In the themes zip `ffultimaX.X.X.zip`. Copy the files from the `ffultimaX.X.X` folder into the chrome folder.
+5. In the zip `ffultimaX.X.X.zip`, copy the files from the `ffultimaX.X.X` folder into the chrome folder.
 6. Inside the chrome folder is a file named `user.js`, copy and paste it into your Profile Folder.
 7. For `user.js` to apply, restart Firefox THEN delete the `user.js` files
 8. `user.js` lets you change settings like tab size and autohiding from the about:config page
-8. Restart Firefox one more time. Video below.
+8. Restart Firefox one more time. Video below..
 
 <details>
 <summary>(Click me) Installation Video</summary>
