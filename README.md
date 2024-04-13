@@ -51,8 +51,8 @@
 4. In that folder create a new folder named `chrome` (if you don't have the folder already).
 5. In the zip `ffultimaX.X.X.zip`, copy the files from the `ffultimaX.X.X` folder into the chrome folder.
 6. Inside the chrome folder is a file named `user.js`, copy and paste it into your Profile Folder.
-7. For `user.js` to apply, restart Firefox THEN delete the `user.js` files
-8. `user.js` lets you change settings like tab size and autohiding from the about:config page
+7. For `user.js` to apply, restart Firefox. THEN, once FF is open, delete the `user.js` files.
+8. `user.js` will let you change settings like tab size and autohiding from the about:config page.
 9. Video below..
 
 <details>
