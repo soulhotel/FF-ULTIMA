@@ -10,7 +10,7 @@
 
 -return the "this time search with" URL BAR options<br>
 
-![returnurlbar](preview/returnurlbar.jpg)
+![returnurlbar](preview/returnurlbar.png)
 
 ---
 
