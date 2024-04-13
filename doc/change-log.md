@@ -4,11 +4,11 @@
 
 ## Change Log:
 
-- New/Easier format for [changing settings](https://github.com/soulhotel/FF-ULTIMA/blob/1.7/doc/Modification.md). No longer have to go into the userChrome file. 
+- :exclamation: New/Easier format for [changing settings](https://github.com/soulhotel/FF-ULTIMA/blob/1.7/doc/Modification.md). No longer have to go into the userChrome file. 
 - wip: fix the alignment of bottom buttons
 - wip: spreadsheet for variables in the global-theme, and global-positioning files
 - Navigation bar spacing, centering of the url bar AND buttons
-- Revamping how the tabs panel looks in general [@Kaedriz](https://github.com/Kaedriz)
+- :exclamation: Tabs Panel Appearance overhaul [@Kaedriz](https://github.com/Kaedriz)
 - Container tabs indicators (two optional styles) [@Kaedriz](https://github.com/Kaedriz)
 - Customize toolbar page improved visual appearance for button bar
 - Styling for youtube and reddit disabled
