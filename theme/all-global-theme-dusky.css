@@ -467,19 +467,26 @@ stroke: var(--toolbarbutton-icon-fill) !important;
 /*-----------------------------------------------------------------------------------*/
 
 /*--extension menu--*/
-#unified-extensions-button {list-style-image: url("icons/extensions-l.png") !important;}
-
+#unified-extensions-button{
+  list-style-image: url("icons/extensions-l.png") !important;
+}
 /*--bookmarks folder icon--*/
-.bookmark-item[container=true] {list-style-image: url("icons/bm-l.png") !important;}
-
+.bookmark-item[container=true]{
+  list-style-image: url("icons/bm-l.png") !important;
+}
 /*--ublock on--*/
-#ublock0_raymondhill_net-BAP image {
+#ublock0_raymondhill_net-BAP image{
   list-style-image: url("icons/ubon-l.png") !important;
 }
-
 /*--ublock off--*/
-#ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {
+#ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
   list-style-image: url("icons/uboff.png") !important;
+}
+#forward-button image{
+  list-style-image: url("icons/forward.png") !important;
+}
+#back-button image{
+  list-style-image: url("icons/back.png") !important;
 }
 
 /*--notification badges--*/
