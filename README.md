@@ -53,7 +53,7 @@
 6. Inside the chrome folder is a file named `user.js`, copy and paste it into your Profile Folder.
 7. For `user.js` to apply, restart Firefox THEN delete the `user.js` files
 8. `user.js` lets you change settings like tab size and autohiding from the about:config page
-8. Video below..
+9. Video below..
 
 <details>
 <summary>(Click me) Installation Video</summary>
