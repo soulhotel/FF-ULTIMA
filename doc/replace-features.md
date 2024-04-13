@@ -14,7 +14,7 @@
 
 ---
 
-###### ← position-verttab.css
+###### ← ~~position-verttab.css~~
 
 - :warning: (depreciated) you can now remove tabs with help from the [Modifications.md](Modifications.md)
 - remove verticle tabs so that users can use sidebery/treestyletabs as the main tabs source
