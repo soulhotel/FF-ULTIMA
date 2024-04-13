@@ -40,7 +40,7 @@
 
 ###### There are 2 ways to install this theme, both have their drawbacks and strengths. Choose one.
 
-### The easy way, get it and go:
+### The Easy Way, get it and go:
 
 1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest). Theres a download button at the top of the page.
 2. Find your firefox profile folder by typing `about:support` in the URL BAR.
@@ -61,36 +61,34 @@
 https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e
 </details>
 
-### The hard way, using Git:
+### The Hard Way, using Git:
 
-> :warning: To use this method you should be accustomed to the basic of Git and Terminal usage, and have Git installed.
-
-1. Locate your firefox profile folder.
-   - Go to `about:profiles`
-   - Your profile will say `This is the profile in use and...` Click the **Open Directory** button in the **Root Directory** row.
-   - This will open your currently in-use Firefox Profile folder.
+> :warning: To use this method you should be accustomed to the basics of Git and Terminal usage, and have Git installed.<br>
+> 🔄 This way enables easier updating, although it is harder to set up for less technical people.
+1. Locate your Firefox Profile Folder.
+  <details>
+    <summary>(Click me) Finding the Profile Folder</summary>
+    
+- Go to `about:profiles`
+- Your profile will say `This is the profile in use and...` Click the **Open Directory** button in the **Root Directory** row.
+- This will open your currently in-use Firefox Profile folder.
 
 ![alt text](doc/preview/profilelocation.png)
 
-2. In that folder create a new folder named `chrome` (if you don't have the folder already).
-3. Open a terminal in that `chrome` folder.
-   - Copy the folder path from address bar in your file manager.
-   - Open terminal.
-   - In the terminal write or paste `cd your\folder\path`.
-   - Press enter to submit the navigation to your folder path.
-4. Now write or copy/paste `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update the theme to the latest version
-5. Press Enter, and cloning should begin.
-6. After cloning is completed, open the chrome folder.
-7. Copy and paste the `user.js` file into your Profile Folder.
-8. For `user.js` to apply, restart Firefox THEN delete the `user.js` files
-9. `user.js` lets you change settings like tab size and autohiding from the about:config page using `ultima` variables
-8. Restart Firefox one more time.
-
-###### 🔄 This way enables easier updating, although it is harder to set up for less technical people.
+- In that folder create a new folder named `chrome` (if you don't have the folder already).
+  </details>
+  
+2. Open a terminal in the `chrome` folder.
+3. In the terminal, navigate to your profile folder path `cd your\profile\folder\path`.
+4. Now write or paste `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update the theme to the latest version
+5. After cloning is completed, open the chrome folder.
+6. Copy and paste the `user.js` file into your Profile Folder. :warning: you're bringing this file **out** of the chrome folder, and **into the Profile Folder**.
+7. Restart Firefox, THEN delete the `user.js` file, this will apply it to your profile.
+8. `user.js` lets you change settings like tab size and autohiding from the about:config page using `ultima` preferences.
 
 ### Extra Modifications
 
-###### :warning: Help turning on autohide? Changing the tab size? Want to create your own color scheme? Something else? [Come over to the modification page...](doc/Modification.md)
+###### Help turning on autohide? Changing the tab size? Want to create your own color scheme? Something else? [Come over to the modification page...](doc/Modification.md)
 
 ### Previews
 
