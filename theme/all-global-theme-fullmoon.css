@@ -176,10 +176,13 @@ body {background: var(--toolbar-bgcolor) !important;}
 /*-------------------tabs-------------------*/
 
 #main-window:not([lwtheme="true"]) #tabbrowser-tabs
-{background: var(--uc-tabs-background);--tab-loading-fill: var(--uc-ultima-accent-i) !important;}
+{background: transparent;--tab-loading-fill: var(--uc-ultima-accent-i) !important;}
+
+
 
 #main-window:not([lwtheme="true"]) #TabsToolbar-customization-target {
   box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+  background: var(--uc-ultima-background-iv);
 }
 
 /*--pinned--*/
