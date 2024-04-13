@@ -1,11 +1,10 @@
 ###### Please follow the installation instructions on main page.
 
-###### Default Settings: Tabs Size `L` and Autohide-Tabs `on`. Change settings with one word in userChrome.
-
-###### Turn on Autohide, change Tab size? Creating Color Schemes? Something else? [Come over to the modification page...](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+###### Changing tab sizes and autohide? Creating Color Schemes? Something else? [Come over to the modification page...](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
 
 ## Change Log:
 
+- New/Easier format for changing settings. No longer have to go into the userChrome file.
 - wip: fix the alignment of bottom buttons
 - wip: spreadsheet for variables in the global-theme, and global-positioning files
 - Navigation bar spacing, centering of the url bar AND buttons
