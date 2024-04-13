@@ -88,7 +88,7 @@ https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-
 
 ### Extra Modifications
 
-###### Help turning on autohide? Changing the tab size? Want to create your own color scheme? Something else? [Come over to the modification page...](doc/Modification.md)
+###### Changing tab sizes and autohide? Creating Color Schemes? Something else? [Come over to the modification page...](doc/Modification.md)
 
 ### Previews
 
