@@ -2,11 +2,7 @@
 
 ###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
 
----
-
 ### Switching Tabs Size
-
-###### chrome/userChrome.css
 
 - in the URL BAR type `about:config` and search for `ultima`
 - there are three options, double click to set one to true, and make sure you set the other as false.
@@ -19,8 +15,6 @@
 ---
 
 ### Enable/Disable Autohide
-
-###### chrome/userChrome.css
 
 - in the URL BAR type `about:config` and search for `ultima`
 - set `ultima.tabs.autohide` to true or false
