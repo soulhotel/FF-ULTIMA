@@ -49,7 +49,8 @@ color-scheme: dark !important; /*--<--dont touch--*/
   --arrowpanel-border-radius: var(--uc-all-border-radius);
   --toolbarbutton-border-radius: var(--uc-all-border-radius);
   --urlbar-icon-border-radius: var(--uc-all-border-radius);
-  --button-border-radius: var(--uc-all-border-radius);
+  --button-border-radius: 10px;
+  --uc-button-border-radius: 10px;
 }
 
 /*--scrollbars--*/
@@ -290,7 +291,7 @@ body {background: var(--toolbar-bgcolor) !important;}
 /*--title bar buttons - min, max, close--*/
 
 .titlebar-button {
-  border-radius: var(--uc-all-border-radius);
+  border-radius: var(--uc-button-border-radius);
 }
 
 #main-window:not([lwtheme="true"]) .titlebar-button:hover {

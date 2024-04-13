@@ -52,7 +52,8 @@
   --arrowpanel-border-radius: var(--uc-all-border-radius);
   --toolbarbutton-border-radius: var(--uc-all-border-radius);
   --urlbar-icon-border-radius: var(--uc-all-border-radius);
-  --button-border-radius: var(--uc-all-border-radius);
+  --button-border-radius: 10px;
+  --uc-button-border-radius: 10px;
 }
 * {scrollbar-width:auto !important; scrollbar-color:rgba(50, 50, 65, 0.0) rgba(5,5,5, 0.0) !important;}
 #navigator-toolbox
@@ -294,7 +295,7 @@ background-color: var(--uc-ultima-background-ii) !important;
 /*--title bar buttons - min, max, close--*/
 
 .titlebar-button {
-  border-radius: var(--uc-all-border-radius);
+  border-radius: var(--uc-button-border-radius);
 }
 
 #main-window:not([lwtheme="true"]) .titlebar-button:hover {
