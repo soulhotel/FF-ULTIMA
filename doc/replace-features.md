@@ -8,7 +8,7 @@
 
 ###### ← function-urlbar.css
 
-return the "this time search with" URL BAR options<br>
+-return the "this time search with" URL BAR options<br>
 
 ![returnurlbar](preview/returnurlbar.jpg)
 
@@ -16,18 +16,13 @@ return the "this time search with" URL BAR options<br>
 
 ###### ← position-verttab.css
 
-a breakdown of what this file does:
-- remove verticle tabs so users can use sidebery/treestyletabs as the main
-- adds autohiding to the sidebar, and light styling to center the header
-- `users are responsible for handling styling of the sidebar content, since this is not a default feature of the theme, luckily sideberry has this built in, and the FFCSS community has many resources for choosing`<br>
-
-![replaceverttab](preview/replaceverttab.gif)
+- :warning: (depreciated) you can now remove tabs with help from the [Modifications.md](Modifications.md)
+- remove verticle tabs so that users can use sidebery/treestyletabs as the main tabs source
 
 ---
 
 ###### ← ~~theme-return-window-controls.css~~
-###### this has been implemented into the latest release.
 
-LINUX Users, this fixes the positioning of the min max close buttons<br>
+- :warning: (depreciated) support for linux windows controls has been implemented into the main theme
 
 ---

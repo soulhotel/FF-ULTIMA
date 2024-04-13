@@ -1,6 +1,6 @@
 ## Modifications
 
-###### includes tab size switching, autohide toggling, theme creation, references for power users. IF you cant find what you are looking for submit an issue, or browse the [replace-features.md](replace-features.md)
+###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
 
 ---
 
@@ -8,35 +8,24 @@
 
 ###### chrome/userChrome.css
 
-► in userChrome change `all-global-positioning-L` to: <br>
-- [XS, 40px TABS] --> `all-global-positioning-xs.css` <br>
-- [S, 140px TABS] --> `all-global-positioning-s.css` <br>
-- [L, 250px TABS] --> `all-global-positioning-l.css` <br>
+- in the URL BAR type `about:config` and search for `ultima`
+- there are three options, double click to set one to true, and make sure you set the other as false.
+- [XS, 40px TABS] --> `ultima.tabs.xs`
+- [S, 140px TABS] --> `ultima.tabs.s`
+- [L, 250px TABS] --> `ultima.tabs.l`
 
-<details>
-  <summary>(Click me) Live Tutorial</summary>
-
-![tabsize](preview/tabsize.png)
 ![tabsizechange](preview/tabsizechange.gif)
-</details>
 
 ---
 
-### Enable Autohide
+### Enable/Disable Autohide
 
 ###### chrome/userChrome.css
 
-► in userChrome there are two options:<br>
-- tabs overlay content `@import url(theme/function-tabs-autohide-i.css);`
-- tabs push content to the side `@import url(theme/function-tabs-autohide-ii.css);`
-- remove `/**/` to enable tabs autohiding
+- in the URL BAR type `about:config` and search for `ultima`
+- set `ultima.tabs.autohide` to true or false
 
-<details>
-  <summary>(Click me) Live Tutorial</summary>
-
-![tabsizechange](preview/autohidechange.gif)
 ![tabsize](preview/autohideon.gif)
-</details>
 
 ---
 
@@ -75,42 +64,7 @@
 
 ## Modifications for power users
 
-###### chrome/theme/all-global-positioning-s.css (xs,s,l)
-
-- remove tabs, Please refer to [replace-features.md](replace-features.md), ive made a replacement file that will remove tabs completely, and add autohiding to the sidebar
-- adjust the width of the tabs panel `--uc-vertical-tabs-width` MINIMUM '40px'
-- bookmarks toolbar height `--uc-bookbar-height`
-- all rounded corners `--uc-all-border-radius`
-- all margins, "spacing between windows" `--uc-all-margins`
-- inidividual tabs height `--tab-min-height`
-- do not touch (individual) tabs width.
-- fatter/skinnier tabs `--tab-block-margin`
+- :warning: spreadsheet WIP [positioning variables](var-pos.html)
+- :warning: spreadsheet WIP [theme variables](var-pos.html)
 
 ---
-
-###### chrome/theme/function-mini-button-bar.css
-
-- for deletion, you can just drag all buttons out and it will be gone
-- Color of Bar on customize-toolbar page, line 12, defaults black in `Full Moon`, yellow in `Dusky`
-- the following buttons work for the button bar, NO EXTENSIONS:
-
-![prevminibar](preview/prevmini-bar.png)
-
-- adjust when the buttons dissappear, line 93
-- 15 buttons are allowed, you can edit the file to increase this number, and size them based on view height
-- you can get creative and use the vertical tabs window ONLY for buttons
-  - first, target tabs `.tabbrowser-tab{opacity: 0 !important;}`
-  - then, remove mouse events `.tabbrowser-tab{pointer-events: none !important;}`
-  - then, increase the number of buttons in the mini-button-bar.css file
-  - and use sidebery or treestyle tabs for your tabs instead
-  - you can use the S(40px tabs) Version of the theme, and the button bar will already be positioned to sit inside of the unused tabs space.
-
----
-
-###### chrome/theme/all-global-theme-dusky.css , all-global-theme-fullmoon.css
-
-- everything related to color, borders, shadows, are located here
-- tabs background color `--uc-tabs-background`
-- sidebar background is split with sidebar sidebar-header sidebar-box `--uc-sb-themed` `--uc-sb-themed-two` `--uc-sb-background`
-- tabs auto collapse on full screen, line 290
-- tabs auto collapse when screen width falls below 850px, line 313
