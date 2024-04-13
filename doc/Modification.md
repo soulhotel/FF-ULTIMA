@@ -23,6 +23,22 @@
 
 ---
 
+### Disable Extensions Menu theme
+<details>
+  <summary>(Click me)</summary>
+  
+![firefox_l7mrOb3I9H](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/43181381-ff46-4ed5-b6a7-cd4cbdfddbd4)
+</details>
+
+### Square the theme; No margins, borders, or rounded corners
+<details>
+  <summary>(Click me)</summary>
+  
+![firefox_KBRra5WpSW](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/2790eb87-06dc-4fbc-aded-eafb0dc35dea)
+</details>
+
+---
+
 ### Create a theme. I was able to create Dusky (Light Mode), just like this.
 ###### You atleast need to have knowledge on what live debugging is to proceed.
 ###### chrome/theme/all-global-theme-dusky.css , chrome/theme/all-global-theme-fullmoon.css
