@@ -19,10 +19,11 @@
 - Support to create your own color schemes, or just go to the addon store
 - Full Moon (Dark) and Dusky (Light) cycle depending on your systems current color mode
 - New Tab Page Overhaul. [@hachikoharuno](https://github.com/hachikoharuno/Beautiful-newtab-Firefox) 
-- Three options for Tab size - [live preview](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
-- Two options to Autohide Tabs - [live preview](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+- Three options for Tab size - [live preview](doc/Modification.md)
+- Two options to Autohide Tabs - [live preview](doc/Modification.md)
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
-![prevautohide](doc/preview/prev-minibar.png)
+
+![prevautohide](doc/preview/prevminibar.png)
 
 ## Requirements
 
