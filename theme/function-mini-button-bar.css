@@ -29,6 +29,42 @@
   height: 837px !important;
 }
 
+/* visual indicator, when hovered */
+
+@media (-moz-bool-pref: "ultima.tabs.l"), (-moz-bool-pref: "ultima.tabs.s") {
+
+#TabsToolbar-customization-target .toolbarbutton-1:not(#tabs-newtab-button) {
+  justify-content: left;
+  margin-left:2px !important;
+}
+
+#TabsToolbar-customization-target:hover .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
+  display: flex;
+  margin-left: 5px !important;
+  overflow:clip;
+}
+
+#TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
+  margin-left: 0px !important;
+  display: none !important;
+}
+
+#TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button){
+  max-width: 40px !important;
+}
+
+:root:not([customizing]) #TabsToolbar-customization-target toolbarbutton:hover + #tabbrowser-tabs {
+  width: var(--uc-vertical-tabs-width-revert);
+}
+:root:not([customizing]) #TabsToolbar-customization-target toolbarbutton:hover ~ #tabbrowser-tabs {
+  width: var(--uc-vertical-tabs-width-revert);
+}
+:root:not([customizing]) #TabsToolbar-customization-target:hover #tabbrowser-tabs {
+  width: var(--uc-vertical-tabs-width-revert);
+}
+
+}
+
 /* visual indicator, when on customize toolbar screen */
 
 #TabsToolbar:is([customizing="true"]) #TabsToolbar-customization-target {

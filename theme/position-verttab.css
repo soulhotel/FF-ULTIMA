@@ -37,6 +37,7 @@
   border-inline-start: 0 !important;
   margin: 0 !important;
   padding-inline: 0 !important;
+  margin-left: 2px !important;
 }
 
 /*--tab scrollbox position--*/
