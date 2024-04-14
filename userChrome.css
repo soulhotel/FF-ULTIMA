@@ -1,32 +1,22 @@
-/* 
-https://github.com/soulhotel/FF-CSS-ULTIMA
-
-Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
-
-@import url(theme/all-global-positioning-xs.css);
-@import url(theme/all-global-positioning-s.css);
-@import url(theme/all-global-positioning-l.css);
+/*  
+Change tab size?
+Change autohide option?
+Remove tabs panel completely?
+Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md
 */
 
-/*-------------------------- Change tab size: ------------------------*/
-
+@import url(theme/all-global-positioning-l.css);
+@import url(theme/all-global-positioning-xs.css);
 @import url(theme/all-global-positioning-s.css);
-
-/*----------------------------------------------------------------------*/
-
-
-/*---------------------(Optional) autohide tabs-------------------------*/
-
-/*@import url(theme/function-tabs-autohide-i.css);*/ /*--tabs overlay content--*/
-/*@import url(theme/function-tabs-autohide-ii.css);*/ /*--tabs push content to the side--*/
-
-/*----------------------------------------------------------------------*/
 
 @import url(theme/all-global-theme-fullmoon.css);
 @import url(theme/all-global-theme-dusky.css);
 
 @import url(theme/position-verttab.css);
+@import url(theme/position-verttab-gone.css);
 @import url(theme/position-findbar.css);
+
+@import url(theme/function-tabs-autohide-i.css); 
 
 @import url(theme/function-mini-button-bar.css);
 @import url(theme/function-tabs-collapse.css);
@@ -43,3 +33,5 @@ Tabs Size: (XS = 40px) (S = 140px) (L = 250px)
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
 
+@import url(theme/override-linux.css);
+@import url(theme/override-styles.css);
