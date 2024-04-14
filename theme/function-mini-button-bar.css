@@ -10,7 +10,7 @@
   flex-direction: column;
   height: calc(100vh - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
   top: var(--uc-navbar-height);
-  left: -1px;
+  left: -2px;
   margin: var(--uc-tab-margins) !important;
   border-radius: var(--uc-all-border-radius);
   background: var(--uc-ultima-background-iv);
