@@ -22,3 +22,7 @@
 
 - [Beautiful-newtab-Firefox](https://github.com/hachikoharuno/Beautiful-newtab-Firefox). Thank you [@hachikoharuno](https://github.com/hachikoharuno)
 - wip: spreadsheet for variables in the global-theme, and global-positioning files
+
+
+![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
+
