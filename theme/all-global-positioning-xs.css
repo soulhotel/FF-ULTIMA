@@ -35,9 +35,9 @@
     --uc-margin-inline: 6px; /* < > */
     --uc-margin-top:0px;     
     --uc-margin-bottom:6px;      
-    --uc-tab-margins: 0px 0px 6px 6px;
-    --uc-sb-margin-leftside: 0px 3px 6px 6px;
-    --uc-sb-margin-rightside: 0px 6px 6px 0px;
+    --uc-tab-margins: 0px 0px 7px 6px;
+    --uc-sb-margin-leftside: 0px 3px 7px 6px;
+    --uc-sb-margin-rightside: 0px 6px 7px 0px;
     --uc-tab-padding: 2px;
 
     /*individual tabs*/
@@ -83,7 +83,7 @@
 #sidebar-box[positionend] + .sidebar-splitter{
     border: 2px rgba(0,0,0,0) solid !important;
     border-inline-width: 0px !important;
-    margin-inline: 0px !important;
+    margin-inline: -2px !important;
     border-inline-end-width: 0px !important;
 }
 
