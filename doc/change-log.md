@@ -4,7 +4,8 @@
 
 ## Change Log:
 
-- :exclamation: New/Easier format for [changing settings](Modification.md). No longer have to go into the userChrome file. 
+- :exclamation: Returning Users, please use the [ new installation method](https://github.com/soulhotel/FF-ULTIMA/blob/main/README.md#installation) (easy to follow)
+- :exclamation: New/Easier format for [changing settings](Modification.md). No longer have to go into the userChrome file
 - wip: fix the alignment of bottom buttons
 - wip: spreadsheet for variables in the global-theme, and global-positioning files
 - Navigation bar spacing, centering of the url bar AND buttons
@@ -14,7 +15,7 @@
 - Styling for youtube and reddit disabled
 
 - Linux: Titlebar buttons recieve improved positioning & padding, Window color overridden to match the theme
-- Git: Workflow structured, for users who fork/pull.
+- Git: Workflow structured, for users who fork/pull
 
 - Default setting adjustments
   - tabs default to L (250px)
