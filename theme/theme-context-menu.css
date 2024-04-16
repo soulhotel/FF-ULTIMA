@@ -1,0 +1,76 @@
+/* ----------------------------------------------------------
+Removing the following items from the right click menu
+https://github.com/stonecrusher/simpleMenuWizard
+-----------------------------------------------------------*/
+
+#context-take-screenshot
+#context-sep-screenshots,
+#context-sendimage,
+#context-setDesktopBackground,
+#context-sep-setbackground,
+#context-openlinkinusercontext-menu
+    { display: none !important; }
+#context-pocket,
+#context-savelinktopocket,
+#tabContextMenu #context_duplicateTab,         
+#tabContextMenu #context_duplicateTabs,
+#tabContextMenu #context_bookmarkSelectedTabs
+{ display: none !important; }
+
+/* ----------------------------------------------------------
+Theming Context Menu
+-----------------------------------------------------------*/
+
+menupopup, panel {
+  color-scheme: light dark;
+  --panel-background: var(--uc-context-menu) !important;
+  --panel-color: var(--uc-light-dark);
+  --panel-border-radius: var(--uc-all-border-radius) !important;
+  --panel-border-color: var(--uc-panel-border-ii) !important;
+  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%cc,.2); 
+}
+menupopup, panel {
+  &::part(content) {
+    background: var(--uc-active) !important;
+    color: var(--uc-light-dark) !important;
+    border-radius: var(--uc-all-border-radius) !important;
+    border: 0.5px solid var(--uc-panel-border) !important;
+    font-family: Segoe UI;
+  }
+}
+menuitem:hover{
+  background-color: var(--uc-active) !important;
+  color: var(--uc-light-dark) !important;
+ }
+
+menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+  background-color: var(--uc-active) !important;
+  color: var(--uc-light-dark) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

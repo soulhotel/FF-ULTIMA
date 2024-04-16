@@ -1,0 +1,62 @@
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+/*--option 1 - tabs overlay browser content instead of pushing it to the side--*/
+
+/*--added autohide on hover support--*/
+
+:root:not([customizing]) #tabbrowser-tabs:not(hover) {
+    width: var(--uc-collapsed-tabs-width);
+}
+
+:root:not([customizing]) #tabbrowser-tabs:hover {
+    width: var(--uc-vertical-tabs-width-revert);
+}
+
+/*--browser content will not move to the side--*/
+
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser {
+    margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
+}
+
+/*--background, and visibility--*/
+
+#navigator-toolbox {
+    z-index: 2 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+
+#tabbrowser-arrowscrollbox {
+    background: var(--uc-ultima-background-iv) !important;
+} #main-window[lwtheme="true"] #tabbrowser-arrowscrollbox {
+    background: var(--uc-tabs-lwt) !important;
+}
+
+} @media (prefers-color-scheme: light) {
+
+#tabbrowser-arrowscrollbox {
+    background: var(--uc-ultima-background-iv) !important;
+} #main-window[lwtheme="true"] #tabbrowser-arrowscrollbox {
+    background: var(--uc-tabs-lwt) !important;
+}
+
+}}
+
+
+/*--minibuttonbar buttons expand tabs accordingly--*/
+
+/*--1.6.8 testing
+
+:root:not([customizing]) toolbarbutton:hover + #tabbrowser-tabs {
+    width: var(--uc-vertical-tabs-width-revert);
+}
+
+:root:not([customizing]) toolbarbutton:hover ~ #tabbrowser-tabs {
+    width: var(--uc-vertical-tabs-width-revert);
+}
+
+:root:not([customizing]) #TabsToolbar-customization-target:hover #tabbrowser-tabs {
+    width: var(--uc-vertical-tabs-width-revert);
+}
+
+*/

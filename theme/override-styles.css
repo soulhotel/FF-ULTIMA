@@ -1,0 +1,43 @@
+/*-------no margins, borders, or rounded corners---------*/
+
+@media (-moz-bool-pref: "ultima.xstyle.squared") {
+
+:root, body, * {
+  --uc-all-margins: 0px 0px 0px 0px;
+  --uc-margin-inline: 0px;
+  --uc-margin-top: 0px;
+  --uc-margin-bottom: 0px;
+  --uc-tab-margins: 0px 0px 0px 0px;
+  --uc-sb-margin-leftside: 0px 0px 0px 0px;
+  --uc-sb-margin-rightside: 0px 0px 0px 0px;
+  --uc-all-border-radius: 0px;
+  --tab-border-radius: 10px;
+  --arrowpanel-menuitem-border-radius: 10px;
+  --arrowpanel-border-radius: 10px;
+  --toolbarbutton-border-radius: 10px;
+  --urlbar-icon-border-radius: 10px;
+  --button-border-radius: 10px;
+  --uc-button-border-radius: 10px;
+}
+#main-window
+#tabbrowser-tabpanels { browser[type] {
+    outline: 0px solid var(--toolbar-bgcolor);
+}}
+#main-window[lwtheme="true"]
+#tabbrowser-tabpanels { browser[type] {
+    outline: 0px solid var(--lwt-accent-color);
+}}
+}
+
+/*-------placeholder---------*/
+/*
+@media (-moz-bool-pref: "ultima.new.pref") {
+}
+*/
+/*-------placeholder---------*/
+/*temp fix*/
+.tabbrowser-tab {
+  margin-bottom: -2.2px !important;
+}
+
+

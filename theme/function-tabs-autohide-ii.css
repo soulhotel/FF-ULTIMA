@@ -1,0 +1,33 @@
+
+/*--option 2 - tabs push browser content to the side--*/
+
+/*-- added autohide on hover support--*/
+
+#navigator-toolbox:not(hover) #tabbrowser-tabs {
+    --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width);
+}
+
+#navigator-toolbox:not(hover) + #browser {
+    --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width);
+}
+
+#navigator-toolbox:hover + #browser {
+    --uc-vertical-tabs-width: var(--uc-vertical-tabs-width-revert);
+}
+
+#navigator-toolbox:hover #tabbrowser-tabs {
+    --uc-vertical-tabs-width: var(--uc-vertical-tabs-width-revert);
+}
+
+#navigator-toolbox:hover + #browser {
+    transition: margin-left 80ms linear 150ms !important;
+    will-change: margin-left !important;
+    transition-delay: 100ms !important;
+}
+
+#navigator-toolbox:not(hover) + #browser {
+    transition: margin-left 80ms linear 150ms !important;
+    will-change: margin-left !important;
+    transition-delay: 100ms !important;
+}
+
