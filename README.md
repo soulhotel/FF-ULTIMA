@@ -42,7 +42,7 @@
 
 ### The Easy Way, get it and go:
 
-1. Download the [latest version](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest). Theres a download button at the top of the page.
+1. Download the latest version by [clicking here](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.update.branch.zip). Or on the [release page.](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
 2. Find your firefox profile folder by typing `about:support` in the URL BAR.
 3. On the `about:support` page, youll see your profile folder in the blue table. Open it.
 
