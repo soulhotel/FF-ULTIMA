@@ -34,7 +34,7 @@
 <details>
   <summary>(Click me)</summary>
   
-![firefox_KBRra5WpSW](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/2790eb87-06dc-4fbc-aded-eafb0dc35dea)
+![l1ypna5AU1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/51c5733d-b394-4a88-a0aa-4a643d03a82c)
 </details>
 
 ---

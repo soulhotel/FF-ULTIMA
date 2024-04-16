@@ -2,7 +2,7 @@
 
 ###### <p align="center">. . . a sequel to [Perfection FF CSS Theme](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme) </p>
 
-###### <p align="center">Beautiful. light-weight. a 100% CSS theme. and a 100% over-the-top name to break the fourth wall!</p>
+###### <p align="center">Beautiful. light-weight. a 100% easy-mode theme. and a 100% over-the-top name to break the fourth wall!</p>
 
 <div align="center">
 
