@@ -1,161 +1,438 @@
 /*--
 Note:
 this file is a replacement for position-verttab.css
-See the replace features page for more info:
-https://github.com/soulhotel/FF-ULTIMA/blob/main/replace%20features/%23replace-replace-features.md#-chromethemesposition-verttabcss
 
 In this file:
-I will basically revert the implementation of verticle tabs by
-keeping the titlebar displayed, and collapsing the tabs width to 0
-then I will implement autohiding for the native Sidebar
+Returning the close button to tabs, previously disabled because they cause overflow events that break the scrollbox.
+Use at your own discretion. They work well when autohide is not enabled.
 */
 
-/*--POOF tabs gone--*/
+/*---------------------------------vertical tabs-------------------------------------*/
 
-:root:not([customizing],[chromehidden~="menubar"]){
---uc-vertical-tabs-width: 0px;
---uc-vertical-tabs-width-revert: 0px;
---uc-navbar-height: 40px;
---uc-collapsed-tabs-width: 0px;
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
+
+/*--first, the body margin should match the tabs width--*/
+
+#tab-notification-deck,
+.global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser {
+  margin-left: calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline));
 }
 
-/*--adjust browser content margins for no tabs--*/
-
-#tab-notification-deck, .global-notificationbox, #main-window:not([inDOMFullscreen]) #browser
-{ margin-left: 0 !important; }
-
-/*--adjust spacing, margins for everything--*/
-
-:root, body, * {
-/*bookmarkbar height*/
---uc-bookbar-height: 22px;
-/*rounded corners*/
---uc-all-border-radius: 10px;
---uc-all-margins: 3px 6px 6px 6px;
-/*--sidebar margins--*/
---uc-sb-margin-leftside: 3px 3px 6px 6px;
---uc-sb-margin-rightside: 3px 6px 6px 0px;
+#tab-notification-deck,
+.global-notificationbox {
+  width: auto !important;
 }
 
-/*-------------------------------------------------------------------------------*/
-/*--adjustments. dont display none title bar, just remove siblings individually--*/
+/*----------------------------------now tabs-----------------------------------*/
+/*--
+#tabbrowser-tabs -> the tabs panel container
+#tabbrowser-arrowscrollbox -> the scrollbox
+.tabbrowser-tab -> individual tabs
+--*/
 
-#titlebar
-{will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;}
+/*--set position of container--*/
 
-#alltabs-button, #new-tab-button, #tabs-newtab-button
-{display: none !important;}
-
-#tabbrowser-arrowscrollbox * /*--<--should cover everything but we'll do more below--*/
-{display: none !important; width: 0 !important;}
-
-tabbrowser-arrowscrollbox-periphery,
-#tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down)
-{display: none !important; width: 0 !important;}}
-
-:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser tabs, 
-:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs
-{ border-inline-start: 0px; padding-inline-start: 0px; margin-inline-start: 0px; }
-
-/*------------------------------------------------------------------------------*/
-
-/*--autohide sidebar--*/
-
-/*--remove header--*/
-/*--although it may be wiser to style the header instead,
-so you can keep the ability to switch from left to right--*/
-/*#sidebar-header { display: none !important; }*/
-
-/*--remove splitter (responsible for adjusting sidebar width)--*/
-
-#sidebar-splitter { display:none !important; }
-
-/*--use variables. one for collapsed width, one for hover width--*/
-/*--sidebar is a sibling to the browser content, no need to make it absolute--*/
-
-#sidebar-box {
---uc-sidebar-width: 38px; /*width when not in view*/
---uc-sidebar-hover-width: 240px; /*width when in full view*/
---uc-autohide-sidebar-delay: 300ms;
---uc-autohide-transition-duration: 80ms;
---uc-autohide-transition-type: linear;
-position: relative;
-min-width: var(--uc-sidebar-width) !important;
-width: var(--uc-sidebar-width) !important;
-max-width: var(--uc-sidebar-width) !important;
-z-index:1;}
-
-#sidebar-box[positionend] { direction: rtl }
-#sidebar-box[positionend] > * { direction: ltr }
-
-#sidebar-box[positionend]:-moz-locale-dir(rtl) { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) > * { direction: rtl }
-
-/*--on full screen collapse to 1px NOT 0--*/
-
-#main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
-#main-window[sizemode="fullscreen"] #sidebar-box { margin-inline:0px !important; }
-#main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
-
-#sidebar-header
-{ overflow: hidden; padding-inline: 0 !important; }
-
-#sidebar-header::before,
-#sidebar-header::after
-{ content: ""; display: flex; padding-left: 1px; }
-
-#sidebar-header, #sidebar {
-transition:
-min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
-min-width: var(--uc-sidebar-width) !important;
-will-change: min-width;
+:root:not([customizing]) #tabbrowser-tabs {
+  position: relative !important;
+  /* height: var(--uc-tabbar-height) !important; */
+  height: 300px !important;
+  width: var(--uc-vertical-tabs-width);
+  /* left: 0px; */
+  contain: size !important;
+  overflow: hidden !important;
+  order: 0;
+  border-radius: var(--uc-all-border-radius);
+  border-inline-start: 0 !important;
+  margin: 0 !important;
+  padding-inline: 0 !important;
+  margin-left: 2px !important;
 }
-  
-#sidebar-box:hover > #sidebar-header, #sidebar-box:hover > #sidebar {
-min-width: var(--uc-sidebar-hover-width) !important;
-transition-delay: 0ms !important;}
 
-/* Visible Divider for the sidebar to window I set it to 0px */
+/*--tab scrollbox position--*/
 
-#sidebar, #sidebar-header {border-inline: 1px solid rgba(0,0,0,0);border-inline-width: 0px 0px;}
+#tabbrowser-arrowscrollbox,
+#tabbrowser-arrowscrollbox .scrollbox-clip,
+#tabbrowser-arrowscrollbox scrollbox {
+  width: var(--uc-vertical-tabs-width) !important;
+}
 
-#sidebar-box:not([positionend]) > :-moz-locale-dir(rtl), #sidebar-box[positionend] > *
-{border-inline-width: 1px 0px;}
+/*--force consistent model--*/
 
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel
-{inset-inline: auto 0px !important;}
+:root:not([customizing]) #tabbrowser-arrowscrollbox {
+  --uc-scrollbox-box-model: -webkit-box;
+  --uc-scrollbox-height: 100vh;
+  --uc-scrollbutton-display: none;
+  --uc-scrollbox-overflow: auto;
+}
 
-#sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label
-{margin-inline: 0px !important;border-left-style: solid !important; }
+#tabbrowser-tabs:is(haspinnedtabs="") scrollbox[orient="horizontal"],
+#tabbrowser-tabs[positionpinnedtabs] scrollbox[orient="horizontal"],
+scrollbox[orient="horizontal"] {
+  display: var(--uc-scrollbox-box-model, flex);
+  -webkit-box-orient: vertical;
+  height: 100%;
+  overflow: var(--uc-scrollbox-overflow, initial) !important;
+}
+
+#tabbrowser-tabs:is(haspinnedtabs="") scrollbox[orient="horizontal"],
+#tabbrowser-tabs[positionpinnedtabs] scrollbox[orient="horizontal"] {
+  display: var(--uc-scrollbox-box-model, flex);
+  -webkit-box-orient: vertical;
+  height: 100%;
+  overflow: var(--uc-scrollbox-overflow, initial);
+}
+
+/*--required to keep from scolling < >--*/
+
+#tabbrowser-arrowscrollbox,
+#tabbrowser-arrowscrollbox .scrollbox-clip {
+  contain: inline-size !important;
+  margin-left: -1px !important;
+}
+
+/*--------------------------------tab container height----------------------------*/
+
+:root:has([collapsed="false"]) #TabsToolbar-customization-target {
+  top: calc(var(--uc-bookbar-height) + var(--uc-navbar-height));
+  height: var(--uc-tabbar-height-adjust) !important;
+}
+
+/*--height in full screen mode--*/
+
+#main-window:is([inDOMFullscreen]) #TabsToolbar-customization-target {
+  top: var(--uc-navbar-height) !important;
+}
+
+/*--------------------------------END of tab container height----------------------------*/
+
+/*--------------------------Individual tabs---------------------------*/
+
+/*--do not touch or i will find you. and when i find you..--*/
+.tabbrowser-tab:not([pinned]),
+.tabbrowser-tab:is([pinned]) {
+  min-width: calc(var(--uc-vertical-tabs-width)-1px) !important;
+  width: calc(var(--uc-vertical-tabs-width)-1px) !important;
+  padding: 0 2px !important;
+  --tab-label-mask-size: 0.6em !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+  max-width: calc(var(--uc-vertical-tabs-width)-1px) !important;
+  min-width: calc(var(--uc-vertical-tabs-width)-1px) !important;
+  transition: min-width 100ms ease-out, max-width 100ms ease-out;
+}
+
+/*--i will kill you...--*/
+
+/*--pinned position, ignore above :)--*/
+
+.tabbrowser-tab:is([pinned]),
+#tabbrowser-tabs[positionpinnedtabs]>#tabbrowser-arrowscrollbox>.tabbrowser-tab[pinned] {
+  position: initial !important;
+  flex-shrink: initial !important;
+  margin-left: initial !important;
+  margin: 0 !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  overflow: clip !important;
+  overflow-clip-margin: 2px !important;
+}
+
+.tab-icon-stack:is([pinned]) {
+  margin-right: 5.5px;
+}
+
+.tab-throbber,
+.tab-icon-pending,
+.tab-icon-image,
+.tab-sharing-icon-overlay,
+.tab-icon-overlay {
+  &:not([pinned]) {
+    margin-inline-end: 5.5px;
+  }
+}
+
+.tab-label-container[textoverflow][labeldirection="ltr"]:not([pinned]),
+.tab-label-container[textoverflow]:not([labeldirection],
+  [pinned]):-moz-locale-dir(ltr) {
+  mask-image: linear-gradient(to left,
+      transparent,
+      black var(--tab-label-mask-size));
+  direction: ltr;
+}
+
+/*--unpinned position--*/
+
+/*--no extra modification needed--*/
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+/*--position the content inside of individual tabs--*/
+
+/*--tab container for (favicon,url,closebutton)--*/
+
+.tab-stack {
+  margin-inline: 0px !important;
+}
+
+.tab-background {
+  border-radius: var(--tab-border-radius) !important;
+  margin-block: var(--tab-block-margin) !important;
+  min-height: var(--tab-min-height) !important;
+}
+
+.tab-content {
+  padding: 0 10px !important;
+  min-width: 0 !important;
+}
+
+.tab-content {
+  :root:not([uidensity="compact"]) &[pinned] {
+    padding: 0px;
+  }
+}
+
+/*
+.tab-icon-stack{}
+.tab-icon-image{}
+*/
+
+.tab-label-container {
+  overflow: hidden;
+}
+
+.tab-label {
+  margin-inline: 0;
+  white-space: nowrap;
+}
+
+.tabbrowser-tab:not([labelendaligned], :hover)>.tab-stack>.tab-content>.tab-close-button {
+  padding-inline-start: 0px !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/*--close buttons disabled, but still positioned--*/
+
+#tabbrowser-tabs .tab-close-button {
+  margin-inline-end: -3px !important;
+  height: 16px !important;
+  width: 16px !important;
+  border-radius: var(--uc-button-border) !important;
+  /*display: none !important;*/
+  margin-left: 5px; /*--<--add this*/
+  /*--removable--*/
+}
+
+#tabbrowser-tabs .close-icon {
+  padding: 2px !important;
+  border-radius: var(--uc-button-border) !important;
+  /*display: none !important;*/
+  /*--removable--*/
+}
+
+.tab-throbber,
+.tab-icon-pending,
+.tab-icon-image,
+.tab-sharing-icon-overlay,
+.tab-icon-overlay {
+  height: 16px;
+  width: 16px;
+}
+
+/*--END of tab container content--*/
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*-------------------tab container extra buttons--------------------*/
+
+#tabs-newtab-button,
+#tabs-newtab-button>.toolbarbutton-icon {
+  background: none !important;
+  border-radius: var(--tab-border-radius);
+}
+
+#tabbrowser-tabs[hasadjacentnewtabbutton] #tabs-newtab-button {
+  display: flex !important;
+  width: 100%;
+  height: 50px;
+}
+
+#tabbrowser-tabs:hover #tabs-newtab-button {
+  justify-content: center !important;
+}
+
+#tabs-newtab-button:active {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+
+/*-------------------------------adjustments DO NOT TOUCH------------------------------*/
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+/*--(dont touch) removal of inconsistent buttons, and adjustments--*/
+
+#scrollbutton-up,
+#scrollbutton-down {
+  display: var(--uc-scrollbutton-display, initial);
+}
+
+#titlebar {
+  will-change: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  z-index: 1 !important;
+}
+
+#tabbrowser-arrowscrollbox {
+  &:not([scrolledtostart])::part(overflow-start-indicator) {
+    margin-inline: -2 !important;
+    opacity: 0 !important;
+  }
+}
+
+#tabbrowser-arrowscrollbox {
+
+  &[scrolledtostart]::part(overflow-start-indicator),
+  &[scrolledtoend]::part(overflow-end-indicator) {
+    opacity: 1;
+  }
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
+
+@media (-moz-bool-pref: "userchrome.vertical-tabs.on-right.enabled") {
+
+  :root:not([customizing]) #tabbrowser-tabs {
+    left: unset;
+    right: 0;
+  }
+}
+
+.tabbrowser-tab:not([pinned], [fadein]) {
+  max-width: 0.1px;
+  min-width: 0.1px;
+  visibility: initial;
+  opacity: 1;
+}
+
+.tabbrowser-tab:not([pinned]) {
+  flex: 100 100;
+}
+
+.tabbrowser-tab,
+.tabbrowser-tab:not([pinned]),
+.tabbrowser-tab:is([pinned]) {
+  padding: 0 2px !important;
+  flex-shrink: 0;
+  --tab-label-mask-size: 2em;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  margin-inline-start: 0px !important;
+}
+
+/*THIS IS THE EXTRA NEW TAB BUTTON THAT TRIGGERS THE ELEMENT SITTING UNDER TABS*/
+/* DO NOT TOUCH THIS. FIREFOX REALLY F'D THIS ONE UP. */
+
+#tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow])~#new-tab-button,
+#tabbrowser-tabs[overflow]>#tabbrowser-arrowscrollbox>#tabbrowser-arrowscrollbox-periphery>#tabs-newtab-button,
+#tabbrowser-tabs:not([hasadjacentnewtabbutton])>#tabbrowser-arrowscrollbox>#tabbrowser-arrowscrollbox-periphery>#tabs-newtab-button,
+#TabsToolbar[customizing="true"] #tabs-newtab-button {
+  display: flex !important;
+  justify-content: left;
+  pointer-events: none !important;
+}
+
+#new-tab-button {
+  background: transparent !important;
+  opacity: 0 !important;
+  left: 5px;
+  position: absolute;
+  display: none !important;
+}
+
+/* this button is a pain */
+#alltabs-button {
+  display: none;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/* make sure closed tabs update the scrollbox */
+.tabbrowser-tab:not([pinned], [fadein]) {
+  max-width: 0.1px !important;
+  min-width: 0.1px !important;
+  visibility: collapse !important;
+}
+
+/*-----------------------------------END OF ADJUSTMENTS-------------------------------------*/
 
 
-/*------------------------------------------------------------------------------*/
-
-/*--light styling for the sidebar, centering and positioning header elements--*/
-
-#sidebar-switcher-target { margin-left: 5px !important; }
-
-#sidebar-switcher-target #sidebar-title { padding-inline: 10px 4px !important; }
-
-.close-icon { border-radius: 7px !important; margin-right: 7px !important; }
+/*------------------------------Scrollbox Shadow--------------------------------------------*/
 
 
-/*--color correction for overlapping windows--*/
+/* Source code for shadow inspired by */
+/* https://css-tricks.com/books/greatest-css-tricks/scroll-shadows/ */
 
 @media (prefers-color-scheme: dark) {
+#main-window:not([lwtheme="true"]) .scrollbox-clip scrollbox[smoothscroll="true"] {
+  background:
+    /* Shadow Cover TOP */
+    /* TODO: Need to be changed to variable */
+    linear-gradient(#23232A 30%,
+      rgba(255, 255, 255, 0)) center top,
+    /* Shadow Cover BOTTOM */
+    linear-gradient(var(--uc-ultima-background-iv),
+    var(--uc-ultima-background-iv) 70%) center bottom,
+    /* Shadow TOP */
+    /* TODO: Change to variable indicating scrollable area */
+    radial-gradient(farthest-side at 50% 0,
+      black,
+      rgba(0, 0, 0, 0)) center top,
+    /* Shadow BOTTOM */
+    radial-gradient(farthest-side at 50% 100%,
+      black,
+      rgba(0, 0, 0, 0)) center bottom;
 
-#sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important; }
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+}
 
-#main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-tabs-lwt) !important; }
+@media (prefers-color-scheme: light) {
+#main-window:not([lwtheme="true"]) .scrollbox-clip scrollbox[smoothscroll="true"] {
+  background:
+    /* Shadow Cover TOP */
+    /* TODO: Need to be changed to variable */
+    linear-gradient(#b7b7da 30%,
+      rgba(0, 0, 0, 0)) center top,
+    /* Shadow Cover BOTTOM */
+    linear-gradient(var(--uc-ultima-background-iv),
+    var(--uc-ultima-background-iv) 70%) center bottom,
+    /* Shadow TOP */
+    /* TODO: Change to variable indicating scrollable area */
+    radial-gradient(farthest-side at 50% 0,
+      rgb(162, 153, 182),
+      rgba(255, 255, 255, 0)) center top,
+    /* Shadow BOTTOM */
+    radial-gradient(farthest-side at 50% 100%,
+      rgb(162, 153, 182),
+      rgba(255, 255, 255, 0)) center bottom;
 
-} @media (prefers-color-scheme: light) {
-
-#sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important; }
-
-#main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-tabs-lwt) !important; }
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+}
 
 }
