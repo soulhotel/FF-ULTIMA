@@ -300,13 +300,6 @@ scrollbox[orient="horizontal"] {
 
 @media (-moz-bool-pref: "userchrome.vertical-tabs.on-right.enabled") {
 
-  #PersonalToolbar,
-  #tab-notification-deck,
-  .global-notificationbox,
-  #main-window:not([inDOMFullscreen])>body>#browser {
-    /*margin-left: 0 !important;margin-right: 0 !important;*/
-  }
-
   :root:not([customizing]) #tabbrowser-tabs {
     left: unset;
     right: 0;
@@ -381,7 +374,7 @@ scrollbox[orient="horizontal"] {
 /* https://css-tricks.com/books/greatest-css-tricks/scroll-shadows/ */
 
 @media (prefers-color-scheme: dark) {
-.scrollbox-clip scrollbox[smoothscroll="true"] {
+#main-window:not([lwtheme="true"]) .scrollbox-clip scrollbox[smoothscroll="true"] {
   background:
     /* Shadow Cover TOP */
     /* TODO: Need to be changed to variable */
@@ -407,7 +400,7 @@ scrollbox[orient="horizontal"] {
 }
 
 @media (prefers-color-scheme: light) {
-.scrollbox-clip scrollbox[smoothscroll="true"] {
+#main-window:not([lwtheme="true"]) .scrollbox-clip scrollbox[smoothscroll="true"] {
   background:
     /* Shadow Cover TOP */
     /* TODO: Need to be changed to variable */

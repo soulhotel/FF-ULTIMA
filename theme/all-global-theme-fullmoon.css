@@ -133,13 +133,16 @@ color-scheme: dark !important; /*--<--dont touch--*/
 
 #navigator-toolbox { &:-moz-window-inactive {
   background-color: var(--toolbar-bgcolor) !important;
-  color: var(--toolbox-non-lwt-textcolor-inactive) !important;
+  color: white !important;
 }}
 
 :root { @media (-moz-platform: windows) { & {
 --inactive-titlebar-opacity: 1 !important;
 }}}
 
+:root { @media (-moz-platform: linux) { & {
+--inactive-titlebar-opacity: 1 !important;
+}}}
 
 /*----------main window background----------*/
 
@@ -238,6 +241,7 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 #main-window:not([lwtheme="true"]) #urlbar-zoom-button {
   background-color: var(--uc-active) !important;
+  margin-top:3px !important;
 }
 
 /*---------customize toolbar page-----------*/
@@ -346,6 +350,10 @@ body {background: var(--toolbar-bgcolor) !important;}
 :root:not([customizing]) #tabbrowser-tabs:-moz-lwtheme
   {background-color: var(--uc-tabs-lwt) !important;}
 
+#main-window[lwtheme="true"] #TabsToolbar-customization-target {
+  background: var(--uc-tabs-lwt) !important;
+}
+
 /*--pinned themed-*/
 
 #main-window[lwtheme="true"] .tab-content[pinned=""] .tab-background,
@@ -395,7 +403,7 @@ splitter {@media (-moz-platform: windows) { & {
   min-width: 1px !important;
   width: 4px !important;
   background-color: transparent !important;
-  margin-inline-start: -4px !important;
+  margin-inline-start: -7px !important;
 } }
 
 /*------------------tabs------------------*/
