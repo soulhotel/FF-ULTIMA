@@ -1,5 +1,4 @@
-# [![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.1/ffultima1.7.1.zip) ◄ CLICK TO DOWNLOAD
- 
+
 ###### Please follow the installation instructions on main page.
 
 ###### Changing tab sizes and autohide on/off? Creating Color Schemes? Something else? [Come over to the modification page...](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
