@@ -110,6 +110,9 @@
   list-style-image: url("chrome://global/skin/icons/arrow-down.svg") !important;
 }
 .titlebar-button.titlebar-max .toolbarbutton-icon{
+  list-style-image: url("chrome://global/skin/icons/arrow-up.svg") !important;
+}
+.titlebar-button.titlebar-restore .toolbarbutton-icon{
   list-style-image: url("icons/lin-restore-l.svg") !important;
   margin-top: -1px !important;
 }
