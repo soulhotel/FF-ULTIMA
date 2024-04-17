@@ -9,8 +9,8 @@
 <path d="M154 336 l-86 -85 86 -85 c47 -48 91 -86 98 -86 18 0 168 151 168
 169 0 17 -150 171 -167 171 -7 0 -52 -38 -99 -84z m171 -16 l70 -70 -73 -73
 -72 -72 -72 72 -73 73 70 70 c38 38 72 70 75 70 3 0 37 -32 75 -70z"
-fill="currentColor"
-style="fill:currentColor;fill-opacity:1;stroke-width:0.947833"
+fill="context-fill"
+style="fill:context-fill;fill-opacity:1;stroke-width:0.947833"
 />
 </g>
 </svg>
