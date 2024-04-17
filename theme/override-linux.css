@@ -1,12 +1,5 @@
 /*--Override styles and corrections made for Linux--*/
 
-/*
-Index: ctrl+f to find section
---KDE--
---GNOME--
---mac--
-*/
-
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
 /*--Default dark/light mode color should match cross platform--*/
@@ -84,23 +77,26 @@ Index: ctrl+f to find section
   border-radius: var(--toolbarbutton-border-radius) !important;
   list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
   opacity: 1 !important;
-  padding: 4px !important;
+  padding: 3px !important;
 }
 
 
 /*--icons override, default icons dont override when there is window inactivity--*/
 
 .titlebar-button.titlebar-close .toolbarbutton-icon{
-  list-style-image: url("chrome://global/skin/icons/close.svg") !important;
+  list-style-image: url("icons/lin-close.svg") !important;
+  margin-top: -1px !important;
 }
 .titlebar-button.titlebar-min .toolbarbutton-icon{
-  list-style-image: url("chrome://global/skin/icons/arrow-down.svg") !important;
+  list-style-image: url("icons/lin-min.svg") !important;
+  margin-top: -1px !important;
 }
 .titlebar-button.titlebar-max .toolbarbutton-icon{
-  list-style-image: url("chrome://global/skin/icons/arrow-up.svg") !important;
+  list-style-image: url("icons/lin-max.svg") !important;
+  margin-top: -1px !important;
 }
 .titlebar-button.titlebar-restore .toolbarbutton-icon{
-  list-style-image: url("icons/lin-restore-l.svg") !important;
+  list-style-image: url("icons/lin-restore.svg") !important;
   margin-top: -1px !important;
 }
 
