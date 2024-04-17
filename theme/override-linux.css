@@ -117,10 +117,11 @@
   margin-top: -1px !important;
 }
 /*--Or the autoscroll.svg from the chrome library - https://github.com/soulhotel/FF-ULTIMA/issues/8#issuecomment-2060263202--*/
+/*    
 .titlebar-button.titlebar-restore .toolbarbutton-icon{
   list-style-image: url("chrome://global/skin/icons/autoscroll.svg") !important;
 }
-    
+*/  
 /*--override background changes when hovered--*/
 
 .titlebar-button:-moz-lwtheme:hover {
