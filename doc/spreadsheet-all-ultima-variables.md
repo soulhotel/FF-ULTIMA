@@ -1,11 +1,11 @@
 ###### this list the services as a quick reference for what each variable touches and effects; Its still recommended to use the live Debugger tool if your goal is to create a theme or make changes.
 
 
-chrome/theme/`all-global-positioning.css` file.
+chrome/theme/`all-global-positioning.css`
 
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
-| --uc-vertical-tabs-width         | 8-28 | ⚠️ | Controls the width of the tabs panel for the users prefered size option. XS is                                                     the smallest options 41px(icon only view) be cautious going any lower than 41px.                                                   Then there is S, then L (250px) the default option. |
+| --uc-vertical-tabs-width         | 8-28 | ⚠️ | Controls the width of the tabs panel for the users prefered size option. XS (41px                                                  - icon only view) is the smallest option. Be cautious going any lower than 41px.                                                   Then there is S, then L (250px) the default option. |
 | --uc-vertical-tabs-width-revert  |      | ⚠️ | Test                          |
 | --uc-navbar-height               |      | ✅ | Test                          |
 | --uc-collapsed-tabs-width        |      | ⚠️ | Test                          |
