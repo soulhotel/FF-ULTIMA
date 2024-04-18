@@ -1,7 +1,7 @@
 ###### this list the services as a quick reference for what each variable touches and effects; Its still recommended to use the live Debugger tool if your goal is to create a theme or make changes.
 
 
-chrome/theme/`all-global-positioning.css`
+### chrome/theme/`all-global-positioning.css`
 
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
@@ -31,8 +31,10 @@ chrome/theme/`all-global-positioning.css`
 | place                            |  ##  | ✅ | holder                           |
 | place                            |  ##  | ✅ | holder                           |
 
-chrome/theme/`all-global-theme-full-moon.css`
-chrome/theme/`all-global-theme-dusky.css`
+<BR>
+
+### chrome/theme/`all-global-theme-fullmoon.css`
+### chrome/theme/`all-global-theme-dusky.css`
 
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
