@@ -6,7 +6,7 @@ chrome/theme/`all-global-positioning.css`
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
 | --uc-vertical-tabs-width         | 8-28 | ⚠️ | Controls the width of the tabs panel for the users prefered size option. XS (41px                                                  - icon only view) is the smallest option. Be cautious going any lower than 41px.                                                   Then there is S, then L (250px) the default option. |
-| --uc-vertical-tabs-width-revert  |      | ⚠️ | Test                          |
+| --uc-vertical-tabs-width-revert  |      | ⚠️ | This variable is used to match the widths of the tabs panel set above, always                                                      keep it parallel to the user preference it is paired with. |
 | --uc-navbar-height               |      | ✅ | Test                          |
 | --uc-collapsed-tabs-width        |      | ⚠️ | Test                          |
 | --uc-bookbar-height              |      | ✅ | Test                          |
