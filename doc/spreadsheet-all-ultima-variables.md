@@ -3,11 +3,9 @@
 
 chrome/theme/`all-global-positioning.css` file.
 
-###### there are three `all-global-positioning.css` files, each file serves the same ...
-
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
-| --uc-vertical-tabs-width         |      | ⚠️ | Test                           |
+| --uc-vertical-tabs-width         | 8-28 | ⚠️ | Controls the width of the tabs panel for the users prefered size option. XS is                                                     the smallest options 41px(icon only view) be cautious going any lower than 41px.                                                   Then there is S, then L (250px) the default option. |
 | --uc-vertical-tabs-width-revert  |      | ⚠️ | Test                          |
 | --uc-navbar-height               |      | ✅ | Test                          |
 | --uc-collapsed-tabs-width        |      | ⚠️ | Test                          |
