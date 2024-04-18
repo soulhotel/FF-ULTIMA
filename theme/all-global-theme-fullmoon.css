@@ -462,8 +462,13 @@ splitter {@media (-moz-platform: windows) { & {
 /*-----------------------------------------------------------------------------------*/
 
 /*--extension menu--*/
-#unified-extensions-button {
-  list-style-image: url("icons/extensions.png") !important;
+#main-window:not([lwtheme="true"]) #unified-extensions-button {
+  list-style-image: url("icons/extensions.svg") !important;
+  fill: var(--uc-ultima-accent-iii) !important;
+}
+#main-window[lwtheme="true"] #unified-extensions-button {
+  list-style-image: url("icons/extensions.svg") !important;
+  fill: var(--lwt-accent-color) !important;
 }
 /*--bookmarks folder icon--*/
 .bookmark-item[container=true] {
@@ -479,9 +484,11 @@ splitter {@media (-moz-platform: windows) { & {
 }
 #forward-button image{
   list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+  stroke: var(--uc-ultima-accent-iii) !important;
 }
 #back-button image{
   list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+  stroke: var(--uc-ultima-accent-iii) !important;
 }
 
 
@@ -516,11 +523,3 @@ width:16px !important; height:16px !important;}
 
 
 } /*--<--this marks the end of the journey--*/
-
-
-
-
-
-
-
-
