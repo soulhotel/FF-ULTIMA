@@ -31,9 +31,38 @@ chrome/theme/`all-global-positioning.css`
 | place                            |  ##  | ✅ | holder                           |
 | place                            |  ##  | ✅ | holder                           |
 
+chrome/theme/`all-global-theme-full-moon.css`
+chrome/theme/`all-global-theme-dusky.css`
 
-chrome/theme/`all-global-theme-fullmoon.css`
-
+| Variable                         | Line | Customizable? | Function            |
+|----------------------------------|------|---------------|---------------------|
+| --uc-ultima-window               | 17-- | ✅ | This variable is the main window default grey background |
+| --uc-dark                        |      | ⚠️ | Used as a global black                    |
+| --uc-light                       |      | ⚠️ | Used as a global white                    |
+| --uc-light-dark                  |      | ⚠️ | Used to swap text from black/white depending on dark/lightmode |
+| --uc-dark-light                  |      | ⚠️ | Used to swap text from black/white depending on dark/lightmode |
+| --uc-ultima-accent-i             |      | ✅ | A yellow accent color                     |
+| --uc-ultima-accent-ii            |      | ✅ | A blue accent color                       |
+| --uc-ultima-accent-iii           |      | ✅ | A white accent color                      |
+| --uc-ultima-accent-iv            |      | ✅ | A darker rgb accent color                 |
+| --uc-ultima-background-i         |      | ⚠️ | ultima-backgrounds i-iv all share the same dark rgb, however they have different transparent levels depending on the element they are assigned to. |
+| --uc-ultima-background-ii        |      | ✅ | "^" more opacity than above               |
+| --uc-ultima-background-iii       |      | ✅ | "^" more opacity than above and above     |
+| --uc-ultima-background-iv        |      | ✅ | the solid rgb version to the backgrounds above |
+| --uc-transparent                 |      | ❌ | leave untouched                           |
+| --uc-selected                    |      | ✅ | the background color for hovered buttons  |
+| --uc-active                      |      | ✅ | the background color for active buttons, also applies to default unthemed tab background  |
+| --uc-text                        |      | ✅ | Text color for context, panel menus, should be consistently changed depending on dark or light mode |
+| --uc-panel-border                |      | ✅ | Context menus, popup panels border color  |
+| --uc-panel-border-ii             |      | ✅ | Context menus, popup panels border color  |
+| --uc-context-menu                |      | ⚠️ | Context menu background color             |
+| --uc-tabs-background             |      | ✅ | Tabs background color                     |
+| --uc-sb-themed                   |      | ⚠️ | Sidebar body background, should match or imitate `--uc-ultima-background-iv`  for a consistent theme |
+| --uc-sb-themed-ii                |      | ⚠️ | Sidebar header background, should match or imitate `--uc-ultima-background`  for a consistent theme  |
+| --uc-sb-background               |      | ⚠️ | By default uses `--uc-transparent` and is color layered by the sidebar body and header |
+| --uc-tabs-lwt                    |      | ✅ | The color of the tabs panel background when a theme is in use, usually a lightly transparent color hue |
+| --uc-sb-lwt                      |      | ✅ | The color of the sidebar background when a theme is in use, "^" |
+| --uc-panel-background            | --46 | ✅ | Background color for popup-menus,popup-panels, extensions panel, etc |
 
 
 
