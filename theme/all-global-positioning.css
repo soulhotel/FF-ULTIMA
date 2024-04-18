@@ -1,10 +1,35 @@
-@media (-moz-bool-pref: "ultima.tabs.l") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") {
 /*--------------------------Global positioning--------------------------*/
+
+/*
+Global variables start at line 30. Then further modifications for different parts of the browser.
+Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
+*/
+
+/*--user preference setting for XS size tabs--*/
+@media (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.l") {
+    :root:not([customizing],[chromehidden~="menubar"]){
+        --uc-vertical-tabs-width: 41px;
+        --uc-vertical-tabs-width-revert: 41px;
+    }
+}}}
+/*--user preference setting for S size tabs--*/
+@media (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.l") {
+    :root:not([customizing],[chromehidden~="menubar"]){
+        --uc-vertical-tabs-width: 165px;
+        --uc-vertical-tabs-width-revert: 165px;
+    }
+}}}
+/*--user preference setting for L size tabs--*/
+@media (-moz-bool-pref: "ultima.tabs.l") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") {
+    :root:not([customizing],[chromehidden~="menubar"]){
+        --uc-vertical-tabs-width: 250px;
+        --uc-vertical-tabs-width-revert: 250px;
+    }
+}}}
+
 /*---------------Global variables for quick modifications-------------*/
 
 :root:not([customizing],[chromehidden~="menubar"]){
-    --uc-vertical-tabs-width: 250px;
-    --uc-vertical-tabs-width-revert: 250px;
     --uc-navbar-height: 40px;
     --uc-collapsed-tabs-width: 41px;
 } /*--DO NOT GO LOWER THAN 41PX--*/
@@ -88,7 +113,7 @@
 }
 
 .sidebar-splitter {
-width: 2px !important;}
+    width: 2px !important;}
 
 /*---------------Browser - Browser content---------------*/
 
@@ -124,7 +149,7 @@ width: 2px !important;}
 }
 
 #personal-toolbar-empty-description, #personal-toolbar-empty-description .text-link, a {
-cursor: auto !important; opacity: 0 !important;}
+    cursor: auto !important; opacity: 0 !important;}
 
 /*-------------------menu bar--------------------*/
 
@@ -171,28 +196,8 @@ cursor: auto !important; opacity: 0 !important;}
 /*--centering buttons vertically--*/
 
 #nav-bar toolbarbutton {
-	margin-top: 1px !important;
+    margin-top: 1px !important;
 }
 
-
-}}}
 /*-------------------fin--------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
