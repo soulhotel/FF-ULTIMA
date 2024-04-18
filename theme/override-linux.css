@@ -1,5 +1,15 @@
 /*--Override styles and corrections made for Linux--*/
 
+/*--
+Index: For ctrl+f search of a section
+
+--KDE-- (kde speficic overrides)
+--GNOME-- (gnome speficic overrides)
+--mac-- (mac speficic overrides)
+--*/
+
+/*--Default Linux Override--*/
+
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
 /*--Default dark/light mode color should match cross platform--*/
