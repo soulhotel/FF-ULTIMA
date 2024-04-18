@@ -5,9 +5,7 @@ Remove tabs panel completely?
 Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md
 */
 
-@import url(theme/all-global-positioning-l.css);
-@import url(theme/all-global-positioning-xs.css);
-@import url(theme/all-global-positioning-s.css);
+@import url(theme/all-global-positioning.css);
 
 @import url(theme/all-global-theme-fullmoon.css);
 @import url(theme/all-global-theme-dusky.css);
