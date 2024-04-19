@@ -10,8 +10,8 @@
 | --uc-navbar-height               |  33  | ⚠️ | This variable DOES NOT alter the nav bar. However, it is used to calculate height adjustments for the tabs panel, based on the nav bars default height |
 | --uc-collapsed-tabs-width        |  34  | ⚠️ | The width of the tabs panel when collapsed. This is used for the autohide feature, full screen mode, and when the screen width falls below 800-850px. Be cautious when going below 41px |
 | --uc-bookbar-height              |  44  | ✅ | Change the height of the bookmarks toolbar |
-| --uc-tabbar-height               |      | ❌ | Tab panel height, calculated with other variables, do not change |
-| --uc-tabbar-height-adjust        |      | ❌ | Tab panel height adjustments made with necessary calculations |
+| --uc-tabbar-height               |      | ❌ | Tab panel height, calculated with other variables |
+| --uc-tabbar-height-adjust        |      | ❌ | Tab panel height, after calculated adjustments (like bookmarks toolbar being collapsed or not) |
 | --uc-all-border-radius           |  53  | ✅ | The rounded border/corners you see touching everything. There's an option in `about:config` called `ultima.xstyle.squared` try setting it to `true` and see the difference before making changes to this in-file. |
 | --tab-border-radius              |  54  | ✅ | Rounded corners on the tabs panel |
 | --uc-button-border               |  55  | ✅ | Increased rounding on all buttons |
@@ -24,8 +24,8 @@
 | --uc-sb-margin-rightside         |  65  | ✅ | Sidebar margins/spacing when on the right side of the screen |
 | --uc-tab-padding                 |  66  | ✅ | Self explanatory, padding for an individual tab |
 | --tab-min-height                 |  69  | ✅ | Individial tab height            |
-| --tab-min-width                  |      | ❌ | Do not touch                     |
-| --tab-overflow-pinned-tabs-width |      | ❌ | Do not touch                     |
+| --tab-min-width                  |      | ❌ | a tabs min width (caution)       |
+| --tab-overflow-pinned-tabs-width |      | ❌ | pinned tabs min width (caution)  |
 | --inline-tab-padding             |  72  | ✅ | Individial tab padding <>        |
 | --tab-block-margin               |  73  | ✅ | Spacing between individual tabs  |
 | place                            |  ##  | ✅ | holder                           |
@@ -51,7 +51,7 @@
 | --uc-ultima-background-ii        |      | ✅ | "^" more opacity than above               |
 | --uc-ultima-background-iii       |      | ✅ | "^" more opacity than above and above     |
 | --uc-ultima-background-iv        |      | ✅ | the solid rgb version to the backgrounds above |
-| --uc-transparent                 |      | ❌ | leave untouched                           |
+| --uc-transparent                 |      | ❌ | transparent color                         |
 | --uc-selected                    |      | ✅ | the background color for hovered buttons  |
 | --uc-active                      |      | ✅ | the background color for active buttons, also applies to default unthemed tab background  |
 | --uc-text                        |      | ✅ | Text color for context, panel menus, should be consistently changed depending on dark or light mode |
