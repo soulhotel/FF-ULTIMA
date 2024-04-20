@@ -29,15 +29,25 @@
 }}
 }
 
-/*-------placeholder---------*/
-/*
-@media (-moz-bool-pref: "ultima.new.pref") {
-}
-*/
-/*-------placeholder---------*/
+/*-------fix for tab edge triggering collapse---------*/
 /*temp fix*/
 .tabbrowser-tab {
   margin-bottom: -2.2px !important;
 }
 
+/*-------small adjustment for rearranging tabs,note:
+- targetting selected tab and overriding tranlations = good
+- targetting tab above selected tab to translate 40px will work with tabbrowser-tabs mouse positioning detection = good
+- https://hg.mozilla.org/mozilla-central/file/291d187ba249c56d5c9dc88b5faaf04db2afe9c1/browser/base/content/tabbrowser-tabs.js
+- forcing positioning based on mozillas already established mouse positioning = uneffective, but probable.
+---------*/
+.tabbrowser-tab[style*="transform"] {
+    transform: translateX(0px) !important;
+    transform: translateY(0px) !important;
+}
 
+/*-------placeholder---------*/
+/*
+@media (-moz-bool-pref: "ultima.new.pref") {
+}
+*/
