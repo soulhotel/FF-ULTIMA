@@ -2,7 +2,6 @@
 In this file:
 I will basically revert the implementation of verticle tabs by,
 keeping the titlebar displayed, and collapsing the tabs width to 0
-then I will implement autohiding for the native Sidebar
 */
 
 @media not all and (-moz-bool-pref: "ultima.tabs.vertical") {
