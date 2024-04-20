@@ -14,10 +14,10 @@
 
 ---
 
-###### ← ~~position-verttab.css~~
+###### ← position-verttab-gone.css
 
-- :warning: (depreciated) you can now remove tabs with help from the [Modifications.md](Modifications.md)
-- remove verticle tabs so that users can use sidebery/treestyletabs as the main tabs source
+- this file originally removes the verticle tabs so that users can use sidebery/treestyletabs as the main tabs source, the original makes the sidebar autohide unless hovered.
+- this modified version removes the autohiding of the sidebar, keeping the sidebar semi-static, still resizable, non-floating.
 
 ---
 
