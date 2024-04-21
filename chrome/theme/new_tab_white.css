@@ -1,0 +1,636 @@
+@import url('new_tab_white.css');
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home){
+   
+
+   
+    @media (prefers-color-scheme: light){
+    
+       :root {
+  --newtab-text-primary-color: rgba(21, 20, 26, 1) !important;
+}
+
+    
+body {
+    --newtab-background-color-secondary: transparent !important;
+    --newtab-element-hover-color: var(--button-active-bgcolor) !important;
+    --newtab-element-secondary-hover-color: var(--general-color) !important;
+    --newtab-element-secondary-active-color: var(--button-active-bgcolor) !important;
+    --newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 88%, var(--newtab-wordmark-color)) !important;
+    --newtab-primary-element-text-color: var(--newtab-text-primary-color) !important;
+    background-image: url("./img/imglight.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+  }
+
+
+main {
+    margin-top: var(--newtab-pinnedsites-position-top, auto) !important;
+}
+
+/* Блок с избранным */
+
+.section-title-container {
+		visibility: visible !important;
+	}
+	
+.section-title span {
+  opacity: 80% !important;
+/*  backdrop-filter: blur(5px); */
+  font-size: 20px !important;
+  font-weight: bold !important;
+  font-family: -apple-system !important;
+}
+	
+	.top-site-outer .tile {
+		width: 90px !important;
+		height: 90px !important;
+    border-radius: 17.544% !important;
+    align-items: start !important;
+    background: var(--newtab-pinnedsites-background) !important;
+    filter: saturate(140%) !important;
+    backdrop-filter: blur(33px);
+    }
+
+	/*
+	.top-site-outer .title {
+		padding-top: 4px !important;
+	}
+	.top-site-outer:hover .tile {
+		outline: 5px solid var(--newtab-border-color) !important;
+	}
+	
+	*/
+	.top-site-outer .default-icon {
+		width: 75% !important;
+		height: 75% !important;
+		background-size: 100% !important;
+		background: transparent !important;
+	}
+	.top-site-outer .tile .icon-wrapper {
+		width: 100% !important;
+		height: 100% !important;
+		border-radius: 17.544% !important;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	}
+
+
+	.top-site-outer .tile .icon-wrapper::before {
+		translate: 0px 10px;
+		font-size: 100px !important;
+		opacity: 0.75 !important;
+	}
+	.section-top-bar {
+		display: block !important;
+	}
+
+
+.icon.icon-settings {
+  background-image: url("icons/settings-newtab-light.svg") !important;
+  opacity: 80% !important;
+  transform: scale(1.4) !important;
+  fill: var(--newtab-text-primary-color) !important;
+}
+
+:root {
+--newtab-element-active-color: #ffffff1e !important;
+}
+
+.personalize-button {
+  padding: 10px !important;
+}
+
+
+/* .search-inner-wrapper { display: none !important; } */
+
+.logo{ display: none !important; }  
+     
+/*.wordmark { display: none !important; } */
+
+
+/*.wordmark {
+    background: url("firefox-wordmark.svg") no-repeat center center !important;
+    background-size: 201px !important;
+    flex-direction: column-reverse;
+    height: 90px !important;
+    width: 130px !important;
+    -moz-context-properties: fill !important;
+    Opacity: var(--logo-wordmark-visibility) !important;
+    display: var(--logo-wordmark-display) !important;
+    -moz-context-properties: fill !important;
+    } */
+
+.search-wrapper .logo-and-wordmark .wordmark {
+  background: url("chrome://branding/content/firefox-wordmark.svg") no-repeat center center;
+  background-size: auto;
+  -moz-context-properties: fill;
+  display: inline-block;
+  fill: var(--newtab-wordmark-color);
+  margin-inline-start: 16px;
+  width: 190px !important;
+  opacity: 80% !important;
+  fill:#20123A !important;
+}
+
+
+
+
+    
+/* Контекстное меню */
+    
+.context-menu {
+    background-color: #ffffff7d  !important;   
+    border-radius: 15px !important;
+    padding: 0.4rem;
+    position: relative;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    display: flex;
+    font-size: unset !important;
+    }
+    
+  .context-menu > ul > li > a, .context-menu > ul > li > button {
+  line-height: unset !important;
+  font-weight: normal !important;
+  font-family: -apple-system !important;
+  color: rgba(0,0,0,0.8) !important;
+}
+    
+    .context-menu > ul > li.separator {
+    display:flex !important;
+  border-bottom: none !important;
+  margin: 0px 0 !important;
+  font-size: flex !important;
+  font-family: -apple-system !important;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  
+}
+
+button, input {
+  color: inherit;
+  font-family: -apple-system !important;
+  font-size: unset !important;
+}
+
+@media (min-width: 1122px) and (max-width: 1506px) {
+  .top-sites-list :nth-child(8n) .context-menu {
+  font-size: unset !important;
+  font-family: -apple-system !important;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) !important;
+   box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+  }
+}
+
+/* Контекстное меню */
+
+
+    
+/* Боковое меню */
+        
+.customize-menu {
+    background-color: #ffffff7d  !important;   
+    border-radius: 15px !important;
+    padding: 0.4rem;
+    position: relative;
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    margin: 10px 10px 10px 0px !important;
+    height: auto !important;
+    font-family: -apple-system !important;
+    font-weight: normal !important;
+    box-shadow: unset !important;
+}
+
+.customize-menu.customize-animate-enter-done{
+       box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important;  
+}
+
+.customize-menu.customize-animate-enter-active {
+       box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important;  
+}
+
+.customize-menu.customize-animate-exit-active {
+       box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important;  
+}
+
+.customize-menu.customize-animate-exit-done {
+       box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important;  
+}
+
+.home-section .divider {
+  border-top: unset !important;
+}
+
+.home-section .section .selector {
+  border: none !important;
+  box-shadow: 3px 10px 15px rgb(0 0 0 / 20%) !important;
+  background: url("icons/down-light.svg") right no-repeat !important;
+  background-origin: content-box !important;
+}
+
+.home-section .external-link {
+  text-decoration: none !important;
+}
+
+.toggle-button {
+  transform: scale(1.4) !important;
+}
+
+
+
+/* переключатели */
+.toggle-button {
+--toggle-background-color: #0000001b !important;
+--toggle-border-color: #0000001b !important;
+  --toggle-background-color-pressed: #2186fb !important;
+   --toggle-dot-background-color: #fefefe !important; 
+  --toggle-dot-background-color-on-pressed: #fefefe !important;
+  --toggle-background-color-pressed-hover: #449afc !important;
+  --toggle-background-color-pressed-active: #7fbbff !important;
+  --toggle-border-radius: var(--border-radius-circle);
+  --toggle-border-width: var(--border-width);
+  --toggle-height: var(--size-item-small);
+  --toggle-width: calc(var(--size-item-large)*0.9) !important;
+  --toggle-dot-margin: -1px !important;
+  --toggle-dot-height: calc(var(--toggle-height)) !important;
+  --toggle-dot-width: var(--toggle-dot-height) !important;
+  --toggle-dot-transform-x: calc(var(--toggle-width) - 1 * var(--toggle-dot-margin) - var(--toggle-dot-width)) !important;
+  }
+  
+    .home-section .section .sponsored-checkbox:checked {
+  -moz-context-properties: fill;
+  background: url("icons/checkbox.svg") center no-repeat !important;
+}
+  
+  
+  
+  .customize-menu .close-button {
+  box-shadow: 3px 10px 15px rgb(0 0 0 / 20%) !important;
+  font-weight: unset !important;
+  border-radius: 10px !important;
+  border-color: transparent !important;
+  background-color: #ffffff40 !important;
+}
+
+  .home-section .section .sponsored-checkbox:checked {
+  background-color: #2186fb !important;
+  fill: #fbfbfe !important;
+}
+
+.home-section .section .selector {
+  background-color: #ffffff40 !important;
+  border-radius: 6px !important;
+  width: 85px !important;
+}
+
+.customize-menu .close-button:hover {
+  background-color: #ffffff7d !important;
+}
+  
+/* Панель поиска */
+    
+.search-inner-wrapper{
+    display: flex !important;
+    margin-top: 16px !important;
+    outline: none !important;
+    filter: saturate(140%) !important;
+    background-color: #ffffff7d !important;   
+    border-radius: 17px !important;
+    padding: 0.4rem;
+    position: relative;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    height: auto !important;
+}
+    
+@supports -moz-bool-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+.search-inner-wrapper:not(:focus){
+    background: var(--newtab-pinnedsites-background) !important;
+    backdrop-filter: blur(33px) !important;
+    filter: saturate(140%) !important;
+    }}
+    
+.search-inner-wrapper:not(:focus) input, .search-wrapper:not(:active) input:focus{
+    background-color: var(--newtab-pinnedsites-background) !important;
+    backdrop-filter: blur(33px) !important;
+    filter: saturate(140%) !important;
+    border-radius: 34px !important;
+    }
+    
+.search-handoff-button{
+    border-color: transparent !important;
+    border-radius: 34px !important;
+    box-shadow: none !important; 
+    }
+    
+.search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
+    outline: 1px solid var(--button-active-bgcolor) !important;
+    outline-offset: -1px !important;
+    border: transparent !important;
+    margin-left: 1px !important;
+    z-index: 1 !important;
+    }
+    
+.search-wrapper .search-button:focus, .search-wrapper .search-button:hover {
+    fill: white !important;
+    }
+    
+.search-wrapper .search-inner-wrapper:active input,
+.search-wrapper input:focus {
+    box-shadow: none !important;
+    }
+    
+browser[primary="true"][tabDialogShowing="true"],
+#main-window[window-modal-open="true"] > body > #browser{
+    filter: blur(10px)
+    }
+        
+@media (height > 700px) {
+body:not(.inline-onboarding) .fixed-search .search-wrapper {
+    background-color: #ffffff7d  !important;   
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+    backdrop-filter: blur(33px);
+    border-color: transparent !important;
+  }
+}
+
+
+
+/* 
+.search-wrapper .search-handoff-button, .search-wrapper input {
+  background: var(--newtab-background-color-secondary)  center no-repeat !important;
+  background-size: 24px;
+  padding-inline-start: 52px;
+  padding-inline-end: 10px;
+  padding-block: 0;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--newtab-text-primary-color);
+  -moz-context-properties: fill;
+  fill: var(--newtab-text-secondary-color);
+}
+
+.search-handoff-button {
+  padding-inline-end: 48px;
+  padding-inline-start: 46px;
+}
+
+*/
+
+}
+
+@media (prefers-color-scheme: light){
+.top-site-icon{ background-color: transparent !important; }
+   
+/* Закрепленные сайты */
+    
+.top-site-outer .title span .icon.icon-pin-small { display: none !important; }
+
+/*.top-site-outer .title { display: none !important; } */
+
+.top-site-outer .title { 
+  opacity: 80% !important;
+  transform: scale(1.1) !important;
+  font-weight: normal !important;
+  font-family: -apple-system !important;
+}
+    
+/*.top-site-outer .title  {
+    width: 80px !important;
+    font-weight: 501 !important;
+    font-size: 14px !important;
+    margin-top: -40px !important;
+    margin-inline: 10px !important;
+    }   
+    
+*/
+    
+.collapsible-section{
+        margin-left: -12px !important;
+    }
+
+    
+.top-site-outer:hover .tile, .card-outer:hover .card{
+    background-color: color-mix(in srgb, var(--newtab-pinnedsites-background)80%, var(--newtab-wordmark-color)) !important;
+    }
+    
+    
+.top-site-outer:is(:focus-within) .tile, .card-outer:is(.active,:focus-within) .card{
+    background-color: color-mix(in srgb, var(--newtab-pinnedsites-background)80%, var(--newtab-wordmark-color)) !important;
+    box-shadow: none !important;
+    }
+    
+.top-site-outer:is(:focus-within) .title, .card-outer:is(.active,:focus-within) .card{
+    text-decoration: underline !important;
+    }
+
+    
+.top-site-outer .context-menu-button {
+    background-image: url("icons/more.svg") !important;
+    background-color: transparent !important;
+    border-radius: 50% !important;
+    inset-inline-end: -10px !important;
+    top: 2px !important;
+    transition: opacity 200ms;
+    border-radius: 80px !important;
+    fill: var(--newtab-text-primary-color) !important;
+    }
+    
+.top-site-outer .context-menu-button:is(:hover, :focus) {
+    background-color: color-mix(in srgb, var(--contrast-color), transparent) !important;
+    transition: opacity 200ms;
+    fill: var(--newtab-text-primary-color) !important;
+    }
+    
+    
+/* -------------------------- Последние действия --------------------------- */
+    
+.card-outer .card {
+    filter: saturate(140%) !important;
+    border-radius: 16px !important;
+    background-color: #ffffff7d  !important;   
+    position: relative;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+    backdrop-filter: blur(33px);
+    height: auto !important;
+}
+
+
+.card-outer > a {
+  color: auto !important;
+}
+
+.outer-wrapper a {
+  color: auto !important;
+}
+
+:root[lwt-newtab-brighttext] {
+  --newtab-wordmark-color: #ffffffcb !important;
+}
+
+.compact-cards .card-outer .card-context {
+  background-color: var(--newtab-background-color-secondary);
+  border-radius: 16px;
+  clip-path: inset(-1px -1px 4px);
+  height: 32px;
+  width: 32px;
+  padding: 8px;
+  top: 108px !important;
+  inset-inline-end: 3px !important;
+  inset-inline-start: auto;
+}
+
+.compact-cards .card-outer .card-preview-image-outer { 
+    border-radius: 16px 16px 0 0 !important; 
+    }
+    
+.ds-highlights .section .section-list .card-outer .card-host-name {
+    text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
+    color: var(--newtab-text-primary-color) !important;
+    }
+    
+.card-outer:not(.placeholder) .card-title {
+    text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
+    }
+    
+.card-outer:is(:hover, :focus, :active, :focus-within, .active):not(.placeholder) .card-title, 
+.card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+    --newtab-primary-action-background: blue !important;
+    color: var(--newtab-text-primary-color) !important;
+    text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
+    text-decoration: underline !important;
+    }
+    
+.compact-cards .card-outer .card-context>.card-context-icon {
+    fill: var(--newtab-text-primary-color) !important;
+    opacity: 0.7 !important;
+    /*filter: drop-shadow( 0px 1px 0px var(--contrast-color)) !important;*/
+    }
+    
+.card-outer .context-menu-button, .card-outer .context-menu-button:active, .card-outer .context-menu-button:focus{
+    margin-top: -5px !important;
+    margin-right: -5px !important;
+    background-image: url("icons/more.svg") !important;
+    background-color: color-mix(in srgb, var(--contrast-color) 70%, transparent) !important;
+    fill: var(--newtab-text-primary-color) !important;
+    border-color: transparent !important;
+    transition-delay: 0ms !important;
+    }
+    
+    .card-outer .context-menu-button {
+  box-shadow: unset !important;
+}
+
+/* Рекомендации */
+
+.ds-card .meta {
+    filter: saturate(140%) !important;
+    background-color: #ffffff7d  !important;   
+    position: relative;
+    backdrop-filter: blur(33px);
+    height: auto !important;
+    border-radius: 0 0 16px 16px !important;
+}
+
+.ds-onboarding-container:not(.placeholder), .ds-card-grid .ds-card:not(.placeholder) {
+  border-radius: 16px !important;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+  background-color: transparent !important;  
+}
+
+.ds-onboarding-container:not(.placeholder) .img-wrapper .img img, .ds-onboarding-container:not(.placeholder) .img-wrapper .img .placeholder-image, .ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img img, .ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img .placeholder-image {
+  border-radius: 16px 16px 0 0 !important;
+}
+
+
+.ds-card:is(:hover, :focus, .active) .context-menu-button, .ds-signup:is(:hover, :focus, .active) .context-menu-button {
+  box-shadow: unset !important;
+}
+@media (prefers-color-scheme: light){
+.ds-card .context-menu-button, .ds-signup .context-menu-button {
+  background-image: url("icons/more.svg") !important;
+  border: transparent !important;
+  margin-top: -5px !important;
+  margin-right: -5px !important;
+  background-color: color-mix(in srgb, var(--contrast-color) 70%, transparent) !important;
+  fill: var(--newtab-text-primary-color) !important;
+  transition-delay: 0ms !important;
+}
+}
+
+.ds-card .ds-card-link:hover header {
+  color: var(--newtab-text-primary-color) !important;
+}
+
+.outer-wrapper a {
+  color: var(--newtab-text-primary-color) !important;
+}
+
+:root {
+  --newtab-primary-element-active-color: var(--newtab-text-primary-color) !important;
+  --newtab-primary-action-background: transparent !important;
+}
+
+/* Рекомендации */
+
+/* Режим редактирования */
+
+
+.modalOverlayOuter {
+    background-color: #82828248  !important;   
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;  
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+}
+
+.modal {
+  background-color: #fff6  !important;   
+  font-size: unset !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+  border-color: transparent !important;
+}
+
+.topsite-form .form-wrapper input[type="text"] {
+  background-color: #ffffff6e !important;
+  font-size: unset !important;
+  border-color: transparent !important;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+  border-radius: 8px !important;
+}
+
+.actions {
+  border-top: 1px solid var(--newtab-border-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 15px 25px 0;
+  border-color: transparent !important;
+}
+
+
+.button, .actions button {
+  background-color: #ffffff6e !important;
+  border-color: transparent !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+}
+
+.modal-overlay {
+  background-color: #ffffff1a !important; 
+  backdrop-filter: blur(33px) !important;
+}
+
+:root{   
+  --newtab-pinnedsites-background: color-mix(in srgb, white 14%, transparent) ;
+  --newtab-pinnedsites-position-top: 0px ;
+}
+
+}

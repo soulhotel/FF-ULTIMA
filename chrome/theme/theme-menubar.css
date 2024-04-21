@@ -1,0 +1,42 @@
+/*-------------------menu bar--------------------*/
+
+/*--quick styling--*/
+
+#menubar-items {
+background: var(--uc-ultima-background-ii) !important;
+border-radius: 5px !important;
+justify-content: center !important;
+color: var(--uc-light-dark) !important;
+}
+#toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
+background-color: var(--uc-selected) !important;
+color: var(--uc-light-dark) !important;
+border-radius: 5px !important;}}
+
+
+/*--positioning when active--*/
+
+/*#toolbar-menubar:not([inactive="true"]), */
+#toolbar-menubar[autohide="false"] {
+position: fixed;
+left: calc(50vw - 150px);
+top: var(--uc-navbar-height);
+height:23px !important;
+}
+#toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
+background-color: var(--uc-selected) !important;
+color: var(--uc-light-dark) !important;
+border-radius: 5px !important;}}
+
+
+/*--positioning when pressing alt--*/
+
+/*#toolbar-menubar:not([inactive="true"]), */
+#toolbar-menubar[autohide="true"]:not([inactive="true"]) {
+position: fixed;
+left: calc(50vw - 150px);
+top: var(--uc-navbar-height);
+height:23px !important;
+}
+
+/*-------------------fin--------------------*/

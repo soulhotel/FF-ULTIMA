@@ -1,0 +1,44 @@
+
+/*--Override styles and corrections made for Linux--*/
+
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+
+/*--Default dark should match cross platform--*/  
+
+#main-window:not([lwtheme="true"]),:root:not(:-moz-lwtheme)
+    {--toolbar-bgcolor: var(--uc-ultima-window) !important;}
+
+/*--titlebar button box positioning, it will be inconsistent accross different DE--*/
+/*--but this should be fine for all Gnome DE's--*/
+
+.titlebar-buttonbox .titlebar-button {padding: 3px 3px !important;}
+
+:root[tabsintitlebar] .titlebar-buttonbox {top: 3px !important;}
+
+/*--update nav bar spacing, and override inactive styling--*/
+
+#nav-bar { margin-right: 96px !important; }
+
+:root {--inactive-titlebar-opacity: 1 !important;}
+  
+
+
+
+
+
+
+
+
+
+
+
+} /*--<--end media query--*/
+
+
+
+
+
+
+
+
+
