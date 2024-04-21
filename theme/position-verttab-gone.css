@@ -73,6 +73,8 @@ tabbrowser-arrowscrollbox-periphery,
 
 /*--autohide sidebar--*/
 
+@media (-moz-bool-pref: "ultima.sidebar.autohide") {
+
 /*--remove header--*/
 /*--although it may be wiser to style the header instead,
 so you can keep the ability to switch from left to right--*/
@@ -178,7 +180,7 @@ so you can keep the ability to switch from left to right--*/
 { background: var(--uc-tabs-lwt) !important; }
 
 }
-
+}
 }  /*--<--end of media query for ultima.tabs.vertical--*/
 
 
