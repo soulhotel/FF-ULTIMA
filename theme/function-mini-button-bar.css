@@ -50,7 +50,7 @@
 }
 
 #TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button){
-  max-width: 40px !important;
+  max-width: 39px !important; /*fixed 1 pixel shift to the left*/
 }
 
 :root:not([customizing]) #TabsToolbar-customization-target toolbarbutton:hover + #tabbrowser-tabs {
