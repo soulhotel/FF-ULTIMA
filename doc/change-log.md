@@ -7,8 +7,9 @@
 
 - Returning Users :exclamation: please use the [new installation method](https://github.com/soulhotel/FF-ULTIMA/blob/main/README.md#installation) (easy to follow)
 - Linux Users :exclamation: Select your DE (KDE/Gnome) by searching for `ultima.OS` in `about:config`. Default is set to KDE.
-- New :exclamation: Easier format for [changing settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md). No longer have to go into the userChrome file 
-- about:config preference for switching tabs via scrolling, enabled in new user.js
+- New :exclamation: Easier format for [changing settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md). No longer have to go into the userChrome file
+- Tab dragging 🚧 default behavior of tabs shifting to the right has been patched.
+- about:config preference for switching tabs via scrolling `toolkit.tabbox.switchByScrolling`, enabled in new user.js
 - linux title bar buttons are now localized, to get past the default (and inconsistent) inactive window behavior.
 - wip: [spreadsheet](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) for all variables in the documentation folder
 - No margins, No borders, no rounded corners `ultima.xstyle.squared` option:
