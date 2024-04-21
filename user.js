@@ -15,3 +15,4 @@ user_pref("ultima.OS.mac", false);
 
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
+user_pref("toolkit.tabbox.switchByScrolling", true);
