@@ -33,9 +33,20 @@
 
 @media (-moz-bool-pref: "ultima.tabs.l"), (-moz-bool-pref: "ultima.tabs.s") {
 
+/*OPTION 1 - Functions well, however the lack of animation causes a minor pause/delay on the tabs autohiding animation*/
+
 #TabsToolbar-customization-target .toolbarbutton-1:not(#tabs-newtab-button) {
-  justify-content: left;
+  justify-content: left !important;
   margin-left:2px !important;
+}
+
+#TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button){
+  max-width: 39px !important;
+}
+
+#TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
+  margin-left: 0px !important;
+  display: none !important;
 }
 
 #TabsToolbar-customization-target:hover .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
@@ -44,14 +55,32 @@
   overflow:clip;
 }
 
-#TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
-  margin-left: 0px !important;
-  display: none !important;
+/*--OPTION 2. THIS REMOVES the pause in animation caused by the toolbarbuttons text label on hover. It works! But it needs a little more optimization--*/
+/*
+#TabsToolbar-customization-target .toolbarbutton-1:not(#tabs-newtab-button) {
+  justify-content: left !important;
+  margin-left:2px !important;
+  max-width: 39px !important;
 }
 
-#TabsToolbar-customization-target:not(:hover) .toolbarbutton-1:not(#tabs-newtab-button){
-  max-width: 40px !important;
+#TabsToolbar-customization-target .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
+  margin-left: 0px !important;
+  padding: 0 !important;
+  transition:
+    min-width 80ms linear 300ms !important;
+  min-width:0px !important;
+  will-change: min-width;
 }
+
+#TabsToolbar-customization-target:hover .toolbarbutton-1:not(#tabs-newtab-button) .toolbarbutton-text {
+  display: flex !important;
+  min-width:200px !important;
+  transition-delay: 0ms !important;
+  margin-left: 5px !important;
+  overflow:clip;
+  padding: var(--toolbarbutton-inner-padding) !important;
+}
+*/
 
 :root:not([customizing]) #TabsToolbar-customization-target toolbarbutton:hover + #tabbrowser-tabs {
   width: var(--uc-vertical-tabs-width-revert);
@@ -63,7 +92,8 @@
   width: var(--uc-vertical-tabs-width-revert);
 }
 
-}
+} /*--Visual indicator for label--*/
+
 
 /* visual indicator, when on customize toolbar screen */
 

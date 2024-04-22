@@ -29,15 +29,48 @@
 }}
 }
 
-/*-------placeholder---------*/
-/*
-@media (-moz-bool-pref: "ultima.new.pref") {
-}
-*/
-/*-------placeholder---------*/
+/*-------fix for tab edge triggering collapse---------*/
 /*temp fix*/
 .tabbrowser-tab {
   margin-bottom: -2.2px !important;
 }
 
+/*-------small adjustment for rearranging tabs,note:
+- targetting selected tab and overriding tranlations = good
+- targetting tab above selected tab to translate 40px will work with tabbrowser-tabs mouse positioning detection = good
+- https://hg.mozilla.org/mozilla-central/file/291d187ba249c56d5c9dc88b5faaf04db2afe9c1/browser/base/content/tabbrowser-tabs.js
+- forcing positioning based on mozillas already established mouse positioning = uneffective, but probable.
+---------*/
+.tabbrowser-tab[style*="transform"] {
+    transform: translateX(0px) !important;
+    transform: translateY(0px) !important;
+}
 
+/*-------placeholder---------*/
+/*
+@media (-moz-bool-pref: "ultima.new.pref") {
+}
+*/
+
+/*
+delete later:
+https://hg.mozilla.org/mozilla-central/file/291d187ba249c56d5c9dc88b5faaf04db2afe9c1/browser/base/content/tabbrowser-tab.js
+https://hg.mozilla.org/mozilla-central/file/291d187ba249c56d5c9dc88b5faaf04db2afe9c1/browser/base/content/tabbrowser-tabs.js
+
+The provided code defines the MozTabbrowserTab class, which extends the MozElements.MozTab class. This class represents a tab element within the Firefox browser window.
+
+Here are some key points from the code:
+
+    The MozTabbrowserTab class defines the structure of a tab element using HTML markup stored in the markup static property.
+
+    Event listeners are added to handle various interactions with the tab, including mouse events (mouseover, mouseout, mousedown, mouseup, click, dblclick), drag events (dragstart), animation events (animationend), and focus events (focus, AriaFocus).
+
+    Properties and methods are defined to manage the tab's state, such as whether it's selected, pinned, muted, or hidden, as well as methods to update its visual appearance and behavior.
+
+    The class includes methods to handle mouse interactions (_mouseenter, _mouseleave, on_mousedown, on_mouseup, on_click, on_dblclick), drag and drop (on_dragstart), and focus (on_focus, on_AriaFocus).
+
+    Additional methods are provided to manage tab attributes, such as updating the last accessed timestamp (updateLastAccessed), setting the user context ID (setUserContextId), and updating the accessibility description (updateA11yDescription).
+
+Overall, this code represents the logic and behavior associated with individual tabs in the Firefox browser, including handling user interactions, updating tab attributes, and managing tab states. However, the specific logic related to dragging and dropping tabs to rearrange their order may be found within these event handlers or in related methods within this class or its parent classes. Further examination of the entire codebase and its interactions may be necessary to fully understand the tab rearrangement functionality.
+
+*/

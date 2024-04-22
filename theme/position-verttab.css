@@ -260,9 +260,6 @@ scrollbox[orient="horizontal"] {
 
 /*-------------------------------adjustments DO NOT TOUCH------------------------------*/
 
-/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
-/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
-
 /*--(dont touch) removal of inconsistent buttons, and adjustments--*/
 
 #scrollbutton-up,
@@ -292,11 +289,8 @@ scrollbox[orient="horizontal"] {
   }
 }
 
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
-/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
-/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
 
 @media (-moz-bool-pref: "userchrome.vertical-tabs.on-right.enabled") {
 
@@ -340,7 +334,6 @@ scrollbox[orient="horizontal"] {
   justify-content: left;
   pointer-events: none !important;
 }
-
 #new-tab-button {
   background: transparent !important;
   opacity: 0 !important;
@@ -348,22 +341,26 @@ scrollbox[orient="horizontal"] {
   position: absolute;
   display: none !important;
 }
-
 /* this button is a pain */
 #alltabs-button {
   display: none;
 }
 
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-
+  
 /* make sure closed tabs update the scrollbox */
+  
 .tabbrowser-tab:not([pinned], [fadein]) {
   max-width: 0.1px !important;
   min-width: 0.1px !important;
   visibility: collapse !important;
 }
 
+/*-- to prevent tabs from triggering autohide events at tab sensitive edges*/
+.tabbrowser-tab {
+  margin-bottom: -2.3px !important;
+}
+
+  
 /*-----------------------------------END OF ADJUSTMENTS-------------------------------------*/
 
 

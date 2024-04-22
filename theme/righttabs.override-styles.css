@@ -1,0 +1,150 @@
+/*-------no margins, borders, or rounded corners---------*/
+
+@media (-moz-bool-pref: "ultima.xstyle.squared") {
+
+:root, body, * {
+  --uc-all-margins: 0px 0px 0px 0px;
+  --uc-margin-inline: 0px;
+  --uc-margin-top: 0px;
+  --uc-margin-bottom: 0px;
+  --uc-tab-margins: 0px 0px 0px 0px;
+  --uc-sb-margin-leftside: 0px 0px 0px 0px;
+  --uc-sb-margin-rightside: 0px 0px 0px 0px;
+  --uc-all-border-radius: 0px;
+  --tab-border-radius: 10px;
+  --arrowpanel-menuitem-border-radius: 10px;
+  --arrowpanel-border-radius: 10px;
+  --toolbarbutton-border-radius: 10px;
+  --urlbar-icon-border-radius: 10px;
+  --button-border-radius: 10px;
+  --uc-button-border-radius: 10px;
+}
+#main-window
+#tabbrowser-tabpanels { browser[type] {
+    outline: 0px solid var(--toolbar-bgcolor);
+}}
+#main-window[lwtheme="true"]
+#tabbrowser-tabpanels { browser[type] {
+    outline: 0px solid var(--lwt-accent-color);
+}}
+}
+
+/*-------placeholder---------*/
+/*temp fix*/
+.tabbrowser-tab {
+  margin-bottom: -2.2px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------tabs on the right-------------------------------------*/
+
+@media not all and (-moz-bool-pref: "ultima.xstyle.tabs.rightside") {
+
+}
+
+@media (-moz-bool-pref: "ultima.xstyle.tabs.rightside") {
+
+:root, body, * {
+  --uc-tab-margins: 0px 6px 7px 0px;
+  --uc-sb-margin-leftside: 0px 6px 7px 3px;
+  --uc-sb-margin-rightside: 0px 0px 7px 6px;
+}
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
+#TabsToolbar-customization-target {
+  top: var(--uc-navbar-height);
+  left: initial;
+  right: -2px !important;
+}
+#tabbrowser-tabs {
+  top: unset;
+  left: unset;
+  margin: 0 !important;
+  bottom: unset;
+  right: unset;
+}
+#TabsToolbar:is([customizing="true"]) #TabsToolbar-customization-target {
+  background: var(--uc-ultima-background-iii) !important;
+  padding-bottom: 32px !important;
+  min-width: 42px;
+  top: 120px;
+  left: initial !important;
+  right: 0px !important;
+}
+
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+  #tab-notification-deck, .global-notificationbox,
+  #main-window:not([inDOMFullscreen]) #browser {
+    margin-left: 6px !important;
+    margin-right: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
+  }
+}
+
+/*-----------------position-verttab override------------------*/
+
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
+#tab-notification-deck,
+.global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser {
+  margin-right: calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline));
+  margin-left: 6px !important;
+}
+@media (-moz-bool-pref: "userchrome.vertical-tabs.on-right.enabled") {
+  :root:not([customizing]) #tabbrowser-tabs {
+    right: unset;
+    left: 0;
+  }
+}
+}
+
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical") {
+
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser{
+    margin-right: 0 !important;
+    margin-left: initial;
+}
+:root, body, *{
+    --uc-all-margins: 0px 0px 6px 6px;
+    --uc-sb-margin-leftside: 0px 3px 7px -2px;
+    --uc-sb-margin-rightside: 0px 6px 6px 0px;
+}
+}  /*--<--end of media query for ultima.tabs.vertical--*/
+
+
+@media (-moz-bool-pref: "ultima.tabs.xs") { @media (-moz-bool-pref: "ultima.tabs.s") {
+
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: var(--uc-all-margins) !important;
+}
+@media (-moz-bool-pref: "ultima.tabs.l") { @media (-moz-bool-pref: "ultima.tabs.s") {
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: var(--uc-all-margins) !important;
+}
+}}
+@media (-moz-bool-pref: "ultima.tabs.xs") { @media (-moz-bool-pref: "ultima.tabs.l") {
+#tab-notification-deck, .global-notificationbox,
+#main-window:not([inDOMFullscreen]) #browser{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin: var(--uc-all-margins) !important;
+}
+}}
+}
+
+
+}}}

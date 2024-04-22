@@ -12,58 +12,61 @@ Index: For ctrl+f search of a section
 
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-/*--Default dark/light mode color should match cross platform--*/  
+/*--Default dark/light mode color should match cross platform--*/
+
 #main-window:not([lwtheme="true"]),:root:not(:-moz-lwtheme) {
     --toolbar-bgcolor: var(--uc-ultima-window) !important;
 }
-:root:where([tabsintitlebar]) {
-    --toolbox-non-lwt-textcolor: var(--uc-light-dark);
-    --toolbox-non-lwt-textcolor-inactive: var(--uc-light-dark);
-}
 
-/*--override inactive window style--*/   
+/*--override inactive window style--*/
+
 :root {
     --inactive-titlebar-opacity: 1 !important;
 }
 
 /*--update nav bar spacing--*/
+
 #nav-bar {margin-right: 96px !important;}
 
 /*--titlebar buttons style ( - □ x )--*/
-/*--default to system buttons--*/     
+/*--default to system buttons--*/
+
 #main-window:not([lwtheme="true"]) .titlebar-button {
     stroke: var(--uc-ultima-accent-iii) !important;
-}   
+}
+
 #main-window[lwtheme="true"] .titlebar-button {
     stroke: var(--toolbarbutton-icon-fill) !important;
 }
 
-/*--sidebar splitter corrections--*/
 .sidebar-splitter {
-    border: 0 solid !important; 
+    border: 0 solid !important;
     border-inline-end-width: 1px !important;
-    border-color: transparent !important; 
+    border-color: transparent !important;
     min-width: 1px !important;
     width: 4px !important;
     background-color: transparent !important;
     margin-inline-start: -4px !important;
 }
-  
+
+:root:where([tabsintitlebar]) {
+    --toolbox-non-lwt-textcolor: var(--uc-light-dark);
+    --toolbox-non-lwt-textcolor-inactive: var(--uc-light-dark);
+}
+
 } /*--<--end linux media query--*/
 
 /*------------------------------------------------------------------------*/
 /*--KDE--*/
 
-@media (-moz-bool-pref: "ultima.OS.kde") {
+@media (-moz-bool-pref: "ultima.OS.kde"), (-moz-bool-pref: "ultima.OS.gnome") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-/*--position the minmaxclose container--*/
 :root[tabsintitlebar] .titlebar-buttonbox {
     top: 5px !important;
     right: -1px !important;
 }
 
-/*--override default styling--*/
 .titlebar-button, .titlebar-button:-moz-lwtheme {
   appearance: none !important;
   margin: 0 !important;
@@ -74,100 +77,48 @@ Index: For ctrl+f search of a section
   -moz-context-properties: fill, fill-opacity !important;
   fill: var(--toolbarbutton-icon-fill) !important;
   stroke: var(--toolbarbutton-icon-fill) !important;
-  border-radius: var(--uc-button-border-radius) !important;
-}
-.titlebar-button .toolbarbutton-icon,
-.titlebar-button:-moz-lwtheme .toolbarbutton-icon,
-.titlebar-button:-moz-lwtheme .toolbarbutton-icon:-moz-lwtheme {
-  border-radius: var(--toolbarbutton-border-radius) !important;
-  list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
-  opacity: 1 !important;
-  padding: 4px !important;
-}
-
-/*--icons override, default icons dont override when there is window inactivity--*/
-.titlebar-button.titlebar-close .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/close.svg") !important;
-}
-.titlebar-button.titlebar-min .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-down.svg") !important;
-}
-.titlebar-button.titlebar-max .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-up.svg") !important;
-}
-.titlebar-button.titlebar-restore .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-up.svg") !important;
-}
-
-/*--override background changes when hovered--*/
-.titlebar-button:-moz-lwtheme:hover {
-  background-color: var(--uc-selected) !important;
-  border-radius: var(--uc-button-border-radius) !important;
-}
-
-/*--override padding--*/
-.titlebar-button > .toolbarbutton-icon:-moz-lwtheme {
-  padding: 4px 4px !important;
-  -moz-context-properties: revert !important;
-  stroke: currentColor;
-  border-radius: var(--uc-button-border-radius) !important;
-}
-
-} /*--<--end linux media query--*/
-} /*--<--end OS preference query--*/
-
-
-/*------------------------------------------------------------------------*/
-/*--GNOME--*/
-
-@media (-moz-bool-pref: "ultima.OS.gnome") {
-@media (-moz-platform: linux), (-moz-os-version: linux) {
-
-:root[tabsintitlebar] .titlebar-buttonbox {
-    top: 5px !important;
-    right: 0px !important;
-}
-
-.titlebar-button, .titlebar-button:-moz-lwtheme {
-  appearance: none !important;
-  margin: 0 !important;
-  margin-top: 0px !important;
-  padding: 4px 4px !important;
-  justify-content: center !important;
-  color: inherit !important;
-  -moz-context-properties: fill, fill-opacity !important;
-  fill: var(--toolbarbutton-icon-fill) !important;
-  stroke: var(--toolbarbutton-icon-fill) !important;
-  border-radius: var(--uc-button-border-radius) !important;
+  border-radius: var(--uc-button-border-radius);
 }
 
 .titlebar-button .toolbarbutton-icon,
 .titlebar-button:-moz-lwtheme .toolbarbutton-icon,
 .titlebar-button:-moz-lwtheme .toolbarbutton-icon:-moz-lwtheme {
+
   border-radius: var(--toolbarbutton-border-radius) !important;
   list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
   opacity: 1 !important;
-  padding: 4px !important;
+  padding: 3px !important;
 }
 
+
 /*--icons override, default icons dont override when there is window inactivity--*/
-.titlebar-button.titlebar-close .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/close.svg") !important;
-} .titlebar-button.titlebar-min .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-down.svg") !important;
-} .titlebar-button.titlebar-max .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-up.svg") !important;
-} .titlebar-button.titlebar-restore .toolbarbutton-icon {
-  list-style-image: url("chrome://global/skin/icons/arrow-up.svg") !important;
+
+.titlebar-button.titlebar-close .toolbarbutton-icon{
+  list-style-image: url("icons/lin-close.svg") !important;
+  margin-top: -1px !important;
+}
+.titlebar-button.titlebar-min .toolbarbutton-icon{
+  list-style-image: url("icons/lin-min.svg") !important;
+  margin-top: -1px !important;
+}
+.titlebar-button.titlebar-max .toolbarbutton-icon{
+  list-style-image: url("icons/lin-max.svg") !important;
+  margin-top: -1px !important;
+}
+.titlebar-button.titlebar-restore .toolbarbutton-icon{
+  list-style-image: url("icons/lin-restore.svg") !important;
+  margin-top: -1px !important;
 }
 
 /*--override background changes when hovered--*/
+
 .titlebar-button:-moz-lwtheme:hover {
-  background-color: var(--uc-selected) !important;
-  border-radius: var(--uc-button-border-radius) !important;
+  background-color: var(--uc-selected) !important;;
+  border-radius: var(--uc-button-border-radius);
 }
 
 /*--override padding--*/
+
 .titlebar-button > .toolbarbutton-icon:-moz-lwtheme {
   padding: 4px 4px !important;
   -moz-context-properties: revert !important;
@@ -178,6 +129,18 @@ Index: For ctrl+f search of a section
 } /*--<--end linux media query--*/
 } /*--<--end OS preference query--*/
 
+/*------------------------------------------------------------------------*/
+/*--GNOME--*/
+
+@media (-moz-bool-pref: "ultima.OS.gnome") {
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+
+/*--size and positioning of the nav bar for less titlebar buttons--*/
+
+#nav-bar {margin-right: 64px !important;}
+
+} /*--<--end linuxmedia query--*/
+} /*--<--end OS preference query--*/
 
 /*------------------------------------------------------------------------*/
 /*--mac--*/
@@ -190,6 +153,14 @@ Index: For ctrl+f search of a section
     }
 }} /*--<--end mac media query--*/
 } /*--<--end OS preference query--*/
+
+
+
+
+
+
+
+
 
 
 
