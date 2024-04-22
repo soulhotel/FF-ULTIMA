@@ -1,13 +1,17 @@
 
-###### Please follow the installation instructions on main page.
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.2/ffultima1.7.2.zip) 1.7.2 latest
 
-###### Changing tab sizes and autohide on/off? Creating Color Schemes? Something else? [Come over to the modification page...](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
-## Change Log:
+###### 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Documentation](https://github.com/soulhotel/FF-ULTIMA/tree/main/doc).
 
-- Returning Users :exclamation: please use the [new installation method](https://github.com/soulhotel/FF-ULTIMA/blob/main/README.md#installation) (easy to follow)
-- Linux Users :exclamation: Select your DE (KDE/Gnome) by searching for `ultima.OS` in `about:config`. Default is set to KDE.
-- New :exclamation: Easier format for [changing settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md). No longer have to go into the userChrome file
+###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
+
+
+
+### Change Log:
+- Returning Users, please use the [new installation method](https://github.com/soulhotel/FF-ULTIMA/blob/main/README.md#installation) (easy to follow)
+- Linux Users can select a DE (KDE/Gnome) by searching for `ultima.OS` in `about:config`. Default is set to KDE.
 - Tab dragging 🚧 default behavior of tabs shifting to the right has been patched.
 - about:config preference for switching tabs via scrolling `toolkit.tabbox.switchByScrolling`, enabled in new user.js
 - linux title bar buttons are now localized, to get past the default (and inconsistent) inactive window behavior.
