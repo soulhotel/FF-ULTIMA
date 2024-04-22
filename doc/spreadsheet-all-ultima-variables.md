@@ -66,7 +66,5 @@
 | --uc-sb-lwt                      |      | ✅ | The color of the sidebar background when a theme is in use, "^" |
 | --uc-panel-background            | --46 | ✅ | Background color for popup-menus,popup-panels, extensions panel, etc |
 
-
-
-
-
+  
+  

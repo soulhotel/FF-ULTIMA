@@ -39,6 +39,12 @@
 
 ---
 
+## Modifications for power users
+- WIP :warning: spreadsheet of [positioning variables](var-pos.html)
+- WIP :warning: spreadsheet of  [theme variables](var-pos.html)
+
+---
+
 ### Create a theme. I was able to create Dusky (Light Mode), just like this.
 ###### You atleast need to have knowledge on what live debugging is to proceed.
 ###### chrome/theme/all-global-theme-dusky.css , chrome/theme/all-global-theme-fullmoon.css
@@ -72,9 +78,6 @@
 
 ---
 
-## Modifications for power users
 
-- :warning: spreadsheet WIP [positioning variables](var-pos.html)
-- :warning: spreadsheet WIP [theme variables](var-pos.html)
 
 ---
