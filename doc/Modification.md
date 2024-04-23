@@ -1,8 +1,8 @@
 ## Modifications
 
-###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
+### Settings and Preferences, found on the `about:config` page.
 
-Settings and Preferences, found on the `about:config` page.
+###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
 
 ###### <p align="right">(click images for bigger resolution)</p>
 
@@ -59,7 +59,4 @@ Settings and Preferences, found on the `about:config` page.
 </details>
 
 ---
-
-
-
----
+<br>
