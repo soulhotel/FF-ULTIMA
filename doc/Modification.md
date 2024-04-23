@@ -1,5 +1,8 @@
 ## Modifications
 
+
+
+
 ###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
 
 ### Switching Tabs Size
@@ -10,7 +13,9 @@
 - [S, 140px TABS] --> `ultima.tabs.s`
 - [L, 250px TABS] --> `ultima.tabs.l`
 
-![tabsizechange](preview/tabsizechange.gif)
+| preview                                      |
+|----------------------------------------------|
+| ![tabsizechange](preview/tabsizechange.gif)  |
 
 ---
 
@@ -19,29 +24,26 @@
 - in the URL BAR type `about:config` and search for `ultima`
 - set `ultima.tabs.autohide` to true or false
 
-![tabsize](preview/autohideon.gif)
+| preview                                      |
+|----------------------------------------------|
+| ![tabsize](preview/autohideon.gif)           |
 
 ---
 
-### Disable Extensions Menu theme
-<details>
-  <summary>(Click me)</summary>
-  
-![firefox_l7mrOb3I9H](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/43181381-ff46-4ed5-b6a7-cd4cbdfddbd4)
-</details>
+###### more preferences found on the `about:config` page.
 
-### Square the theme; No margins, borders, or rounded corners
-<details>
-  <summary>(Click me)</summary>
-  
-![l1ypna5AU1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/51c5733d-b394-4a88-a0aa-4a643d03a82c)
-</details>
+| More Custom Preferences          | Function            | Preview             |
+|----------------------------------|---------------------|---------------------|
+| ultima.tabs.vertical             | Completely remove the tabs panel, for users who rather use an extension like sidebery/treestyle. This preference can be paired with 'ultima.sidebar.autohide' |  |
+| ultima.xstyle.containertabs      | There are three styling options for how container tabs look, change them and pick to your liking | ![2024-04-23_13-31](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6b867554-6e9c-41a3-9c96-9ebc14d15b42) ![2024-04-23_13-32](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/15fb335d-e9fa-402e-83a9-0ddd67581f94) ![2024-04-23_13-32_1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/afda38b4-5c4b-4093-b98f-63c138af2023) |
+| ultima.xstyle.squared            | Square the theme; No margins, borders, or rounded corners | ![l1ypna5AU1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/51c5733d-b394-4a88-a0aa-4a643d03a82c) |
+| ultima.theme.extensions          | Disable Extensions Menu theme, compact icons only to default list view |![firefox_l7mrOb3I9H](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/43181381-ff46-4ed5-b6a7-cd4cbdfddbd4)|
 
 ---
 
 ## Modifications for power users
-- WIP :warning: spreadsheet of [positioning variables](var-pos.html)
-- WIP :warning: spreadsheet of  [theme variables](var-pos.html)
+- Spreadsheet of [positioning variables](var-pos.html)
+- Spreadsheet of  [theme variables](var-pos.html)
 
 ---
 
