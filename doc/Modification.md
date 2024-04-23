@@ -21,7 +21,7 @@ Settings and Preferences, found on the `about:config` page.
 ---
 <br>
 
-## Spreadsheets for power users.
+### Spreadsheets for power users.
 <-- [spreadsheets for all variables](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) (sectioned off by global color modifications, and global positioning modifications)
 
 ---
