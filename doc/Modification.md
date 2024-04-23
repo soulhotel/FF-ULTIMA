@@ -1,51 +1,32 @@
 ## Modifications
 
-
-
-
 ###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
 
-### Switching Tabs Size
+Settings and Preferences, found on the `about:config` page.
 
-- in the URL BAR type `about:config` and search for `ultima`
-- there are three options, double click to set one to true, and make sure you set the other as false.
-- [XS, 40px TABS] --> `ultima.tabs.xs`
-- [S, 140px TABS] --> `ultima.tabs.s`
-- [L, 250px TABS] --> `ultima.tabs.l`
+###### Click images for bigger resolution.
 
-| preview                                      |
-|----------------------------------------------|
-| ![tabsizechange](preview/tabsizechange.gif)  |
-
----
-
-### Enable/Disable Autohide
-
-- in the URL BAR type `about:config` and search for `ultima`
-- set `ultima.tabs.autohide` to true or false
-
-| preview                                      |
-|----------------------------------------------|
-| ![tabsize](preview/autohideon.gif)           |
-
----
-
-###### more preferences found on the `about:config` page.
-
-| More Custom Preferences          | Function            | Preview             |
+| Preferences          | Function            | Preview             |
 |----------------------------------|---------------------|---------------------|
-| ultima.tabs.vertical             | Completely remove the tabs panel, for users who rather use an extension like sidebery/treestyle. This preference can be paired with 'ultima.sidebar.autohide' |  |
-| ultima.xstyle.containertabs      | There are three styling options for how container tabs look, change them and pick to your liking | ![2024-04-23_13-31](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6b867554-6e9c-41a3-9c96-9ebc14d15b42) ![2024-04-23_13-32](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/15fb335d-e9fa-402e-83a9-0ddd67581f94) ![2024-04-23_13-32_1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/afda38b4-5c4b-4093-b98f-63c138af2023) |
-| ultima.xstyle.squared            | Square the theme; No margins, borders, or rounded corners | ![l1ypna5AU1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/51c5733d-b394-4a88-a0aa-4a643d03a82c) |
-| ultima.theme.extensions          | Disable Extensions Menu theme, compact icons only to default list view |![firefox_l7mrOb3I9H](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/43181381-ff46-4ed5-b6a7-cd4cbdfddbd4)|
+| Switching Tab Size               | [XS, 40px TABS] --> `ultima.tabs.xs` <br> [S, 165px TABS] --> `ultima.tabs.s` <br> [L, 250px TABS] --> `ultima.tabs.l` <br> :warning: Set one to true, the others false. | ![tabsizechange](preview/tabsizechange.gif) |
+| ultima.tabs.autohide             | Enable/Disable Autohide for tabs. | ![tabsize](preview/autohideon.gif) |
+| ultima.tabs.vertical             | Remove the tabs panel, for users who rather use an extension like sidebery/treestyle. | ![firefox_dnANLwlC7F](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/fd1153a0-95ef-4490-a929-92e0de632804) |
+| ultima.sidebar.autohide          | Autohide the sidebar. Only works when vertical tabs is disabled/turned-off. | ⬆⬆⬆ |
+| ultima.xstyle.containertabs      | Three optional styles for container tabs, make your pick. | ![tc1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6b867554-6e9c-41a3-9c96-9ebc14d15b42) ![tc2](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/15fb335d-e9fa-402e-83a9-0ddd67581f94) ![tc3](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/afda38b4-5c4b-4093-b98f-63c138af2023) |
+| ultima.xstyle.squared            | Square the theme; No margins, borders, or rounded corners. | ![themesquared](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ba858526-3178-462c-9bf0-4be3e4bc9ab0) |
+| ultima.theme.extensions          | Extensions-Panel theme, compact-icons or default list-view. | ![themeextensions](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/b81bce27-5927-4a0d-9bd5-e970477458d9) |
+| toolkit.tabbox.switchByScrolling | Enables scrolling on the tabs bar, to switch between tabs | ... |
+| ... | ... | ... |
 
 ---
+<br>
 
-## Modifications for power users
+## Spreadsheets for power users.
 - Spreadsheet of [positioning variables](var-pos.html)
 - Spreadsheet of  [theme variables](var-pos.html)
 
 ---
+<br>
 
 ### Create a theme. I was able to create Dusky (Light Mode), just like this.
 ###### You atleast need to have knowledge on what live debugging is to proceed.
