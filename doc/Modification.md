@@ -22,8 +22,7 @@ Settings and Preferences, found on the `about:config` page.
 <br>
 
 ## Spreadsheets for power users.
-- Spreadsheet of [positioning variables](var-pos.html)
-- Spreadsheet of  [theme variables](var-pos.html)
+<-- [spreadsheets for all variables](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) (sectioned off by global color modifications, and global positioning modifications)
 
 ---
 <br>
