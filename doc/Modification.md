@@ -4,7 +4,7 @@
 
 Settings and Preferences, found on the `about:config` page.
 
-###### Click images for bigger resolution.
+###### <p align="right">(click images for bigger resolution)</p>
 
 | Preferences          | Function            | Preview             |
 |----------------------------------|---------------------|---------------------|
