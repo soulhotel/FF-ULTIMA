@@ -137,7 +137,7 @@ Index: For ctrl+f search of a section
 
 /*--size and positioning of the nav bar for less titlebar buttons--*/
 
-#nav-bar {margin-right: 64px !important;}
+    #nav-bar {margin-right: 64px !important;}
 
 } /*--<--end linuxmedia query--*/
 } /*--<--end OS preference query--*/
@@ -148,10 +148,14 @@ Index: For ctrl+f search of a section
 @media (-moz-bool-pref: "ultima.OS.mac") {
 @media not (-moz-platform: windows) { @media not (-moz-platform: linux) {
 
+    #nav-bar {
+        margin-left: 64px !important;
+        margin-right: 0px !important;
+    }    
+    
     :root[tabsintitlebar] .titlebar-buttonbox {
         top: 9px !important;
-        right: unset !important;
-        left: -1px !important;
+        left: 2px !important;
     }
 }} /*--<--end mac media query--*/
 } /*--<--end OS preference query--*/
