@@ -32,7 +32,7 @@ then I will implement autohiding for the native Sidebar
     --uc-all-border-radius: 10px;
     --uc-all-margins: 0px 6px 6px 0px;
     /*--sidebar margins--*/
-    --uc-sb-margin-leftside: 0px 3px 7px -2px;
+    --uc-sb-margin-leftside: 0px 7px 7px -2px;
     --uc-sb-margin-rightside: 0px 6px 6px 0px;
 }
 
