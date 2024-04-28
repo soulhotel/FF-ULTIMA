@@ -80,7 +80,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 #sidebar-box {
     max-width: 50vw !important;
 } #sidebar-box {
-    min-width: 14em;
+    min-width: 40px !important;
     width: 18em;
 }   /*defaults*/
 
