@@ -13,6 +13,7 @@
 - Returning Users, please use the [new installation method](https://github.com/soulhotel/FF-ULTIMA/blob/main/README.md#installation) (easy to follow)
 - Linux Users can select a DE (KDE/Gnome) by searching for `ultima.OS` in `about:config`. Default is set to KDE.
 - (FF 126.0b6 patch - for developer editions, etc.) Some selectors for when the window are lwthemed are not have been changed, fixed.
+- Pinned tabs now have a tiny border to distinguish (visual) from selected tabs. Please offer feedback on how they look, they can/may be changed again.
 - Tab dragging 🚧 default behavior of tabs shifting to the right has been patched.
 - about:config preference for switching tabs via scrolling `toolkit.tabbox.switchByScrolling`, enabled in new user.js
 - linux title bar buttons are now localized, to get past the default (and inconsistent) inactive window behavior.
