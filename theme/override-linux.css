@@ -149,7 +149,7 @@ Index: For ctrl+f search of a section
 @media not (-moz-platform: windows) { @media not (-moz-platform: linux) {
 
     #nav-bar {
-        margin-left: 64px !important;
+        margin-left: 84px !important;
         margin-right: 0px !important;
     }    
     
