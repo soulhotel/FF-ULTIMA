@@ -20,4 +20,6 @@
 - wip: [spreadsheet](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) for all variables in the documentation folder
 - No margins, No borders, no rounded corners `ultima.xstyle.squared` option in `about:config`
 
+- Next update will tackle optional styles for the 'close button' next to individual tabs.
+
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
