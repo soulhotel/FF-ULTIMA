@@ -62,11 +62,11 @@
     - Light Mode Color Palette Application
 -------------------------------------------------------------------------------------*/
 
-#main-window:not([lwtheme="true"]) {background-color: var(--uc-ultima-window) !important;}
+#main-window:not([lwtheme]) {background-color: var(--uc-ultima-window) !important;}
 
-#main-window:not([lwtheme="true"]) {--toolbar-bgcolor: var(--uc-ultima-window) !important;}
+#main-window:not([lwtheme]) {--toolbar-bgcolor: var(--uc-ultima-window) !important;}
 
-#main-window:not([lwtheme="true"]),:root:not(:-moz-lwtheme) {
+#main-window:not([lwtheme]), :root:not([lwtheme]) {
 
   --tab-selected-bgcolor: var(--uc-active) !important;
   --tab-selected-textcolor: var(--uc-text) !important;
@@ -148,7 +148,7 @@
 
 /*----------main window background----------*/
 
-#main-window:not([lwtheme="true"]) #browser {
+#main-window:not([lwtheme]) #browser {
   background: var(--uc-ultima-window) !important;
 }
 
@@ -176,20 +176,20 @@
 
 /*--the panel that holds the vertical tabs--*/
 
-#main-window:not([lwtheme="true"]) #tabbrowser-tabs { 
+#main-window:not([lwtheme]) #tabbrowser-tabs { 
   background: var(--uc-tabs-background);
   --tab-loading-fill: var(--uc-ultima-accent-i) !important;
 }
 
 /*--tabs toolbar container that wraps around the area--*/
 
-#main-window:not([lwtheme="true"]) #TabsToolbar-customization-target {
-  box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.35);
+#main-window:not([lwtheme]) #TabsToolbar-customization-target {
+  box-shadow: inset 0 0 1px 1px #ffffff !important;
 }
 
 /*--individual tab text color--*/
 
-#main-window:not([lwtheme="true"]) .tabbrowser-tab {
+#main-window:not([lwtheme]) .tabbrowser-tab {
   color: var(--uc-text-ii) !important;
 }
 
@@ -211,7 +211,7 @@
 
 /*------------------URL bar----------------*/
 
-#main-window:not([lwtheme="true"]) #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
+#main-window:not([lwtheme]) #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
   background-color: var(--uc-ultima-window) !important;
   border-radius: var(--uc-all-border-radius) !important;
 }
@@ -220,28 +220,28 @@
   border-radius: var(--uc-all-border-radius) !important;
 }
 
-#main-window:not([lwtheme="true"]) #urlbar-background, #searchbar {
+#main-window:not([lwtheme]) #urlbar-background, #searchbar {
   background-color: var(--uc-ultima-accent-iv) !important;
   border-radius: 10px !important;
   border: 0 !important;
   box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);
 }
 
-#main-window:not([lwtheme="true"]) #urlbar-background, #searchbar {
+#main-window:not([lwtheme]) #urlbar-background, #searchbar {
   background-color: var(--uc-ultima-accent-iv) !important;
   border-radius: 10px !important;
 }
 
-#main-window:not([lwtheme="true"]) #urlbar[open] > #urlbar-background {
+#main-window:not([lwtheme]) #urlbar[open] > #urlbar-background {
   border-color: var(--uc-ultima-background-i) !important;
 }
 
-#main-window:not([lwtheme="true"]) #urlbar[breakout][breakout-extend] {
+#main-window:not([lwtheme]) #urlbar[breakout][breakout-extend] {
   background-color: var(--uc-context-menu) !important;
   border-radius: 10px;
 }
 
-#main-window:not([lwtheme="true"]) #urlbar-zoom-button {
+#main-window:not([lwtheme]) #urlbar-zoom-button {
   background-color: var(--uc-active) !important;
   margin-top:3px !important;
 }
@@ -256,16 +256,16 @@
 
 /*----------------menu popups and dialogs---------------*/
 
-#main-window:not([lwtheme="true"]) .panel-subview-body {
+#main-window:not([lwtheme]) .panel-subview-body {
 background: var(--uc-ultima-background-ii) !important;
 }
 
-#main-window:not([lwtheme="true"]) .menupopup-arrowscrollbox {
+#main-window:not([lwtheme]) .menupopup-arrowscrollbox {
 background-color: var(--uc-ultima-background-ii) !important;
 }
 
-#main-window:not([lwtheme="true"]) .toolbarbutton-icon:hover,
-#main-window:not([lwtheme="true"]) .toolbarbutton-icon[open] {
+#main-window:not([lwtheme]) .toolbarbutton-icon:hover,
+#main-window:not([lwtheme]) .toolbarbutton-icon[open] {
   background-color: var(--uc-selected) !important;
 }
 
@@ -274,21 +274,21 @@ background-color: var(--uc-ultima-background-ii) !important;
   color: var(--uc-dark)  !important;
 }
 
-#main-window:not([lwtheme="true"]) menupopup, panel { &::part(content) {
+#main-window:not([lwtheme]) menupopup, panel { &::part(content) {
   color: var(--uc-dark);
   border: 1px solid var(--uc-panel-border-ii);
 }}
 
 /*------------------buttons-----------------*/
 
-#main-window:not([lwtheme="true"]) #TabsToolbar #firefox-view-button:hover:not([open])
+#main-window:not([lwtheme]) #TabsToolbar #firefox-view-button:hover:not([open])
 > .toolbarbutton-icon {
   background-color: var(--uc-selected) !important;
 }
 
 /*---bookmarks star icon--*/
 
-#main-window:not([lwtheme="true"]) #star-button[starred] {
+#main-window:not([lwtheme]) #star-button[starred] {
   fill-opacity: 1 !important;
   fill: var(--uc-ultima-accent-i) !important;
 }
@@ -299,7 +299,7 @@ background-color: var(--uc-ultima-background-ii) !important;
   border-radius: var(--uc-button-border-radius);
 }
 
-#main-window:not([lwtheme="true"]) .titlebar-button:hover {
+#main-window:not([lwtheme]) .titlebar-button:hover {
   background-color: var(--uc-selected) !important;
 }
 
@@ -432,18 +432,18 @@ splitter {@media (-moz-platform: windows) { & {
 
 /*-----------------extensionspanel----------------------*/
 
-#main-window:not([lwtheme="true"]) .panel-subview-body
+#main-window:not([lwtheme]) .panel-subview-body
 {background: var(--uc-ultima-background-ii) !important;}
 
-#main-window:not([lwtheme="true"]) panelview,
-#main-window:not([lwtheme="true"]) #unified-extensions-view
+#main-window:not([lwtheme]) panelview,
+#main-window:not([lwtheme]) #unified-extensions-view
 {background: var(--uc-ultima-background-ii) !important}
 
 /*--title buttons--*/
 
 /*minmaxclose*/
 
-#main-window:not([lwtheme="true"]) .titlebar-button {
+#main-window:not([lwtheme]) .titlebar-button {
 stroke: var(--uc-ultima-accent-iii) !important;
 } #main-window[lwtheme="true"] .titlebar-button {
 stroke: var(--toolbarbutton-icon-fill) !important;
@@ -472,7 +472,7 @@ stroke: var(--toolbarbutton-icon-fill) !important;
 /*-----------------------------------------------------------------------------------*/
 
 /*--extension menu--*/
-#main-window:not([lwtheme="true"]) #unified-extensions-button {
+#main-window:not([lwtheme]) #unified-extensions-button {
   list-style-image: url("icons/extensions.svg") !important;
   fill: var(--uc-ultima-accent-iii) !important;
 }

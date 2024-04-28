@@ -60,3 +60,11 @@
 
 ---
 <br>
+
+### Sidebery Optional styling
+
+| Sidebery Data                            | Preview                      |
+|------------------------------------------|------------------------------|
+| `/theme/#sideberyultimastyling.json` | ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc) |
+
+
