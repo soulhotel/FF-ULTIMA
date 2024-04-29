@@ -1,4 +1,4 @@
-###### this list the services as a quick reference for what each variable touches and effects; Its still recommended to use the live Debugger tool if your goal is to create a theme or make changes.
+###### a quick reference table for what each variable in the theme effects; Its still recommended to use the live Debugger tool if your goal is to create a theme or make changes.
 
 
 ### chrome/theme/`all-global-positioning.css`
