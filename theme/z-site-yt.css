@@ -18,6 +18,12 @@
   border-radius: 10px !important;
 }
 
+.ytd-multi-page-menu-renderer {
+  background-color: rgba(20,20,20,0.7) !important;
+  filter: saturate(140%) !important;
+  backdrop-filter: blur(33px);
+}
+
 /*--search bar popup--*/
 html[dark] .sbsb_a {
   background: var(--yt-spec-raised-background);
