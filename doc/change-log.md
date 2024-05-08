@@ -17,7 +17,7 @@
 
 - ⛑️ (WIP) prefaces for userchrometoggle extension [(#31)](https://github.com/soulhotel/FF-ULTIMA/issues/31)
 
-- [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for users who want to opt out of the native vertical tabs (simply import into your sidebery settings):
+- [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for users who want to opt out of the native vertical tabs (simply import into your sidebery settings), turn off `ultima.tabs.vertical` in `about:config`, works with autohiding the sidebar:
 
 ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc)
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
