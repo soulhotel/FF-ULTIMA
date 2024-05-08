@@ -16,6 +16,7 @@
 | ultima.xstyle.squared            | Square the theme; No margins, borders, or rounded corners. | ![themesquared](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ba858526-3178-462c-9bf0-4be3e4bc9ab0) |
 | ultima.theme.extensions          | Extensions-Panel theme, compact-icons or default list-view. | ![themeextensions](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/b81bce27-5927-4a0d-9bd5-e970477458d9) |
 | toolkit.tabbox.switchByScrolling | Enables scrolling on the tabs bar, to switch between tabs | ... |
+| ultima.xstyle.closetabsbutton    | Restore visual close button for tabs, works with autohiding on or off, works with closing multiselected tabs | ![OyarZ6xz4D](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/1c190448-7502-435d-a27e-86f7a96364f3) |
 | ... | ... | ... |
 
 ---
@@ -62,6 +63,8 @@
 <br>
 
 ### Sidebery Optional styling
+
+###### Take the file and import it into your sidebery settings. Youll find the file in your chrome/theme folder and in the Theme's Repository in the same location.
 
 | Sidebery Data                            | Preview                      |
 |------------------------------------------|------------------------------|
