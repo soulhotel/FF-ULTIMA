@@ -8,13 +8,15 @@
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
 ### Change Log:
-- Licensing [(#39)](https://github.com/soulhotel/FF-ULTIMA/issues/39)
-- Returning Users, please use the [new installation method](https://github.com/soulhotel/FF-ULTIMA/blob/main/README.md#installation) (easy to follow)
-- (FF 126.0b6 patch - for developer editions, etc.) Some selectors for when the window are lwthemed are have been changed, fixed.
+
+- Added MPL 2.0 License, nothing changes for you the user, but those unaware should know that they are free to fork, modify, redistribute this theme (refer to the license) [(#39)](https://github.com/soulhotel/FF-ULTIMA/issues/39)
+  
+- :exclamation: Close button for tabs has been restored. Note: Update your user preferences `ultima.xstyle.closetabsbutton` to true. You can repaste the user.js for this, or you can add the preference yourself and set it to true in `about:config`. Refer to the Modification page [close tab button section](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md) for more info.
+
 - Pinned tabs now have a tiny border to distinguish (visual) from selected tabs. Please offer feedback on how they look, they can/may be changed again.
-- wip: [spreadsheet](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) for all variables in the documentation folder
-- ⛑️ close button (2), enable right-side positioning
-- ⛑️ prefaces for userchrometoggle [(#31)](https://github.com/soulhotel/FF-ULTIMA/issues/31)
+
+- ⛑️ (WIP) prefaces for userchrometoggle extension [(#31)](https://github.com/soulhotel/FF-ULTIMA/issues/31)
+
 - [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for users who want to opt out of the native vertical tabs (simply import into your sidebery settings):
 
 ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc)
