@@ -1,3 +1,13 @@
+/*--
+Index: For ctrl+f search of a section
+
+--no margins, borders, or rounded corners-- line 11
+--restore close tab buttons-- line 42
+--minor adjustments yet to be labeled-- line 60-
+--*/
+
+
+
 /*-------no margins, borders, or rounded corners---------*/
 
 @media (-moz-bool-pref: "ultima.xstyle.squared") {
@@ -29,8 +39,33 @@
 }}
 }
 
+/*--restore close tab buttons--*/
+
+/*--ive opted for this styling option, which shows the close button only on the specified hovering tab,
+this simple approach still allows - closing multiple selected tabs when they are all selected, and one close button is triggered
+while keeping a clean consistent look across the theme, refer to position-verttab.css for styling of the close button--*/
+
+@media (-moz-bool-pref: "ultima.xstyle.closetabsbutton") {
+  
+  #tabbrowser-tabs .tab-close-button,
+  #tabbrowser-tabs .close-icon {
+    display:flex !important;
+  }
+
+  @media (-moz-bool-pref: "ultima.tabs.autohide") {
+
+    :root:not([customizing]) #TabsToolbar-customization-target *:not(:hover) .tab-close-button,
+    :root:not([customizing]) #TabsToolbar-customization-target *:not(:hover) .close-icon {
+      opacity: 0 !important;
+    }
+  }
+}
+
+/*--minor adjustments yet to be labeled--*/
+
 /*-------fix for tab edge triggering collapse---------*/
 /*temp fix*/
+
 .tabbrowser-tab {
   margin-bottom: -2.2px !important;
 }
@@ -41,12 +76,14 @@
 - https://hg.mozilla.org/mozilla-central/file/291d187ba249c56d5c9dc88b5faaf04db2afe9c1/browser/base/content/tabbrowser-tabs.js
 - forcing positioning based on mozillas already established mouse positioning = uneffective, but probable.
 ---------*/
+
 .tabbrowser-tab[style*="transform"] {
     transform: translateX(0px) !important;
     transform: translateY(0px) !important;
 }
 
 /*-------placeholder---------*/
+
 /*
 @media (-moz-bool-pref: "ultima.new.pref") {
 }
