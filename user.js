@@ -10,6 +10,8 @@ user_pref("ultima.xstyle.squared", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
+user_pref("ultima.xstyle.closetabsbutton", true);
+
 user_pref("ultima.theme.extensions", true);
 
 user_pref("ultima.OS.kde", true);
