@@ -155,6 +155,7 @@ Index: For ctrl+f search of a section
     
     :root[tabsintitlebar] .titlebar-buttonbox {
         top: 9px !important;
+        right: unset !important;
         left: 2px !important;
     }
 }} /*--<--end mac media query--*/
