@@ -22,6 +22,25 @@
 ---
 <br>
 
+### Sidebery Optional styling
+
+###### Take the file and import it into your sidebery settings. Youll find the file in your chrome/theme folder and in the Theme's Repository in the same location.
+
+| Sidebery Data                            | Preview                      |
+|------------------------------------------|------------------------------|
+| `/theme/#sideberyultimastyling.json` | ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc) |
+
+---
+<br>
+
+### [Userchrome-Toggle extension](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle/) support
+With `ultima.tabs.autohide` set to false. And `ultima.tabs.xs` set to true; You can toggle the tabs-view using the extension button, or keyboard shortcut.
+
+[userchrome-toggle test..webm](https://github.com/soulhotel/FF-ULTIMA/assets/44523955/252b3bae-f1c8-41ad-afa7-1e67d7f441cb)
+
+---
+<br>
+
 ### Spreadsheets for power users.
 <-- [spreadsheets for all variables](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) (sectioned off by global color modifications, and global positioning modifications)
 
@@ -62,12 +81,5 @@
 ---
 <br>
 
-### Sidebery Optional styling
-
-###### Take the file and import it into your sidebery settings. Youll find the file in your chrome/theme folder and in the Theme's Repository in the same location.
-
-| Sidebery Data                            | Preview                      |
-|------------------------------------------|------------------------------|
-| `/theme/#sideberyultimastyling.json` | ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc) |
 
 
