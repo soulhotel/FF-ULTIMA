@@ -42,6 +42,20 @@
 
 }}
 
+/* Userchrome-toggler extension support - @Kaedriz - https://github.com/soulhotel/FF-ULTIMA/tree/userchrome-toggler */
+
+:root[titlepreface="᠎"] {
+    & #browser {
+        --uc-vertical-tabs-width: 250px !important;
+        --uc-vertical-tabs-width-revert: 250px !important;
+        margin-left: var(--uc-vertical-tabs-width) !important;
+    }
+
+    & #tabbrowser-tabs {
+        --uc-vertical-tabs-width: 250px !important;
+        --uc-vertical-tabs-width-revert: 250px !important;
+    }
+}
 
 /*--minibuttonbar buttons expand tabs accordingly--*/
 
