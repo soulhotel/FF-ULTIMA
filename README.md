@@ -66,7 +66,7 @@ https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-
 > 2. Open a terminal in the `chrome` folder.
 > 3. In the terminal, navigate to your profile folder path `cd your\profile\folder\path`.
 > 4. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
-> 5. After cloning is completed, open the chrome folder.
+> 5. If this is your first install youll need to update user preferences. Open the Chrome Folder.
 > 6. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
 > 7. Restart Firefox. THEN, once Firefox is open you can delete the `user.js` file.
 > ###### The user.js will apply all necessary preferences to your profile, including enabling userChrome.stylesheets.
