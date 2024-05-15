@@ -62,6 +62,10 @@ color-scheme: dark !important; /*--<--dont touch--*/
     - Full Moon Color Palette Application
 -------------------------------------------------------------------------------------*/
 
+#main-window:not([lwtheme="true"]) {background-color: var(--uc-ultima-window) !important;}
+
+#main-window:not([lwtheme="true"]) {--toolbar-bgcolor: var(--uc-ultima-window) !important;}
+  
 #main-window:not([lwtheme]), :root:not([lwtheme]) {
 
   --tab-selected-bgcolor: var(--uc-active) !important;
