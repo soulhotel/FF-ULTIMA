@@ -8,6 +8,8 @@
 
 ### Change Log:
 
+- Tweaks for 126.0 update (default-release), and 127.0b1
+
 - Userchrome-toggler extension support, for expanding/collapsing the tabs via shortcuts. Click [here](https://github.com/soulhotel/FF-ULTIMA/edit/main.update.branch/doc/Modification.md#userchrome-toggle-extension-support) for more info. ([#31](https://github.com/soulhotel/FF-ULTIMA/issues/31))
 
 - [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs (simply import into your sidebery settings), turn off `ultima.tabs.vertical` in `about:config`, works with autohiding the sidebar
