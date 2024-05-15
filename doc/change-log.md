@@ -11,5 +11,7 @@
 - Tweaks for 126.0 update (default-release), and 127.0b1
   - Revisit Titlebar buttons.
   - Revisit tabs.autohide preference interfering with sidebar spacing.
+ 
+
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
