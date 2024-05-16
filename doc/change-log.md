@@ -8,12 +8,7 @@
 
 ### Change Log:
 
-- Quick patch+ for 126.0 update (default-release), and 127.0b1. ([#48](https://github.com/soulhotel/FF-ULTIMA/issues/48)).
-  - Selector `-moz-` has been further updated throughout the theme.
-  - Linux Titlebar buttons (- o x) have been corrected for recent Firefox update. Inactive state, fixed. Positioning, fixed.
-  - I'm not completely satisfied with the results, however there is now an additional styling option( `ultima.OS.linux` in `about:config`). Improvements will come.
-
-- Userchrome-toggler extension support, for expanding/collapsing the tabs via shortcuts. Click [here](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/Modification.md#userchrome-toggle-extension-support) for more info.
+- ..
 
 - [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs (simply import into your sidebery settings), turn off `ultima.tabs.vertical` in `about:config`, works with autohiding the sidebar
 
