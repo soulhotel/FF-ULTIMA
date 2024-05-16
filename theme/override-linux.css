@@ -8,52 +8,44 @@ Index: For ctrl+f search of a section
 --mac-- (mac speficic overrides)
 --*/
 
-/*--Default Linux Override--*/
+/*--Default Linux Overrides - Inactivity titlebar, Nav bar spacing, More--*/
 
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-/*--Default dark/light mode color should match cross platform--*/
+    /*--Default dark/light mode color should match cross platform--*/
+    #main-window:not([lwtheme]),:root:not([lwtheme]) {
+        --toolbar-bgcolor: var(--uc-ultima-window) !important;
+    }
 
-#main-window:not([lwtheme="true"]),:root:not(:-moz-lwtheme) {
-    --toolbar-bgcolor: var(--uc-ultima-window) !important;
-}
+    /*--update nav bar spacing--*/
+    #nav-bar {margin-right: 86px !important;}
+    
+    /*--override inactive window style--*/
+    :root:where([tabsintitlebar]) {
+        --toolbox-non-lwt-textcolor: var(--uc-light-dark);
+        --toolbox-non-lwt-textcolor-inactive: var(--uc-light-dark);
+    } :root {
+        --inactive-titlebar-opacity: 1 !important;
+    }
 
-/*--override inactive window style--*/
+    /*--remove secondary background, and correct stroke--*/
+    #main-window:not([lwtheme="true"]) .titlebar-button {
+        stroke: var(--uc-ultima-accent-iii) !important;
+    } #main-window[lwtheme="true"] .titlebar-button {
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
 
-:root {
-    --inactive-titlebar-opacity: 1 !important;
-}
-
-/*--update nav bar spacing--*/
-
-#nav-bar {margin-right: 96px !important;}
-
-/*--titlebar buttons style ( - □ x )--*/
-/*--default to system buttons--*/
-
-#main-window:not([lwtheme="true"]) .titlebar-button {
-    stroke: var(--uc-ultima-accent-iii) !important;
-}
-
-#main-window[lwtheme="true"] .titlebar-button {
-    stroke: var(--toolbarbutton-icon-fill) !important;
-}
-
-.sidebar-splitter {
-    border: 0 solid !important;
-    border-inline-end-width: 1px !important;
-    border-color: transparent !important;
-    min-width: 1px !important;
-    width: 4px !important;
-    background-color: transparent !important;
-    margin-inline-start: -4px !important;
-}
-
-:root:where([tabsintitlebar]) {
-    --toolbox-non-lwt-textcolor: var(--uc-light-dark);
-    --toolbox-non-lwt-textcolor-inactive: var(--uc-light-dark);
-}
-
+    /*--sidebar border correction--*/
+    .sidebar-splitter {
+        border: 0 solid !important;
+        border-inline-end-width: 1px !important;
+        border-color: transparent !important;
+        min-width: 1px !important;
+        width: 4px !important;
+        background-color: transparent !important;
+        margin-inline-start: -4px !important;
+    }
+    
 } /*--<--end linux media query--*/
 
 /*------------------------------------------------------------------------*/
@@ -62,70 +54,67 @@ Index: For ctrl+f search of a section
 @media (-moz-bool-pref: "ultima.OS.kde"), (-moz-bool-pref: "ultima.OS.gnome") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-:root[tabsintitlebar] .titlebar-buttonbox {
-    top: 5px !important;
-    right: -1px !important;
-}
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 7px !important;
+        right: 5px !important;
+    }
+    
+    .titlebar-button, .titlebar-button[lwtheme="true"] {
+        appearance: none !important;
+        margin: 0 !important;
+        margin-top: 0px !important;
+        padding: 4px 4px !important;
+        justify-content: center !important;
+        color: inherit !important;
+        -moz-context-properties: fill, fill-opacity !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+        border-radius: var(--uc-button-border-radius);
+    }
+    
+    .titlebar-button .toolbarbutton-icon,
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon,
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme="true"] {
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
+        opacity: 1 !important;
+        padding: 3px !important;
+    }
 
-.titlebar-button, .titlebar-button:-moz-lwtheme {
-  appearance: none !important;
-  margin: 0 !important;
-  margin-top: 0px !important;
-  padding: 4px 4px !important;
-  justify-content: center !important;
-  color: inherit !important;
-  -moz-context-properties: fill, fill-opacity !important;
-  fill: var(--toolbarbutton-icon-fill) !important;
-  stroke: var(--toolbarbutton-icon-fill) !important;
-  border-radius: var(--uc-button-border-radius);
-}
+    /*--icons override, default icons dont override when there is window inactivity--*/
+    .titlebar-button.titlebar-close .toolbarbutton-icon{
+        list-style-image: url("icons/lin-close.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-min .toolbarbutton-icon{
+        list-style-image: url("icons/lin-min.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-max .toolbarbutton-icon{
+        list-style-image: url("icons/lin-max.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-restore .toolbarbutton-icon{
+        list-style-image: url("icons/lin-restore.svg") !important;
+        margin-top: -1px !important;
+    }
 
-.titlebar-button .toolbarbutton-icon,
-.titlebar-button:-moz-lwtheme .toolbarbutton-icon,
-.titlebar-button:-moz-lwtheme .toolbarbutton-icon:-moz-lwtheme {
-
-  border-radius: var(--toolbarbutton-border-radius) !important;
-  list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
-  opacity: 1 !important;
-  padding: 3px !important;
-}
-
-
-/*--icons override, default icons dont override when there is window inactivity--*/
-
-.titlebar-button.titlebar-close .toolbarbutton-icon{
-  list-style-image: url("icons/lin-close.svg") !important;
-  margin-top: -1px !important;
-}
-.titlebar-button.titlebar-min .toolbarbutton-icon{
-  list-style-image: url("icons/lin-min.svg") !important;
-  margin-top: -1px !important;
-}
-.titlebar-button.titlebar-max .toolbarbutton-icon{
-  list-style-image: url("icons/lin-max.svg") !important;
-  margin-top: -1px !important;
-}
-.titlebar-button.titlebar-restore .toolbarbutton-icon{
-  list-style-image: url("icons/lin-restore.svg") !important;
-  margin-top: -1px !important;
-}
-
-/*--override background changes when hovered--*/
-
-.titlebar-button:-moz-lwtheme:hover {
-  background-color: var(--uc-selected) !important;;
-  border-radius: var(--uc-button-border-radius);
-}
-
-/*--override padding--*/
-
-.titlebar-button > .toolbarbutton-icon:-moz-lwtheme {
-  padding: 4px 4px !important;
-  -moz-context-properties: revert !important;
-  stroke: currentColor;
-  border-radius: var(--uc-button-border-radius);
-}
-
+    /*--override background changes when hovered--*/
+    #main-window .titlebar-button:hover,    
+    #main-window:not([lwtheme]) .titlebar-button:hover {
+        background-color: transparent !important;
+        border-radius: var(--uc-button-border-radius);
+    } .titlebar-close:hover {
+        background-color: rgb(191, 66, 66) !important;
+    }
+    
+    /*--override padding--*/
+    .titlebar-button > .toolbarbutton-icon[lwtheme="true"] {
+        padding: 4px 4px !important;
+        -moz-context-properties: revert !important;
+        stroke: currentColor;
+        border-radius: var(--uc-button-border-radius);
+    }
 } /*--<--end linux media query--*/
 } /*--<--end OS preference query--*/
 
@@ -135,8 +124,7 @@ Index: For ctrl+f search of a section
 @media (-moz-bool-pref: "ultima.OS.gnome") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-/*--size and positioning of the nav bar for less titlebar buttons--*/
-
+    /*--size and positioning of the nav bar for less titlebar buttons--*/
     #nav-bar {margin-right: 64px !important;}
 
 } /*--<--end linuxmedia query--*/
@@ -161,15 +149,75 @@ Index: For ctrl+f search of a section
 }} /*--<--end mac media query--*/
 } /*--<--end OS preference query--*/
 
+/*------------------------------------------------------------------------*/
+/*--TEST--*/
 
+@media (-moz-bool-pref: "ultima.OS.linuxtest") {
+@media (-moz-platform: linux), (-moz-os-version: linux) {
 
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 7px !important;
+        right: 5px !important;
+    }
+    
+    .titlebar-button, .titlebar-button[lwtheme="true"] {
+        appearance: none !important;
+        margin: 0 !important;
+        margin-top: 0px !important;
+        padding: 4px 4px !important;
+        justify-content: center !important;
+        color: inherit !important;
+        -moz-context-properties: fill, fill-opacity !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+        border-radius: var(--uc-button-border-radius);
+    }
+    
+    .titlebar-button .toolbarbutton-icon,
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon,
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme="true"] {
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
+        opacity: 1 !important;
+        padding: 3px !important;
+    }
 
+    /*--icons override, default icons dont override when there is window inactivity--*/
+    .titlebar-button.titlebar-close .toolbarbutton-icon{
+        list-style-image: url("icons/lin-close.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-min .toolbarbutton-icon{
+        list-style-image: url("icons/lin-min.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-max .toolbarbutton-icon{
+        list-style-image: url("icons/lin-max.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-restore .toolbarbutton-icon{
+        list-style-image: url("icons/lin-restore.svg") !important;
+        margin-top: -1px !important;
+    }
 
-
-
-
-
-
+    /*--override background changes when hovered--*/
+    #main-window .titlebar-button:hover,    
+    #main-window:not([lwtheme]) .titlebar-button:hover {
+        background-color: var(--uc-selected) !important;
+        border-radius: var(--uc-button-border-radius);
+    } .titlebar-close:hover {
+        background-color: rgb(191, 66, 66) !important;
+    }
+    
+    /*--override padding--*/
+    .titlebar-button > .toolbarbutton-icon[lwtheme="true"] {
+        padding: 4px 4px !important;
+        -moz-context-properties: revert !important;
+        stroke: currentColor;
+        border-radius: var(--uc-button-border-radius);
+    }
+} /*--<--end linux media query--*/
+} /*--<--end OS preference query--*/
 
 
 
