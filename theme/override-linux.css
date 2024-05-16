@@ -34,7 +34,12 @@ Index: For ctrl+f search of a section
     } #main-window[lwtheme="true"] .titlebar-button {
         stroke: var(--toolbarbutton-icon-fill) !important;
     }
-
+    #main-window:not([lwtheme="true"]) .titlebar-button:hover {
+        fill: black !important;
+    } #main-window[lwtheme="true"] .titlebar-button:hover {
+        fill: black !important;
+    }
+    
     /*--sidebar border correction--*/
     .sidebar-splitter {
         border: 0 solid !important;
@@ -125,7 +130,7 @@ Index: For ctrl+f search of a section
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 64px !important;}
+    #nav-bar {margin-right: 60px !important;}
 
 } /*--<--end linuxmedia query--*/
 } /*--<--end OS preference query--*/
@@ -218,9 +223,3 @@ Index: For ctrl+f search of a section
     }
 } /*--<--end linux media query--*/
 } /*--<--end OS preference query--*/
-
-
-
-
-
-

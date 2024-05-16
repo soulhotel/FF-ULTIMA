@@ -29,9 +29,31 @@
 - ✅ Win11/Lin/Mac
 
 <details>
-<summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different</summary>
+<summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different.</summary>
   
 ![install1](doc/preview/install1.jpg) ![install2](doc/preview/install2.jpg)
+</details>
+
+<details>
+<summary>(Click me) Need help finding your Profile Folder?</summary>
+
+<br>
+
+> userChrome Themes work by Having the Browser read stylized `.css text files` in a certain directory within your Profile Folder. There are two easy ways to locate this folder:
+
+1. Go to the `about:support` page
+- In the URL Bar, type `about:support`.
+- Look at the **Profile Folder** row. Open the folder.
+- In that folder, create a new folder named `chrome` (If it doesnt already exist).
+
+![aboutsupport](doc/preview/about_support.png)
+
+2. Go to the `about:profiles` page
+- In the URL Bar, type `about:profiles`.
+- Your profile will say `This is the profile in use and...`. Click the **Open Directory** button in the **Root Directory** row.
+- In that folder, create a new folder named `chrome` (if it doesnt already exist).
+ 
+![alt text](doc/preview/profilelocation.png)
 </details>
 
 ## Installation
@@ -41,47 +63,25 @@
 > [!IMPORTANT]
 > ### The Easy Way:
 > 1. Download the latest version by [clicking here](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip). Or on the [release page.](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
-> 2. Find your firefox profile folder by typing `about:support` in the URL BAR.
-> 3. On the `about:support` page, youll see your profile folder in the blue table. Open it.
->
-> ![aboutsupport](doc/preview/about_support.png)
->
-> 4. In that folder create a new folder named `chrome` (if you don't have the folder already).
-> 5. In the zip `ffultimax.x.x.zip`, copy the files from `ffultimax.x.x` folder into the chrome folder.
-> 6. In the chrome folder, there's a file named `user.js`, move it to your Profile Folder.
-> 7. For `user.js` to apply, restart Firefox. THEN, once FF is open, delete the `user.js` file.
-> 8. `user.js` will let you change settings like tab size and autohiding from the about:config page.
+> 2. In the theme zip file, copy the files from `ffultimax.x.x` folder into the chrome folder.
+> 3. In the chrome folder youll see a file named `user.js`, move it out of the chrome folder and into the Profile Folder.
+> 4. Restart Firefox. After Firefox is open again, delete the `user.js` file.
+> 5. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
+> 6. Try it out, go to `about:config` then search for `ultima`.
 
-<details>
-<summary>(Click me) Video - if you still need help.</summary>
-  
-https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e
-</details>
+<!-- https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e -->
 
 > [!warning]
 > ### The Hard Way:
 > ###### 🔄 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
->
-> 1. Locate your Firefox Profile Folder.
-> 2. Open a terminal in the `chrome` folder.
-> 3. In the terminal, navigate to your profile folder path `cd your\profile\folder\path`.
-> 4. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
-> 5. If this is your first install youll need to update user preferences. Open the Chrome Folder.
-> 6. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
-> 7. Restart Firefox. THEN, once Firefox is open you can delete the `user.js` file.
-> ###### The user.js will apply all necessary preferences to your profile, including enabling userChrome.stylesheets.
->
->   <details> 
->     <summary> Need help finding the Profile Folder?</summary>
->     
-> - Go to `about:profiles`
-> - Your profile will say `This is the profile in use and...` Click the **Open Directory** button in the **Root Directory** row.
-> - This will open your currently in-use Firefox Profile folder.
-> 
-> ![alt text](doc/preview/profilelocation.png)
-> 
-> - In that folder create a new folder named `chrome` (if you don't have the folder already).
->   </details>
+> 1. Open a terminal in your Profiles `chrome` folder.
+> 2. In the terminal, navigate to your profile folder path `cd your\profile\folder\path`.
+> 3. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
+> 4. In your chrome folder youll have a file named `user.js`.
+> 5. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
+> 6. Restart Firefox. After Firefox is open again, delete the `user.js` file.
+> 7. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
+> 8. Try it out, go to `about:config` then search for `ultima`.
 
 ### Previews
 
