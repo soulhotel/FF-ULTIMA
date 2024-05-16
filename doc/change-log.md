@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.5/ffultima1.7.5.zip) 1.7.5 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.5/ffultima1.7.6.zip) 1.7.6 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -9,9 +9,9 @@
 ### Change Log:
 
 - Tweaks for 126.0 update (default-release), and 127.0b1
-  - Revisit Titlebar buttons.
-  - Revisit tabs.autohide preference interfering with sidebar spacing.
+  - Selector `-moz-` has been further updated throughout the theme.
+  - Linux Titlebar buttons (- o x) have been corrected for recent Firefox update. Inactive state, fixed. Positioning, fixed.
+  - I'm not completely satisfied with the results, however there is now an additional styling: `ultima.OS.linux`. Improvements will come.
  
-
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
