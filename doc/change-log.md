@@ -10,10 +10,7 @@
 
 - ..
 
-- [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs (simply import into your sidebery settings), turn off `ultima.tabs.vertical` in `about:config`, works with autohiding the sidebar
-
-
-![2024-05-16_14-00](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/59129e23-d6ca-449f-92c1-8ba1f4c4ed60)
+- [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs (simply import into your sidebery settings), turn off `ultima.tabs.vertical` in `about:config`, works with autohiding the sidebar.
 
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
