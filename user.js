@@ -17,6 +17,7 @@ user_pref("ultima.theme.extensions", true);
 user_pref("ultima.OS.kde", true);
 user_pref("ultima.OS.gnome", false);
 user_pref("ultima.OS.mac", false);
+user_pref("ultima.OS.linux", false);
 
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
