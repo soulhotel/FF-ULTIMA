@@ -10,7 +10,10 @@
 
 </div>
 
-![Main Preview](doc/preview/prev1.gif)
+![preview2](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/e5e38b36-05fb-405d-8601-d4e924f66e81)
+> new preview
+<!-- ![preview1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5fc4b558-f78a-45c5-9ef0-ca016a0e85de) -->
+<!-- ![Main Preview](doc/preview/prev1.gif) -->
 
 ## Features
 
