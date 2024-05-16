@@ -150,8 +150,74 @@ Index: For ctrl+f search of a section
 } /*--<--end OS preference query--*/
 
 /*------------------------------------------------------------------------*/
-/*--test--*/
+/*--TEST--*/
 
+@media (-moz-bool-pref: "ultima.OS.linuxtest") {
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 7px !important;
+        right: 5px !important;
+    }
+    
+    .titlebar-button, .titlebar-button[lwtheme="true"] {
+        appearance: none !important;
+        margin: 0 !important;
+        margin-top: 0px !important;
+        padding: 4px 4px !important;
+        justify-content: center !important;
+        color: inherit !important;
+        -moz-context-properties: fill, fill-opacity !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+        border-radius: var(--uc-button-border-radius);
+    }
+    
+    .titlebar-button .toolbarbutton-icon,
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon,
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme="true"] {
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
+        opacity: 1 !important;
+        padding: 3px !important;
+    }
+
+    /*--icons override, default icons dont override when there is window inactivity--*/
+    .titlebar-button.titlebar-close .toolbarbutton-icon{
+        list-style-image: url("icons/lin-close.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-min .toolbarbutton-icon{
+        list-style-image: url("icons/lin-min.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-max .toolbarbutton-icon{
+        list-style-image: url("icons/lin-max.svg") !important;
+        margin-top: -1px !important;
+    }
+    .titlebar-button.titlebar-restore .toolbarbutton-icon{
+        list-style-image: url("icons/lin-restore.svg") !important;
+        margin-top: -1px !important;
+    }
+
+    /*--override background changes when hovered--*/
+    #main-window .titlebar-button:hover,    
+    #main-window:not([lwtheme]) .titlebar-button:hover {
+        background-color: var(--uc-selected) !important;
+        border-radius: var(--uc-button-border-radius);
+    } .titlebar-close:hover {
+        background-color: rgb(191, 66, 66) !important;
+    }
+    
+    /*--override padding--*/
+    .titlebar-button > .toolbarbutton-icon[lwtheme="true"] {
+        padding: 4px 4px !important;
+        -moz-context-properties: revert !important;
+        stroke: currentColor;
+        border-radius: var(--uc-button-border-radius);
+    }
+} /*--<--end linux media query--*/
+} /*--<--end OS preference query--*/
 
 
 
