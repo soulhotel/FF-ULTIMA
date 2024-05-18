@@ -94,7 +94,7 @@
 
 |            Dusky (Light)            |          Full Moon (Dark)           |
 | :---------------------------------: | :---------------------------------: |
-| ![install1](doc/preview/prev2.png) | ![install1](doc/preview/prev3.png) |
+| ![install1](doc/preview/prevw.png) | ![install1](doc/preview/prev3.png) |
 |            Sidebery Example         |            Add On theme             |
 | ![install1](doc/preview/prevs.png) | ![install1](doc/preview/prev5.gif) |
 |            Add On theme             |            Add On theme             |
