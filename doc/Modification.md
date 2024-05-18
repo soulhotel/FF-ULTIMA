@@ -22,6 +22,15 @@
 ---
 <br>
 
+### Switching from Dark Mode to Light Mode
+
+###### This is fully reliant on your systems current Color state. `Personalize - Color Mode` for Windows. `Setting a dark theme like 'Dark Breeze' globally and to windows` for Linux. And Mac follows a similar structure I believe.
+
+![Main Preview](preview/prev1.gif)
+
+---
+<br>
+
 ### Sidebery Optional styling
 
 ###### Take the file and import it into your sidebery settings. Youll find the file in your chrome/theme folder and in the Theme's Repository in the same location.
