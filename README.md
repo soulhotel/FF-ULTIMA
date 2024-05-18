@@ -94,11 +94,11 @@
 
 |            Dusky (Light)            |          Full Moon (Dark)           |
 | :---------------------------------: | :---------------------------------: |
-| ![install1](doc/preview/prev2.png) | ![install1](doc/preview/prev3.gif) |
+| ![install1](doc/preview/prev2.png) | ![install1](doc/preview/prev3.png) |
+|            Sidebery Example         |            Add On theme             |
+| ![install1](doc/preview/prevs.png) | ![install1](doc/preview/prev5.gif) |
 |            Add On theme             |            Add On theme             |
-| ![install1](doc/preview/prev4.gif) | ![install1](doc/preview/prev5.gif) |
-|            Add On theme             | Example of view in 2 tab extension  |
-| ![install1](doc/preview/prev6.png) | ![install1](doc/preview/prev7.gif) |
+| ![install1](doc/preview/prev6.png) | ![install1](doc/preview/prev4.gif) |
 |                                     |                                     |
 
 #### Enjoy
