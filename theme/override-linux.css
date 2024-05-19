@@ -1,12 +1,13 @@
-/*--Override styles and corrections made for Linux--*/
+/*-----------------------------------------------------------------
+- this file automatically overides necessary components of the theme
+    - strictly for when the users OS is linux and mac (despite the name)
 
-/*--
 Index: For ctrl+f search of a section
 
 --KDE-- (kde speficic overrides)
 --GNOME-- (gnome speficic overrides)
 --mac-- (mac speficic overrides)
---*/
+-----------------------------------------------------------------*/
 
 /*--Default Linux Overrides - Inactivity titlebar, Nav bar spacing, More--*/
 
