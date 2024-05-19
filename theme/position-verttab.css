@@ -1,8 +1,15 @@
-/*---------------------------------vertical tabs-------------------------------------*/
+/* ----------------------------------------------------------
+- this file is the foundation - positioning the native vertical tabs
+- this file works in conjunction with all-global-positioning.css
+- https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
+- refer to comments below
+-----------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.tabs.vertical") {
 
 /*--first, the body margin should match the tabs width--*/
+/*--its important to note: certain notification panels are dependant on overall positioning--*/
+/*--its excessive to further alter their positioning, so modify them lightly (accordingly)--*/
 
 #tab-notification-deck,
 .global-notificationbox,
@@ -205,7 +212,7 @@ scrollbox[orient="horizontal"] {
   height: 16px !important;
 }
 
-/*--close buttons disabled, but still positioned--*/
+/*--close buttons disabled, but still positioned (depreciated comment .......)--*/
 
 #tabbrowser-tabs .tab-close-button {
   margin-inline-end: -3px !important;
@@ -322,9 +329,6 @@ scrollbox[orient="horizontal"] {
 #tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
   margin-inline-start: 0px !important;
 }
-
-/*THIS IS THE EXTRA NEW TAB BUTTON THAT TRIGGERS THE ELEMENT SITTING UNDER TABS*/
-/* DO NOT TOUCH THIS. FIREFOX REALLY F'D THIS ONE UP. */
 
 #tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow])~#new-tab-button,
 #tabbrowser-tabs[overflow]>#tabbrowser-arrowscrollbox>#tabbrowser-arrowscrollbox-periphery>#tabs-newtab-button,
