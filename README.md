@@ -88,7 +88,7 @@
 > 7. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
 > 8. Try it out, go to `about:config` then search for `ultima`.
 
-### Previews
+## Previews
 
 ###### Click images for a higher resolution
 
