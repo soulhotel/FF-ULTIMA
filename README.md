@@ -78,9 +78,9 @@
 
 <!-- https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e -->
 
-> [!warning]
+> [!NOTE]
+> ###### This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
 > ### The Hard Way:
-> ###### 🔄 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
 > 1. Open a terminal in your Profiles `chrome` folder.
 > 2. In the terminal, navigate to your profile folder path `cd your\profile\folder\path`.
 > 3. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
