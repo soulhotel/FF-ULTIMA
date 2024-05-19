@@ -24,11 +24,20 @@
 
 ### Sidebery Optional styling
 
-###### Take the file and import it into your sidebery settings. Youll find the file in your chrome/theme folder and in the Theme's Repository in the same location.
+###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
 
 | Sidebery Data                            | Preview                      |
 |------------------------------------------|------------------------------|
 | `/theme/#sideberyultimastyling.json` | ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc) |
+
+---
+<br>
+
+### Switching from Dark Mode to Light Mode
+
+###### This is fully reliant on your systems current Color state. `Personalize - Color Mode` for Windows. `Setting a dark theme like 'Dark Breeze' globally and to windows` for Linux. And Mac follows a similar structure I believe.
+
+![Main Preview](preview/prev1.gif)
 
 ---
 <br>

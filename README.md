@@ -10,7 +10,14 @@
 
 </div>
 
-![Main Preview](doc/preview/prev1.gif)
+![ffu](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0d2d418a-0123-43e3-960b-952f39956b08)
+
+<!-- 
+> pv +-
+ ![preview2](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/e5e38b36-05fb-405d-8601-d4e924f66e81) 
+ ![preview1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5fc4b558-f78a-45c5-9ef0-ca016a0e85de) 
+ ![Main Preview](doc/preview/prev1.gif)
+ -->
 
 ## Features
 
@@ -83,17 +90,17 @@
 > 7. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
 > 8. Try it out, go to `about:config` then search for `ultima`.
 
-### Previews
+## Previews
 
 ###### Click images for a higher resolution
 
 |            Dusky (Light)            |          Full Moon (Dark)           |
 | :---------------------------------: | :---------------------------------: |
-| ![install1](doc/preview/prev2.png) | ![install1](doc/preview/prev3.gif) |
+| ![install1](doc/preview/prevw.png) | ![install1](doc/preview/prev3.png) |
+|            Sidebery Example         |            Add On theme             |
+| ![install1](doc/preview/prevs.png) | ![install1](doc/preview/prev5.gif) |
 |            Add On theme             |            Add On theme             |
-| ![install1](doc/preview/prev4.gif) | ![install1](doc/preview/prev5.gif) |
-|            Add On theme             | Example of view in 2 tab extension  |
-| ![install1](doc/preview/prev6.png) | ![install1](doc/preview/prev7.gif) |
+| ![install1](doc/preview/prev6.png) | ![install1](doc/preview/prev4.gif) |
 |                                     |                                     |
 
 #### Enjoy
