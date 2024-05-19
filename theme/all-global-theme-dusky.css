@@ -459,7 +459,7 @@ stroke: var(--toolbarbutton-icon-fill) !important;
 /*--the label that says ("website.com is now in full screen...")--*/
 
 #fullscreen-warning, *.pointerlockfswarning {
-  opacity: 0.4 !important;
+  opacity: 0 !important;
   border-radius: 20px !important;
 }
 

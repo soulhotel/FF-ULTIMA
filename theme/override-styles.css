@@ -56,6 +56,7 @@ while keeping a clean consistent look across the theme, refer to position-vertta
 
     :root:not([customizing]) #TabsToolbar-customization-target *:not(:hover) .tab-close-button,
     :root:not([customizing]) #TabsToolbar-customization-target *:not(:hover) .close-icon {
+      display: none !important;
       opacity: 0 !important;
     }
   }
