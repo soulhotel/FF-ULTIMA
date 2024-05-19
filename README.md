@@ -81,14 +81,14 @@
 > [!NOTE]
 > ###### This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
 > ### The Hard Way:
-> 1a. Open a terminal in your Profiles `chrome` folder.
-> 1b. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile\folder\path\chrome`.
-> 2. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
-> 3. In your chrome folder you'll have a file named `user.js`.
-> 4. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
-> 5. Restart Firefox. After Firefox is open again, delete the `user.js` file.
-> 6. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
-> 7. Try it out, go to `about:config` then search for `ultima`.
+> 1. Open a terminal in your Profiles `chrome` folder.
+> 2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile\folder\path\chrome`.
+> 3. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
+> 4. In your chrome folder you'll have a file named `user.js`.
+> 5. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
+> 6. Restart Firefox. After Firefox is open again, delete the `user.js` file.
+> 7. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
+> 8. Try it out, go to `about:config` then search for `ultima`.
 
 ## Previews
 
