@@ -1,5 +1,8 @@
-
-/*--collapse tabs on full screen support--*/
+/*---------------------------------------------------------
+- collapse the tabs panel - on full screen
+- corrections to height depending on default browsers navigation bar animation
+- including collapsing on browser width, when width falls below 850px
+---------------------------------------------------------*/
 
 
 #main-window[sizemode="fullscreen"]{

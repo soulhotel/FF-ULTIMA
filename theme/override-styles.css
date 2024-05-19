@@ -1,10 +1,13 @@
-/*--
+/*----------------------------------------------------------
+- this file handles multiple optional settings via about:config
+- overriding aspects of the theme to accomplish different styles
+
 Index: For ctrl+f search of a section
 
 --no margins, borders, or rounded corners-- line 11
 --restore close tab buttons-- line 42
 --minor adjustments yet to be labeled-- line 60-
---*/
+----------------------------------------------------------*/
 
 
 

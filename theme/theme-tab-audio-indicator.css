@@ -1,3 +1,6 @@
+/* -------------------------------------------------------------
+- permanent-positioning for the indicator of tabs projecting audio
+ ------------------------------------------------------------- */
 
 :root {
     --tab-icon-overlay-stroke: var(--uc-active) !important;

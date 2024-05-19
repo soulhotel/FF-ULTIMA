@@ -1,5 +1,7 @@
-/*---linux support added as of version 1.6.5--*/
-/*-----do not touch this file or i will eat your soul-----*/
+/* -------------------------------------------------------------
+- return the window-controls/titlebar-buttons
+- linux support added as of version 1.6.5
+ ------------------------------------------------------------- */
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 

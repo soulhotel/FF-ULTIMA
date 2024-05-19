@@ -73,18 +73,18 @@
 > 2. In the theme zip file, copy the files from `ffultimax.x.x` folder into the chrome folder.
 > 3. In the chrome folder youll see a file named `user.js`, move it out of the chrome folder and into the Profile Folder.
 > 4. Restart Firefox. After Firefox is open again, delete the `user.js` file.
-> 5. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
+> 5. The `user.js` enabled userChrome, and adds settings like tab size, autohide, etc, in `about:config`.
 > 6. Try it out, go to `about:config` then search for `ultima`.
 
 <!-- https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e -->
 
-> [!warning]
+> [!NOTE]
+> ###### This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
 > ### The Hard Way:
-> ###### 🔄 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
 > 1. Open a terminal in your Profiles `chrome` folder.
-> 2. In the terminal, navigate to your profile folder path `cd your\profile\folder\path`.
+> 2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile\folder\path\chrome`.
 > 3. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
-> 4. In your chrome folder youll have a file named `user.js`.
+> 4. In your chrome folder you'll have a file named `user.js`.
 > 5. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
 > 6. Restart Firefox. After Firefox is open again, delete the `user.js` file.
 > 7. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.

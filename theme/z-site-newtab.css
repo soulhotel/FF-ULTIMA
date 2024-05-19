@@ -1,8 +1,11 @@
+/* -------------------------------------------------------------
+- for userContent
+- https://github.com/hachikoharuno/Beautiful-newtab-Firefox
+ ------------------------------------------------------------- */
+
 @import url('z-site-newtab-l.css');
 
-
 /*----------------------NEW TAB HOME-----------------------*/
-
 
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 

@@ -1,9 +1,11 @@
-/*--
-In this file:
-I will basically revert the implementation of verticle tabs by,
-keeping the titlebar displayed, and collapsing the tabs width to 0
-then I will implement autohiding for the native Sidebar
-*/
+/* ----------------------------------------------------------
+- this file is enabled by the tabs.vertical setting in about:config
+- this file works in conjunction with all-global-positioning.css
+- https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
+- reverting position-verttab.css
+- keeping the titlebar displayed (not visible), and collapsing the tabs width to 0
+- included handling of the sidebar.autohide setting
+-----------------------------------------------------------*/
 
 @media not all and (-moz-bool-pref: "ultima.tabs.vertical") {
 
