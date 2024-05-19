@@ -1,7 +1,7 @@
-/*--
+/*----------------------------------------------------------------
 - this file handles the autohiding feature of the tabs panel
 - includes support for userchrome-toggler extension (triggering the action via shortcut)
---*/
+----------------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
 
