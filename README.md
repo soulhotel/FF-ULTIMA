@@ -73,7 +73,7 @@
 > 2. In the theme zip file, copy the files from `ffultimax.x.x` folder into the chrome folder.
 > 3. In the chrome folder youll see a file named `user.js`, move it out of the chrome folder and into the Profile Folder.
 > 4. Restart Firefox. After Firefox is open again, delete the `user.js` file.
-> 5. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
+> 5. The `user.js` enabled userChrome, and adds settings like tab size, autohide, etc, in `about:config`.
 > 6. Try it out, go to `about:config` then search for `ultima`.
 
 <!-- https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e -->
