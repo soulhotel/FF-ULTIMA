@@ -57,7 +57,7 @@ Index: For ctrl+f search of a section
 /*------------------------------------------------------------------------*/
 /*--KDE--*/
 
-@media (-moz-bool-pref: "ultima.OS.kde"), (-moz-bool-pref: "ultima.OS.gnome") {
+@media (-moz-bool-pref: "ultima.OS.kde") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     :root[tabsintitlebar] .titlebar-buttonbox {
@@ -131,8 +131,12 @@ Index: For ctrl+f search of a section
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 60px !important;}
-
+    #nav-bar {margin-right: 100px !important;}
+    
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 8px !important;
+        right: 5px !important;
+    }
 } /*--<--end linuxmedia query--*/
 } /*--<--end OS preference query--*/
 

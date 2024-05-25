@@ -1,7 +1,7 @@
-/*---
+/*----------------------------------------------------------------
 - this file does so many things. So much so, that removing it will break the theme. so beware...
 - https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/replace-features.md#-function-urlbarcss
-*/
+----------------------------------------------------------------*/
 
 #urlbar .search-one-offs:not([hidden]) {
   display:none !important;
