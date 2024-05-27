@@ -7,7 +7,7 @@
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
 ### Change Log:
-
+- Capitalization to New Tab page text decoration ([#59](https://github.com/soulhotel/FF-ULTIMA/pull/59)).
 - Patch++ for 126.0 update (default-release), and 127.0b1. ([#48](https://github.com/soulhotel/FF-ULTIMA/issues/48)).
   - Selector `-moz-` filtered out previously, fixed.
   - `ultima.OS.kde`, `ultima.OS.gnome`, `ultima.OS.mac`, `ultima.OS.linux`: title-bar button corrections, fixed.
