@@ -140,6 +140,10 @@ so you can keep the ability to switch from left to right--*/
     transition-delay: 0ms !important;
 }
 
+&:not([chromehidden~="toolbar"]) {
+    min-width: var(--uc-sidebar-hover-width) !import;
+}
+    
 /* Visible Divider for the sidebar to window I set it to 0px */
 
 #sidebar, #sidebar-header{
