@@ -30,7 +30,11 @@
 |------------------------------------------|------------------------------|
 | `/theme/#sideberyultimastyling.json` | ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc) |
 
-If importing this .json above doesn't copy over the css styling. Try resetting sidebery to default first, and reloading the ad on. Then import. Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/replace-features/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
+If importing this .json above doesn't copy over the css styling. Try resetting Sidebery to default first, and reloading the add-on. Then import the json.
+
+![1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/3bbc954e-aeba-416b-955e-da5aac9d4446)
+
+Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/replace-features/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
 
 ---
 <br>
