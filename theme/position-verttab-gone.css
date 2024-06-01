@@ -195,9 +195,9 @@ so you can keep the ability to switch from left to right--*/
 }
 }  /*--<--end of media query for ultima.tabs.vertical--*/
 
+/* adding some more overall padding to the sidebar title */
 
-
-
+#sidebar-switcher-target #sidebar-title { padding-inline: 15px 4px !important; }
 
 /*--DONT TOUCH--*/
 
