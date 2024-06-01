@@ -246,6 +246,12 @@
   margin-top:3px !important;
 }
 
+#main-window:not([lwtheme]) .urlbarView-row {
+  &[selected] {
+    color: var(--uc-dark-light) !important;
+  }
+}
+  
 /*---------customize toolbar page-----------*/
 
 #customization-container {background-color: var(--uc-sb-background) !important;}
