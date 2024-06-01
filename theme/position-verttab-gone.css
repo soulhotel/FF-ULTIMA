@@ -49,7 +49,10 @@
 }
 
 #titlebar{
-    will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;
+    will-change: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
 }
 
 #alltabs-button, #new-tab-button, #tabs-newtab-button{
@@ -58,12 +61,14 @@
 
 /*--v--should cover everything but we'll do more below--*/
 #tabbrowser-arrowscrollbox *{
-    display: none !important; width: 0 !important;
+    display: none !important;
+    width: 0 !important;
 }
 
 tabbrowser-arrowscrollbox-periphery,
 #tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down){
-    display: none !important; width: 0 !important;
+    display: none !important;
+    width: 0 !important;
 }}
 
 :root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser tabs, 
@@ -151,7 +156,8 @@ so you can keep the ability to switch from left to right--*/
 }
 
 #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label{
-    margin-inline: 0px !important;border-left-style: solid !important;
+    margin-inline: 0px !important;
+    border-left-style: solid !important;
 }
 
 /*------------------------------------------------------------------------------*/
@@ -160,7 +166,7 @@ so you can keep the ability to switch from left to right--*/
 
 #sidebar-switcher-target { margin-left: 5px !important; }
 
-#sidebar-switcher-target #sidebar-title { padding-inline: 10px 4px !important; }
+#sidebar-switcher-target #sidebar-title { padding-inline: 12px 4px !important; }
 
 .close-icon { border-radius: 7px !important; margin-right: 7px !important; }
 
