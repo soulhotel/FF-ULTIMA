@@ -7,6 +7,7 @@
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
 ### Change Log:
+- All is well in Firefox 127.0b9.
 - Url bar selected text color correction.
 - Capitalization to New Tab page text decoration from [Arcandres](https://github.com/Arcandres). [#59](https://github.com/soulhotel/FF-ULTIMA/pull/59).
 - Quick patch to unexpected sidebar alteration on Nightly from [bigshans](https://github.com/bigshans). [#62](https://github.com/soulhotel/FF-ULTIMA/pull/62).
