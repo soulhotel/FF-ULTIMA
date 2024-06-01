@@ -250,7 +250,7 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 #main-window:not([lwtheme]) .urlbarView-row {
   &[selected] {
-    color: var(--uc-dark-light) !important;
+    color: var(--uc-light-dark) !important;
   }
 }
   
