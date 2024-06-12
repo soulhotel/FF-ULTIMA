@@ -33,17 +33,9 @@ menupopup, panel {
   --panel-color: var(--uc-light-dark);
   --panel-border-radius: var(--uc-all-border-radius) !important;
   --panel-border-color: var(--uc-panel-border-ii) !important;
-  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%cc,.2); 
+  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
 }
-menupopup, panel {
-  &::part(content) {
-    background: var(--uc-active) !important;
-    color: var(--uc-light-dark) !important;
-    border-radius: var(--uc-all-border-radius) !important;
-    border: 0.5px solid var(--uc-panel-border) !important;
-    font-family: Segoe UI;
-  }
-}
+
 menuitem:hover{
   background-color: var(--uc-active) !important;
   color: var(--uc-light-dark) !important;
