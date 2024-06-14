@@ -160,7 +160,16 @@ body {background: var(--toolbar-bgcolor) !important;}
 .browserStack
   { background: var(--uc-transparent) !important; }
 
+#main-window
+#tabbrowser-tabpanels { browser[type] {
+    outline: 4px solid var(--toolbar-bgcolor);
+}}
 
+#main-window[lwtheme="true"]
+#tabbrowser-tabpanels { browser[type] {
+    outline: 3px solid var(--lwt-accent-color);
+}}
+  
 /*-----------------side bar-----------------*/
 
 #sidebar-header {
