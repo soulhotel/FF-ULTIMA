@@ -48,7 +48,7 @@ Index: For ctrl+f search of a section
 this simple approach still allows - closing multiple selected tabs when they are all selected, and one close button is triggered
 while keeping a clean consistent look across the theme, refer to position-verttab.css for styling of the close button--*/
 
-@media (-moz-bool-pref: "ultima.xstyle.closetabsbutton") { @media not (-moz-bool-pref: "ultima.tabs.xs") {
+@media (-moz-bool-pref: "ultima.xstyle.closetabsbutton") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") {
 
   #tabbrowser-tabs .tab-close-button,
   #tabbrowser-tabs .close-icon {

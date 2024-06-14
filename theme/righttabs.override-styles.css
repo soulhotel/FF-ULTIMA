@@ -58,7 +58,7 @@
   --uc-sb-margin-leftside: 0px 6px 7px 3px;
   --uc-sb-margin-rightside: 0px 0px 7px 6px;
 }
-@media (-moz-bool-pref: "ultima.tabs.vertical") {
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 #TabsToolbar-customization-target {
   top: var(--uc-navbar-height);
   left: initial;
@@ -90,7 +90,7 @@
 
 /*-----------------position-verttab override------------------*/
 
-@media (-moz-bool-pref: "ultima.tabs.vertical") {
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 #tab-notification-deck,
 .global-notificationbox,
 #main-window:not([inDOMFullscreen]) #browser {
@@ -105,7 +105,7 @@
 }
 }
 
-@media not all and (-moz-bool-pref: "ultima.tabs.vertical") {
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 
 #tab-notification-deck, .global-notificationbox,
 #main-window:not([inDOMFullscreen]) #browser{
@@ -120,7 +120,7 @@
 }  /*--<--end of media query for ultima.tabs.vertical--*/
 
 
-@media (-moz-bool-pref: "ultima.tabs.xs") { @media (-moz-bool-pref: "ultima.tabs.s") {
+@media (-moz-bool-pref: "ultima.tabs.size.xs") { @media (-moz-bool-pref: "ultima.tabs.size.s") {
 
 #tab-notification-deck, .global-notificationbox,
 #main-window:not([inDOMFullscreen]) #browser{
@@ -128,7 +128,7 @@
     margin-right: 0 !important;
     margin: var(--uc-all-margins) !important;
 }
-@media (-moz-bool-pref: "ultima.tabs.l") { @media (-moz-bool-pref: "ultima.tabs.s") {
+@media (-moz-bool-pref: "ultima.tabs.size.l") { @media (-moz-bool-pref: "ultima.tabs.size.s") {
 #tab-notification-deck, .global-notificationbox,
 #main-window:not([inDOMFullscreen]) #browser{
     margin-left: 0 !important;
@@ -136,7 +136,7 @@
     margin: var(--uc-all-margins) !important;
 }
 }}
-@media (-moz-bool-pref: "ultima.tabs.xs") { @media (-moz-bool-pref: "ultima.tabs.l") {
+@media (-moz-bool-pref: "ultima.tabs.size.xs") { @media (-moz-bool-pref: "ultima.tabs.size.l") {
 #tab-notification-deck, .global-notificationbox,
 #main-window:not([inDOMFullscreen]) #browser{
     margin-left: 0 !important;

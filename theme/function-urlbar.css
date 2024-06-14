@@ -3,6 +3,10 @@
 - https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/replace-features.md#-function-urlbarcss
 ----------------------------------------------------------------*/
 
-#urlbar .search-one-offs:not([hidden]) {
-  display:none !important;
+@media (-moz-bool-pref: "ultima.xstyle.urlbar.suggestions") {
+
+  #urlbar .search-one-offs:not([hidden]) {
+    display:none !important;
+  }
+
 }

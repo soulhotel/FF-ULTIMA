@@ -6,21 +6,21 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 */
 
 /*--user preference setting for XS size tabs--*/
-@media (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.l") {
+@media (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 41px;
         --uc-vertical-tabs-width-revert: 41px;
     }
 }}}
 /*--user preference setting for S size tabs--*/
-@media (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.l") {
+@media (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 165px;
         --uc-vertical-tabs-width-revert: 165px;
     }
 }}}
 /*--user preference setting for L size tabs--*/
-@media (-moz-bool-pref: "ultima.tabs.l") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") {
+@media (-moz-bool-pref: "ultima.tabs.size.l") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 250px;
         --uc-vertical-tabs-width-revert: 250px;
@@ -61,7 +61,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --uc-margin-top:0px;     
     --uc-margin-bottom:6px;      
     --uc-tab-margins: 0px 0px 7px 6px;
-    --uc-sb-margin-leftside: 0px 3px 7px 6px;
+    --uc-sb-margin-leftside: 0px 3px 7px 8px;
     --uc-sb-margin-rightside: 0px 6px 7px 0px;
     --uc-tab-padding: 2px;
 
