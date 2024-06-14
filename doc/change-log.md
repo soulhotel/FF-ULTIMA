@@ -6,13 +6,20 @@
 
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
+>[!WARNING]
+> Returning Users: **Some user preferences (names) have changed!** Please reapply the user.js to get the updated settings. This change is to reflect future updates/features while organizing the names for easier readability. Setting names will be carefully considered moving forward and renaming will **NOT** happen again. Thank you.
+
 ### Change Log:
-- All is well in Firefox 127.0b9.
-- Url bar selected text color correction.
-- Capitalization to New Tab page text decoration from [Arcandres](https://github.com/Arcandres). [#59](https://github.com/soulhotel/FF-ULTIMA/pull/59).
-- Quick patch to unexpected sidebar alteration on Nightly from [bigshans](https://github.com/bigshans). [#62](https://github.com/soulhotel/FF-ULTIMA/pull/62).
-- Corrected visibility of sidebar title (exposed by 2 px) when collapsed.
-- [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs.
+- `new` Setting `ultima.tabs.vertical.hide` will hide the vertical tabs.
+- `new` Setting `ultima.tabs.vertical.onlyprivate` hides tabs, except for in private windows.
+- `new` Setting `ultima.xstyle.urlbar.suggestions` toggle url bar suggestions on/off.
+- `new` Audio indicator (in sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
+- `fix` Padding (1px) added to the bottom of the mini-button-bar.
+- `fix` Bad spacing, mathematical error, when tabs autohide is disabled.
+- `fix` Removed duplicate code regarding context menu theme.
+- `todo` Alternative accent colors for dark and light themes.
+- `todo` Setting to keep default tabs-on-top layout.
+- `removed` Tab size preference renamed, `ultima.tabs.vertical` no longer needed. You can delete these in about:config.
 
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
