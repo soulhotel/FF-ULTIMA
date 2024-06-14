@@ -10,10 +10,11 @@
 > Returning Users: **Some user preferences (names) have changed!** Please reapply the user.js to get the updated settings. This change is to reflect future updates/features while organizing the names for easier readability. Setting names will be carefully considered moving forward and renaming will **NOT** happen again. Thank you.
 
 ### Change Log:
-- `new` Setting `ultima.tabs.vertical.hide` will hide the vertical tabs.
-- `new` Setting `ultima.tabs.vertical.onlyprivate` hides tabs, except for in private windows.
-- `new` Setting `ultima.xstyle.urlbar.suggestions` toggle url bar suggestions on/off.
-- `new` Audio indicator (in sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
+- All is well, in Firefox 128.0b2.
+- `new` Setting `ultima.tabs.vertical.hide` will hide vertical tabs.
+- `new` Setting `ultima.tabs.vertical.onlyprivate` hides vertical tabs ~ except for in private windows.
+- `new` Setting `ultima.xstyle.urlbar.suggestions` to toggle url bar suggestions on/off.
+- `new` Audio indicator (in Sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
 - `fix` Padding (1px) added to the bottom of the mini-button-bar.
 - `fix` Bad spacing, mathematical error, when tabs autohide is disabled.
 - `fix` Removed duplicate code regarding context menu theme.
