@@ -131,12 +131,6 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 #tabbrowser-tabpanels { browser[type] {
     border-radius: var(--uc-all-border-radius) !important;
     margin: var(--uc-all-margins) !important;
-    outline: 4px solid var(--toolbar-bgcolor);
-}}
-
-#main-window[lwtheme="true"]
-#tabbrowser-tabpanels { browser[type] {
-    outline: 4px solid var(--lwt-accent-color);
 }}
 
 /*--------------bookmarks bar---------------*/
