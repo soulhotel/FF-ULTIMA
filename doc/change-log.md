@@ -8,6 +8,12 @@
 
 >[!WARNING]
 > Returning Users: **Some user preferences (names) have changed!** Please reapply the user.js to get the updated settings. This change is to reflect future updates/features while organizing the names for easier readability. Setting names will be carefully considered moving forward and renaming will **NOT** happen again. Thank you.
+> <details><summary>Settings List (preview)</summary>
+>
+> <br>
+>
+>   ![2024-06-13_23-50](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/69153e1d-f47c-4ec1-8e1b-6ec5356fb191)
+> </details>
 
 ### Change Log:
 - All is well, in Firefox 128.0b2.
