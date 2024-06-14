@@ -21,7 +21,7 @@
   margin: var(--uc-tab-margins) !important;
   border-radius: var(--uc-all-border-radius);
   background: var(--uc-ultima-background-iv);
-  padding-bottom: 1px !important;
+  padding-bottom: 2px !important;
 }
 
 /* tabs relative to siblings */
