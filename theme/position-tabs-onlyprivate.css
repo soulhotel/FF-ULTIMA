@@ -33,7 +33,7 @@
     #tab-notification-deck,
     .global-notificationbox,
     #main-window:not([inDOMFullscreen]) #browser {
-        margin-left: 0 !important;
+        margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
     }
          
     /* POOF! tabs gone */
