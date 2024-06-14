@@ -8,7 +8,7 @@
 
 | Preferences          | Function            | Preview             |
 |----------------------------------|---------------------|---------------------|
-| Switching Tab Size               | [40px TABS] --> `ultima.tabs.size.xs` <br> [165px TABS] --> `ultima.tabs.size.s` <br> [250px TABS] --> `ultima.tabs.size.l` <br> :warning: Set one to true, the others false. | ![tabsizechange](preview/tabsizechange.gif) |
+| Switching Tab Size               |  [40px] -> `ultima.tabs.size.xs` <br> [165px] -> `ultima.tabs.size.s` <br> [250px] -> `ultima.tabs.size.l` <br> :warning: Set one to true, the others false. | ![tabsizechange](preview/tabsizechange.gif) |
 | ultima.tabs.autohide             | Enable/Disable Autohide for tabs. | ![tabsize](preview/autohideon.gif) |
 | ultima.tabs.vertical.hide        | Hide/Show vertical tabs | ![firefox_dnANLwlC7F](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/fd1153a0-95ef-4490-a929-92e0de632804) |
 | ultima.tabs.vertical.onlyprivate | Hide vertical tabs ~ except for in Private Windows | ![vtip](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/9f4f4f65-74e3-4a2b-b552-f501429ccb21) |
