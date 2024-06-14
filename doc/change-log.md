@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.9/ffultima1.7.8.zip) 1.7.8 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.9/ffultima1.7.9.zip) 1.7.9 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
