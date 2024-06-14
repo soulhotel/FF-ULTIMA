@@ -24,6 +24,8 @@ user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.squared", false);
 user_pref("ultima.xstyle.urlbar.suggestions", true);
 
+user_pref("ultima.xstyle.lwtheme", false); /* Experimental. To counter addon themes that use unusual color variables.
+
 /*--------------------------------------------------------*/
 
 user_pref("ultima.OS.kde", true);
