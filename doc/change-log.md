@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.8/ffultima1.7.8.zip) 1.7.8 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.9/ffultima1.7.8.zip) 1.7.8 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -24,9 +24,11 @@
 - `fix` Padding (1px) added to the bottom of the mini-button-bar.
 - `fix` Bad spacing, mathematical error, when tabs autohide is disabled.
 - `fix` Removed duplicate code regarding context menu theme.
-- `todo` Alternative accent colors for dark and light themes.
-- `todo` Setting to keep default tabs-on-top layout.
 - `removed` Tab size preference renamed, `ultima.tabs.vertical` no longer needed. You can delete these in about:config.
+- `todo` Alternative lwtheme variables (experimental)
+- `todo` Setting to keep default tabs-on-top layout. (not a priority)
+- `todo` Verify Windows Nav bar Vertical centering
+- `todo` URL Bar, centered text & text-overflow?
 
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
