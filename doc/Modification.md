@@ -36,7 +36,7 @@ If importing this .json above doesn't copy over the css styling. Try resetting S
 
 ![1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/3bbc954e-aeba-416b-955e-da5aac9d4446)
 
-Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/replace-features/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
+Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
 
 ---
 <br>
