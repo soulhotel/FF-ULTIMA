@@ -6,7 +6,7 @@
 possible spacing issues when the two are present at the same time.
 -----------------------------------------------------------*/
 
-@media (-moz-bool-pref: "ultima.tabs.vertical.hide") { @media (-moz-bool-pref: "ultima.sidebar.autohide") {
+@media (-moz-bool-pref: "ultima.sidebar.autohide") {
 
     /* remove header */
     /* note: youll lose the ability to switch sidebar from left to right */
@@ -138,7 +138,7 @@ possible spacing issues when the two are present at the same time.
     }
 
     
-}} /* -moz-bool-pref"ultima.tabs.vertical.hide" & "ultima.tabs.sidebar.autohide" */
+} /* -moz-bool-pref"ultima.tabs.vertical.hide" & "ultima.tabs.sidebar.autohide" */
 
 
 
