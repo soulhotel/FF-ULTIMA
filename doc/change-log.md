@@ -8,7 +8,7 @@
 
 >[!WARNING]
 > Returning Users: **Some user preferences (names) have changed!** Please reapply the user.js to get the updated settings. This change is to reflect future updates/features while organizing the names for easier readability. Setting names will be carefully considered moving forward and renaming will **NOT** happen again. Thank you.
-> <details><summary>Settings List (preview)</summary>
+> <details><summary>(CLICK ME) Settings List Preview</summary>
 >
 > <br>
 >
