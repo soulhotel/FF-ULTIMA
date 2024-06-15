@@ -23,7 +23,7 @@
 - `new` Setting `ultima.xstyle.urlbar.centered` to toggle url bar centered text and overflow.
 - `new` Setting `ultima.xstyle.urlbar.hidebuttons` to show excess buttons only on hover.
 - `new` Audio indicator (in Sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
-- `fix` Padding (1px) added to the bottom of the mini-button-bar.
+- `fix` Added padding (1px) added to the bottom of the mini-button-bar.
 - `fix` Bad spacing, mathematical error, when tabs autohide is disabled.
 - `fix` Removed duplicate code regarding context menu theme.
 - `removed` Tab size preference renamed, `ultima.tabs.vertical` no longer needed. You can delete these in about:config.
