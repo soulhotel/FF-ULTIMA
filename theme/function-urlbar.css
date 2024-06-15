@@ -15,6 +15,11 @@
 
   #urlbar .urlbar-input-box {
     text-align: center;
+  }  
+  #urlbar .urlbar-input {
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap; 
   }
   
 }
