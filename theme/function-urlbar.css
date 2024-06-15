@@ -10,7 +10,6 @@
   }
 
 }
-
 @media (-moz-bool-pref: "ultima.theme.urlbar") {
 
   #urlbar .urlbar-input-box {
@@ -20,6 +19,17 @@
     text-overflow: ellipsis !important;
     overflow: hidden;
     white-space: nowrap; 
+  }
+  #urlbar #identity-box,
+  #urlbar #page-action-buttons,
+  #urlbar #tracking-protection-icon-container {
+    opacity: 0 !important;
+  }
+  #urlbar:hover #identity-box,
+  #urlbar:hover #page-action-buttons,
+  #urlbar:hover #tracking-protection-icon-container {
+    opacity: 1 !important;
+    transition: opacity 100ms ease !important;
   }
   
 }
