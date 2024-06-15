@@ -20,7 +20,8 @@
 - `new` Setting `ultima.tabs.vertical.hide` will hide vertical tabs.
 - `new` Setting `ultima.tabs.vertical.onlyprivate` hides vertical tabs ~ except for in private windows.
 - `new` Setting `ultima.xstyle.urlbar.suggestions` to toggle url bar suggestions on/off.
-- `new` Setting `ultima.theme.urlbar` to toggle url bar theme, centered text, hidden items until focused.
+- `new` Setting `ultima.xstyle.urlbar.centered` to toggle url bar centered text.
+- `new` Setting `ultima.xstyle.urlbar.hidebuttons` to show excess buttons only on hover.
 - `new` Audio indicator (in Sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
 - `fix` Padding (1px) added to the bottom of the mini-button-bar.
 - `fix` Bad spacing, mathematical error, when tabs autohide is disabled.
