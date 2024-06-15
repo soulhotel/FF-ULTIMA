@@ -146,14 +146,14 @@ Index: For ctrl+f search of a section
 @media (-moz-bool-pref: "ultima.OS.mac") {
 
     #nav-bar {
-        margin-left: 100px !important;
+        margin-left: 84px !important;
         margin-right: 0px !important;
     }    
     
     :root[tabsintitlebar] .titlebar-buttonbox {
         top: 9px !important;
         right: unset !important;
-        left: 4px !important;
+        left: 3px !important;
     }
 
 } /*--<--end OS preference query--*/
