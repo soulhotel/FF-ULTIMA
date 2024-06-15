@@ -144,19 +144,18 @@ Index: For ctrl+f search of a section
 /*--mac--*/
 
 @media (-moz-bool-pref: "ultima.OS.mac") {
-@media not (-moz-platform: windows) { @media not (-moz-platform: linux) {
 
     #nav-bar {
-        margin-left: 64px !important;
+        margin-left: 84px !important;
         margin-right: 0px !important;
     }    
     
     :root[tabsintitlebar] .titlebar-buttonbox {
         top: 12px !important;
         right: unset !important;
-        left: 2px !important;
+        left: 3px !important;
     }
-}} /*--<--end mac media query--*/
+
 } /*--<--end OS preference query--*/
 
 /*------------------------------------------------------------------------*/

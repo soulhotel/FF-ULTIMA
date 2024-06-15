@@ -46,7 +46,7 @@
 
 <br>
 
-> userChrome Themes work by Having the Browser read stylized `.css text files` in a certain directory within your Profile Folder. There are two easy ways to locate this folder:
+> userChrome Themes work by Having the Firefox Browser read style-sheets `.css` within a certain directory of your Profile Folder. There are two easy ways to access this folder:
 
 1. Go to the `about:support` page
 - In the URL Bar, type `about:support`.
