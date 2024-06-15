@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------
-- this file does so many things. So much so, that removing it will break the theme. so beware...
-- https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/replace-features.md#-function-urlbarcss
+- alternate styles for the URL Bar
+- user preference toggles for search suggestions, centered text, hiding buttons
 ----------------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.xstyle.urlbar.suggestions") {
@@ -10,7 +10,7 @@
   }
 
 }
-@media (-moz-bool-pref: "ultima.theme.urlbar") {
+@media (-moz-bool-pref: "ultima.xstyle.urlbar.centered") {
 
   #urlbar .urlbar-input-box {
     text-align: center;
@@ -20,6 +20,11 @@
     overflow: hidden;
     white-space: nowrap; 
   }
+
+}
+
+@media (-moz-bool-pref: "ultima.xstyle.urlbar.hidebuttons") {
+
   #urlbar #identity-box,
   #urlbar #page-action-buttons,
   #urlbar #tracking-protection-icon-container {
