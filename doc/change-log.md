@@ -20,7 +20,7 @@
 - `new` Setting `ultima.tabs.vertical.hide` will hide vertical tabs.
 - `new` Setting `ultima.tabs.vertical.onlyprivate` hides vertical tabs ~ except for in private windows.
 - `new` Setting `ultima.xstyle.urlbar.suggestions` to toggle url bar suggestions on/off.
-- `new` Setting `ultima.xstyle.urlbar.centered` to toggle url bar centered text.
+- `new` Setting `ultima.xstyle.urlbar.centered` to toggle url bar centered text and overflow.
 - `new` Setting `ultima.xstyle.urlbar.hidebuttons` to show excess buttons only on hover.
 - `new` Audio indicator (in Sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
 - `fix` Padding (1px) added to the bottom of the mini-button-bar.
@@ -30,7 +30,6 @@
 - `todo` Alternative lwtheme variables (experimental)
 - `todo` Setting to keep default tabs-on-top layout. (not a priority)
 - `todo` Verify Windows Nav bar vertical center
-- `todo` URL Bar, centered text & text-overflow?
 
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
