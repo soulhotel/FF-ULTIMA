@@ -15,6 +15,7 @@ user_pref("ultima.sidebar.autohide", false);
 /*--------------------------------------------------------*/
 
 user_pref("ultima.theme.extensions", true);
+user_pref("ultima.theme.urlbar", true);
 
 /*--------------------------------------------------------*/
 
