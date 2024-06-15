@@ -10,3 +10,12 @@
   }
 
 }
+
+@media (-moz-bool-pref: "ultima.theme.urlbar") {
+
+  #urlbar .urlbar-input-box {
+    text-align: center;
+  }
+  
+}
+
