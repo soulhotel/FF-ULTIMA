@@ -3,14 +3,14 @@
 - user preference toggles for search suggestions, centered text, hiding buttons
 ----------------------------------------------------------------*/
 
-@media (-moz-bool-pref: "ultima.xstyle.urlbar.suggestions") {
+@media (-moz-bool-pref: "ultima.urlbar.suggestions") {
 
   #urlbar .search-one-offs:not([hidden]) {
     display:none !important;
   }
 
 }
-@media (-moz-bool-pref: "ultima.xstyle.urlbar.centered") {
+@media (-moz-bool-pref: "ultima.urlbar.centered") {
 
   #urlbar .urlbar-input-box {
     text-align: center;
@@ -23,7 +23,7 @@
 
 }
 
-@media (-moz-bool-pref: "ultima.xstyle.urlbar.hidebuttons") {
+@media (-moz-bool-pref: "ultima.urlbar.hidebuttons") {
 
   #urlbar #identity-box,
   #urlbar #page-action-buttons,
