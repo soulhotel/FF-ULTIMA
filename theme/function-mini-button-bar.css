@@ -7,7 +7,7 @@
 
 /* -------------------------------MINI button bar-------------------------------------- */
 
-@media (-moz-bool-pref: "ultima.tabs.vertical") {
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 
 /* first to utilize the unused tabs toolbar space */
 
@@ -21,6 +21,7 @@
   margin: var(--uc-tab-margins) !important;
   border-radius: var(--uc-all-border-radius);
   background: var(--uc-ultima-background-iv);
+  padding-bottom: 2px !important;
 }
 
 /* tabs relative to siblings */
@@ -38,7 +39,7 @@
 
 /* visual indicator, when hovered */
 
-@media (-moz-bool-pref: "ultima.tabs.l"), (-moz-bool-pref: "ultima.tabs.s") {
+@media (-moz-bool-pref: "ultima.tabs.size.l"), (-moz-bool-pref: "ultima.tabs.size.s") {
 
 /*OPTION 1 - Functions well, however the lack of animation causes a minor pause/delay on the tabs autohiding animation*/
 

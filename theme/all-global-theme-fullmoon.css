@@ -1,7 +1,7 @@
-/* Full Moon Color Scheme (Dark) styling is split between two options
---- [ default ] and [ lwt - for when themes are applied ]
---- (--toolbar-bgcolor) is used to define the default background
---- and (--lwt-accent-color) when themes (lwt) are applied
+/* 
+Full Moon Color Scheme (Dark) styling is split between two options
+-
+-
 */
 
 /*-------------------------------- Global Variables -----------------------------------*/
@@ -160,6 +160,22 @@ body {background: var(--toolbar-bgcolor) !important;}
 .browserStack
   { background: var(--uc-transparent) !important; }
 
+#main-window
+#tabbrowser-tabpanels { browser[type] {
+    outline: 4px solid var(--toolbar-bgcolor);
+}}
+
+#main-window[lwtheme="true"]
+#tabbrowser-tabpanels { browser[type] {
+    outline: 3px solid var(--lwt-accent-color);
+}}
+
+@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+  #main-window[lwtheme="true"]
+  #tabbrowser-tabpanels { browser[type] {
+      outline: 3px solid var(--arrowpanel-background);
+  }}
+}
 
 /*-----------------side bar-----------------*/
 
@@ -326,6 +342,12 @@ body {background: var(--toolbar-bgcolor) !important;}
 #main-window[lwtheme="true"] body
   {background: var(--lwt-accent-color) !important; }
 
+@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+  #main-window[lwtheme="true"] body {
+    background: var(--arrowpanel-background) !important;
+  }
+}
+
 /*--content window--*/
 
 #main-window[lwtheme="true"] #appcontent, #main-window[lwtheme="true"] #browser,
@@ -357,6 +379,11 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 /* when theme applied */
 
+@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+  #main-window[lwtheme="true"], :root[lwtheme="true"] * {
+    --uc-tabs-lwt: color-mix(in srgb, var(--uc-ultima-background-i) 30%, var(--arrowpanel-background) 70%); }
+}
+
 :root:not([customizing]) #tabbrowser-tabs:-moz-lwtheme
   {background-color: var(--uc-tabs-lwt) !important;}
 
@@ -372,6 +399,11 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 #main-window[lwtheme="true"] 
   {--tab-selected-bgcolor: var(--lwt-accent-color) !important;}
+
+@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+  #main-window[lwtheme="true"] 
+    {--tab-selected-bgcolor: var(--uc-ultima-background-i) !important;}
+}
 
 .tabbrowser-tab[pending="true"] {opacity: 0.3 !important;}
 

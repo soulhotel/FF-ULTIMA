@@ -1,7 +1,7 @@
-/* Dusky Color Scheme (Light) styling is split between two options
---- [ default ] and [ lwt - for when themes are applied ]
---- (--toolbar-bgcolor) is used to define the default background
---- and (--lwt-accent-color) when themes (lwt) are applied
+/* 
+Dusky Color Scheme (Light)
+-
+-
 */
 
 /*-------------------------------- Global Variables -----------------------------------*/
@@ -160,7 +160,16 @@
 .browserStack
 { background: var(--uc-transparent) !important; }
 
+#main-window
+#tabbrowser-tabpanels { browser[type] {
+    outline: 4px solid var(--toolbar-bgcolor);
+}}
 
+#main-window[lwtheme="true"]
+#tabbrowser-tabpanels { browser[type] {
+    outline: 3px solid var(--lwt-accent-color);
+}}
+  
 /*-----------------side bar-----------------*/
 
 #sidebar-header { 

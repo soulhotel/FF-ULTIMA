@@ -12,19 +12,21 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 @import url(theme/all-global-theme-fullmoon.css);
 @import url(theme/all-global-theme-dusky.css);
 
-@import url(theme/position-verttab.css);
-@import url(theme/position-verttab-gone.css);
+@import url(theme/position-tabs.css);
+@import url(theme/position-tabs-gone.css);
+@import url(theme/position-tabs-onlyprivate.css);
 @import url(theme/position-findbar.css);
 
 @import url(theme/function-tabs-autohide-i.css); 
-
 @import url(theme/function-mini-button-bar.css);
 @import url(theme/function-tabs-collapse.css);
+@import url(theme/function-sidebar-autohide.css);
 @import url(theme/function-containers-indicator.css);
 @import url(theme/function-menu-button.css);
 @import url(theme/function-privatemode-indicator.css); /* sourced from MOG */
 @import url(theme/function-urlbar.css);
 @import url(theme/function-extensions-menu.css);
+@import url(theme/function-safeguard.css);
 
 @import url(theme/theme-return-window-controls.css);
 @import url(theme/theme-context-menu.css);
@@ -34,4 +36,5 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 @import url(theme/theme-tab-audio-indicator.css);
 
 @import url(theme/override-linux.css);
+@import url(theme/override-mac.css);
 @import url(theme/override-styles.css);

@@ -42,25 +42,21 @@
 /*--collapse tabs on small browser width support--*/
 
 @media (max-width:850px){
-
-#main-window {
-    --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
-}
-#tabbrowser-tabs {
-    transition: width 80ms linear 70ms !important;
-    will-change: width !important;
-}
-#main-window[sizemode="fullscreen"] #browser {
-    transition: margin-left 80ms linear 150ms !important;
-    will-change: margin-left !important;
-}
-
-#tabbrowser-tabs, #browser{
-    transition-delay: 0ms !important;
-}
-
-#tabbrowser-tabs .tab-close-button, #tabbrowser-tabs .close-icon{
-    padding: 0px !important; display: none !important; margin-inline-end: -3px !important;
-}
-
-} /*<----close media function*/
+    #main-window {
+        --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
+    }
+    #tabbrowser-tabs {
+        transition: width 80ms linear 70ms !important;
+        will-change: width !important;
+    }
+    #main-window[sizemode="fullscreen"] #browser {
+        transition: margin-left 80ms linear 150ms !important;
+        will-change: margin-left !important;
+    }    
+    #tabbrowser-tabs, #browser{
+        transition-delay: 0ms !important;
+    }    
+    #tabbrowser-tabs .tab-close-button, #tabbrowser-tabs .close-icon{
+        padding: 0px !important; display: none !important; margin-inline-end: -3px !important;
+    }
+} /*<----close media maxwidth function*/

@@ -6,21 +6,21 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 */
 
 /*--user preference setting for XS size tabs--*/
-@media (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.l") {
+@media (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 41px;
         --uc-vertical-tabs-width-revert: 41px;
     }
 }}}
 /*--user preference setting for S size tabs--*/
-@media (-moz-bool-pref: "ultima.tabs.s") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.l") {
+@media (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 165px;
         --uc-vertical-tabs-width-revert: 165px;
     }
 }}}
 /*--user preference setting for L size tabs--*/
-@media (-moz-bool-pref: "ultima.tabs.l") { @media not (-moz-bool-pref: "ultima.tabs.xs") { @media not (-moz-bool-pref: "ultima.tabs.s") {
+@media (-moz-bool-pref: "ultima.tabs.size.l") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 250px;
         --uc-vertical-tabs-width-revert: 250px;
@@ -61,7 +61,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --uc-margin-top:0px;     
     --uc-margin-bottom:6px;      
     --uc-tab-margins: 0px 0px 7px 6px;
-    --uc-sb-margin-leftside: 0px 3px 7px 6px;
+    --uc-sb-margin-leftside: 0px 3px 7px 8px;
     --uc-sb-margin-rightside: 0px 6px 7px 0px;
     --uc-tab-padding: 2px;
 
@@ -75,8 +75,8 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 /*---------------Browser - Side bar---------------*/
 
-/*--quick hack, bigger sidebar, 50vw = 50% of the screen width--*/
-/*--great for view-tab-in-sidebar extensions--*/
+/* quick hack, bigger sidebar, 50vw = 50% of the screen width */
+/* great for view-tab-in-sidebar extensions */
 #sidebar-box {
     max-width: 50vw !important;
 } #sidebar-box {
@@ -84,12 +84,12 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     width: 18em;
 }   /*defaults*/
 
-/*--default left side--<--*/
+/* default left side < */
 #sidebar-box {
     border-radius: var(--uc-all-border-radius);
     margin: var(--uc-sb-margin-leftside) !important;
 }
-/*--right side-->--*/
+/* right side > */
 #sidebar-box[positionend="true"]{
     margin: var(--uc-sb-margin-rightside) !important;}
 
@@ -97,14 +97,13 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     border-top-left-radius: var(--uc-all-border-radius) !important;
     border-top-right-radius: var(--uc-all-border-radius) !important;
 }
-/*--sidebar content--*/
+/* sidebar content */
 #sidebar {
     border-bottom-left-radius: var(--uc-all-border-radius) !important;
     border-bottom-right-radius: var(--uc-all-border-radius) !important;
 }
 
-/*remove ugly border*/
-/*but keep the splitter accessible, it resizes the sidebar*/
+/* remove ugly border - but keep the splitter accessible, it resizes the sidebar*/
 #sidebar-box[positionend] + .sidebar-splitter{
     border: 2px rgba(0,0,0,0) solid !important;
     border-inline-width: 0px !important;
@@ -117,43 +116,33 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 /*---------------Browser - Browser content---------------*/
 
-/*browser is the container, browser stack is the content*/
-
+/* browser content - webpage content */
 #browser, #appcontent, #tabbrowser-tabbox,
 #tabbrowser-tabpanels, .browserSidebarContainer, .browserStack{
     border-radius: var(--uc-all-border-radius) !important;
 }
-
 .browserContainer {
     border-radius: var(--uc-all-border-radius) !important;}
-
 #main-window
 #tabbrowser-tabpanels { browser[type] {
     border-radius: var(--uc-all-border-radius) !important;
     margin: var(--uc-all-margins) !important;
-    outline: 4px solid var(--toolbar-bgcolor);
-}}
-
-#main-window[lwtheme="true"]
-#tabbrowser-tabpanels { browser[type] {
-    outline: 4px solid var(--lwt-accent-color);
 }}
 
 /*--------------bookmarks bar---------------*/
 
 /* smaller bookmarks bar */
-
 #PersonalToolbar{
     max-height: var(--uc-bookbar-height) !important;
     padding-bottom: 2px !important;
 }
-
 #personal-toolbar-empty-description, #personal-toolbar-empty-description .text-link, a {
-    cursor: auto !important; opacity: 0 !important;}
+    cursor: auto !important; opacity: 0 !important;
+}
 
 /*-------------------menu bar--------------------*/
 
-/*--quick styling--*/
+/* quick styling */
 
 #menubar-items {
     background: var(--uc-ultima-background-ii) !important;
@@ -167,23 +156,20 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     border-radius: 5px !important;
 }}
 
-/*--positioning when active--*/
-
+/* positioning when active */
 #toolbar-menubar[autohide="false"] {
     position: fixed;
     left: calc(50vw - 150px);
     top: var(--uc-navbar-height);
     height:23px !important;
 }
-
 #toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
     background-color: var(--uc-selected) !important;
     color: inherit;
     border-radius: 5px !important;
 }}
 
-/*--positioning when pressing alt--*/
-
+/* positioning when pressing alt */
 #toolbar-menubar[autohide="true"]:not([inactive="true"]) {
     position: fixed;
     left: calc(50vw - 150px);
@@ -193,7 +179,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 /*-------------------nav bar--------------------*/
 
-/*--centering buttons vertically--*/
+/* centering buttons vertically */
 
 #nav-bar toolbarbutton {
     margin-top: 1px !important;

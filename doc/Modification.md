@@ -8,15 +8,17 @@
 
 | Preferences          | Function            | Preview             |
 |----------------------------------|---------------------|---------------------|
-| Switching Tab Size               | [XS, 40px TABS] --> `ultima.tabs.xs` <br> [S, 165px TABS] --> `ultima.tabs.s` <br> [L, 250px TABS] --> `ultima.tabs.l` <br> :warning: Set one to true, the others false. | ![tabsizechange](preview/tabsizechange.gif) |
+| Switching Tab Size               |  [40px] -> `ultima.tabs.size.xs` <br> [165px] -> `ultima.tabs.size.s` <br> [250px] -> `ultima.tabs.size.l` <br> :warning: Set one to true, the others false. | ![tabsizechange](preview/tabsizechange.gif) |
 | ultima.tabs.autohide             | Enable/Disable Autohide for tabs. | ![tabsize](preview/autohideon.gif) |
-| ultima.tabs.vertical             | Remove the tabs panel, for users who rather use an extension like sidebery/treestyle. | ![firefox_dnANLwlC7F](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/fd1153a0-95ef-4490-a929-92e0de632804) |
-| ultima.sidebar.autohide          | Autohide the sidebar. Only works when vertical tabs is disabled/turned-off. | ⬆⬆⬆ |
+| ultima.tabs.vertical.hide        | Hide/Show vertical tabs | ![firefox_dnANLwlC7F](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/fd1153a0-95ef-4490-a929-92e0de632804) |
+| ultima.tabs.vertical.onlyprivate | Hide vertical tabs ~ except for in Private Windows | ![vtip](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/9f4f4f65-74e3-4a2b-b552-f501429ccb21) |
+| ultima.sidebar.autohide          | Autohide the sidebar. Only works when vertical tabs are hidden. | ![firefox_dnANLwlC7F](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/fd1153a0-95ef-4490-a929-92e0de632804) |
+| ultima.tabs.closetabsbutton      | Restore visual close button for tabs, works with autohiding on or off, works with closing multiselected tabs | ![OyarZ6xz4D](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/1c190448-7502-435d-a27e-86f7a96364f3) |
+| ultima.theme.extensions          | Extensions-Panel theme, compact-icons or default list-view. | ![themeextensions](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/b81bce27-5927-4a0d-9bd5-e970477458d9) |
 | ultima.xstyle.containertabs      | Three optional styles for container tabs, make your pick. | ![tc1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6b867554-6e9c-41a3-9c96-9ebc14d15b42) ![tc2](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/15fb335d-e9fa-402e-83a9-0ddd67581f94) ![tc3](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/afda38b4-5c4b-4093-b98f-63c138af2023) |
 | ultima.xstyle.squared            | Square the theme; No margins, borders, or rounded corners. | ![themesquared](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ba858526-3178-462c-9bf0-4be3e4bc9ab0) |
-| ultima.theme.extensions          | Extensions-Panel theme, compact-icons or default list-view. | ![themeextensions](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/b81bce27-5927-4a0d-9bd5-e970477458d9) |
+| ultima.xstyle.urlbar.suggestions | Toggle URL Bar suggestions on/off | ... |
 | toolkit.tabbox.switchByScrolling | Enables scrolling on the tabs bar, to switch between tabs | ... |
-| ultima.xstyle.closetabsbutton    | Restore visual close button for tabs, works with autohiding on or off, works with closing multiselected tabs | ![OyarZ6xz4D](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/1c190448-7502-435d-a27e-86f7a96364f3) |
 | ... | ... | ... |
 
 ---
@@ -34,7 +36,7 @@ If importing this .json above doesn't copy over the css styling. Try resetting S
 
 ![1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/3bbc954e-aeba-416b-955e-da5aac9d4446)
 
-Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/replace-features/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
+Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
 
 ---
 <br>
@@ -49,7 +51,7 @@ Optional : you can also copy and paste this [Sidebery CSS](https://github.com/so
 <br>
 
 ### [Userchrome-Toggle extension](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle/) support
-With `ultima.tabs.autohide` set to false. And `ultima.tabs.xs` set to true; You can toggle the tabs-view using the extension button, or keyboard shortcut.
+With `ultima.tabs.autohide` set to false. And `ultima.tabs.size.xs` set to true; You can toggle the tabs-view using the extension button, or keyboard shortcut.
 
 [userchrome-toggle test..webm](https://github.com/soulhotel/FF-ULTIMA/assets/44523955/252b3bae-f1c8-41ad-afa7-1e67d7f441cb)
 
