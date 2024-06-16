@@ -34,5 +34,10 @@
 - `todo` Verify Windows Nav bar vertical center
 - `todo` New preference for alternate pinned tab styling, still havent decided on a style yet. Feedback is appreciated.
 
-![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
+|windows                   | ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9) |
+|---                       |---|
+|Linux                     | ![lin](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6d6e1a97-d17e-4b9d-8bb7-73e47b688558) |
+|Mac (from LowSpecGamer25) | ![mac-user](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/e814cc59-ae96-4e8a-a128-261daecd9094) |
+
+
 
