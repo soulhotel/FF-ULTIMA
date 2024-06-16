@@ -2,8 +2,8 @@
 - autohide the sidebar
 - this function is enabled by the tabs.sidebar.autohide setting in about:config
 - it will only enable with tabs.vertical enabled.
-- while it works just fine without, i tired it to tabs.vertical to preserve any
-possible spacing issues when the two are present at the same time.
+- while it works just fine without, i tied it to tabs.vertical to preserve any
+possible spacing issues when the two are present at the same time. (temporarily removing this limitation)
 -----------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
