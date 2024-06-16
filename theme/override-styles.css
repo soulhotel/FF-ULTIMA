@@ -2,97 +2,94 @@
 - this file handles multiple optional settings via about:config
 - overriding aspects of the theme to accomplish different styles
 
-Index: For ctrl+f search of a section
-
---no margins, borders, or rounded corners-- line 11
---restore close tab buttons-- line 42
---minor adjustments yet to be labeled-- line 60-
+[Index: For ctrl+f a line to find a section]
+no margins, borders, or rounded corners
+restore close tab buttons
+pinned tabs alternative style
 ----------------------------------------------------------*/
-
-
 
 /*-------no margins, borders, or rounded corners---------*/
 
 @media (-moz-bool-pref: "ultima.xstyle.squared") {
+  :root, body, * {
+    --uc-all-margins: 0px 0px 0px 0px;
+    --uc-margin-inline: 0px;
+    --uc-margin-top: 0px;
+    --uc-margin-bottom: 0px;
+    --uc-tab-margins: 0px 0px 0px 0px;
+    --uc-sb-margin-leftside: 0px 0px 0px 0px;
+    --uc-sb-margin-rightside: 0px 0px 0px 0px;
+    --uc-all-border-radius: 0px;
+    --tab-border-radius: 10px;
+    --arrowpanel-menuitem-border-radius: 10px;
+    --arrowpanel-border-radius: 10px;
+    --toolbarbutton-border-radius: 10px;
+    --urlbar-icon-border-radius: 10px;
+    --button-border-radius: 10px;
+    --uc-button-border-radius: 10px;
+  }
+  #main-window
+  #tabbrowser-tabpanels { browser[type] {
+      outline: 0px solid var(--toolbar-bgcolor);
+  }}
+  #main-window[lwtheme="true"]
+  #tabbrowser-tabpanels { browser[type] {
+      outline: 0px solid var(--lwt-accent-color);
+  }}
+} /* end alternative style squared */
 
-:root, body, * {
-  --uc-all-margins: 0px 0px 0px 0px;
-  --uc-margin-inline: 0px;
-  --uc-margin-top: 0px;
-  --uc-margin-bottom: 0px;
-  --uc-tab-margins: 0px 0px 0px 0px;
-  --uc-sb-margin-leftside: 0px 0px 0px 0px;
-  --uc-sb-margin-rightside: 0px 0px 0px 0px;
-  --uc-all-border-radius: 0px;
-  --tab-border-radius: 10px;
-  --arrowpanel-menuitem-border-radius: 10px;
-  --arrowpanel-border-radius: 10px;
-  --toolbarbutton-border-radius: 10px;
-  --urlbar-icon-border-radius: 10px;
-  --button-border-radius: 10px;
-  --uc-button-border-radius: 10px;
-}
-#main-window
-#tabbrowser-tabpanels { browser[type] {
-    outline: 0px solid var(--toolbar-bgcolor);
-}}
-#main-window[lwtheme="true"]
-#tabbrowser-tabpanels { browser[type] {
-    outline: 0px solid var(--lwt-accent-color);
-}}
-}
 
-/*--restore close tab buttons--*/
 
-/*--ive opted for this styling option, which shows the close button only on the specified hovering tab,
+/* restore close tab buttons */
+/* ive opted for this styling option, which shows the close button only on the specified hovering tab,
 this simple approach still allows - closing multiple selected tabs when they are all selected, and one close button is triggered
-while keeping a clean consistent look across the theme, refer to position-verttab.css for styling of the close button--*/
+while keeping a clean consistent look across the theme, refer to position-verttab.css for styling of the close button */
 
 @media (-moz-bool-pref: "ultima.tabs.closetabsbutton") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") {
-
   #tabbrowser-tabs .tab-close-button,
   #tabbrowser-tabs .close-icon {
     display:flex !important;
   }
-
   @media (-moz-bool-pref: "ultima.tabs.autohide") {
-
     :root:not([customizing]) #TabsToolbar-customization-target *:not(:hover) .tab-close-button,
     :root:not([customizing]) #TabsToolbar-customization-target *:not(:hover) .close-icon {
       display: none !important;
       opacity: 0 !important;
     }
+  }  
+}} /* end (-moz-bool-pref: "ultima.tabs.closetabsbutton") + tabs size xs */
+
+
+
+/* pinned tabs alternative style */
+
+@media (-moz-bool-pref: "ultima.xstyle.pinnedtabs.i") {
+  @media (prefers-color-scheme: dark) {
+    .tabbrowser-tab[pinned=""] .tab-background, .tabbrowser-tab[pinned="true"] .tab-background {
+      background-color: var(--tab-selected-bgcolor) !important;
+      box-shadow: inset 0 !important;
+    }
   }
-  
-}}
+  @media (prefers-color-scheme: light) {
+    .tabbrowser-tab[pinned=""] .tab-background, .tabbrowser-tab[pinned="true"] .tab-background {
+      background-color: var(--tab-selected-bgcolor) !important;
+      box-shadow: inset 0 !important;
+    }
+  }
+} /* end (-moz-bool-pref: "ultima.xstyle.pinnedtabs.i") */
 
-/*--minor adjustments yet to be labeled--*/
 
-/*-------fix for tab edge triggering collapse---------*/
-/*temp fix*/
 
-.tabbrowser-tab {
-  margin-bottom: -2.2px !important;
-}
 
-/*-------small adjustment for rearranging tabs,note:
-- targetting selected tab and overriding tranlations = good
-- targetting tab above selected tab to translate 40px will work with tabbrowser-tabs mouse positioning detection = good
-- https://hg.mozilla.org/mozilla-central/file/291d187ba249c56d5c9dc88b5faaf04db2afe9c1/browser/base/content/tabbrowser-tabs.js
-- forcing positioning based on mozillas already established mouse positioning = uneffective, but probable.
----------*/
 
-.tabbrowser-tab[style*="transform"] {
-    transform: translateX(0px) !important;
-    transform: translateY(0px) !important;
-}
 
-/*-------placeholder---------*/
 
-/*
-@media (-moz-bool-pref: "ultima.new.pref") {
-}
-*/
+
+
+
+
+
+
 
 /*
 delete later:
