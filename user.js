@@ -29,7 +29,7 @@ user_pref("ultima.xstyle.lwtheme", false); /* Experimental. To counter addon the
 user_pref("ultima.OS.kde", true);
 user_pref("ultima.OS.gnome", false);
 user_pref("ultima.OS.mac", false);
-user_pref("ultima.OS.linux", false); /*Experimental*/
+/*user_pref("ultima.OS.linux", false);*/ /*Experimental*/
 
 /*other*/
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
