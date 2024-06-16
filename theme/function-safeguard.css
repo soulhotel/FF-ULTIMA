@@ -4,277 +4,76 @@
 /* if xs size is set and s is set, dont display until corrected, if s size is set and l is set dont display until... and so on. */
 
 @media (-moz-bool-pref: "ultima.tabs.size.xs") { @media (-moz-bool-pref: "ultima.tabs.size.s") {
-:root:not([customizing],[chromehidden~="menubar"]){
-    --uc-vertical-tabs-width: 0px;
-    --uc-vertical-tabs-width-revert: 0px;
-    --uc-navbar-height: 40px;
-    --uc-collapsed-tabs-width: 0px;
-}
-#tab-notification-deck, .global-notificationbox,
-#main-window:not([inDOMFullscreen]) #browser{
-    margin-left: 0 !important;
-}
-:root, body, *{
-    /*bookmarkbar height*/
-    --uc-bookbar-height: 22px;
-    /*rounded corners*/
-    --uc-all-border-radius: 10px;
-    --uc-all-margins: 0px 6px 6px 6px;
-    /*--sidebar margins--*/
-    --uc-sb-margin-leftside: 0px 3px 6px 6px;
-    --uc-sb-margin-rightside: 0px 6px 6px 0px;
-}
-#main-window:not([customizing="true"]) #titlebar {
-  width: 0 !important;
-  position: fixed;
-  top: -100px;
-} #titlebar{
-    will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;
-} #alltabs-button, #new-tab-button, #tabs-newtab-button{
-    display: none !important;
-} #tabbrowser-arrowscrollbox *{display: none !important; width: 0 !important;}
-tabbrowser-arrowscrollbox-periphery,#tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down){
-display: none !important; width: 0 !important;
-}}
-:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser tabs, 
-:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs{
-    border-inline-start: 0px; padding-inline-start: 0px; margin-inline-start: 0px;
-} #sidebar-splitter { display:none !important; }
-#sidebar-box {
-    --uc-sidebar-width: 38px; /*width when not in view*/
-    --uc-sidebar-hover-width: 240px; /*width when in full view*/
-    --uc-autohide-sidebar-delay: 300ms;
-    --uc-autohide-transition-duration: 80ms;
-    --uc-autohide-transition-type: linear;
-    position: relative;
-    min-width: var(--uc-sidebar-width) !important;
-    width: var(--uc-sidebar-width) !important;
-    max-width: var(--uc-sidebar-width) !important;
-    z-index:1;
-} #sidebar-box[positionend] { direction: rtl } #sidebar-box[positionend] > * { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) > * { direction: rtl }
-#main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
-#main-window[sizemode="fullscreen"] #sidebar-box { margin-inline:0px !important; }
-#main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
-#sidebar-header{overflow: hidden; padding-inline: 0 !important;}
-#sidebar-header::before,
-#sidebar-header::after{ content: ""; display: flex; padding-left: 1px;}
-#sidebar-header, #sidebar{
-    transition:
-        min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
-    min-width: var(--uc-sidebar-width) !important;
-    will-change: min-width;
-} #sidebar-box:hover > #sidebar-header, #sidebar-box:hover > #sidebar{
-    min-width: var(--uc-sidebar-hover-width) !important;
-    transition-delay: 0ms !important;
-} #sidebar, #sidebar-header{
-    border-inline: 1px solid rgba(0,0,0,0);
-    border-inline-width: 0px 0px;
-} #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl), #sidebar-box[positionend] > *{
-    border-inline-width: 1px 0px;
-} #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel{
-    inset-inline: auto 0px !important;
-} #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label{
-    margin-inline: 0px !important;border-left-style: solid !important;
-}
-#sidebar-switcher-target { margin-left: 5px !important; }
-#sidebar-switcher-target #sidebar-title { padding-inline: 10px 4px !important; }
-.close-icon { border-radius: 7px !important; margin-right: 7px !important; }
-@media (prefers-color-scheme: dark) {
-#sidebar-header, #sidebar{
-    background: var(--uc-ultima-background-iv) !important;
-} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar{
-    background: var(--uc-tabs-lwt) !important;
-}
-} @media (prefers-color-scheme: light) {
-#sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important;
-} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-tabs-lwt) !important; }
-}
+    /* Disable tabs until corrected, only one size preference is allowed */    
+    :root:not([customizing],[chromehidden~="menubar"]) {
+        --uc-vertical-tabs-width: 0px;
+        --uc-vertical-tabs-width-revert: 0px;
+        --uc-navbar-height: 40px;
+        --uc-collapsed-tabs-width: 0px;
+    }        
+    :root, body, *{
+        --uc-bookbar-height: 22px;
+        --uc-all-border-radius: 10px;
+        --uc-all-margins: 0px 6px 6px 0px;
+        --uc-sb-margin-leftside: 0px 7px 7px -2px;
+        --uc-sb-margin-rightside: 0px 6px 6px 0px;
+    }           
+    #tab-notification-deck,
+    .global-notificationbox,
+    #main-window:not([inDOMFullscreen]) #browser {
+        margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
+    }        
+    #main-window:not([customizing="true"]) #TabsToolbar-customization-target {
+        visibility: collapse !important;
+    }
 }}
 
 @media (-moz-bool-pref: "ultima.tabs.size.l") { @media (-moz-bool-pref: "ultima.tabs.size.s") {
-:root:not([customizing],[chromehidden~="menubar"]){
-    --uc-vertical-tabs-width: 0px;
-    --uc-vertical-tabs-width-revert: 0px;
-    --uc-navbar-height: 40px;
-    --uc-collapsed-tabs-width: 0px;
-}
-#tab-notification-deck, .global-notificationbox,
-#main-window:not([inDOMFullscreen]) #browser{
-    margin-left: 0 !important;
-}
-:root, body, *{
-    /*bookmarkbar height*/
-    --uc-bookbar-height: 22px;
-    /*rounded corners*/
-    --uc-all-border-radius: 10px;
-    --uc-all-margins: 0px 6px 6px 6px;
-    /*--sidebar margins--*/
-    --uc-sb-margin-leftside: 0px 3px 6px 6px;
-    --uc-sb-margin-rightside: 0px 6px 6px 0px;
-}
-#main-window:not([customizing="true"]) #titlebar {
-  width: 0 !important;
-  position: fixed;
-  top: -100px;
-} #titlebar{
-    will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;
-} #alltabs-button, #new-tab-button, #tabs-newtab-button{
-    display: none !important;
-} #tabbrowser-arrowscrollbox *{display: none !important; width: 0 !important;}
-tabbrowser-arrowscrollbox-periphery,#tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down){
-display: none !important; width: 0 !important;
-}}
-:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser tabs, 
-:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs{
-    border-inline-start: 0px; padding-inline-start: 0px; margin-inline-start: 0px;
-} #sidebar-splitter { display:none !important; }
-#sidebar-box {
-    --uc-sidebar-width: 38px; /*width when not in view*/
-    --uc-sidebar-hover-width: 240px; /*width when in full view*/
-    --uc-autohide-sidebar-delay: 300ms;
-    --uc-autohide-transition-duration: 80ms;
-    --uc-autohide-transition-type: linear;
-    position: relative;
-    min-width: var(--uc-sidebar-width) !important;
-    width: var(--uc-sidebar-width) !important;
-    max-width: var(--uc-sidebar-width) !important;
-    z-index:1;
-} #sidebar-box[positionend] { direction: rtl } #sidebar-box[positionend] > * { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) > * { direction: rtl }
-#main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
-#main-window[sizemode="fullscreen"] #sidebar-box { margin-inline:0px !important; }
-#main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
-#sidebar-header{overflow: hidden; padding-inline: 0 !important;}
-#sidebar-header::before,
-#sidebar-header::after{ content: ""; display: flex; padding-left: 1px;}
-#sidebar-header, #sidebar{
-    transition:
-        min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
-    min-width: var(--uc-sidebar-width) !important;
-    will-change: min-width;
-} #sidebar-box:hover > #sidebar-header, #sidebar-box:hover > #sidebar{
-    min-width: var(--uc-sidebar-hover-width) !important;
-    transition-delay: 0ms !important;
-} #sidebar, #sidebar-header{
-    border-inline: 1px solid rgba(0,0,0,0);
-    border-inline-width: 0px 0px;
-} #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl), #sidebar-box[positionend] > *{
-    border-inline-width: 1px 0px;
-} #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel{
-    inset-inline: auto 0px !important;
-} #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label{
-    margin-inline: 0px !important;border-left-style: solid !important;
-}
-#sidebar-switcher-target { margin-left: 5px !important; }
-#sidebar-switcher-target #sidebar-title { padding-inline: 10px 4px !important; }
-.close-icon { border-radius: 7px !important; margin-right: 7px !important; }
-@media (prefers-color-scheme: dark) {
-#sidebar-header, #sidebar{
-    background: var(--uc-ultima-background-iv) !important;
-} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar{
-    background: var(--uc-tabs-lwt) !important;
-}
-} @media (prefers-color-scheme: light) {
-#sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important;
-} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-tabs-lwt) !important; }
-}
+    /* Disable tabs until corrected, only one size preference is allowed */    
+    :root:not([customizing],[chromehidden~="menubar"]) {
+        --uc-vertical-tabs-width: 0px;
+        --uc-vertical-tabs-width-revert: 0px;
+        --uc-navbar-height: 40px;
+        --uc-collapsed-tabs-width: 0px;
+    }        
+    :root, body, *{
+        --uc-bookbar-height: 22px;
+        --uc-all-border-radius: 10px;
+        --uc-all-margins: 0px 6px 6px 0px;
+        --uc-sb-margin-leftside: 0px 7px 7px -2px;
+        --uc-sb-margin-rightside: 0px 6px 6px 0px;
+    }           
+    #tab-notification-deck,
+    .global-notificationbox,
+    #main-window:not([inDOMFullscreen]) #browser {
+        margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
+    }        
+    #main-window:not([customizing="true"]) #TabsToolbar-customization-target {
+        visibility: collapse !important;
+    }
 }}
 
 @media (-moz-bool-pref: "ultima.tabs.size.xs") { @media (-moz-bool-pref: "ultima.tabs.size.l") {
-:root:not([customizing],[chromehidden~="menubar"]){
-    --uc-vertical-tabs-width: 0px;
-    --uc-vertical-tabs-width-revert: 0px;
-    --uc-navbar-height: 40px;
-    --uc-collapsed-tabs-width: 0px;
-}
-#tab-notification-deck, .global-notificationbox,
-#main-window:not([inDOMFullscreen]) #browser{
-    margin-left: 0 !important;
-}
-:root, body, *{
-    /*bookmarkbar height*/
-    --uc-bookbar-height: 22px;
-    /*rounded corners*/
-    --uc-all-border-radius: 10px;
-    --uc-all-margins: 0px 6px 6px 6px;
-    /*--sidebar margins--*/
-    --uc-sb-margin-leftside: 0px 3px 6px 6px;
-    --uc-sb-margin-rightside: 0px 6px 6px 0px;
-}
-#main-window:not([customizing="true"]) #titlebar {
-  width: 0 !important;
-  position: fixed;
-  top: -100px;
-} #titlebar{
-    will-change: none !important;transition: none !important;opacity: 1 !important;z-index: 1 !important;
-} #alltabs-button, #new-tab-button, #tabs-newtab-button{
-    display: none !important;
-} #tabbrowser-arrowscrollbox *{display: none !important; width: 0 !important;}
-tabbrowser-arrowscrollbox-periphery,#tabbrowser-arrowscrollbox {&::part(scrollbutton-up), &::part(scrollbutton-down){
-display: none !important; width: 0 !important;
-}}
-:root:not([privatebrowsingmode], [firefoxviewhidden]) :is(toolbarbutton, toolbarpaletteitem) + #tabbrowser tabs, 
-:root[privatebrowsingmode]:not([firefoxviewhidden]) :is(toolbarbutton:not(#firefox-view-button), toolbarpaletteitem:not(#wrapper-firefox-view-button)) + #tabbrowser-tabs{
-    border-inline-start: 0px; padding-inline-start: 0px; margin-inline-start: 0px;
-} #sidebar-splitter { display:none !important; }
-#sidebar-box {
-    --uc-sidebar-width: 38px; /*width when not in view*/
-    --uc-sidebar-hover-width: 240px; /*width when in full view*/
-    --uc-autohide-sidebar-delay: 300ms;
-    --uc-autohide-transition-duration: 80ms;
-    --uc-autohide-transition-type: linear;
-    position: relative;
-    min-width: var(--uc-sidebar-width) !important;
-    width: var(--uc-sidebar-width) !important;
-    max-width: var(--uc-sidebar-width) !important;
-    z-index:1;
-} #sidebar-box[positionend] { direction: rtl } #sidebar-box[positionend] > * { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) { direction: ltr }
-#sidebar-box[positionend]:-moz-locale-dir(rtl) > * { direction: rtl }
-#main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
-#main-window[sizemode="fullscreen"] #sidebar-box { margin-inline:0px !important; }
-#main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
-#sidebar-header{overflow: hidden; padding-inline: 0 !important;}
-#sidebar-header::before,
-#sidebar-header::after{ content: ""; display: flex; padding-left: 1px;}
-#sidebar-header, #sidebar{
-    transition:
-        min-width var(--uc-autohide-transition-duration) var(--uc-autohide-transition-type) var(--uc-autohide-sidebar-delay) !important;
-    min-width: var(--uc-sidebar-width) !important;
-    will-change: min-width;
-} #sidebar-box:hover > #sidebar-header, #sidebar-box:hover > #sidebar{
-    min-width: var(--uc-sidebar-hover-width) !important;
-    transition-delay: 0ms !important;
-} #sidebar, #sidebar-header{
-    border-inline: 1px solid rgba(0,0,0,0);
-    border-inline-width: 0px 0px;
-} #sidebar-box:not([positionend]) > :-moz-locale-dir(rtl), #sidebar-box[positionend] > *{
-    border-inline-width: 1px 0px;
-} #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel{
-    inset-inline: auto 0px !important;
-} #sidebar-box:not([positionend]):hover ~ #appcontent #statuspanel-label{
-    margin-inline: 0px !important;border-left-style: solid !important;
-}
-#sidebar-switcher-target { margin-left: 5px !important; }
-#sidebar-switcher-target #sidebar-title { padding-inline: 10px 4px !important; }
-.close-icon { border-radius: 7px !important; margin-right: 7px !important; }
-@media (prefers-color-scheme: dark) {
-#sidebar-header, #sidebar{
-    background: var(--uc-ultima-background-iv) !important;
-} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar{
-    background: var(--uc-tabs-lwt) !important;
-}
-} @media (prefers-color-scheme: light) {
-#sidebar-header, #sidebar
-{ background: var(--uc-ultima-background-iv) !important;
-} #main-window[lwtheme="true"] #sidebar-header, #main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-tabs-lwt) !important; }
-}
+    /* Disable tabs until corrected, only one size preference is allowed */    
+    :root:not([customizing],[chromehidden~="menubar"]) {
+        --uc-vertical-tabs-width: 0px;
+        --uc-vertical-tabs-width-revert: 0px;
+        --uc-navbar-height: 40px;
+        --uc-collapsed-tabs-width: 0px;
+    }        
+    :root, body, *{
+        --uc-bookbar-height: 22px;
+        --uc-all-border-radius: 10px;
+        --uc-all-margins: 0px 6px 6px 0px;
+        --uc-sb-margin-leftside: 0px 7px 7px -2px;
+        --uc-sb-margin-rightside: 0px 6px 6px 0px;
+    }           
+    #tab-notification-deck,
+    .global-notificationbox,
+    #main-window:not([inDOMFullscreen]) #browser {
+        margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
+    }        
+    #main-window:not([customizing="true"]) #TabsToolbar-customization-target {
+        visibility: collapse !important;
+    }
 }}
