@@ -15,16 +15,17 @@ user_pref("ultima.sidebar.autohide", false);
 /*--------------------------------------------------------*/
 
 user_pref("ultima.theme.extensions", true);
-user_pref("ultima.theme.urlbar", true);
 
 /*--------------------------------------------------------*/
+
+user_pref("ultima.urlbar.suggestions", true);
+user_pref("ultima.urlbar.centered", true);
+user_pref("ultima.urlbar.hidebuttons", false);
 
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.squared", false);
-user_pref("ultima.xstyle.urlbar.suggestions", true);
-
 user_pref("ultima.xstyle.lwtheme", false); /* Experimental. To counter addon themes that use unusual color variables.
 
 /*--------------------------------------------------------*/
