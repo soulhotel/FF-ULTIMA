@@ -17,7 +17,7 @@
 
 ### Change Log:
 - All is well, in Firefox 128.0b2.
-- `new` Setting `ultima.tabs.vertical.hide` will hide vertical tabs.
+- `new` Setting `ultima.tabs.vertical.hide` will hide vertical tabs. (renamed)
 - `new` Setting `ultima.tabs.vertical.onlyprivate` hides vertical tabs ~ except for in private windows.
 - `new` Setting `ultima.xstyle.urlbar.suggestions` to toggle url bar suggestions on/off.
 - `new` Setting `ultima.xstyle.urlbar.centered` to toggle url bar centered text and overflow.
