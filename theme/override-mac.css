@@ -5,7 +5,6 @@
 -----------------------------------------------------------------*/
 
 @media (-moz-os-version: macos), (-moz-platform: macos) {
-
     #nav-bar {
         margin-left: 84px !important;
         margin-right: 0px !important;
