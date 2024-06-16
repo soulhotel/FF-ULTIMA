@@ -11,17 +11,18 @@
 > <details><summary>(CLICK ME) Settings List Preview</summary>
 >
 > <br>
+>  Older named preferences such as ultima.tabs.xs(s,l), ultima.tabs.vertical, ultima.OS.linux, etc, can be deleted.
 >
->   ![2024-06-13_23-50](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/69153e1d-f47c-4ec1-8e1b-6ec5356fb191)
+>  ![newpreferencelist](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ba6c024a-f26a-4459-9b7c-2550f1f2c9ee)
 > </details>
 
 ### Change Log:
 - All is well, in Firefox 128.0b2.
 - `new` Setting `ultima.tabs.vertical.hide` will hide vertical tabs. (renamed)
 - `new` Setting `ultima.tabs.vertical.onlyprivate` hides vertical tabs ~ except for in private windows.
-- `new` Setting `ultima.xstyle.urlbar.suggestions` to toggle url bar suggestions on/off.
-- `new` Setting `ultima.xstyle.urlbar.centered` to toggle url bar centered text and overflow.
-- `new` Setting `ultima.xstyle.urlbar.hidebuttons` to show excess buttons only on hover.
+- `new` Setting `ultima.urlbar.suggestions` to toggle url bar suggestions on/off.
+- `new` Setting `ultima.urlbar.centered` to toggle url bar centered text and overflow.
+- `new` Setting `ultima.urlbar.hidebuttons` to show excess buttons only on hover.
 - `new` Audio indicator (in Sidebery) positioned similar to native vertical tabs by [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
 - `fix` Mac OS toolbar width patched, tested on Sonama and Ventura.
 - `fix` Group Indentations improved (in Sidebery) [DarkDipper](https://github.com/DarkDipper), [#73](https://github.com/soulhotel/FF-ULTIMA/pull/73).
