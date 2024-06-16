@@ -61,7 +61,7 @@ while keeping a clean consistent look across the theme, refer to position-vertta
 
 
 
-/* pinned tabs alternative style */
+/* pinned tabs alternative style. Experimental. Havent decided on style yet. */
 
 @media (-moz-bool-pref: "ultima.xstyle.pinnedtabs.i") {
   @media (prefers-color-scheme: dark) {
