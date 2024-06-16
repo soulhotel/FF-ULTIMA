@@ -32,6 +32,7 @@
 - `todo` Alternative lwtheme variables (experimental)
 - `todo` Setting to keep default tabs-on-top layout. (not a priority)
 - `todo` Verify Windows Nav bar vertical center
+- `todo` New preference for alternate pinned tab styling, still havent decided on a style yet. Feedback is appreciated.
 
 ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9)
 
