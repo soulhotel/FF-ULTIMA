@@ -151,7 +151,7 @@ Index: For ctrl+f search of a section
             margin-right: 0px !important;
         }        
         :root[tabsintitlebar] .titlebar-buttonbox {
-            top: 6px !important;
+            top: 7px !important;
             right: unset !important;
             left: 3px !important;
         }
