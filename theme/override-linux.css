@@ -145,8 +145,7 @@ Index: For ctrl+f search of a section
 /* all mac overrides have been moved to a dedicated file override-mac.css*/
 /* this preferences will be recycled into an alternative style for titlebar buttons */
 
-@media (-moz-bool-pref: "ultima.OS.mac") {
-    @media not (-moz-os-version: macos) {
+@media (-moz-bool-pref: "ultima.OS.mac"), (-moz-os-version: linux) {
         #nav-bar {
             margin-left: 100px !important;
             margin-right: 0px !important;
@@ -156,7 +155,6 @@ Index: For ctrl+f search of a section
             right: unset !important;
             left: 3px !important;
         }
-    } /*--<--end mac gatekeeping--*/
 } /*--<--end OS preference query--*/
 
 /*------------------------------------------------------------------------*/
