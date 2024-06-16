@@ -21,7 +21,7 @@
 | ultima.urlbar.centered | Center URL Bar text | ... |
 | ultima.urlbar.hidebuttons | Hide URL Bar buttons unless hovered | ... |
 | ultima.OS.(etc) | For linux title buttons to render correctly, select your DE | ... |
-| ultima.OS.mac | This can be used regardless of OS, to simulate left side titlebar buttons | ... |
+| ultima.OS.mac | This can be used regardless of OS, to simulate left side titlebar buttons. Mac Users will automatically have correct placement. | ![os mac](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/66226d4f-0a10-4c25-be5e-4d244c29ae92) |
 | toolkit.tabbox.switchByScrolling | Enables scrolling on the tabs bar, to switch between tabs | ... |
 | ... | ... | ... |
 
