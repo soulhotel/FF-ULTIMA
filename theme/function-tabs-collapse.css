@@ -30,16 +30,16 @@
     margin-inline-end: -3px !important;
 }
 
-/*full screen tabs panel height correction*/
+/* full screen tabs panel height correction */
 
-@media (-moz-bool-pref: "ultima.tabs.vertical") {
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
   #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
     height: calc(100vh - var(--uc-margin-top) - var(--uc-margin-bottom));
     top: 3px !important;
   }
 }
 
-/*--collapse tabs on small browser width support--*/
+/* collapse tabs on small browser width support */
 
 @media (max-width:850px){
     #main-window {

@@ -5,21 +5,21 @@ Global variables start at line 30. Then further modifications for different part
 Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
 */
 
-/*--user preference setting for XS size tabs--*/
+/* user preference setting for XS size tabs */
 @media (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 41px;
         --uc-vertical-tabs-width-revert: 41px;
     }
 }}}
-/*--user preference setting for S size tabs--*/
+/* user preference setting for S size tabs */
 @media (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 165px;
         --uc-vertical-tabs-width-revert: 165px;
     }
 }}}
-/*--user preference setting for L size tabs--*/
+/* user preference setting for L size tabs */
 @media (-moz-bool-pref: "ultima.tabs.size.l") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") {
     :root:not([customizing],[chromehidden~="menubar"]){
         --uc-vertical-tabs-width: 250px;
@@ -31,8 +31,8 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 :root:not([customizing],[chromehidden~="menubar"]){
     --uc-navbar-height: 40px;
-    --uc-collapsed-tabs-width: 41px;
-} /*--DO NOT GO LOWER THAN 41PX--*/
+    --uc-collapsed-tabs-width: 41px; /* do NOT go lower than 41px */
+}
 
 :root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {
     --uc-navbar-height: 34px;

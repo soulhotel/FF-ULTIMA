@@ -4,7 +4,7 @@
 - positioned absolutely, centered, compact
  ------------------------------------------------------------- */
 
-/*--quick styling--*/
+/* quick styling */
 
 #menubar-items {
   background: var(--uc-ultima-background-ii) !important;
@@ -19,7 +19,7 @@
 }}
 
 
-/*--positioning when active--*/
+/* positioning when active */
 
 /*#toolbar-menubar:not([inactive="true"]), */
 #toolbar-menubar[autohide="false"] {
@@ -35,7 +35,7 @@
 }}
 
 
-/*--positioning when pressing alt--*/
+/* positioning when pressing alt */
 
 /*#toolbar-menubar:not([inactive="true"]), */
 #toolbar-menubar[autohide="true"]:not([inactive="true"]) {
