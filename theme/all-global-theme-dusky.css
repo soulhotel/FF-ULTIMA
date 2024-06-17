@@ -152,6 +152,10 @@ Dusky Color Scheme (Light)
   background: var(--uc-ultima-window) !important;
 }
 
+body {
+  background: var(--uc-ultima-window) !important;
+}
+  
 /*--content window--*/
 
 #appcontent, #browser, #tabbrowser-tabbox, #tabbrowser-tabpanels, .browserSidebarContainer
