@@ -1,7 +1,14 @@
 # Modifications
+###### IF you cant find what you are looking for, submit an issue or browse [previous ones](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue+is%3Aclosed)
+- [Settings and Preferences](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
+- [Sidebery optional styling](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
+- [Switching from Dark Mode to Light Mode](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#switching-from-dark-mode-to-light-mode)
+- [Userchrome-Toggle extension support](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#userchrome-toggle-extension-support)
+- [Spreadsheets for power users](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#spreadsheets-for-power-users)
+- [Create a color scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#create-a-theme-i-was-able-to-create-dusky-light-mode-just-like-this)
+
 
 ## Settings and Preferences, found on the `about:config` page.
-###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
 ###### <p align="right">(click images for bigger resolution)</p>
 
 | Preferences          | Function            | Preview             |
@@ -25,7 +32,7 @@
 
 ---
 
-# Sidebery Optional styling
+# Sidebery optional styling
 ###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
 
 | Sidebery Data                            | Preview                      |
