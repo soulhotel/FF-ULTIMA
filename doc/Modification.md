@@ -7,8 +7,8 @@
 - [Spreadsheets for power users](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#spreadsheets-for-power-users)
 - [Create a color scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#create-a-theme-i-was-able-to-create-dusky-light-mode-just-like-this)
 
-# Settings and Preferences, found on the `about:config` page.
 
+## Settings and Preferences, found on the `about:config` page.
 ###### <p align="right">(click images for bigger resolution)</p>
 
 | Preferences          | Function            | Preview             |
