@@ -1,6 +1,6 @@
 # Modifications
 ###### IF you cant find what you are looking for, submit an issue or browse [previous ones](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue+is%3Aclosed)
-- [Settings and Preferences](../Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
+- [Settings and Preferences](./Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
 - [Sidebery optional styling](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
 - [Switching from Dark Mode to Light Mode](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#switching-from-dark-mode-to-light-mode)
 - [Userchrome-Toggle extension support](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#userchrome-toggle-extension-support)
