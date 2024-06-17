@@ -1,9 +1,7 @@
-## Modifications
+# Modifications
 
-### Settings and Preferences, found on the `about:config` page.
-
+## Settings and Preferences, found on the `about:config` page.
 ###### IF you cant find what you are looking for, submit an issue or browse the [replace-features.md](replace-features.md)
-
 ###### <p align="right">(click images for bigger resolution)</p>
 
 | Preferences          | Function            | Preview             |
@@ -26,49 +24,43 @@
 | ... | ... | ... |
 
 ---
-<br>
 
-### Sidebery Optional styling
-
+# Sidebery Optional styling
 ###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
 
 | Sidebery Data                            | Preview                      |
 |------------------------------------------|------------------------------|
 | `/theme/#sideberyultimastyling.json` | ![explorer_Iyz3pZjiWT](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0b73c1d5-7c41-464c-b6a2-839d8485dfdc) |
 
-If importing this .json above doesn't copy over the css styling. Try resetting Sidebery to default first, and reloading the add-on. Then import the json.
+If importing, doesn't fully copy the css. Try resetting Sidebery to default first, then reload the add-on. Then import the json.
 
 ![1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/3bbc954e-aeba-416b-955e-da5aac9d4446)
 
 Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
 
 ---
-<br>
 
-### Switching from Dark Mode to Light Mode
-
+# Switching from Dark Mode to Light Mode
 ###### This is fully reliant on your systems current Color state. `Personalize - Color Mode` for Windows. `Setting a dark theme like 'Dark Breeze' globally and to windows` for Linux. And Mac follows a similar structure I believe.
 
 ![Main Preview](preview/prev1.gif)
 
 ---
-<br>
 
-### [Userchrome-Toggle extension](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle/) support
+# [Userchrome-Toggle extension](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle/) support
 With `ultima.tabs.autohide` set to false. And `ultima.tabs.size.xs` set to true; You can toggle the tabs-view using the extension button, or keyboard shortcut.
 
 [userchrome-toggle test..webm](https://github.com/soulhotel/FF-ULTIMA/assets/44523955/252b3bae-f1c8-41ad-afa7-1e67d7f441cb)
 
 ---
-<br>
 
-### Spreadsheets for power users.
+# Spreadsheets for power users.
 <-- [spreadsheets for all variables](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md) (sectioned off by global color modifications, and global positioning modifications)
 
 ---
 <br>
 
-### Create a theme. I was able to create Dusky (Light Mode), just like this.
+# Create a theme. I was able to create Dusky (Light Mode), just like this.
 ###### You atleast need to have knowledge on what live debugging is to proceed.
 ###### chrome/theme/all-global-theme-dusky.css , chrome/theme/all-global-theme-fullmoon.css
 
