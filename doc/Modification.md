@@ -33,7 +33,7 @@
 ---
 
 # Sidebery optional styling
-###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
+###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/sideberyimport.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
 
 | Sidebery Data                            | Preview                      |
 |------------------------------------------|------------------------------|
