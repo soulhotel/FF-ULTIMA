@@ -1,11 +1,11 @@
 # Modifications
 ###### IF you cant find what you are looking for, submit an issue or browse [previous ones](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue+is%3Aclosed)
-- [Settings and Preferences](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
-- [Sidebery optional styling](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
-- [Switching from Dark Mode to Light Mode](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#switching-from-dark-mode-to-light-mode)
-- [Userchrome-Toggle extension support](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#userchrome-toggle-extension-support)
-- [Spreadsheets for power users](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#spreadsheets-for-power-users)
-- [Create a color scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md#create-a-theme-i-was-able-to-create-dusky-light-mode-just-like-this)
+- [Settings and Preferences](./Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
+- [Sidebery optional styling](./Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
+- [Switching from Dark Mode to Light Mode](./Modification.md#switching-from-dark-mode-to-light-mode)
+- [Userchrome-Toggle extension support](./Modification.md#userchrome-toggle-extension-support)
+- [Spreadsheets for power users](./Modification.md#spreadsheets-for-power-users)
+- [Create a color scheme](./Modification.md#create-a-theme-i-was-able-to-create-dusky-light-mode-just-like-this)
 
 
 ## Settings and Preferences, found on the `about:config` page.
