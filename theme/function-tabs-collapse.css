@@ -23,13 +23,6 @@
     transition-delay: 0ms !important;
 }
 
-#main-window[sizemode="fullscreen"] .tab-close-button,
-#main-window[sizemode="fullscreen"] .close-icon{
-    padding: 2px !important;
-    display: none !important;
-    margin-inline-end: -3px !important;
-}
-
 /* full screen tabs panel height correction */
 
 @media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
