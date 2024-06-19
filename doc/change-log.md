@@ -19,7 +19,7 @@
 ### Change Log:
 - ....
 - `new`
-- `fix`
+- `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `todo` Alternative lwtheme variables (experimental).
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
