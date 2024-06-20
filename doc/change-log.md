@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.9.5/ffultima1.7.9.5.zip) 1.7.9.5 latest (TODO's....)
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.7.9.5/ffultima1.7.9.5.zip) 1.7.9.5 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -17,18 +17,14 @@
 > </details>
 
 ### Change Log:
-- ....
-- `new`
+- `new` Setting `ultima.OS.kdedecoration` adds compatibility for KDE Users with themed window decoration buttons.
+> ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `todo` Alternative lwtheme variables (experimental).
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
 - `todo` New preference for alternate pinned tab styling, still havent decided on a style yet. Feedback is appreciated.
 
-|windows                   | ![1 7](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ed741f9f-cac6-4339-8913-a697a8b3ade9) |
-|---                       |---|
-|Linux                     | ![lin](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6d6e1a97-d17e-4b9d-8bb7-73e47b688558) |
-|Mac (from LowSpecGamer25) | ![mac-user](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/e814cc59-ae96-4e8a-a128-261daecd9094) |
 
 
 
