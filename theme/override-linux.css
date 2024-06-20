@@ -6,7 +6,7 @@
 KDE window controls
 Gnome window controls
 Mac positioned controls (for any OS)
-Linux compat. for themed Window decoration buttons
+KDE compat. for themed Window decoration buttons
 -----------------------------------------------------------------*/
 
 /*--Default Linux Overrides - Inactivity titlebar, Nav bar spacing, More--*/
@@ -230,7 +230,7 @@ Linux compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Linux compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.linuxdecorations") {
+@media (-moz-bool-pref: "ultima.OS.kdedecorations") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     :root[tabsintitlebar] .titlebar-buttonbox {
