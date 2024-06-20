@@ -31,6 +31,7 @@ user_pref("ultima.xstyle.pinnedtabs.i", false); /* Experimental. Havent decided 
 user_pref("ultima.OS.kde", true);
 user_pref("ultima.OS.gnome", false);
 user_pref("ultima.OS.mac", false);
+user_pref("ultima.OS.kdedecorations", false);
 /*user_pref("ultima.OS.linux", false);*/ /*Experimental*/
 
 /*other*/
