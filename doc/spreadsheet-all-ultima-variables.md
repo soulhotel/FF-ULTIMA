@@ -38,7 +38,7 @@
 
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
-| --uc-ultima-window               | 17-- | ✅ | This variable is the main window default grey background |
+| --uc-ultima-window               | 17-- | ✅ | This variable is the main window default grey/white background |
 | --uc-dark                        |      | ⚠️ | Used as a global black                    |
 | --uc-light                       |      | ⚠️ | Used as a global white                    |
 | --uc-light-dark                  |      | ⚠️ | Used to swap text from black/white depending on dark/lightmode |
@@ -47,7 +47,7 @@
 | --uc-ultima-accent-ii            |      | ✅ | A blue accent color                       |
 | --uc-ultima-accent-iii           |      | ✅ | A white accent color                      |
 | --uc-ultima-accent-iv            |      | ✅ | A darker rgb accent color                 |
-| --uc-ultima-background-i         |      | ⚠️ | ultima-backgrounds i-iv all share the same dark rgb, however they have different transparent levels depending on the element they are assigned to. |
+| --uc-ultima-background-i         |      | ⚠️ | ultima-backgrounds i-iv all share the same rgb profile, however they have different transparent levels depending on the element they are assigned to. These are all used for static panels and menu backgrounds |
 | --uc-ultima-background-ii        |      | ✅ | "^" more opacity than above               |
 | --uc-ultima-background-iii       |      | ✅ | "^" more opacity than above and above     |
 | --uc-ultima-background-iv        |      | ✅ | the solid rgb version to the backgrounds above |

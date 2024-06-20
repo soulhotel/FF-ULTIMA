@@ -1,7 +1,7 @@
 # Modifications
 ###### IF you cant find what you are looking for, submit an issue or browse [previous ones](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue+is%3Aclosed)
 - [Settings and Preferences](./Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
-- [Sidebery optional styling](./Modification.md#settings-and-preferences-found-on-the-aboutconfig-page)
+- [Sidebery optional styling](./Modification.md#sidebery-optional-styling)
 - [Switching from Dark Mode to Light Mode](./Modification.md#switching-from-dark-mode-to-light-mode)
 - [Userchrome-Toggle extension support](./Modification.md#userchrome-toggle-extension-support)
 - [Spreadsheets for power users](./Modification.md#spreadsheets-for-power-users)
@@ -33,7 +33,7 @@
 ---
 
 # Sidebery optional styling
-###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/%23sideberyultimastyling.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
+###### [Sidebery configuration](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/sideberyimport.json) for those that want to opt out of the native vertical tabs. You can turn off `ultima.tabs.vertical` in `about:config`, and (if you want to) then turn on `ultima.sidebar.autohide`. Import the config file into your sidebery sync. The config file is also already inside of your chrome/theme folder.
 
 | Sidebery Data                            | Preview                      |
 |------------------------------------------|------------------------------|

@@ -24,7 +24,3 @@
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
 - `todo` New preference for alternate pinned tab styling, still havent decided on a style yet. Feedback is appreciated.
-
-
-
-
