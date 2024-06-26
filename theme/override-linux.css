@@ -60,9 +60,14 @@ KDE compat. for themed Window decoration buttons
 @media (-moz-bool-pref: "ultima.OS.kde") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-    :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 7px !important;
-        right: 5px !important;
+    :root[tabsintitlebar] {
+        .titlebar-buttonbox {
+            top: 7px !important;
+            right: 5px !important;
+        }
+        &[uidensity="compact"] .titlebar-buttonbox {
+            top: 4px !important;
+        }
     }
     
     .titlebar-button, .titlebar-button[lwtheme="true"] {
