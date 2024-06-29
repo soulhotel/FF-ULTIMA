@@ -26,9 +26,10 @@
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` More layering for the alternate lwtheme preference.
 - `qol` Color Variables have been adjusted; excess removed, readability improved (hopefully). Some changes include but are not limited to:
-  - name shortening from `uc-ultima-etc` to `uc-etc`
+  - Name shortening from `uc-ultima-etc` to `uc-etc`
   - `uc-light-dark` and `uc-dark-light` removed/merged into `uc-text`. Functionality has not changed.
   - `uc-panel-border` is utilized more often, specifically for every element that has a modified border.
-  - ``
+  - Many nested elements (with altered backgrounds) now adopt their parents related background variable.
+  - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
 
 
