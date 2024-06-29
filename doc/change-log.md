@@ -6,6 +6,8 @@
 
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
+###### ⏭️ Preview [*what's next*](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/change-log.md) in the change-log for the Main Update Branch.
+
 >[!WARNING]
 > Returning Users: **Some user preferences were renamed in 1.7.9!** If you haven't done so already, please reapply your user.js to get the corrected settings. This change is to reflect future updates/features while organizing the names for easier readability. Setting names will be carefully considered moving forward and renaming will **NOT** happen again. Thank you.
 > <details><summary>(CLICK ME) Settings List Preview</summary>
