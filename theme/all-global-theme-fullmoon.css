@@ -62,9 +62,10 @@ color-scheme: dark !important; /*--<--dont touch--*/
     - Full Moon Color Palette Application
 -------------------------------------------------------------------------------------*/
 
-#main-window:not([lwtheme="true"]) {background-color: var(--uc-ultima-window) !important;}
-
-#main-window:not([lwtheme="true"]) {--toolbar-bgcolor: var(--uc-ultima-window) !important;}
+#main-window:not([lwtheme="true"]) {
+    background-color: var(--uc-ultima-window) !important;
+    --toolbar-bgcolor: var(--uc-ultima-window) !important;
+}
   
 #main-window:not([lwtheme]), :root:not([lwtheme]) {
 
@@ -131,14 +132,14 @@ color-scheme: dark !important; /*--<--dont touch--*/
 /*------------fixing the nav bar-------------*/
 
 #navigator-toolbox {
-  background-color: var(--toolbar-bgcolor) !important;
-  border-bottom: 1px solid rgba(0,0,0,0) !important;
-}
+    background-color: var(--toolbar-bgcolor) !important;
+    border-bottom: 1px solid rgba(0,0,0,0) !important;
 
-#navigator-toolbox { &:-moz-window-inactive {
-  background-color: var(--toolbar-bgcolor) !important;
-  color: white !important;
-}}
+    &:-moz-window-inactive {
+        background-color: var(--toolbar-bgcolor) !important;
+        color: white !important;
+    }
+}
 
 :root { @media (-moz-platform: windows) { & {
 --inactive-titlebar-opacity: 1 !important;
@@ -160,21 +161,18 @@ body {background: var(--toolbar-bgcolor) !important;}
 .browserStack
   { background: var(--uc-transparent) !important; }
 
-#main-window
-#tabbrowser-tabpanels { browser[type] {
-    outline: 4px solid var(--toolbar-bgcolor);
-}}
+#main-window {
+    & #tabbrowser-tabpanels browser[type] {
+        outline: 4px solid var(--toolbar-bgcolor);
+    }
 
-#main-window[lwtheme="true"]
-#tabbrowser-tabpanels { browser[type] {
-    outline: 3px solid var(--lwt-accent-color);
-}}
+    &[lwtheme="true"] #tabbrowser-tabpanels browser[type] {
+        outline: 3px solid var(--lwt-accent-color);
 
-@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-  #main-window[lwtheme="true"]
-  #tabbrowser-tabpanels { browser[type] {
-      outline: 3px solid var(--arrowpanel-background);
-  }}
+        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+            outline: 3px solid var(--arrowpanel-background);
+        }
+    }
 }
 
 /*-----------------side bar-----------------*/
@@ -202,18 +200,19 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 /*-------------------tabs-------------------*/
 
-/*--the panel that holds the vertical tabs--*/
 
-#main-window:not([lwtheme]) #tabbrowser-tabs {
-  background: transparent;
-  --tab-loading-fill: var(--uc-ultima-accent-i) !important;
-}
+#main-window:not([lwtheme]) {
+    /*--the panel that holds the vertical tabs--*/
+    & #tabbrowser-tabs {
+        background: transparent;
+        --tab-loading-fill: var(--uc-ultima-accent-i) !important;
+    }
 
-/*--tabs toolbar container that wraps around the area--*/
-
-#main-window:not([lwtheme]) #TabsToolbar-customization-target {
-  box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-  background: var(--uc-ultima-background-iv);
+    /*--tabs toolbar container that wraps around the area--*/
+    & #TabsToolbar-customization-target {
+        box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+        background: var(--uc-ultima-background-iv);
+    }
 }
 
 /*--pinned tabs style--*/
@@ -280,15 +279,20 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 /*----------------menu popups---------------*/
 
-#main-window:not([lwtheme]) .panel-subview-body
-  {background: var(--uc-ultima-background-iii) !important;}
+#main-window:not([lwtheme]) {
+    & .panel-subview-body {
+        background: var(--uc-ultima-background-iii) !important;
+    }
 
-#main-window:not([lwtheme]) .menupopup-arrowscrollbox
-  {background-color: var(--uc-ultima-background-ii) !important;}
+    & .menupopup-arrowscrollbox {
+        background-color: var(--uc-ultima-background-ii) !important;
+    }
 
-#main-window:not([lwtheme]) .toolbarbutton-icon:hover,
-#main-window:not([lwtheme]) .toolbarbutton-icon[open] {
-  background-color: var(--uc-selected) !important;}
+    & .toolbarbutton-icon:hover,
+    & .toolbarbutton-icon[open] {
+        background-color: var(--uc-selected) !important;
+    }
+}
 
 :root[dialogroot] {
   --in-content-page-background: var(--uc-ultima-background-iii) !important;
@@ -339,24 +343,26 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 /*--main window background--*/
 
-#main-window[lwtheme="true"] body
-  {background: var(--lwt-accent-color) !important; }
+#main-window[lwtheme="true"] {
+    & body {
+        background: var(--lwt-accent-color) !important; 
 
-@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-  #main-window[lwtheme="true"] body {
-    background: var(--arrowpanel-background) !important;
-  }
+        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+            background: var(--arrowpanel-background) !important;
+        }
+    }
+
+    /*--content window--*/
+    & #appcontent, & #browser,
+    & #tabbrowser-tabbox, & #tabbrowser-tabpanels,
+    & .browserSidebarContainer { 
+        background: var(--uc-transparent) !important; 
+    }
+
+    & .browserStack { 
+        background: var(--uc-transparent) !important; 
+    }
 }
-
-/*--content window--*/
-
-#main-window[lwtheme="true"] #appcontent, #main-window[lwtheme="true"] #browser,
-#main-window[lwtheme="true"] #tabbrowser-tabbox, #main-window[lwtheme="true"] #tabbrowser-tabpanels,
-#main-window[lwtheme="true"] .browserSidebarContainer
-  { background: var(--uc-transparent) !important; }
-
-#main-window[lwtheme="true"] .browserStack
-  { background: var(--uc-transparent) !important; }
 
 #nav-bar {background: initial !important;}
 
@@ -365,15 +371,18 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 /*side bar themed*/
 
-#main-window[lwtheme="true"] #sidebar-header
-  { background: var(--uc-sb-lwt) !important; 
-} #main-window[lwtheme="true"] #sidebar {
-  background: var(--uc-sb-lwt) !important;
-} #main-window[lwtheme="true"] #sidebar-box {
-  background: var(--uc-transparent) !important;
-} .sidebar-panel[lwt-sidebar] {
-  background-color: var(--uc-transparent) !important;
+#main-window[lwtheme="true"] {
+    & #sidebar-header, & #sidebar { 
+        background: var(--uc-sb-lwt) !important; 
+    }  
+    #sidebar-box {
+        background: var(--uc-transparent) !important;
+    } 
 }
+.sidebar-panel[lwt-sidebar] {
+    background-color: var(--uc-transparent) !important;
+}
+
 
 /* ------------------- tabs ------------------- */
 
@@ -393,28 +402,31 @@ body {background: var(--toolbar-bgcolor) !important;}
 
 /*--pinned themed-*/
 
-#main-window[lwtheme="true"] .tab-content[pinned=""] .tab-background,
-#main-window[lwtheme="true"] .tab-content[pinned="true"] .tab-background
-  { background: var(--lwt-accent-color);}
+#main-window[lwtheme="true"]  {
+    --tab-selected-bgcolor: var(--lwt-accent-color) !important;
 
-#main-window[lwtheme="true"] 
-  {--tab-selected-bgcolor: var(--lwt-accent-color) !important;}
+    & .tab-content[pinned=""] .tab-background,
+    & .tab-content[pinned="true"] .tab-background { 
+        background: var(--lwt-accent-color);
+    }
 
-@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-  #main-window[lwtheme="true"] 
-    {--tab-selected-bgcolor: var(--uc-ultima-background-i) !important;}
+    @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+        --tab-selected-bgcolor: var(--uc-ultima-background-i) !important;
+    }
 }
 
-.tabbrowser-tab[pending="true"] {opacity: 0.3 !important;}
+.tabbrowser-tab[pending="true"] {
+    opacity: 0.3 !important;
+}
 
 /*-------------------------------------------------------------------------------*/
 /*----------------------------------extra----------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
 tooltip {
-  background-color: var(--uc-ultima-background-i) !important;
-  color: var(--uc-light) !important;
-  border-color: var(--uc-dark) !important;
+    background-color: var(--uc-ultima-background-i) !important;
+    color: var(--uc-light) !important;
+    border-color: var(--uc-dark) !important;
 }
 
 /*------------------sidebar extra------------------*/
@@ -466,21 +478,28 @@ splitter {@media (-moz-platform: windows) { & {
 /*-------------------*/
 
 /*-----------------extensionspanel----------------------*/
-#main-window:not([lwtheme]) .panel-subview-body
-  {background: var(--uc-ultima-background-ii) !important;}
+#main-window:not([lwtheme]) {
+    .panel-subview-body {
+        background: var(--uc-ultima-background-ii) !important;
+    }
 
-#main-window:not([lwtheme]) panelview,
-#main-window:not([lwtheme]) #unified-extensions-view
-  {background: var(--uc-ultima-background-ii) !important}
+    & panelview,
+    & #unified-extensions-view {
+        background: var(--uc-ultima-background-ii) !important
+    }
+}
 
 /*--title buttons--*/
 
 /*minmaxclose*/
 
-#main-window:not([lwtheme]) .titlebar-button {
-  stroke: var(--uc-ultima-accent-iii) !important;
-} #main-window[lwtheme="true"] .titlebar-button {
-  stroke: var(--toolbarbutton-icon-fill) !important;
+#main-window {
+    &:not([lwtheme]) .titlebar-button {
+        stroke: var(--uc-ultima-accent-iii) !important;
+    } 
+    &[lwtheme="true"] .titlebar-button {
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
 }
 
 /*---------fix titlebar opacity----------*/
@@ -491,13 +510,15 @@ splitter {@media (-moz-platform: windows) { & {
 
 /*---------full screen indicator label----------*/
 /*--the label that says ("website.com is now in full screen...")--*/
-
-#fullscreen-warning, *.pointerlockfswarning {
-  opacity: 0 !important;
-  border-radius: 20px !important;
-} #fullscreen-warning * {
-  border-radius: var(--uc-all-border-radius) !important;
-}
+#fullscreen-warning { 
+    &, *.pointerlockfswarning {
+        opacity: 0 !important;
+        border-radius: 20px !important;
+    }
+    & * {
+        border-radius: var(--uc-all-border-radius) !important;
+    }
+} 
 
 /*-----------------------------------------------------------------------------------*/
 /*---------------------------------CUSTOM ICONS--------------------------------------*/
