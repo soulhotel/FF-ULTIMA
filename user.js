@@ -36,6 +36,7 @@ user_pref("ultima.OS.kdedecorations", false);
 /*user_pref("ultima.OS.linux", false);*/ /*Experimental*/
 
 /*other*/
+user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("toolkit.tabbox.switchByScrolling", true);
