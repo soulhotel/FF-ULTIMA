@@ -17,9 +17,11 @@
 > </details>
 
 ### Change Log:
+- `new` Setting `ultima.sidebery.autohide` to autohide Sidebery only, leaving other Sidebar panels in a static state by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
 - `new` Setting `ultima.OS.kdedecoration` adds compatibility for KDE Users with themed window decoration buttons.
 > ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
+- `qol` About config warning dialog set to false.
 - `todo` Alternative lwtheme variables (experimental).
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.

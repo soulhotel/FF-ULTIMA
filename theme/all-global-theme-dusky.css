@@ -62,9 +62,10 @@ Dusky Color Scheme (Light)
     - Light Mode Color Palette Application
 -------------------------------------------------------------------------------------*/
 
-#main-window:not([lwtheme]) {background-color: var(--uc-ultima-window) !important;}
-
-#main-window:not([lwtheme]) {--toolbar-bgcolor: var(--uc-ultima-window) !important;}
+#main-window:not([lwtheme]) {
+    background-color: var(--uc-ultima-window) !important;
+    --toolbar-bgcolor: var(--uc-ultima-window) !important;
+}
 
 #main-window:not([lwtheme]), :root:not([lwtheme]) {
 
@@ -132,14 +133,14 @@ Dusky Color Scheme (Light)
 /*------------fixing the nav bar-------------*/
 
 #navigator-toolbox {
-  background-color: var(--toolbar-bgcolor) !important;
-  border-bottom: 1px solid rgba(0,0,0,0) !important;
-}
+    background-color: var(--toolbar-bgcolor) !important;
+    border-bottom: 1px solid rgba(0,0,0,0) !important;
 
-#navigator-toolbox { &:-moz-window-inactive {
-  background-color: var(--toolbar-bgcolor) !important;
-  color: var(--toolbox-non-lwt-textcolor-inactive) !important;
-}}
+    &:-moz-window-inactive {
+        background-color: var(--toolbar-bgcolor) !important;
+        color: var(--toolbox-non-lwt-textcolor-inactive) !important;
+    }
+}
 
 :root {
 @media (-moz-platform: windows) { & {
@@ -164,15 +165,14 @@ body {
 .browserStack
 { background: var(--uc-transparent) !important; }
 
-#main-window
-#tabbrowser-tabpanels { browser[type] {
-    outline: 4px solid var(--toolbar-bgcolor);
-}}
-
-#main-window[lwtheme="true"]
-#tabbrowser-tabpanels { browser[type] {
-    outline: 3px solid var(--lwt-accent-color);
-}}
+#main-window {
+    & #tabbrowser-tabpanels browser[type] {
+        outline: 4px solid var(--toolbar-bgcolor);
+    }
+    &[lwtheme="true"] #tabbrowser-tabpanels browser[type] {
+        outline: 3px solid var(--lwt-accent-color);
+    }
+}
   
 /*-----------------side bar-----------------*/
 
@@ -187,23 +187,23 @@ body {
 
 /*-------------------tabs-------------------*/
 
-/*--the panel that holds the vertical tabs--*/
 
-#main-window:not([lwtheme]) #tabbrowser-tabs { 
-  background: var(--uc-tabs-background);
-  --tab-loading-fill: var(--uc-ultima-accent-i) !important;
-}
+#main-window:not([lwtheme]) {
+    /*--the panel that holds the vertical tabs--*/
+    & #tabbrowser-tabs { 
+        background: var(--uc-tabs-background);
+        --tab-loading-fill: var(--uc-ultima-accent-i) !important;
+    }
 
-/*--tabs toolbar container that wraps around the area--*/
+    /*--tabs toolbar container that wraps around the area--*/
+    & #TabsToolbar-customization-target {
+        box-shadow: inset 0 0 1px 1px transparent !important;
+    }
 
-#main-window:not([lwtheme]) #TabsToolbar-customization-target {
-  box-shadow: inset 0 0 1px 1px transparent !important;
-}
-
-/*--individual tab text color--*/
-
-#main-window:not([lwtheme]) .tabbrowser-tab {
-  color: var(--uc-text-ii) !important;
+    /*--individual tab text color--*/
+    & .tabbrowser-tab {
+          color: var(--uc-text-ii) !important;
+    }
 }
 
 /*--pinned tabs style--*/
@@ -224,47 +224,42 @@ body {
 
 /*------------------URL bar----------------*/
 
-#main-window:not([lwtheme]) #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
-  background-color: var(--uc-ultima-window) !important;
-  border-radius: var(--uc-all-border-radius) !important;
-}
-
 #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
-  border-radius: var(--uc-all-border-radius) !important;
+    border-radius: var(--uc-all-border-radius) !important;
 }
 
-#main-window:not([lwtheme]) #urlbar-background, #searchbar {
-  background-color: var(--uc-ultima-accent-iv) !important;
-  border-radius: 10px !important;
-  border: 0 !important;
-  box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);
+#main-window:not([lwtheme]) {
+    #urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
+        background-color: var(--uc-ultima-window) !important;
+        border-radius: var(--uc-all-border-radius) !important;
+    }
+
+    & #urlbar-background, #searchbar {
+        background-color: var(--uc-ultima-accent-iv) !important;
+        border-radius: 10px !important;
+        border: 0 !important;
+        box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);
+    }
+
+    & #urlbar[open] > #urlbar-background {
+        border-color: var(--uc-ultima-background-i) !important;
+    }
+
+    & #urlbar[breakout][breakout-extend] {
+        background-color: var(--uc-context-menu) !important;
+        border-radius: 10px;
+    }
+
+    & #urlbar-zoom-button {
+        background-color: var(--uc-active) !important;
+        margin-top:3px !important;
+    }
+
+    .urlbarView-row[selected] {
+        color: var(--uc-dark-light) !important;
+    }
 }
 
-#main-window:not([lwtheme]) #urlbar-background, #searchbar {
-  background-color: var(--uc-ultima-accent-iv) !important;
-  border-radius: 10px !important;
-}
-
-#main-window:not([lwtheme]) #urlbar[open] > #urlbar-background {
-  border-color: var(--uc-ultima-background-i) !important;
-}
-
-#main-window:not([lwtheme]) #urlbar[breakout][breakout-extend] {
-  background-color: var(--uc-context-menu) !important;
-  border-radius: 10px;
-}
-
-#main-window:not([lwtheme]) #urlbar-zoom-button {
-  background-color: var(--uc-active) !important;
-  margin-top:3px !important;
-}
-
-#main-window:not([lwtheme]) .urlbarView-row {
-  &[selected] {
-    color: var(--uc-dark-light) !important;
-  }
-}
-  
 /*---------customize toolbar page-----------*/
 
 #customization-container {background-color: var(--uc-sb-background) !important;}
@@ -275,28 +270,30 @@ body {
 
 /*----------------menu popups and dialogs---------------*/
 
-#main-window:not([lwtheme]) .panel-subview-body {
-background: var(--uc-ultima-background-ii) !important;
-}
+#main-window:not([lwtheme]) {
+    & .panel-subview-body {
+        background: var(--uc-ultima-background-ii) !important;
+    }
 
-#main-window:not([lwtheme]) .menupopup-arrowscrollbox {
-background-color: var(--uc-ultima-background-ii) !important;
-}
+    & .menupopup-arrowscrollbox {
+        background-color: var(--uc-ultima-background-ii) !important;
+    }
 
-#main-window:not([lwtheme]) .toolbarbutton-icon:hover,
-#main-window:not([lwtheme]) .toolbarbutton-icon[open] {
-  background-color: var(--uc-selected) !important;
+    & .toolbarbutton-icon:hover,
+    & .toolbarbutton-icon[open] {
+        background-color: var(--uc-selected) !important;
+    }
+
+    menupopup, panel { &::part(content) {
+        color: var(--uc-dark);
+        border: 1px solid var(--uc-panel-border-ii);
+    }}
 }
 
 :root[dialogroot] {
-  --in-content-page-background: var(--uc-ultima-background-iii) !important;
-  color: var(--uc-dark)  !important;
+    --in-content-page-background: var(--uc-ultima-background-iii) !important;
+    color: var(--uc-dark)  !important;
 }
-
-#main-window:not([lwtheme]) menupopup, panel { &::part(content) {
-  color: var(--uc-dark);
-  border: 1px solid var(--uc-panel-border-ii);
-}}
 
 /*------------------buttons-----------------*/
 
@@ -334,18 +331,22 @@ background-color: var(--uc-ultima-background-ii) !important;
 
 /*--main window background--*/
 
-#main-window[lwtheme="true"] body
-{background: var(--lwt-accent-color) !important; }
+#main-window[lwtheme="true"] { 
+    & body {
+        background: var(--lwt-accent-color) !important; 
+    }
 
-/*--content window--*/
+    /*--content window--*/
+    & #appcontent, & #browser,
+    & #tabbrowser-tabbox, & #tabbrowser-tabpanels,
+    & .browserSidebarContainer { 
+        background: var(--uc-transparent) !important; 
+    }
 
-#main-window[lwtheme="true"] #appcontent, #main-window[lwtheme="true"] #browser,
-#main-window[lwtheme="true"] #tabbrowser-tabbox, #main-window[lwtheme="true"] #tabbrowser-tabpanels,
-#main-window[lwtheme="true"] .browserSidebarContainer
-{ background: var(--uc-transparent) !important; }
-
-#main-window[lwtheme="true"] .browserStack
-{ background: var(--uc-transparent) !important; }
+    & .browserStack { 
+        background: var(--uc-transparent) !important; 
+    }
+}
 
 #nav-bar {background: initial !important;}
 
@@ -354,17 +355,19 @@ background-color: var(--uc-ultima-background-ii) !important;
 
 /*side bar themed*/
 
-#main-window[lwtheme="true"] #sidebar-header
-{ background: var(--uc-sb-lwt) !important; }
 
-#main-window[lwtheme="true"] #sidebar
-{ background: var(--uc-sb-lwt) !important; }
+#main-window[lwtheme="true"] {
+    & #sidebar-header, & #sidebar { 
+        background: var(--uc-sb-lwt) !important; 
+    }  
+    #sidebar-box {
+        background: var(--uc-transparent) !important;
+    } 
+}
+.sidebar-panel[lwt-sidebar] {
+    background-color: var(--uc-transparent) !important;
+}
 
-#main-window[lwtheme="true"] #sidebar-box
-{ background: var(--uc-transparent) !important; }
-
-.sidebar-panel[lwt-sidebar]
-{ background-color: var(--uc-transparent) !important; }
 
 /* ------------------- tabs ------------------- */
 
@@ -382,12 +385,13 @@ background-color: var(--uc-ultima-background-ii) !important;
 
 /*--pinned themed-*/
 
-#main-window[lwtheme="true"] .tab-content[pinned=""] .tab-background,
-#main-window[lwtheme="true"] .tab-content[pinned="true"] .tab-background
-{ background: var(--lwt-accent-color);}
+#main-window[lwtheme="true"]  {
+    --tab-selected-bgcolor: var(--lwt-accent-color) !important;
 
-#main-window[lwtheme="true"] {
-  --tab-selected-bgcolor: var(--lwt-accent-color) !important;
+    & .tab-content[pinned=""] .tab-background,
+    & .tab-content[pinned="true"] .tab-background { 
+        background: var(--lwt-accent-color);
+    }
 }
 
 .tabbrowser-tab[pending="true"] {opacity: 0.25 !important;}
@@ -397,9 +401,9 @@ background-color: var(--uc-ultima-background-ii) !important;
 /*-------------------------------------------------------------------------------*/
 
 tooltip {
-  background-color: var(--uc-ultima-background-i) !important;
-  color: var(--uc-dark) !important;
-  border-color: var(--uc-light) !important;
+    background-color: var(--uc-ultima-background-i) !important;
+    color: var(--uc-dark) !important;
+    border-color: var(--uc-light) !important;
 }
 
 
@@ -451,23 +455,30 @@ splitter {@media (-moz-platform: windows) { & {
 
 /*-----------------extensionspanel----------------------*/
 
-#main-window:not([lwtheme]) .panel-subview-body
-{background: var(--uc-ultima-background-ii) !important;}
+#main-window:not([lwtheme]) {
+    .panel-subview-body {
+        background: var(--uc-ultima-background-ii) !important;
+    }
 
-#main-window:not([lwtheme]) panelview,
-#main-window:not([lwtheme]) #unified-extensions-view
-{background: var(--uc-ultima-background-ii) !important}
+    & panelview,
+    & #unified-extensions-view {
+        background: var(--uc-ultima-background-ii) !important
+    }
+}
 
 /*--title buttons--*/
 
 /*minmaxclose*/
 
-#main-window:not([lwtheme]) .titlebar-button {
-stroke: var(--uc-ultima-accent-iii) !important;
-} #main-window[lwtheme="true"] .titlebar-button {
-stroke: var(--toolbarbutton-icon-fill) !important;
+#main-window {
+    &:not([lwtheme]) .titlebar-button {
+        stroke: var(--uc-ultima-accent-iii) !important;
+    } 
+    &[lwtheme="true"] .titlebar-button {
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
 }
-
+ 
 /*---------fix titlebar opacity----------*/
 
 :root { @media (-moz-platform: windows) { & {
@@ -476,15 +487,15 @@ stroke: var(--toolbarbutton-icon-fill) !important;
 
 /*---------full screen indicator label----------*/
 /*--the label that says ("website.com is now in full screen...")--*/
-
-#fullscreen-warning, *.pointerlockfswarning {
-  opacity: 0 !important;
-  border-radius: 20px !important;
-}
-
-#fullscreen-warning * {
-  border-radius: var(--uc-all-border-radius) !important;
-}
+#fullscreen-warning { 
+    &, *.pointerlockfswarning {
+        opacity: 0 !important;
+        border-radius: 20px !important;
+    }
+    & * {
+        border-radius: var(--uc-all-border-radius) !important;
+    }
+} 
 
 /*-----------------------------------------------------------------------------------*/
 /*---------------------------------CUSTOM ICONS--------------------------------------*/
