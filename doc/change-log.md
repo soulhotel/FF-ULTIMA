@@ -6,18 +6,30 @@
 
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
-###### ⏭️ Preview [*what's next*](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/change-log.md) in the change-log for the Main Update Branch.
-
+>[!WARNING]
+> Returning Users: **Some user preferences were renamed in 1.7.9!** If you haven't done so already, please reapply your user.js to get the corrected settings. This change is to reflect future updates/features while organizing the names for easier readability. Setting names will be carefully considered moving forward and renaming will **NOT** happen again. Thank you.
+> <details><summary>(CLICK ME) Settings List Preview</summary>
+>
+> <br>
+>  Older named preferences such as ultima.tabs.xs(s,l), ultima.tabs.vertical, ultima.OS.linux, etc, can be deleted.
+>
+>  ![newpreferencelist](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ba6c024a-f26a-4459-9b7c-2550f1f2c9ee)
+> </details>
 
 ### Change Log:
-- `new` Setting `ultima.sidebery.autohide` to autohide only Sidebery, keeping other Sidebar Tabs static - by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
-  - :warning: `todo` requires safeguard for left sided visibility when the tabs panel is also visible there.
-- `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
-- `qol` About:config warning-dialog automatically set to false through user.js.
-- `qol` For add-on-themes that use atypical color variables. Includes fixes to themes not respecting the URL bar shadow. Adjustments to the semi-transparent URL bar that add-on-themes default to. Positioning adjustments to browser content for when themes use sharply contrasing colors for backgrounds (such as the navigation bar being blue, and main backgrounds being white, & etc.)
-- `qol` Setting `ultima.OS.kdedecoration` adds compatibility for KDE Users with themed window decorations.
+- `new` Setting `ultima.sidebery.autohide` to autohide Sidebery only, leaving other Sidebar panels in a static state by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
+- `new` Setting `ultima.OS.kdedecoration` adds compatibility for KDE Users with themed window decoration buttons.
 > ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
-- `todo` Alternative lwtheme variables (experimental).
+- `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
+- `qol` About config warning dialog set to false.
+- `qol` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
-- `todo` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
-- `todo` New preference for alternate pinned tab styling, still havent decided on a style yet. Feedback is appreciated.
+- `todo` More layering for the alternate lwtheme preference.
+- `qol` Color Variables have been adjusted; excess removed, readability improved (hopefully). Some changes include but are not limited to:
+  - Name shortening from `uc-ultima-etc` to `uc-etc`
+  - `uc-light-dark` and `uc-dark-light` removed/merged into `uc-text`. Functionality has not changed.
+  - `uc-panel-border` is utilized more often, specifically for every element that has a modified border.
+  - Many nested elements (with altered backgrounds) now adopt their parents related background variable.
+  - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
+
+
