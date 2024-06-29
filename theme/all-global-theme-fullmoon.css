@@ -52,9 +52,6 @@ Global styling - applies everywhere
   --uc-button-border-radius: 10px;
 }
 
-
-
- 
 /* Overwriting existing variables -------------------------------------------------*/
   
 #main-window:not([lwtheme]), :root:not([lwtheme]) {    
@@ -249,11 +246,13 @@ Global styling - applies everywhere
     & .titlebar-button {
       border-radius: var(--uc-button-border-radius);
     }
-    & #main-window:not([lwtheme]) .titlebar-button:hover {
+    & .titlebar-button:hover {
       background-color: var(--uc-selected) !important;
     }
-    & .titlebar-close:hover {
-      background-color: rgb(191, 66, 66) !important;
+    @media (-moz-platform: windows) {
+        .titlebar-close:hover {
+            background-color: rgb(191, 66, 66) !important;
+        }
     }        
 
     /* other panels & extensions panel */
