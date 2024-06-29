@@ -15,7 +15,7 @@
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `qol` About:config warning-dialog automatically set to false through user.js.
 - `qol` For add-on-themes that use atypical color variables. Includes fixes to themes not respecting the URL bar shadow. Adjustments to the semi-transparent URL bar that add-on-themes default to. Positioning adjustments to browser content for when themes use sharply contrasing colors for backgrounds (such as the navigation bar being blue, and main backgrounds being white, & etc.)
-- `qol` Setting `ultima.OS.kdedecoration` adds compatibility for KDE Users with themed window decoration buttons.
+- `qol` Setting `ultima.OS.kdedecoration` adds compatibility for KDE Users with themed window decorations.
 > ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 - `todo` Alternative lwtheme variables (experimental).
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
