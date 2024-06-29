@@ -23,6 +23,7 @@
 > ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `qol` About config warning dialog set to false.
+- `qol` For add-on-themes that use atypical color variables.
 - `todo` Alternative lwtheme variables (experimental).
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
