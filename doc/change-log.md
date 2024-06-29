@@ -25,7 +25,7 @@
 - `qol` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` More layering for the alternate lwtheme preference.
-- `qol` Variables for global theme files have been adjusted, excess removed, readability improved (hopefully). Some changes include but are not limited to:
+- `qol` Color Variables have been adjusted; excess removed, readability improved (hopefully). Some changes include but are not limited to:
   - name shortening from `uc-ultima-etc` to `uc-etc`
   - `uc-light-dark` and `uc-dark-light` removed/merged into `uc-text`. Functionality has not changed.
   - `uc-panel-border` is utilized more often, specifically for every element that has a modified border.
