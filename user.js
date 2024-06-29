@@ -38,6 +38,9 @@ user_pref("ultima.OS.kdedecorations", false);
 /*other*/
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("devtools.debugger.remote-enabled", true);
+user_pref("devtools.chrome.enabled", true);
+user_pref("devtools.debugger.prompt-connection", false);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("toolkit.tabbox.switchByScrolling", true);
 
