@@ -12,7 +12,7 @@
 ### Change Log:
 - `new` Setting `ultima.sidebery.autohide` autohide's Sidebery **only**, while other Sidebar Tabs remain static, by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
-- `qol` Code miniaturization, slowly cleaning up the source, simplifying some functions, shrinking some files.
+- `qol` Code miniaturization.
 - `qol` About config warning dialog set to false through user.js.
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
 - `todo` More layering for the alternate lwtheme preference.
