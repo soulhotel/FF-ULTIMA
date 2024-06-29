@@ -9,6 +9,7 @@ user_pref("ultima.tabs.vertical.onlyprivate", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
+user_pref("ultima.sidebery.autohide", false);
 
 /*extension theme on-off*/
 user_pref("ultima.theme.extensions", true);
@@ -38,3 +39,4 @@ user_pref("ultima.OS.kdedecorations", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("toolkit.tabbox.switchByScrolling", true);
+
