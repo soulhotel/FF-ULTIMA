@@ -9,15 +9,15 @@ assignees: ''
 
 **Describe the bug**
 >
-(A detailed description of what the bug is.)
+(A detailed description of what the bug is)
 
 **Expected behavior**
 >
-(A description of what you expected to happen.)
+(A description of what you expected to happen)
 
 **Desktop (please complete the following information):**
 >
- - OS: (Windows 11, Linux Gnome, Linux KDE, Mac, etc.
+ - OS: (Windows 11, Linux Gnome, Linux KDE, Mac, etc)
  - Browser Version: (Firefox 123)
 
 **Picture | Video**
