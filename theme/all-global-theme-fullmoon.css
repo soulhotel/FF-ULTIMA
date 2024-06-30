@@ -50,6 +50,9 @@ Global styling - Icons
   --uc-button-border-radius: 10px;
 }
 
+
+
+ 
 /* Overwriting existing variables -------------------------------------------------*/
   
 #main-window:not([lwtheme]), :root:not([lwtheme]) {    
