@@ -133,7 +133,7 @@ Global styling - Icons
         border-bottom: 1px solid rgba(0,0,0,0) !important;
         &:-moz-window-inactive {
             background-color: var(--toolbar-bgcolor) !important;
-            color: var(--toolbox-non-lwt-textcolor-inactive) !important;
+            color: var(--uc-text) !important;
         }
     }    
 
@@ -292,7 +292,7 @@ Global styling - Icons
         border-bottom: 1px solid rgba(0,0,0,0) !important;
         &:-moz-window-inactive {
             background-color: var(--toolbar-bgcolor) !important;
-            color: white !important;
+            color: var(--uc-text) !important;
         }
     }    
     & #nav-bar {background: initial !important;}    
