@@ -43,7 +43,9 @@ If importing, doesn't fully copy the css. Try resetting Sidebery to default firs
 
 ![1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/3bbc954e-aeba-416b-955e-da5aac9d4446)
 
-Optional : you can also copy and paste this [Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/style-editor.css) into your Sidebery Style Editor. But this should already be handled by the .json.
+You can view/copy-paste the Sidebery CSS here as well:
+- [Default Sidebery CSS](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/style-editor.css)
+- [Alternate Dark Style](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/sidebery-alt-dark.css) by [frandmb](https://github.com/frandmb)
 
 ---
 
