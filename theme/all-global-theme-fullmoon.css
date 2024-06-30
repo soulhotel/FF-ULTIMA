@@ -20,7 +20,7 @@ Global styling - Icons
   --uc-ultima-window: rgb(43, 42, 51);
   --uc-dark-color: #000;
   --uc-light-color: #fff;
-  --uc-accent-i: #EDF783;
+  --uc-accent-i: #EDF783; /* accent colors - blues, yellows, etc. */
   --uc-accent-ii: #17347B;
   --uc-accent-iii: rgb(255, 255, 255);
   --uc-accent-iv: rgba(28, 27, 34, 0.5);
