@@ -14,8 +14,6 @@
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `qol` About config warning dialog set to false through user.js.
 - `qol` Code miniaturization.
-- `todo` Setting to keep default tabs-on-top layout (not a priority).
-- `todo` More layering for the alternate lwtheme preference.
 - `qol` Color Variables have been adjusted; excess removed, readability improved (hopefully). Some changes include but are not limited to:
   - Name shortening from `uc-ultima-etc` to `uc-etc`
   - `uc-light-dark` and `uc-dark-light` removed/merged into `uc-text`. Functionality has not changed.
@@ -25,5 +23,12 @@
   - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
 - `qol` Setting `ultima.OS.kdedecoration` fixes positioning for KDE Users using themed window decoration.
 > ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
+
+
+
+### Change Log: (segment not included on release page)
+- `todo` Setting to keep default tabs-on-top layout (not a priority).
+- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69
+- `todo` Decide among AMO generator iteration's or alternate style sheets.
 
 
