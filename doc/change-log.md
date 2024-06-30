@@ -20,6 +20,7 @@
   - Name shortening from `uc-ultima-etc` to `uc-etc`
   - `uc-light-dark` and `uc-dark-light` removed/merged into `uc-text`. Functionality has not changed.
   - `uc-panel-border` is utilized more often, specifically for every element that has a modified border.
+  - `uc-background-etc` - background variables are a bit more specific, for tabs, panels, etc.
   - Many nested elements (with altered backgrounds) now adopt their parents related background variable.
   - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
 - `qol` Setting `ultima.OS.kdedecoration` fixes positioning for KDE Users using themed window decoration.
