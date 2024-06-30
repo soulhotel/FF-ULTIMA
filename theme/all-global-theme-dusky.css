@@ -18,7 +18,7 @@ Global styling - Icons
   --uc-ultima-window: rgb(225, 225, 255);
   --uc-dark-color: #000;
   --uc-light-color: #fff;
-  --uc-accent-i: rgb(108, 152, 255);
+  --uc-accent-i: rgb(108, 152, 255); /* accent colors - blues, yellows, etc. */
   --uc-accent-ii: #17347B;
   --uc-accent-iii: rgb(0, 0, 0);
   --uc-accent-iv: rgba(37, 59, 111, 0.05);
