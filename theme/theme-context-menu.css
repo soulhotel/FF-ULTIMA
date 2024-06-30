@@ -30,7 +30,7 @@ Theming Context Menu
 menupopup, panel {
   color-scheme: light dark;
   --panel-background: var(--uc-context-menu) !important;
-  --panel-color: var(--uc-light-dark);
+  --panel-color: var(--uc-text);
   --panel-border-radius: var(--uc-all-border-radius) !important;
   --panel-border-color: var(--uc-panel-border-ii) !important;
   --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
@@ -38,33 +38,14 @@ menupopup, panel {
 
 menuitem:hover{
   background-color: var(--uc-active) !important;
-  color: var(--uc-light-dark) !important;
+  color: var(--uc-text) !important;
  }
 
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
   background-color: var(--uc-active) !important;
-  color: var(--uc-light-dark) !important;
+  color: var(--uc-text) !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

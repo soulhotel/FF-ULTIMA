@@ -7,14 +7,14 @@
 /* quick styling */
 
 #menubar-items {
-  background: var(--uc-ultima-background-ii) !important;
+  background: var(--uc-background-panel) !important;
   border-radius: 5px !important;
   justify-content: center !important;
-  color: var(--uc-light-dark) !important;
+  color: var(--uc-text) !important;
 }
 #toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
   background-color: var(--uc-selected) !important;
-  color: var(--uc-light-dark) !important;
+  color: var(--uc-text) !important;
   border-radius: 5px !important;
 }}
 
@@ -30,7 +30,7 @@
 }
 #toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
   background-color: var(--uc-selected) !important;
-  color: var(--uc-light-dark) !important;
+  color: var(--uc-text) !important;
   border-radius: 5px !important;
 }}
 

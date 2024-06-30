@@ -7,6 +7,7 @@ Overwriting existing variables
 Applying variables to create the Dark Mode theme
 Adapting to add-on-theme styling
 Global styling - applies everywhere
+Global styling - Icons
 -------------------------------------------------------------------------------------*/
 
 
@@ -17,18 +18,16 @@ Global styling - applies everywhere
 :root, body, * {
   color-scheme: dark !important; /*--<--dont touch--*/
   --uc-ultima-window: rgb(43, 42, 51);
-  --uc-dark: #000;
-  --uc-light: #fff;
-  --uc-light-dark: #fff;
-  --uc-dark-light: #000000;
-  --uc-ultima-accent-i: #EDF783;
-  --uc-ultima-accent-ii: #17347B;
-  --uc-ultima-accent-iii: rgb(255, 255, 255);
-  --uc-ultima-accent-iv: rgba(28, 27, 34, 0.5);
-  --uc-ultima-background-i: rgba(28, 27, 34, 0.5);
-  --uc-ultima-background-ii: rgba(28, 27, 34, 0.86);
-  --uc-ultima-background-iii: rgba(28, 27, 34, 0.96);
-  --uc-ultima-background-iv: rgb(35, 35, 42);
+  --uc-dark-color: #000;
+  --uc-light-color: #fff;
+  --uc-accent-i: #EDF783;
+  --uc-accent-ii: #17347B;
+  --uc-accent-iii: rgb(255, 255, 255);
+  --uc-accent-iv: rgba(28, 27, 34, 0.5);
+  --uc-background-main: rgba(28, 27, 34, 0.5);
+  --uc-background-panel: rgba(28, 27, 34, 0.95);
+  --uc-background-solid: rgba(28, 27, 34, 1);
+  --uc-background-secondary: rgb(35, 35, 42);
   --uc-transparent: rgba(0,0,0,0);
   --uc-selected: rgba(0,0,0,0.65);
   --uc-active: rgba(0,0,0,0.75);
@@ -36,13 +35,12 @@ Global styling - applies everywhere
   --uc-panel-border: rgba(25, 25, 25, 1);
   --uc-panel-border-ii: rgba(45, 45, 45, 0.5);
   --uc-context-menu: rgba(28, 27, 34,1);
-  --uc-tabs-background: var(--uc-ultima-background-i);
-  --uc-sb-themed: var(--uc-ultima-background-i);
-  --uc-sb-themed-ii: var(--uc-ultima-accent-iv);
-  --uc-sb-background: var(--uc-transparent);
+  --uc-tabs-background: var(--uc-background-main);
+  --uc-sb-background: var(--uc-background-main);
+  --uc-sb-background-header: var(--uc-accent-iv);
+  --uc-sb-background-container: var(--uc-transparent);
   --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
   --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
-  --uc-panel-background: var(--uc-ultima-background-iii);
   --urlbar-icon-border-radius: var(--uc-all-border-radius);
   --arrowpanel-menuitem-border-radius: var(--uc-all-border-radius);
   --arrowpanel-border-radius: var(--uc-all-border-radius);
@@ -60,21 +58,21 @@ Global styling - applies everywhere
     
   --tab-selected-bgcolor: var(--uc-active) !important;
   --tab-selected-textcolor: var(--uc-text) !important;
-  --tab-loading-fill: var(--uc-ultima-accent-i) !important;
+  --tab-loading-fill: var(--uc-accent-i) !important;
 
   --button-hover-bgcolor: var(--uc-selected) !important;
   --toolbarbutton-hover-background: var(--uc-selected) !important;
   --button-active-bgcolor: var(--uc-active) !important;
   --toolbarbutton-active-background: var(--uc-active) !important;
-  --button-primary-bgcolor: var(--uc-ultima-accent-i) !important;
-  --button-primary-hover-bgcolor: var(--uc-ultima-accent-i) !important;
+  --button-primary-bgcolor: var(--uc-accent-i) !important;
+  --button-primary-hover-bgcolor: var(--uc-accent-i) !important;
   --buttons-destructive-hover-bgcolor: #9d1c1c;  /*red*/
   --buttons-destructive-active-bgcolor: #7d2828; /*red*/
   --toolbarbutton-icon-fill: var(--uc-text) !important; /*toolbar button color*/
 
-  --toolbar-field-background-color: var(--uc-ultima-accent-iv) !important;
-  --toolbar-field-border-color: var(--uc-ultima-accent-iii) !important;
-  --toolbar-field-focus-border-color: var(--uc-ultima-accent-iii) !important;
+  --toolbar-field-background-color: var(--uc-accent-iv) !important;
+  --toolbar-field-border-color: var(--uc-accent-iii) !important;
+  --toolbar-field-focus-border-color: var(--uc-accent-iii) !important;
   --urlbarView-result-button-selected-color: var(--uc-text) !important;
   --urlbarView-result-button-selected-background-color: var(--uc-selected) !important;
   --urlbarView-highlight-background: var(--uc-selected) !important;
@@ -89,24 +87,24 @@ Global styling - applies everywhere
   --toolbar-field-focus-color: var(--uc-text) !important;
 
   --sidebar-text-color: var(--uc-text) !important;
-  --arrowpanel-background: var(--uc-panel-background) !important;
+  --arrowpanel-background: var(--uc-background-panel) !important;
   --arrowpanel-border-color: var(--uc-active) !important;
   --arrowpanel-color: var(--uc-text) !important;
   --newtab-background-color: var(--uc-tabs-background) !important;
 
-  --panel-background: var(--uc-panel-background) !important;
+  --panel-background: var(--uc-background-panel) !important;
   --panel-item-hover-bgcolor: var(--uc-selected) !important;
   --panel-banner-item-hover-bgcolor: var(--uc-selected) !important;
-  --short-notification-background: var(--uc-ultima-accent-ii) !important;
+  --short-notification-background: var(--uc-accent-ii) !important;
   --panel-border-color: var(--uc-panel-border) !important;
-  --organizer-toolbar-background: var(--uc-ultima-accent-iv) !important;
-  --organizer-pane-background: var(--uc-ultima-accent-iv) !important;
-  --organizer-content-background: var(--uc-ultima-accent-iv) !important;
-  --organizer-hover-background: var(--uc-ultima-accent-iv) !important;
+  --organizer-toolbar-background: var(--uc-accent-iv) !important;
+  --organizer-pane-background: var(--uc-accent-iv) !important;
+  --organizer-content-background: var(--uc-accent-iv) !important;
+  --organizer-hover-background: var(--uc-accent-iv) !important;
   --organizer-selected-background: var(--uc-selected) !important;
   --organizer-focus-selected-color: var(--uc-selected) !important;
   --organizer-outline-color: rgb(0,221,255) !important;
-  --organizer-toolbar-field-background: var(--uc-ultima-accent-iv) !important;
+  --organizer-toolbar-field-background: var(--uc-accent-iv) !important;
   --organizer-toolbar-field-background-focused: rgb(66, 61, 98) !important;
   --content-select-background-image: none !important;
 } 
@@ -146,87 +144,65 @@ Global styling - applies everywhere
     & #tabbrowser-tabpanels browser[type] {
         outline: 4px solid var(--toolbar-bgcolor);
     }
-
-    /* side bar*/
-    & #sidebar-header {
-      background-color: var(--uc-sb-themed-ii) !important;
-    }
-    & #sidebar {
-      background: var(--uc-sb-themed) !important;
-    }
-    & #sidebar-box {
-      background-color: var(--uc-transparent) !important;
-      box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-    }
-    & #sidebar-search-container #search-box, & #sidebar-search-container #viewButton {
-      appearance: none !important;
-      border-radius: 10px !important;
-      background-color: var(--uc-ultima-accent-iv) !important;
-      box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-    }
-    & #bookmarksPanel #sidebar-search-container #search-box {
-      appearance: none !important;
-      border-radius: 10px !important;
-      background-color: var(--uc-ultima-accent-iv) !important;
-    }
        
     /* tabs container */
     & #tabbrowser-tabs {
         background: transparent;
-        --tab-loading-fill: var(--uc-ultima-accent-i) !important;
+        --tab-loading-fill: var(--uc-accent-i) !important;
     }
     & #TabsToolbar-customization-target {
         box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-        background: var(--uc-ultima-background-iv);
+        background: var(--uc-background-secondary);
     }
     /* pinned tabs style */
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
-      background-color: var(--tab-selected-bgcolor) !important;
-      box-shadow: inset 0 0 1px 1px #94f3ff !important;
+        background-color: var(--tab-selected-bgcolor) !important;
+        box-shadow: inset 0 0 1px 1px #94f3ff !important;
     }
     /* tabs tooltip styling */
     & .tab-preview-container {
-      background-color: var(--uc-context-menu) !important;
-      color: var(--uc-light-dark) !important;
-      width: 225px !important;
-      border: 1px solid var(--uc-text) !important;
+        background-color: var(--uc-tabs-background) !important;
+        color: var(--uc-text) !important;
+        width: 225px !important;
+        border: 1px solid var(--uc-panel-border) !important;
     }
 
     /* URL bar */
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
-      background-color: var(--uc-ultima-accent-iv) !important;
-      border-radius: var(--uc-all-border-radius) !important;
+        margin-top: 3px !important; /*new*/
+        background-color: var(--uc-context-menu) !important;
+        border-radius: var(--uc-all-border-radius) !important;
     }
 
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
-      border-radius: var(--uc-all-border-radius) !important;
+        border-radius: var(--uc-all-border-radius) !important;
     }
 
     & #urlbar-background, & #searchbar {
-      background-color: var(--uc-ultima-accent-iv) !important;
-      border-radius: 10px !important;
-      border: 0 !important;
-      box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+        background-color: var(--uc-accent-iv) !important;
+        border-radius: 10px !important;
+        border: 0 !important;
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
     }
 
     & #urlbar[open] > #urlbar-background {
-      border-color: var(--uc-ultima-accent-iii) !important;
+        border-color: var(--uc-accent-iii) !important;
     }
 
     & #urlbar[breakout][breakout-extend] {
-      background-color: var(--uc-context-menu) !important;
-      border-radius: 10px;
+        background-color: transparent !important;
+        border-radius: 10px;
     }
 
     & #urlbar-zoom-button {
-      background-color: var(--uc-active) !important;
-      margin-top:3px !important;
+        background-color: var(--uc-active) !important;
+        margin-top:3px !important;
     }
 
     & .urlbarView-row {
         &[selected] {
-            color: var(--uc-light-dark) !important;
+            color: var(--uc-text) !important;
         }
     }
                 
@@ -240,7 +216,7 @@ Global styling - applies everywhere
     /* bookmark button in URL bar */
     & #star-button[starred] {
       fill-opacity: 1 !important;
-      fill: var(--uc-ultima-accent-i) !important;
+      fill: var(--uc-accent-i) !important;
     }
     /* title bar buttons - min, max, close */
     & .titlebar-button {
@@ -257,11 +233,11 @@ Global styling - applies everywhere
 
     /* other panels & extensions panel */
     & .panel-subview-body {
-        background: var(--uc-ultima-background-ii) !important;
+        background: var(--uc-background-panel) !important;
     }
     & panelview,
     & #unified-extensions-view {
-        background: var(--uc-ultima-background-ii) !important;
+        background: var(--uc-background-panel) !important;
     }
     
     /* drop down menus */
@@ -281,14 +257,14 @@ Global styling - applies everywhere
     & #PersonalToolbar {background: var(--uc-transparent) !important;}
         
     /* extra styling - customize toolbar page */     
-    & #customization-container {background-color: var(--uc-sb-background) !important;}    
+    & #customization-container {background-color: var(--uc-ultima-window) !important;}    
     
     /* menu popups */
     & .panel-subview-body {
-        background: var(--uc-ultima-background-iii) !important;
+        background: color-mix(in srgb, var(--uc-background-panel) 10%, var(--ultima-window) 90%) !important;
     }
     & .menupopup-arrowscrollbox {
-        background-color: var(--uc-ultima-background-ii) !important;
+        background-color: var(--uc-background-panel) !important;
     }
     
 } /* < end of Dark Mode Theme */
@@ -350,13 +326,13 @@ Global styling - applies everywhere
     & #sidebar-search-container #search-box, & #sidebar-search-container #viewButton {
         appearance: none !important;
         border-radius: 10px !important;
-        background-color: var(--uc-ultima-accent-iv) !important;
+        background-color: var(--uc-accent-iv) !important;
         box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
     }
     & #bookmarksPanel #sidebar-search-container #search-box {
         appearance: none !important;
         border-radius: 10px !important;
-        background-color: var(--uc-ultima-accent-iv) !important;
+        background-color: var(--uc-accent-iv) !important;
     }
     & .sidebar-panel[lwt-sidebar] {
         background-color: var(--uc-transparent) !important;
@@ -366,8 +342,8 @@ Global styling - applies everywhere
     --tab-selected-bgcolor: var(--lwt-accent-color) !important;
     @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
         * {
-        --uc-tabs-lwt: color-mix(in srgb, var(--uc-ultima-background-i) 30%, var(--arrowpanel-background) 70%);
-        --tab-selected-bgcolor: var(--uc-ultima-background-i) !important;
+        --uc-tabs-lwt: color-mix(in srgb, var(--uc-background-main) 30%, var(--arrowpanel-background) 70%);
+        --tab-selected-bgcolor: var(--uc-background-main) !important;
         }
     }
     & :root:not([customizing]) #tabbrowser-tabs:-moz-lwtheme {
@@ -388,7 +364,7 @@ Global styling - applies everywhere
     /* URL bar */
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
         margin-top: 3px !important; /*new*/
-        background-color: color-mix(in srgb, var(--uc-ultima-background-i) 10%, var(--lwt-accent-color) 90%) !important;
+        background-color: color-mix(in srgb, var(--uc-background-main) 10%, var(--lwt-accent-color) 90%) !important;
         border-radius: var(--uc-all-border-radius) !important;
     }
 
@@ -397,14 +373,14 @@ Global styling - applies everywhere
     }
 
     & #urlbar-background, & #searchbar {
-        background-color: var(--uc-ultima-accent-iv) !important;
+        background-color: var(--uc-accent-iv) !important;
         border-radius: 10px !important;
         border: 0 !important;
         box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem var(--lwt-accent-color);
     }
 
     & #urlbar[open] > #urlbar-background {
-        border-color: var(--uc-ultima-accent-iii) !important;
+        border-color: var(--uc-accent-iii) !important;
     }
 
     & #urlbar[breakout][breakout-extend] {
@@ -419,12 +395,12 @@ Global styling - applies everywhere
 
     & .urlbarView-row {
         &[selected] {
-            color: var(--uc-light-dark) !important;
+            color: var(--uc-text) !important;
         }
     }
 
     /* extra styling - customize toolbar page */     
-    & #customization-container {background-color: var(--uc-sb-background) !important;} 
+    & #customization-container {background-color: var(--lwt-accent-color) !important;} 
         
 } /* < end of Add-On Theme Styling */
     
@@ -439,20 +415,20 @@ Global styling - applies everywhere
     
 /* global dialog box */
 :root[dialogroot] {
-  --in-content-page-background: var(--uc-ultima-background-iii) !important;
-  color: var(--uc-light)  !important;
+  --in-content-page-background: var(--uc-background-solid) !important;
+  color: var(--uc-text)  !important;
 }    
     
 /* fix for inactive/unfocused window altering nav bar color */    
 @media (-moz-platform: windows), (-moz-platform: linux) {
-    --inactive-titlebar-opacity: 1 !important;
+    root{--inactive-titlebar-opacity: 1 !important;}
 }    
         
 /* tooltip, worth a try */    
 tooltip {
-    background-color: var(--uc-ultima-background-i) !important;
-    color: var(--uc-light) !important;
-    border-color: var(--uc-dark) !important;
+    background-color: var(--uc-background-main) !important;
+    color: var(--uc-text) !important;
+    border-color: var(--uc-panel-border) !important;
 }
 
 /* side bar - font size, padding, borders, etc */
@@ -483,10 +459,35 @@ splitter {@media (-moz-platform: windows) { & {
   margin-inline-start: -7px !important;
 } }
 
+
+/*new experimental status for side bar - keeping a universal style*/
+
+#sidebar-header {
+    background-color: var(--uc-sb-background-header) !important;
+}
+#sidebar {
+    background: var(--uc-sb-background) !important;
+}
+#sidebar-box {
+    background-color: transparent !important;
+    box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.7);
+}
+#sidebar-search-container #search-box, & #sidebar-search-container #viewButton {
+    appearance: none !important;
+    border-radius: 10px !important;
+    background-color: var(--uc-accent-iv) !important;
+    box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+}
+#bookmarksPanel #sidebar-search-container #search-box {
+    appearance: none !important;
+    border-radius: 10px !important;
+    background-color: var(--uc-accent-iv) !important;
+}
+
 /* title bar buttons - min max close*/
 #main-window {
     &:not([lwtheme]) .titlebar-button {
-        stroke: var(--uc-ultima-accent-iii) !important;
+        stroke: var(--uc-accent-iii) !important;
     } 
     &[lwtheme="true"] .titlebar-button {
         stroke: var(--toolbarbutton-icon-fill) !important;
@@ -518,7 +519,7 @@ splitter {@media (-moz-platform: windows) { & {
 /*--extension menu--*/
 #main-window:not([lwtheme]) #unified-extensions-button {
   list-style-image: url("icons/extensions.svg") !important;
-  fill: var(--uc-ultima-accent-iii) !important;
+  fill: var(--uc-accent-iii) !important;
 }
 #main-window[lwtheme="true"] #unified-extensions-button {
   list-style-image: url("icons/extensions.svg") !important;
@@ -538,17 +539,19 @@ splitter {@media (-moz-platform: windows) { & {
 }
 #forward-button image{
   list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
-  stroke: var(--uc-ultima-accent-iii) !important;
+  stroke: var(--uc-accent-iii) !important;
 }
 #back-button image{
   list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
-  stroke: var(--uc-ultima-accent-iii) !important;
+  stroke: var(--uc-accent-iii) !important;
 }
 
 /*--notification badges--*/
 .toolbarbutton-badge {
   background-color: rgba(0,0,0,0.3) !important;
   box-shadow: 0 !important;
-  color: var(--uc-light) !important;
+  color: var(--uc-text) !important;
   text-shadow: #FDFFFF 0.5px 0 15px!important;
+}
+
 }

@@ -408,8 +408,8 @@ patch, tabs slide out of view when attempting to rearrange them
       linear-gradient(#23232A 30%,
         rgba(255, 255, 255, 0)) center top,
       /* Shadow Cover BOTTOM */
-      linear-gradient(var(--uc-ultima-background-iv),
-      var(--uc-ultima-background-iv) 70%) center bottom,
+      linear-gradient(var(--uc-background-secondary),
+      var(--uc-background-secondary) 70%) center bottom,
       /* Shadow TOP */
       /* TODO: Change to variable indicating scrollable area */
       radial-gradient(farthest-side at 50% 0,
@@ -434,8 +434,8 @@ patch, tabs slide out of view when attempting to rearrange them
       linear-gradient(#b7b7da 30%,
         rgba(0, 0, 0, 0)) center top,
       /* Shadow Cover BOTTOM */
-      linear-gradient(var(--uc-ultima-background-iv),
-      var(--uc-ultima-background-iv) 70%) center bottom,
+      linear-gradient(var(--uc-background-secondary),
+      var(--uc-background-secondary) 70%) center bottom,
       /* Shadow TOP */
       /* TODO: Change to variable indicating scrollable area */
       radial-gradient(farthest-side at 50% 0,

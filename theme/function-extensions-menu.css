@@ -60,7 +60,7 @@
 }
 
 #unified-extensions-view #unified-extensions-area {
-  background: var(--uc-ultima-background-ii) !important;
+  background: var(--uc-background-panel) !important;
   border-radius: var(--uc-all-border-radius) !important;
 }
 }

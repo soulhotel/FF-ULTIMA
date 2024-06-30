@@ -19,10 +19,10 @@ findbar{
   padding-bottom: 9px !important;
   padding-top: 8px !important;
   border: 0px !important;
-  background-color: var(--uc-ultima-background-i) !important;
-  color: var(--uc-light-dark) !important;
+  background-color: var(--uc-background-main) !important;
+  color: var(--uc-text) !important;
 }
 
 .findbar-textbox:focus{
-  background-color: var(--uc-ultima-background-i) !important;
+  background-color: var(--uc-background-main) !important;
 }
