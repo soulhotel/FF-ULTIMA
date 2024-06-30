@@ -1,0 +1,55 @@
+/*---------------------------------------------------------
+- collapse the tabs panel - on full screen
+- corrections to height depending on default browsers navigation bar animation
+- including collapsing on browser width, when width falls below 850px
+---------------------------------------------------------*/
+
+
+#main-window[sizemode="fullscreen"]{
+    --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
+}
+
+#tabbrowser-tabs{
+    transition: width 80ms linear 70ms !important;
+    will-change: width !important;
+}
+
+#main-window[sizemode="fullscreen"] #browser{
+    transition: margin-left 80ms linear 150ms !important;
+    will-change: margin-left !important;}
+
+#main-window[sizemode="fullscreen"] #tabbrowser-tabs,
+#main-window[sizemode="fullscreen"] #browser{
+    transition-delay: 0ms !important;
+}
+
+/* full screen tabs panel height correction */
+
+@media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
+  #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
+    height: calc(100vh - var(--uc-margin-top) - var(--uc-margin-bottom));
+    top: 3px !important;
+  }
+}
+
+/* collapse tabs on small browser width support */
+
+@media (max-width:850px){
+    #main-window {
+        --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
+    }
+    #tabbrowser-tabs {
+        transition: width 80ms linear 70ms !important;
+        will-change: width !important;
+    }
+    #main-window[sizemode="fullscreen"] #browser {
+        transition: margin-left 80ms linear 150ms !important;
+        will-change: margin-left !important;
+    }    
+    #tabbrowser-tabs, #browser{
+        transition-delay: 0ms !important;
+    }    
+    #tabbrowser-tabs .tab-close-button, #tabbrowser-tabs .close-icon{
+        padding: 0px !important; display: none !important; margin-inline-end: -3px !important;
+    }
+} /*<----close media maxwidth function*/
