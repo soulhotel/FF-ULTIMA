@@ -13,6 +13,7 @@
 - `new` Alternate color scheme: See the [Catppuccin Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin) to learn more.
 - `new` Color schemes are even easier to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/New-Color-scheme.md) page.
 - `new` Setting `ultima.sidebery.autohide` autohide's Sidebery **only**, while other Sidebar Tabs remain static, by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
+- `new` Setting `ultima.OS.mac` can now be used for any OS, to simulate left side title bar buttons.
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `qol` Styling for pinned tabs vs selected tabs have been adjusted and simplified.
 - `qol` About:config warning-dialog automatically set to false through user.js.
@@ -25,15 +26,15 @@
   - Many nested elements (with altered backgrounds) now adopt their parents related background variable.
   - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
 - `qol` Setting `ultima.OS.kdedecoration` fixes positioning for KDE Users who may have themed window decoration applied to firefox:
-  - ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 
 > Catppuccin Color Scheme Preview (screenshot taken on Gnome Linux)
 
 ![preview](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5695ac7e-2e65-4256-b430-176271851e95)
 
-### Change Log: (segment not included on release page)
-- `todo` Setting to keep default tabs-on-top layout (not a priority).
-- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69
-- `todo` Decide among AMO generator iteration's or alternate style sheets.
+> Example of ultima.OS.mac preference (screenshot taken on Windows 10)
 
+![windows theme](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/98b31759-ab56-4cf0-bb3c-8e24b2a0e878)
 
+> KDE decorations preference
+
+![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
