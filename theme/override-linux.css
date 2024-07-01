@@ -160,10 +160,12 @@ Gnome compat. for themed Window decoration buttons
             margin-right: 0px !important;
         }        
         :root[tabsintitlebar] .titlebar-buttonbox {
-            top: 7px !important;
+            top: 4px !important;
             right: unset !important;
             left: 3px !important;
         }
+        /* optional: flip button order */
+        .titlebar-buttonbox-container { direction: rtl !important; }
 } /*--<--end OS preference query--*/
 
 /*------------------------------------------------------------------------*/
