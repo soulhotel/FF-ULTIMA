@@ -25,17 +25,18 @@ Global styling - Icons
   --uc-accent-iv: rgba(37, 59, 111, 0.05);
   --uc-accent-v: rgb(203, 203, 204);
   --uc-accent-vi: rgb(181, 181, 181);
-  --uc-background-main: rgba(37, 59, 111, 0.05);
+  --uc-accent-vii: rgb(0, 1, 75);
+  --uc-background-main: rgb(216, 217, 248);
   --uc-background-panel: rgb(255, 255, 255);
   --uc-background-solid: rgb(255, 255, 255);
-  --uc-background-secondary: rgb(216, 217, 248); /*keep it similar to tabs background ^*/
+  --uc-background-secondary: var(--uc-background-main); /*keep it similar to tabs background ^*/
   --uc-transparent: rgba(0,0,0,0);
-  --uc-selected: rgba(108, 152, 255, 0.82);
-  --uc-active: rgba(37, 82, 189, 0.82);
-  --uc-text: rgb(15, 15, 15);
+  --uc-selected: rgba(115, 153, 254,0.4);
+  --uc-active: rgb(115, 153, 254);
+  --uc-text: rgb(5, 5, 5);
   --uc-panel-border: rgba(25, 25, 25, 1);
   --uc-panel-border-ii: rgba(25, 25, 25, 0.5);
-  --uc-context-menu: rgba(255, 255, 255, 0.87);
+  --uc-context-menu: rgba(255, 255, 255, 1);
   --uc-tabs-background: var(--uc-background-main);
   --uc-sb-background: var(--uc-background-main);
   --uc-sb-background-header: var(--uc-background-main);
@@ -117,7 +118,7 @@ Global styling - Icons
 
 
     
-/* Applying variables to create the Dark Mode theme --------------------------------*/
+/* Applying variables to create the Light Mode theme --------------------------------*/
 
     
 #main-window:not([lwtheme]) {
@@ -167,11 +168,11 @@ Global styling - Icons
     }
     /*tabs styling - for selected tab*/
     & .tab-label-container[selected] {
-        color: var(--uc-accent-ii) !important;
+        color: var(--uc-accent-iii) !important;
     }
     /* pinned tabs style */
-    .tab-label-container[pinned] {
-        color: var(--uc-accent-i) !important;
+    & .tab-label-container[pinned] {
+        color: var(--uc-accent-vii) !important;
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
