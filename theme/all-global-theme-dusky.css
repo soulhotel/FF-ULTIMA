@@ -32,7 +32,7 @@ Global styling - Icons
   --uc-transparent: rgba(0,0,0,0);
   --uc-selected: rgba(108, 152, 255, 0.82);
   --uc-active: rgba(37, 82, 189, 0.82);
-  --uc-text: rgb(0, 0, 0);
+  --uc-text: rgb(15, 15, 15);
   --uc-panel-border: rgba(25, 25, 25, 1);
   --uc-panel-border-ii: rgba(25, 25, 25, 0.5);
   --uc-context-menu: rgba(255, 255, 255, 0.87);
@@ -161,14 +161,21 @@ Global styling - Icons
         box-shadow: inset 0 0 1px 1px transparent !important;
         background: var(--uc-background-secondary);
     }
-    & .tabbrowser-tab {
-          color: var(--uc-text-ii) !important;
+    /*tabs styling - for unselected and unpinned*/
+    & .tab-label-container:not([selected=""],[pinned]) {
+        color: var(--uc-text) !important;
+    }
+    /*tabs styling - for selected tab*/
+    & .tab-label-container[selected] {
+        color: var(--uc-accent-ii) !important;
     }
     /* pinned tabs style */
+    .tab-label-container[pinned] {
+        color: var(--uc-accent-i) !important;
+    }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
-      background-color: var(--tab-selected-bgcolor) !important;
-      box-shadow: 0 0 4px rgba(0,0,0,.4);
+        background-color: var(--tab-selected-bgcolor) !important;
     }
     /* tabs tooltip styling */
     & .tab-preview-container {
