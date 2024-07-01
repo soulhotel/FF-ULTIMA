@@ -157,11 +157,21 @@ Global styling - Icons
         box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
         background: var(--uc-background-secondary);
     }
+    /*tabs styling - for unselected and unpinned*/
+    & .tab-label-container:not([selected=""],[pinned]) {
+        color: var(--uc-text) !important;
+    }
+    /*tabs styling - for selected tab*/
+    & .tab-label-container[selected] {
+        color: var(--uc-accent-ii) !important;
+    }
     /* pinned tabs style */
+    .tab-label-container[pinned] {
+        color: var(--uc-accent-i) !important;
+    }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
         background-color: var(--tab-selected-bgcolor) !important;
-        box-shadow: inset 0 0 1px 1px #94f3ff !important;
     }
     /* tabs tooltip styling */
     & .tab-preview-container {
