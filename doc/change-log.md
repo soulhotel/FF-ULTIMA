@@ -10,9 +10,12 @@
 
 
 ### Change Log:
+- `new` Alternative color scheme: See Catppuccin preview below.
+- `new` Alternate color schemes are now easier to create: See the modification page, create color scheme section.
 - `new` Setting `ultima.sidebery.autohide` autohide's Sidebery **only**, while other Sidebar Tabs remain static, by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
-- `qol` About config warning dialog set to false through user.js.
+- `qol` Styling for pinned tabs vs selected tabs have been adjusted and simplified.
+- `qol` About:config warning-dialog automatically set to false through user.js.
 - `qol` Code miniaturization.
 - `qol` Color Variables have been adjusted; excess removed, readability improved (hopefully). Some changes include but are not limited to:
   - Name shortening from `uc-ultima-etc` to `uc-etc`
@@ -21,8 +24,8 @@
   - `uc-background-etc` - background variables are a bit more specific, for tabs, panels, etc.
   - Many nested elements (with altered backgrounds) now adopt their parents related background variable.
   - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
-- `qol` Setting `ultima.OS.kdedecoration` fixes positioning for KDE Users using themed window decoration.
-> ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
+- `qol` Setting `ultima.OS.kdedecoration` fixes positioning for KDE Users who may have themed window decoration applied to firefox:
+  - ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 
 
 
