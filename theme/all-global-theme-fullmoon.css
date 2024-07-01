@@ -21,9 +21,10 @@ Global styling - Icons
   --uc-dark-color: #000;
   --uc-light-color: #fff;
   --uc-accent-i: #EDF783; /* accent colors - blues, yellows, etc. */
-  --uc-accent-ii: #17347B;
+  --uc-accent-ii: rgb(90, 121, 156);
   --uc-accent-iii: rgb(255, 255, 255);
   --uc-accent-iv: rgba(28, 27, 34, 0.5);
+  --uc-accent-v: rgb(121, 161, 195);
   --uc-background-main: rgba(28, 27, 34, 0.5);
   --uc-background-panel: rgba(28, 27, 34, 0.95);
   --uc-background-solid: rgba(28, 27, 34, 1);
@@ -163,7 +164,7 @@ Global styling - Icons
     }
     /*tabs styling - for selected tab*/
     & .tab-label-container[selected] {
-        color: var(--uc-accent-ii) !important;
+        color: var(--uc-accent-v) !important;
     }
     /* pinned tabs style */
     .tab-label-container[pinned] {
