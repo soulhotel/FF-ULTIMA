@@ -7,8 +7,8 @@
 
 - First `decide` if it's going to be a `dark mode` scheme or `light mode` scheme.
 - For this example we will focus on creating a dark mode theme, using catppuccin as the foundation.
-- Take a look at the [catppuccin folder](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin) located in `chrome/theme/color-scheme`. This will be your template.
-- Read the [readme.md](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin) and follow the steps. 
+- Take a look at the [catppuccin folder](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin) located in `chrome/theme/color-scheme`. This will be your template.
+- Read the [readme.md](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin) and follow the steps. 
 - Setting Catppuccin as your Dark Mode theme will allow you to create a new color scheme in real-time.
 - Restart Firefox to see the theme before you proceed.
 
@@ -51,7 +51,7 @@
 
 ### Sharing your color-scheme.
 
-- Use the [Catppuccin template](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin).
+- Use the [Catppuccin template](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin).
 - You can download the folder, or find it in your chrome/theme/ folder.
 - Enter your color-scheme details in the readme.
 - Replace the Catppuccin theme with your own in the theme/ folder
