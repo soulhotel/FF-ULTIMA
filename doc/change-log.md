@@ -11,7 +11,7 @@
 
 ### Change Log:
 - `new` Alternate color scheme: See the [Catppuccin Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin) to learn more.
-- `new` Color schemes are even easier to create: See the modification page, create color scheme section.
+- `new` Color schemes are even easier to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/New-Color-scheme.md) page.
 - `new` Setting `ultima.sidebery.autohide` autohide's Sidebery **only**, while other Sidebar Tabs remain static, by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
 - `qol` Styling for pinned tabs vs selected tabs have been adjusted and simplified.
@@ -28,10 +28,8 @@
   - ![2024-06-20_14-35](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/168821f4-75b3-4f36-9264-250cf72653fc)
 
 > Catppuccin Color Scheme Preview (screenshot taken on Gnome Linux)
+
 ![preview](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5695ac7e-2e65-4256-b430-176271851e95)
-
-> Full Moon (Dark Mode) Color adjustments
-
 
 ### Change Log: (segment not included on release page)
 - `todo` Setting to keep default tabs-on-top layout (not a priority).
