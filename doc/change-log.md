@@ -18,6 +18,7 @@
 - `qol` Styling for pinned tabs vs selected tabs have been adjusted and simplified.
 - `qol` About:config warning-dialog automatically set to false through user.js.
 - `qol` Code miniaturization.
+- `qol` Setting `ultima.OS.kdedecoration` for KDE Users who may have themed window decoration applied to firefox.
 - `qol` Color Variables have been adjusted; excess removed, readability improved (hopefully). Some changes include but are not limited to:
   - Name shortening from `uc-ultima-etc` to `uc-etc`
   - `uc-light-dark` and `uc-dark-light` removed/merged into `uc-text`. Functionality has not changed.
@@ -25,7 +26,7 @@
   - `uc-background-etc` - background variables are a bit more specific, for tabs, panels, etc.
   - Many nested elements (with altered backgrounds) now adopt their parents related background variable.
   - The application of variables can sometimes rely on user preference.. so feedback is appreciated for these and future changes.
-- `qol` Setting `ultima.OS.kdedecoration` fixes positioning for KDE Users who may have themed window decoration applied to firefox:
+
 
 > Catppuccin Color Scheme Preview (screenshot taken on Gnome Linux)
 
