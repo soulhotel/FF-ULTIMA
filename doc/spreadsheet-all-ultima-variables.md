@@ -42,9 +42,9 @@
 | --uc-dark-color                  |      | ⚠️ | Used as a global black                    |
 | --uc-light-color                 |      | ⚠️ | Used as a global white                    |
 | --uc-text                        |      | ✅ | Text color for menus, panels, tabs, all in one, adaptive to dark/light mode |
-| --uc-accent-i                    |      | ✅ | A yellow accent color                     |
-| --uc-accent-ii                   |      | ✅ | A blue accent color                       |
-| --uc-accent-iii                  |      | ✅ | A white accent color                      |
+| --uc-accent-i                    |      | ✅ | An accent color (blues, yellows, greens, etc. |
+| --uc-accent-ii                   |      | ✅ | An accent color (blues, yellows, greens, etc. |
+| --uc-accent-iii                  |      | ✅ | An accent color (blues, yellows, greens, etc. |
 | --uc-accent-iv                   |      | ✅ | A darker rgb accent color                 |
 | --uc-background-main             |      | ⚠️ | the main background color for panels and such |
 | --uc-background-panel            |      | ✅ | background color used for panels/menus    |
