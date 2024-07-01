@@ -10,7 +10,7 @@
 
 
 ### Change Log:
-- `new` Alternative color scheme: See Catppuccin preview below.
+- `new` Alternative color scheme: See the `Catppuccin Edition` below.
 - `new` Alternate color schemes are now easier to create: See the modification page, create color scheme section.
 - `new` Setting `ultima.sidebery.autohide` autohide's Sidebery **only**, while other Sidebar Tabs remain static, by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
