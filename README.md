@@ -98,13 +98,13 @@
 
 ###### Click images for a higher resolution
 
-|            Dusky (Light)            |          Full Moon (Dark)           |
-| :---------------------------------: | :---------------------------------: |
-| ![install1](doc/preview/prevw.png) | ![install1](doc/preview/prev3.png) |
-|            Sidebery Example         |            Add On theme             |
-| ![install1](doc/preview/prevs.png) | ![install1](doc/preview/prev5.gif) |
-|            Add On theme             |            Add On theme             |
-| ![install1](doc/preview/prev6.png) | ![install1](doc/preview/prev4.gif) |
-|                                     |                                     |
+|            Dusky (Light)                                |          Full Moon (Dark)           |
+| :-----------------------------------------------------: | :---------------------------------: |
+| ![install1](doc/preview/prevw.png)                      | ![install1](doc/preview/prev3.png) |
+|            Catppuccin Edition                           |            Add On theme             |
+| ![install1](theme/color-schemes/catppuccin/preview.png) | ![install1](doc/preview/prev5.gif) |
+|            Sidebery Example                             |            Add On theme             |
+| ![install1](doc/preview/prevs.png)                      | ![install1](doc/preview/prev4.gif) |
+|                                                         |                                     |
 
 #### Enjoy
