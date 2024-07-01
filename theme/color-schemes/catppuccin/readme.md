@@ -7,7 +7,7 @@ By (credit yourself)
 
 To use this color scheme:
 - Navigate to `chrome/theme/color-scheme/catppuccin`.
-- `Copy the theme folder` located here in the catppuccin folder.
+- `Copy the theme folder`.
 - `Go back <-` to your chrome folder.
 - `Paste the theme folder` onto your chrome folder, allow overwriting.
 - `Open your userchrome.css file` which is in the chrome folder.
