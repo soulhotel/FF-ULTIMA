@@ -17,3 +17,5 @@ To use this color scheme:
 
 Preview:
 ![preview](./preview.png)
+
+> screenshot taken on Gnome Linux, the round title bar buttons are exclusive to that OS.
