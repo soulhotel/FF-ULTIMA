@@ -5,7 +5,7 @@
 - [Switching from Dark Mode to Light Mode](./Modification.md#switching-from-dark-mode-to-light-mode)
 - [Userchrome-Toggle extension support](./Modification.md#userchrome-toggle-extension-support)
 - [Spreadsheets for power users](./Modification.md#spreadsheets-for-power-users)
-- [Create a color scheme](New-Color-Scheme.md)
+- [Create a color scheme](./New-Color-Scheme.md)
 
 
 ## Settings and Preferences, found on the `about:config` page.
