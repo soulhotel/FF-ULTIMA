@@ -69,39 +69,5 @@ With `ultima.tabs.autohide` set to false. And `ultima.tabs.size.xs` set to true;
 ---
 <br>
 
-# Create a theme. I was able to create Dusky (Light Mode), just like this.
-###### You atleast need to have knowledge on what live debugging is to proceed.
-###### chrome/theme/all-global-theme-dusky.css , chrome/theme/all-global-theme-fullmoon.css
-
-- Live preview of instructions below
-- Make a copy of `all-global-theme-dusky.css`, for a light color scheme
-- And/Or a copy of `all-global-theme-fullmoon.css`, for a dark color scheme
-- Name your theme file `all-global-theme-dracula.css` ( just an example :/ )
-- In userChrome, rename the theme file above with the one you just created
-- Open up Live Debugger `ctrl+shift+alt+I`
-- Type `--uc-ultima-window` on the right side searchbar for css properties
-- Here you will find the full list of all theming variables used
-- Start tinkering.
-- You can create your theme live and see how the windows, colors, etc, look
-- Find color combinations that you like, copy them into your new custom theme file `all-global-theme-dracula.css`
-- Congrats! Youve just created a Light Mode theme
-
-<details>
-  <summary>(Click me) Live Tutorial</summary>
-
-![tabsizechange](preview/createtheme.gif)
-![tabsize](preview/createthemelive.gif)
-</details>
-
-<details>
-  <summary>(Using 'Firefox Colors app' to create themes)</summary>
-
-###### Did this in 2 minutes, just showing that it is definitely possible.
-![Screenshot_1](https://github.com/soulhotel/FF-CSS-ULTIMA/assets/155501797/50ede808-227d-4ef0-b49b-692c8cf70b64)
-</details>
-
----
-<br>
-
 
 
