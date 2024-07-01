@@ -10,8 +10,8 @@
 
 
 ### Change Log:
-- `new` Alternate color scheme: See the [Catppuccin Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin) to learn more.
-- `new` Color schemes are even easier to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/New-Color-scheme.md) page.
+- `new` Alternate color scheme: See the [Catppuccin Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin) to learn more.
+- `new` Color schemes are even easier to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md) page.
 - `new` Setting `ultima.sidebery.autohide` autohide's Sidebery **only**, while other Sidebar Tabs remain static, by @frandmb [#88](https://github.com/soulhotel/FF-ULTIMA/pull/88).
 - `new` Setting `ultima.OS.mac` can now be used for any OS, to simulate left side title bar buttons.
 - `fix` Close button for tabs not visible when in Fullscreen Mode, [#30](https://github.com/soulhotel/FF-ULTIMA/issues/30).
