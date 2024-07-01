@@ -19,7 +19,7 @@
 #main-window:not([lwtheme="true"]) #statuspanel-label {
   @media (not (prefers-contrast)) and (not (-moz-platform: linux)) {
     & {
-      background-color: var(--uc-ultima-background-iii) !important;
+      background-color: var(--uc-background-solid) !important;
       border-color: rgba(15,15,15,0.5);
     }
   }

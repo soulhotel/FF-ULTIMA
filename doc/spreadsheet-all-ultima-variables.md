@@ -38,33 +38,31 @@
 
 | Variable                         | Line | Customizable? | Function            |
 |----------------------------------|------|---------------|---------------------|
-| --uc-ultima-window               | 17-- | ✅ | This variable is the main window default grey/white background |
-| --uc-dark                        |      | ⚠️ | Used as a global black                    |
-| --uc-light                       |      | ⚠️ | Used as a global white                    |
-| --uc-light-dark                  |      | ⚠️ | Used to swap text from black/white depending on dark/lightmode |
-| --uc-dark-light                  |      | ⚠️ | Used to swap text from black/white depending on dark/lightmode |
-| --uc-ultima-accent-i             |      | ✅ | A yellow accent color                     |
-| --uc-ultima-accent-ii            |      | ✅ | A blue accent color                       |
-| --uc-ultima-accent-iii           |      | ✅ | A white accent color                      |
-| --uc-ultima-accent-iv            |      | ✅ | A darker rgb accent color                 |
-| --uc-ultima-background-i         |      | ⚠️ | ultima-backgrounds i-iv all share the same rgb profile, however they have different transparent levels depending on the element they are assigned to. These are all used for static panels and menu backgrounds |
-| --uc-ultima-background-ii        |      | ✅ | "^" more opacity than above               |
-| --uc-ultima-background-iii       |      | ✅ | "^" more opacity than above and above     |
-| --uc-ultima-background-iv        |      | ✅ | the solid rgb version to the backgrounds above |
-| --uc-transparent                 |      | ❌ | transparent color                         |
+| --uc-ultima-window               | 18-- | ✅ | The main window (browser) background color |
+| --uc-dark-color                  |      | ⚠️ | Used as a global black                    |
+| --uc-light-color                 |      | ⚠️ | Used as a global white                    |
+| --uc-text                        |      | ✅ | Text color for menus, panels, tabs, all in one, adaptive to dark/light mode |
+| --uc-accent-i                    |      | ✅ | An accent color (blues, yellows, greens, etc. |
+| --uc-accent-ii                   |      | ✅ | An accent color (blues, yellows, greens, etc. |
+| --uc-accent-iii                  |      | ✅ | An accent color (blues, yellows, greens, etc. |
+| --uc-accent-iv                   |      | ✅ | A darker rgb accent color                 |
+| --uc-background-main             |      | ⚠️ | the main background color for panels and such |
+| --uc-background-panel            |      | ✅ | background color used for panels/menus    |
+| --uc-background-solid            |      | ✅ | similar color to the backgrounds above, used for assets that should be a solid opacity |
+| --uc-background-secondary        |      | ✅ | similar color to above, used to layer backgrounds on top of each other (when needed) |
+| --uc-transparent                 |      | ❌ | transparent color, vital for assets that that don't need visibility |
 | --uc-selected                    |      | ✅ | the background color for hovered buttons  |
-| --uc-active                      |      | ✅ | the background color for active buttons, also applies to default unthemed tab background  |
-| --uc-text                        |      | ✅ | Text color for context, panel menus, should be consistently changed depending on dark or light mode |
+| --uc-active                      |      | ✅ | the background color for active buttons   |
 | --uc-panel-border                |      | ✅ | Context menus, popup panels border color  |
 | --uc-panel-border-ii             |      | ✅ | Context menus, popup panels border color  |
 | --uc-context-menu                |      | ⚠️ | Context menu background color             |
 | --uc-tabs-background             |      | ✅ | Tabs background color                     |
-| --uc-sb-themed                   |      | ⚠️ | Sidebar body background, should match or imitate `--uc-ultima-background-iv`  for a consistent theme |
-| --uc-sb-themed-ii                |      | ⚠️ | Sidebar header background, should match or imitate `--uc-ultima-background`  for a consistent theme  |
-| --uc-sb-background               |      | ⚠️ | By default uses `--uc-transparent` and is color layered by the sidebar body and header |
+| --uc-sb-background               |      | ✅ | Sidebar body background                   |
+| --uc-sb-background-header        |      | ✅ | Sidebar header background                 |
+| --uc-sb-background-container     |      | ⚠️ | Used for the sidebar container, allows dynamic changes to the backgrounds above, and color mixing |
 | --uc-tabs-lwt                    |      | ✅ | The color of the tabs panel background when a theme is in use, usually a lightly transparent color hue |
 | --uc-sb-lwt                      |      | ✅ | The color of the sidebar background when a theme is in use, "^" |
-| --uc-panel-background            | --46 | ✅ | Background color for popup-menus,popup-panels, extensions panel, etc |
+| --uc-background-panel            | --51 | ✅ | Background color for popup-menus,popup-panels, extensions panel, etc |
 
   
   

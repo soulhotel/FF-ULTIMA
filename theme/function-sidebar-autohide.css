@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------
-- autohide the sidebar
+- Autohide the Sidebar
 - this function is enabled by the tabs.sidebar.autohide setting in about:config
 - it will only enable with tabs.vertical enabled.
 - while it works just fine without, i tied it to tabs.vertical to preserve any
@@ -114,7 +114,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
     @media (prefers-color-scheme: dark) {
 
         #sidebar-header, #sidebar {
-            background: var(--uc-ultima-background-iv) !important;
+            background: var(--uc-background-secondary) !important;
         }
         #main-window[lwtheme="true"] #sidebar,
         #main-window[lwtheme="true"] #sidebar-header {
@@ -128,7 +128,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
     @media (prefers-color-scheme: light) {
 
         #sidebar-header, #sidebar {
-            background: var(--uc-ultima-background-iv) !important;
+            background: var(--uc-background-secondary) !important;
         } 
         #main-window[lwtheme="true"] #sidebar,
         #main-window[lwtheme="true"] #sidebar-header {

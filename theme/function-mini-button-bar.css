@@ -20,7 +20,7 @@
   left: -2px;
   margin: var(--uc-tab-margins) !important;
   border-radius: var(--uc-all-border-radius);
-  background: var(--uc-ultima-background-iv);
+  background: var(--uc-background-secondary);
   padding-bottom: 2px !important;
 }
 
@@ -106,7 +106,7 @@
 /* visual indicator, when on customize toolbar screen */
 
 #TabsToolbar:is([customizing="true"]) #TabsToolbar-customization-target {
-  background: var(--uc-ultima-background-iii) !important;
+  background: var(--uc-background-solid) !important;
   padding-bottom: 32px !important;
   min-width: 42px;
   top: 120px;

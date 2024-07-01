@@ -8,7 +8,12 @@
     :root {
         --bg: #1a1b26;
     }
-
+    /* safeguard 1/2 - when tabs are visible and sidebery is on the leftside of browser, they display over the tabs unaturally. */
+    #TabsToolbar-customization-target, #tabbrowser-tabs {
+        z-index: 999 !important;
+    }
+    /* removing the code block above will reproduce the issue */
+    
     /* hides the sidebar header */
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
         display: none !important;
@@ -24,7 +29,9 @@
         min-width: var(--uc-sidebar-width) !important;
         width: var(--uc-sidebar-width) !important;
         max-width: var(--uc-sidebar-width) !important;
-        z-index: 100;
+        z-index: 1;
+        /* safeguard 2/2 - z-index changed from 100 to 1, to accomodate safeguard 1 above. */
+        /* with this the function is very stable. */
     }
 
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] {

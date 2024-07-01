@@ -24,15 +24,15 @@ Gnome compat. for themed Window decoration buttons
     
     /*--override inactive window style--*/
     :root:where([tabsintitlebar]) {
-        --toolbox-non-lwt-textcolor: var(--uc-light-dark);
-        --toolbox-non-lwt-textcolor-inactive: var(--uc-light-dark);
+        --toolbox-non-lwt-textcolor: var(--uc-text);
+        --toolbox-non-lwt-textcolor-inactive: var(--uc-text);
     } :root {
         --inactive-titlebar-opacity: 1 !important;
     }
 
     /*--remove secondary background, and correct stroke--*/
     #main-window:not([lwtheme="true"]) .titlebar-button {
-        stroke: var(--uc-ultima-accent-iii) !important;
+        stroke: var(--uc-accent-iii) !important;
     } #main-window[lwtheme="true"] .titlebar-button {
         stroke: var(--toolbarbutton-icon-fill) !important;
     }
@@ -160,10 +160,12 @@ Gnome compat. for themed Window decoration buttons
             margin-right: 0px !important;
         }        
         :root[tabsintitlebar] .titlebar-buttonbox {
-            top: 7px !important;
+            top: 4px !important;
             right: unset !important;
             left: 3px !important;
         }
+        /* optional: flip button order */
+        .titlebar-buttonbox-container { direction: rtl !important; }
 } /*--<--end OS preference query--*/
 
 /*------------------------------------------------------------------------*/
