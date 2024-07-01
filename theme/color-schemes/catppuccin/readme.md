@@ -18,4 +18,4 @@ To use this color scheme:
 Preview:
 ![preview](./preview.png)
 
-> screenshot taken on Gnome Linux, the round title bar buttons are exclusive to that OS.
+Color schemes are easy to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md) page.
