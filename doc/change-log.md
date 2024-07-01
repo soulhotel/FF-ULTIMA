@@ -30,13 +30,14 @@
 
 > Catppuccin Color Scheme Preview (screenshot taken on Gnome Linux)
 
-![preview](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5695ac7e-2e65-4256-b430-176271851e95)
+![colorpreview](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5695ac7e-2e65-4256-b430-176271851e95)
 
 > New Light Mode Color Corrections
 
-![Screenshot from 2024-07-01 01-40-24](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/87b6c813-a824-49b1-9038-c64514178d72)
+![lightmode](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/87b6c813-a824-49b1-9038-c64514178d72)
 
 > Example of ultima.OS.mac preference (screenshot taken on Windows 10)
 
-![windows theme](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/98b31759-ab56-4cf0-bb3c-8e24b2a0e878)
+![win](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/d7c92728-8e60-4cac-88ec-de95ea560428)
+
 
