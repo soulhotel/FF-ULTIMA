@@ -52,10 +52,10 @@
 ### Sharing your color-scheme.
 
 - Use the [Catppuccin template](https://github.com/soulhotel/FF-ULTIMA/tree/main.update.branch/theme/color-schemes/catppuccin).
-- You can download the folder, or use the one in your chrome/theme/ file.
+- You can download the folder, or find it in your chrome/theme/ folder.
 - Enter your color-scheme details in the readme.
 - Replace the Catppuccin theme with your own in the theme/ folder
-- Replace the wallpaper with your own in the theme/site-icons/ folder
+- Replace the wallpaper with your own in the theme/site-icons/ folder (optional)
 - Submit an issue or pull request to share.
 
   
