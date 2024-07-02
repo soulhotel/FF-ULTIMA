@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------
 - return the window-controls/titlebar-buttons
-- linux support added as of version 1.6.5
+- linux/mac support added as of version 1.6.5 -> override-linux.css, override-mac.css
  ------------------------------------------------------------- */
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -44,7 +44,7 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
     margin-right: 96px;
 } /* margin-left if you have it on left side*/
 
-/* 40px button, match nav bar */
+/* About 30px total button width/height to match nav bar buttons */
 @media (-moz-platform: windows) {
     .titlebar-buttonbox .titlebar-button {
         padding: 11px 11px !important;
