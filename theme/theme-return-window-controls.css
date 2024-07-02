@@ -1,6 +1,6 @@
 /* -------------------------------------------------------------
 - return the window-controls/titlebar-buttons
-- linux support added as of version 1.6.5
+- linux support added as of version 1.6.5 -> override-linux.css & override-mac.css
  ------------------------------------------------------------- */
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
@@ -12,6 +12,8 @@
     --uc-menubar-vertical-overlap: 19px;
 }
 
+/* some code related code blocks */
+
 #navigator-toolbox > div{ display: contents }
 
 .global-notificationbox, #tab-notification-deck{order: 2;}
@@ -22,9 +24,9 @@
 
 toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
-#navigator-toolbox:hover #TabsToolbar{ animation: slidein ease-out 48ms 1 }
+#navigator-toolbox:hover #TabsToolbar{ animation: slidein ease-out 48ms 1; }
 
-#navigator-toolbox:not(:-moz-lwtheme){ background-color: -moz-dialog }
+#navigator-toolbox:not(:-moz-lwtheme){ background-color: -moz-dialog; }
 
 /*-----------------------------------------*/
 /*--to return the title bar buttons--*/
@@ -50,13 +52,20 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
         padding: 11px 11px !important;
     }
 }
+
 /* (optional) flip button order
-.titlebar-buttonbox-container{ direction: rtl;}
-*/
-#navigator-toolbox[inFullscreen="true"] .titlebar-buttonbox,
-#navigator-toolbox[fullscreenShouldAnimate="true"] .titlebar-buttonbox .titlebar-button{
+.titlebar-buttonbox-container{ direction: rtl; } */
+
+/* when in fullscreen mode, and the navigation bar isnt hovered, workaround for fixed title bar buttons */
+
+:root[inFullscreen="true"] #navigator-toolbox:not(:hover) .titlebar-buttonbox {
     display: none !important;
 }
 
+/* when in fullscreen mode, and the navigation bar isnt hovered, match the themes rounded corners */
 
-
+@media not (-moz-bool-pref: "ultima.xstyle.squared") {
+    :root[inFullscreen="true"] #navigator-toolbox:not(:hover) + #browser {
+        padding-top: 5px !important;
+    }
+}
