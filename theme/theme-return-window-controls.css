@@ -46,7 +46,7 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
     margin-right: 96px;
 } /* margin-left if you have it on left side*/
 
-/* 40px button, match nav bar */
+/* 30px total button size to match toolbar buttons. */
 @media (-moz-platform: windows) {
     .titlebar-buttonbox .titlebar-button {
         padding: 11px 11px !important;
