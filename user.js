@@ -18,6 +18,7 @@ user_pref("ultima.theme.extensions", true);
 user_pref("ultima.urlbar.suggestions", true);
 user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hidebuttons", false);
+user_pref("ultima.xstyle.urlbar", false);
 
 /*alternate styles*/
 user_pref("ultima.xstyle.containertabs.i", false);
