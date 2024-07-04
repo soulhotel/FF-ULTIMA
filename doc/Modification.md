@@ -23,6 +23,7 @@
 | ultima.theme.extensions          | Extensions-Panel theme, compact-icons or default list-view | ![themeextensions](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/b81bce27-5927-4a0d-9bd5-e970477458d9) |
 | ultima.xstyle.containertabs      | Three optional styles for container tabs, make your pick | ![tc1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6b867554-6e9c-41a3-9c96-9ebc14d15b42) ![tc2](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/15fb335d-e9fa-402e-83a9-0ddd67581f94) ![tc3](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/afda38b4-5c4b-4093-b98f-63c138af2023) |
 | ultima.xstyle.squared            | Square the theme; No margins, borders, or rounded corners | ![themesquared](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/ba858526-3178-462c-9bf0-4be3e4bc9ab0) |
+| ultima.xstyle.urlbar | when add-on-themes are in use the url bar default view becomes transparent with no shadow | ![prev](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/6dcf6a31-c5cd-4b34-9885-9cb6022afb02) |
 | ultima.urlbar.suggestions | Toggle URL Bar suggestions on/off | ... |
 | ultima.urlbar.centered | Center URL Bar text | ... |
 | ultima.urlbar.hidebuttons | Hide URL Bar buttons unless hovered | ... |
