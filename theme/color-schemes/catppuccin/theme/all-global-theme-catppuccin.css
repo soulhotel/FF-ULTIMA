@@ -392,7 +392,7 @@ Global styling - Icons
         background-color: var(--uc-accent-iv) !important;
         border-radius: 10px !important;
         border: 0 !important;
-        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem var(--lwt-accent-color);
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(0,0,0,0.5);
     }
 
     & #urlbar[open] > #urlbar-background {
