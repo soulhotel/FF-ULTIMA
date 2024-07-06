@@ -315,9 +315,9 @@ Gnome compat. for themed Window decoration buttons
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 80px !important;}    
+    #nav-bar {margin-right: 83px !important;}    
     :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 14px !important;
+        top: 12px !important;
         right: 7px !important;
     }
     :root .titlebar-button {
