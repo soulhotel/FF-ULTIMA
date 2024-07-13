@@ -330,7 +330,7 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Gnome compat. for themed Window decoration buttons 2 */
 
-@media (-moz-bool-pref: "ultima.OS.gnomedecoration2") {
+@media (-moz-bool-pref: "ultima.OS.gnomedecoration.ii") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
