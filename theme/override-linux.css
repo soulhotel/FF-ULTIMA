@@ -311,7 +311,7 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Gnome compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.gnomedecoration") {
+@media (-moz-bool-pref: "ultima.OS.gnomedecorations") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
@@ -324,5 +324,25 @@ Gnome compat. for themed Window decoration buttons
         --uc-selected: transparent !important;
     }
 
+} /*--<--end linuxmedia query--*/
+} /*--<--end OS preference query--*/
+
+
+/*------------------------------------------------------------------------*/
+/* Gnome compat. for themed Window decoration buttons */
+
+@media (-moz-bool-pref: "ultima.OS.gnomedecorations.ii") {
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+
+    /*--size and positioning of the nav bar for less titlebar buttons--*/
+    #nav-bar {margin-right: 110px !important;}
+    
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 10px !important;
+        right: 4px !important;
+    }
+    :root .titlebar-button {
+        --uc-selected: transparent !important;
+    }
 } /*--<--end linuxmedia query--*/
 } /*--<--end OS preference query--*/
