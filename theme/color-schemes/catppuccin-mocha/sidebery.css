@@ -1,0 +1,217 @@
+/*--------------------------------------------------*/
+/*--Header Panel--*/
+
+#root.root {
+    --toolbar-el-overlay-selected-bg: #0d0d0dff;
+  }
+  #root.root {
+    --toolbar-el-overlay-hover-bg: #11111b ;
+  }
+  #root.root {
+    --toolbar-el-overlay-active-border: #ffffffff;
+  }
+  #root.root {
+    --toolbar-el-overlay-active-bg: #ffffffff;
+  }
+  #root.root {
+    --toolbar-el-overlay-active-border: #1a1a1aff;
+  }
+  #root.root {
+    --nav-btn-accent: #ffff80ff;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    #root.root {
+      --toolbar-el-overlay-selected-bg: rgb(69, 107, 200);
+    }
+    #root.root {
+      --toolbar-el-overlay-hover-bg: rgb(69, 107, 200);
+    }
+    #root.root {
+      --toolbar-el-overlay-active-bg: rgb(69, 107, 200);
+    }
+  }
+  
+  .NavigationBar .nav-item .audio {
+    display: none !important;
+  }
+  
+  /*--------------------------------------------------*/
+  /*--Pinned Tabs--*/
+  
+  #root.root {
+    --tabs-pinned-width: 24vw;
+    --tabs-pinned-height: 40px;
+  }
+  
+  @media (max-width: 250px) {
+    #root.root {
+      --tabs-pinned-width: 23.5vw;
+      --tabs-pinned-height: 40px;
+    }
+  }
+  
+  @media (max-width: 165px) {
+    #root.root {
+      --tabs-pinned-width: 23vw;
+      --tabs-pinned-height: 40px;
+    }
+  }
+  
+  @media (max-width: 125px) {
+    #root.root {
+      --tabs-pinned-width: 22vw;
+      --tabs-pinned-height: 40px;
+    }
+  }
+  
+  @media (max-width: 84px) {
+    #root.root {
+      --tabs-pinned-width: 20.5vw;
+      --tabs-pinned-height: 19px;
+    }
+    .PinnedTabsBar .tab-wrapper .fav {
+      transform: scale(0.6);
+    }
+  }
+  
+  @media (max-width: 42px) {
+    #root.root {
+      --tabs-pinned-width: 15px;
+      --tabs-pinned-height: 19px;
+    }
+  
+    .PinnedTabsBar .audio {
+      display: none !important;
+    }
+    .PinnedTabsBar[data-audible] svg.-loud,
+    .PinnedTabsBar[data-muted] svg.-mute {
+      display: none !important;
+    }
+  }
+  
+  /*--------------------------------------------------*/
+  /*--Tabs--*/
+  
+  #root.root {
+    --tabs-normal-fg: rgb(251, 251, 254);
+  }
+  #root.root {
+    --tabs-activated-bg: #11111b ;
+  }
+  #root.root {
+    --general-border-radius: 10px;
+  }
+  #root.root {
+    --general-margin: 2px;
+  }
+  #root.root {
+    --frame-el-overlay-selected-border: #ffffffff;
+  }
+  #root.root {
+    --frame-el-overlay-selected-bg: #11111b ;
+  }
+  #root.root {
+    --tabs-border-radius: 10px;
+  }
+  #root.root {
+    --tabs-indent: 20px;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    #root.root {
+      --frame-el-overlay-selected-bg: rgb(69, 107, 200);
+    }
+    #root.root {
+      --frame-el-overlay-selected-border: rgb(69, 107, 200);
+    }
+  }
+  
+  .Tab[data-pin="false"] .fav {
+    margin-left: 9px;
+  }
+  #root.root {
+    --tabs-audio-btn-width: 30px;
+  }
+  
+  /*--------------------------------------------------*/
+  /*--Fix Tabs Tree--*/
+  
+  @media screen and (max-width: 42px) {
+    #root {
+      --tabs-indent: unset !important;
+    }
+  
+    .ScrollBox > .scroll-container {
+      overflow: hidden;
+    }
+  
+    .Tab .body::after {
+      display: none !important;
+    }
+  
+    .Tab .audio {
+      left: 10px;
+      transform: scale(0.8);
+      transform: translateY(6px) translateX(-15px);
+      z-index: 99 !important;
+    }
+  
+    .Tab[data-audible] svg.-loud,
+    .Tab[data-muted] svg.-mute {
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  
+  /*--------------------------------------------------*/
+  /*--Background--*/
+  
+  @media (prefers-color-scheme: dark) {
+    /*--Body--*/
+    #root.root {
+      --frame-bg: rgb(24, 24, 37);
+    }
+    /*--Header--*/
+    #root.root {
+      --toolbar-bg: rgb(24, 24, 37);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    /*--Body--*/
+    #root.root {
+      --frame-bg: rgba(216, 217, 248, 1);
+    }
+    /*--Header--*/
+    #root.root {
+      --toolbar-bg: rgba(216, 217, 248, 1);
+    }
+  }
+  
+  /*--------------------------------------------------*/
+  /*--Bookmarks--*/
+  
+  #root.root {
+    --bookmarks-indent: 0px;
+  }
+  
+  /*--------------------------------------------------*/
+  /*--Context Menu--*/
+  
+  #root.root {
+    --ctx-menu-padding: 3px;
+  }
+  @media (prefers-color-scheme: light) {
+    #root.root {
+      --popup-bg: rgb(69, 107, 200);
+    }
+  }
+  
+  /*--------------------------------------------------*/
+  
+  #root.root {
+    --notification-bg: #111117ff;
+  }
+  #root.root {
+    --notification-fg: rgb(251, 251, 254);
+  }
