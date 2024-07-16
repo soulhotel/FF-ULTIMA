@@ -13,8 +13,9 @@
 
 ### Change Log:
 - `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
-- `todo` Setting to keep default tabs-on-top layout (not a priority).
-- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69
-
+<!--- `todo` Setting to keep default tabs-on-top layout (not a priority).-->
+<!--- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69-->
+- `qol` improvement  full screen navigation bar responsiveness.
+- `qol` new window title button focused settings for linux users with themed window decorations.
 
 
