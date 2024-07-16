@@ -12,10 +12,14 @@
 > Try creating your own color scheme! See the [Catppuccin Color Scheme](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin). Contributing a color scheme or making suggestions are also very welcome.
 
 ### Change Log:
+- `new` [Catppuccin Color Scheme](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) created and shared by Draff (@ItsLogic). 
 - `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 <!--- `todo` Setting to keep default tabs-on-top layout (not a priority).-->
 <!--- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69-->
-- `qol` improvement  full screen navigation bar responsiveness.
-- `qol` new window title button focused settings for linux users with themed window decorations.
+- `qol` Improvement to full screen navigation-bar responsiveness.
+- `qol`|`new` Window-title button-focused settings, for Linux users with themed window decorations.
 
+> *Catppuccin Mocha* Color Scheme Preview
+
+https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/color-schemes/catppuccin-mocha/preview-sidebery.png
 
