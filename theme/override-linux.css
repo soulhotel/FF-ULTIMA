@@ -241,7 +241,7 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Linux compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.kdedecorations") {
+@media (-moz-bool-pref: "ultima.OS.kde.wds") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     :root[tabsintitlebar] .titlebar-buttonbox {
@@ -311,7 +311,7 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Gnome compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.gnomedecoration") {
+@media (-moz-bool-pref: "ultima.OS.gnome.wds") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
@@ -330,7 +330,7 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Gnome compat. for themed Window decoration buttons 2 */
 
-@media (-moz-bool-pref: "ultima.OS.gnomedecoration.ii") {
+@media (-moz-bool-pref: "ultima.OS.gnome.wdl") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
