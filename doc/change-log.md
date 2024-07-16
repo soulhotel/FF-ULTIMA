@@ -1,4 +1,6 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8/ffultima1.8.zip) 1.8 latest
+###### estimate JULY 18 6PM EST
+
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.1/ffultima1.8.1.zip) 1.8.1 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
