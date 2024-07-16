@@ -79,6 +79,16 @@ while keeping a clean consistent look across the theme, refer to position-vertta
 } /* end (-moz-bool-pref: "ultima.xstyle.pinnedtabs.i") */
 
 
+/* alternative URL BAR style, for when add on themes are applied */
+
+@media (-moz-bool-pref: "ultima.xstyle.urlbar") {
+
+    #main-window[lwtheme] {
+		& #urlbar-background, & #searchbar {
+        background-color: transparent !important;
+	    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(0,0,0,0);
+    }
+}
 
 
 

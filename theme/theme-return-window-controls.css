@@ -2,7 +2,6 @@
 - return the window-controls/titlebar-buttons
 - linux support added as of version 1.6.5 -> override-linux.css & override-mac.css
  ------------------------------------------------------------- */
-
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 #titlebar{
@@ -12,9 +11,7 @@
     --uc-menubar-vertical-overlap: 19px;
 }
 
-/* some code related code blocks */
-
-#navigator-toolbox > div{ display: contents }
+#navigator-toolbox > div{ display: contents; }
 
 .global-notificationbox, #tab-notification-deck{order: 2;}
 
@@ -28,9 +25,9 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
 #navigator-toolbox:not(:-moz-lwtheme){ background-color: -moz-dialog; }
 
-/*-----------------------------------------*/
-/*--to return the title bar buttons--*/
-/*-----------------------------------------*/
+
+/* to return the title bar buttons */
+
 
 :root[tabsintitlebar] .titlebar-buttonbox{
     position: fixed !important;

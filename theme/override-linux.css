@@ -241,7 +241,7 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Linux compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.kdedecorations") {
+@media (-moz-bool-pref: "ultima.OS.kde.wds") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     :root[tabsintitlebar] .titlebar-buttonbox {
@@ -311,13 +311,13 @@ Gnome compat. for themed Window decoration buttons
 /*------------------------------------------------------------------------*/
 /* Gnome compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.gnomedecorations") {
+@media (-moz-bool-pref: "ultima.OS.gnome.wds") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 80px !important;}    
+    #nav-bar {margin-right: 83px !important;}    
     :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 14px !important;
+        top: 12px !important;
         right: 7px !important;
     }
     :root .titlebar-button {
@@ -327,22 +327,21 @@ Gnome compat. for themed Window decoration buttons
 } /*--<--end linuxmedia query--*/
 } /*--<--end OS preference query--*/
 
-
 /*------------------------------------------------------------------------*/
-/* Gnome compat. for themed Window decoration buttons */
+/* Gnome compat. for themed Window decoration buttons 2 */
 
-@media (-moz-bool-pref: "ultima.OS.gnomedecorations.ii") {
+@media (-moz-bool-pref: "ultima.OS.gnome.wdl") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 110px !important;}
-    
+    #nav-bar {margin-right: 108px !important;}    
     :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 10px !important;
-        right: 4px !important;
+        top: 11px !important;
+        right: 2px !important;
     }
     :root .titlebar-button {
         --uc-selected: transparent !important;
     }
+
 } /*--<--end linuxmedia query--*/
 } /*--<--end OS preference query--*/
