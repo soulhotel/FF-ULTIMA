@@ -14,7 +14,8 @@
 > Try creating your own color scheme! See the [Catppuccin Color Scheme](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin). Contributing a color scheme or making suggestions are also very welcome.
 
 ### Change Log:
-- `new` [Catppuccin-mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) created and shared by Draff (@ItsLogic). 
+- `new` [Catppuccin-mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) created and shared by Draff (@ItsLogic).
+- `new` [Grubbox Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/grubbox), see below.
 - `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 <!--- `todo` Setting to keep default tabs-on-top layout (not a priority).-->
 <!--- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69-->
@@ -24,3 +25,11 @@
 > Catppuccin-mocha *Color Scheme* Preview
 
 ![preview-sidebery](https://github.com/user-attachments/assets/2a4cf248-e538-405f-b753-d68b6dfc4e1f)
+
+> Grubbox *Color Scheme* Preview
+
+![preview](https://github.com/user-attachments/assets/06a38452-0f06-4a88-adc7-fb8c0e6ef08f)
+
+> Grubbox Light *Color Scheme* | This theme serves as a template for Light Mode Color Scheme creation.
+
+[]
