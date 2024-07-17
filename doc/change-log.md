@@ -17,7 +17,7 @@
 - `new` Setting `user.theme.` to change between Color Schemes and New Tab Backgrounds in the about:config page.
 - `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 - `qol` Improvement to full screen navigation-bar responsiveness.
-- `qol`|`new` Window-title button-focused settings, for Linux users with themed window decorations.
+- `qol`|`new` Additional OS settings for Linux Users with themed window decorations.
 
 > Catppuccin-Mocha *Edition Preview*
 
