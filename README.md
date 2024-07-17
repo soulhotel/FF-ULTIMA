@@ -89,16 +89,26 @@
 </details>
 
 ## Documentation
-- [Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
-Details changes, fixes, and new features (change-log), that users should be aware of.
 
-- [Modification Page](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/Modification.md)
-Details every setting found on the about:config page, Optional Sidebery configuration, Spreadsheets for power users, etc.
+[Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
+- Details changes, fixes, and new features (change-log), that users should be aware of.
+- Logs older to latest packaged versions of FF ULTIMA.
 
-- [Browse Color Schemes]
-Full Moon (default dark mode), Dusky (default light mode), [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin), [Catppuccin-Mocha](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin-mocha) by Darff, [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox), [Gruvbox Light](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox-light)
+[Modification Page](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+- Details every setting found on the about:config page
+- Optional Sidebery configuration
+- Spreadsheets for power users, etc.
 
-- [Create a Color Scheme]
-Written guide for creation and optional contribution
+Browse Color Schemes
+- Full Moon (default dark mode)
+- Dusky (default light mode)
+- [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin)
+- [Catppuccin-Mocha](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin-mocha) by Darff
+- [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox)
+- [Gruvbox Light](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox-light)
+
+[Create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/New-Color-scheme.md)
+- Written guide for color scheme creation and optional contribution.
+- Plus some useful tips on utilizing the Browser Toolbox
 
 #### Enjoy
