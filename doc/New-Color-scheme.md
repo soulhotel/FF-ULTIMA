@@ -20,7 +20,7 @@ With this, we will first enable the theme, then create it in real-time. Change `
    - user_pref("user.theme.dark.`dracula`", false);
    - this will enter your theme into the about:config page.
 
-<details><summary>(Click me) Preview of the list format</summary>
+<details><summary>(Click me) 🖼️ Preview of the list format</summary>
 
 ![2024-07-16_21-00](https://github.com/user-attachments/assets/c34614f8-eef5-4cc2-8394-1c3b8f088b02)
 </details>
@@ -30,28 +30,28 @@ With this, we will first enable the theme, then create it in real-time. Change `
    - @import url('all-global-theme-`dracula`.css') (-moz-bool-pref: "user.theme.dark.`dracula`");
    - this will take your theme file, and apply it to the browser when enabled.
   
-<details><summary>(Click me) Preview of the list format</summary>
+<details><summary>(Click me) 🖼️ Preview of the list format</summary>
 
 ![2024-07-16_20-52](https://github.com/user-attachments/assets/0d2af3ab-8e4f-4407-a6e4-774051de770f)
 </details>
 
 3. custom new tab page background
    - name your background after the theme: `dracula.png` (jpg,etc)
-   - put the background in `chrome/themes/site-icons/`dracula.png
+   - put the background in `chrome/theme/site-icons/`dracula.png
    - open > `chrome/themes/all-color-schemes-newtab.css`
    - enter your theme into the list.
    - if you have no background, use any background in the site-icons folder.
    
-<details><summary>(Click me) Preview of the list format</summary>
+<details><summary>(Click me) 🖼️ Preview of the list format</summary>
 
 ![2024-07-16_20-53](https://github.com/user-attachments/assets/d21ca554-fc9e-4b56-8d85-b19d2943395c)
 </details>
 
-### Making the Theme
+## Making the Theme
 
 - To make a color scheme you need to make `all-global-theme.dracula.css`
 - Luckily for you, this is already taken care of.
-- open > `chrome/themes` folder
+- open > `chrome/theme` folder
 - Make a copy of `all-global-theme-catppuccin.css` (for dark mode)
 - Or make a copy of `all-global-theme-gruvbox-l.css` (for light mode)
 - It doesnt matter which one you copy, but these two above are configured very well for new colors.
