@@ -1,6 +1,6 @@
 ```
 FF ULTIMA
-Grubbox Edition
+Gruvbox Edition
 This is a Dark Mode Theme
 By (credit yourself)
 ```
@@ -8,7 +8,7 @@ By (credit yourself)
 To use this color scheme:
 - Navigate to `about:config` page.
 - Search for `user.theme`.
-- Turn on `user.theme.dark.grubbox`
+- Turn on `user.theme.dark.gruvbox`
 - Make sure you only have one dark & light theme enabled at a time.
 - Enjoy.
 
