@@ -10,74 +10,66 @@
 
 </div>
 
-![ffu](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/0d2d418a-0123-43e3-960b-952f39956b08)
-
-<!-- 
-> pv +-
- ![preview2](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/e5e38b36-05fb-405d-8601-d4e924f66e81) 
- ![preview1](https://github.com/soulhotel/FF-ULTIMA/assets/155501797/5fc4b558-f78a-45c5-9ef0-ca016a0e85de) 
- ![Main Preview](doc/preview/prev1.gif)
- -->
+![ffultimaeditions](https://github.com/user-attachments/assets/77eeae82-d910-4169-ace1-c3bdc49a9b07)
 
 ## Features
 
-- `Vertical Tabs` and a `One Line Nav Bar`
-- Support to create color schemes, or just go to the addon store
-- Full Moon (Dark) and Dusky (Light) cycle depending on your Systems current color mode
-- New Tab Page Overhaul. [@hachikoharuno](https://github.com/hachikoharuno/Beautiful-newtab-Firefox) 
+- `Vertical Tabs` and a `One Line Nav Bar`.
+- Color Scheme support, Create your own (with Guides) or just go to the add-on store.
+- Dark or Light mode themes, automatically cycle depending on your systems current Color Mode.
+- Windows, Linux and Mac OS Support.
 - Multiple Options - for Tab Size, Autohiding Tabs, Sidebar, Spacing, OS compatibility [and More](doc/Modification.md)
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
 
 ![prevautohide](doc/preview/prevmini-bar.png)
 
-## Requirements
+## Installation
 
-- ✅ Firefox 120+
-- ✅ Win11/Lin/Mac
-
-<details>
-<summary>(Click me) Have system theme enabled for first install, not firefox dark/light, they are different.</summary>
-  
-![install1](doc/preview/install1.jpg) ![install2](doc/preview/install2.jpg)
-</details>
+###### 🚨 Do not skip the installation instructions! Firefox v120+ Required. 🚨
 
 <details>
-<summary>(Click me) Need help finding your Profile Folder?</summary>
+<summary>Need help finding your Profile Folder? (Click Me)</summary>
 
 <br>
 
-> userChrome Themes work by Having the Firefox Browser read style-sheets `.css` within a certain directory of your Profile Folder. There are two easy ways to access this folder:
+> userChrome Themes work by communicating with a chrome folder located in your Firefox Profile folder, think of it as your User Interface. This folder typically holds `.css` files with the purpose of customizing elements of the Browser. There are two easy ways to access this folder:
 
 1. Go to the `about:support` page
 - In the URL Bar, type `about:support`.
-- Look at the **Profile Folder** row. Open the folder.
+- Look for the **Profile Folder** row. Open the folder.
 - In that folder, create a new folder named `chrome` (If it doesnt already exist).
 
 ![aboutsupport](doc/preview/about_support.png)
 
 2. Go to the `about:profiles` page
 - In the URL Bar, type `about:profiles`.
-- Your profile will say `This is the profile in use and...`. Click the **Open Directory** button in the **Root Directory** row.
-- In that folder, create a new folder named `chrome` (if it doesnt already exist).
+- Your profile will say `This is the profile in use and...`.
+- Look for the **Root Directory** row, and click **Open Directory**.
+- In the opened Folder, create a new folder named `chrome` (if it doesnt already exist).
  
 ![alt text](doc/preview/profilelocation.png)
 </details>
 
-## Installation
+<details>
+<summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
+  
+![install1](doc/preview/install1.jpg) ![install2](doc/preview/install2.jpg)
+</details>
 
 ###### :warning: There are 2 ways to install this theme, both have their drawbacks and strengths. Choose one.
 
 <details><summary>The Easy Way</summary>
  
 >
-1. Download the latest version by [clicking here](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip). Or on the [release page.](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) (recommended).
-2. In the theme zip file, copy the files from `ffultimax.x.x` folder into the chrome folder.
-3. In the chrome folder youll see a file named `user.js`, move it out of the chrome folder and into the Profile Folder.
-4. Restart Firefox. After Firefox is open again, delete the `user.js` file.
-5. The `user.js` enabled userChrome, and adds settings like tab size, autohide, etc, in `about:config`.
-6. Try it out, go to `about:config` then search for `ultima`.
+1. Download the latest version on the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest).
+2. Copy everything in the ffultima(version).zip into your chrome folder.
+3. For first time installation, you will need to apply the `user.js` to your profile to access theme settings.
+4. In the chrome folder, youll see the `user.js`, move it <ins>out the chrome folder and into the Profile Folder<ins>.
+5. Restart Firefox.
+6. **Wait** for Firefox to open, then delete the `user.js` file.
+7. Go to `about:config` and search for `ultima` to see all of your settings.
 
-<!-- https://github.com/soulhotel/FF-ULTIMA/assets/155501797/dbc7fc96-e975-4a6f-820d-f69efa04cf8e -->
+###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :). 
 </details>
 
 <details><summary>The Hard Way</summary>
@@ -88,23 +80,35 @@
 2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile\folder\path\chrome`.
 3. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
 4. In your chrome folder you'll have a file named `user.js`.
-5. Move the `user.js` file **OUT** of the chrome folder and **INTO** your Profile Folder.
-6. Restart Firefox. After Firefox is open again, delete the `user.js` file.
-7. The `user.js` file enabled userChrome, and added theme settings like tab size, autohiding, etc, in the `about:config` page.
-8. Try it out, go to `about:config` then search for `ultima`.
+5. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
+6. Restart Firefox.
+7. **Wait** for Firefox to open, then delete the `user.js` file.
+8. Go to `about:config` and search for `ultima` to see all of your settings.
+
+###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :). 
 </details>
 
-## Previews
+## Documentation
 
-###### Click images for a higher resolution
+[Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
+- Details changes, fixes, and new features (change-log), that users should be aware of.
+- Logs older to latest packaged versions of FF ULTIMA.
 
-|            Dusky (Light)                                |          Full Moon (Dark)           |
-| :-----------------------------------------------------: | :---------------------------------: |
-| ![install1](doc/preview/prevw.png)                      | ![install1](doc/preview/prev3.png) |
-|            Catppuccin Edition                           |            Add On theme             |
-| ![install1](theme/color-schemes/catppuccin/preview.png) | ![install1](doc/preview/prev5.gif) |
-|            Sidebery Example                             |            Add On theme             |
-| ![install1](doc/preview/prevs.png)                      | ![install1](doc/preview/prev4.gif) |
-|                                                         |                                     |
+[Modification Page](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+- Details every setting found on the about:config page
+- Optional Sidebery configuration
+- Spreadsheets for power users, etc.
+
+Browse Color Schemes
+- Full Moon (default dark mode)
+- Dusky (default light mode)
+- [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin)
+- [Catppuccin-Mocha](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin-mocha) by Darff
+- [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox)
+- [Gruvbox Light](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox-light)
+
+[Create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/New-Color-scheme.md)
+- Written guide for color scheme creation and optional contribution.
+- Plus some useful tips on utilizing the Browser Toolbox
 
 #### Enjoy
