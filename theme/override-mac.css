@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------
+- this file automatically overides necessary components of the theme
+    - strictly for when the users OS is mac
+    - more testing needs to be done for mac, user input is very welcome.
+    - valid results for Sonama and Ventura
+-----------------------------------------------------------------*/
+
+@media (-moz-os-version: macos), (-moz-platform: macos) {
+    #nav-bar {
+        margin-left: 84px !important;
+        margin-right: 0px !important;
+    }    
+    
+    :root[tabsintitlebar] .titlebar-buttonbox {
+        top: 12px !important;
+        right: unset !important;
+        left: 3px !important;
+    }
+    toolbar {
+        min-height: 0px !important;
+    }
+} /*--<--end OS preference query--*/
