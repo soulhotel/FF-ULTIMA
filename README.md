@@ -10,10 +10,7 @@
 
 </div>
 
-![ffultimaeditions](https://github.com/user-attachments/assets/77eeae82-d910-4169-ace1-c3bdc49a9b07)
-
 ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802)
-
 
 ## Features
 
@@ -109,6 +106,7 @@ Browse Color Schemes
 - [Catppuccin-Mocha](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin-mocha) by Darff
 - [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox)
 - [Gruvbox Light](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox-light)
+- [Midnight](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/midnight)
 
 [Create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/New-Color-scheme.md)
 - Written guide for color scheme creation and optional contribution.
