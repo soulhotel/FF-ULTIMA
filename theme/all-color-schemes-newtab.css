@@ -22,6 +22,8 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("site-icons/gruvbox.png") !important;}}
 
+@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("site-icons/midnight.png") !important;}}
+
 }
 
 /*--------------------------------- LIGHT COLOR SCHEME SECTION ---------------------------------*/
