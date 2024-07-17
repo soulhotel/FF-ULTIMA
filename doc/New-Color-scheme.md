@@ -95,13 +95,9 @@ With this, we will first enable the theme, then create it in real-time. Change `
 
 Now that you have your New Shiny Theme, you can switch between the theme and others anytime in about:config
 
-Note: If you would like your theme to be included in future updates of FF ULTIMA you can share it through the github.
+Note: If you would like your theme to be included in future updates of FF ULTIMA you can share it through the github. You would then be considered a Contributor to 'FF ULTIMA' by providing an alternate Style to many other Users of the theme. And Your Color Scheme will be easily enabled and kept updated with future versions of FF ULTIMA.
 
-You will be considered a Contributor to the FF ULTIMA Project by providing an alternate Style to many other Users of the theme.
-
-Your Color Scheme will be easily enabled and updated in future versions of FF ULTIMA.
-
-To share your theme, you can submit a pull request (recommended) or open an issue, with the editted files. See also: [Color Scheme Presentation](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin). This is a template for creditting yourself and presenting the color scheme.
+To share your theme, you can submit a pull request (recommended) or open an issue, with the editted files. See also: [Color Scheme Presentation](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-Mocha). This folder can be seen as a template - for presenting your theme to Users. You can also creditting yourself, and perhaps providing additional details if necessary.
 
 With that said, I'll take care of the rest. Best regards, Soul Hotel.
 
