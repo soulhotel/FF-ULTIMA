@@ -498,7 +498,7 @@ splitter {@media (-moz-platform: windows) { & {
     &:not([lwtheme]) .titlebar-button {
         stroke: var(--toolbarbutton-icon-fill) !important;
     } 
-    &[lwtheme="true"] .titlebar-button {
+    &[lwtheme] .titlebar-button {
         stroke: var(--toolbarbutton-icon-fill) !important;
     }
 }
@@ -530,7 +530,7 @@ splitter {@media (-moz-platform: windows) { & {
   list-style-image: url("icons/extensions.svg") !important;
   fill: var(--toolbarbutton-icon-fill) !important;
 }
-#main-window[lwtheme="true"] #unified-extensions-button {
+#main-window[lwtheme] #unified-extensions-button {
   list-style-image: url("icons/extensions.svg") !important;
   fill: var(--lwt-accent-color) !important;
 }
