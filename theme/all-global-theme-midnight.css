@@ -8,6 +8,7 @@ Applying variables to create the Dark Mode theme
 Adapting to add-on-theme styling
 Global styling - applies everywhere
 Global styling - Icons
+Custom UI - Background
 -------------------------------------------------------------------------------------*/
 
 
@@ -570,4 +571,26 @@ splitter {@media (-moz-platform: windows) { & {
   text-shadow: #FDFFFF 0.5px 0 15px!important;
 }
 
+    
+    
+    
+/* Custom UI - Background ----------------------------------------------------------*/    
+ 
+#main-window:not([lwtheme]) #nav-bar {
+  transition: var(--ext-theme-background-transition) !important;
+  background-image: url(site-icons/midnight-ui.gif) !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: 115% 100% !important;
+}
+
+#main-window:not([lwtheme]) findbar {
+  color: var(--toolbar-color) !important;
+  color-scheme: var(--toolbar-color-scheme) !important;
+  background-image: url(site-icons/midnight-ui.gif) !important;
+  border-top: 0px !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: 100% 100% !important;
+}
+    
+    
 }
