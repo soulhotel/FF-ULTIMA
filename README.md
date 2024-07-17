@@ -102,8 +102,8 @@ Browse Color Schemes
 - Dusky (default light mode)
 - [Catppuccin](theme/color-schemes/catppuccin/readme.md)
 - [Catppuccin-Mocha](theme/color-schemes/catppuccin-mocha/readme.md) by Darff
-- [Gruvbox](theme/color-schemes/grubbox/readme.md)
-- [Gruvbox Light](theme/color-schemes/grubbox-light/readme.md)
+- [Gruvbox](theme/color-schemes/gruvbox/readme.md)
+- [Gruvbox Light](theme/color-schemes/gruvbox-light/readme.md)
 
 [Create a Color Scheme](doc/new-color-scheme.md)
 - Written guide for color scheme creation and optional contribution.
