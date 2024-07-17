@@ -91,7 +91,7 @@
 ## Documentation
 
 [Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
-- Details changes, fixes, and new features (change-log), that users should be aware of.
+- Details changes, fixes, new features that users should be aware of.
 - Logs older to latest packaged versions of FF ULTIMA.
 
 [Modification Page](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
@@ -111,4 +111,4 @@ Browse Color Schemes
 - Written guide for color scheme creation and optional contribution.
 - Plus some useful tips on utilizing the Browser Toolbox
 
-#### Enjoy
+## Enjoy
