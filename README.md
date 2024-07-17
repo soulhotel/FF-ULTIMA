@@ -88,7 +88,7 @@
 ###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :). 
 </details>
 
-## Documentation and Previews.
+## Documentation
 - [Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
 Details changes, fixes, and new features (change-log), that users should be aware of.
 
