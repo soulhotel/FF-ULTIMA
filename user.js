@@ -1,10 +1,11 @@
 /*color schemes*/
-user_pref("user.theme.dark.a", true); /*default dark mode*/
-user_pref("user.theme.light.a", true); /*default light mode*/
+user_pref("user.theme.dark.a", true); /*default dark mode - FULL MOON*/
+user_pref("user.theme.light.a", true); /*default dark mode - FULL MOON*/
 user_pref("user.theme.dark.catppuccin", false);
 user_pref("user.theme.dark.catppuccin-mocha", false); /*by Draff*/
 user_pref("user.theme.dark.gruvbox", false);
 user_pref("user.theme.light.gruvbox", false);
+user_pref("user.theme.dark.midnight", false);
 
 /*tabs*/
 user_pref("ultima.tabs.size.xs", false);
