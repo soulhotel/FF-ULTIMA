@@ -22,7 +22,7 @@ With this, we will first enable the theme, then create it in real-time. Change `
 
 <details><summary>(Click me) Preview of the list format</summary>
 
-![2024-07-16_20-53_1](https://github.com/user-attachments/assets/3165c5ea-f6ff-4b2b-82f0-eb6a92c5de04)
+![2024-07-16_21-00](https://github.com/user-attachments/assets/c34614f8-eef5-4cc2-8394-1c3b8f088b02)
 </details>
 
 2. open > chrome/themes/`all-color-schemes.css`
