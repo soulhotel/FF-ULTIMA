@@ -6,14 +6,9 @@
 
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
-###### ⏭️ Preview [*what's next*](https://github.com/soulhotel/FF-ULTIMA/blob/main.update.branch/doc/change-log.md) in the change-log for the Main Update Branch.
-
-> [!IMPORTANT]
-> Try creating your own Color Scheme! See the [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) by Draff.
-
 ### Change Log:
-- `new` [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) created and shared by Draff (@ItsLogic).
-- `new` [Gruvbox Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox), [Gruvbox Light Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox)
+- `new` [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) by Draff (@ItsLogic).
+- `new` [Gruvbox Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox), [Gruvbox Light Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox-light), [Midnight Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/midnight)
 - `new` Setting `user.theme.` to change between Color Schemes and New Tab Backgrounds in the about:config page.
 - `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 - `qol` Improvement to full screen navigation-bar responsiveness.
@@ -28,6 +23,12 @@
 ![preview](https://github.com/user-attachments/assets/78d350e3-2666-40ab-ad86-a71a58b99af3)
 
 > Grubbox Light *Edition Preview*
+
+![preview](https://github.com/user-attachments/assets/cbfba5ac-13a3-4397-ac64-5d732202c821)
+
+> Midnight *Edition Preview*
+
+![preview](https://github.com/user-attachments/assets/2a7761fd-d1d3-4467-9f66-b8ad3b68ab58)
 
 
 
