@@ -13,9 +13,8 @@ To use this color scheme:
 - Enjoy.
 
 Preview:
-![preview](./preview.png)
+> Sidebery CSS included in this folder.
 
-Preview with Sidebery CSS:
-![preview](./preview-sidebery.png)
+![preview](./preview.png)
 
 Color schemes are easy to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md) page.
