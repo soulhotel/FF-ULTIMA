@@ -111,4 +111,4 @@ Browse Color Schemes
 - Written guide for color scheme creation and optional contribution.
 - Plus some useful tips on utilizing the Browser Toolbox
 
-#### Enjoy
+## Enjoy
