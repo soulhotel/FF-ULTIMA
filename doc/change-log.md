@@ -12,9 +12,9 @@
 > Try creating your own Color Scheme! See the [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) by Draff.
 
 ### Change Log:
-- `new` Setting `user.theme.` to change between Color Schemes and New Tab Backgrounds in the about:config page.
 - `new` [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) created and shared by Draff (@ItsLogic).
 - `new` [Gruvbox Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox), [Gruvbox Light Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox)
+- `new` Setting `user.theme.` to change between Color Schemes and New Tab Backgrounds in the about:config page.
 - `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 <!--- `todo` Setting to keep default tabs-on-top layout (not a priority).-->
 <!--- `todo` https://github.com/soulhotel/FF-ULTIMA/issues/69-->
