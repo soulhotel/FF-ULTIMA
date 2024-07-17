@@ -63,7 +63,7 @@
 ![install1](doc/preview/install1.jpg) ![install2](doc/preview/install2.jpg)
 </details>
 
-###### :warning: There are 2 ways to install this theme, both have their drawbacks and strengths. Choose one.
+###### ⬇️ Choose *one* of the installation methods below. ⬇️
 
 <details><summary>The Easy Way</summary>
  
