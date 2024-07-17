@@ -1,0 +1,37 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+/*
+This file handles New Tab Backgrounds for Color Schemes.
+Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md
+
+Use the template below to enter your theme into the list:
+
+@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("site-icons/MYTHEME.png") !important;}
+
+@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("site-icons/MYTHEME.png") !important;}
+*/
+
+/*--------------------------------- DARK COLOR SCHEME SECTION ---------------------------------*/
+
+@media (prefers-color-scheme: dark) {
+
+@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("site-icons/fullmoon.png") !important;}}
+
+@media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("site-icons/catppuccin.png") !important;}}
+
+@media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("site-icons/catppuccin.png") !important;}}
+
+@media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("site-icons/gruvbox.png") !important;}}
+
+}
+
+/*--------------------------------- LIGHT COLOR SCHEME SECTION ---------------------------------*/
+
+@media (prefers-color-scheme: light){
+
+@media (-moz-bool-pref: "user.theme.light.a"){body{background-image: url("site-icons/dusky.png") !important;}}
+
+@media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("site-icons/gruvbox-l.png") !important;}}
+
+}
+
+}

@@ -1,3 +1,11 @@
+/*color schemes*/
+user_pref("user.theme.dark.a", true); /*default dark mode - FULL MOON*/
+user_pref("user.theme.light.a", true); /*default dark mode - FULL MOON*/
+user_pref("user.theme.dark.catppuccin", false);
+user_pref("user.theme.dark.catppuccin-mocha", false); /*by Draff*/
+user_pref("user.theme.dark.gruvbox", false);
+user_pref("user.theme.light.gruvbox", false);
+
 /*tabs*/
 user_pref("ultima.tabs.size.xs", false);
 user_pref("ultima.tabs.size.s", false);
@@ -33,7 +41,9 @@ user_pref("ultima.xstyle.pinnedtabs.i", false); /* Experimental. Havent decided 
 user_pref("ultima.OS.kde", true);
 user_pref("ultima.OS.gnome", false);
 user_pref("ultima.OS.mac", false);
-user_pref("ultima.OS.kdedecorations", false);
+user_pref("ultima.OS.kde.wds", false);
+user_pref("ultima.OS.gnome.wds", false);
+user_pref("ultima.OS.gnome.wdl", false);
 /*user_pref("ultima.OS.linux", false);*/ /*Experimental*/
 
 /*other*/

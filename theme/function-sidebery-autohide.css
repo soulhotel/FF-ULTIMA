@@ -1,0 +1,98 @@
+/* ----------------------------------------------------------
+- Autohide Sidebery sidebar extension
+- this function is enabled by the tabs.sidebery.autohide setting in about:config
+- it will not affect other sidebars (history, favorites, notes, sideview, etc.)
+-----------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.sidebery.autohide") {
+    :root {
+        --bg: #1a1b26;
+    }
+    /* safeguard 1/2 - when tabs are visible and sidebery is on the leftside of browser, they display over the tabs unaturally. */
+    #TabsToolbar-customization-target, #tabbrowser-tabs {
+        z-index: 999 !important;
+    }
+    /* removing the code block above will reproduce the issue */
+    
+    /* hides the sidebar header */
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
+        display: none !important;
+    }
+
+    /* autohide */
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+        --uc-sidebar-width: 37px;
+        --uc-sidebar-hover-width: 320px;
+        --uc-autohide-sidebar-delay: 4ms;
+        /* Waiting time before hiding sidebar */
+        position: relative;
+        min-width: var(--uc-sidebar-width) !important;
+        width: var(--uc-sidebar-width) !important;
+        max-width: var(--uc-sidebar-width) !important;
+        z-index: 1;
+        /* safeguard 2/2 - z-index changed from 100 to 1, to accomodate safeguard 1 above. */
+        /* with this the function is very stable. */
+    }
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] {
+        direction: rtl;
+    }
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]>* {
+        direction: ltr;
+    }
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl) {
+        direction: ltr;
+    }
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl)>* {
+        direction: rtl;
+    }
+
+    /* HIDE SIDE BAR IN FULL SCREEN */
+    #main-window[titlepreface*="[S] "][inFullscreen="true"] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+        --uc-sidebar-width: 0px;
+    }
+
+    #sidebar-splitter {
+        display: none;
+    }
+
+    #sidebar-header {
+        overflow: hidden;
+    }
+
+    #sidebar {
+        transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+        min-width: var(--uc-sidebar-width) !important;
+        will-change: min-width;
+    }
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover>#sidebar {
+        min-width: var(--uc-sidebar-hover-width) !important;
+        transition-delay: 0ms !important;
+    }
+
+    .sidebar-panel {
+        background-color: transparent !important;
+    }
+
+    .sidebar-panel #search-box {
+        -moz-appearance: none !important;
+        background-color: rgba(249, 249, 250, 0.1) !important;
+        color: inherit !important;
+    }
+
+    /* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover~#appcontent #statuspanel {
+        inset-inline: auto 0px !important;
+    }
+
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover~#appcontent #statuspanel-label {
+        margin-inline: 0px !important;
+        border-left-style: solid !important;
+    }
+
+}

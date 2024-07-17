@@ -1,0 +1,73 @@
+/* -------------------------------------------------------------
+- for userContent
+- Light YT styling
+- Adding backdrop blur effect to the side bar, and several notifications
+- Matching the border radius for the video context menu and some menus with the browser
+ ------------------------------------------------------------- */
+
+/*--YT Theme--*/
+
+@-moz-document domain("youtube.com") {
+
+/*--side bar--*/
+#contentContainer, #guide-content.ytd-app {
+  background-color: rgba(0,0,0,0.1) !important;
+  filter: saturate(140%) !important;
+  backdrop-filter: blur(33px);
+}
+
+/*--notification popups--*/
+.style-scope.ytd-popup-container {
+  background-color: rgba(20,20,20,0.7) !important;
+  filter: saturate(140%) !important;
+  backdrop-filter: blur(33px);
+  border-radius: 10px !important;
+}
+
+.ytd-multi-page-menu-renderer {
+  background-color: rgba(20,20,20,0.7) !important;
+  filter: saturate(140%) !important;
+  backdrop-filter: blur(33px);
+}
+
+/*--search bar popup--*/
+html[dark] .sbsb_a {
+  background: var(--yt-spec-raised-background);
+  background-color: rgba(20,20,20,0.7) !important;
+  filter: saturate(140%) !important;
+  backdrop-filter: blur(33px);
+  border-radius: 10px !important;
+}
+
+/*--video player, context menu--*/
+.ytp-popup.ytp-contextmenu { border-radius: 10px !important; }
+
+
+/* Youtube logo red to blue */
+/*
+.yt-spec-icon-shape path[fill="#FF0000"] 
+{fill: #4291d7 !important;}
+*/
+
+/*SEEKBAR COLOR*/
+/*
+.ytp-swatch-background-color { background-color: #fffd80 !important; }
+*/
+
+/*--notifications badge color now yellow--*/
+
+.yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
+    background-color: #fffd80 !important;
+    color: #2b2b2b !important;
+} .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
+    border: 0px solid rgba(0,0,0,0.8) !important;
+}
+
+/*--live video indicator under thumbnails color--*/
+
+.badge-style-type-live-now-alternate.ytd-badge-supported-renderer {
+    background: rgba(92, 198, 223, 0.9) !important;
+    color: var(--yt-spec-static-brand-white) !important;
+}
+
+}
