@@ -14,21 +14,38 @@ With this, we will first enable the theme, then create it in real-time. Change `
 
 ### Enabling the Color Scheme
 
-1. open > `user.js`
+1. open > chrome/`user.js`
    - at the top, you will see the 'color schemes' section.
    - enter your theme into the list.
    - user_pref("user.theme.dark.`dracula`", false);
    - this will enter your theme into the about:config page.
+
+<details><summary>(Click me) Preview of the list format</summary>
+
+![2024-07-16_20-53_1](https://github.com/user-attachments/assets/3165c5ea-f6ff-4b2b-82f0-eb6a92c5de04)
+</details>
+
 2. open > chrome/themes/`all-color-schemes.css`
    - enter your theme into the list.
    - @import url('all-global-theme-`dracula`.css') (-moz-bool-pref: "user.theme.dark.`dracula`");
    - this will take your theme file, and apply it to the browser when enabled.
+  
+<details><summary>(Click me) Preview of the list format</summary>
+
+![2024-07-16_20-52](https://github.com/user-attachments/assets/0d2af3ab-8e4f-4407-a6e4-774051de770f)
+</details>
+
 3. custom new tab page background
    - name your background after the theme: `dracula.png` (jpg,etc)
    - put the background in `chrome/themes/site-icons/`dracula.png
    - open > `chrome/themes/all-color-schemes-newtab.css`
    - enter your theme into the list.
    - if you have no background, use any background in the site-icons folder.
+   
+<details><summary>(Click me) Preview of the list format</summary>
+
+![2024-07-16_20-53](https://github.com/user-attachments/assets/d21ca554-fc9e-4b56-8d85-b19d2943395c)
+</details>
 
 ### Making the Theme
 
