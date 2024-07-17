@@ -1,3 +1,5 @@
+#### 📛 This is the `main.update.branch`. Previously this branch was responsible for tracking and pushing New Version Updates to the `Main` Branch. However this task has been moved to the `new-release` branch. This branch is no longer in use.
+
 # <p align="center"> FF ULTIMA... </p>
 
 ###### <p align="center">. . . a sequel to [Perfection FF CSS Theme](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme) </p>
