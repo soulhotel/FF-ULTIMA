@@ -12,10 +12,7 @@ To use this color scheme:
 - Make sure you only have one dark & light theme enabled at a time.
 - Enjoy.
 
-Preview:
+Preview (Sidebery CSS included in this folder):
 ![preview](./preview.png)
-
-Preview with Sidebery CSS:
-![preview](./preview-sidebery.png)
 
 Color schemes are easy to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md) page.
