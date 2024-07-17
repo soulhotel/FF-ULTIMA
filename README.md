@@ -10,16 +10,25 @@
 
 ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802)
 
+
 ## Features
 
 - `Vertical Tabs` and a `One Line Nav Bar`.
-- Color Scheme support, Create your own (with Guides) or just go to the add-on store.
+>
+- Add-on theme support, FF ULTIMA can be used with firefox add-on themes.
+>
+- Color Scheme support, create your own (with Tutorial) or cycle through the many options.
+>
 - Dark or Light mode themes, automatically cycle depending on your systems current Color Mode.
+>
 - Windows, Linux and Mac OS Support.
+>
 - Multiple Options - for Tab Size, Autohiding Tabs, Sidebar, Spacing, OS compatibility [and More](doc/Modification.md)
+>
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
 
 ![prevautohide](doc/preview/prevmini-bar.png)
+
 
 ## Installation
 
@@ -85,6 +94,7 @@
 
 ###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :). 
 </details>
+
 
 ## Documentation
 
