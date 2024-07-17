@@ -13,7 +13,8 @@
 ## Features
 
 - `Vertical Tabs` and a `One Line Nav Bar`.
-- Color Scheme support, Create your own (with Guides) or just go to the add-on store.
+- Add-on theme support, FF ULTIMA will not override add-on theme colors.
+- Color Scheme support, create your own (with Tutorial) or cycle through the many options.
 - Dark or Light mode themes, automatically cycle depending on your systems current Color Mode.
 - Windows, Linux and Mac OS Support.
 - Multiple Options - for Tab Size, Autohiding Tabs, Sidebar, Spacing, OS compatibility [and More](doc/Modification.md)
