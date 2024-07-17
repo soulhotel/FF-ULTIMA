@@ -21,7 +21,7 @@
 
 > Catppuccin-Mocha *Edition Preview*
 
-![preview-sidebery](https://github.com/user-attachments/assets/2a4cf248-e538-405f-b753-d68b6dfc4e1f)
+![0000](https://github.com/user-attachments/assets/138ea75c-d083-4d2c-8ab6-c7844e17a43b)
 
 > Grubbox *Edition Preview*
 
