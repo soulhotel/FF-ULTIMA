@@ -51,7 +51,7 @@
 </details>
 
 <details>
-<summary>Have system theme enabled for first install, not firefox dark/light, they are different. (Click me) </summary>
+<summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
   
 ![install1](doc/preview/install1.jpg) ![install2](doc/preview/install2.jpg)
 </details>
