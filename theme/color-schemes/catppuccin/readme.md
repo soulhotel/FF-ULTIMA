@@ -1,18 +1,15 @@
 ```
 FF ULTIMA
 Catppuccin Edition
-Dark Mode
+This is a Dark Mode Theme
 By (credit yourself)
 ```
 
 To use this color scheme:
-- Navigate to `chrome/theme/color-scheme/catppuccin`.
-- `Copy the theme folder`.
-- `Go back <-` to your chrome folder.
-- `Paste the theme folder` onto your chrome folder, allow overwriting.
-- `Open your userchrome.css file` which is in the chrome folder.
-- Change `all-global-theme-fullmoon.css` to -> `all-global-theme-catppuccin.css`
-- Your dark mode will now be catppuccin.
+- Navigate to `about:config` page.
+- Search for `user.theme`.
+- Turn on `user.theme.dark.catppuccin`
+- Make sure you only have one dark & light theme enabled at a time.
 - Enjoy.
 
 Preview:

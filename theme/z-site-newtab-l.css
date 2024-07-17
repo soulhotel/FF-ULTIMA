@@ -29,7 +29,6 @@ body {
   --newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 88%, var(--newtab-wordmark-color)) !important;
   --newtab-primary-element-text-color: var(--newtab-text-primary-color) !important;
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
-  background-image: url("site-icons/newtab-light.png") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;

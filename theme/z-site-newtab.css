@@ -1,8 +1,10 @@
-/* -------------------------------------------------------------
-- for userContent
-- https://github.com/hachikoharuno/Beautiful-newtab-Firefox
- ------------------------------------------------------------- */
+/*
+Note: this new tab theme is the creation of @Hachiko
+https://github.com/hachikoharuno/Beautiful-newtab-Firefox
+check them out if you like this theme!
+*/
 
+@import url('all-color-schemes-newtab.css');
 @import url('z-site-newtab-l.css');
 
 /*----------------------NEW TAB HOME-----------------------*/
@@ -29,7 +31,6 @@ body {
 --newtab-border-color: color-mix(in srgb, var(--newtab-background-color) 88%, var(--newtab-wordmark-color)) !important;
 --newtab-primary-element-text-color: var(--newtab-text-primary-color) !important;
 --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
-background-image: url("site-icons/newtab.png") !important;
 background-repeat: no-repeat !important;
 background-position: center !important;
 background-size: cover !important;

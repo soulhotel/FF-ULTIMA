@@ -1,8 +1,6 @@
 # <p align="center"> FF ULTIMA... </p>
 
-###### <p align="center">. . . a sequel to [Perfection FF CSS Theme](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme) </p>
-
-###### <p align="center">Beautiful. light-weight. a 100% easy-mode theme. and a 100% over-the-top name to break the fourth wall!</p>
+###### <p align="center">. . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).</p>
 
 <div align="center">
 
@@ -10,7 +8,7 @@
 
 </div>
 
-![ffultimaeditions](https://github.com/user-attachments/assets/77eeae82-d910-4169-ace1-c3bdc49a9b07)
+![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802)
 
 ## Features
 
@@ -94,7 +92,7 @@
 - Details changes, fixes, new features that users should be aware of.
 - Logs older to latest packaged versions of FF ULTIMA.
 
-[Modification Page](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md)
+[Modification Page](doc/Modification.md)
 - Details every setting found on the about:config page
 - Optional Sidebery configuration
 - Spreadsheets for power users, etc.
@@ -102,12 +100,12 @@
 Browse Color Schemes
 - Full Moon (default dark mode)
 - Dusky (default light mode)
-- [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin)
-- [Catppuccin-Mocha](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/catppuccin-mocha) by Darff
-- [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox)
-- [Gruvbox Light](https://github.com/soulhotel/FF-ULTIMA/tree/next-release/theme/color-schemes/grubbox-light)
+- [Catppuccin](theme/color-schemes/catppuccin/readme.md)
+- [Catppuccin-Mocha](theme/color-schemes/catppuccin-mocha/readme.md) by Darff
+- [Gruvbox](theme/color-schemes/grubbox/readme.md)
+- [Gruvbox Light](theme/color-schemes/grubbox-light/readme.md)
 
-[Create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/New-Color-scheme.md)
+[Create a Color Scheme](doc/new-color-scheme.md)
 - Written guide for color scheme creation and optional contribution.
 - Plus some useful tips on utilizing the Browser Toolbox
 
