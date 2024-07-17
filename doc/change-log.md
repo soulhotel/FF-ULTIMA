@@ -13,7 +13,7 @@
 - `new` Setting `ultima.xstyle.urlbar` provides an alternate style for the URL BAR - blending into the nav bar, with no box-shadow or border [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 - `qol` Improvement to full screen navigation-bar responsiveness.
 - `qol`|`new` Additional OS settings for Linux Users with themed window decorations.
-- `fix` fade of the use of `customizing="true"` selector in response to Firefox v129.0b4 changes.
+- `fix` fade out the use of `customizing="true"` selector in response to Firefox v129.0b4 changes.
 
 > Catppuccin-Mocha *Edition Preview*
 
