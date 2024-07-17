@@ -10,7 +10,7 @@ First decide if it's going to be a `dark mode` theme or `light mode` theme. Then
 - `Dracula`
 > Example: a Dark Mode theme, named Dracula.
 
-With this name we will first enable the theme, then create it in real-time.
+With this, we will first enable the theme, then create it in real-time. Change `Dracula` to whatever name you want.
 
 ### Enabling the Color Scheme
 
@@ -35,9 +35,10 @@ With this name we will first enable the theme, then create it in real-time.
 - To make a color scheme you need to make `all-global-theme.dracula.css`
 - Luckily for you, this is already taken care of.
 - open > `chrome/themes` folder
-- And just make a copy of `all-global-theme-catppuccin.css` (for dark mode)
-- Or make a copy of `all-global-theme-dusky.css` (for light mode)
-- Name the copy > all-global-theme-`dracula`.css
+- Make a copy of `all-global-theme-catppuccin.css` (for dark mode)
+- Or make a copy of `all-global-theme-gruvbox-l.css` (for light mode)
+- It doesnt matter which one you copy, but these two above are configured very well for new colors.
+- Rename the copy > all-global-theme-`dracula`.css
 - Line 18 to line 55 - are all of the colors that make the color-scheme.
 - Choose your colors.
 - Line 63 to 115 - are variables you can use to fine-tune elements effected by the colors above.
