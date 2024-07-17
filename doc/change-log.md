@@ -18,17 +18,8 @@
 
 ![0000](https://github.com/user-attachments/assets/138ea75c-d083-4d2c-8ab6-c7844e17a43b)
 
-> Grubbox *Edition Preview*
+> Other *Editions Preview*
 
-![preview](https://github.com/user-attachments/assets/78d350e3-2666-40ab-ad86-a71a58b99af3)
-
-> Grubbox Light *Edition Preview*
-
-![preview](https://github.com/user-attachments/assets/cbfba5ac-13a3-4397-ac64-5d732202c821)
-
-> Midnight *Edition Preview*
-
-![preview](https://github.com/user-attachments/assets/2a7761fd-d1d3-4467-9f66-b8ad3b68ab58)
-
+![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 
 
