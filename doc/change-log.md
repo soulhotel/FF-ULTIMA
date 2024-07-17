@@ -9,8 +9,8 @@
 ### Change Log:
 - `new` [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha) by Draff (@ItsLogic).
 - `new` [Gruvbox Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox), [Gruvbox Light Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox-light), [Midnight Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/midnight)
-- `new` Setting `user.theme.` to change between Color Schemes and New Tab Backgrounds in the about:config page.
-- `new` Setting `ultima.xstyle.urlbar` when using add-on-themes, the url bar will become transparent with no box shadow. [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
+- `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
+- `new` Setting `ultima.xstyle.urlbar` provides an alternate style for the URL BAR - blending into the nav bar, with no box-shadow or border [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
 - `qol` Improvement to full screen navigation-bar responsiveness.
 - `qol`|`new` Additional OS settings for Linux Users with themed window decorations.
 
