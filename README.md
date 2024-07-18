@@ -114,6 +114,7 @@ Browse Color Schemes
 - [Catppuccin-Mocha](theme/color-schemes/catppuccin-mocha/readme.md) by Darff
 - [Gruvbox](theme/color-schemes/gruvbox/readme.md)
 - [Gruvbox Light](theme/color-schemes/gruvbox-light/readme.md)
+- [Midnight](theme/color-schemes/midnight/readme.md)
 
 [Create a Color Scheme](doc/new-color-scheme.md)
 - Written guide for color scheme creation and optional contribution.
