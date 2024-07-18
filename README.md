@@ -60,7 +60,7 @@
 <details>
 <summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
   
-![install1](doc/preview/install1.jpg) ![install2](doc/preview/install2.jpg)
+![addonthemespage](doc/preview/installprep.png)
 </details>
 
 ###### ⬇️ Choose *one* of the installation methods below. ⬇️
@@ -114,6 +114,7 @@ Browse Color Schemes
 - [Catppuccin-Mocha](theme/color-schemes/catppuccin-mocha/readme.md) by Darff
 - [Gruvbox](theme/color-schemes/gruvbox/readme.md)
 - [Gruvbox Light](theme/color-schemes/gruvbox-light/readme.md)
+- [Midnight](theme/color-schemes/midnight/readme.md)
 
 [Create a Color Scheme](doc/new-color-scheme.md)
 - Written guide for color scheme creation and optional contribution.
