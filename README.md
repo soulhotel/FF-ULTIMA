@@ -1,4 +1,4 @@
-#### 📛 This is the `main.update.branch`. Previously this branch was responsible for tracking and pushing new-version Updates to the `main` branch. However this task has been moved to the `next-release` branch. This branch is no longer in use.
+#### 📛 This is the `main.update.branch`. Previously this branch was responsible for tracking and pushing new-version Updates to the `main` branch. However this task has been moved to the `next-release` branch. This branch is no longer in use and may be deleted soon.
 
 # <p align="center"> FF ULTIMA... </p>
 
