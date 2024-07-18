@@ -60,7 +60,7 @@
 <details>
 <summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
   
-![addonthemespage](doc/preview/installprep.jpg)
+![addonthemespage](doc/preview/installprep.png)
 </details>
 
 ###### ⬇️ Choose *one* of the installation methods below. ⬇️
