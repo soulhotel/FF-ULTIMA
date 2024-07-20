@@ -28,7 +28,7 @@
         display: flex;
         padding: 8px 8px 8px 3%;
         border-radius: var(--uc-all-border-radius);
-        background: rgba(90, 90, 190, 0.5);
+        background: var(--in-content-page-background);
         color: white;
         font-weight: bolder;
         font-size: 16px;
