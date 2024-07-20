@@ -1,59 +1,81 @@
-/* -------------------------------------------------------------
-- return the window-controls/titlebar-buttons
-- linux support added as of version 1.6.5 -> override-linux.css & override-mac.css
- ------------------------------------------------------------- */
-@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* Index [ctrl+f to find a section]
 
-#titlebar{
-    order: 2;
-    -moz-appearance: none !important;
-    --tabs-navbar-shadow-size: 0px;
-    --uc-menubar-vertical-overlap: 19px;
+default positioning of window controls
+baseline modifications
+to return the title bar buttons
+adjust nav bar margin
+total button size
+(optional) flip button order
+when in fullscreen mode
+menubar adjustments
+macos layout
+linux layout
+
+/*--------------------------------------------------------------------------------------*/
+
+/* default positioning of window controls */
+
+:root, * {
+    --wc-top: 4.2px;
+    --wc-left: 3px;
+    --wc-right: 2px;
+    --navbar-margin: 96px;
+    --mb-height: 20px;
+    /*--toolbar-bgcolor: ifyoumust !important;*/
+    /*--toolbar-bgcolor: rgb() !important;*/
+    /*--toolbar-bgcolor: var() !important;*/
 }
 
-#navigator-toolbox > div{ display: contents; }
+/*--------------------------------------------------------------------------------------*/
 
+/* baseline modifications */
+
+#titlebar { order: 2; }
+
+
+#titlebar { -moz-appearance: none !important; --tabs-navbar-shadow-size: 0px; }
+#navigator-toolbox { background: var(--toolbar-bgcolor) !important; }
+.browser-toolbar { &:not(.titlebar-color) { background-color: initial !important; }}
+#navigator-toolbox > div{ display: contents }
 .global-notificationbox, #tab-notification-deck{order: 2;}
-
 #TabsToolbar .titlebar-spacer{ display: none; }
-
 #navigator-toolbox::after{ display: none !important; }
-
 toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
-
 #navigator-toolbox:hover #TabsToolbar{ animation: slidein ease-out 48ms 1; }
-
 #navigator-toolbox:not(:-moz-lwtheme){ background-color: -moz-dialog; }
 
+/*--------------------------------------------------------------------------------------*/
 
 /* to return the title bar buttons */
-
-
 :root[tabsintitlebar] .titlebar-buttonbox{
     position: fixed !important;
     display: flex !important;
     z-index: 2 !important;
-    top: 4.2px !important;
-    right: 2px !important;
-    /* left instead of right, if you want it on left side */
+    top: var(--wc-top) !important;
+    right: var(--wc-right) !important;
+    /* you can use 'left' instead of 'right' to simulate macos positioning */
 }
 
-/* adjust nav bar margin for fixed button */
+/* adjust nav bar margin to give the window controls area to sit */
 #nav-bar {
-    margin-right: 96px;
-} /* margin-left if you have it on left side*/
+    margin-right: var(--navbar-margin);
+    /* margin-left if you have it on left side*/
+} 
 
-/* 30px total button size to match toolbar buttons. */
+/* adjust window control total button size to match toolbar buttons (30px). */
 @media (-moz-platform: windows) {
     .titlebar-buttonbox .titlebar-button {
         padding: 11px 11px !important;
+        border-radius: 4px !important;
     }
 }
 
-/* (optional) flip button order
-.titlebar-buttonbox-container{ direction: rtl; } */
+/* (optional) flip button order */
+/*.titlebar-buttonbox-container{ direction: rtl; } */
 
-/* when in fullscreen mode, and the navigation bar isnt hovered, workaround for fixed title bar buttons */
+/*--------------------------------------------------------------------------------------*/
+
+/* when in fullscreen mode, and the navigation bar isnt visible, remove window controls */
 
 :root[inFullscreen="true"] #navigator-toolbox:not(:hover) .titlebar-buttonbox {
     display: none !important;
@@ -65,4 +87,60 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
     :root[inFullscreen="true"] #navigator-toolbox:not(:hover) + #browser {
         padding-top: 5px !important;
     }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* macos layout */
+
+@media (-moz-os-version: macos), (-moz-platform: macos) {
+    :root, * {
+        --wc-top: 12px;
+        --wc-left: 3px;
+        --wc-right: unset;
+        --navbar-margin: 84px;
+        --mb-height: 20px;
+    }
+    
+    #nav-bar {
+        margin-left: var(--navbar-margin) !important;
+        margin-right: 0px !important;
+    }    
+    
+    toolbar {
+        min-height: 0px !important;
+    }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* linux layout (default) -> see override-linux.css for DE overrides */
+
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+
+    /* update spacing and positioning */
+    :root, * {
+      --wc-top: 7px;
+      --wc-left: 5px;
+      --wc-right: 5px;
+      --navbar-margin: 86px;
+    }    
+    /* override inactive window style */
+    :root:where([tabsintitlebar]) {
+        --inactive-titlebar-opacity: 1 !important;
+        --toolbox-non-lwt-textcolor-inactive: var(--toolbox-non-lwt-textcolor);
+    }
+
+    /* correct window controls drawing on top of each other */
+    #main-window:not([lwtheme]) .titlebar-button {
+        stroke: initial !important;
+    } #main-window[lwtheme] .titlebar-button {
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
+    #main-window:not([lwtheme]) .titlebar-button:hover {
+        fill: initial !important;
+    } #main-window[lwtheme] .titlebar-button:hover {
+        fill: var(--toolbarbutton-icon-fill) !important;
+    }
+    
 }
