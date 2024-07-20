@@ -15,8 +15,8 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 @import url(theme/position-tabs-gone.css);
 @import url(theme/position-tabs-onlyprivate.css);
 @import url(theme/position-findbar.css);
+@import url(theme/position-window-controls.css);
 
-@import url(theme/function-window-controls.css);
 @import url(theme/function-tabs-autohide-i.css); 
 @import url(theme/function-mini-button-bar.css);
 @import url(theme/function-tabs-collapse.css);
