@@ -127,7 +127,7 @@ Global styling - Icons
     /* keep consistency with the navigation assets (including the tabs container) */
     & #navigator-toolbox {
         background-color: var(--toolbar-bgcolor) !important;
-        border-bottom: 1px solid rgba(0,0,0,0) !important;
+        border-bottom: 0px solid rgb(0, 0, 0) !important;
         &:-moz-window-inactive {
             background-color: var(--toolbar-bgcolor) !important;
             color: var(--uc-text) !important;
