@@ -1,16 +1,15 @@
-/*-----------------------------------------------------------------
-- this file automatically overides necessary components of the theme
-    - strictly for when the users OS is linux and mac (despite the name)
+/* this file automatically overides necessary components of the theme, strictly for when the users OS is linux
 
 [Index: ctrl+f a line to find a section]
-KDE window controls
+Default Linux Overrides
 Gnome window controls
-Mac positioned controls (for any OS)
+KDE window controls
 KDE compat. for themed Window decoration buttons
 Gnome compat. for themed Window decoration buttons
------------------------------------------------------------------*/
 
-/*--Default Linux Overrides - Inactivity titlebar, Nav bar spacing, More--*/
+------------------------------------------------------------------------------------------------------------*/
+
+/* Default Linux Overrides */
 
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
@@ -19,27 +18,30 @@ Gnome compat. for themed Window decoration buttons
         --toolbar-bgcolor: var(--uc-ultima-window) !important;
     }
 
-    /*--update nav bar spacing--*/
-    #nav-bar {margin-right: 86px !important;}
+    /* update spacing and positioning */
+    :root, * {
+      --wc-top: 7px;
+      --wc-left: 5px;
+      --wc-right: 5px;
+      --navbar-margin: 86px;
+    }
     
-    /*--override inactive window style--*/
+    /* override inactive window style */
     :root:where([tabsintitlebar]) {
-        --toolbox-non-lwt-textcolor: var(--uc-text);
-        --toolbox-non-lwt-textcolor-inactive: var(--uc-text);
-    } :root {
         --inactive-titlebar-opacity: 1 !important;
+        --toolbox-non-lwt-textcolor-inactive: var(--toolbox-non-lwt-textcolor);
     }
 
-    /*--remove secondary background, and correct stroke--*/
-    #main-window:not([lwtheme="true"]) .titlebar-button {
-        stroke: var(--uc-accent-iii) !important;
-    } #main-window[lwtheme="true"] .titlebar-button {
+    /* correct window controls drawing on top of each other */
+    #main-window:not([lwtheme]) .titlebar-button {
+        stroke: initial !important;
+    } #main-window[lwtheme] .titlebar-button {
         stroke: var(--toolbarbutton-icon-fill) !important;
     }
-    #main-window:not([lwtheme="true"]) .titlebar-button:hover {
-        fill: black !important;
-    } #main-window[lwtheme="true"] .titlebar-button:hover {
-        fill: black !important;
+    #main-window:not([lwtheme]) .titlebar-button:hover {
+        fill: initial !important;
+    } #main-window[lwtheme] .titlebar-button:hover {
+        fill: var(--toolbarbutton-icon-fill) !important;
     }
     
     /*--sidebar border correction--*/
@@ -53,9 +55,37 @@ Gnome compat. for themed Window decoration buttons
         margin-inline-start: -4px !important;
     }
     
-} /*--<--end linux media query--*/
+}
 
-/*------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------*/
+
+/* Gnome window controls (compatible with cinnamon) */
+
+@media (-moz-bool-pref: "ultima.OS.gnome") {
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+
+    /* update spacing and positioning */
+    :root, * {
+      --wc-top: 8px !important;
+      --wc-left: 5px !important;
+      --wc-right: 5px !important;
+      --navbar-margin: 100px !important;
+      &[uidensity="compact"] * {
+         --wc-top: 6px !important;
+      }
+    }  
+
+    /* no double backgrounds */
+    :root .titlebar-button {
+        --uc-selected: transparent !important;
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+}
+}
+
+/*--------------------------------------------------------------------------------*/
+
 /* KDE window controls */
 
 @media (-moz-bool-pref: "ultima.OS.kde") {
@@ -63,14 +93,17 @@ Gnome compat. for themed Window decoration buttons
 
     :root[tabsintitlebar] {
         .titlebar-buttonbox {
-            top: 7px !important;
-            right: 5px !important;
+            --wc-top: 7px !important;
+            --wc-left: 5px !important;
+            --wc-right: 5px !important;
+            --navbar-margin: 86px !important;
         }
         &[uidensity="compact"] .titlebar-buttonbox {
-            top: 4px !important;
+            --wc-top: 7px !important;
         }
     }
     
+    /* simulating toolbar button appearance */
     .titlebar-button, .titlebar-button[lwtheme="true"] {
         appearance: none !important;
         margin: 0 !important;
@@ -84,6 +117,7 @@ Gnome compat. for themed Window decoration buttons
         border-radius: var(--uc-button-border-radius);
     }
     
+    /* icon-use prep */
     .titlebar-button .toolbarbutton-icon,
     .titlebar-button[lwtheme="true"] .toolbarbutton-icon,
     .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme="true"] {
@@ -111,75 +145,46 @@ Gnome compat. for themed Window decoration buttons
         margin-top: -1px !important;
     }
 
-    /*--override background changes when hovered--*/
+    /* override background changes when hovered */
     #main-window .titlebar-button:hover,    
     #main-window:not([lwtheme]) .titlebar-button:hover {
         background-color: transparent !important;
         border-radius: var(--uc-button-border-radius);
     } .titlebar-close:hover {
-        background-color: rgb(191, 66, 66) !important;
+        background-color: rgb(191, 66, 66) !important; /*red*/
     }
     
-    /*--override padding--*/
+    /* override padding when themed*/
     .titlebar-button > .toolbarbutton-icon[lwtheme="true"] {
         padding: 4px 4px !important;
         -moz-context-properties: revert !important;
         stroke: currentColor;
         border-radius: var(--uc-button-border-radius);
     }
-} /*--<--end linux media query--*/
-} /*--<--end OS preference query--*/
+}
+}
 
-/*------------------------------------------------------------------------*/
-/* Gnome window controls */
+/*------------------------------------------------------------------------------*/
 
-@media (-moz-bool-pref: "ultima.OS.gnome") {
+/* KDE compat. for themed Window decoration buttons */
+
+@media (-moz-bool-pref: "ultima.OS.kde") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-    /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 100px !important;}
-    
-    :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 8px !important;
-        right: 5px !important;
-    }
-    :root .titlebar-button {
-        --uc-selected: transparent !important;
-    }
-} /*--<--end linuxmedia query--*/
-} /*--<--end OS preference query--*/
-
-/*------------------------------------------------------------------------*/
-/* Mac positioned controls (for any OS) */
-/* all mac overrides have been moved to a dedicated file override-mac.css*/
-/* this preferences will be recycled into an alternative style for titlebar buttons */
-
-@media (-moz-bool-pref: "ultima.OS.mac"), (-moz-os-version: linux) {
-        #nav-bar {
-            margin-left: 100px !important;
-            margin-right: 0px !important;
-        }        
-        :root[tabsintitlebar] .titlebar-buttonbox {
-            top: 4px !important;
-            right: unset !important;
-            left: 3px !important;
+    :root[tabsintitlebar] {
+        .titlebar-buttonbox {
+            --wc-top: 7px !important;
+            --wc-left: 5px !important;
+            --wc-right: 5px !important;
+            --navbar-margin: 80px !important;
         }
-        /* optional: flip button order */
-        .titlebar-buttonbox-container { direction: rtl !important; }
-} /*--<--end OS preference query--*/
-
-/*------------------------------------------------------------------------*/
-/*--TEST--*/
-
-@media (-moz-bool-pref: "ultima.OS.linux") {
-@media (-moz-platform: linux), (-moz-os-version: linux) {
-
-    :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 7px !important;
-        right: 5px !important;
+        &[uidensity="compact"] .titlebar-buttonbox {
+            --wc-top: 7px !important;
+        }
     }
     
-    .titlebar-button, .titlebar-button[lwtheme="true"] {
+    /* simulating toolbar button appearance */
+    .titlebar-button, .titlebar-button[lwtheme] {
         appearance: none !important;
         margin: 0 !important;
         margin-top: 0px !important;
@@ -192,9 +197,10 @@ Gnome compat. for themed Window decoration buttons
         border-radius: var(--uc-button-border-radius);
     }
     
+    /* icon-use prep */
     .titlebar-button .toolbarbutton-icon,
     .titlebar-button[lwtheme="true"] .toolbarbutton-icon,
-    .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme="true"] {
+    .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme] {
         border-radius: var(--toolbarbutton-border-radius) !important;
         list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
         opacity: 1 !important;
@@ -219,129 +225,75 @@ Gnome compat. for themed Window decoration buttons
         margin-top: -1px !important;
     }
 
-    /*--override background changes when hovered--*/
-    #main-window .titlebar-button:hover,    
-    #main-window:not([lwtheme]) .titlebar-button:hover {
-        background-color: var(--uc-selected) !important;
-        border-radius: var(--uc-button-border-radius);
-    } .titlebar-close:hover {
-        background-color: rgb(191, 66, 66) !important;
-    }
-    
-    /*--override padding--*/
-    .titlebar-button > .toolbarbutton-icon[lwtheme="true"] {
-        padding: 4px 4px !important;
-        -moz-context-properties: revert !important;
-        stroke: currentColor;
-        border-radius: var(--uc-button-border-radius);
-    }
-} /*--<--end linux media query--*/
-} /*--<--end OS preference query--*/
-
-/*------------------------------------------------------------------------*/
-/* Linux compat. for themed Window decoration buttons */
-
-@media (-moz-bool-pref: "ultima.OS.kde.wds") {
-@media (-moz-platform: linux), (-moz-os-version: linux) {
-
-    :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 7px !important;
-        right: 5px !important;
-    }
-    
-    .titlebar-button, .titlebar-button[lwtheme="true"] {
-        appearance: none !important;
-        margin: 0 !important;
-        margin-top: 0px !important;
-        padding: 4px 4px !important;
-        justify-content: center !important;
-        color: inherit !important;
-        -moz-context-properties: fill, fill-opacity !important;
-        fill: var(--toolbarbutton-icon-fill) !important;
-        stroke: var(--toolbarbutton-icon-fill) !important;
-        border-radius: var(--uc-button-border-radius);
-    }
-    
-    .titlebar-button .toolbarbutton-icon,
-    .titlebar-button[lwtheme="true"] .toolbarbutton-icon,
-    .titlebar-button[lwtheme="true"] .toolbarbutton-icon[lwtheme="true"] {
-        border-radius: var(--toolbarbutton-border-radius) !important;
-        list-style-image: url("chrome://global/skin/icons/arrow-down.svg");
-        opacity: 1 !important;
-        padding: 3px !important;
-    }
-
-    /*--icons override, default icons dont override when there is window inactivity--*/
-    .titlebar-button.titlebar-close .toolbarbutton-icon{
-        list-style-image: url("icons/lin-close-decoration.svg") !important;
-        margin-top: -1px !important;
-    }
-    .titlebar-button.titlebar-min .toolbarbutton-icon{
-        list-style-image: url("icons/lin-min-decoration.svg") !important;
-        margin-top: -1px !important;
-    }
-    .titlebar-button.titlebar-max .toolbarbutton-icon{
-        list-style-image: url("icons/lin-max-decoration.svg") !important;
-        margin-top: -1px !important;
-    }
-    .titlebar-button.titlebar-restore .toolbarbutton-icon{
-        list-style-image: url("icons/lin-restore-decoration.svg") !important;
-        margin-top: -1px !important;
-    }
-
-    /*--override background changes when hovered--*/
+    /* override background changes when hovered */
     #main-window .titlebar-button:hover,    
     #main-window:not([lwtheme]) .titlebar-button:hover {
         background-color: transparent !important;
         border-radius: var(--uc-button-border-radius);
     } .titlebar-close:hover {
-        background-color: rgb(191, 66, 66) !important;
+        background-color: rgb(191, 66, 66) !important; /*red*/
     }
     
-    /*--override padding--*/
+    /* override padding when themed*/
     .titlebar-button > .toolbarbutton-icon[lwtheme="true"] {
         padding: 4px 4px !important;
         -moz-context-properties: revert !important;
         stroke: currentColor;
         border-radius: var(--uc-button-border-radius);
     }
-} /*--<--end linux media query--*/
-} /*--<--end OS preference query--*/
+}
+}
 
-/*------------------------------------------------------------------------*/
-/* Gnome compat. for themed Window decoration buttons */
+/*------------------------------------------------------------------------------*/
+
+/* Gnome compat. for themed Window decoration buttons with small spacing */
 
 @media (-moz-bool-pref: "ultima.OS.gnome.wds") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-    /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 83px !important;}    
-    :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 12px !important;
-        right: 7px !important;
-    }
+    /* update spacing and positioning */
+    :root, * {
+      --wc-top: 12px !important;
+      --wc-left: 7px !important;
+      --wc-right: 7px !important;
+      --navbar-margin: 83px !important;
+      &[uidensity="compact"] * {
+         --wc-top: 11px !important;
+      }
+    }  
+
+    /* no double backgrounds */
     :root .titlebar-button {
         --uc-selected: transparent !important;
+        background: transparent !important;
+        background-color: transparent !important;
     }
+}
+}
 
-} /*--<--end linuxmedia query--*/
-} /*--<--end OS preference query--*/
+/*----------------------------------------------------------------------------*/
 
-/*------------------------------------------------------------------------*/
-/* Gnome compat. for themed Window decoration buttons 2 */
+/* Gnome compat. for themed Window decoration buttons with big spacing */
 
 @media (-moz-bool-pref: "ultima.OS.gnome.wdl") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
-    /*--size and positioning of the nav bar for less titlebar buttons--*/
-    #nav-bar {margin-right: 108px !important;}    
-    :root[tabsintitlebar] .titlebar-buttonbox {
-        top: 11px !important;
-        right: 2px !important;
-    }
+    /* update spacing and positioning */
+    :root, * {
+      --wc-top: 11px !important;
+      --wc-left: 2px !important;
+      --wc-right: 2px !important;
+      --navbar-margin: 108px !important;
+      &[uidensity="compact"] * {
+         --wc-top: 9px !important;
+      }
+    }  
+
+    /* no double backgrounds */
     :root .titlebar-button {
         --uc-selected: transparent !important;
+        background: transparent !important;
+        background-color: transparent !important;
     }
-
-} /*--<--end linuxmedia query--*/
-} /*--<--end OS preference query--*/
+}
+}
