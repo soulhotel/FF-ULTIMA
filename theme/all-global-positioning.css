@@ -119,7 +119,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 /* browser content - webpage content */
 #browser, #appcontent, #tabbrowser-tabbox,
 #tabbrowser-tabpanels, .browserSidebarContainer, .browserStack{
-    border-radius: var(--uc-all-border-radius) !important;
+    border-radius: 0px !important;
 }
 .browserContainer {
     border-radius: var(--uc-all-border-radius) !important;}

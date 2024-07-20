@@ -34,8 +34,6 @@ linux layout
 #titlebar { order: 2; }
 
 #titlebar { -moz-appearance: none !important; --tabs-navbar-shadow-size: 0px; }
-#navigator-toolbox { background: var(--toolbar-bgcolor) !important; }
-.browser-toolbar { &:not(.titlebar-color) { background-color: initial !important; }}
 #navigator-toolbox > div{ display: contents }
 .global-notificationbox, #tab-notification-deck{order: 2;}
 #TabsToolbar .titlebar-spacer{ display: none; }
@@ -85,7 +83,7 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
 @media not (-moz-bool-pref: "ultima.xstyle.squared") {
     :root[inFullscreen="true"] #navigator-toolbox:not(:hover) + #browser {
-        padding-top: 5px !important;
+        padding-top: 3px !important;
     }
 }
 

@@ -1,0 +1,73 @@
+/* Baseline theme for tabs on top layout -- 'ultima.tabs.vertical' off -- not a priority */
+
+@media not (-moz-bool-pref: "ultima.tabs.vertical") {
+
+  
+    :root, body, * {
+        --tab-min-height: 33px;
+        --tab-min-width: initial !important;
+        --tab-overflow-pinned-tabs-width: initial !important;
+        --inline-tab-padding: 10px;
+        --tab-block-margin: 2px;
+    }
+  
+	  /* browser adjustments */	
+    #main-window:not([lwtheme]) {
+        background-color: var(--uc-ultima-window) !important;
+    }
+    #main-window:not([lwtheme]) body {
+        background: var(--uc-ultima-window) !important;
+    }
+    #tabbrowser-tabpanels browser[type] {
+        padding-top:1px !important;
+        outline: 3px solid var(--uc-ultima-window) !important;
+    }
+    #main-window[lwtheme] #tabbrowser-tabpanels browser[type] {
+        padding-top:1px !important;
+        outline: 3px solid var(--lwt-accent-color) !important;
+    }
+    #navigator-toolbox {
+        z-index:9999 !important;
+        background-color: var(--uc-ultima-window) !important;
+        border-bottom: 0px solid rgba(0,0,0,0) !important;
+        /*! margin-bottom:2px !important; */
+    }
+    #browser,
+    #appcontent,
+    .browserStack,
+    #tabbrowser-tabbox,
+    #tabbrowser-tabpanels,
+    .browserSidebarContainer {
+        border-radius: 0 !important;
+    }
+  
+	  /* menu bar */
+    #toolbar-menubar[autohide="false"],
+    #toolbar-menubar[autohide="true"]:not([inactive="true"]) {
+        z-index:999 !important;
+        position: fixed;
+        left: calc(50vw - 500px) !important;
+        top: 3px !important;
+        min-height:38px !important;
+        min-width: 700px !important;
+        & #menubar-items {
+            min-width: 1000px !important;
+        }
+    }
+    
+    /* tabs */
+    #TabsToolbar-customization-target {        
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    #main-window[lwtheme] #TabsToolbar-customization-target {        
+        background: transparent !important;
+    }
+    #main-window:not([lwtheme]) .tabbrowser-tab[pinned] .tab-background,
+    #main-window:not([lwtheme]) .tabbrowser-tab[selected] .tab-background {
+        background-color: var(--uc-background-secondary) !important;
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
+    }
+ 
+}
+
