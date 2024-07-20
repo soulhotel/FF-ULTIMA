@@ -1,20 +1,23 @@
 /* -------------------------------------------------------------
 - for userContent
-- modifications more multiple websites
-- scroll bars
-- the PIP button (picture in picture)
-- about:config page background
+
+- modifications for multiple websites
+- all scrollbars
+- PIP button (picture in picture)
+- about:config page
  ------------------------------------------------------------- */
 
-.pip-wrapper {transform: scale(0.6);}
-
+/* all scrollbars */
 * {
     scrollbar-width: auto !important;
     scrollbar-color: rgba(170, 170, 170, 0.4) rgba(255,255,255, 0) !important;
 }
 
+/* PIP button */
+.pip-wrapper {transform: scale(0.6);}
+
+/* about:config page*/
 @-moz-document url(chrome://browser/content/browser.xul), url(about:config) {
- 
     @media (prefers-color-scheme: dark){
         html, body {
             background: rgb(43, 42, 51) !important;
@@ -29,6 +32,5 @@
         color: white;
         font-weight: bolder;
         font-size: 16px;
-    }
- 
+    } 
 }
