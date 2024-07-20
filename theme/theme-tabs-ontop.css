@@ -56,7 +56,8 @@
     }
     
     /* tabs */
-    #TabsToolbar-customization-target {        
+    #main-window[lwtheme] #TabsToolbar-customization-target,
+    #main-window:not([lwtheme]) #TabsToolbar-customization-target{        
         background: transparent !important;
         box-shadow: none !important;
     }
@@ -66,7 +67,7 @@
     #main-window:not([lwtheme]) .tabbrowser-tab[pinned] .tab-background,
     #main-window:not([lwtheme]) .tabbrowser-tab[selected] .tab-background {
         background-color: var(--uc-background-secondary) !important;
-        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.7) !important;
     }
  
 }
