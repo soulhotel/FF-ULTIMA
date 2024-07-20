@@ -11,8 +11,9 @@
 ### Change Log:
 - `new` You can now choose between **vertical tabs** or **tabs on top** with `ultima.tabs.vertical`
 - `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
-- `qol` Improvement++ to full screen navigation-bar responsiveness.
 - `qol` Code Miniaturization.
+- `qol` Improvement++ to full screen navigation-bar responsiveness.
+- `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *new* New Tab Wallpapers feature. Overriding FF Ultima wallpapers.
 
 > Due to the nature of this theme being primarily vertical-tab focused, the **tabs on top** layout - may have some quirks. Though it is not a priority, please let me know if you spot anything that seems *off*.
 
