@@ -4,6 +4,7 @@ default positioning of window controls
 baseline modifications
 to return the title bar buttons
 adjust nav bar margin
+adjust window control total button size
 total button size
 (optional) flip button order
 when in fullscreen mode
@@ -31,7 +32,6 @@ linux layout
 /* baseline modifications */
 
 #titlebar { order: 2; }
-
 
 #titlebar { -moz-appearance: none !important; --tabs-navbar-shadow-size: 0px; }
 #navigator-toolbox { background: var(--toolbar-bgcolor) !important; }
