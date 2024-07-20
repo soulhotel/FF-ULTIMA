@@ -13,7 +13,8 @@
 
 > Vertical tabs or *tabs on top*
 
-![vt]()
+[Screencast from 2024-07-20 02-30-00.webm](https://github.com/user-attachments/assets/0d551dda-60bc-435a-9dae-a048e196a410)
+
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 
