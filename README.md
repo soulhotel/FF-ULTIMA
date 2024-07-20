@@ -100,7 +100,7 @@
 
 [Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
 - Details changes, fixes, new features that users should be aware of.
-- Logs older to latest packaged versions of FF ULTIMA.
+- Logs [old](https://github.com/soulhotel/FF-ULTIMA/releases) up to latest packaged versions of FF ULTIMA.
 
 [Modification Page](doc/Modification.md)
 - Details every setting found on the about:config page
