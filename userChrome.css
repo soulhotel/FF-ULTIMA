@@ -29,6 +29,7 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 @import url(theme/function-extensions-menu.css);
 @import url(theme/function-safeguard.css);
 
+@import url(theme/theme-tabs-ontop.css);
 @import url(theme/theme-context-menu.css);
 @import url(theme/theme-menubar.css);
 @import url(theme/theme-statuspanel.css);
