@@ -1,12 +1,15 @@
-/*-----------------------------------------------------------------
+/*---------------------------------------------------------------------
+
+the MINI button bar - a toolbar for the vertical tabs layout
+
 - adding a somewhat static-bar to the tabs panel
 - utilizing the available tabs toolbar to position buttons
 - positioning the bar on the customize toolbar page accordingly
 - correction: hiding the bar when browser height is limited
------------------------------------------------------------------*/
 
-/* -------------------------------MINI button bar-------------------------------------- */
+---------------------------------------------------------------------*/
 
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
 @media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 
 /* first to utilize the unused tabs toolbar space */
@@ -282,4 +285,5 @@
   }
 }
 
+}
 }

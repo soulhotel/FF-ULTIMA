@@ -104,7 +104,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
     #sidebar-switcher-target #sidebar-title {
         padding-inline: 12px 4px !important;
     }
-    .close-icon {
+    #sidebar .close-icon {
         border-radius: 7px !important;
         margin-right: 7px !important;
     }
