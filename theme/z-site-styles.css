@@ -1,0 +1,34 @@
+/* -------------------------------------------------------------
+- for userContent
+- modifications more multiple websites
+- scroll bars
+- the PIP button (picture in picture)
+- about:config page background
+ ------------------------------------------------------------- */
+
+.pip-wrapper {transform: scale(0.6);}
+
+* {
+    scrollbar-width: auto !important;
+    scrollbar-color: rgba(170, 170, 170, 0.4) rgba(255,255,255, 0) !important;
+}
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:config) {
+ 
+    @media (prefers-color-scheme: dark){
+        html, body {
+            background: rgb(43, 42, 51) !important;
+        }
+    }
+    body::before {
+        content: "↓ type 'ultima' to configure the FF Ultima theme ⤝⥄⤞ type 'user.theme' to switch between color schemes ↓";
+        display: flex;
+        padding: 8px 8px 8px 3%;
+        border-radius: var(--uc-all-border-radius);
+        background: rgba(90, 90, 190, 0.5);
+        color: white;
+        font-weight: bolder;
+        font-size: 16px;
+    }
+ 
+}
