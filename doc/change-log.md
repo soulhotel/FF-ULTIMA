@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.1/ffultima1.8.1.zip) 1.8.1 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.2/ffultima1.8.2.zip) 1.8.2 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -11,10 +11,14 @@
 - `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
 
-> Vertical tabs or *tabs on top*
+> Due to the nature of this theme being primarily vertical-tab focused, the **tabs on top** layout - may have some quirks. Though it is not a priority, please let me know if you spot anything that seems *off*.
+> FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine tuning. Contributors, like always - are always welcome.. Otherwise, enjoy.
+
+> Vertical Tabs or *Tabs on Top*
 
 [Screencast from 2024-07-20 02-30-00.webm](https://github.com/user-attachments/assets/0d551dda-60bc-435a-9dae-a048e196a410)
 
+> Color schemes via about:config
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 
