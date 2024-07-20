@@ -8,6 +8,7 @@ user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
 /*tabs*/
+user_pref("ultima.tabs.vertical", true);
 user_pref("ultima.tabs.size.xs", false);
 user_pref("ultima.tabs.size.s", false);
 user_pref("ultima.tabs.size.l", true);
