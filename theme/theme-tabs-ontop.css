@@ -1,8 +1,19 @@
-/* Baseline theme for tabs on top layout -- 'ultima.tabs.vertical' off -- not a priority */
+/* Baseline theme for tabs on top layout -- 'ultima.tabs.vertical' off -- not a priority
+
+[Index] (ctrl+f a line below to find a section)
+
+baseline
+browser adjustments
+menu bar adjustments
+tabs container adjustments
+tabs (style)
+insert more styles for the tabs on top layout here
+
+*/
 
 @media not (-moz-bool-pref: "ultima.tabs.vertical") {
 
-  
+    /* baseline */
     :root, body, * {
         --tab-min-height: 33px;
         --tab-min-width: initial !important;
@@ -11,12 +22,12 @@
         --tab-block-margin: 2px;
     }
   
-	  /* browser adjustments */	
-    #main-window:not([lwtheme]) {
+    /* browser adjustments */
+    #navigator-toolbox,
+    #main-window:not([lwtheme]),
+    #main-window:not([lwtheme]) body,
+    #tabbrowser-tabpanels browser[type] {
         background-color: var(--uc-ultima-window) !important;
-    }
-    #main-window:not([lwtheme]) body {
-        background: var(--uc-ultima-window) !important;
     }
     #tabbrowser-tabpanels browser[type] {
         padding-top:1px !important;
@@ -28,9 +39,7 @@
     }
     #navigator-toolbox {
         z-index:9999 !important;
-        background-color: var(--uc-ultima-window) !important;
         border-bottom: 0px solid rgba(0,0,0,0) !important;
-        /*! margin-bottom:2px !important; */
     }
     #browser,
     #appcontent,
@@ -44,7 +53,7 @@
     	margin-inline: 6.5px !important;
     }
   
-	  /* menu bar */
+    /* menu bar */
     #toolbar-menubar[autohide="false"],
     #toolbar-menubar[autohide="true"]:not([inactive="true"]) {
         z-index:999 !important;
@@ -58,7 +67,7 @@
         }
     }
     
-    /* tabs */
+    /* tabs container adjustments */
     #main-window[lwtheme] #TabsToolbar-customization-target,
     #main-window:not([lwtheme]) #TabsToolbar-customization-target{        
         background: transparent !important;
@@ -67,11 +76,19 @@
     #main-window[lwtheme] #TabsToolbar-customization-target {        
         background: transparent !important;
     }
+	
+    /* tabs (style) */
     #main-window:not([lwtheme]) .tabbrowser-tab[pinned] .tab-background,
     #main-window:not([lwtheme]) .tabbrowser-tab[selected] .tab-background {
         background-color: var(--uc-background-secondary) !important;
         box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.7) !important;
     }
- 
+	
+    /* bookmarks style*/
+    /* toolbarbuttons */
+    /* navbar */
+
+    /* insert more styles for the tabs on top layout here ⬆️ */
+    
 }
 
