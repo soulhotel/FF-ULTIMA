@@ -168,18 +168,18 @@ Gnome compat. for themed Window decoration buttons
 
 /* KDE compat. for themed Window decoration buttons */
 
-@media (-moz-bool-pref: "ultima.OS.kde") {
+@media (-moz-bool-pref: "ultima.OS.kde.wds") {
 @media (-moz-platform: linux), (-moz-os-version: linux) {
 
     :root[tabsintitlebar] {
         .titlebar-buttonbox {
-            --wc-top: 7px !important;
-            --wc-left: 5px !important;
-            --wc-right: 5px !important;
-            --navbar-margin: 80px !important;
+            --wc-top: 9px !important;
+            --wc-left: 7px !important;
+            --wc-right: 7px !important;
+            --navbar-margin: 86px !important;
         }
         &[uidensity="compact"] .titlebar-buttonbox {
-            --wc-top: 7px !important;
+            --wc-top: 8px !important;
         }
     }
     
