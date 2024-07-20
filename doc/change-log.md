@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.2/ffultima1.8.2.zip) 1.8.2 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.5/ffultima1.8.2.zip) 1.8.5 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -6,10 +6,13 @@
 
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
+###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/new-color-scheme.md) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin-mocha/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
+
 ### Change Log:
 - `new` You can now choose between **vertical tabs** or **tabs on top** with `ultima.tabs.vertical`
 - `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
+- `qol` Code Miniaturization.
 
 > Due to the nature of this theme being primarily vertical-tab focused, the **tabs on top** layout - may have some quirks. Though it is not a priority, please let me know if you spot anything that seems *off*.
 
