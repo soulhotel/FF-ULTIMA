@@ -40,6 +40,9 @@
     .browserSidebarContainer {
         border-radius: 0 !important;
     }
+    #titlebar {
+    	margin-inline: 6.5px !important;
+    }
   
 	  /* menu bar */
     #toolbar-menubar[autohide="false"],
