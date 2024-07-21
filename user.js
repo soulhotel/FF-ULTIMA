@@ -16,6 +16,7 @@ user_pref("ultima.tabs.autohide", true);
 user_pref("ultima.tabs.closetabsbutton", false);
 user_pref("ultima.tabs.vertical.hide", false);
 user_pref("ultima.tabs.vertical.onlyprivate", false);
+user_pref("ultima.tabs.vertical.rightside", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
