@@ -37,7 +37,10 @@
     #main-window:not([inDOMFullscreen]) #browser {
         margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
     }
-         
+    @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+        #tab-notification-deck, .global-notificationbox, #main-window:not([inDOMFullscreen]) #browser {
+            margin-right: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important; margin-left: initial !important;
+    }}         
     /* POOF! tabs gone */    
     #main-window:not([customizing="true"],[privatebrowsingmode="temporary"]) #TabsToolbar-customization-target {
         visibility: collapse !important;
