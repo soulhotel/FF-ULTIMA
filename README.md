@@ -84,15 +84,23 @@
 >
 ###### This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
 1. Open a terminal in your Profiles `chrome` folder.
-2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile\folder\path\chrome`.
-3. In the terminal: `git clone https://github.com/soulhotel/FF-ULTIMA.git` to clone/update to the latest version.
-4. In your chrome folder you'll have a file named `user.js`.
-5. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
-6. Restart Firefox.
-7. **Wait** for Firefox to open, then delete the `user.js` file.
-8. Go to `about:config` and search for `ultima` to see all of your settings.
+2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile-folder\chrome`.
+3. In the terminal, git clone the repo to install/update to the latest version:
+```
+# cd your/profile-folder/chrome                            # cd into profile folder
+git clone https://github.com/soulhotel/FF-ULTIMA.git       # git clone inside
+mv FF-ULTIMA/* FF-ULTIMA/.* .                              # clean up double folder
+rmdir FF-ULTIMA                                            # remove the extra folder
+```
+5. In your chrome folder you'll have a file named `user.js`.
+6. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
+7. Restart Firefox.
+8. **Wait** for Firefox to open, then delete the `user.js` file.
+9. Go to `about:config` and search for `ultima` to see all of your settings.
 
-###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :). 
+###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :).
+
+###### :accessibility: Reading the release page is always reccommended. When new versions of the theme release and they include new preferences in the about:config page, you may want to open the new user.js file and compare it to your current settings. You can either add the settings manually in the about:config page... or load your own editted user.js file to add the new settings and keep your old the same way.
 </details>
 
 
