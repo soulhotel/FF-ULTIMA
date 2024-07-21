@@ -26,7 +26,7 @@ the MINI button bar - a toolbar for the vertical tabs layout
   background: var(--uc-background-secondary);
   padding-bottom: 2px !important;
 }
-@media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {#TabsToolbar-customization-target {right: 6px !important; left: initial !important;}}
+@media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {#TabsToolbar-customization-target{right: 6px !important;left: initial !important;}}
   
 /* tabs relative to siblings */
 
