@@ -11,6 +11,7 @@
 ### Change Log:
 - `new` You can now choose between **vertical tabs** or **tabs on top** with `ultima.tabs.vertical`
 - `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
+- `new` Toggle vertical tabs to the right side of the Browser with `ultima.tabs.vertical.rightside`
 - `qol` Code Miniaturization.
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
 - `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *new* New Tab Wallpapers feature. Overriding FF Ultima wallpapers.
