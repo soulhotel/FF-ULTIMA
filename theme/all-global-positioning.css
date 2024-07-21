@@ -72,6 +72,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --inline-tab-padding: 10px;
     --tab-block-margin: 2px;
 }
+@media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {:root, body, * {--uc-sb-margin-leftside: 0px 0px 7px 5px;}}
 
 /*---------------Browser - Side bar---------------*/
 
