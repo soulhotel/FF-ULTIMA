@@ -45,10 +45,18 @@
             transition: width 80ms linear 70ms !important;
             will-change: width !important;
         }
-        #main-window[sizemode="fullscreen"] #browser {
-            transition: margin-left 80ms linear 150ms !important;
-            will-change: margin-left !important;
-        }    
+        @media not (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+            #main-window[sizemode="fullscreen"] #browser {
+                transition: margin-left 80ms linear 150ms !important;
+                will-change: margin-left !important;
+            }
+        }
+        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+            #main-window[sizemode="fullscreen"] #browser {
+                transition: margin-right 80ms linear 150ms !important;
+                will-change: margin-right !important;
+            }
+        }   
         #tabbrowser-tabs, #browser{
             transition-delay: 0ms !important;
         }    
