@@ -19,7 +19,7 @@
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
 - `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *new* New Tab Wallpapers feature. Overriding FF Ultima wallpapers.
 
-> Due to the nature of this theme being primarily vertical-tab focused, the **tabs on top** layout - may have some quirks. Though it is not a priority, please let me know if you spot anything that seems *off*.
+> Due to the nature of this theme being primarily vertical-tab focused, the **tabs on top** layout - may have some quirks. Though it behaves just as default-firefox behavior, please let me know if you spot anything that seems *off*.
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine tuning. If you'd like to see more features added to the list, feel free to fork or suggest via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
