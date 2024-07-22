@@ -181,19 +181,47 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 /*-------------------nav bar--------------------*/
 
 /* centering buttons vertically */
-
 #nav-bar toolbarbutton {
     margin-top: 1px !important;
 }
 
 /*---------full screen remove borders-----------*/
 
-#main-window[sizemode="fullscreen"] * {
-    & #tabbrowser-tabpanels { browser[type] {
-        border-radius: 0px !important;
-        margin: 0px !important;
-        margin-left:-6px !important;
-    }}
+
+/* when sidebar autohide on */
+@media (-moz-bool-pref: "ultima.sidebar.autohide") {
+    #main-window[sizemode="fullscreen"] * {
+        & #tabbrowser-tabpanels { browser[type] {
+            border-radius: 0px !important;
+            margin: 0px !important;
+            margin-left:-6px !important;
+        }}
+    }
+}
+@media not (-moz-bool-pref: "ultima.sidebar.autohide") {
+    #main-window[sizemode="fullscreen"] * {
+        --uc-sb-margin-leftside: 0px 4px 0px 0px;
+        --uc-sb-margin-rightside: 0px 0px 0px 4px;
+        & #tabbrowser-tabpanels { browser[type] {
+            border-radius: 0px !important;
+            margin: 0px !important;
+            margin-left:-6px !important;
+        }}
+    }
+}
+
+/* when tabs autohide on */
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+    #main-window[sizemode="fullscreen"] {
+        --uc-all-margins: 0px 0px 0px 0px; 
+        --uc-margin-inline: 6px;
+        --uc-margin-top:0px;     
+        --uc-margin-bottom:6px;      
+        --uc-tab-margins: 0px 0px 0px 0px;
+        & #TabsToolbar-customization-target {
+            left: -9px !important;
+        }
+    }
 }
 
 /*-------------------fin--------------------*/
