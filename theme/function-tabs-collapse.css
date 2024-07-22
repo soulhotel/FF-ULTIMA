@@ -32,6 +32,7 @@
       #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
         height: calc(100vh - var(--uc-margin-top) - var(--uc-margin-bottom));
         top: 1px !important;
+        border-radius:0px;
       }
     }
 
