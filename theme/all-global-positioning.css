@@ -191,6 +191,8 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 /* when sidebar autohide on */
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
     #main-window[sizemode="fullscreen"] * {
+        --uc-sb-margin-leftside: 0px 0px 0px 0px;
+        --uc-sb-margin-rightside: 0px 0px 0px 0px;
         & #tabbrowser-tabpanels { browser[type] {
             border-radius: 0px !important;
             margin: 0px !important;
