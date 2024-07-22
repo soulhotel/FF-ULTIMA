@@ -187,6 +187,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 /*---------full screen remove borders-----------*/
 
+/* NOTE: this entire section must be seperated and organized into their related element+task file: function-tabs-collapse function-tabs-autohide-i function-sidebar-autohide
 
 /* when sidebar autohide on */
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
