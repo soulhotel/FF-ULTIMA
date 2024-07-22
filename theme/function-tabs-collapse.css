@@ -31,7 +31,7 @@
     @media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
       #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
         height: calc(100vh - var(--uc-margin-top) - var(--uc-margin-bottom));
-        top: 3px !important;
+        top: 1px !important;
       }
     }
 
