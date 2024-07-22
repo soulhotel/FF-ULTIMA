@@ -8,6 +8,8 @@
 
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/new-color-scheme.md) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin-mocha/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
+###### ⭐ FF Ultima [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha/readme.md) by Draff (@ItsLogic) (promo)
+
 ### Change Log:
 - `new` Turn **off** `ultima.tabs.vertical` for the *Tabs on Top* layout.
 - `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
@@ -28,7 +30,7 @@
 ![Screenshot from 2024-07-20 02-21-11](https://github.com/user-attachments/assets/d312964e-f4bc-4377-993b-f81495aebe2a)
 
 
-> Color schemes via about:config
+> Color Scheme Editions
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 
