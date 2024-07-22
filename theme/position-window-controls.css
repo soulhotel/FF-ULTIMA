@@ -79,14 +79,6 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
     display: none !important;
 }
 
-/* when in fullscreen mode, and the navigation bar isnt hovered, match the themes rounded corners */
-
-@media not (-moz-bool-pref: "ultima.xstyle.squared") {
-    :root[inFullscreen="true"] #navigator-toolbox:not(:hover) + #browser {
-        padding-top: 3px !important;
-    }
-}
-
 /*--------------------------------------------------------------------------------------*/
 
 /* macos layout */
