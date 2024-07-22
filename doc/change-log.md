@@ -9,9 +9,10 @@
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/new-color-scheme.md) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin-mocha/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### Change Log:
-- `new` You can now choose between **vertical tabs** or **tabs on top** with `ultima.tabs.vertical`
+- `new` Turn **off** `ultima.tabs.vertical` for the *Tabs on Top* layout.
 - `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
-- `new` Toggle vertical tabs to the right side of the Browser with `ultima.tabs.vertical.rightside` [#29](https://github.com/soulhotel/FF-ULTIMA/issues/29) [#111](https://github.com/soulhotel/FF-ULTIMA/issues/111)
+- `new` Toggle vertical tabs to the right side of the Browser with `ultima.tabs.vertical.rightside`. [#29](https://github.com/soulhotel/FF-ULTIMA/issues/29) [#111](https://github.com/soulhotel/FF-ULTIMA/issues/111)
+- `qol` When in Fullscreen mode (F11) rounded borders and spacing will be disabled. [#115](https://github.com/soulhotel/FF-ULTIMA/issues/115)
 - `qol` Code Miniaturization.
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
 - `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *new* New Tab Wallpapers feature. Overriding FF Ultima wallpapers.
@@ -20,9 +21,12 @@
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine tuning. If you'd like to see more features added to the list, feel free to fork or suggest via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
-> Vertical Tabs or *Tabs on Top*
+<br>
 
-[Screencast from 2024-07-20 02-30-00.webm](https://github.com/user-attachments/assets/0d551dda-60bc-435a-9dae-a048e196a410)
+> *Tabs on Top*
+
+![Screenshot from 2024-07-20 02-21-11](https://github.com/user-attachments/assets/d312964e-f4bc-4377-993b-f81495aebe2a)
+
 
 > Color schemes via about:config
 
