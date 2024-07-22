@@ -186,4 +186,14 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     margin-top: 1px !important;
 }
 
+/*---------full screen remove borders-----------*/
+
+#main-window[sizemode="fullscreen"] * {
+    & #tabbrowser-tabpanels { browser[type] {
+        border-radius: 0px !important;
+        margin: 0px !important;
+        margin-left:-6px !important;
+    }}
+}
+
 /*-------------------fin--------------------*/
