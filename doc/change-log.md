@@ -12,7 +12,7 @@
 
 ### Change Log:
 - `new` Turn **off** `ultima.tabs.vertical` for the *Tabs on Top* layout.
-- `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
+- `new` Change between [Color Schemes](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes) and New Tab Backgrounds by typing `user.theme` in the about:config page.
 - `new` Toggle vertical tabs to the right side of the Browser with `ultima.tabs.vertical.rightside`. [#29](https://github.com/soulhotel/FF-ULTIMA/issues/29) [#111](https://github.com/soulhotel/FF-ULTIMA/issues/111)
 - `qol` When in Fullscreen mode (F11) rounded borders and spacing will be disabled. [#115](https://github.com/soulhotel/FF-ULTIMA/issues/115)
 - `qol` Code Miniaturization.
