@@ -535,7 +535,15 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
     #main-window[sizemode="fullscreen"]{
         --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
         & * {--uc-all-margins: 0px 0.1px 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;}
-        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {* {--uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + 0.2px) 0px 0.2px !important;}}
+        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+            * {
+                --uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + 0.2px) 0px 0.2px !important;
+            }
+        }
+        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+            & .titlebar-buttonbox{ display: none !important; z-index: 0 !important;}
+            & #nav-bar { margin-right: 39px !important; }    
+        }      
         & #browser *, & #browser {--uc-all-border-radius: 0px !important;}
         & #sidebar-switcher-target {border-radius: 10px !important;}
         /* shame. doesnt work well.
@@ -567,8 +575,8 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
             left: -2px;
         }
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            height: calc(100vh - 40px) !important;
-            top: 40px !important;
+            height: calc(100vh) !important;
+            top: 0px !important;
             right:-1px;
         }
       }
@@ -578,8 +586,8 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
         height: calc(100vh) !important;
         top: 0px !important;
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            height: calc(100vh - 40px) !important;
-            top: 40px !important;
+            height: calc(100vh) !important;
+            top: 0px !important;
             right:-1px;
         }
       }
