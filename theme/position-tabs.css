@@ -569,7 +569,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
             height: calc(100vh - 40px) !important;
             top: 40px !important;
-            right:0px;
+            right:-1px;
         }
       }
     }
@@ -580,7 +580,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
             height: calc(100vh - 40px) !important;
             top: 40px !important;
-            right:0px;
+            right:-1px;
         }
       }
 
