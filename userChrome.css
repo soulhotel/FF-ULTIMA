@@ -12,6 +12,7 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 @import url(theme/all-color-schemes.css);
 
 @import url(theme/position-tabs.css);
+@import url(theme/position-tabs-ontop.css);
 @import url(theme/position-tabs-gone.css);
 @import url(theme/position-tabs-onlyprivate.css);
 @import url(theme/position-findbar.css);
