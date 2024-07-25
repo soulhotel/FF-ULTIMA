@@ -18,7 +18,12 @@
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
         display: none !important;
     }
-
+    
+    /* sidebar adopts theme borders dependant on xstyle.squared being on or off */
+    #sidebar {
+        border-radius: var(--uc-all-border-radius) !important;
+    }
+    
     /* autohide */
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
         --uc-sidebar-width: 37px;

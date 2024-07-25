@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------------------------------
+- this file handles the autohiding feature of the tabs panel
+- includes support for userchrome-toggler extension (triggering the action via shortcut)
+
+[Index] (ctrl + f a line to find section)
+
+browser content positioning
+autohide tabs
+adjustment for rightside tabs
+adjustment for xstyle.squared preference
+background and visibility
+
+---------------------------------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+
+    
+    /* browser content positioning */
+    :root, body, * {
+        --uc-all-margins: 0px 6px 6px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)); 
+    }
+    #browser {
+        margin: var(--uc-all-margins) !important;
+        /*refresh*/
+    }    
+
+    /* autohide tabs based on predefined variables (all-global-positioning.css) */    
+    :root:not([customizing]) #tabbrowser-tabs:not(hover) {
+        width: var(--uc-collapsed-tabs-width);
+    }    
+    :root:not([customizing]) #tabbrowser-tabs:hover {
+        width: var(--uc-vertical-tabs-width-revert);
+    }    
+
+    /* adjustment for xstyle.squared preference */
+    @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        :root, body, * {
+            --uc-all-margins: 0px  0px 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)); 
+        }
+        #browser {
+            margin: var(--uc-all-margins) !important;
+            /*refresh*/
+        }
+    }  
+   
+    /* adjustment for rightside tabs */
+    @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+        :root, body, * {
+            --uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 6px 6px; 
+        }
+        #browser {
+            margin: var(--uc-all-margins) !important;
+            /*refresh*/
+        }
+        /* adjustment for xstyle.squared preference */
+        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        :root, body, * {
+            --uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 0px 0px; 
+        }
+        #browser {
+            margin: var(--uc-all-margins) !important;
+            /*refresh*/
+        }
+        #TabsToolbar-customization-target {
+            right: 0px !important;
+        }
+    }  
+    }
+         
+    /* background and visibility */
+    #navigator-toolbox {
+        z-index: 2 !important;
+    }
+    @media (prefers-color-scheme: dark) {    
+        #tabbrowser-arrowscrollbox {
+            background: var(--uc-background-secondary) !important;
+        }
+        #main-window[lwtheme="true"] #tabbrowser-arrowscrollbox {
+            background: var(--uc-tabs-lwt) !important;
+        }    
+    }
+    @media (prefers-color-scheme: light) {    
+        #tabbrowser-arrowscrollbox {
+            background: var(--uc-background-secondary) !important;
+        }
+        #main-window[lwtheme="true"] #tabbrowser-arrowscrollbox {
+            background: var(--uc-tabs-lwt) !important;
+        }    
+    }
+        
+    /* Userchrome-toggler extension support */
+    /* @Kaedriz - https://github.com/soulhotel/FF-ULTIMA/tree/userchrome-toggler */
+    :root[titlepreface="᠎"] {
+        & #browser {
+            --uc-vertical-tabs-width: 250px !important;
+            --uc-vertical-tabs-width-revert: 250px !important;
+            margin-left: var(--uc-vertical-tabs-width) !important;
+        }
+        & #tabbrowser-tabs {
+            --uc-vertical-tabs-width: 250px !important;
+            --uc-vertical-tabs-width-revert: 250px !important;
+        }
+    }
+}
+}
+
+/* tabs on top section ---------------------------------------------------------------*/
+
+

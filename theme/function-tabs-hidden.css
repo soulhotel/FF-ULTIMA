@@ -1,0 +1,61 @@
+/* ----------------------------------------------------------
+
+- hide/dont-display vertical tabs when tabs.vertical.hide is enabled
+
+adjust positioning for everything
+adjust for rightside pref enabled
+POOF! tabs gone
+
+-----------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
+@media (-moz-bool-pref: "ultima.tabs.vertical.hide") {
+
+    /* adjust positioning for everything */    
+    :root:not([customizing],[chromehidden~="menubar"]) {
+        --uc-vertical-tabs-width: 0px;
+        --uc-vertical-tabs-width-revert: 0px;
+        --uc-navbar-height: 40px;
+        --uc-collapsed-tabs-width: 0px;
+    }        
+    :root, body, *{
+        --uc-all-margins: 0px 6px 6px 6px !important;
+        --uc-tab-margins: 0px !important;
+        --uc-sb-margin-leftside: 0px 0px 0px 6px;
+        --uc-sb-margin-rightside: 0px 6px 0px 0px;
+        #browser {
+            margin: var(--uc-all-margins) !important;
+            /*refresh*/
+        }
+    }
+    
+    /* adjust for rightside pref enabled */
+    @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+        :root, body, *{
+            --uc-all-margins: 0px 6px 6px 6px !important;
+            --uc-tab-margins: 0px !important;
+            --uc-sb-margin-leftside: 0px 6px 0px 0px;
+            --uc-sb-margin-rightside: 0px 0px 0px 6px;
+        }
+        #browser {
+            margin: var(--uc-all-margins) !important;
+            /*refresh*/
+        }
+    }
+
+    /* adjust browser content margins for no tabs */    
+    #tab-notification-deck, .global-notificationbox {
+        margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
+    }
+    @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+        #tab-notification-deck, .global-notificationbox {
+            margin-right: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important; margin-left: initial !important;
+    }}
+
+    /* POOF! tabs gone */    
+    #main-window:not([customizing="true"]) #TabsToolbar-customization-target {
+        visibility: collapse !important;
+    }
+         
+}
+}

@@ -25,15 +25,12 @@ patch, tabs slide out of view when attempting to rearrange them
 @media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 
   /* browser positioning - moving browser content to the side and adjusting notification panels */
-  
-  #tab-notification-deck,
-  .global-notificationbox,
-  #main-window:not([inDOMFullscreen]) #browser {
-    margin-left: calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline));
-  }  
-  #tab-notification-deck,
-  .global-notificationbox {
-    width: auto !important;
+
+  #main-window:not([inDOMFullscreen]) #browser, #tab-notification-deck, .global-notificationbox {
+    margin: var(--uc-all-margins) !important;
+  }
+  #tab-notification-deck, .global-notificationbox {
+    margin-left: calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline)); width: auto !important;
   }
   
 /* tabs -----------------------------------------------------------------------*/
