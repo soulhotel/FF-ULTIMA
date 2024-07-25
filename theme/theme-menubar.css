@@ -7,8 +7,8 @@
 /* quick styling */
 
 #menubar-items {
-  background: var(--uc-background-panel) !important;
-  border-radius: 5px !important;
+  background: var(--uc-ultima-window) !important;
+  border-radius: 10px !important;
   justify-content: center !important;
   color: var(--uc-text) !important;
 }

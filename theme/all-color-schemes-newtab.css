@@ -1,4 +1,6 @@
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+  
 /*
 This file handles New Tab Backgrounds for Color Schemes.
 Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md
@@ -34,6 +36,11 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("site-icons/gruvbox-l.png") !important;}}
 
+  
+  
+  
+  
+  
 }
-
+}
 }

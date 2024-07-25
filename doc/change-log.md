@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.1/ffultima1.8.1.zip) 1.8.1 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.5/ffultima1.8.5.zip) 1.8.5 nextrelease
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -6,20 +6,31 @@
 
 ###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md), tab size, no borders, spacing, autohiding, more.
 
+###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/doc/new-color-scheme.md) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
+
+###### ⭐ FF Ultima [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha/readme.md) by Draff (@ItsLogic) (promo)
+
 ### Change Log:
-- `new` [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha/readme.md) by Draff (@ItsLogic).
-- `new` [Gruvbox Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox/readme.md), [Gruvbox Light Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/gruvbox-light/readme.md), [Midnight Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/midnight/readme.md)
-- `new` Change between Color Schemes and New Tab Backgrounds by typing `user.theme` in the about:config page.
-- `new` Setting `ultima.xstyle.urlbar` provides an alternate style for the URL BAR - blending into the nav bar, with no box-shadow or border [#96](https://github.com/soulhotel/FF-ULTIMA/issues/96).
-- `qol` Improvement to full screen navigation-bar responsiveness.
-- `qol`|`new` Additional OS settings for Linux Users with themed window decorations.
-- `fix` fade out the use of `customizing="true"` selector in response to Firefox v129.0b4 changes.
+- `new` Turn **off** `ultima.tabs.vertical` for the *Tabs on Top* layout.
+- `new` Change between [Color Schemes](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes) and New Tab Backgrounds by typing `user.theme` in the about:config page.
+- `new` Toggle vertical tabs to the right side of the Browser with `ultima.tabs.vertical.rightside`. [#29](https://github.com/soulhotel/FF-ULTIMA/issues/29) [#111](https://github.com/soulhotel/FF-ULTIMA/issues/111)
+- `qol` When in Fullscreen mode (F11) rounded borders and spacing will be disabled. [#115](https://github.com/soulhotel/FF-ULTIMA/issues/115)
+- `qol` Code Miniaturization.
+- `qol` Improvement++ to full screen navigation-bar responsiveness.
+- `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *new* New Tab Wallpapers feature. Overriding FF Ultima wallpapers.
 
-> Catppuccin-Mocha *Edition Preview*
+> Due to the nature of this theme being primarily vertical-tab focused, the **tabs on top** layout - may have some quirks. Though it behaves just as default-firefox behavior, please let me know if you spot anything that seems *off*.
 
-![0000](https://github.com/user-attachments/assets/138ea75c-d083-4d2c-8ab6-c7844e17a43b)
+> FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine tuning. If you'd like to see more features added to the list, feel free to fork or suggest via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
-> Other *Editions Preview*
+<br>
+
+> *Tabs on Top*
+
+![Screenshot from 2024-07-20 02-21-11](https://github.com/user-attachments/assets/d312964e-f4bc-4377-993b-f81495aebe2a)
+
+
+> Color Scheme Editions
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 

@@ -1,15 +1,18 @@
 /* ----------------------------------------------------------
+
 - this file is enabled by tabs.vertical.onlyprivate in about:config
 - function: hide vertical tabs ~ except for private windows
-
 - this file works in conjunction with all-global-positioning.css and position-verttab.css
 - https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
+
 -----------------------------------------------------------*/
 
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
 @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
 
-    /* adjust spacing, margins for everything */
+    /*⏰ DIVIDE BELOW INTO TWO SECTIONS - ONE FOR WHEN XSTYLE.SQUARED IS ENABLED ⏰*/
     
+    /* adjust spacing, margins for everything */    
     :root:not([privatebrowsingmode="temporary"]):not([customizing],[chromehidden~="menubar"]) {
         --uc-vertical-tabs-width: 0px;
         --uc-vertical-tabs-width-revert: 0px;
@@ -28,19 +31,21 @@
         --uc-sb-margin-rightside: 0px 6px 6px 0px;
     }
            
-    /* adjust browser content margins for no tabs */
-    
+    /* adjust browser content margins for no tabs */    
     #tab-notification-deck,
     .global-notificationbox,
     #main-window:not([inDOMFullscreen]) #browser {
         margin-left: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;
     }
-         
-    /* POOF! tabs gone */
-    
+    @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+        #tab-notification-deck, .global-notificationbox, #main-window:not([inDOMFullscreen]) #browser {
+            margin-right: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important; margin-left: initial !important;
+    }}         
+    /* POOF! tabs gone */    
     #main-window:not([customizing="true"],[privatebrowsingmode="temporary"]) #TabsToolbar-customization-target {
         visibility: collapse !important;
     }
 
-} /* @media (-moz-bool-pref: "ultima.tabs.vertical.only private") */
+}
+}
 

@@ -1,13 +1,16 @@
-/* ----------------------------------------------------------
+/* --------------------------------------------------------------------------------
+
 - this file positions the native vertical tabs, works in conjunction with all-global-positioning.css
 - https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
 
 [Index (ctrl + f a line to find section)]
+
+browser positioning
 set position of container
 tab scrollbox position
 force consistent model
 tab container height
-Individual tabs
+individual tabs
 pinned position
 position the content inside of individual tabs
 tab container extra buttons
@@ -15,34 +18,33 @@ adjustments
 Scrollbox Shadow
 patch, hovering tab edges triggers a collapse
 patch, tabs slide out of view when attempting to rearrange them
------------------------------------------------------------*/
 
+--------------------------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.tabs.vertical") {
 @media not all and (-moz-bool-pref: "ultima.tabs.vertical.hide") {
 
-  /*--first, the body margin should match the tabs width--*/
-  /*--its important to note: certain notification panels are dependant on overall positioning--*/
-  /*--its excessive to further alter their positioning, so modify them lightly (accordingly)--*/
+  /* browser positioning - moving browser content to the side and adjusting notification panels */
   
   #tab-notification-deck,
   .global-notificationbox,
   #main-window:not([inDOMFullscreen]) #browser {
     margin-left: calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline));
-  }
-  
+  }  
   #tab-notification-deck,
   .global-notificationbox {
     width: auto !important;
   }
   
-  /*----------------------------------now tabs-----------------------------------*/
+/* tabs -----------------------------------------------------------------------*/
+  
   /*--
   #tabbrowser-tabs -> the tabs panel container
   #tabbrowser-arrowscrollbox -> the scrollbox
   .tabbrowser-tab -> individual tabs
   --*/
   
-  /*--set position of container--*/
-  
+  /* set position of container */  
   :root:not([customizing]) #tabbrowser-tabs {
     position: relative !important;
     /* height: var(--uc-tabbar-height) !important; */
@@ -59,23 +61,20 @@ patch, tabs slide out of view when attempting to rearrange them
     margin-left: 2px !important;
   }
   
-  /*--tab scrollbox position--*/
-  
+  /* tab scrollbox position */  
   #tabbrowser-arrowscrollbox,
   #tabbrowser-arrowscrollbox .scrollbox-clip,
   #tabbrowser-arrowscrollbox scrollbox {
     width: var(--uc-vertical-tabs-width) !important;
   }
   
-  /*--force consistent model--*/
-  
+  /* force consistent model */  
   :root:not([customizing]) #tabbrowser-arrowscrollbox {
     --uc-scrollbox-box-model: -webkit-box;
     --uc-scrollbox-height: 100vh;
     --uc-scrollbutton-display: none;
     --uc-scrollbox-overflow: auto;
   }
-  
   #tabbrowser-tabs:is(haspinnedtabs="") scrollbox[orient="horizontal"],
   #tabbrowser-tabs[positionpinnedtabs] scrollbox[orient="horizontal"],
   scrollbox[orient="horizontal"] {
@@ -84,7 +83,6 @@ patch, tabs slide out of view when attempting to rearrange them
     height: 100%;
     overflow: var(--uc-scrollbox-overflow, initial) !important;
   }
-  
   #tabbrowser-tabs:is(haspinnedtabs="") scrollbox[orient="horizontal"],
   #tabbrowser-tabs[positionpinnedtabs] scrollbox[orient="horizontal"] {
     display: var(--uc-scrollbox-box-model, flex);
@@ -93,16 +91,15 @@ patch, tabs slide out of view when attempting to rearrange them
     overflow: var(--uc-scrollbox-overflow, initial);
   }
   
-  /*--required to keep from scolling < >--*/
-  
+  /* required to keep from scolling < > */  
   #tabbrowser-arrowscrollbox,
   #tabbrowser-arrowscrollbox .scrollbox-clip {
     contain: inline-size !important;
     margin-left: -1px !important;
   }
   
-  /*--------------------------------tab container height----------------------------*/
-  
+
+/* tabs container height ------------------------------------------------------*/  
   :root:has([collapsed="false"]) #TabsToolbar-customization-target {
     top: calc(var(--uc-bookbar-height) + var(--uc-navbar-height));
     height: var(--uc-tabbar-height-adjust) !important;
@@ -114,11 +111,9 @@ patch, tabs slide out of view when attempting to rearrange them
     top: var(--uc-navbar-height) !important;
   }
   
-  /*--------------------------------END of tab container height----------------------------*/
+/* individual tabs ------------------------------------------------------------*/
   
-  /*--------------------------Individual tabs---------------------------*/
-  
-  /*--do not touch or i will find you. and when i find you..--*/
+  /* do not touch */
   .tabbrowser-tab:not([pinned]),
   .tabbrowser-tab:is([pinned]) {
     min-width: calc(var(--uc-vertical-tabs-width)-1px) !important;
@@ -133,10 +128,7 @@ patch, tabs slide out of view when attempting to rearrange them
     transition: min-width 100ms ease-out, max-width 100ms ease-out;
   }
   
-  /*--i will kill you...--*/
-  
-  /*--pinned position, ignore above :)--*/
-  
+  /* pinned position */  
   .tabbrowser-tab:is([pinned]),
   #tabbrowser-tabs[positionpinnedtabs]>#tabbrowser-arrowscrollbox>.tabbrowser-tab[pinned] {
     position: initial !important;
@@ -172,32 +164,24 @@ patch, tabs slide out of view when attempting to rearrange them
     direction: ltr;
   }
   
-  /*--unpinned position--*/
+  /* unpinned position */  
+  /* no extra modification needed */
   
-  /*--no extra modification needed--*/
+/* position the content inside of individual tabs ---------------------------------*/ 
   
-  /*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
-  /*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv*/
-  
-  /*--position the content inside of individual tabs--*/
-  
-  /*--tab container for (favicon,url,closebutton)--*/
-  
+  /* tab container for (favicon,url,closebutton) */  
   .tab-stack {
     margin-inline: 0px !important;
-  }
-  
+  }  
   .tab-background {
     border-radius: var(--tab-border-radius) !important;
     margin-block: var(--tab-block-margin) !important;
     min-height: var(--tab-min-height) !important;
-  }
-  
+  }  
   .tab-content {
     padding: 0 10px !important;
     min-width: 0 !important;
-  }
-  
+  }  
   .tab-content {
     :root:not([uidensity="compact"]) &[pinned] {
       padding: 0px;
@@ -211,8 +195,7 @@ patch, tabs slide out of view when attempting to rearrange them
   
   .tab-label-container {
     overflow: hidden;
-  }
-  
+  }  
   .tab-label {
     margin-inline: 0;
     white-space: nowrap;
@@ -224,8 +207,7 @@ patch, tabs slide out of view when attempting to rearrange them
     height: 16px !important;
   }
   
-  /*--close buttons disabled, but still positioned (depreciated comment .......)--*/
-  
+  /* close buttons disabled, but still positioned */  
   #tabbrowser-tabs .tab-close-button {
     margin-inline-end: -3px !important;
     height: 16px !important;
@@ -251,12 +233,8 @@ patch, tabs slide out of view when attempting to rearrange them
     width: 16px;
   }
   
-  /*--END of tab container content--*/
-  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-  
-  /*-------------------tab container extra buttons--------------------*/
-  
+/* tab container extra buttons ----------------------------------------------------*/   
+
   #tabs-newtab-button,
   #tabs-newtab-button>.toolbarbutton-icon {
     background: none !important;
@@ -277,7 +255,7 @@ patch, tabs slide out of view when attempting to rearrange them
     background: rgba(0, 0, 0, 0.2) !important;
   }
   
-  /*-------------------------------adjustments DO NOT TOUCH------------------------------*/
+  /*---------------------adjustments DO NOT TOUCH--------------------------*/
   
   /*--(dont touch) removal of inconsistent buttons, and adjustments--*/
   
@@ -307,18 +285,7 @@ patch, tabs slide out of view when attempting to rearrange them
       opacity: 1;
     }
   }
-  
-  /*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-  
-  
-  @media (-moz-bool-pref: "userchrome.vertical-tabs.on-right.enabled") {
-  
-    :root:not([customizing]) #tabbrowser-tabs {
-      left: unset;
-      right: 0;
-    }
-  }
-  
+    
   .tabbrowser-tab:not([pinned], [fadein]) {
     max-width: 0.1px;
     min-width: 0.1px;
@@ -453,3 +420,4 @@ patch, tabs slide out of view when attempting to rearrange them
   }
 
 } /* end (-moz-bool-pref: "ultima.tabs.vertical.hide")  */
+} /* end tabs vertical on trigger */
