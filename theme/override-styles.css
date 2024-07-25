@@ -33,16 +33,10 @@ pinned tabs alternative style
   }}
   #main-window[lwtheme="true"]
   #tabbrowser-tabpanels { browser[type] {
-      outline: 0px sod var(--lwt-accent-color);
+      outline: 0px solid var(--lwt-accent-color);
   }}
-  @media not (-moz-bool-pref: "ultima.tabs.vertical"),
-  (-moz-bool-pref: "ultima.tabs.vertical.hide"),
-  (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
-      :root, body, * {
-        --uc-all-margins: 0px !important; 
-      }
-       #browser * {margin: var(--uc-all-margins);}
-  }
+
+  #sidebar-box { height:100vh !important; }
 } /* end alternative style squared */
 
 
