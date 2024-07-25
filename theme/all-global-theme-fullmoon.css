@@ -146,7 +146,7 @@ Global styling - Icons
         background: var(--uc-transparent) !important; 
     }
     & #tabbrowser-tabpanels browser[type] {
-        outline: 4px solid var(--toolbar-bgcolor);
+        outline: 3px solid var(--toolbar-bgcolor);
     }
        
     /* tabs container */
