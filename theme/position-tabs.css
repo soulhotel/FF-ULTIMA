@@ -407,10 +407,10 @@ hide/show tabs on hover
     @media (-moz-bool-pref: "ultima.tabs.autohide") { @media not (-moz-bool-pref: "ultima.tabs.vertical.rightside")  {
                 
         /* autohide tabs based on predefined variables (all-global-positioning.css) */    
-        :root:not([customizing]) #tabbrowser-tabs:not(hover) {
+        :root:not([customizing]) #TabsToolbar-customization-target:not(hover) #tabbrowser-tabs {
             width: var(--uc-collapsed-tabs-width) !important;
         }    
-        :root:not([customizing]) #tabbrowser-tabs:hover {
+        :root:not([customizing]) #TabsToolbar-customization-target:hover #tabbrowser-tabs {
             width: var(--uc-vertical-tabs-width-revert) !important;
         }             
         
@@ -439,10 +439,10 @@ hide/show tabs on hover
     @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
                 
         /* autohide tabs based on predefined variables (all-global-positioning.css) */    
-        :root:not([customizing]) #tabbrowser-tabs:not(hover) {
+        :root:not([customizing]) #TabsToolbar-customization-target:not(hover) #tabbrowser-tabs {
             width: var(--uc-collapsed-tabs-width) !important;
         }    
-        :root:not([customizing]) #tabbrowser-tabs:hover {
+        :root:not([customizing]) #TabsToolbar-customization-target:hover #tabbrowser-tabs {
             width: var(--uc-vertical-tabs-width-revert) !important;
         }             
         
