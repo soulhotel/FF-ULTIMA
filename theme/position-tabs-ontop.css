@@ -7,6 +7,7 @@ browser adjustments
 menu bar adjustments
 tabs container adjustments
 tabs (style)
+compatibility for xstyle.squared preference
 insert more styles for the tabs on top layout here
 
 */
@@ -15,12 +16,14 @@ insert more styles for the tabs on top layout here
 
     /* baseline */
     :root, body, * {
+        --uc-all-margins: 0 6px 6px 6px !important;
         --tab-min-height: 33px;
         --tab-min-width: initial !important;
         --tab-overflow-pinned-tabs-width: initial !important;
         --inline-tab-padding: 10px;
         --tab-block-margin: 2px;
     }
+    #browser {margin:var(--uc-all-margins);}
   
     /* browser adjustments */
     #navigator-toolbox,
@@ -88,6 +91,7 @@ insert more styles for the tabs on top layout here
     /* toolbarbuttons */
     /* navbar */
 
+    
     /* insert more styles for the tabs on top layout here ⬆️ */
     
 }
