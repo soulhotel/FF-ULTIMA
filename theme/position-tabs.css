@@ -432,6 +432,12 @@ hide/show tabs on hover
                 margin: var(--uc-all-margins) !important;
                 /*refresh*/
             }
+            @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
+                :root:not([privatebrowsingmode="temporary"]) #browser {
+                    --uc-all-margins: 0px 0.1px 0px 0.1px !important; 
+                    /*refresh*/
+                }                
+            }
         }
     }}
     
@@ -557,6 +563,9 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
         height: calc(100vh) !important;
         top: 0px !important;
         left: -8px;
+        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+            left: -2px;
+        }
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
             height: calc(100vh - 40px) !important;
             top: 40px !important;
