@@ -16,6 +16,7 @@
 - `new` Toggle vertical tabs to the right side of the Browser with `ultima.tabs.vertical.rightside`. [#29](https://github.com/soulhotel/FF-ULTIMA/issues/29) [#111](https://github.com/soulhotel/FF-ULTIMA/issues/111) ⚠️ experimental
 - `qol` When in Fullscreen mode (F11) rounded borders and spacing will be disabled. [#115](https://github.com/soulhotel/FF-ULTIMA/issues/115)
 - `qol` When in Fullscreen mode (F11) hidden tabs/sidebar become responsive when hovering screen corners.
+- `qol` Increased responsiveness to hovering autohidden tabs area/mini-button-bar
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
 - `qol` Code Miniaturization.
 - `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *New-Tab Wallpapers* feature. Overriding FF Ultima wallpapers.
