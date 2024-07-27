@@ -433,7 +433,7 @@ hide/show tabs on hover
                 /*refresh*/
             }
             @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
-                :root:not([privatebrowsingmode="temporary"]) #browser {
+                :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser {
                     --uc-all-margins: 0px 0.1px 0px 0.1px !important; 
                     /*refresh*/
                 }                
@@ -643,11 +643,11 @@ hide vertical tabs ~ except for private windows
             --uc-navbar-height: 40px;
             --uc-collapsed-tabs-width: 0px;
         }        
-        :root:not([privatebrowsingmode="temporary"]) *{
+        :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) *{
             --uc-all-margins: 0px 6px 6px 6px !important;
         }
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            :root:not([privatebrowsingmode="temporary"]) *{
+            :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) *{
                 --uc-all-margins: 0px 6px 6px 6px;
             }   
         } 
