@@ -715,6 +715,7 @@ ultima.tabs.vertical.rightside
         /* adjust browser content margins for no tabs */    
         #tab-notification-deck, .global-notificationbox {
             margin: calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important; width: auto !important;
+            margin-top: 0px !important; margin-bottom: 0px !important;
         }
     
         /* POOF! tabs gone */    
@@ -820,4 +821,3 @@ ultima.tabs.vertical.rightside
     /* navbar */
     /* insert more styles for the tabs on top layout here ⬆️ */    
 }
-
