@@ -534,15 +534,10 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
     /* collapse the tabs panel - on full screen */
     #main-window[sizemode="fullscreen"]{
         --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
-        & * {--uc-all-margins: 0px 0.1px 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline)) !important;}
-        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            * {
-                --uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + 0.2px) 0px 0.2px !important;
-            }
-        }
+
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
             & .titlebar-buttonbox{ display: none !important; z-index: 0 !important;}
-            & #nav-bar { margin-right: 39px !important; }    
+            & #nav-bar { margin-right: 0px !important; }    
         }      
         & #browser *, & #browser {--uc-all-border-radius: 0px !important;}
         & #sidebar-switcher-target {border-radius: 10px !important;}
@@ -551,6 +546,30 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
             left: -30px !important;
         }
         */
+        @media not (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+            & #TabsToolbar-customization-target:not(:hover) {
+                left:-40px !important;
+                opacity: 0;
+            }
+            & #TabsToolbar-customization-target:hover {
+                left:-6px !important;
+            }            
+            & * {
+                --uc-all-margins: 0px 0.2px 0px 0.2px !important;
+            }
+        }
+        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
+            & #TabsToolbar-customization-target:not(:hover) {
+                right:-40px !important;
+                opacity: 0;
+            }
+            & #TabsToolbar-customization-target:hover {
+                right:0px !important;
+            }             
+            & * {
+                --uc-all-margins: 0px 0.2px 0px 0.2px !important;
+            }
+        }
     }
     #tabbrowser-tabs{
         transition: width 80ms linear 70ms !important;
@@ -565,34 +584,18 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
         transition-delay: 0ms !important;
     }
 
+    
+    
+    
     /* full screen tabs panel height correction */
     @media not (-moz-bool-pref: "ultima.tabs.vertical.hide") {      
       #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
-        height: calc(100vh) !important;
-        top: 0px !important;
-        left: -8px;
         @media (-moz-bool-pref: "ultima.xstyle.squared") {
             left: -2px;
         }
-        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            height: calc(100vh) !important;
-            top: 0px !important;
-            right:-1px;
-        }
       }
     }
-    @media not (-moz-bool-pref: "ultima.tabs.vertical.onlyinprivate") {
-      #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
-        height: calc(100vh) !important;
-        top: 0px !important;
-        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            height: calc(100vh) !important;
-            top: 0px !important;
-            right:-1px;
-        }
-      }
 
-    }
 
     /* collapse tabs on small browser width */
     @media (max-width:850px){
