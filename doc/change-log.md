@@ -19,6 +19,7 @@
 - `qol` When in Fullscreen mode (F11) hidden tabs / sidebar are fully responsive to hovering absolute screen corners and edges.
 - `qol` Increased responsiveness to hovering vertical tabs area and mini-button-bar area.
 - `qol` Improvement++ to full screen navigation-bar responsiveness.
+- `qol` YT theming, notifications menu saturation decreased.
 - `qol` Code Miniaturization.
 - `qol` Setting `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` will enable Firefoxs *New-Tab Wallpapers* feature. Overriding FF Ultima wallpapers.
 
@@ -32,6 +33,9 @@
 
 ![Screenshot from 2024-07-20 02-21-11](https://github.com/user-attachments/assets/d312964e-f4bc-4377-993b-f81495aebe2a)
 
+> *Tabs on the Right*
+
+![Screenshot from 2024-07-28 20-42-09](https://github.com/user-attachments/assets/481937e4-7653-407c-bba8-69fb00b201f1)
 
 > Color Scheme Editions
 
