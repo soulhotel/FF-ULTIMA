@@ -19,14 +19,14 @@
 /*--notification popups--*/
 .style-scope.ytd-popup-container {
   background-color: rgba(20,20,20,0.7) !important;
-  filter: saturate(140%) !important;
+  filter: saturate(70%) !important;
   backdrop-filter: blur(33px);
   border-radius: 10px !important;
 }
 
 .ytd-multi-page-menu-renderer {
   background-color: rgba(20,20,20,0.7) !important;
-  filter: saturate(140%) !important;
+  filter: saturate(110%) !important;
   backdrop-filter: blur(33px);
 }
 
