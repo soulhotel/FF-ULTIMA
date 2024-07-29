@@ -56,7 +56,7 @@ user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.chrome.enabled", true);
 user_pref("devtools.debugger.prompt-connection", false);
 user_pref("svg.context-properties.content.enabled", true);
-user_pref("toolkit.tabbox.switchByScrolling", true);
+user_pref("toolkit.tabbox.switchByScrolling", false);
 /*enable userchrome,
 disable about config warning,
 enable browsertoolbox,

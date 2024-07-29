@@ -56,13 +56,13 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
     /* ^ > v < (space the windows from each other) */
     /*tabs get there own margins*/
-    --uc-all-margins: 0px 6px 6px 6px; 
+    --uc-all-margins: 0px 6px 6px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)); 
     --uc-margin-inline: 6px; /* < > */
     --uc-margin-top:0px;     
     --uc-margin-bottom:6px;      
     --uc-tab-margins: 0px 0px 7px 6px;
-    --uc-sb-margin-leftside: 0px 3px 7px 8px;
-    --uc-sb-margin-rightside: 0px 6px 7px 0px;
+    --uc-sb-margin-leftside: 0px 6px 0px 0px;
+    --uc-sb-margin-rightside: 0px 0px 0px 6px;
     --uc-tab-padding: 2px;
 
     /*individual tabs*/
@@ -72,7 +72,6 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --inline-tab-padding: 10px;
     --tab-block-margin: 2px;
 }
-@media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {:root, body, * {--uc-sb-margin-leftside: 0px 0px 7px 5px;}}
 
 /*---------------Browser - Side bar---------------*/
 
@@ -127,8 +126,10 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 #main-window
 #tabbrowser-tabpanels { browser[type] {
     border-radius: var(--uc-all-border-radius) !important;
-    margin: var(--uc-all-margins) !important;
 }}
+#main-window[sizemode="fullscreen"]{
+    & .browserContainer, & #tabbrowser-tabpanels { browser[type] {border-radius: 0px !important;}
+}
 
 /*--------------bookmarks bar---------------*/
 
@@ -183,49 +184,6 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 /* centering buttons vertically */
 #nav-bar toolbarbutton {
     margin-top: 1px !important;
-}
-
-/*---------full screen remove borders-----------*/
-
-/* NOTE: this entire section must be seperated and organized into their related element+task file: function-tabs-collapse function-tabs-autohide-i function-sidebar-autohide
-
-/* when sidebar autohide on */
-@media (-moz-bool-pref: "ultima.sidebar.autohide") {
-    #main-window[sizemode="fullscreen"] * {
-        --uc-sb-margin-leftside: 0px 0px 0px 0px;
-        --uc-sb-margin-rightside: 0px 0px 0px 0px;
-        & #tabbrowser-tabpanels { browser[type] {
-            border-radius: 0px !important;
-            margin: 0px !important;
-            margin-left:-6px !important;
-        }}
-    }
-}
-@media not (-moz-bool-pref: "ultima.sidebar.autohide") {
-    #main-window[sizemode="fullscreen"] * {
-        --uc-sb-margin-leftside: 0px 4px 0px 0px;
-        --uc-sb-margin-rightside: 0px 0px 0px 4px;
-        & #tabbrowser-tabpanels { browser[type] {
-            border-radius: 0px !important;
-            margin: 0px !important;
-            margin-left:-6px !important;
-        }}
-    }
-}
-
-/* when tabs autohide on */
-@media (-moz-bool-pref: "ultima.tabs.autohide") {
-    #main-window[sizemode="fullscreen"] * {
-        --uc-all-margins: 0px 0px 0px 0px; 
-        --uc-margin-inline: 6px;
-        --uc-margin-top:0px;     
-        --uc-margin-bottom:6px;      
-        --uc-tab-margins: 0px 0px 0px 0px;
-        & #TabsToolbar-customization-target {
-            left: 0px !important;
-            height: 99.8% !important;
-        }
-    }
 }
 
 /*-------------------fin--------------------*/

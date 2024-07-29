@@ -103,7 +103,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
         margin-left: 5px !important;
     }
     #sidebar-switcher-target #sidebar-title {
-        padding-inline: 12px 4px !important;
+        padding-inline: 15px 4px !important;
     }
     #sidebar .close-icon {
         border-radius: 7px !important;
