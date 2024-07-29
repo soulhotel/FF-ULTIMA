@@ -64,7 +64,7 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 @media (-moz-platform: windows) {
     .titlebar-buttonbox .titlebar-button {
         padding: 11px 11px !important;
-        border-radius: 4px !important;
+        border-radius: 8px !important;
     }
 }
 
