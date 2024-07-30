@@ -46,7 +46,7 @@
 - Look for the **Profile Folder** row. Open the folder.
 - In that folder, create a new folder named `chrome` (If it doesnt already exist).
 
-![aboutsupport](doc/preview/about_support.png)
+![aboutsupport](theme/pic/assets/about_support.png)
 
 2. Go to the `about:profiles` page
 - In the URL Bar, type `about:profiles`.
@@ -54,13 +54,13 @@
 - Look for the **Root Directory** row, and click **Open Directory**.
 - In the opened Folder, create a new folder named `chrome` (if it doesnt already exist).
  
-![alt text](doc/preview/profilelocation.png)
+![alt text](theme/pic/assets/profilelocation.png)
 </details>
 
 <details>
 <summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
   
-![addonthemespage](doc/preview/installprep.png)
+![addonthemespage](theme/pic/assets/installprep.png)
 </details>
 
 ###### ⬇️ Choose *one* of the installation methods below. ⬇️
