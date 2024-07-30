@@ -1,6 +1,6 @@
 ---
 name: Bugs, Errors, Other Issues
-about: Report an Issue or Browse the [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
+about: Report an Issue to help us improve.
 title: ''
 labels: ''
 assignees: ''
