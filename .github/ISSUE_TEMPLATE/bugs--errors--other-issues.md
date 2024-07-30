@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-> Already looked at the Wiki? https://github.com/soulhotel/FF-ULTIMA/wiki
+> Already looked at the Wiki? - https://github.com/soulhotel/FF-ULTIMA/wiki
 
 yes/no
 
