@@ -27,7 +27,7 @@
 >
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
 
-![prevautohide](doc/preview/prevmini-bar.png)
+![prevautohide](theme/pic/assets/prevmini-bar.png)
 
 
 ## Installation
