@@ -110,24 +110,8 @@ rmdir FF-ULTIMA                                            # remove the extra fo
 - FAQ
 - Theme settings overview
 - Sidebery config
+- List of Color schemes
 - Color scheme creation
 - Spreadsheets
-
-[Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)
-- Details changes, fixes, new features that users should be aware of.
-- Logs [old](https://github.com/soulhotel/FF-ULTIMA/releases) up to latest released versions of FF ULTIMA.
-
-[Next-Release](https://github.com/soulhotel/FF-ULTIMA/tree/next-release)
-- View the next release branch.
-- The update channel for next versions of the theme.
-
-Color Schemes
-- Full Moon (default dark mode)
-- Dusky (default light mode)
-- [Catppuccin](theme/color-schemes/catppuccin/readme.md)
-- [Catppuccin-Mocha](theme/color-schemes/catppuccin-mocha/readme.md) by Darff
-- [Gruvbox](theme/color-schemes/gruvbox/readme.md)
-- [Gruvbox Light](theme/color-schemes/gruvbox-light/readme.md)
-- [Midnight](theme/color-schemes/midnight/readme.md)
 
 ## Enjoy
