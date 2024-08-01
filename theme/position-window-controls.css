@@ -11,6 +11,7 @@ when in fullscreen mode
 menubar adjustments
 macos layout
 linux layout
+no titlebar layout
 
 /*--------------------------------------------------------------------------------------*/
 
@@ -133,4 +134,17 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
         fill: var(--toolbarbutton-icon-fill) !important;
     }
     
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*no titlebar layout*/
+
+@media (-moz-bool-pref: "ultima.OS.notitlebar") {
+    #nav-bar {
+        margin-inline:0 !important;
+    }
+    #main-window .titlebar-buttonbox {
+        display: none !important; 
+    }
 }
