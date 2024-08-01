@@ -48,6 +48,7 @@ user_pref("ultima.OS.kde.wds", false);
 user_pref("ultima.OS.gnome.wds", false);
 user_pref("ultima.OS.gnome.wdl", false);
 /*this is enough to give linux users ~options~, any further finetuning should be done by the user.*/
+user_pref("ultima.OS.notitlebar", false);
 
 /*other*/
 user_pref("browser.aboutConfig.showWarning", false);
