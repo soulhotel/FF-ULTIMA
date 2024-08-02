@@ -12,6 +12,7 @@
 
 ### Change Log:
 - `qol` The `doc` folder has been removed from the theme. In favor of an organized Wiki.
+- `fix` specifying scrollbar styling for webpages with unusual scrollbar utilization (google search). [#123](https://github.com/soulhotel/FF-ULTIMA/issues/123)
 - `todo` Code Miniaturization. position-tabs.css is a mess.
 - ...
 
