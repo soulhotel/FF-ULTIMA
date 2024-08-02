@@ -8,7 +8,7 @@
  ------------------------------------------------------------- */
 
 /* all scrollbars */
-* {
+body {
     scrollbar-width: auto !important;
     scrollbar-color: rgba(170, 170, 170, 0.4) rgba(255,255,255, 0) !important;
 }
