@@ -36,6 +36,7 @@ user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.squared", false);
+user_pref("ultima.xstyle.squished", false);
 user_pref("ultima.xstyle.lwtheme", false); /* Experimental. To counter addon themes that use unusual color variables. */
 user_pref("ultima.xstyle.pinnedtabs.i", false); /* Experimental. Havent decided on style yet. */
 
