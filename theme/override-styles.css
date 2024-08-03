@@ -49,8 +49,8 @@ pinned tabs alternative style
     --uc-margin-top: 0px !important;
     --uc-margin-bottom: 0px !important;
     --uc-margin-inline: 0px !important;
-    --uc-sb-margin-leftside: 0px !important;
-    --uc-sb-margin-rightside: 0px !important;
+    --uc-sb-margin-leftside: 0 4px 0 0px !important;
+    --uc-sb-margin-rightside: 0 0px 0 4px !important;
     --uc-all-border-radius: 10px;
     --tab-border-radius: 10px;
     --arrowpanel-menuitem-border-radius: 10px;
