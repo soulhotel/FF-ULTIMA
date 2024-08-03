@@ -108,7 +108,7 @@ rmdir FF-ULTIMA                                            # remove the extra fo
 
 [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
 - FAQ
-- Theme settings overview
+- Settings overview
 - Sidebery config
 - List of Color schemes
 - Color scheme creation
