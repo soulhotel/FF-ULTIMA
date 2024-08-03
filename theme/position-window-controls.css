@@ -11,7 +11,6 @@ when in fullscreen mode
 menubar adjustments
 macos layout
 linux layout
-no titlebar layout
 
 /*--------------------------------------------------------------------------------------*/
 
@@ -76,9 +75,28 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
 /* when in fullscreen mode, and the navigation bar isnt visible, remove window controls */
 
-:root[inFullscreen="true"] #navigator-toolbox:not(:hover) .titlebar-buttonbox {
-    display: none !important;
+:root[inFullscreen="true"] #navigator-toolbox {
+    transition: margin-top 40ms linear 300ms !important;
+    margin-top: calc(0.2px - var(--uc-navbar-height)) !important;
+    will-change: margin-top !important;
 }
+
+:root[inFullscreen="true"] #navigator-toolbox:hover {
+    margin-top: 0px !important;
+    transition-delay: 0ms !important;
+}
+
+:root[inFullscreen="true"] .titlebar-buttonbox {
+    transition: margin-top 30ms linear 200ms !important;
+    will-change: margin-top !important;
+}
+
+:root[inFullscreen="true"] #navigator-toolbox:not(:hover) .titlebar-buttonbox {
+    margin-top: calc(1px - var(--uc-navbar-height)) !important;
+    will-change: margin-top !important;
+}
+
+/*--------------------------------------------------------------------------------------*/
 
 /*--------------------------------------------------------------------------------------*/
 
