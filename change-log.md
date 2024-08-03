@@ -11,6 +11,8 @@
 ###### ⭐ FF Ultima [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha/readme.md) by Draff (@ItsLogic) (promo)
 
 ### Change Log:
+- `new` Setting `ultima.xstyle.squished` to remove margins and borders, allowing hovering absolute corners to trigger tabs or sidebar display. (similar to xstyle.squared but keeping the rounded aesthetic). [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
+- `new` Setting `ultima.OS.notitlebar` [#122](https://github.com/soulhotel/FF-ULTIMA/issues/122)
 - `qol` The `doc` folder has been removed from the theme. In favor of an organized Wiki.
 - `fix` specifying scrollbar styling for webpages with unusual scrollbar utilization (google search). [#123](https://github.com/soulhotel/FF-ULTIMA/issues/123)
 - `todo` Code Miniaturization. position-tabs.css is a mess.
