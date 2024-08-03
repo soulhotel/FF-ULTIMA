@@ -391,7 +391,7 @@ hide/show tabs on hover
     }}
     
     /* when disabled and squared setting enabled */
-    @media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "ultima.xstyle.squared") {
+    @media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
         :root, body, * {
             --uc-all-margins: 0px 0px 0px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) !important; 
         }
@@ -424,7 +424,7 @@ hide/show tabs on hover
         }  
         
         /* adjustment for xstyle.squared preference */
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
             :root, body, * {
                 --uc-all-margins: 0px  0px 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) !important; 
             }
@@ -462,7 +462,7 @@ hide/show tabs on hover
         }  
         
         /* adjustment for xstyle.squared preference */
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
             :root, body, * {
                 --uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 0px 0px !important; 
             }
@@ -538,7 +538,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") { @media not (-moz-platform: macos) {
             .titlebar-buttonbox { display: none !important; z-index: 0 !important;}
             #nav-bar { margin-right: 0px !important; }    
-        }}   
+        }}     
         & #browser *, & #browser {--uc-all-border-radius: 0px !important;}
         & #sidebar-switcher-target {border-radius: 10px !important;}
         /* shame. doesnt work well.
@@ -590,7 +590,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
     /* full screen tabs panel height correction */
     @media not (-moz-bool-pref: "ultima.tabs.vertical.hide") {      
       #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
             left: -2px;
         }
       }
@@ -679,7 +679,7 @@ ultima.tabs.vertical.rightside
           --uc-all-margins: 0px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 6px 6px;     
           --uc-tab-margins: 0px 0px 7px 0px;
       }
-      @media (-moz-bool-pref: "ultima.xstyle.squared") {
+      @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
           :root, body, * {
               --uc-all-margins: 0px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 0px 0px !important;
           }
@@ -725,7 +725,7 @@ ultima.tabs.vertical.rightside
         #main-window:not([customizing="true"]) #TabsToolbar-customization-target {
             visibility: collapse !important;
         }        
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {     
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {     
             :root, body, * {
                 --uc-all-margins: 0px  !important;
                 --uc-tab-margins: 0px !important;
@@ -754,7 +754,7 @@ ultima.tabs.vertical.rightside
         --inline-tab-padding: 10px;
         --tab-block-margin: 2px;
     }
-    @media (-moz-bool-pref: "ultima.xstyle.squared") {:root, body, * {--uc-all-margins: 0 !important;} }
+    @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {:root, body, * {--uc-all-margins: 0 !important;} }
     #browser {margin:var(--uc-all-margins);}
 
     /* browser adjustments */
