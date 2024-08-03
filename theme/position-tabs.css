@@ -535,10 +535,10 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
     #main-window[sizemode="fullscreen"]{
         --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
 
-        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") and not (-moz-os-version: macos) {
-            & .titlebar-buttonbox{ display: none !important; z-index: 0 !important;}
-            & #nav-bar { margin-right: 0px !important; }    
-        }  
+        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") { @media not (-moz-platform: macos) {
+            .titlebar-buttonbox { display: none !important; z-index: 0 !important;}
+            #nav-bar { margin-right: 0px !important; }    
+        }}   
         & #browser *, & #browser {--uc-all-border-radius: 0px !important;}
         & #sidebar-switcher-target {border-radius: 10px !important;}
         /* shame. doesnt work well.
