@@ -85,8 +85,6 @@ pinned tabs alternative style
     & #sidebar {
         background: var(--uc-ultima-window) !important;
     }
-    & #sidebar-box {
-    }
     @media (-moz-bool-pref: "ultima.tabs.vertical") {
         & #TabsToolbar-customization-target, & #tabbrowser-arrowscrollbox {
             background: var(--uc-ultima-window) !important;
