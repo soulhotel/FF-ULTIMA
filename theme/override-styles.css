@@ -73,6 +73,27 @@ pinned tabs alternative style
   
 }
 
+/* xstyle alternative theming ------------------------------------------------------- */
+
+
+@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+  
+  #main-window:not([lwtheme]) {
+    & #sidebar-header {
+        background-color: var(--uc-ultima-window) !important;
+    }
+    & #sidebar {
+        background: var(--uc-ultima-window) !important;
+    }
+    @media not (-moz-bool-pref: "ultima.tabs.vertical") {
+        & #TabsToolbar-customization-target, #tabbrowser-arrowscrollbox {
+            background: var(--uc-ultima-window) !important;
+        }
+    }
+  }   
+}
+
+
 /* restore close tab buttons */
 /* ive opted for this styling option, which shows the close button only on the specified hovering tab,
 this simple approach still allows - closing multiple selected tabs when they are all selected, and one close button is triggered
