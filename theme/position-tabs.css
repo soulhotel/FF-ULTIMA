@@ -434,7 +434,7 @@ hide/show tabs on hover
             }
             @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
                 :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser {
-                    --uc-all-margins: 0px 0.0px 0px 0.0px !important; 
+                    --uc-all-margins: 0px 0.1px 0px 0.1px !important; 
                     /*refresh*/
                 }                
             }
