@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.#/ffultima1.8.#.zip) 1.8.# wip
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.6/ffultima1.8.6.zip) 1.8.6 wip
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -11,11 +11,12 @@
 ###### ⭐ FF Ultima [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha/readme.md) by Draff (@ItsLogic) (promo)
 
 ### Change Log:
-- `new` Setting `ultima.xstyle.squished` to remove margins and borders, allowing hovering absolute corners to trigger tabs or sidebar display. (similar to xstyle.squared but keeping the rounded aesthetic). [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
-- `new` Setting `ultima.OS.notitlebar` [#122](https://github.com/soulhotel/FF-ULTIMA/issues/122)
+- `new` Setting `ultima.xstyle.squished` to remove margins and borders, allowing hovering absolute corners to trigger tabs or sidebar display. (similar to `xstyle.squared` but keeping the rounded aesthetic). [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
+- `new` Setting `ultima.OS.notitlebar` for [#122](https://github.com/soulhotel/FF-ULTIMA/issues/122)
 - `qol` When in fullscreen mode (F11) the navigation bar animation has been overwritten. Smoother transition when handling window control visibility.
 - `qol` Setting `ultima.xstyle.lwtheme` given more functionality. Making the vertical tabs and sidebar match the Main Window color.
 - `qol` The `doc` folder has been removed from the theme. In favor of an organized Wiki.
+- `fix` Mac OS titlebuttons display in fullscreen, mistargetted. [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
 - `fix` specifying scrollbar styling for webpages with unusual scrollbar utilization (google search). [#123](https://github.com/soulhotel/FF-ULTIMA/issues/123)
 - `todo` Code Miniaturization. position-tabs.css is a mess.
 - ...
