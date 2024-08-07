@@ -6,6 +6,16 @@
 possible spacing issues when the two are present at the same time. (temporarily removing this limitation)
 -----------------------------------------------------------*/
 
+@media (-moz-bool-pref: "ultima.sidebar.hidden") {
+    @media (-moz-bool-pref: "ultima.sidebar.autohide") {
+        #sidebar-box { 
+            --uc-sidebar-width: 0.4px !important; 
+            margin:0 !important;
+        }
+    }
+}
+
+
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
 
     /* remove header */
@@ -20,7 +30,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
 
     #sidebar-box {
         --uc-sidebar-width: 38px; /* width when not in view */
-        --uc-sidebar-hover-width: 250px; /* width when in full view */
+        --uc-sidebar-hover-width: 270px; /* width when in full view */
         --uc-autohide-sidebar-delay: 300ms;
         --uc-autohide-transition-duration: 80ms;
         --uc-autohide-transition-type: linear;
