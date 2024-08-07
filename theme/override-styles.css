@@ -71,6 +71,13 @@ pinned tabs alternative style
 
   #sidebar-box { height:100vh !important; }
   
+  @media (-moz-bool-pref: "ultima.sidebar.autohide") {
+      :root, body, * {
+		      --uc-sb-margin-leftside: 0px !important;
+    		  --uc-sb-margin-rightside: 0px !important;
+      }
+  }
+  
 }
 
 /* xstyle alternative theming ------------------------------------------------------- */
