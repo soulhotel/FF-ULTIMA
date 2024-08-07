@@ -81,7 +81,8 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
     will-change: margin-top !important;
 }
 
-:root[inFullscreen="true"] #navigator-toolbox:hover {
+:root[inFullscreen="true"] #navigator-toolbox:hover,
+:root[inFullscreen="true"] #navigator-toolbox:has([breakout-extend="true"]) {
     margin-top: 0px !important;
     transition-delay: 0ms !important;
 }
