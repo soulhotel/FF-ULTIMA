@@ -434,11 +434,24 @@ hide/show tabs on hover
             }
             @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
                 :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser {
-                    --uc-all-margins: 0px 0.2px 0px 6px !important; 
+                    --uc-all-margins: 0px 0px 0px 6px !important; 
                     /*refresh*/
-                }   
+                }
+                :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser:has([positionend="true"]) {
+                    --uc-all-margins: 0px 6px 0px 0px !important; 
+                    /*refresh*/
+                }
                 :root:not([sizemode="fullscreen"]) #browser {
                     --uc-all-margins: 0px 0px 0px 0px !important; 
+                }
+            }
+            @media (-moz-bool-pref: "ultima.tabs.vertical.hide") {
+                #browser:has([positionend="true"]) {
+                    --uc-all-margins: 0px 6px 0px 0px !important; 
+                    /*refresh*/
+                }
+                #browser {
+                    --uc-all-margins: 0px 0px 0px 0.2px !important; 
                 }
             }
         }
