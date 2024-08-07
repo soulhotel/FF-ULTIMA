@@ -434,7 +434,7 @@ hide/show tabs on hover
             }
             @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
                 :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser {
-                    --uc-all-margins: 0px 0.1px 0px 0.1px !important; 
+                    --uc-all-margins: 0px 0.2px 0px 6px !important; 
                     /*refresh*/
                 }   
                 :root:not([sizemode="fullscreen"]) #browser {
@@ -639,9 +639,7 @@ hide vertical tabs ~ except for private windows
 */
 
 @media (-moz-bool-pref: "ultima.tabs.vertical") {
-    @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {  
-        /*⏰ DIVIDE BELOW INTO TWO SECTIONS - ONE FOR WHEN XSTYLE.SQUARED IS ENABLED ⏰*/
-        
+    @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {          
         /* adjust spacing, margins for everything */    
         :root:not([privatebrowsingmode="temporary"]):not([customizing],[chromehidden~="menubar"]) {
             --uc-vertical-tabs-width: 0px;
@@ -660,8 +658,7 @@ hide vertical tabs ~ except for private windows
         /* POOF! tabs gone */    
         #main-window:not([customizing="true"],[privatebrowsingmode="temporary"]) #TabsToolbar-customization-target {
             visibility: collapse !important;
-        }
-      
+        }      
     }
 }
   
