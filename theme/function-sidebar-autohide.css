@@ -9,8 +9,8 @@ possible spacing issues when the two are present at the same time. (temporarily 
 @media (-moz-bool-pref: "ultima.sidebar.hidden") {
     @media (-moz-bool-pref: "ultima.sidebar.autohide") {
         #sidebar-box { 
-            --uc-sidebar-width: 0.4px !important; 
-            margin:0 !important;
+            --uc-sidebar-width: 1px !important; 
+            margin-inline: 0px !important;
         }
 
     }
@@ -55,7 +55,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
 
     /* on full screen collapse to 1 NOT 0 */
 
-    #main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 6px; margin-inline:-6px !important; }
+    #main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 2px; margin:-1px !important; }
     #main-window[sizemode="fullscreen"] #sidebar-box:not(:hover) { opacity: 0 !important; }
     #main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
 
