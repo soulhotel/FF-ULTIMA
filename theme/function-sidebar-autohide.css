@@ -12,15 +12,17 @@ possible spacing issues when the two are present at the same time. (temporarily 
             --uc-sidebar-width: 1px !important; 
             margin-inline: 0px !important;
         }
-
     }
 }
+
 
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
     @media (-moz-bool-pref: "ultima.sidebar.longer") {
         #sidebar-box {--uc-sidebar-hover-width: 350px !important;} 
     }
 }
+
+
 
 
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
