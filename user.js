@@ -21,6 +21,7 @@ user_pref("ultima.tabs.vertical.rightside", false);
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebery.autohide", false);
+user_pref("ultima.sidebar.hidden", false);
 
 /*extension theme on-off*/
 user_pref("ultima.theme.extensions", true);
