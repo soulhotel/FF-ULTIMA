@@ -12,10 +12,11 @@
 
 ### Change Log:
 - `new` Setting `ultima.xstyle.squished` to remove margins and borders, allowing hovering absolute corners to trigger tabs or sidebar display. (similar to `xstyle.squared` but keeping the rounded aesthetic). [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
+- `new` Setting `ultima.sidebar.hidden` when the sidebar isnt hovered, it will fully collapse to 0px, allowing hovering of screen edges to trigger it when used with `ultima.xstyle.squared` or `ultima.xstyle.squished`. [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
 - `new` Setting `ultima.OS.notitlebar` for [#122](https://github.com/soulhotel/FF-ULTIMA/issues/122)
 - `qol` When in fullscreen mode (F11) the navigation bar animation has been overwritten. Smoother transition when handling window control visibility.
 - `qol` Setting `ultima.xstyle.lwtheme` given more functionality. Making the vertical tabs and sidebar match the Main Window color.
-- `qol` The `doc` folder has been removed from the theme. In favor of an organized Wiki.
+- `qol` The `doc` folder has been removed from the theme. Cutting source size in half (10mb). View the [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) for all help & documentation.
 - `fix` Mac OS titlebuttons display in fullscreen, mistargetted. [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
 - `fix` specifying scrollbar styling for webpages with unusual scrollbar utilization (google search). [#123](https://github.com/soulhotel/FF-ULTIMA/issues/123)
 - `todo` Code Miniaturization. position-tabs.css is a mess.
