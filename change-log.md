@@ -14,6 +14,7 @@
 - `new` Setting `ultima.xstyle.squished` to remove margins and borders, allowing hovering absolute corners to trigger tabs or sidebar display. (similar to `xstyle.squared` but keeping the rounded aesthetic). [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
 - `new` Setting `ultima.sidebar.hidden` can fully hide/collapse the sidebar when used with autohide, also allows hovering screen edge when in fullscreen/maximized when used with xstyle.squared or xstyle.squished. [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
 - `new` Setting `ultima.OS.notitlebar` for [#122](https://github.com/soulhotel/FF-ULTIMA/issues/122)
+- `new`|`qol` Setting `ultima.sidebar.longer` when using sidebar.autohide the sidebar will be 350px long (bigger).
 - `qol` When in fullscreen mode (F11) the navigation bar animation has been overwritten. Smoother transition when handling window control visibility.
 - `qol` Setting `ultima.xstyle.lwtheme` given more functionality. Making the vertical tabs and sidebar match the Main Window color.
 - `qol` The `doc` folder has been removed from the theme. Cutting source size in half (10mb). View the [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) for all help & documentation.
