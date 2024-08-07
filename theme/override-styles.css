@@ -11,7 +11,7 @@ pinned tabs alternative style
 
 /* no margins, borders, or rounded corners ------------------------------------------ */
 
-@media (-moz-bool-pref: "ultima.xstyle.squared") {
+@media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
   :root, body, * {
     --uc-tab-margins: 0px !important;
     --uc-margin-top: 0px !important;
