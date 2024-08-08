@@ -6,6 +6,25 @@
 possible spacing issues when the two are present at the same time. (temporarily removing this limitation)
 -----------------------------------------------------------*/
 
+@media (-moz-bool-pref: "ultima.sidebar.hidden") {
+    @media (-moz-bool-pref: "ultima.sidebar.autohide") {
+        #sidebar-box { 
+            --uc-sidebar-width: 0.4px !important; 
+            margin-inline: 0px !important;
+        }
+    }
+}
+
+
+@media (-moz-bool-pref: "ultima.sidebar.autohide") {
+    @media (-moz-bool-pref: "ultima.sidebar.longer") {
+        #sidebar-box {--uc-sidebar-hover-width: 350px !important;} 
+    }
+}
+
+
+
+
 @media (-moz-bool-pref: "ultima.sidebar.autohide") {
 
     /* remove header */
@@ -20,7 +39,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
 
     #sidebar-box {
         --uc-sidebar-width: 38px; /* width when not in view */
-        --uc-sidebar-hover-width: 250px; /* width when in full view */
+        --uc-sidebar-hover-width: 270px; /* width when in full view */
         --uc-autohide-sidebar-delay: 300ms;
         --uc-autohide-transition-duration: 80ms;
         --uc-autohide-transition-type: linear;
@@ -38,7 +57,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
 
     /* on full screen collapse to 1 NOT 0 */
 
-    #main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 6px; margin-inline:-6px !important; }
+    #main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 2px; margin:0px !important; }
     #main-window[sizemode="fullscreen"] #sidebar-box:not(:hover) { opacity: 0 !important; }
     #main-window[sizemode="fullscreen"] #sidebar { margin-inline:0px !important; }
 

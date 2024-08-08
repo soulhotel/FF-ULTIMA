@@ -391,7 +391,7 @@ hide/show tabs on hover
     }}
     
     /* when disabled and squared setting enabled */
-    @media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "ultima.xstyle.squared") {
+    @media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
         :root, body, * {
             --uc-all-margins: 0px 0px 0px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) !important; 
         }
@@ -424,7 +424,7 @@ hide/show tabs on hover
         }  
         
         /* adjustment for xstyle.squared preference */
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
             :root, body, * {
                 --uc-all-margins: 0px  0px 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) !important; 
             }
@@ -434,9 +434,25 @@ hide/show tabs on hover
             }
             @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {
                 :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser {
-                    --uc-all-margins: 0px 0.1px 0px 0.1px !important; 
+                    --uc-all-margins: 0px 0px 0px 0px !important; 
                     /*refresh*/
-                }                
+                }
+                :root:not([privatebrowsingmode="temporary"],[windowtype="Toolkit:PictureInPicture"]) #browser:has([positionend="true"]) {
+                    --uc-all-margins: 0px 0px 0px 0px !important; 
+                    /*refresh*/
+                }
+                :root:not([sizemode="fullscreen"]) #browser {
+                    --uc-all-margins: 0px 0px 0px 0px !important; 
+                }
+            }
+            @media (-moz-bool-pref: "ultima.tabs.vertical.hide") {
+                #browser:has([positionend="true"]) {
+                    --uc-all-margins: 0px 0px 0px 0px !important; 
+                    /*refresh*/
+                }
+                #browser {
+                    --uc-all-margins: 0px 0px 0px 0px !important; 
+                }
             }
         }
     }}
@@ -462,7 +478,7 @@ hide/show tabs on hover
         }  
         
         /* adjustment for xstyle.squared preference */
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
             :root, body, * {
                 --uc-all-margins: 0px calc(var(--uc-collapsed-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 0px 0px !important; 
             }
@@ -535,10 +551,10 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
     #main-window[sizemode="fullscreen"]{
         --uc-vertical-tabs-width: var(--uc-collapsed-tabs-width) !important;
 
-        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
-            & .titlebar-buttonbox{ display: none !important; z-index: 0 !important;}
-            & #nav-bar { margin-right: 0px !important; }    
-        }      
+        @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") { @media not (-moz-platform: macos) {
+            .titlebar-buttonbox { display: none !important; z-index: 0 !important;}
+            #nav-bar { margin-right: 0px !important; }    
+        }}     
         & #browser *, & #browser {--uc-all-border-radius: 0px !important;}
         & #sidebar-switcher-target {border-radius: 10px !important;}
         /* shame. doesnt work well.
@@ -555,7 +571,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
                 left:-6px !important;
             }            
             & * {
-                --uc-all-margins: 0px 1px 0px 0.2px !important;
+                --uc-all-margins: 0px 0px 0px 0px !important;
             }
         }
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
@@ -567,7 +583,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
                 right:0px !important;
             }             
             & * {
-                --uc-all-margins: 0px 0.2px 0px 0.2px !important;
+                --uc-all-margins: 0px 0.2px 0px 0px !important;
             }
         }
     }
@@ -590,7 +606,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
     /* full screen tabs panel height correction */
     @media not (-moz-bool-pref: "ultima.tabs.vertical.hide") {      
       #main-window[sizemode="fullscreen"] #TabsToolbar-customization-target {
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
             left: -2px;
         }
       }
@@ -636,9 +652,7 @@ hide vertical tabs ~ except for private windows
 */
 
 @media (-moz-bool-pref: "ultima.tabs.vertical") {
-    @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {  
-        /*⏰ DIVIDE BELOW INTO TWO SECTIONS - ONE FOR WHEN XSTYLE.SQUARED IS ENABLED ⏰*/
-        
+    @media (-moz-bool-pref: "ultima.tabs.vertical.onlyprivate") {          
         /* adjust spacing, margins for everything */    
         :root:not([privatebrowsingmode="temporary"]):not([customizing],[chromehidden~="menubar"]) {
             --uc-vertical-tabs-width: 0px;
@@ -657,8 +671,7 @@ hide vertical tabs ~ except for private windows
         /* POOF! tabs gone */    
         #main-window:not([customizing="true"],[privatebrowsingmode="temporary"]) #TabsToolbar-customization-target {
             visibility: collapse !important;
-        }
-      
+        }      
     }
 }
   
@@ -679,7 +692,7 @@ ultima.tabs.vertical.rightside
           --uc-all-margins: 0px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 6px 6px;     
           --uc-tab-margins: 0px 0px 7px 0px;
       }
-      @media (-moz-bool-pref: "ultima.xstyle.squared") {
+      @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {
           :root, body, * {
               --uc-all-margins: 0px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)) 0px 0px !important;
           }
@@ -725,7 +738,7 @@ ultima.tabs.vertical.rightside
         #main-window:not([customizing="true"]) #TabsToolbar-customization-target {
             visibility: collapse !important;
         }        
-        @media (-moz-bool-pref: "ultima.xstyle.squared") {     
+        @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {     
             :root, body, * {
                 --uc-all-margins: 0px  !important;
                 --uc-tab-margins: 0px !important;
@@ -754,7 +767,7 @@ ultima.tabs.vertical.rightside
         --inline-tab-padding: 10px;
         --tab-block-margin: 2px;
     }
-    @media (-moz-bool-pref: "ultima.xstyle.squared") {:root, body, * {--uc-all-margins: 0 !important;} }
+    @media (-moz-bool-pref: "ultima.xstyle.squared"), (-moz-bool-pref: "ultima.xstyle.squished") {:root, body, * {--uc-all-margins: 0 !important;} }
     #browser {margin:var(--uc-all-margins);}
 
     /* browser adjustments */

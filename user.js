@@ -21,6 +21,7 @@ user_pref("ultima.tabs.vertical.rightside", false);
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebery.autohide", false);
+user_pref("ultima.sidebar.hidden", false);
 
 /*extension theme on-off*/
 user_pref("ultima.theme.extensions", true);
@@ -36,6 +37,7 @@ user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.squared", false);
+user_pref("ultima.xstyle.squished", false);
 user_pref("ultima.xstyle.lwtheme", false); /* Experimental. To counter addon themes that use unusual color variables. */
 user_pref("ultima.xstyle.pinnedtabs.i", false); /* Experimental. Havent decided on style yet. */
 
@@ -48,6 +50,7 @@ user_pref("ultima.OS.kde.wds", false);
 user_pref("ultima.OS.gnome.wds", false);
 user_pref("ultima.OS.gnome.wdl", false);
 /*this is enough to give linux users ~options~, any further finetuning should be done by the user.*/
+user_pref("ultima.OS.notitlebar", false);
 
 /*other*/
 user_pref("browser.aboutConfig.showWarning", false);

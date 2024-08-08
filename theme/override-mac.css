@@ -37,7 +37,7 @@
    
     /* update spacing and positioning */
     :root, * {
-        --wc-top: 10px !important;
+        --wc-top: 8px !important;
         --wc-left: 5px !important;
         --wc-right: unset !important;
         --navbar-margin: 100px !important;
@@ -72,7 +72,7 @@
    
     /* update spacing and positioning */
     :root, * {
-        --wc-top: 7px !important;
+        --wc-top: 3px !important;
         --wc-left: 5px !important;
         --wc-right: unset !important;
         --navbar-margin: 100px !important;

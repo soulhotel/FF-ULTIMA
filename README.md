@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub Release Date](https://img.shields.io/github/release-date/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
+![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) <!--![GitHub Release Date](https://img.shields.io/github/release-date/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)--> ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
 
 </div>
 
@@ -23,11 +23,11 @@
 >
 - Windows, Linux and Mac OS Support.
 >
-- Multiple Options - for Tab Size, Autohiding, Spacing, Tabs on Top/Right, OS compatibility [and More](doc/Modification.md)
+- Multiple Options - for Tab Size, Autohiding, Spacing, Tabs on Top/Right, OS compatibility [and More](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings)
 >
 - The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
 
-![prevautohide](doc/preview/prevmini-bar.png)
+![prevautohide](theme/pic/assets/prevmini-bar.png)
 
 
 ## Installation
@@ -46,7 +46,7 @@
 - Look for the **Profile Folder** row. Open the folder.
 - In that folder, create a new folder named `chrome` (If it doesnt already exist).
 
-![aboutsupport](doc/preview/about_support.png)
+![aboutsupport](theme/pic/assets/about_support.png)
 
 2. Go to the `about:profiles` page
 - In the URL Bar, type `about:profiles`.
@@ -54,13 +54,13 @@
 - Look for the **Root Directory** row, and click **Open Directory**.
 - In the opened Folder, create a new folder named `chrome` (if it doesnt already exist).
  
-![alt text](doc/preview/profilelocation.png)
+![alt text](theme/pic/assets/profilelocation.png)
 </details>
 
 <details>
 <summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
   
-![addonthemespage](doc/preview/installprep.png)
+![addonthemespage](theme/pic/assets/installprep.png)
 </details>
 
 ###### ⬇️ Choose *one* of the installation methods below. ⬇️
@@ -100,7 +100,7 @@ rmdir FF-ULTIMA                                            # remove the extra fo
 
 ###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :).
 
-###### :accessibility: Reading the release page is always reccomended. When new versions of the theme come out - and they include new preferences in the about:config page, you may want to open the new user.js file and compare it to your current settings. You can either add the settings manually in the about:config page... or load your own editted user.js file to add the new settings and keep your old the same way.
+###### :accessibility: Reading the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) is always recommended. When new versions of the theme come out - and they include new preferences in the about:config page, you may want to open the new user.js file and compare it to your current settings. You can either add the settings manually in the about:config page... or load your own editted user.js file to add the new settings and keep your old the same way.
 </details>
 
 
@@ -108,7 +108,7 @@ rmdir FF-ULTIMA                                            # remove the extra fo
 
 [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
 - FAQ
-- Settings overview
+- Theme settings overview
 - Sidebery config
 - List of Color schemes
 - Color scheme creation

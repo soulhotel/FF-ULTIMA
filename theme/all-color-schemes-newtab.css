@@ -7,24 +7,24 @@ Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc
 
 Use the template below to enter your theme into the list:
 
-@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("site-icons/MYTHEME.png") !important;}
+@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
 
-@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("site-icons/MYTHEME.png") !important;}
+@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
 */
 
 /*--------------------------------- DARK COLOR SCHEME SECTION ---------------------------------*/
 
 @media (prefers-color-scheme: dark) {
 
-@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("site-icons/fullmoon.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("pic/fullmoon.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("site-icons/catppuccin.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("site-icons/catppuccin.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("pic/catppuccin.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("site-icons/gruvbox.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("site-icons/midnight.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("pic/midnight.png") !important;}}
 
 }
 
@@ -32,9 +32,9 @@ Use the template below to enter your theme into the list:
 
 @media (prefers-color-scheme: light){
 
-@media (-moz-bool-pref: "user.theme.light.a"){body{background-image: url("site-icons/dusky.png") !important;}}
+@media (-moz-bool-pref: "user.theme.light.a"){body{background-image: url("pic/dusky.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("site-icons/gruvbox-l.png") !important;}}
+@media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.png") !important;}}
 
   
   
