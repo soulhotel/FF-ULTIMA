@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.6/ffultima1.8.6.zip) 1.8.6 wip
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.8.6/ffultima1.8.6.zip) 1.8.6 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
