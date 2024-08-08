@@ -21,12 +21,12 @@
 - `fix` Mac OS titlebuttons display in fullscreen, mistargetted. [#124](https://github.com/soulhotel/FF-ULTIMA/issues/124)
 - `fix` specifying scrollbar styling for webpages with unusual scrollbar utilization (google search). [#123](https://github.com/soulhotel/FF-ULTIMA/issues/123)
 - `todo` Code Miniaturization. position-tabs.css is a mess.
-- ...
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
-<br>
+![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 
+<!--
 > *Tabs on Top*
 
 ![Screenshot from 2024-07-20 02-21-11](https://github.com/user-attachments/assets/d312964e-f4bc-4377-993b-f81495aebe2a)
@@ -34,9 +34,8 @@
 > *Tabs on the Right*
 
 ![Screenshot from 2024-07-28 20-42-09](https://github.com/user-attachments/assets/481937e4-7653-407c-bba8-69fb00b201f1)
+-->
 
-> Color Scheme Editions
 
-![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
 
 
