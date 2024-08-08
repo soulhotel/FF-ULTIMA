@@ -571,7 +571,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
                 left:-6px !important;
             }            
             & * {
-                --uc-all-margins: 0px 1px 0px 0px !important;
+                --uc-all-margins: 0px 0px 0px 0px !important;
             }
         }
         @media (-moz-bool-pref: "ultima.tabs.vertical.rightside") {
@@ -583,7 +583,7 @@ when in fullscreen mode (F11), reposition tabs and remove rounded borders
                 right:0px !important;
             }             
             & * {
-                --uc-all-margins: 0px 0.2px 0px 0.2px !important;
+                --uc-all-margins: 0px 0.2px 0px 0px !important;
             }
         }
     }
