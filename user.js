@@ -41,7 +41,7 @@ user_pref("ultima.xstyle.squared", false);
 user_pref("ultima.xstyle.squished", false);
 user_pref("ultima.xstyle.lwtheme", false);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
-user_pref("ultima.xstyle.privatebrowsing", false);
+user_pref("ultima.xstyle.private", false);
 
 /*specific OS overrides (like titlebar buttons)*/
 user_pref("ultima.OS.kde", true);
