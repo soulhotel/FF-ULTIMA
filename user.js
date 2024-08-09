@@ -62,6 +62,7 @@ user_pref("devtools.debugger.prompt-connection", false);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("toolkit.tabbox.switchByScrolling", false);
 user_pref("browser.tabs.hoverPreview.enabled", true);
+user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
 /*enable userchrome,
 disable about config warning,
 enable browsertoolbox,
