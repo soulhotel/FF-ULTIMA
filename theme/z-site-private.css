@@ -16,7 +16,7 @@
         }
         /*wallpaper for light mode*/
         @media (prefers-color-scheme: light) {
-            body{background-image: url("pic/private-dark.png") !important;}
+            body{background-image: url("pic/gruvbox-l.png") !important;}
         }  
     }
 }
