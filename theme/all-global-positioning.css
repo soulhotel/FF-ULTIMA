@@ -130,6 +130,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 #main-window[sizemode="fullscreen"]{
     & .browserContainer, & #tabbrowser-tabpanels { browser[type] {border-radius: 0px !important;}
 }
+}
 
 /*--------------bookmarks bar---------------*/
 
