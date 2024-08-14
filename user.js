@@ -61,8 +61,13 @@ user_pref("devtools.chrome.enabled", true);
 user_pref("devtools.debugger.prompt-connection", false);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("toolkit.tabbox.switchByScrolling", false);
+
+user_pref("sidebar.revamp", true);
+user_pref("sidebar.verticalTabs", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", true);
+
 /*enable userchrome,
 disable about config warning,
 enable browsertoolbox,
