@@ -159,10 +159,7 @@ Global styling - Icons
             background: var(--uc-tabs-background);
             --tab-loading-fill: var(--uc-accent-i) !important;
         }
-        & #TabsToolbar-customization-target {
-            box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(150,150,150,0.7) !important;
-            background: var(--uc-background-secondary);
-        }
+
         /*tabs styling - for unselected and unpinned*/
         & .tab-label-container:not([selected=""],[pinned]) {
             color: var(--uc-dark-color) !important;

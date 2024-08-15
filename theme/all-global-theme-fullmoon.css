@@ -30,8 +30,8 @@ Global styling - Icons
   --uc-background-solid: rgba(28, 27, 34, 1);
   --uc-background-secondary: rgb(35, 35, 42);
   --uc-transparent: rgba(0,0,0,0);
-  --uc-selected: rgba(0,0,0,0.65);
-  --uc-active: rgba(0,0,0,0.75);
+  --uc-selected: rgba(25, 25, 35, 0.8);
+  --uc-active: rgb(35, 35, 42);
   --uc-text: rgb(255, 255, 255);
   --uc-panel-border: rgba(25, 25, 25, 1);
   --uc-panel-border-ii: rgba(45, 45, 45, 0.5);
@@ -145,18 +145,11 @@ Global styling - Icons
     & .browserStack { 
         background: var(--uc-transparent) !important; 
     }
-    & #tabbrowser-tabpanels browser[type] {
-        outline: 3px solid var(--toolbar-bgcolor);
-    }
        
     /* tabs container */
     & #tabbrowser-tabs {
         background: transparent;
         --tab-loading-fill: var(--uc-accent-i) !important;
-    }
-    & #TabsToolbar-customization-target {
-        box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-        background: var(--uc-background-secondary);
     }
     /*tabs styling - for unselected and unpinned*/
     & .tab-label-container:not([selected=""],[pinned]) {
@@ -320,13 +313,6 @@ Global styling - Icons
     }
     & .browserStack { 
         background: var(--uc-transparent) !important; 
-    }
-    & #tabbrowser-tabpanels browser[type] {
-        margin-top: 2px !important; /*new*/
-        outline: 3px solid var(--lwt-accent-color);
-        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 3px solid var(--arrowpanel-background);
-        }
     }    
     
     /* side bar*/
