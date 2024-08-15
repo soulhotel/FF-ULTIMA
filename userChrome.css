@@ -11,26 +11,47 @@ Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/
 
 @import url(theme/all-color-schemes.css);
 
-@import url(theme/position-tabs.css);
+/*@import url(theme/position-tabs.css);*/
 @import url(theme/position-findbar.css);
-@import url(theme/position-window-controls.css);
+/*@import url(theme/position-window-controls.css);*/
 
-@import url(theme/function-mini-button-bar.css);
+/*@import url(theme/function-mini-button-bar.css);*/
 @import url(theme/function-sidebar-autohide.css);
 @import url(theme/function-sidebery-autohide.css);
 @import url(theme/function-containers-indicator.css);
 @import url(theme/function-menu-button.css);
-@import url(theme/function-privatemode-indicator.css); /* sourced from MOG */
+@import url(theme/function-privatemode.css); /* sourced from MOG */
 @import url(theme/function-urlbar.css);
 @import url(theme/function-extensions-menu.css);
-@import url(theme/function-safeguard.css);
+/*@import url(theme/function-safeguard.css);*/
 
 @import url(theme/theme-context-menu.css);
-@import url(theme/theme-menubar.css);
+/*@import url(theme/theme-menubar.css);*/
 @import url(theme/theme-statuspanel.css);
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
-
+/*
 @import url(theme/override-linux.css);
-@import url(theme/override-mac.css);
+@import url(theme/override-mac.css);*/
 @import url(theme/override-styles.css);
+
+
+        
+#main-window:not([lwtheme]) {
+    & #tabbrowser-tabpanels browser[type] {
+        outline: 0px solid var(--toolbar-bgcolor);
+    }          
+}        
+        
+        
+        
+        
+#main-window[lwtheme] {        
+    & #tabbrowser-tabpanels browser[type] {
+        margin-top: 0px !important; /*new*/
+        outline: 0px solid var(--lwt-accent-color);
+        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+            outline: 0px solid var(--arrowpanel-background);
+        }
+    }
+}
