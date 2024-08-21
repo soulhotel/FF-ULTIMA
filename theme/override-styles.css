@@ -37,7 +37,7 @@ pinned tabs alternative style
       outline: 0px solid var(--lwt-accent-color);
   }}
 
-  #sidebar-box { height:100vh !important; }
+  #sidebar-box { height:94vh !important; }
   
 }
 
@@ -69,7 +69,7 @@ pinned tabs alternative style
       outline: 0px solid var(--lwt-accent-color);
   }}
 
-  #sidebar-box { height:100vh !important; }
+  #sidebar-box { height:94vh !important; }
   
   @media (-moz-bool-pref: "ultima.sidebar.autohide") {
       :root, body, * {
