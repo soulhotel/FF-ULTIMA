@@ -1,4 +1,4 @@
-# :warning: Firefox Nightly 131 test release
+# :warning: Firefox Nightly 131 build - WIP - updating as Firefox devs make progress
 
 # <p align="center"> FF ULTIMA... </p>
 
