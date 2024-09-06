@@ -1,3 +1,20 @@
+/*This page is undergoing heavy modification due to Firefox v131 changes to the browser.*/
+
+/*
+This file handles positioning of all main elements within the browser.
+[Index] ctrl+f to find a section:
+Global positioning (outdated)
+Global variables
+Compact spacing
+Browser Content
+Side bar
+Vertical Tabs
+Vertical Tabs settings
+Title bar
+Nav bar
+Menu bar
+*/
+
 /*--------------------------Global positioning--------------------------*/
 
 /*
@@ -33,7 +50,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 }}}
 
 
-/* Global variables for quick modifications ---------------------------*/
+/* Global variables for quick modifications ------------------------------------------*/
 
 :root, body, * {
     --chrome-content-separator-color: transparent;
@@ -43,18 +60,31 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
     /*rounded corners*/
     --uc-all-border-radius: 10px;
-    --tab-border-radius: 10px;
+    --uc-content-border-radius: var(--uc-all-border-radius);
+    --uc-tab-border-radius: var(--uc-all-border-radius);
+    --uc-sidebar-border-radius: var(--uc-all-border-radius);
     --uc-button-border: 4px;
 
     /* margins */
-    --uc-content-margins: 3.5px 5px 5px 5px; 
-    --uc-tab-margins-left: 3.5px 0 5px 0px;
-    --uc-tab-margins-right: 3.5px 0px 5px 0;
+    --uc-content-margins: 0px 5px 5px 5px; 
+    --uc-tab-margins-left: 3.5px 0 5px 0px; /*placehold*/
+    --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
         
     --uc-sb-margins: 3.5px 0px 5px 0px;
     --uc-sb-margins-right: 3.5px 2.5px 5px 2.5px;
     --uc-tab-padding: 2px;
 
+    /*global spacing pixels*/
+    --uc-spacing-px0: 0px;
+    --uc-spacing-px1: 1px;
+    --uc-spacing-px2: 2px;
+    --uc-spacing-px3: 3px;
+    --uc-spacing-px4: 4px;
+    --uc-spacing-px5: 5px;
+    
+    /*tabs*/
+    --uc-vertical-collapsed-width:0.4px;
+    
     /*individual tabs*/
     --tab-min-height: 35px;
     --tab-min-width: initial !important; /*dont touch*/
@@ -67,7 +97,56 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --uc-navbar-height: 34px;
 }
 
-/* Side bar ----------------------------------------------------------*/
+
+/* Compact spacing -----------------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.spacing.compact") { 
+    :root, body, * {
+        /*rounded corners*/
+        --uc-content-border-radius: 0px;
+        --uc-tab-border-radius: 0px;
+        --uc-sidebar-border-radius: 0px;
+        --uc-button-border: 4px;
+        /* margins */
+        --uc-content-margins: 0px;
+        --uc-tab-margins-left: 0px;
+        --uc-tab-margins-right: 0px; 
+        --uc-sb-margins: 0px;
+        --uc-sb-margins-right: 0px;
+        }
+}
+
+/* Browser Content ---------------------------------------------------------------------*/
+
+
+/* remove default borders and shadows v131 */
+
+#appcontent { @media (-moz-bool-pref: "sidebar.revamp") { & {
+    border-top: 0 !important;
+    border-inline-start: 0 !important;
+    box-shadow: none !important;
+}}}
+
+
+#main-window:not([lwtheme]) {
+    & #tabbrowser-tabpanels browser[type] {
+        margin: var(--uc-content-margins) !important;
+        border-radius: var(--uc-content-border-radius);
+        outline: 4px solid var(--toolbar-bgcolor) !important;
+    }          
+}       
+
+#main-window[lwtheme] {        
+    & #tabbrowser-tabpanels browser[type] {
+        margin: var(--uc-content-margins) !important;
+        outline: 4px solid var(--lwt-accent-color);
+        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+            outline: 3px solid var(--arrowpanel-background);
+        }
+    }
+}
+
+/* Side bar ---------------------------------------------------------------------------*/
 
 /* bigger sidebar, 50vw = 50% of the screen width */
 /* great for view-tab-in-sidebar extensions */
@@ -83,7 +162,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 /* default left side < */
 #sidebar-box, #sidebar, #sidebar-header {
-    border-radius: var(--uc-all-border-radius) !important;
+    border-radius: var(--uc-sidebar-border-radius) !important;
 }
 
 #sidebar-splitter {
@@ -94,19 +173,19 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 
 #sidebar-header {
-    border-top-left-radius: var(--uc-all-border-radius) !important;
-    border-top-right-radius: var(--uc-all-border-radius) !important;
+    border-top-left-radius: var(--uc-sidebar-border-radius) !important;
+    border-top-right-radius: var(--uc-sidebar-border-radius) !important;
 }
 #sidebar {
-    border-bottom-left-radius: var(--uc-all-border-radius) !important;
-    border-bottom-right-radius: var(--uc-all-border-radius) !important;
+    border-bottom-left-radius: var(--uc-sidebar-border-radius) !important;
+    border-bottom-right-radius: var(--uc-sidebar-border-radius) !important;
 }
 
 
 /* TABS Side Bar */
 
 #sidebar-main {
-    border-radius: var(--uc-all-border-radius);
+    border-radius: var(--uc-sidebar-border-radius);
 }
 
 #sidebar-main:not([positionend="true"]) {
@@ -121,35 +200,62 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     border-inline-end: 0px solid red !important;
 }
 
-
-/* Browser Content -------------------------------------------------*/
-
-#main-window:not([lwtheme]) {
-    & #tabbrowser-tabpanels browser[type] {
-        margin: var(--uc-content-margins) !important;
-        border-radius: var(--uc-all-border-radius);
-        outline: 4px solid var(--toolbar-bgcolor) !important;
-    }          
-}       
-
-#main-window[lwtheme] {        
-    & #tabbrowser-tabpanels browser[type] {
-        margin: var(--uc-content-margins) !important;
-        outline: 4px solid var(--lwt-accent-color);
-        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 3px solid var(--arrowpanel-background);
-        }
-    }
-}
-
 #vertical-tabs-newtab-button {
     height:25px !important;
-    border-radius:0px !important;
+    border-radius:30px !important;
     background:red !important;
     margin-inline: 3px -5px !important;;
 }
 
-/* Titlebar --------------------------------------------------------*/
+/* Vertical Tabs settings --------------------------------------------------------------*/
+
+/* Keep titlebar ---------------------------------------------------*/
+/*until firefox removes the leftover title bar taking up space*/
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    /*toolbar spacing correction*/
+    #nav-bar {
+        min-height:var(--uc-navbar-height) !important;
+    }    
+    /*default titlebar on or off*/
+    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar, #TabsToolbar-customization-target {
+            display:none !important;
+        }
+    }    
+}
+
+#sidebar-main:has([expanded]) .tab-label-container {
+  margin-left: 10px !important;
+}
+
+/*Autohide implementation ------------------------------------------------------------*/
+
+/*not using animation yet, feature is still being analyzed,
+visual stutter and elements overlapping,
+most likely need to transform the new sidebar into a fixed element,
+still should be way easier than the original verttab hack just gotta wait*/
+
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+    #sidebar-main:has([expanded]) {
+        transition: width 80ms linear 300ms !important;
+        will-change: width !important;
+        width:initial;
+    }    
+    #sidebar-main:has([expanded]):not(:hover) {
+        width: var(--uc-vertical-collapsed-width) !important;
+        z-index: 0;
+    }
+    #sidebar-main:has([expanded]):not(:hover) + #sidebar-box {
+        margin-left:var(--uc-spacing-px2) !important;
+    }
+    #sidebar-main:has([expanded]):hover + #sidebar-box {
+        margin-left:var(--uc-spacing-px0) !important;
+    }
+}
+
+
+/* Title bar ----------------------------------------------------------------------*/
 
 .titlebar-spacer {width:5px !important;}
 
@@ -159,14 +265,15 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     margin: 2px 2px 0 0 !important;
 }
 
-/* Nav Bar ---------------------------------------------------------*/
+
+/* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar .toolbarbutton-1 {
     margin-top:4.5px !important;
 }
 
 
-/* Menu Bar --------------------------------------------------------*/
+/* Menu bar -----------------------------------------------------------------------*/
 
 #toolbar-menubar {
     max-height:30px !important;
@@ -194,59 +301,3 @@ menubar > menu[open] {
     border-bottom: 1px var(--uc-accent-ii) solid !important;
 }
 
-/* Vertical Tabs settings ------------------------------------------*/
-
-/* Keep titlebar ---------------------------------------------------*/
-
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-
-    /*toolbar spacing correction*/
-    #nav-bar {
-        min-height:var(--uc-navbar-height) !important;
-    }
-    
-    /*default titlebar on or off*/
-    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar, #TabsToolbar-customization-target {
-            display:none;
-        }
-    }
-    
-    
-}
-
-
-#sidebar-main:has([expanded]) .tab-label-container {
-  margin-left: 10px !important;
-}
-
-
-
-    
-    
-/* Keep titlebar ---------------------------------------------------*/
-/*Autohide implementation ------------------------------------------*/
-
-/*not using animation yet, feature is still being analyzed,
-visual stutters arent fixed by animation,
-most likely need to transform the new sidebar into a fixed element,
-still should be way easier than the original verttab hack*/
-
-@media (-moz-bool-pref: "ultima.tabs.autohide") {
-    #sidebar-main:has([expanded]):not(:hover) {
-        width:2.5px;
-    }
-}
-/*
-#sidebar-main:has([expanded]):not(:hover) {
-
-    & :not(:hover) {
-        position:absolute; 
-        top: 0;
-        left:-278px;
-        height:100vh;
-        z-index:999;
-    }
-
-}
-*/
