@@ -207,7 +207,7 @@ menubar > menu[open] {
     
     /*default titlebar on or off*/
     @media not (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar {
+        #TabsToolbar, #TabsToolbar-customization-target {
             display:none;
         }
     }
