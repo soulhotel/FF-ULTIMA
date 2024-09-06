@@ -8,7 +8,7 @@ user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
 /*titlebar*/
-user_pref("ultima.keep.titlebar", true);
+user_pref("ultima.keep.titlebar", false);
 
 /*tabs*/
 user_pref("ultima.tabs.size.xs", false);
