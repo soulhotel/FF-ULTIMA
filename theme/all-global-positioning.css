@@ -150,28 +150,30 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 
 /* bigger sidebar, 50vw = 50% of the screen width */
 /* great for view-tab-in-sidebar extensions */
-
 #sidebar-box {
     max-width: 50vw !important;
     min-width: 40px !important;
     width: 18em;
-} 
+}
+/* rework default spacing */
+#sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { & {
+      padding-block-end: 0 !important;
+      padding-inline-end: 0 !important;
+}}}
+/*custom margins*/
 #sidebar-box {
     margin: var(--uc-sb-margins) !important;
 }
-
-/* default left side < */
-#sidebar-box, #sidebar, #sidebar-header {
-    border-radius: var(--uc-sidebar-border-radius) !important;
-}
-
+/*smaller splitter, less visible*/
 #sidebar-splitter {
     background-color: transparent !important;
     border: transparent solid 0px !important;
     width: 2px !important;
 }
-
-
+/* custom border */
+#sidebar-box, #sidebar, #sidebar-header {
+    border-radius: var(--uc-sidebar-border-radius) !important;
+}
 #sidebar-header {
     border-top-left-radius: var(--uc-sidebar-border-radius) !important;
     border-top-right-radius: var(--uc-sidebar-border-radius) !important;
