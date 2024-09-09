@@ -70,7 +70,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --uc-tab-margins-left: 3.5px 0 5px 0px; /*placehold*/
     --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
         
-    --uc-sb-margins: 3.5px 0px 5px 0px;
+    --uc-sb-margins: 2px 0px 5px 1px;
     --uc-sb-margins-right: 3.5px 2.5px 5px 2.5px;
     --uc-tab-padding: 2px;
 
@@ -249,7 +249,7 @@ still should be way easier than the original verttab hack just gotta wait*/
         z-index: 0;
     }
     #sidebar-main:has([expanded]):not(:hover) + #sidebar-box {
-        margin-left:var(--uc-spacing-px2) !important;
+        margin-left:var(--uc-spacing-px5) !important;
     }
     #sidebar-main:has([expanded]):hover + #sidebar-box {
         margin-left:var(--uc-spacing-px0) !important;
