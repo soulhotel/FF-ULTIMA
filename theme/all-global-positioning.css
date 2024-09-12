@@ -183,6 +183,12 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     border-bottom-right-radius: var(--uc-sidebar-border-radius) !important;
 }
 
+#sidebar { @media (-moz-bool-pref: "sidebar.revamp") { & {
+      box-shadow: 0 2px 6px 0 light-dark(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8)) !important;
+      border: 0px solid var(--sidebar-border-color) !important;
+}}}
+
+/* Side bar tabs ----------------------------------------------------------------------*/
 
 /* TABS Side Bar */
 
