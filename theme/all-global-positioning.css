@@ -188,6 +188,10 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
       border: 0px solid var(--sidebar-border-color) !important;
 }}}
 
+#sidebar {
+    margin-top:-2px !important;
+}
+
 /* Side bar tabs ----------------------------------------------------------------------*/
 
 /* TABS Side Bar */
