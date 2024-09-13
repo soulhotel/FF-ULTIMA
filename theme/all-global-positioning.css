@@ -247,7 +247,7 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
 visual stutter and elements overlapping,
 most likely need to transform the new sidebar into a fixed element,
 still should be way easier than the original verttab hack just gotta wait*/
-
+/*
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
     #sidebar-main:has([expanded]) {
         transition: width 80ms linear 300ms !important;
@@ -265,7 +265,7 @@ still should be way easier than the original verttab hack just gotta wait*/
         margin-left:var(--uc-spacing-px0) !important;
     }
 }
-
+*/
 
 /* Title bar ----------------------------------------------------------------------*/
 
