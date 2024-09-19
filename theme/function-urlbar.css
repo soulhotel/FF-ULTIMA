@@ -1,0 +1,41 @@
+/*----------------------------------------------------------------
+- alternate styles for the URL Bar
+- user preference toggles for search suggestions, centered text, hiding buttons
+----------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.urlbar.suggestions") {
+
+  #urlbar .search-one-offs:not([hidden]) {
+    display:none !important;
+  }
+
+}
+@media (-moz-bool-pref: "ultima.urlbar.centered") {
+
+  #urlbar .urlbar-input-box {
+    text-align: center;
+  }  
+  #urlbar .urlbar-input {
+    text-overflow: ellipsis !important;
+    overflow: hidden;
+    white-space: nowrap; 
+  }
+
+}
+
+@media (-moz-bool-pref: "ultima.urlbar.hidebuttons") {
+
+  #urlbar #identity-box,
+  #urlbar #page-action-buttons,
+  #urlbar #tracking-protection-icon-container {
+    opacity: 0 !important;
+  }
+  #urlbar:hover #identity-box,
+  #urlbar:hover #page-action-buttons,
+  #urlbar:hover #tracking-protection-icon-container {
+    opacity: 1 !important;
+    transition: opacity 100ms ease !important;
+  }
+  
+}
+
