@@ -1,4 +1,6 @@
-/*This page is undergoing heavy modification due to Firefox v131 changes to the browser, any section marked with a (***) is an indicator of ongoing progression */
+/*This page is undergoing heavy modification due to Firefox v131 changes to the browser,
+sections marked below with a (***) will indicate any ongoing progression or mods pending completion
+due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature*/
 
 /*
 This file handles positioning of all main elements within the browser.
@@ -6,7 +8,6 @@ This file handles positioning of all main elements within the browser.
 [Index]
 ctrl+f to find a section:
 
-Global positioning (outdated)
 Global variables
 Compact spacing
 OS Window control margins
@@ -17,7 +18,7 @@ Browser Content
 Side bar ***
 Vertical Tabs ***
 Vertical Tabs settings ***
-
+Autohide
 */
 
 
@@ -128,6 +129,44 @@ Vertical Tabs settings ***
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }
 
+/* until firefox removes the leftover title bar taking up space,
+when off hide titlebar, accessible via alt key or toggling the menubar on,
+when on merge the titlebar (window controls) into the navigation bar */
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    /*when on, merge window controls into the nav bar*/
+    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar .toolbar-items {
+            opacity:0;
+            pointer-events: none;
+        }
+        #titlebar {
+            height:var(--uc-navbar-height) !important;
+            width:100vw;
+            position: absolute;
+            top:0px;
+            right:0px;
+            z-index:999;
+        }
+        #titlebar:has([inactive="true"]){
+            /* for menu bar visibility */
+            z-index:997 !important;}
+        #nav-bar {
+            z-index:998 !important;
+        }
+    }
+    /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
+    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar, #TabsToolbar-customization-target {
+            display: none !important;
+        }
+        #nav-bar {
+            margin-left:0px !important;
+            margin-right: 0px !important;
+        }
+    }
+}
+
 
 /* Title bar ----------------------------------------------------------------------*/
 
@@ -144,8 +183,11 @@ Vertical Tabs settings ***
 :root:where([tabsintitlebar]){--inactive-titlebar-opacity: 1 !important;--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
 
 
-
 /* Nav bar ------------------------------------------------------------------------*/
+
+#nav-bar {
+    min-height:var(--uc-navbar-height) !important;
+}    
 
 #nav-bar .toolbarbutton-1 {
     margin-top:4.5px !important;
@@ -179,7 +221,6 @@ menubar > menu[open] {
 
 
 /* Browser Content ----------------------------------------------------------------------*/
-
 
 /* remove default borders and shadows v131 */
 
@@ -251,7 +292,7 @@ menubar > menu[open] {
     margin-top:-2px !important;
 }
 
-/* Side bar tabs ----------------------------------------------------------------------*/
+/* Vertical Tabs ----------------------------------------------------------------------*/
 
 /* TABS Side Bar */
 
@@ -278,50 +319,14 @@ menubar > menu[open] {
     margin-inline: 3px -5px !important;;
 }
 
-/* Vertical Tabs settings *** -----------------------------------------------------------*/
-
-/* Keep titlebar setting ------------------------------------------------*/
-/* until firefox removes the leftover title bar taking up space,
-when off hide titlebar, accessible via alt key or toggling the menubar on,
-when on merge the titlebar (window controls) into the navigation bar */
-
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-    /*toolbar spacing correction*/
-    #nav-bar {
-        min-height:var(--uc-navbar-height) !important;
-    }    
-    /*default titlebar on or off*/
-    /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
-    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar, #TabsToolbar-customization-target {
-            display: none !important;
-        }
-    }    
-    @media (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar .toolbar-items {
-            opacity:0;
-            pointer-events: none;
-        }
-        #titlebar {
-            height:var(--uc-navbar-height) !important;
-            width:100vw;
-            position: absolute;
-            top:0px;
-            right:0px;
-            z-index:999;
-        }
-        #titlebar:has([inactive="true"]){
-            /* for menu bar visibility */
-            z-index:997 !important;}
-        #nav-bar {
-            z-index:998 !important;
-        }
-    }
-}
-
 #sidebar-main:has([expanded]) .tab-label-container {
   margin-left: 10px !important;
 }
+
+
+/* Vertical Tabs settings *** -----------------------------------------------------------*/
+
+
 
 /*Autohide implementation ------------------------------------------------------------*/
 
