@@ -186,19 +186,18 @@ menubar > menu[open] {
     border-inline-start: 0 !important;
     box-shadow: none !important;
 }}}
-#main-window:not([lwtheme]) {
+#main-window {
     & #tabbrowser-tabpanels browser[type] {
         margin: var(--uc-content-margins) !important;
-        border-radius: var(--uc-content-border-radius);
+        border-radius: var(--uc-content-border-radius) !important;
         outline: 4px solid var(--toolbar-bgcolor) !important;
     }          
-}       
+}
 #main-window[lwtheme] {        
     & #tabbrowser-tabpanels browser[type] {
-        margin: var(--uc-content-margins) !important;
-        outline: 4px solid var(--lwt-accent-color);
+        outline: 4px solid var(--lwt-accent-color) !important;
         @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 3px solid var(--arrowpanel-background);
+            outline: 3px solid var(--arrowpanel-background) !important;
         }
     }
 }
