@@ -27,6 +27,7 @@
 - `ultima.sidebery.autohide` - show/hide sidebery on hover, keep all other sidebars expanded
 - `ultima.sidebar.autohide` - show/hide all sidebars on hover
 - `ultima.sidebar.longer` - when using autohide the sidebar will expand to a longer/bigger 375px view
+- `ultima.spacing.compact` - setting to remove rounded borders from window, and reduce spacing between panels, this replaces and improves on xstyle.squared and xstyle.squished
 - `ultima.theme.extensions` - theme extension menu
 - `ultima.urlbar.suggestions` - remove urlbar suggestions clutter
 - `ultima.urlbar.centered` - center urlbar text
