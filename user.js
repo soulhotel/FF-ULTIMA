@@ -8,18 +8,15 @@ user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
 /*titlebar*/
-user_pref("ultima.keep.titlebar", false);
+user_pref("ultima.keep.titlebar", true);
 
 /*tabs*/
-/*user_pref("ultima.tabs.size.xs", false);
-user_pref("ultima.tabs.size.s", false);
-user_pref("ultima.tabs.size.l", true);*/
 user_pref("ultima.tabs.autohide", false);
 user_pref("ultima.tabs.disabled", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
-user_pref("ultima.sidebery.autohide", false);
+user_pref("ultima.sidebery.autohide", true);
 user_pref("ultima.sidebar.hidden", false);
 user_pref("ultima.sidebar.longer", true);
 
@@ -33,12 +30,12 @@ user_pref("ultima.urlbar.hidebuttons", false);
 user_pref("ultima.xstyle.urlbar", false);
 
 /*alternate styles*/
-/*user_pref("ultima.xstyle.containertabs.i", false);
+user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.lwtheme", false);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
-user_pref("ultima.xstyle.private", false);*/
+user_pref("ultima.xstyle.private", false);
 
 /*specific OS overrides (like titlebar buttons)*/
 /*user_pref("ultima.OS.kde", true);
