@@ -5,12 +5,7 @@ Need Help? https://github.com/soulhotel/FF-ULTIMA/wiki
 */
 
 @import url(theme/all-global-positioning.css);
-
 @import url(theme/all-color-schemes.css);
-
-/*@import url(theme/position-tabs.css);*/
-@import url(theme/position-findbar.css);
-/*@import url(theme/position-window-controls.css);*/
 
 @import url(theme/function-sidebar-autohide.css);
 @import url(theme/function-sidebery-autohide.css);
@@ -22,30 +17,6 @@ Need Help? https://github.com/soulhotel/FF-ULTIMA/wiki
 @import url(theme/theme-xstyle.css);
 @import url(theme/theme-context-menu.css);
 @import url(theme/theme-statuspanel.css);
+@import url(theme/theme-findbar.css);
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
-/*
-@import url(theme/override-linux.css);
-@import url(theme/override-mac.css);*/
-
-
-
-        
-#main-window:not([lwtheme]) {
-    & #tabbrowser-tabpanels browser[type] {
-        outline: 0px solid var(--toolbar-bgcolor);
-    }          
-}        
-        
-        
-        
-        
-#main-window[lwtheme] {        
-    & #tabbrowser-tabpanels browser[type] {
-        margin-top: 0px !important; /*new*/
-        outline: 0px solid var(--lwt-accent-color);
-        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 0px solid var(--arrowpanel-background);
-        }
-    }
-}
