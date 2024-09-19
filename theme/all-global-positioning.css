@@ -129,44 +129,6 @@ Autohide
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }
 
-/* until firefox removes the leftover title bar taking up space,
-when off hide titlebar, accessible via alt key or toggling the menubar on,
-when on merge the titlebar (window controls) into the navigation bar */
-
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-    /*when on, merge window controls into the nav bar*/
-    @media (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar .toolbar-items {
-            opacity:0;
-            pointer-events: none;
-        }
-        #titlebar {
-            height:var(--uc-navbar-height) !important;
-            width:100vw;
-            position: absolute;
-            top:0px;
-            right:0px;
-            z-index:999;
-        }
-        #titlebar:has([inactive="true"]){
-            /* for menu bar visibility */
-            z-index:997 !important;}
-        #nav-bar {
-            z-index:998 !important;
-        }
-    }
-    /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
-    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar, #TabsToolbar-customization-target {
-            display: none !important;
-        }
-        #nav-bar {
-            margin-left:0px !important;
-            margin-right: 0px !important;
-        }
-    }
-}
-
 
 /* Title bar ----------------------------------------------------------------------*/
 
@@ -313,10 +275,10 @@ menubar > menu[open] {
 }
 
 #vertical-tabs-newtab-button {
-    height:25px !important;
+    height:40px !important;
     border-radius:30px !important;
     background:red !important;
-    margin-inline: 3px -5px !important;;
+    margin-inline: 3px 3px !important;;
 }
 
 #sidebar-main:has([expanded]) .tab-label-container {
@@ -326,6 +288,94 @@ menubar > menu[open] {
 
 /* Vertical Tabs settings *** -----------------------------------------------------------*/
 
+/* Disable tabs completely for sidebery-like setups */
+
+@media (-moz-bool-pref: "ultima.tabs.disabled") {
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main:has([expanded=""]) {
+            display: none !important;
+        }
+    }
+    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main:has([expanded=""]) {
+            display: none !important;
+        }            
+        #TabsToolbar .toolbar-items {
+            opacity:0;
+            pointer-events: none;
+        }
+        #titlebar {
+            height:var(--uc-navbar-height) !important; width:100vw;
+            position: absolute;
+            top:0px;right:0px;z-index:999;
+        }
+        #titlebar:has([inactive="true"]) {
+            z-index:997 !important;
+        }
+        #nav-bar {
+            z-index:998 !important;
+        }
+        @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+            #nav-bar {
+                margin-left:0px !important;
+                margin-right: 0px !important;
+            }
+        }
+    }
+}
+        
+@media not (-moz-bool-pref: "ultima.tabs.disabled") {
+@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+        #nav-bar {
+            margin-left:0px !important;
+            margin-right: 0px !important;
+        }
+    }
+}
+}
+
+
+/* keep titlebar window controls */
+
+/* until firefox removes the leftover title bar taking up space,
+when off hide titlebar, accessible via alt key or toggling the menubar on,
+when on merge the titlebar (window controls) into the navigation bar */
+
+/* when using vert tabs */
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    /*when on, merge window controls into the nav bar*/
+    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar .toolbar-items {
+            opacity:0;
+            pointer-events: none;
+        }
+        #titlebar {
+            height:var(--uc-navbar-height) !important;
+            width:100vw;
+            position: absolute;
+            top:0px;
+            right:0px;
+            z-index:999;
+        }
+        #titlebar:has([inactive="true"]){
+            /* for menu bar visibility */
+            z-index:997 !important;}
+        #nav-bar {
+            z-index:998 !important;
+        }
+    }
+    /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
+    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar, #TabsToolbar-customization-target {
+            display: none !important;
+        }
+        #nav-bar {
+            margin-left:0px !important;
+            margin-right: 0px !important;
+        }
+    }
+}
 
 
 /*Autohide implementation ------------------------------------------------------------*/
