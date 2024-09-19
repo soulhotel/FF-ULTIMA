@@ -5,7 +5,7 @@
         .showPrivate {
             display: none !important;
         }*/
-        .logo-and-wordmark, search-handoff-button {
+        .logo-and-wordmark, .info-border {
             display: none !important;
         }
         .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
