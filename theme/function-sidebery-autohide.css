@@ -14,6 +14,12 @@
 }
 
 @media (-moz-bool-pref: "ultima.sidebery.autohide") {
+    @media (-moz-bool-pref: "ultima.sidebar.longer") {
+        #sidebar-box {--uc-sidebar-hover-width: 375px !important;} 
+    }
+}
+
+@media (-moz-bool-pref: "ultima.sidebery.autohide") {
     :root {
         --bg: #1a1b26;
     }
