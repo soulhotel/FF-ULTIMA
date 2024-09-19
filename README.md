@@ -1,5 +1,3 @@
-# :warning: Firefox Nightly 131 build - WIP - updating as Firefox devs make progress
-
 # <p align="center"> FF ULTIMA... </p>
 
 ###### <p align="center">. . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).</p>
@@ -34,7 +32,7 @@
 
 ## Installation
 
-###### 🚨 Do not skip the installation instructions! Firefox v120+ Required. 🚨
+###### 🚨 Do not skip the installation instructions! Firefox v131+ Required. 🚨
 
 <details>
 <summary>Need help finding your Profile Folder? (Click Me)</summary>
