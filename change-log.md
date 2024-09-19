@@ -26,7 +26,7 @@
 - `ultima.tabs.disabled` - ongoing development, to hide tabs completely (for sidebery setups)
 - `ultima.sidebery.autohide` - show/hide sidebery on hover, keep all other sidebars expanded
 - `ultima.sidebar.autohide` - show/hide all sidebars on hover
-- `ultima.sidebar.longer` - when using autohide the sidebar will expand to a longer/bigger 400px view
+- `ultima.sidebar.longer` - when using autohide the sidebar will expand to a longer/bigger 375px view
 - `ultima.theme.extensions` - theme extension menu
 - `ultima.urlbar.suggestions` - remove urlbar suggestions clutter
 - `ultima.urlbar.centered` - center urlbar text
