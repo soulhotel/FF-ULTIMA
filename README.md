@@ -1,3 +1,6 @@
+>[!WARNING]
+> This branch contains the source for FF Ultima pre Firefox's 131 Version Update. Requires version 120 - 130 to function.
+
 # <p align="center"> FF ULTIMA... </p>
 
 ###### <p align="center">. . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).</p>
