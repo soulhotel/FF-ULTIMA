@@ -15,7 +15,7 @@
 
 @media (-moz-bool-pref: "ultima.sidebery.autohide") {
     @media (-moz-bool-pref: "ultima.sidebar.longer") {
-        #sidebar-box {--uc-sidebar-hover-width: 375px !important;} 
+        #sidebar-box {--uc-sidebar-hover-width: 400px !important;} 
     }
 }
 
