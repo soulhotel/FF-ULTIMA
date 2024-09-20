@@ -43,7 +43,7 @@ Autohide
     --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
         
     --uc-sb-margins: 2px 0px 5px 1px;
-    --uc-sb-margins-right: 3.5px 2.5px 5px 2.5px;
+    --uc-sb-margins-right: 2px 1px 5px 0px;
     --uc-tab-padding: 2px;
     
     /* OS window controls margins */
@@ -222,9 +222,17 @@ menubar > menu[open] {
       padding-block-end: 0 !important;
       padding-inline-end: 0 !important;
 }}}
+
+#sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { &[positionend] {
+      padding-inline-end: 0 !important;
+      padding-inline-start: 0 !important;
+}}}
 /*custom margins*/
 #sidebar-box {
     margin: var(--uc-sb-margins) !important;
+}
+#sidebar-box[positionend] {
+    margin: var(--uc-sb-margins-right) !important;
 }
 /*smaller splitter, less visible*/
 #sidebar-splitter {
@@ -322,6 +330,14 @@ menubar > menu[open] {
             }
         }
     }
+    @media not (-moz-bool-pref: "ultima.spacing.compact") {
+        #sidebar-main:has([expanded=""]) + #sidebar-box[checked="true"] {
+            margin-left:5px !important;
+            }
+        #sidebar-main:has([expanded=""]) + #sidebar-box[positionend="true"] {
+            margin-inline:0 5px !important;
+            }
+        }
 }
         
 @media not (-moz-bool-pref: "ultima.tabs.disabled") {
