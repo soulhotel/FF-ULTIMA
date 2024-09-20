@@ -21,11 +21,11 @@
 
         /*wallpaper for dark mode*/
         @media (prefers-color-scheme: dark) {
-            body{background-image: url("pic/private-dark.png") !important;}
+            body{background-image: url("pic/private.png") !important;}
         }
         /*wallpaper for light mode*/
         @media (prefers-color-scheme: light) {
-            body{background-image: url("pic/gruvbox-l.png") !important;}
+            body{background-image: url("pic/private.png") !important;}
         }  
     }
 }
