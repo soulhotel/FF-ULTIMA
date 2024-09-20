@@ -11,11 +11,13 @@
 ###### ⭐ FF Ultima [Catppuccin-Mocha Edition](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/catppuccin-mocha/readme.md) by Draff (@ItsLogic) (promo)
 
 >[!WARNING]
-> It's happening! Firefox developers have officially introduced Vertical Tabs!
+> It's happening! Firefox developers have [officially introduced Vertical Tabs](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/63231#M22243)!
 >
-> You may or may not have noticed, but many custom themes that target tabs have been broken recently, this is because - as of Firefox version 131, Firefox has made their own vertical tabs implementation. Firefox's implementation is still barebones, the spacing is extreme, autohiding isn't a thing, etc, and most importantly.. This forces a bit of a reset onto the FF Ultima theme. But as the developers continue to make progress, the theme will only improve, while restoring many of the lost features.
+> You may or may not have noticed, but many custom themes that target tabs have broken recently. This is because - as of Firefox version 131, Firefox has made their own vertical tabs implementation. Firefox's implementation is missing a lot, the spacing is extreme.. auto-hiding tabs isn't a thing, etc, etc, but most importantly.. This forces a bit of a reset onto the FF Ultima theme.
 >
-> Returning Users will need to delete some of the old ultima settings, or just make a new firefox profile, and use your user.js file to get the new settings. Please read the change log!!
+> As the developers continue to make progress, the theme will only improve, while restoring many of the lost features.
+>
+> Returning Users will need to delete some of the old ultima settings, or just make a new firefox profile, and use your user.js file to get the new settings. Read the change log!
 
 ### Change Log:
 - Theme size reduced to `12mb`
@@ -26,7 +28,7 @@
 - `ultima.tabs.disabled` - ongoing development, to hide tabs completely (for sidebery setups)
 - `ultima.sidebery.autohide` - show/hide sidebery on hover, keep all other sidebars expanded
 - `ultima.sidebar.autohide` - show/hide all sidebars on hover
-- `ultima.sidebar.longer` - when using autohide the sidebar will expand to a longer/bigger 375px view
+- `ultima.sidebar.longer` - when using autohide the sidebar will expand to a longer/bigger 400px view
 - `ultima.spacing.compact` - setting to remove rounded borders from window, and reduce spacing between panels, this replaces and improves on xstyle.squared and xstyle.squished
 - `ultima.theme.extensions` - theme extension menu
 - `ultima.urlbar.suggestions` - remove urlbar suggestions clutter
@@ -39,6 +41,7 @@
 - `qol` Youtube styling - notification badge changed from yellow to default red
 - `qol` override-styles.css file has been reformatted to `theme-xstyle.css` organizing all code/functions that relate to alternative styles (ultima.xstyle)
 - `qol` new tab wallpapers have been enabled by default, post Firefox v131, this feature conflicted with the new tab wallpapers toggle in about:config
+
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
@@ -52,7 +55,3 @@
 
 ![Screenshot from 2024-07-28 20-42-09](https://github.com/user-attachments/assets/481937e4-7653-407c-bba8-69fb00b201f1)
 -->
-
-
-
-
