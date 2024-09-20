@@ -15,17 +15,29 @@
             backdrop-filter: blur(33px);
             background-blend-mode: overlay;
         }
+        .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
+            background: transparent !important;
         /*replace 'pic/private-dark.png' source for custom picture*/
         /*replace with 'pic.png` if the picture is in chrome folder*/
         /*replace with 'example/pic.png' if the picture is in a folder within the chrome folder*/
 
-        /*wallpaper for dark mode*/
-        @media (prefers-color-scheme: dark) {
-            body{background-image: url("pic/private.png") !important;}
+/*wallpaper for dark mode*/
+    @media (prefers-color-scheme: dark) {
+        body{
+            background-image: url("pic/private.png") !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
         }
-        /*wallpaper for light mode*/
-        @media (prefers-color-scheme: light) {
-            body{background-image: url("pic/private.png") !important;}
-        }  
+    }
+    /*wallpaper for light mode*/
+    @media (prefers-color-scheme: light) {
+        body{
+            background-image: url("pic/private.png") !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+	    background-size: cover !important;
+        }
+    }
     }
 }
