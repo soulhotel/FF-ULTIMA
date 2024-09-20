@@ -25,9 +25,7 @@
 >
 - Multiple Options - for Tab Size, Autohiding, Spacing, Tabs on Top/Right, OS compatibility [and More](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings)
 >
-- The Mini Button Bar - pin/unpin up to 15 buttons, drag and drop functional. Works with the following buttons:
-
-![prevautohide](theme/pic/assets/prevmini-bar.png)
+- Feature List todo
 
 
 ## Installation
