@@ -118,16 +118,30 @@ Autohide
 
 /*windows*/
 @media (-moz-platform: windows) {
-    :root, body, * { --uc-window-control-margins: 96px;}
+    :root, body, * { --uc-window-control-margins: 120px;}
     #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
 }
 
-/*linux*/
+/*linux - kde spacing*/
 @media (-moz-platform: linux), (-moz-os-version: linux) {
     :root, body, * { --uc-window-control-margins: 86px;}
     #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }
+
+/*linux - gnome & cinnamon spacing*/
+@media (-moz-bool-pref: "ultima.fix.gnome.titlebar") { @media (-moz-platform: linux), (-moz-os-version: linux) {
+    :root, body, * { --uc-window-control-margins: 108px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
+}}
+
+/*linux - gnome & cinnamon spacing*/
+@media (-moz-bool-pref: "ultima.fix.gnome.titlebar.small") { @media (-moz-platform: linux), (-moz-os-version: linux) {
+    :root, body, * { --uc-window-control-margins: 44px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
+}}
 
 
 /* Title bar ----------------------------------------------------------------------*/
