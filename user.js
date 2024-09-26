@@ -9,6 +9,7 @@ user_pref("user.theme.dark.midnight", false);
 
 /*titlebar*/
 user_pref("ultima.fix.gnome.titlebar", false);
+user_pref("ultima.fix.gnome.titlebar.small", false);
 user_pref("ultima.keep.titlebar", true);
 
 /*tabs*/
