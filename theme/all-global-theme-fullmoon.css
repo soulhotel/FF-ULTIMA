@@ -159,8 +159,11 @@ Global styling - Icons
     & .tab-label-container[selected] {
         color: var(--uc-accent-v) !important;
     }
+    & .tab-background[selected] {
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
+    }
     /* pinned tabs style */
-    .tab-label-container[pinned] {
+    & .tab-label-container[pinned] {
         color: var(--uc-accent-i) !important;
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
