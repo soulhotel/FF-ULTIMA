@@ -41,7 +41,10 @@
 - `qol` Youtube styling - notification badge changed from yellow to default red
 - `qol` override-styles.css file has been reformatted to `theme-xstyle.css` organizing all code/functions that relate to alternative styles (ultima.xstyle)
 - `qol` new tab wallpapers have been enabled by default, post Firefox v131, this feature conflicted with the new tab wallpapers toggle in about:config
-
+- `new`|`fix` vertical tab end margin spacing reduced
+- `new`|`fix` current/selected tab box shadow added for improved visibility
+- `new`|`fix` titlebar/navbar spacing improved when window width reaches smaller sizes
+  
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
