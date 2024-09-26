@@ -176,6 +176,10 @@ Autohide
     width: 120px !important;
   }
 }
+@media (max-width: 600px) {
+  #unified-extensions-button, #PanelUI-button {display:none}
+}
+
 
 /* Menu bar -----------------------------------------------------------------------*/
 
