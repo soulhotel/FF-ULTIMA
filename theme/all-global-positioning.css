@@ -289,6 +289,11 @@ menubar > menu[open] {
 
 /* Vertical Tabs ----------------------------------------------------------------------*/
 
+#vertical-tabs { &[visible] {
+    margin-inline-end: -8px !important;
+}}
+
+
 /* TABS Side Bar */
 
 #sidebar-main {
