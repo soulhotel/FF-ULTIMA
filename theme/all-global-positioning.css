@@ -143,7 +143,6 @@ Autohide
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }}
 
-
 /* Title bar ----------------------------------------------------------------------*/
 
 /*titlebar corrections*/
@@ -169,6 +168,14 @@ Autohide
     margin-top:4.5px !important;
 }
 
+/*URL bar*/
+
+/*fix overlapping buttons (spacing) - when the Browser falls under a certain width*/
+@media (max-width: 700px) {
+  #nav-bar[downloadsbuttonshown][unifiedextensionsbuttonshown] #urlbar-container {
+    width: 120px !important;
+  }
+}
 
 /* Menu bar -----------------------------------------------------------------------*/
 
@@ -433,5 +440,3 @@ still should be way easier than the original verttab hack just gotta wait*/
     }
 }
 */
-
-
