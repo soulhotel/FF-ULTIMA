@@ -216,6 +216,12 @@ menubar > menu[open] {
     border-inline-start: 0 !important;
     box-shadow: none !important;
 }}}
+#tabbrowser-tabbox { @media (-moz-bool-pref: "sidebar.revamp") { {
+    outline: 0.01px solid var(--chrome-content-separator-color);
+    box-shadow: var(--content-area-shadow);
+}}}
+
+/* use my custom outline border */
 #main-window {
     & #tabbrowser-tabpanels browser[type] {
         margin: var(--uc-content-margins) !important;
