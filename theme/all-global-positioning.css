@@ -314,8 +314,7 @@ menubar > menu[open] {
 
 #vertical-tabs-newtab-button {
     height:40px !important;
-    border-radius:30px !important;
-    background:red !important;
+    border-radius:10px !important;
     margin-inline: 3px 3px !important;;
 }
 
