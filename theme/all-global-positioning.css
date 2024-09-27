@@ -218,7 +218,7 @@ menubar > menu[open] {
 }}}
 #tabbrowser-tabbox { @media (-moz-bool-pref: "sidebar.revamp") { {
     outline: 0px solid var(--chrome-content-separator-color) !important;
-    box-shadow: transparent !important;
+    box-shadow: none !important;
 }}}
 
 /* use my custom outline border */
