@@ -22,8 +22,9 @@ user_pref("ultima.sidebery.autohide", true);
 user_pref("ultima.sidebar.hidden", false);
 user_pref("ultima.sidebar.longer", true);
 
-/*extension theme on-off*/
+/*extra theming*/
 user_pref("ultima.theme.extensions", true);
+user_pref("ultima.theme.color.swap", true);
 
 /*url bar*/
 user_pref("ultima.urlbar.suggestions", true);
