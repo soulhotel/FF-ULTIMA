@@ -8,6 +8,8 @@ URL Bar
 theme colors
 pinned tabs
 container tabs
+swap theme colors
+
 
 ----------------------------------------------------------*/
 
@@ -112,3 +114,15 @@ container tabs
   opacity: 0.7;
 }
 } 
+
+/* ------------------------------------------------------------------------------------ */
+/*swap theme colors*/
+
+@media (-moz-bool-pref: "ultima.theme.color.swap") {
+
+  #main-window[lwtheme] #unified-extensions-button {
+    list-style-image: url("icons/extensions.svg") !important;
+    fill: var(--lwt-text-color) !important;
+  }
+    
+}
