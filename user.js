@@ -25,6 +25,7 @@ user_pref("ultima.sidebar.longer", true);
 /*extra theming*/
 user_pref("ultima.theme.extensions", true);
 user_pref("ultima.theme.color.swap", true);
+user_pref("ultima.theme.icons", true);
 
 /*url bar*/
 user_pref("ultima.urlbar.suggestions", true);
