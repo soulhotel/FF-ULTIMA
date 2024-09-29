@@ -120,9 +120,15 @@ swap theme colors
 
 @media (-moz-bool-pref: "ultima.theme.color.swap") {
 
-  #main-window[lwtheme] #unified-extensions-button {
-    list-style-image: url("icons/extensions.svg") !important;
-    fill: var(--lwt-text-color) !important;
-  }
-    
+    #main-window[lwtheme] #unified-extensions-button {
+        list-style-image: url("icons/extensions.svg") !important;
+        fill: var(--lwt-text-color) !important;
+    }
+    #main-window[lwtheme] body {
+        background: var(--arrowpanel-background) !important;
+    }    
+    #main-window[lwtheme] #tabbrowser-tabpanels browser[type] {
+        outline: 3px solid var(--arrowpanel-background) !important;
+    }
+  
 }
