@@ -2,11 +2,11 @@
 sections marked below with a (***) will indicate any ongoing progression or mods pending completion
 due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature*/
 
-/*
-This file handles positioning of all main elements within the browser.
+/*----------------------------------------------------------
 
-[Index]
-ctrl+f to find a section:
+this file handles positioning of all main elements within the browser.
+
+[Index: ctrl+f a line below to find a section]
 
 Global variables
 Compact spacing
@@ -19,7 +19,8 @@ Side bar ***
 Vertical Tabs ***
 Vertical Tabs settings ***
 Autohide
-*/
+
+----------------------------------------------------------*/
 
 
 /* Global variables for quick modifications ------------------------------------------*/
