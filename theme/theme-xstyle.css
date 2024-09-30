@@ -8,8 +8,6 @@ URL Bar
 theme colors
 pinned tabs
 container tabs
-swap theme colors
-
 
 ----------------------------------------------------------*/
 
@@ -29,23 +27,28 @@ swap theme colors
 
 
 /* ------------------------------------------------------------------------------------ */
-/*alternative styling for theme colors by rearranging current color palette/varialbes*/
+/*alternative styling for theme colors by rearranging current color palette/variables*/
 
-@media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-  
-  #main-window:not([lwtheme]) {
-    & #sidebar-header {
-        background-color: var(--uc-ultima-window) !important;
+@media (-moz-bool-pref: "ultima.theme.color.swap") {
+
+    #main-window[lwtheme] #unified-extensions-button {
+        list-style-image: url("icons/extensions.svg") !important;
+        fill: var(--lwt-text-color) !important;
     }
-    & #sidebar {
-        background: var(--uc-ultima-window) !important;
+    #main-window[lwtheme] body {
+        background: var(--arrowpanel-background) !important;
+    }    
+    #main-window[lwtheme] #tabbrowser-tabpanels browser[type] {
+        margin-top:4px !important;
+        outline: 4px solid var(--arrowpanel-background) !important;
     }
-    @media (-moz-bool-pref: "ultima.tabs.vertical") {
-        & #TabsToolbar-customization-target, & #tabbrowser-arrowscrollbox {
+    /*
+    #main-window:not([lwtheme]) {
+        #sidebar {
             background: var(--uc-ultima-window) !important;
         }
     }
-  }   
+    */
 }
 
 
@@ -66,6 +69,7 @@ swap theme colors
     }
   }
 }
+
 
 /* ------------------------------------------------------------------------------------ */
 /*alternative styling for container tabs*/
@@ -115,20 +119,16 @@ swap theme colors
 }
 } 
 
+
 /* ------------------------------------------------------------------------------------ */
-/*swap theme colors*/
 
-@media (-moz-bool-pref: "ultima.theme.color.swap") {
+/* ------------------------------------------------------------------------------------ */
 
-    #main-window[lwtheme] #unified-extensions-button {
-        list-style-image: url("icons/extensions.svg") !important;
-        fill: var(--lwt-text-color) !important;
-    }
-    #main-window[lwtheme] body {
-        background: var(--arrowpanel-background) !important;
-    }    
-    #main-window[lwtheme] #tabbrowser-tabpanels browser[type] {
-        outline: 3px solid var(--arrowpanel-background) !important;
-    }
-  
-}
+/* ------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------ */
+
