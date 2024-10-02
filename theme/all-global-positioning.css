@@ -157,7 +157,11 @@ Autohide
 #main-window[lwtheme] .titlebar-button:hover { fill: var(--toolbarbutton-icon-fill) !important; }
 :root:where([tabsintitlebar]){--inactive-titlebar-opacity: 1 !important;--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
 
-
+@media (-moz-bool-pref: "ultima.xstyle.disable.alltabsbutton") {
+    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
+    	display: none !important;
+    }
+}
 /* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar {
