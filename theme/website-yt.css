@@ -56,9 +56,11 @@ html[dark] .sbsb_a {
 
 /*--notifications badge color now yellow--*/
 
+/*
 .yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
     background-color: #fffd80 !important;
     color: #2b2b2b !important;
+*/
 } .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
     border: 0px solid rgba(0,0,0,0.8) !important;
 }

@@ -1,0 +1,41 @@
+@-moz-document url(about:privatebrowsing) {
+    @media (-moz-bool-pref: "ultima.xstyle.private"){
+    
+        /*hide private browsing tab info*//*
+        .showPrivate {
+            display: none !important;
+        }*/
+        .logo-and-wordmark, .info-border {
+            display: none !important;
+        }
+        .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
+            filter: saturate(140%) !important;
+            border-radius: 18px !important;
+            box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+            backdrop-filter: blur(33px);
+            background-blend-mode: overlay;
+        }
+        .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
+            background: transparent !important;
+        }
+
+        /*wallpaper for dark mode*/
+        @media (prefers-color-scheme: dark) {
+            body{
+                background-image: url("pic/private.png") !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+            }
+        }
+        /*wallpaper for light mode*/
+        @media (prefers-color-scheme: light) {
+            body{
+                background-image: url("pic/private.png") !important;
+                background-position: center !important;
+                background-repeat: no-repeat !important;
+            background-size: cover !important;
+            }
+        }
+    }
+}

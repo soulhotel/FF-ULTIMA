@@ -30,8 +30,8 @@ Global styling - Icons
   --uc-background-solid: rgba(28, 27, 34, 1);
   --uc-background-secondary: rgb(35, 35, 42);
   --uc-transparent: rgba(0,0,0,0);
-  --uc-selected: rgba(0,0,0,0.65);
-  --uc-active: rgba(0,0,0,0.75);
+  --uc-selected: rgba(25, 25, 35, 0.8);
+  --uc-active: rgb(35, 35, 42);
   --uc-text: rgb(255, 255, 255);
   --uc-panel-border: rgba(25, 25, 25, 1);
   --uc-panel-border-ii: rgba(45, 45, 45, 0.5);
@@ -145,18 +145,11 @@ Global styling - Icons
     & .browserStack { 
         background: var(--uc-transparent) !important; 
     }
-    & #tabbrowser-tabpanels browser[type] {
-        outline: 3px solid var(--toolbar-bgcolor);
-    }
        
     /* tabs container */
     & #tabbrowser-tabs {
         background: transparent;
         --tab-loading-fill: var(--uc-accent-i) !important;
-    }
-    & #TabsToolbar-customization-target {
-        box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-        background: var(--uc-background-secondary);
     }
     /*tabs styling - for unselected and unpinned*/
     & .tab-label-container:not([selected=""],[pinned]) {
@@ -167,8 +160,11 @@ Global styling - Icons
         color: var(--uc-accent-v) !important;
     }
     /* pinned tabs style */
-    .tab-label-container[pinned] {
+    & .tab-label-container[pinned] {
         color: var(--uc-accent-i) !important;
+    }
+    & .tab-background[selected] {
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
@@ -320,13 +316,6 @@ Global styling - Icons
     }
     & .browserStack { 
         background: var(--uc-transparent) !important; 
-    }
-    & #tabbrowser-tabpanels browser[type] {
-        margin-top: 2px !important; /*new*/
-        outline: 3px solid var(--lwt-accent-color);
-        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 3px solid var(--arrowpanel-background);
-        }
     }    
     
     /* side bar*/
@@ -530,36 +519,40 @@ splitter {@media (-moz-platform: windows) { & {
     
 /* Global styling - Icons --------------==========----------------------------------*/
 
-/*--extension menu--*/
-#main-window:not([lwtheme]) #unified-extensions-button {
-  list-style-image: url("icons/extensions.svg") !important;
-  fill: var(--toolbarbutton-icon-fill) !important;
-}
-#main-window[lwtheme] #unified-extensions-button {
-  list-style-image: url("icons/extensions.svg") !important;
-  fill: var(--lwt-accent-color) !important;
-}
-/*--bookmarks folder icon--*/
-.bookmark-item[container=true] {
-  list-style-image: url("icons/bm.png") !important;
-}
-/*--ublock on--*/
-#ublock0_raymondhill_net-BAP image{
-  list-style-image: url("icons/ubon.png") !important;
-}
-/*--ublock off--*/
-#ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
-  list-style-image: url("icons/uboff.png") !important;
-}
-#forward-button image{
-  list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
-  stroke: var(--uc-accent-iii) !important;
-}
-#back-button image{
-  list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
-  stroke: var(--uc-accent-iii) !important;
-}
+@media (-moz-bool-pref: "ultima.theme.icons") {
+    
+    /*--extension menu--*/
+    #main-window:not([lwtheme]) #unified-extensions-button {
+      list-style-image: url("icons/extensions.svg") !important;
+      fill: var(--toolbarbutton-icon-fill) !important;
+    }
+    #main-window[lwtheme] #unified-extensions-button {
+      list-style-image: url("icons/extensions.svg") !important;
+      fill: var(--lwt-accent-color) !important;
+    }
+    /*--bookmarks folder icon--*/
+    .bookmark-item[container=true] {
+      list-style-image: url("icons/bm.png") !important;
+    }
+    /*--ublock on--*/
+    #ublock0_raymondhill_net-BAP image{
+      list-style-image: url("icons/ubon.png") !important;
+    }
+    /*--ublock off--*/
+    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
+      list-style-image: url("icons/uboff.png") !important;
+    }
+    #forward-button image{
+      list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+      stroke: var(--uc-accent-iii) !important;
+    }
+    #back-button image{
+      list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+      stroke: var(--uc-accent-iii) !important;
+    }
 
+}    
+    
 /*--notification badges--*/
 .toolbarbutton-badge {
   background-color: rgba(0,0,0,0.3) !important;

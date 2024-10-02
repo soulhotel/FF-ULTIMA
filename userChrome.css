@@ -1,36 +1,22 @@
 /* MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE */
 
 /*  
-Change tab size?
-Change autohide option?
-Want to use sidebery instead? + More.
-Come to the modification page: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/Modification.md
+Need Help? https://github.com/soulhotel/FF-ULTIMA/wiki
 */
 
 @import url(theme/all-global-positioning.css);
-
 @import url(theme/all-color-schemes.css);
 
-@import url(theme/position-tabs.css);
-@import url(theme/position-findbar.css);
-@import url(theme/position-window-controls.css);
-
-@import url(theme/function-mini-button-bar.css);
 @import url(theme/function-sidebar-autohide.css);
 @import url(theme/function-sidebery-autohide.css);
-@import url(theme/function-containers-indicator.css);
-@import url(theme/function-menu-button.css);
-@import url(theme/function-privatemode-indicator.css); /* sourced from MOG */
+@import url(theme/function-privatemode.css); /* sourced from MOG */
 @import url(theme/function-urlbar.css);
 @import url(theme/function-extensions-menu.css);
-@import url(theme/function-safeguard.css);
+/*@import url(theme/function-safeguard.css);*/
 
+@import url(theme/theme-xstyle.css);
 @import url(theme/theme-context-menu.css);
-@import url(theme/theme-menubar.css);
 @import url(theme/theme-statuspanel.css);
+@import url(theme/theme-findbar.css);
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
-
-@import url(theme/override-linux.css);
-@import url(theme/override-mac.css);
-@import url(theme/override-styles.css);

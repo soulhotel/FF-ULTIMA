@@ -1,70 +1,66 @@
-/*--------------------------Global positioning--------------------------*/
+/*This page is undergoing heavy modification due to Firefox v131 changes to the browser,
+sections marked below with a (***) will indicate any ongoing progression or mods pending completion
+due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature*/
 
-/*
-Global variables start at line 30. Then further modifications for different parts of the browser.
-Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/spreadsheet-all-ultima-variables.md
-*/
+/*----------------------------------------------------------
 
-/* user preference setting for XS size tabs */
-@media (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
-    :root:not([customizing],[chromehidden~="menubar"]){
-        --uc-vertical-tabs-width: 41px;
-        --uc-vertical-tabs-width-revert: 41px;
-    }
-}}}
-/* user preference setting for S size tabs */
-@media (-moz-bool-pref: "ultima.tabs.size.s") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.l") {
-    :root:not([customizing],[chromehidden~="menubar"]){
-        --uc-vertical-tabs-width: 165px;
-        --uc-vertical-tabs-width-revert: 165px;
-    }
-}}}
-/* user preference setting for L size tabs */
-@media (-moz-bool-pref: "ultima.tabs.size.l") { @media not (-moz-bool-pref: "ultima.tabs.size.xs") { @media not (-moz-bool-pref: "ultima.tabs.size.s") {
-    :root:not([customizing],[chromehidden~="menubar"]){
-        --uc-vertical-tabs-width: 250px;
-        --uc-vertical-tabs-width-revert: 250px;
-    }
-}}}
+this file handles positioning of all main elements within the browser.
 
-/*---------------Global variables for quick modifications-------------*/
+[Index: ctrl+f a line below to find a section]
 
-:root:not([customizing],[chromehidden~="menubar"]){
-    --uc-navbar-height: 40px;
-    --uc-collapsed-tabs-width: 41px; /* do NOT go lower than 41px */
-}
+Global variables
+Compact spacing
+OS Window control margins
+Title bar
+Nav bar
+Menu bar
+Browser Content
+Side bar ***
+Vertical Tabs ***
+Vertical Tabs settings ***
+Autohide
 
-:root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {
-    --uc-navbar-height: 34px;
-}
+----------------------------------------------------------*/
+
+
+/* Global variables for quick modifications ------------------------------------------*/
 
 :root, body, * {
-
-    /*bookmarkbar height*/
+    --chrome-content-separator-color: transparent;
+    --uc-collapsed-tabs-width: 41px;
+    --uc-navbar-height: 40px;
     --uc-bookbar-height: 22px;
-    /*calculate tab height based on nav bar*/
-    /*then adjust for bookmark being active*/
-    --uc-tabbar-height:
-    calc(100vh - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
-    --uc-tabbar-height-adjust:
-    calc(100vh - var(--uc-bookbar-height) - var(--uc-navbar-height) - var(--uc-margin-top) - var(--uc-margin-bottom));
 
     /*rounded corners*/
     --uc-all-border-radius: 10px;
-    --tab-border-radius: 10px;
+    --uc-content-border-radius: var(--uc-all-border-radius);
+    --uc-tab-border-radius: var(--uc-all-border-radius);
+    --uc-sidebar-border-radius: var(--uc-all-border-radius);
     --uc-button-border: 4px;
 
-    /* ^ > v < (space the windows from each other) */
-    /*tabs get there own margins*/
-    --uc-all-margins: 0px 6px 6px calc(var(--uc-vertical-tabs-width) + var(--uc-margin-inline) + var(--uc-margin-inline)); 
-    --uc-margin-inline: 6px; /* < > */
-    --uc-margin-top:0px;     
-    --uc-margin-bottom:6px;      
-    --uc-tab-margins: 0px 0px 7px 6px;
-    --uc-sb-margin-leftside: 0px 6px 0px 0px;
-    --uc-sb-margin-rightside: 0px 0px 0px 6px;
+    /* margins */
+    --uc-content-margins: 0px 5px 5px 5px; 
+    --uc-tab-margins-left: 3.5px 0 5px 0px; /*placehold*/
+    --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
+        
+    --uc-sb-margins: 2px 0px 5px 1px;
+    --uc-sb-margins-right: 2px 1px 5px 0px;
     --uc-tab-padding: 2px;
+    
+    /* OS window controls margins */
+    --uc-window-control-margins: 86px;
 
+    /*global spacing pixels*/
+    --uc-spacing-px0: 0px;
+    --uc-spacing-px1: 1px;
+    --uc-spacing-px2: 2px;
+    --uc-spacing-px3: 3px;
+    --uc-spacing-px4: 4px;
+    --uc-spacing-px5: 5px;
+    
+    /*tabs*/
+    --uc-vertical-collapsed-width:0.4px;
+    
     /*individual tabs*/
     --tab-min-height: 35px;
     --tab-min-width: initial !important; /*dont touch*/
@@ -73,117 +69,390 @@ Spreadsheet of what every ultima-variable does: https://github.com/soulhotel/FF-
     --tab-block-margin: 2px;
 }
 
-/*---------------Browser - Side bar---------------*/
+:root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {
+    --uc-navbar-height: 34px;
+}
 
-/* quick hack, bigger sidebar, 50vw = 50% of the screen width */
+
+/* Compact spacing -----------------------------------------------------------------------*/
+
+/*compact spacing setting*/
+@media (-moz-bool-pref: "ultima.spacing.compact") { 
+    :root, body, * {
+        /*rounded corners*/
+        --uc-content-border-radius: 0px;
+        --uc-tab-border-radius: 0px;
+        --uc-sidebar-border-radius: 0px;
+        --uc-button-border: 4px;
+        /* margins */
+        --uc-content-margins: 0px;
+        --uc-tab-margins-left: 0px;
+        --uc-tab-margins-right: 0px; 
+        --uc-sb-margins: 0px;
+        --uc-sb-margins-right: 0px;
+        }
+}
+
+/*full screen compacting*/
+#main-window[sizemode="fullscreen"] * {
+    /*rounded corners*/
+    --uc-content-border-radius: 0px;
+    --uc-tab-border-radius: 0px;
+    --uc-sidebar-border-radius: 0px;
+    /* margins */
+    --uc-content-margins: 0px;
+    --uc-tab-margins-left: 0px;
+    --uc-tab-margins-right: 0px; 
+    --uc-sb-margins: 0px;
+    --uc-sb-margins-right: 0px;
+}
+
+
+/* OS Window control margins -------------------------------------------------------------*/
+
+/*mac*/
+@media (-moz-os-version: macos), (-moz-platform: macos) {
+    :root, body, * { --uc-window-control-margins: 84px;}
+    #nav-bar { margin-left: var(--uc-window-control-margins) !important;}
+    toolbar {min-height: 0px !important;}
+}
+
+/*windows*/
+@media (-moz-platform: windows) {
+    :root, body, * { --uc-window-control-margins: 120px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+}
+
+/*linux - kde spacing*/
+@media (-moz-platform: linux), (-moz-os-version: linux) {
+    :root, body, * { --uc-window-control-margins: 86px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
+}
+
+/*linux - gnome & cinnamon spacing*/
+@media (-moz-bool-pref: "ultima.fix.gnome.titlebar") { @media (-moz-platform: linux), (-moz-os-version: linux) {
+    :root, body, * { --uc-window-control-margins: 108px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
+}}
+
+/*linux - gnome & cinnamon spacing*/
+@media (-moz-bool-pref: "ultima.fix.gnome.titlebar.small") { @media (-moz-platform: linux), (-moz-os-version: linux) {
+    :root, body, * { --uc-window-control-margins: 44px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
+}}
+
+/* Title bar ----------------------------------------------------------------------*/
+
+/*titlebar corrections*/
+.titlebar-spacer {width:5px !important;}
+#tabbrowser-tabs {border-inline-start: 0px !important;}
+#TabsToolbar { margin: 2px 2px 0 0 !important; }
+
+/*titlebar corrections*/
+#main-window:not([lwtheme]) .titlebar-button { stroke: initial !important; }
+#main-window[lwtheme] .titlebar-button { stroke: var(--toolbarbutton-icon-fill) !important; }
+#main-window:not([lwtheme]) .titlebar-button:hover { fill: initial !important; }
+#main-window[lwtheme] .titlebar-button:hover { fill: var(--toolbarbutton-icon-fill) !important; }
+:root:where([tabsintitlebar]){--inactive-titlebar-opacity: 1 !important;--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
+
+
+/* Nav bar ------------------------------------------------------------------------*/
+
+#nav-bar {
+    min-height:var(--uc-navbar-height) !important;
+}    
+
+#nav-bar .toolbarbutton-1 {
+    margin-top:4.5px !important;
+}
+
+/*URL bar*/
+
+/*fix overlapping buttons (spacing) - when the Browser falls under a certain width*/
+@media (max-width: 700px) {
+  #nav-bar[downloadsbuttonshown][unifiedextensionsbuttonshown] #urlbar-container {
+    width: 120px !important;
+  }
+}
+@media (max-width: 600px) {
+  #unified-extensions-button, #PanelUI-button {display:none}
+}
+
+
+/* Menu bar -----------------------------------------------------------------------*/
+
+#toolbar-menubar {
+    max-height: var(--uc-navbar-height) !important;
+    height: var(--uc-navbar-height);
+    margin-left:8px !important;
+}
+#main-menubar menu {
+   border-radius: 10px !important; 
+}
+#menubar-items {
+  background: var(--uc-ultima-window) !important;
+  border-radius: 10px !important;
+  justify-content: center !important;
+  color: var(--uc-text) !important;
+}
+#toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
+  background-color: var(--uc-selected) !important;
+  color: var(--uc-text) !important;
+  border-radius: 5px !important;
+}}
+menubar > menu[open] {
+    border-bottom: 1px var(--uc-accent-ii) solid !important;
+}
+
+
+/* Browser Content ----------------------------------------------------------------------*/
+
+/* remove default borders and shadows v131 */
+
+#appcontent { @media (-moz-bool-pref: "sidebar.revamp") { & {
+    border-top: 0 !important;
+    border-inline-start: 0 !important;
+    box-shadow: none !important;
+}}}
+#tabbrowser-tabbox { @media (-moz-bool-pref: "sidebar.revamp") { {
+    outline: 0px solid var(--chrome-content-separator-color) !important;
+    box-shadow: none !important;
+}}}
+
+/* use my custom outline border */
+
+#main-window {
+    & #tabbrowser-tabpanels browser[type] {
+        margin: var(--uc-content-margins) !important;
+        border-radius: var(--uc-content-border-radius) !important;
+        outline: 4px solid var(--toolbar-bgcolor) !important;
+    }          
+}
+#main-window[lwtheme] {        
+    & #tabbrowser-tabpanels browser[type] {
+        outline: 3px solid var(--lwt-accent-color) !important;
+        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
+            outline: 3px solid var(--arrowpanel-background) !important;
+        }
+    }
+}
+
+
+/* Side bar *** ------------------------------------------------------------------------*/
+
+/* bigger sidebar, 50vw = 50% of the screen width */
 /* great for view-tab-in-sidebar extensions */
 #sidebar-box {
     max-width: 50vw !important;
-} #sidebar-box {
     min-width: 40px !important;
     width: 18em;
-}   /*defaults*/
+}
+/* rework default spacing */
+#sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { & {
+      padding-block-end: 0 !important;
+      padding-inline-end: 0 !important;
+}}}
 
-/* default left side < */
+#sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { &[positionend] {
+      padding-inline-end: 0 !important;
+      padding-inline-start: 0 !important;
+}}}
+/*custom margins*/
 #sidebar-box {
-    border-radius: var(--uc-all-border-radius);
-    margin: var(--uc-sb-margin-leftside) !important;
+    margin: var(--uc-sb-margins) !important;
 }
-/* right side > */
-#sidebar-box[positionend="true"]{
-    margin: var(--uc-sb-margin-rightside) !important;}
-
+#sidebar-box[positionend] {
+    margin: var(--uc-sb-margins-right) !important;
+}
+/*smaller splitter, less visible*/
+#sidebar-splitter {
+    background-color: transparent !important;
+    border: transparent solid 0px !important;
+    width: 2px !important;
+}
+/* custom border */
+#sidebar-box, #sidebar, #sidebar-header {
+    border-radius: var(--uc-sidebar-border-radius) !important;
+}
 #sidebar-header {
-    border-top-left-radius: var(--uc-all-border-radius) !important;
-    border-top-right-radius: var(--uc-all-border-radius) !important;
+    border-top-left-radius: var(--uc-sidebar-border-radius) !important;
+    border-top-right-radius: var(--uc-sidebar-border-radius) !important;
 }
-/* sidebar content */
 #sidebar {
-    border-bottom-left-radius: var(--uc-all-border-radius) !important;
-    border-bottom-right-radius: var(--uc-all-border-radius) !important;
+    border-bottom-left-radius: var(--uc-sidebar-border-radius) !important;
+    border-bottom-right-radius: var(--uc-sidebar-border-radius) !important;
 }
 
-/* remove ugly border - but keep the splitter accessible, it resizes the sidebar*/
-#sidebar-box[positionend] + .sidebar-splitter{
-    border: 2px rgba(0,0,0,0) solid !important;
-    border-inline-width: 0px !important;
-    margin-inline: -2px !important;
-    border-inline-end-width: 0px !important;
+#sidebar { @media (-moz-bool-pref: "sidebar.revamp") { & {
+      box-shadow: 0 2px 6px 0 light-dark(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8)) !important;
+      border: 0px solid var(--sidebar-border-color) !important;
+}}}
+
+#sidebar {
+    margin-top:-2px !important;
 }
 
-.sidebar-splitter {
-    width: 2px !important;}
+/* Vertical Tabs ----------------------------------------------------------------------*/
 
-/*---------------Browser - Browser content---------------*/
-
-/* browser content - webpage content */
-#browser, #appcontent, #tabbrowser-tabbox,
-#tabbrowser-tabpanels, .browserSidebarContainer, .browserStack{
-    border-radius: 0px !important;
-}
-.browserContainer {
-    border-radius: var(--uc-all-border-radius) !important;}
-#main-window
-#tabbrowser-tabpanels { browser[type] {
-    border-radius: var(--uc-all-border-radius) !important;
-}}
-#main-window[sizemode="fullscreen"]{
-    & .browserContainer, & #tabbrowser-tabpanels { browser[type] {border-radius: 0px !important;}
-}
-
-/*--------------bookmarks bar---------------*/
-
-/* smaller bookmarks bar */
-#PersonalToolbar{
-    max-height: var(--uc-bookbar-height) !important;
-    padding-bottom: 2px !important;
-}
-#personal-toolbar-empty-description, #personal-toolbar-empty-description .text-link, a {
-    cursor: auto !important; opacity: 0 !important;
-}
-
-/*-------------------menu bar--------------------*/
-
-/* quick styling */
-
-#menubar-items {
-    background: var(--uc-ultima-background-ii) !important;
-    border-radius: 5px !important;
-    justify-content: center !important;
-}
-
-#toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
-    background-color: var(--uc-selected) !important;
-    color: inherit;
-    border-radius: 5px !important;
+#vertical-tabs { &[visible] {
+    margin-inline-end: -8px !important;
 }}
 
-/* positioning when active */
-#toolbar-menubar[autohide="false"] {
-    position: fixed;
-    left: calc(50vw - 150px);
-    top: var(--uc-navbar-height);
-    height:23px !important;
-}
-#toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
-    background-color: var(--uc-selected) !important;
-    color: inherit;
-    border-radius: 5px !important;
-}}
 
-/* positioning when pressing alt */
-#toolbar-menubar[autohide="true"]:not([inactive="true"]) {
-    position: fixed;
-    left: calc(50vw - 150px);
-    top: var(--uc-navbar-height);
-    height:23px !important;
+/* TABS Side Bar */
+
+#sidebar-main {
+    border-radius: var(--uc-sidebar-border-radius);
 }
 
-/*-------------------nav bar--------------------*/
-
-/* centering buttons vertically */
-#nav-bar toolbarbutton {
-    margin-top: 1px !important;
+#sidebar-main:not([positionend="true"]) {
+	margin: var(--uc-tab-margins-left) !important;
+}
+        
+#sidebar-main[positionend="true"] {
+	margin: var(--uc-tab-margins-right) !important;
 }
 
-/*-------------------fin--------------------*/
+#sidebar-main *, #sidebar-main .wrapper {
+    border-inline-end: 0px solid red !important;
+}
+
+#vertical-tabs-newtab-button {
+    height:40px !important;
+    border-radius:10px !important;
+    margin-inline: 3px 3px !important;;
+}
+
+#sidebar-main:has([expanded]) .tab-label-container {
+  margin-left: 10px !important;
+}
+
+
+/* Vertical Tabs settings *** -----------------------------------------------------------*/
+
+/* Disable tabs completely for sidebery-like setups */
+
+@media (-moz-bool-pref: "ultima.tabs.disabled") {
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main:has([expanded=""]) {
+            display: none !important;
+        }
+    }
+    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main:has([expanded=""]) {
+            display: none !important;
+        }            
+        #TabsToolbar .toolbar-items {
+            opacity:0;
+            pointer-events: none;
+        }
+        #titlebar {
+            height:var(--uc-navbar-height) !important; width:100vw;
+            position: absolute;
+            top:0px;right:0px;z-index:999;
+        }
+        #titlebar:has([inactive="true"]) {
+            z-index:997 !important;
+        }
+        #nav-bar {
+            z-index:998 !important;
+        }
+        @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+            #nav-bar {
+                margin-left:0px !important;
+                margin-right: 0px !important;
+            }
+        }
+    }
+    @media not (-moz-bool-pref: "ultima.spacing.compact") {
+        #sidebar-main:has([expanded=""]) + #sidebar-box[checked="true"] {
+            margin-left:5px !important;
+            }
+        #sidebar-main:has([expanded=""]) + #sidebar-box[positionend="true"] {
+            margin-inline:0 5px !important;
+            }
+        }
+}
+        
+@media not (-moz-bool-pref: "ultima.tabs.disabled") {
+@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+        #nav-bar {
+            margin-left:0px !important;
+            margin-right: 0px !important;
+        }
+    }
+}
+}
+
+
+/* keep titlebar window controls */
+
+/* until firefox removes the leftover title bar taking up space,
+when off hide titlebar, accessible via alt key or toggling the menubar on,
+when on merge the titlebar (window controls) into the navigation bar */
+
+/* when using vert tabs */
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    /*when on, merge window controls into the nav bar*/
+    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar .toolbar-items {
+            opacity:0;
+            pointer-events: none;
+        }
+        #titlebar {
+            height:var(--uc-navbar-height) !important;
+            width:100vw;
+            position: absolute;
+            top:0px;
+            right:0px;
+            z-index:999;
+        }
+        #titlebar:has([inactive="true"]){
+            /* for menu bar visibility */
+            z-index:997 !important;}
+        #nav-bar {
+            z-index:998 !important;
+        }
+    }
+    /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
+    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+        #TabsToolbar, #TabsToolbar-customization-target {
+            display: none !important;
+        }
+        #nav-bar {
+            margin-left:0px !important;
+            margin-right: 0px !important;
+        }
+    }
+}
+
+
+/*Autohide implementation ------------------------------------------------------------*/
+
+/*not using animation yet, feature is still being analyzed,
+visual stutter and elements overlapping,
+most likely need to transform the new sidebar into a fixed element,
+still should be way easier than the original verttab hack just gotta wait*/
+/*
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+    #sidebar-main:has([expanded]) {
+        transition: width 80ms linear 300ms !important;
+        will-change: width !important;
+        width:initial;
+    }    
+    #sidebar-main:has([expanded]):not(:hover) {
+        width: var(--uc-vertical-collapsed-width) !important;
+        z-index: 0;
+    }
+    #sidebar-main:has([expanded]):not(:hover) + #sidebar-box {
+        margin-left:var(--uc-spacing-px5) !important;
+    }
+    #sidebar-main:has([expanded]):hover + #sidebar-box {
+        margin-left:var(--uc-spacing-px0) !important;
+    }
+}
+*/

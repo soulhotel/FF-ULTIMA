@@ -14,6 +14,12 @@
 }
 
 @media (-moz-bool-pref: "ultima.sidebery.autohide") {
+    @media (-moz-bool-pref: "ultima.sidebar.longer") {
+        #sidebar-box {--uc-sidebar-hover-width: 400px !important;} 
+    }
+}
+
+@media (-moz-bool-pref: "ultima.sidebery.autohide") {
     :root {
         --bg: #1a1b26;
     }
@@ -24,9 +30,11 @@
     /* removing the code block above will reproduce the issue */
     
     /* hides the sidebar header */
+    /* outdated as of v131 ***
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
         display: none !important;
     }
+    */
     
     /* sidebar adopts theme borders dependant on xstyle.squared being on or off */
     #sidebar {
@@ -35,7 +43,7 @@
     
     /* autohide */
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-        --uc-sidebar-width: 37px;
+        --uc-sidebar-width: 38px;
         --uc-sidebar-hover-width: 320px;
         --uc-autohide-sidebar-delay: 4ms;
         /* Waiting time before hiding sidebar */
@@ -69,13 +77,15 @@
         --uc-sidebar-width: 0px;
     }
 
+    /*
     #sidebar-splitter {
         display: none;
-    }
+    }*/
 
+    /*
     #sidebar-header {
         overflow: hidden;
-    }
+    }*/
 
     #sidebar {
         transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;

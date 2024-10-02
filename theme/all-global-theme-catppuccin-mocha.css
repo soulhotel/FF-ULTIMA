@@ -156,10 +156,7 @@ Global styling - Icons
             background: transparent;
             --tab-loading-fill: var(--uc-accent-i) !important;
         }
-        & #TabsToolbar-customization-target {
-            box-shadow: 0.15rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-            background: var(--uc-background-main);
-        }
+
         /*tabs styling - for unselected and unpinned*/
         & .tab-label-container:not([selected=""],[pinned]) {
             color: var(--uc-text) !important;
@@ -532,34 +529,38 @@ Global styling - Icons
         
     /* Global styling - Icons --------------==========----------------------------------*/
     
-    /*--extension menu--*/
-    #main-window:not([lwtheme]) #unified-extensions-button {
-      list-style-image: url("icons/extensions.svg") !important;
-      fill: var(--uc-accent-i) !important;
-    }
-    #main-window[lwtheme] #unified-extensions-button {
-      list-style-image: url("icons/extensions.svg") !important;
-      fill: var(--lwt-accent-color) !important;
-    }
-    /*--bookmarks folder icon--*/
-    .bookmark-item[container=true] {
-      list-style-image: url("icons/bm.png") !important;
-    }
-    /*--ublock on--*/
-    #ublock0_raymondhill_net-BAP image{
-      list-style-image: url("icons/ubon.png") !important;
-    }
-    /*--ublock off--*/
-    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
-      list-style-image: url("icons/uboff.png") !important;
-    }
-    #forward-button image{
-      list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
-      stroke: var(--uc-accent-iii) !important;
-    }
-    #back-button image{
-      list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
-      stroke: var(--uc-accent-iii) !important;
+    @media (-moz-bool-pref: "ultima.theme.icons") {
+
+        /*--extension menu--*/
+        #main-window:not([lwtheme]) #unified-extensions-button {
+          list-style-image: url("icons/extensions.svg") !important;
+          fill: var(--uc-accent-i) !important;
+        }
+        #main-window[lwtheme] #unified-extensions-button {
+          list-style-image: url("icons/extensions.svg") !important;
+          fill: var(--lwt-accent-color) !important;
+        }
+        /*--bookmarks folder icon--*/
+        .bookmark-item[container=true] {
+          list-style-image: url("icons/bm.png") !important;
+        }
+        /*--ublock on--*/
+        #ublock0_raymondhill_net-BAP image{
+          list-style-image: url("icons/ubon.png") !important;
+        }
+        /*--ublock off--*/
+        #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
+          list-style-image: url("icons/uboff.png") !important;
+        }
+        #forward-button image{
+          list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+          stroke: var(--uc-accent-iii) !important;
+        }
+        #back-button image{
+          list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+          stroke: var(--uc-accent-iii) !important;
+        }
+    
     }
     
     /*--notification badges--*/
@@ -570,5 +571,5 @@ Global styling - Icons
       text-shadow: #FDFFFF 0.5px 0 15px!important;
     }
     
-    }
+}
     
