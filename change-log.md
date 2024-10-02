@@ -44,7 +44,9 @@
 - `new`|`fix` vertical tab end margin spacing reduced
 - `new`|`fix` current/selected tab box shadow added for improved visibility
 - `new`|`fix` titlebar/navbar spacing improved when window width reaches smaller sizes
-  
+- `new` | `fix` setting `ultima.theme.color.swap` to swap around colors when using Firefox themes. #146 
+- `new` setting `ultima.theme.icons` to use default firefox icons or Ultima themed icons (extension menu, back, forward, ublock) #146 
+
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
