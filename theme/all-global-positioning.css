@@ -147,9 +147,15 @@ Autohide
 /* Title bar ----------------------------------------------------------------------*/
 
 /*titlebar corrections*/
-.titlebar-spacer {width:5px !important;}
+.titlebar-spacer[type="pre-tabs"] {width:4px !important;}
+.titlebar-spacer[type="post-tabs"] {width:1px !important;}
 #tabbrowser-tabs {border-inline-start: 0px !important;}
 #TabsToolbar { margin: 2px 2px 0 0 !important; }
+@media (-moz-bool-pref: "ultima.disable.alltabsbutton") {
+    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
+    	display: none !important;
+    }
+}
 
 /*titlebar corrections*/
 #main-window:not([lwtheme]) .titlebar-button { stroke: initial !important; }
@@ -157,12 +163,13 @@ Autohide
 #main-window:not([lwtheme]) .titlebar-button:hover { fill: initial !important; }
 #main-window[lwtheme] .titlebar-button:hover { fill: var(--toolbarbutton-icon-fill) !important; }
 :root:where([tabsintitlebar]){--inactive-titlebar-opacity: 1 !important;--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
-
-@media (-moz-bool-pref: "ultima.xstyle.disable.alltabsbutton") {
-    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
-    	display: none !important;
-    }
+toolbar {
+  &:-moz-window-inactive {
+    background-color: var(--toolbar-bgcolor) !important;
+    /*color: -moz-headerbarinactivetext;*/
+  }
 }
+
 /* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar {
@@ -303,43 +310,38 @@ menubar > menu[open] {
 
 /* Vertical Tabs ----------------------------------------------------------------------*/
 
-#vertical-tabs { &[visible] {
+/*spacing corrections*/
+#sidebar-main:has([expanded]) #vertical-tabs { &[visible] {
     margin-inline-end: -8px !important;
 }}
-
-
-/* TABS Side Bar */
-
-#sidebar-main {
-    border-radius: var(--uc-sidebar-border-radius);
+#sidebar-main *, #sidebar-main .wrapper {
+    border-inline-end: 0px solid red !important;
 }
-
+#sidebar-main:has([expanded]) .tab-label-container {
+  margin-left: 10px !important;
+}
 #sidebar-main:not([positionend="true"]) {
 	margin: var(--uc-tab-margins-left) !important;
-}
-        
+}      
 #sidebar-main[positionend="true"] {
 	margin: var(--uc-tab-margins-right) !important;
 }
 
-#sidebar-main *, #sidebar-main .wrapper {
-    border-inline-end: 0px solid red !important;
+/*quick styling*/
+#sidebar-main {
+    border-radius: var(--uc-sidebar-border-radius);
 }
 
+/*new tab button*/
 #vertical-tabs-newtab-button {
     border-radius:10px !important;
 }
-
-#sidebar-main:has([expanded]) .tab-label-container {
-  margin-left: 10px !important;
-}
-
 
 /* Vertical Tabs settings *** -----------------------------------------------------------*/
 
 /* Disable tabs completely for sidebery-like setups */
 
-@media (-moz-bool-pref: "ultima.tabs.disabled") {
+@media (-moz-bool-pref: "ultima.disable.verttab.bar") {
     @media (-moz-bool-pref: "sidebar.verticalTabs") {
         #sidebar-main:has([expanded=""]) {
             display: none !important;
@@ -364,7 +366,7 @@ menubar > menu[open] {
         #nav-bar {
             z-index:998 !important;
         }
-        @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+        @media (-moz-bool-pref: "ultima.disable.windowcontrols") {
             #nav-bar {
                 margin-left:0px !important;
                 margin-right: 0px !important;
@@ -381,9 +383,9 @@ menubar > menu[open] {
         }
 }
         
-@media not (-moz-bool-pref: "ultima.tabs.disabled") {
+@media not (-moz-bool-pref: "ultima.disable.verttab.bar") {
 @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+    @media not (-moz-bool-pref: "ultima.disable.windowcontrols") {
         #nav-bar {
             margin-left:0px !important;
             margin-right: 0px !important;
@@ -402,7 +404,7 @@ when on merge the titlebar (window controls) into the navigation bar */
 /* when using vert tabs */
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     /*when on, merge window controls into the nav bar*/
-    @media (-moz-bool-pref: "ultima.keep.titlebar") {
+    @media not (-moz-bool-pref: "ultima.disable.windowcontrols") {
         #TabsToolbar .toolbar-items {
             opacity:0;
             pointer-events: none;
@@ -423,7 +425,7 @@ when on merge the titlebar (window controls) into the navigation bar */
         }
     }
     /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
-    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
+    @media (-moz-bool-pref: "ultima.disable.windowcontrols") {
         #TabsToolbar, #TabsToolbar-customization-target {
             display: none !important;
         }
