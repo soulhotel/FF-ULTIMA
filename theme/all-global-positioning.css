@@ -118,8 +118,9 @@ Autohide
 
 /*windows*/
 @media (-moz-platform: windows) {
-    :root, body, * { --uc-window-control-margins: 125px;}
+    :root, body, * { --uc-window-control-margins: 116px;}
     #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    .titlebar-button {padding: 8px 13px !important;}
 }
 
 /*linux - kde spacing*/
