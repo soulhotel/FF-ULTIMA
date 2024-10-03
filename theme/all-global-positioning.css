@@ -342,24 +342,15 @@ menubar > menu[open] {
 /*hide the vert tab bar*/
 
 @media (-moz-bool-pref: "ultima.disable.verttab.bar") {
-    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+    #sidebar-main:has([expanded=""]) {
+        width:5px !important;
+    }
+    @media (-moz-bool-pref: "ultima.spacing.compact") {
         #sidebar-main:has([expanded=""]) {
-            display: none !important;
+            width:0px !important;
         }
     }
-    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-        #sidebar-main:has([expanded=""]) {
-            display: none !important;
-        }
-    @media not (-moz-bool-pref: "ultima.spacing.compact") {
-        #sidebar-main:has([expanded=""]) + #sidebar-box[checked="true"] {
-            margin-inline:5px !important;
-            }
-        #sidebar-main:has([expanded=""]) + #sidebar-box[positionend="true"] {
-            margin-inline:5px !important;
-        }
-    }
-}        
+}         
 
 /*Autohide implementation ------------------------------------------------------------*/
 
