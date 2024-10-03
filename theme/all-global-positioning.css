@@ -258,7 +258,7 @@ menubar > menu[open] {
 /* rework default spacing */
 #sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { & {
       padding-block-end: 0 !important;
-      /*padding-inline-end: 0 !important;*/
+      padding-inline-end: 0 !important;
 }}}
 
 #sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { &[positionend] {
