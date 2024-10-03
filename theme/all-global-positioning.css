@@ -143,6 +143,9 @@ Autohide
     	display: none !important;
     }
 }
+@media (-moz-bool-pref: "ultima.theme.icons") {
+    #alltabs-button { list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important; }
+}
 
 /*titlebar corrections*/
 #main-window:not([lwtheme]) .titlebar-button { stroke: initial !important; }
