@@ -157,11 +157,6 @@ toolbar {
   }
 }
 
-/*disable window controls*/
-@media (-moz-bool-pref: "ultima.disable.windowcontrols") {
-    #titlebar-buttonbox-container {display:none !important;}
-}
-
 /* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar {
