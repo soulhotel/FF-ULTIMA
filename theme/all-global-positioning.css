@@ -211,6 +211,19 @@ menubar > menu[open] {
     border-bottom: 1px var(--uc-accent-ii) solid !important;
 }
 
+@media (-moz-bool-pref: "ultima.theme.menubar") {
+
+    #toolbar-menubar {
+    	position:fixed !important;
+    	z-index:999999 !important;
+    	right:0;
+    }
+    #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {
+        background:var(--uc-ultima-window) !important;
+    }
+    
+}
+
 
 /* Browser Content ----------------------------------------------------------------------*/
 
