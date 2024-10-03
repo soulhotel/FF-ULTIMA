@@ -7,13 +7,11 @@ user_pref("user.theme.dark.gruvbox", false);
 user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
-/*titlebar*/
-user_pref("ultima.disable.alltabsbutton", true);
-user_pref("ultima.disable.windowcontrols", false);
-
-/*tabs*/
+/*titlebar and tabs*/
+user_pref("ultima.disable.alltabs.button", true);
+user_pref("ultima.disable.windowcontrols.button", false);
+user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.tabs.autohide", false);
-user_pref("ultima.disable.verttab.bar", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
