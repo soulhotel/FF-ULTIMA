@@ -139,7 +139,7 @@ Autohide
 #tabbrowser-tabs {border-inline-start: 0px !important;}
 #TabsToolbar { margin: 2px 2px 0 0 !important; }
 @media (-moz-bool-pref: "ultima.disable.alltabs.button") {
-    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
+    #alltabs-button {
     	display: none !important;
     }
 }
