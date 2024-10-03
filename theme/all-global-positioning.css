@@ -463,7 +463,7 @@ still should be way easier than the original verttab hack just gotta wait*/
 /* Autohide implementation 2 - thursday */
 
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
-    #sidebar-main:not(:hover){width: 55px !important;}
+    #sidebar-main:not(:hover){width: 1px !important;}
 
     #sidebar-main:not(:hover) .tabbrowser-tab{width: 40px !important; min-width: 0px !important}
 
