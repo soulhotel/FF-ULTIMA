@@ -20,7 +20,7 @@
 - `new` setting `ultima.theme.menubar` for one line menubar style
 - `new` setting `ultima.disable.windowcontrols.button` to disable window controls (`ultima.keep.titlebar` renamed/removed)
 - `new` setting `ultima.disable.verticaltab.bar` to hide the verttabbar for sidebery like setups (`ultima.tabs.disabled` renamed/removed)
-- `new`|`qol` setting `ultima.disable.alltabs.button` to disable the all tabs button unless tabs are overflowing (`ultima.xstyle.disable.alltabsbutton` renamed/removed)
+- `new` setting `ultima.disable.alltabs.button` to disable the all tabs button unless tabs are overflowing (`ultima.xstyle.disable.alltabsbutton` renamed/removed)
 - `fix` sidebar spacing correction, when vertical tabs are expanded
 - `new` setting `ultima.tabs.autohide` has been enabled, WIP, the new vertical tabs dont respond to fluid animation (waiting for Developers to clean up here)
 
