@@ -125,7 +125,7 @@ Autohide
 }
 
 /*option to disable window controls*/
-@media (-moz-bool-pref: "ultima.disable.windowcontrols") {
+@media (-moz-bool-pref: "ultima.disable.windowcontrols.buttons") {
     .titlebar-buttonbox-container {display:none !important;}
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {display:flex !important;}
 }
@@ -138,7 +138,7 @@ Autohide
 .titlebar-spacer[type="post-tabs"] {width:1px !important;}
 #tabbrowser-tabs {border-inline-start: 0px !important;}
 #TabsToolbar { margin: 2px 2px 0 0 !important; }
-@media (-moz-bool-pref: "ultima.disable.alltabsbutton") {
+@media (-moz-bool-pref: "ultima.disable.alltabs.button") {
     #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
     	display: none !important;
     }
@@ -341,7 +341,8 @@ menubar > menu[open] {
 
 /*hide the vert tab bar*/
 
-@media (-moz-bool-pref: "ultima.disable.verttab.bar") {
+@media (-moz-bool-pref: "ultima.disable.verticaltab.bar") { @media not (-moz-bool-pref: "ultima.tabs.autohide") {
+
     #sidebar-main:has([expanded=""]) {
         width:5px !important;
     }
@@ -350,7 +351,7 @@ menubar > menu[open] {
             width:0px !important;
         }
     }
-}         
+}}        
 
 /*Autohide implementation ------------------------------------------------------------*/
 
