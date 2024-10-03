@@ -125,7 +125,7 @@ Autohide
 }
 
 /*option to disable window controls*/
-@media (-moz-bool-pref: "ultima.disable.windowcontrols.buttons") {
+@media (-moz-bool-pref: "ultima.disable.windowcontrols.button") {
     .titlebar-buttonbox-container {display:none !important;}
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {display:flex !important;}
 }
