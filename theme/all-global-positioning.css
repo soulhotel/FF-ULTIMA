@@ -45,9 +45,6 @@ Autohide
     --uc-sb-margins: 2px 5px 5px 1px;
     --uc-sb-margins-right: 2px 1px 5px 5px;
     --uc-tab-padding: 2px;
-    
-    /* OS window controls margins */
-    --uc-window-control-margins: 86px;
 
     /*global spacing pixels*/
     --uc-spacing-px0: 0px;
@@ -107,7 +104,7 @@ Autohide
 }
 
 
-/* OS Window control margins -------------------------------------------------------------*/
+/* OS Window control -------------------------------------------------------------*/
 
 /*mac*/
 @media (-moz-os-version: macos), (-moz-platform: macos) {
@@ -138,9 +135,15 @@ Autohide
 /* Title bar ----------------------------------------------------------------------*/
 
 /*titlebar corrections*/
-.titlebar-spacer {width:1px !important;}
+.titlebar-spacer[type="pre-tabs"] {width:4px !important;}
+.titlebar-spacer[type="post-tabs"] {width:1px !important;}
 #tabbrowser-tabs {border-inline-start: 0px !important;}
 #TabsToolbar { margin: 2px 2px 0 0 !important; }
+@media (-moz-bool-pref: "ultima.xstyle.disable.alltabsbutton") {
+    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
+    	display: none !important;
+    }
+}
 
 /*titlebar corrections*/
 #main-window:not([lwtheme]) .titlebar-button { stroke: initial !important; }
@@ -148,12 +151,13 @@ Autohide
 #main-window:not([lwtheme]) .titlebar-button:hover { fill: initial !important; }
 #main-window[lwtheme] .titlebar-button:hover { fill: var(--toolbarbutton-icon-fill) !important; }
 :root:where([tabsintitlebar]){--inactive-titlebar-opacity: 1 !important;--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
-
-@media (-moz-bool-pref: "ultima.xstyle.disable.alltabsbutton") {
-    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
-    	display: none !important;
-    }
+toolbar {
+  &:-moz-window-inactive {
+    background-color: var(--toolbar-bgcolor) !important;
+    /*color: -moz-headerbarinactivetext;*/
+  }
 }
+
 /* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar {
