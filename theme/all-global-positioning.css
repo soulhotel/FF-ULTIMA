@@ -211,7 +211,7 @@ menubar > menu[open] {
     border-bottom: 1px var(--uc-accent-ii) solid !important;
 }
 
-@media (-moz-bool-pref: "ultima.theme.menubar") {
+@media (-moz-bool-pref: "ultima.theme.menubar") { 
 
     #toolbar-menubar {
     	position:fixed !important;
