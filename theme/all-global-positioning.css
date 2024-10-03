@@ -402,10 +402,13 @@ still should be way easier than the original verttab hack just gotta wait*/
         }
     }	
     /*collapse/expand demo*/
-    #sidebar-main:not(:hover){ width: 50px !important;}
-    #sidebar-main:not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important}
-    #sidebar-main:not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
-    #sidebar-main:not(:hover) #vertical-tabs-newtab-button{/*! width: 44px !important; */ min-width: 0px !important; appearance: none !important;}
+    #sidebar-main:has([expanded=""]):not(:hover){ width: 50px !important;}
+
+    #sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important}
+
+    #sidebar-main:has([expanded=""]):not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
+
+    #sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{/*! width: 44px !important; */ min-width: 0px !important; appearance: none !important;}
 }
 
 
