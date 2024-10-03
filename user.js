@@ -8,13 +8,12 @@ user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
 /*titlebar*/
-user_pref("ultima.fix.gnome.titlebar", false);
-user_pref("ultima.fix.gnome.titlebar.small", false);
-user_pref("ultima.keep.titlebar", true);
+user_pref("ultima.disable.alltabsbutton", true);
+user_pref("ultima.disable.windowcontrols", false);
 
 /*tabs*/
 user_pref("ultima.tabs.autohide", false);
-user_pref("ultima.tabs.disabled", false);
+user_pref("ultima.disable.verttab.bar", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
@@ -38,10 +37,8 @@ user_pref("ultima.xstyle.urlbar", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
-user_pref("ultima.xstyle.lwtheme", false);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
-user_pref("ultima.xstyle.disable.alltabsbutton", true);
 
 /*specific OS overrides (like titlebar buttons)*/
 /*user_pref("ultima.OS.kde", true);
