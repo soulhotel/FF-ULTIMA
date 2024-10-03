@@ -104,33 +104,32 @@ Autohide
 }
 
 
-/* OS Window control -------------------------------------------------------------*/
+/* OS Window controls -------------------------------------------------------------*/
 
 /*mac*/
 @media (-moz-os-version: macos), (-moz-platform: macos) {
-    /*
-    :root, body, * { --uc-window-control-margins: 84px;}
-    #nav-bar { margin-left: var(--uc-window-control-margins) !important;}
-    */
+    /*:root, body, * { --uc-window-control-margins: 84px;}
+    #nav-bar { margin-left: var(--uc-window-control-margins) !important;}*/
     toolbar {min-height: 0px !important;}
 }
-
 /*windows*/
 @media (-moz-platform: windows) {
-    /*
-    :root, body, * { --uc-window-control-margins: 120px;}
-    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
-    */
+    /*:root, body, * { --uc-window-control-margins: 120px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}*/
 }
-
 /*linux - kde spacing*/
 @media (-moz-platform: linux), (-moz-os-version: linux) {
-    /*
-    :root, body, * { --uc-window-control-margins: 86px;}
-    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
-    */
+    /*:root, body, * { --uc-window-control-margins: 86px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}*/
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }
+
+/*option to disable window controls*/
+@media (-moz-bool-pref: "ultima.disable.windowcontrols") {
+    .titlebar-buttonbox-container {display:none !important;}
+    #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {display:flex !important;}
+}
+
 
 /* Title bar ----------------------------------------------------------------------*/
 
@@ -139,7 +138,7 @@ Autohide
 .titlebar-spacer[type="post-tabs"] {width:1px !important;}
 #tabbrowser-tabs {border-inline-start: 0px !important;}
 #TabsToolbar { margin: 2px 2px 0 0 !important; }
-@media (-moz-bool-pref: "ultima.xstyle.disable.alltabsbutton") {
+@media (-moz-bool-pref: "ultima.disable.alltabsbutton") {
     #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
     	display: none !important;
     }
@@ -158,18 +157,27 @@ toolbar {
   }
 }
 
+/*disable window controls*/
+@media (-moz-bool-pref: "ultima.disable.windowcontrols") {
+    #titlebar-buttonbox-container {display:none !important;}
+}
+
 /* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar {
     min-height:var(--uc-navbar-height) !important;
 }    
-
 #nav-bar .toolbarbutton-1 {
     margin-top:4.5px !important;
 }
+#titlebar:has([inactive="true"]){
+    z-index:997 !important;
+}
+#nav-bar {
+    z-index:998 !important;
+}
 
 /*URL bar*/
-
 /*fix overlapping buttons (spacing) - when the Browser falls under a certain width*/
 @media (max-width: 700px) {
   #nav-bar[downloadsbuttonshown][unifiedextensionsbuttonshown] #urlbar-container {
@@ -207,7 +215,6 @@ menubar > menu[open] {
 }
 
 @media (-moz-bool-pref: "ultima.theme.menubar") { 
-
     #toolbar-menubar {
     	position:fixed !important;
     	z-index:999999 !important;
@@ -215,8 +222,7 @@ menubar > menu[open] {
     }
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {
         background:var(--uc-ultima-window) !important;
-    }
-    
+    }  
 }
 
 
@@ -311,43 +317,36 @@ menubar > menu[open] {
 
 /* Vertical Tabs ----------------------------------------------------------------------*/
 
-#vertical-tabs { &[visible] {
+/*spacing corrections*/
+#sidebar-main:has([expanded]) #vertical-tabs { &[visible] {
     margin-inline-end: -8px !important;
 }}
-
-
-/* TABS Side Bar */
-
-#sidebar-main {
-    border-radius: var(--uc-sidebar-border-radius);
+#sidebar-main *, #sidebar-main .wrapper {
+    border-inline-end: 0px solid red !important;
 }
-
+#sidebar-main:has([expanded]) .tab-label-container {
+  margin-left: 10px !important;
+}
 #sidebar-main:not([positionend="true"]) {
 	margin: var(--uc-tab-margins-left) !important;
-}
-        
+}      
 #sidebar-main[positionend="true"] {
 	margin: var(--uc-tab-margins-right) !important;
 }
 
-#sidebar-main *, #sidebar-main .wrapper {
-    border-inline-end: 0px solid red !important;
+/*quick styling*/
+#sidebar-main {
+    border-radius: var(--uc-sidebar-border-radius);
 }
 
+/*new tab button*/
 #vertical-tabs-newtab-button {
     border-radius:10px !important;
 }
 
-#sidebar-main:has([expanded]) .tab-label-container {
-  margin-left: 10px !important;
-}
+/*hide the vert tab bar*/
 
-
-/* Vertical Tabs settings *** -----------------------------------------------------------*/
-
-/* Disable tabs completely for sidebery-like setups */
-
-@media (-moz-bool-pref: "ultima.tabs.disabled") {
+@media (-moz-bool-pref: "ultima.disable.verttab.bar") {
     @media (-moz-bool-pref: "sidebar.verticalTabs") {
         #sidebar-main:has([expanded=""]) {
             display: none !important;
@@ -356,92 +355,16 @@ menubar > menu[open] {
     @media not (-moz-bool-pref: "sidebar.verticalTabs") {
         #sidebar-main:has([expanded=""]) {
             display: none !important;
-        }            
-        #TabsToolbar .toolbar-items {
-            opacity:0;
-            pointer-events: none;
         }
-        #titlebar {
-            height:var(--uc-navbar-height) !important; width:100vw;
-            position: absolute;
-            top:0px;right:0px;z-index:999;
-        }
-        #titlebar:has([inactive="true"]) {
-            z-index:997 !important;
-        }
-        #nav-bar {
-            z-index:998 !important;
-        }
-        @media not (-moz-bool-pref: "ultima.keep.titlebar") {
-            #nav-bar {
-                margin-left:0px !important;
-                margin-right: 0px !important;
-            }
-        }
-    }
     @media not (-moz-bool-pref: "ultima.spacing.compact") {
         #sidebar-main:has([expanded=""]) + #sidebar-box[checked="true"] {
             margin-inline:5px !important;
             }
         #sidebar-main:has([expanded=""]) + #sidebar-box[positionend="true"] {
-            margin-inline:0 5px !important;
-            }
-        }
-}
-        
-@media not (-moz-bool-pref: "ultima.tabs.disabled") {
-@media not (-moz-bool-pref: "sidebar.verticalTabs") {
-    @media (-moz-bool-pref: "ultima.keep.titlebar") {
-        #nav-bar {
-            margin-left:0px !important;
-            margin-right: 0px !important;
+            margin-inline:5px !important;
         }
     }
-}
-}
-
-
-/* keep titlebar window controls */
-
-/* until firefox removes the leftover title bar taking up space,
-when off hide titlebar, accessible via alt key or toggling the menubar on,
-when on merge the titlebar (window controls) into the navigation bar */
-
-/* when using vert tabs */
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-    /*when on, merge window controls into the nav bar*/
-    @media (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar .toolbar-items {
-            opacity:0;
-            pointer-events: none;
-        }
-        #titlebar {
-            height:var(--uc-navbar-height) !important;
-            width:100vw;
-            position: absolute;
-            top:0px;
-            right:0px;
-            z-index:999;
-        }
-        #titlebar:has([inactive="true"]){
-            /* for menu bar visibility */
-            z-index:997 !important;}
-        #nav-bar {
-            z-index:998 !important;
-        }
-    }
-    /*when off hide titlebar, accessible via alt key or toggling the menubar on*/
-    @media not (-moz-bool-pref: "ultima.keep.titlebar") {
-        #TabsToolbar, #TabsToolbar-customization-target {
-            display: none !important;
-        }
-        #nav-bar {
-            margin-left:0px !important;
-            margin-right: 0px !important;
-        }
-    }
-}
-
+}        
 
 /*Autohide implementation ------------------------------------------------------------*/
 
