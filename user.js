@@ -40,6 +40,7 @@ user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.lwtheme", false);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
+user_pref("ultima.xstyle.disable.alltabsbutton", true);
 
 /*specific OS overrides (like titlebar buttons)*/
 /*user_pref("ultima.OS.kde", true);

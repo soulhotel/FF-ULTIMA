@@ -2,11 +2,11 @@
 sections marked below with a (***) will indicate any ongoing progression or mods pending completion
 due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature*/
 
-/*----------------------------------------------------------
+/*
+This file handles positioning of all main elements within the browser.
 
-this file handles positioning of all main elements within the browser.
-
-[Index: ctrl+f a line below to find a section]
+[Index]
+ctrl+f to find a section:
 
 Global variables
 Compact spacing
@@ -19,8 +19,7 @@ Side bar ***
 Vertical Tabs ***
 Vertical Tabs settings ***
 Autohide
-
-----------------------------------------------------------*/
+*/
 
 
 /* Global variables for quick modifications ------------------------------------------*/
@@ -43,8 +42,8 @@ Autohide
     --uc-tab-margins-left: 3.5px 0 5px 0px; /*placehold*/
     --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
         
-    --uc-sb-margins: 2px 0px 5px 1px;
-    --uc-sb-margins-right: 2px 1px 5px 0px;
+    --uc-sb-margins: 2px 5px 5px 1px;
+    --uc-sb-margins-right: 2px 1px 5px 5px;
     --uc-tab-padding: 2px;
     
     /* OS window controls margins */
@@ -119,8 +118,9 @@ Autohide
 
 /*windows*/
 @media (-moz-platform: windows) {
-    :root, body, * { --uc-window-control-margins: 120px;}
+    :root, body, * { --uc-window-control-margins: 105px;}
     #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    .titlebar-button {padding: 11px 11px !important;margin-top:3px !important;margin-bottom:3px !important;}
 }
 
 /*linux - kde spacing*/
@@ -158,7 +158,11 @@ Autohide
 #main-window[lwtheme] .titlebar-button:hover { fill: var(--toolbarbutton-icon-fill) !important; }
 :root:where([tabsintitlebar]){--inactive-titlebar-opacity: 1 !important;--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
 
-
+@media (-moz-bool-pref: "ultima.xstyle.disable.alltabsbutton") {
+    #tabbrowser-tabs:not([overflow]) ~ #alltabs-button {
+    	display: none !important;
+    }
+}
 /* Nav bar ------------------------------------------------------------------------*/
 
 #nav-bar {
@@ -217,10 +221,11 @@ menubar > menu[open] {
     border-inline-start: 0 !important;
     box-shadow: none !important;
 }}}
-#tabbrowser-tabbox { @media (-moz-bool-pref: "sidebar.revamp") { {
+#tabbrowser-tabbox { @media (-moz-bool-pref: "sidebar.revamp") {
     outline: 0px solid var(--chrome-content-separator-color) !important;
     box-shadow: none !important;
-}}}
+}}
+
 
 /* use my custom outline border */
 
@@ -249,6 +254,7 @@ menubar > menu[open] {
     max-width: 50vw !important;
     min-width: 40px !important;
     width: 18em;
+    z-index:998 !important;
 }
 /* rework default spacing */
 #sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { & {
@@ -258,7 +264,7 @@ menubar > menu[open] {
 
 #sidebar-box { @media (-moz-bool-pref: "sidebar.revamp") { &[positionend] {
       padding-inline-end: 0 !important;
-      padding-inline-start: 0 !important;
+      /*padding-inline-start: 0 !important;*/
 }}}
 /*custom margins*/
 #sidebar-box {
@@ -321,9 +327,7 @@ menubar > menu[open] {
 }
 
 #vertical-tabs-newtab-button {
-    height:40px !important;
     border-radius:10px !important;
-    margin-inline: 3px 3px !important;;
 }
 
 #sidebar-main:has([expanded]) .tab-label-container {
@@ -369,7 +373,7 @@ menubar > menu[open] {
     }
     @media not (-moz-bool-pref: "ultima.spacing.compact") {
         #sidebar-main:has([expanded=""]) + #sidebar-box[checked="true"] {
-            margin-left:5px !important;
+            margin-inline:5px !important;
             }
         #sidebar-main:has([expanded=""]) + #sidebar-box[positionend="true"] {
             margin-inline:0 5px !important;
@@ -456,3 +460,15 @@ still should be way easier than the original verttab hack just gotta wait*/
     }
 }
 */
+
+/* Autohide implementation 2 - thursday */
+
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+    #sidebar-main:not(:hover){width: 1px !important;}
+
+    #sidebar-main:not(:hover) .tabbrowser-tab{width: 40px !important; min-width: 0px !important}
+
+    #sidebar-main:not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
+
+    #sidebar-main:not(:hover) #vertical-tabs-newtab-button{width: 40px !important; min-width: 0px !important; appearance: none !important;}
+}
