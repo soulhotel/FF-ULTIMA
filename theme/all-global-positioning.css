@@ -118,7 +118,7 @@ Autohide
 
 /*windows*/
 @media (-moz-platform: windows) {
-    :root, body, * { --uc-window-control-margins: 120px;}
+    :root, body, * { --uc-window-control-margins: 125px;}
     #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
 }
 
