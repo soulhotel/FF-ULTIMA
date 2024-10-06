@@ -384,8 +384,6 @@ still should be way easier than the original verttab hack just gotta wait*/
 
 /* Autohide implementation 2 - thursday */
 
-/* Autohide implementation 2 - thursday */
-
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
     /*bottom button demo*/
     .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
@@ -411,4 +409,41 @@ still should be way easier than the original verttab hack just gotta wait*/
     #sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{/*! width: 44px !important; */ min-width: 0px !important; appearance: none !important;}
 }
 
+/* Autohide implementation 3 - overlay content rather than push content to the side */
+/*
 
+
+.tools-and-extensions:not(:hover){ opacity:0.5 !important;}
+.button-background {
+&.labelled {
+    gap: 15px !important;
+}
+}
+
+#tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
+& > .toolbarbutton-text {
+    padding-inline-start: var(--tab-icon-end-margin);
+    margin-left:7px !important;
+}
+}	
+
+#sidebar-main {       
+position:fixed !important;
+top:36px !important;
+left:0px !important;
+height:calc(100vh - 40px) !important;
+z-index:997 !important;
+}
+#browser {
+margin-left:50px !important;
+}
+
+#sidebar-main:has([expanded=""]):not(:hover){ width: 50px !important;}
+
+#sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important}
+
+#sidebar-main:has([expanded=""]):not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
+
+#sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{min-width: 0px !important; appearance: none !important;}
+
+*/
