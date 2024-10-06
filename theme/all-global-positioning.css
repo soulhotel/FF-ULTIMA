@@ -412,7 +412,6 @@ still should be way easier than the original verttab hack just gotta wait*/
 /* Autohide implementation 3 - overlay content rather than push content to the side */
 /*
 
-
 .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
 .button-background {
 &.labelled {
@@ -428,12 +427,13 @@ still should be way easier than the original verttab hack just gotta wait*/
 }	
 
 #sidebar-main {       
-position:fixed !important;
-top:36px !important;
-left:0px !important;
-height:calc(100vh - 40px) !important;
-z-index:997 !important;
+    position:fixed !important;
+    top:36px !important;
+    left:0px !important;
+    height:calc(100vh - 40px) !important;
+    z-index:997 !important;
 }
+
 #browser {
 margin-left:50px !important;
 }
