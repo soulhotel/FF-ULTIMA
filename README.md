@@ -23,9 +23,9 @@
 >
 - Windows, Linux and Mac OS Support.
 >
-- Multiple Options - for Tab Size, Autohiding, Spacing, Tabs on Top/Right, OS compatibility [and More](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings)
+- Multiple Options - for Tab Size, Autohiding Tabs/Sidebar, Compact spacing, Toggle styling of elements, OS compatibility [and More](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings)
 >
-- Feature List todo
+- Feature List todo (Firefox 131)
 
 
 ## Installation
