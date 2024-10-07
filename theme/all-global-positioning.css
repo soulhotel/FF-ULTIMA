@@ -241,13 +241,16 @@ menubar > menu[open] {
         margin: var(--uc-content-margins) !important;
         border-radius: var(--uc-content-border-radius) !important;
         outline: 4px solid var(--toolbar-bgcolor) !important;
+        @media (-moz-bool-pref: "ultima.spacing.compact") {
+            outline: 0px solid var(--arrowpanel-background) !important;
+        }
     }          
 }
 #main-window[lwtheme] {        
     & #tabbrowser-tabpanels browser[type] {
         outline: 3px solid var(--lwt-accent-color) !important;
-        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 3px solid var(--arrowpanel-background) !important;
+        @media (-moz-bool-pref: "ultima.spacing.compact") {
+            outline: 0px solid var(--arrowpanel-background) !important;
         }
     }
 }
