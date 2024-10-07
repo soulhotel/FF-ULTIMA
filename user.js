@@ -60,7 +60,7 @@ user_pref("sidebar.revamp", true);
 user_pref("sidebar.verticalTabs", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
-user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", true);
+user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
 
 /*
 enable userchrome,
