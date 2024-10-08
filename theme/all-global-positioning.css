@@ -440,6 +440,15 @@ when on merge the titlebar (window controls) into the navigation bar */
 }
 
 
+/*888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
+
+@media (-moz-platform: windows) {
+    :root, body, * {
+        --arrowpanel-background: var(--uc-ultima-window) !important;
+    }
+}
+
+
 /*Autohide implementation ------------------------------------------------------------*/
 
 /*not using animation yet, feature is still being analyzed,
