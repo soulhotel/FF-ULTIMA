@@ -144,6 +144,13 @@ Autohide
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }}
 
+/*linux - set margin to zero, useful for WM's*/
+@media (-moz-bool-pref: "ultima.OS.zero.navbar") { @media (-moz-platform: linux), (-moz-os-version: linux) {
+    :root, body, * { --uc-window-control-margins: 0px;}
+    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}
+    :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
+}}
+
 /* Title bar ----------------------------------------------------------------------*/
 
 /*titlebar corrections*/
@@ -169,6 +176,15 @@ toolbar {
     /*color: -moz-headerbarinactivetext;*/
   }
 }
+
+/*remove buttonbox from titlebar, useful in WM's*/
+@media (-moz-bool-pref: "ultima.OS.disable.buttonbox") { @media (-moz-platform: linux), (-moz-os-version: linux) {
+    .titlebar-buttonbox{
+	:root:not([tabsintitlebar]) & {
+		display: none !important;
+	}
+    }
+}}
 
 /* Nav bar ------------------------------------------------------------------------*/
 
