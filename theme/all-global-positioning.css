@@ -434,8 +434,10 @@ still should be way easier than the original verttab hack just gotta wait*/
     z-index:997 !important;
 }
 
+#main-window:not([inDOMFullscreen="true"]) {
 #browser {
-margin-left:50px !important;
+        margin-left:50px !important;
+    }
 }
 
 #sidebar-main:has([expanded=""]):not(:hover){ width: 50px !important;}
