@@ -434,7 +434,7 @@ still should be way easier than the original verttab hack just gotta wait*/
     z-index:997 !important;
 }
 
-#main-window:not([inDOMFullscreen="true"]) {
+#main-window:not([inDOMFullscreen]) {
 #browser {
         margin-left:50px !important;
     }
