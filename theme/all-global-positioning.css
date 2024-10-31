@@ -38,7 +38,7 @@ Autohide
     --uc-button-border: 4px;
 
     /* margins */
-    --uc-content-margins: 0px 5px 5px 5px; 
+    --uc-content-margins: 2px 5px 5px 5px; 
     --uc-tab-margins-left: 3.5px 0 5px 0px; /*placehold*/
     --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
         
@@ -55,7 +55,8 @@ Autohide
     --uc-spacing-px5: 5px;
     
     /*tabs*/
-    --uc-vertical-collapsed-width:0.4px;
+    --uc-vertical-collapsed-width:50px;
+    --uc-vertical-expanded-width:250px;
     
     /*individual tabs*/
     --tab-min-height: 35px;
@@ -227,7 +228,6 @@ menubar > menu[open] {
 /* Browser Content ----------------------------------------------------------------------*/
 
 /* remove default borders and shadows v131 */
-
 #appcontent { @media (-moz-bool-pref: "sidebar.revamp") { & {
     border-top: 0 !important;
     border-inline-start: 0 !important;
@@ -239,13 +239,14 @@ menubar > menu[open] {
 }}
 
 
-/* use my custom outline border */
-
+/* add borders margins*/
+/* wrap content in outline border for overlapping webpages*/
 #main-window {
     & #tabbrowser-tabpanels browser[type] {
         margin: var(--uc-content-margins) !important;
         border-radius: var(--uc-content-border-radius) !important;
-        outline: 4px solid var(--toolbar-bgcolor) !important;
+        outline: 4px solid var(--uc-ultima-window) !important;
+        
     }          
 }
 #main-window[lwtheme] {        
@@ -317,13 +318,13 @@ menubar > menu[open] {
 
 /*spacing corrections*/
 #sidebar-main:has([expanded]) #vertical-tabs { &[visible] {
-    margin-inline-end: -8px !important;
+    /*margin-inline-end: -5px !important;*/ /*less unused space at end of individual tab*/
 }}
+#sidebar-main:has([expanded]) .tab-label-container {
+  margin-left: 10px !important; /*more space between inidividial tab icon and text*/
+}
 #sidebar-main *, #sidebar-main .wrapper {
     border-inline-end: 0px solid red !important;
-}
-#sidebar-main:has([expanded]) .tab-label-container {
-  margin-left: 10px !important;
 }
 #sidebar-main:not([positionend="true"]) {
 	margin: var(--uc-tab-margins-left) !important;
@@ -335,8 +336,8 @@ menubar > menu[open] {
 /*quick styling*/
 #sidebar-main {
     border-radius: var(--uc-sidebar-border-radius);
+    background:var(--uc-ultima-window) !important;
 }
-
 /*new tab button*/
 #vertical-tabs-newtab-button {
     border-radius:10px !important;
@@ -358,16 +359,38 @@ menubar > menu[open] {
 
 /*Autohide implementation ------------------------------------------------------------*/
 
-/*not using animation yet, feature is still being analyzed,
-visual stutter and elements overlapping,
-most likely need to transform the new sidebar into a fixed element,
-still should be way easier than the original verttab hack just gotta wait*/
 /*
-@media (-moz-bool-pref: "ultima.tabs.autohide") {
+animation works well now,
+hard setting the size of the elements works well here because they wont overlap the sidebar itself
+animating the elements inside may cause visual stutters, an eye sore
+full screen optimization needs improvement but firefox developers are changing Firefox Fullscreen elements as well,
+so this optimization will have to wait
+*/
+
+
+@media (-moz-bool-pref: "ultima.tabs.autohide") { @media not (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
+
+    /*fixed positioning to overlay content instead of pushing it to the side*/
+    #sidebar-main {       
+        position:fixed !important;
+        top:36px !important;
+        left:0px !important;
+        height:calc(100vh - 40px) !important;
+        z-index:997 !important;
+    }
+    #main-window:not([inFullscreen="true"]) #browser {
+        margin-left:50px !important;
+    }
+    #main-window[inFullscreen="true"] #sidebar-main:has([expanded]) {
+        top:0 !important;
+        height:100vh !important;   
+    }    
+    
+    /*autohide*/
     #sidebar-main:has([expanded]) {
-        transition: width 80ms linear 300ms !important;
+        transition: width 80ms linear 70ms !important;
         will-change: width !important;
-        width:initial;
+        width:var(--uc-vertical-expanded-width) !important;
     }    
     #sidebar-main:has([expanded]):not(:hover) {
         width: var(--uc-vertical-collapsed-width) !important;
@@ -379,73 +402,22 @@ still should be way easier than the original verttab hack just gotta wait*/
     #sidebar-main:has([expanded]):hover + #sidebar-box {
         margin-left:var(--uc-spacing-px0) !important;
     }
-}
-*/
 
-/* Autohide implementation 2 - thursday */
+    /*adjustments for elements within the autohidden state*/
+    #sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important} /*all tabs*/
+    #sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab[pinned=""]{width: 43px !important; min-width: 0px !important} /*pinned tabs*/
+    #sidebar-main:has([expanded=""]):not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
+    #sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{min-width: 0px !important; appearance: none !important;}
 
-@media (-moz-bool-pref: "ultima.tabs.autohide") {
-    /*bottom button demo*/
+    /*styling toolbar buttons within*/
     .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
-    .button-background {
-        &.labelled {
-            gap: 15px !important;
-        }
-    }
-    /*new tab button label adjustment*/
+    .button-background {&.labelled { gap: 15px !important;}}
     #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
         & > .toolbarbutton-text {
             padding-inline-start: var(--tab-icon-end-margin);
             margin-left:7px !important;
         }
     }	
-    /*collapse/expand demo*/
-    #sidebar-main:has([expanded=""]):not(:hover){ width: 50px !important;}
 
-    #sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important}
 
-    #sidebar-main:has([expanded=""]):not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
-
-    #sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{/*! width: 44px !important; */ min-width: 0px !important; appearance: none !important;}
-}
-
-/* Autohide implementation 3 - overlay content rather than push content to the side */
-/*
-
-.tools-and-extensions:not(:hover){ opacity:0.5 !important;}
-.button-background {
-&.labelled {
-    gap: 15px !important;
-}
-}
-
-#tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
-& > .toolbarbutton-text {
-    padding-inline-start: var(--tab-icon-end-margin);
-    margin-left:7px !important;
-}
-}	
-
-#sidebar-main {       
-    position:fixed !important;
-    top:36px !important;
-    left:0px !important;
-    height:calc(100vh - 40px) !important;
-    z-index:997 !important;
-}
-
-#main-window:not([inDOMFullscreen]) {
-#browser {
-        margin-left:50px !important;
-    }
-}
-
-#sidebar-main:has([expanded=""]):not(:hover){ width: 50px !important;}
-
-#sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important}
-
-#sidebar-main:has([expanded=""]):not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
-
-#sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{min-width: 0px !important; appearance: none !important;}
-
-*/
+}}
