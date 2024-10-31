@@ -26,6 +26,7 @@
 - `new` setting `ultima.disable.verticaltab.bar` to hide the verttabbar for sidebery like setups (`ultima.tabs.disabled` renamed/removed)
 - `new` setting `ultima.disable.alltabs.button` to disable the all tabs button unless tabs are overflowing (`ultima.xstyle.disable.alltabsbutton` renamed/removed)
 - `fix` sidebar spacing correction, when vertical tabs are expanded
+- `qol` tab audio indicator rethemed, border removed.
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
