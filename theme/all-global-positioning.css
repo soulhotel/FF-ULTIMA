@@ -293,16 +293,14 @@ menubar > menu[open] {
     width: 2px !important;
 }
 /* custom border */
-#sidebar-box, #sidebar, #sidebar-header {
+#sidebar-box, #sidebar {
     border-radius: var(--uc-sidebar-border-radius) !important;
 }
-#sidebar-header {
-    border-top-left-radius: var(--uc-sidebar-border-radius) !important;
-    border-top-right-radius: var(--uc-sidebar-border-radius) !important;
-}
-#sidebar {
-    border-bottom-left-radius: var(--uc-sidebar-border-radius) !important;
-    border-bottom-right-radius: var(--uc-sidebar-border-radius) !important;
+
+#main-window[inFullscreen="true"] {
+    #sidebar-box, #sidebar {
+        border-radius: 0px !important;
+    }
 }
 
 #sidebar { @media (-moz-bool-pref: "sidebar.revamp") { & {
@@ -350,10 +348,16 @@ menubar > menu[open] {
     #sidebar-main:has([expanded=""]) {
         width:5px !important;
     }
+    #main-window[inFullscreen="true"] #sidebar-main:has([expanded=""]) {
+        width:0px !important;
+    }
     @media (-moz-bool-pref: "ultima.spacing.compact") {
         #sidebar-main:has([expanded=""]) {
             width:0px !important;
         }
+    }
+    #sidebar-box::before {
+
     }
 }}        
 
@@ -427,5 +431,5 @@ so this optimization will have to wait
         }
     }	
 
-
 }}
+
