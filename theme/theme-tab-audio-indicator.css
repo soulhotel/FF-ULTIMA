@@ -21,6 +21,7 @@
     fill: var(--tab-icon-overlay-fill, white) !important;
     fill-opacity: 1 !important;
     background-color: rgba(30,30,30,0.7) !important;
+    border: 0px solid var(--tab-icon-overlay-fill) !important;
 }
 
 .tab-icon-overlay:not([crashed]):hover {
