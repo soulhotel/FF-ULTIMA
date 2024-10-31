@@ -381,10 +381,15 @@ so this optimization will have to wait
     #main-window:not([inFullscreen="true"]) #browser {
         margin-left:50px !important;
     }
-    #main-window[inFullscreen="true"] #sidebar-main:has([expanded]) {
+    #main-window[inFullscreen="true"] #sidebar-main {
         top:0 !important;
         height:100vh !important;   
     }    
+    #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
+        top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height)) !important;
+        height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height)) !important;
+    }
+    
     
     /*autohide*/
     #sidebar-main:has([expanded]) {
