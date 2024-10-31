@@ -213,6 +213,7 @@ menubar > menu[open] {
     border-bottom: 1px var(--uc-accent-ii) solid !important;
 }
 
+@media not (-moz-os-version: macos) {
 @media (-moz-bool-pref: "ultima.theme.menubar") { 
     #toolbar-menubar {
     	position:fixed !important;
@@ -222,6 +223,7 @@ menubar > menu[open] {
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {
         background:var(--uc-ultima-window) !important;
     }  
+}
 }
 
 
