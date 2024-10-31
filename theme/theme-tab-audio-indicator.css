@@ -20,9 +20,11 @@
     stroke: var(--tab-icon-overlay-stroke, black) !important;
     fill: var(--tab-icon-overlay-fill, white) !important;
     fill-opacity: 1 !important;
+    background-color: rgba(30,30,30,0.7) !important;
 }
 
 .tab-icon-overlay:not([crashed]):hover {
     background-color: var(--tab-loading-fill) !important;
+    fill: var(--uc-dark-color, white) !important;
     border-radius: var(--uc-all-border-radius) !important;
 }
