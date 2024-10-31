@@ -9,10 +9,15 @@
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 >[!WARNING]
-> - Firefox 133+ required
-> - User.js required
+> - Firefox 131+ required.
+> - If using Firefox `Developer Edition(133)` or `Nightly(134)` please use the `ffultima1.9-nightdev.zip` theme version below.
 
 ### Change Log:
+- `fix` setting `ultima.tabs.autohide` is now stable and visual optimized with animation and overflow (For Firefox version 133+)
+- `fix` setting `ultima.tabs.autohide` is enabled, but has no animation, visual optimization (For Firefox 131 - Default Release)
+- `fix` MacOS toolbar bug
+- `fix` fullscreen spacing correction for the autohide vertical tabs feature [#165](https://github.com/soulhotel/FF-ULTIMA/pull/165) [tthornton3-chwy](https://github.com/tthornton3-chwy)
+- `qol` notes and documentation corrections for Webpage customizations [#161](https://github.com/soulhotel/FF-ULTIMA/pull/161) [emmanuel ferdman](https://github.com/emmanuel-ferdman)
 - `new` | `fix` setting `ultima.theme.color.swap` to swap around colors when using Firefox themes. #146 
 - `new` setting `ultima.theme.icons` to use default firefox icons or Ultima themed icons (extension menu, back, forward, ublock) #146
 - `new` setting `ultima.theme.menubar` for one line menubar style
@@ -20,8 +25,6 @@
 - `new` setting `ultima.disable.verticaltab.bar` to hide the verttabbar for sidebery like setups (`ultima.tabs.disabled` renamed/removed)
 - `new` setting `ultima.disable.alltabs.button` to disable the all tabs button unless tabs are overflowing (`ultima.xstyle.disable.alltabsbutton` renamed/removed)
 - `fix` sidebar spacing correction, when vertical tabs are expanded
-- `new` setting `ultima.tabs.autohide` has been enabled, WIP, the new vertical tabs dont respond to fluid animation (waiting for Developers to clean up here)
-- `fix` fullscreen spacing correction for the autohide vertical tabs feature #165 https://github.com/soulhotel/FF-ULTIMA/pull/165 https://github.com/tthornton3-chwy
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
