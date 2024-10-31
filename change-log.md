@@ -10,11 +10,12 @@
 
 >[!WARNING]
 > - Firefox 131+ required.
+> - User.js required.
 > - If using Firefox `Developer Edition(133)` or `Nightly(134)` please use the `ffultima1.9-nightdev.zip` theme version below.
 
 ### Change Log:
 - `fix` setting `ultima.tabs.autohide` is now stable and visual optimized with animation and overflow (For Firefox version 133+)
-- `fix` setting `ultima.tabs.autohide` is enabled, but has no animation, visual optimization (For Firefox 131 - Default Release)
+- `fix` setting `ultima.tabs.autohide` is enabled (For Firefox 132 - Default Release)
 - `fix` MacOS toolbar bug
 - `fix` fullscreen spacing correction for the autohide vertical tabs feature [#165](https://github.com/soulhotel/FF-ULTIMA/pull/165) [tthornton3-chwy](https://github.com/tthornton3-chwy)
 - `qol` notes and documentation corrections for Webpage customizations [#161](https://github.com/soulhotel/FF-ULTIMA/pull/161) [emmanuel ferdman](https://github.com/emmanuel-ferdman)
