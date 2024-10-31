@@ -38,7 +38,7 @@ Autohide
     --uc-button-border: 4px;
 
     /* margins */
-    --uc-content-margins: 0px 5px 5px 5px; 
+    --uc-content-margins: 2px 5px 5px 5px; 
     --uc-tab-margins-left: 3.5px 0 5px 0px; /*placehold*/
     --uc-tab-margins-right: 3.5px 0px 5px 0; /*placehold*/
         
@@ -58,7 +58,8 @@ Autohide
     --uc-spacing-px5: 5px;
     
     /*tabs*/
-    --uc-vertical-collapsed-width:0.4px;
+    --uc-vertical-collapsed-width:50px;
+    --uc-vertical-expanded-width:250px;
     
     /*individual tabs*/
     --tab-min-height: 35px;
@@ -290,16 +291,14 @@ menubar > menu[open] {
     width: 2px !important;
 }
 /* custom border */
-#sidebar-box, #sidebar, #sidebar-header {
+#sidebar-box, #sidebar {
     border-radius: var(--uc-sidebar-border-radius) !important;
 }
-#sidebar-header {
-    border-top-left-radius: var(--uc-sidebar-border-radius) !important;
-    border-top-right-radius: var(--uc-sidebar-border-radius) !important;
-}
-#sidebar {
-    border-bottom-left-radius: var(--uc-sidebar-border-radius) !important;
-    border-bottom-right-radius: var(--uc-sidebar-border-radius) !important;
+
+#main-window[inFullscreen="true"] {
+    #sidebar-box, #sidebar {
+        border-radius: 0px !important;
+    }
 }
 
 #sidebar { @media (-moz-bool-pref: "sidebar.revamp") { & {
@@ -315,7 +314,7 @@ menubar > menu[open] {
 
 /*spacing corrections*/
 #sidebar-main:has([expanded]) #vertical-tabs { &[visible] {
-    margin-inline-end: -8px !important;
+    margin-inline-end: -4px !important;
 }}
 #sidebar-main *, #sidebar-main .wrapper {
     border-inline-end: 0px solid red !important;
@@ -449,18 +448,49 @@ when on merge the titlebar (window controls) into the navigation bar */
 }
 
 
+
 /*Autohide implementation ------------------------------------------------------------*/
 
-/*not using animation yet, feature is still being analyzed,
-visual stutter and elements overlapping,
-most likely need to transform the new sidebar into a fixed element,
-still should be way easier than the original verttab hack just gotta wait*/
 /*
-@media (-moz-bool-pref: "ultima.tabs.autohide") {
+animation works well now,
+hard setting the size of the elements works well here because they wont overlap the sidebar itself
+animating the elements inside may cause visual stutters, an eye sore
+full screen optimization needs improvement but firefox developers are changing Firefox Fullscreen elements as well,
+so this optimization will have to wait
+*/
+
+
+@media (-moz-bool-pref: "ultima.tabs.autohide") { @media not (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
+
+    /*fixed positioning to overlay content instead of pushing it to the side*/
+    #sidebar-main {       
+        position:fixed !important;
+        top:36px !important;
+        left:0px !important;
+        height:calc(100vh - 40px) !important;
+        z-index:997 !important;
+    }
+    
+    @media (-moz-bool-pref: "sidebar.revamp") {
+        #main-window:not([inFullscreen="true"]) #browser {
+            margin-left:55px !important;
+        }
+        #main-window[inFullscreen="true"] #sidebar-main {
+            top:0 !important;
+            height:100vh !important;   
+        }  
+    }
+    #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
+        top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 5px) !important;
+        height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height)) !important;
+    }
+    
+    
+    /*autohide*/
     #sidebar-main:has([expanded]) {
-        transition: width 80ms linear 300ms !important;
+        transition: width 80ms linear 70ms !important;
         will-change: width !important;
-        width:initial;
+        width:var(--uc-vertical-expanded-width) !important;
     }    
     #sidebar-main:has([expanded]):not(:hover) {
         width: var(--uc-vertical-collapsed-width) !important;
@@ -472,17 +502,21 @@ still should be way easier than the original verttab hack just gotta wait*/
     #sidebar-main:has([expanded]):hover + #sidebar-box {
         margin-left:var(--uc-spacing-px0) !important;
     }
-}
-*/
 
-/* Autohide implementation 2 - thursday */
+    /*adjustments for elements within the autohidden state*/
+    #sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab{width: 56px !important; min-width: 0px !important} /*all tabs*/
+    #sidebar-main:has([expanded=""]):not(:hover) .tabbrowser-tab[pinned=""]{width: 43px !important; min-width: 0px !important} /*pinned tabs*/
+    #sidebar-main:has([expanded=""]):not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
+    #sidebar-main:has([expanded=""]):not(:hover) #vertical-tabs-newtab-button{min-width: 0px !important; appearance: none !important;}
 
-@media (-moz-bool-pref: "ultima.tabs.autohide") {
-    #sidebar-main:not(:hover){width: 1px !important;}
+    /*styling toolbar buttons within*/
+    .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
+    .button-background {&.labelled { gap: 15px !important;}}
+    #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #vertical-tabs-newtab-button {
+        & > .toolbarbutton-text {
+            padding-inline-start: var(--tab-icon-end-margin);
+            margin-left:7px !important;
+        }
+    }	
 
-    #sidebar-main:not(:hover) .tabbrowser-tab{width: 40px !important; min-width: 0px !important}
-
-    #sidebar-main:not(:hover) .tab-label-container, #sidebar-main:not(:hover) .tab-close-button{ display: none !important; }
-
-    #sidebar-main:not(:hover) #vertical-tabs-newtab-button{width: 40px !important; min-width: 0px !important; appearance: none !important;}
-}
+}}
