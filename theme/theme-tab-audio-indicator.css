@@ -3,7 +3,7 @@
  ------------------------------------------------------------- */
 
 :root {
-    --tab-icon-overlay-stroke: var(--uc-active) !important;
+    --tab-icon-overlay-stroke: var(--uc-button-selected) !important;
 }
 
 .tab-icon-image, .tab-throbber{ 
@@ -20,9 +20,12 @@
     stroke: var(--tab-icon-overlay-stroke, black) !important;
     fill: var(--tab-icon-overlay-fill, white) !important;
     fill-opacity: 1 !important;
+    background-color: rgba(30,30,30,0.7) !important;
+    border: 0px solid var(--tab-icon-overlay-fill) !important;
 }
 
 .tab-icon-overlay:not([crashed]):hover {
     background-color: var(--tab-loading-fill) !important;
+    fill: var(--uc-dark-color, white) !important;
     border-radius: var(--uc-all-border-radius) !important;
 }
