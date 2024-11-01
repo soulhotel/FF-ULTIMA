@@ -352,6 +352,10 @@ menubar > menu[open] {
 #vertical-tabs-newtab-button {
     border-radius:10px !important;
 }
+/*pinned tabs*/
+#vertical-tabs .tabbrowser-tab[pinned] .tab-background {
+    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6);
+}
 
 /*hide the vert tab bar*/
 
