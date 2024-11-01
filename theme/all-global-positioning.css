@@ -211,7 +211,7 @@ toolbar {
   color: var(--uc-text) !important;
 }
 #toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
-  background-color: var(--uc-selected) !important;
+  background-color: var(--uc-button-selected) !important;
   color: var(--uc-text) !important;
   border-radius: 5px !important;
 }}
@@ -333,10 +333,13 @@ menubar > menu[open] {
 #sidebar-main {
     border-radius: var(--uc-sidebar-border-radius);
 }
-
 /*new tab button*/
 #vertical-tabs-newtab-button {
     border-radius:10px !important;
+}
+/*pinned tabs*/
+#vertical-tabs .tabbrowser-tab[pinned] .tab-background {
+    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6);
 }
 
 /* Vertical Tabs settings *** -----------------------------------------------------------*/
@@ -481,7 +484,7 @@ so this optimization will have to wait
         }  
     }
     #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
-        top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 5px) !important;
+        top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 3px) !important;
         height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height)) !important;
     }
     
