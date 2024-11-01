@@ -17,6 +17,7 @@ Global styling - Icons
     
 :root, body, * {
   --uc-ultima-window: rgb(225, 225, 255);
+  --uc-text: rgb(5, 5, 5);
   --uc-dark-color: #000;
   --uc-light-color: #fff;
   --uc-accent-i: rgb(108, 152, 255); /* accent colors - blues, yellows, etc. */
@@ -27,19 +28,17 @@ Global styling - Icons
   --uc-accent-vi: rgb(181, 181, 181);
   --uc-accent-vii: rgb(0, 1, 75);
   --uc-background-main: rgb(216, 217, 248);
-  --uc-background-panel: rgb(255, 255, 255);
-  --uc-background-solid: rgb(255, 255, 255);
-  --uc-background-secondary: var(--uc-background-main); /*keep it similar to tabs background ^*/
+  --uc-background-layered: rgb(255, 255, 255);
   --uc-transparent: rgba(0,0,0,0);
-  --uc-selected: rgba(115, 153, 254,0.4);
-  --uc-active: rgb(115, 153, 254);
-  --uc-text: rgb(5, 5, 5);
+  --uc-button-selected: rgba(115, 153, 254,0.4);
+  --uc-tab-selected-bg: rgb(115, 153, 254);
+  --uc-urlbar-background: rgba(37, 59, 111, 0.05);
+  --uc-panel-background: rgb(255, 255, 255);
   --uc-panel-border: rgba(25, 25, 25, 1);
   --uc-panel-border-ii: rgba(25, 25, 25, 0.5);
   --uc-context-menu: rgba(255, 255, 255, 1);
   --uc-tabs-background: var(--uc-background-main);
   --uc-sb-background: var(--uc-background-main);
-  --uc-sb-background-header: var(--uc-background-main);
   --uc-sb-background-container: var(--uc-transparent);
   --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #ffffff);
   --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #ffffff);
@@ -61,14 +60,15 @@ Global styling - Icons
     
     --toolbar-bgcolor: var(--uc-ultima-window) !important;
     
-    --tab-selected-bgcolor: var(--uc-active) !important;
+    --tab-selected-bgcolor: var(--uc-tab-selected-bg) !important;
     --tab-selected-textcolor: var(--uc-text) !important;
+    --tab-hover-background-color: var(--uc-tab-selected-bg) !important;
     --tab-loading-fill: var(--uc-accent-i) !important;
 
-    --button-hover-bgcolor: var(--uc-selected) !important;
-    --toolbarbutton-hover-background: var(--uc-selected) !important;
-    --button-active-bgcolor: var(--uc-active) !important;
-    --toolbarbutton-active-background: var(--uc-active) !important;
+    --button-hover-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-hover-background: var(--uc-button-selected) !important;
+    --button-active-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-active-background: var(--uc-button-selected) !important;
     --button-primary-bgcolor: var(--uc-accent-i) !important;
     --button-primary-hover-bgcolor: var(--uc-accent-i) !important;
     --buttons-destructive-hover-bgcolor: #9d1c1c;  /*red*/
@@ -79,10 +79,10 @@ Global styling - Icons
     --toolbar-field-border-color: var(--uc-accent-iii) !important;
     --toolbar-field-focus-border-color: var(--uc-accent-iv) !important;
     --urlbarView-result-button-selected-color: var(--uc-text) !important;
-    --urlbarView-result-button-selected-background-color: var(--uc-selected) !important;
-    --urlbarView-highlight-background: var(--uc-selected) !important;
-    --urlbarView-hover-background: var(--uc-selected) !important;
-    --urlbar-box-hover-bgcolor: var(--uc-selected) !important;
+    --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
+    --urlbarView-highlight-background: var(--uc-button-selected) !important;
+    --urlbarView-hover-background: var(--uc-button-selected) !important;
+    --urlbar-box-hover-bgcolor: var(--uc-button-selected) !important;
     --urlbar-box-hover-text-color: var(--uc-text) !important;
 
     --toolbar-field-color: var(--uc-text) !important;
@@ -92,14 +92,14 @@ Global styling - Icons
     --toolbar-field-focus-color: var(--uc-text) !important;
 
     --sidebar-text-color: var(--uc-text) !important;
-    --arrowpanel-background: var(--uc-background-panel) !important;
-    --arrowpanel-border-color: var(--uc-active) !important;
+    --arrowpanel-background: var(--uc-panel-background) !important;
+    --arrowpanel-border-color: var(--uc-panel-border-ii) !important;
     --arrowpanel-color: var(--uc-text) !important;
     --newtab-background-color: var(--uc-tabs-background) !important;
 
-    --panel-background: var(--uc-background-panel) !important;
-    --panel-item-hover-bgcolor: var(--uc-selected) !important;
-    --panel-banner-item-hover-bgcolor: var(--uc-selected) !important;
+    --panel-background: var(--uc-panel-background) !important;
+    --panel-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --panel-banner-item-hover-bgcolor: var(--uc-button-selected) !important;
     --short-notification-background: var(--uc-accent-ii) !important;
     --panel-border-color: var(--uc-panel-border) !important;
     /*
@@ -107,8 +107,8 @@ Global styling - Icons
     --organizer-pane-background: var(--uc-accent-iv) !important;
     --organizer-content-background: var(--uc-accent-iv) !important;
     --organizer-hover-background: var(--uc-accent-iv) !important;
-    --organizer-selected-background: var(--uc-selected) !important;
-    --organizer-focus-selected-color: var(--uc-selected) !important;
+    --organizer-selected-background: var(--uc-button-selected) !important;
+    --organizer-focus-selected-color: var(--uc-button-selected) !important;
     --organizer-outline-color: rgb(0,221,255) !important;
     --organizer-toolbar-field-background: var(--uc-accent-iv) !important;
     --organizer-toolbar-field-background-focused: rgb(66, 61, 98) !important; */
@@ -185,7 +185,7 @@ Global styling - Icons
     /* URL bar */
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
       margin-top: 3px !important; /*new*/
-      background-color: var(--uc-accent-iv) !important;
+      background-color: var(--uc-urlbar-background) !important;
       border-radius: var(--uc-all-border-radius) !important;
     }
 
@@ -194,7 +194,7 @@ Global styling - Icons
     }
 
     & #urlbar-background, & #searchbar {
-      background-color: var(--uc-accent-iv) !important;
+      background-color: var(--uc-urlbar-background) !important;
       border-radius: 10px !important;
       border: 0 !important;
       box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);
@@ -205,12 +205,12 @@ Global styling - Icons
     }
 
     & #urlbar[breakout][breakout-extend] {
-      background-color: var(--uc-context-menu) !important;
+      background-color: var(--uc-urlbar-background) !important;
       border-radius: 10px;
     }
 
     & #urlbar-zoom-button {
-      background-color: var(--uc-active) !important;
+      background-color: var(--uc-button-selected) !important;
       margin-top:3px !important;
     }
 
@@ -221,10 +221,10 @@ Global styling - Icons
    /* toolbar buttons */
     & .toolbarbutton-icon:hover,
     & .toolbarbutton-icon[open] {
-        background-color: var(--uc-selected) !important;
+        background-color: var(--uc-button-selected) !important;
     }        
     & #TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon
-      {background-color: var(--uc-selected) !important;}
+      {background-color: var(--uc-button-selected) !important;}
     /* bookmark button in URL bar */
     & #star-button[starred] {
       fill-opacity: 1 !important;
@@ -235,7 +235,7 @@ Global styling - Icons
       border-radius: var(--uc-button-border-radius);
     }
     & .titlebar-button:hover {
-      background-color: var(--uc-selected) !important;
+      background-color: var(--uc-button-selected) !important;
     }
     @media (-moz-platform: windows) {
       .titlebar-close:hover {
@@ -245,11 +245,11 @@ Global styling - Icons
 
     /* other panels & extensions panel */
     & .panel-subview-body {
-        background: var(--uc-background-panel) !important;
+        background: var(--uc-panel-background) !important;
     }
     & panelview,
     & #unified-extensions-view {
-        background: var(--uc-background-panel) !important;
+        background: var(--uc-panel-background) !important;
     }
     
     /* extra styling - bookmark toolbar adjustment */
@@ -261,7 +261,7 @@ Global styling - Icons
     /* menu popups */
     & .menupopup-arrowscrollbox {
         color: var(--uc-text);
-        background-color: var(--uc-background-panel) !important;
+        background-color: var(--uc-panel-background) !important;
     }    
     
     & menupopup, panel { &::part(content) {
@@ -372,7 +372,7 @@ Global styling - Icons
     /* URL bar */
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
         margin-top: 3px !important; /*new*/
-        background-color: color-mix(in srgb, var(--uc-background-main) 10%, var(--lwt-accent-color) 90%) !important;
+        background-color: color-mix(in srgb, var(--uc-urlbar-background) 10%, var(--lwt-accent-color) 90%) !important;
         border-radius: var(--uc-all-border-radius) !important;
     }
 
@@ -397,7 +397,7 @@ Global styling - Icons
     }
 
     & #urlbar-zoom-button {
-        background-color: var(--uc-active) !important;
+        background-color: var(--uc-button-selected) !important;
         margin-top:3px !important;
     }
 
@@ -467,9 +467,6 @@ splitter {@media (-moz-platform: windows) { & {
 
 /*new experimental status for side bar - keeping a universal style*/
 
-#sidebar-header {
-    background-color: var(--uc-sb-background-header) !important;
-}
 #sidebar {
     background: var(--uc-sb-background) !important;
 }
@@ -480,13 +477,13 @@ splitter {@media (-moz-platform: windows) { & {
 #sidebar-search-container #search-box, & #sidebar-search-container #viewButton {
     appearance: none !important;
     border-radius: 10px !important;
-    background-color: var(--uc-accent-iv) !important;
+    background-color: var(--uc-button-selected) !important;
     box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.6);
 }
 #bookmarksPanel #sidebar-search-container #search-box {
     appearance: none !important;
     border-radius: 10px !important;
-    background-color: var(--uc-accent-iv) !important;
+    background-color: var(--uc-button-selected) !important;
 } 
     
 /* title bar buttons - min max close */

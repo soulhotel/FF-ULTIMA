@@ -3,7 +3,7 @@
  ------------------------------------------------------------- */
 
 :root {
-    --tab-icon-overlay-stroke: var(--uc-active) !important;
+    --tab-icon-overlay-stroke: var(--uc-button-selected) !important;
 }
 
 .tab-icon-image, .tab-throbber{ 

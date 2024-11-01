@@ -5,10 +5,10 @@
 /*seek bar progress bar*/
 
 #scrubber::-moz-range-progress{
-    background-color: #FBF268 !important;
+    background-color: var(--uc-accent-i) !important;
 } #scrubber::-moz-range-thumb{
-    background-color: #FBF268 !important;
-    border: 3px solid #FBF268 !important;
+    background-color: var(--uc-accent-i) !important;
+    border: 3px solid var(--uc-accent-i) !important;
 }
 
 /*close and PIP buttons are hovered*/
@@ -19,7 +19,7 @@
 }
 
 #close:is(:hover, :focus-visible), #unpip:is(:hover, :focus-visible){
-    background-color: rgba(255, 245, 91, 0.8) !important;
+    background-color: var(--uc-accent-i) !important;
     fill: #1c1c1c !important;
 }
 
