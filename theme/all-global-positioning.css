@@ -215,7 +215,7 @@ toolbar {
   color: var(--uc-text) !important;
 }
 #toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
-  background-color: var(--uc-selected) !important;
+  background-color: var(--uc-button-selected) !important;
   color: var(--uc-text) !important;
   border-radius: 5px !important;
 }}
