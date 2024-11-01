@@ -11,7 +11,7 @@ user_pref("user.theme.dark.midnight", false);
 user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
-user_pref("ultima.tabs.autohide", false);
+user_pref("ultima.tabs.autohide", true);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
