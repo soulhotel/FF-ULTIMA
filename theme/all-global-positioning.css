@@ -448,6 +448,9 @@ so this optimization will have to wait
     }	
 
 }}
+
+/* *** use before/after as a substitute for sidebar margins */
+
 /*
 #sidebar-main::before {
     content:"'";
@@ -458,5 +461,13 @@ so this optimization will have to wait
     content:"'";
     background:red;
     opacity:0;
+}
+*/
+
+/* *** Need to figure out what modification is conflicting with the autoscroller, most likely an unspecific variable that was altered in the global-theme files*/
+
+/*
+.autoscroller {
+--panel-border-radius: 100% !important;
 }
 */
