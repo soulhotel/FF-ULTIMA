@@ -34,7 +34,8 @@ Autohide
     --uc-all-border-radius: 10px;
     --uc-content-border-radius: var(--uc-all-border-radius);
     --uc-tab-border-radius: var(--uc-all-border-radius);
-    --uc-sidebar-border-radius: var(--uc-all-border-radius);
+    /*--uc-sidebar-border-radius: var(--uc-all-border-radius);*/
+    --uc-sidebar-border-radius: 0;
     --uc-button-border: 4px;
 
     /* margins */
