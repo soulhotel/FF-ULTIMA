@@ -1,4 +1,8 @@
-/*--DO NOT TOUCH THIS SPAGHETTI--*/
+/*
+File outdated/disabled as of Firefox 131, todo
+*/
+
+/* DO NOT TOUCH THIS SPAGHETTI */
 
 /* Here lies a Safeguard for users who incorrectly enable two tab size preferences at once */
 /* if xs size is set and s is set, dont display until corrected, if s size is set and l is set dont display until... and so on. */
