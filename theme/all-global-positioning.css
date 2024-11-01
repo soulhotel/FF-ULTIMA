@@ -1,6 +1,15 @@
-/*This page is undergoing heavy modification due to Firefox v131 changes to the browser,
+/*
+This page is undergoing heavy modification due to Firefox v131 changes to the browser,
 sections marked below with a (***) will indicate any ongoing progression or mods pending completion
-due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature*/
+due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature
+
+* sidebar-main wrapper can be used as container for entire vertical tabs sidebar with accented color,
+* sidebar-main wrapper can be given a margin of 5px, while keeping autohide feature trigger-able @ screen edge
+* vertical-tabs container (width) can be modded to expand content within, including individual tab width
+* sidebar-main width can only be ultered when these conditions above are met
+* the bullets above will also restore the ability to let the user set custom vertical tab widths
+* the bullets above will restore the original ff ultima design of vert tabs, and --uc-sidebar-border-radius
+*/
 
 /*
 This file handles positioning of all main elements within the browser.
@@ -34,7 +43,8 @@ Autohide
     --uc-all-border-radius: 10px;
     --uc-content-border-radius: var(--uc-all-border-radius);
     --uc-tab-border-radius: var(--uc-all-border-radius);
-    --uc-sidebar-border-radius: var(--uc-all-border-radius);
+    /*--uc-sidebar-border-radius: var(--uc-all-border-radius);*/
+    --uc-sidebar-border-radius: 0;
     --uc-button-border: 4px;
 
     /* margins */
@@ -395,7 +405,7 @@ so this optimization will have to wait
         }  
     }
     #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
-        top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 5px) !important;
+        top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 4px) !important;
         height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height)) !important;
     }
     
