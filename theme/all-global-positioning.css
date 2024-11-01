@@ -444,4 +444,15 @@ so this optimization will have to wait
     }	
 
 }}
+/*
+#sidebar-main::before {
+    content:"'";
+    background:red;
 
+}
+#sidebar-main::after {
+    content:"'";
+    background:red;
+    opacity:0;
+}
+*/
