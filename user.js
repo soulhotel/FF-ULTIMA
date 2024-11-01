@@ -7,14 +7,11 @@ user_pref("user.theme.dark.gruvbox", false);
 user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
-/*titlebar*/
-user_pref("ultima.fix.gnome.titlebar", false);
-user_pref("ultima.fix.gnome.titlebar.small", false);
-user_pref("ultima.keep.titlebar", true);
-
-/*tabs*/
+/*titlebar and tabs*/
+user_pref("ultima.disable.alltabs.button", true);
+user_pref("ultima.disable.windowcontrols.button", false);
+user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.tabs.autohide", false);
-user_pref("ultima.tabs.disabled", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
@@ -26,6 +23,7 @@ user_pref("ultima.sidebar.longer", true);
 user_pref("ultima.theme.extensions", true);
 user_pref("ultima.theme.color.swap", true);
 user_pref("ultima.theme.icons", true);
+user_pref("ultima.theme.menubar", true);
 
 /*url bar*/
 user_pref("ultima.urlbar.suggestions", true);
@@ -37,10 +35,8 @@ user_pref("ultima.xstyle.urlbar", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
-user_pref("ultima.xstyle.lwtheme", false);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
-user_pref("ultima.xstyle.disable.alltabsbutton", true);
 
 /*specific OS overrides (like titlebar buttons)*/
 /*user_pref("ultima.OS.kde", true);
