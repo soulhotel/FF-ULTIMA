@@ -18,8 +18,8 @@ check them out if you like this theme!
 --uc-selected: rgba(50, 50, 50, 0.3);
 --uc-text: #fbfbfe;
 --uc-background: rgba(14, 14, 14, 0.6);
---uc-background-ii: rgba(20, 25, 40, 0.6);
---uc-background-iii: rgba(190,190,255,0.1);
+--uc-background-ii: rgba(20, 25, 30, 0.4);
+--uc-background-iii: rgba(190,190,215,0.1);
 --newtab-element-active-color: var(--uc-active) !important;
 }
 
