@@ -1,0 +1,65 @@
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+
+#dark-sky {background-image: url("pic/fullmoon.png") !important;}
+#dark-mountain {background-image: url("pic/catppuccin-mocha.png") !important;}
+#dark-panda {background-image: url("pic/midnight.png") !important;}
+#light-panda {background-image: url("pic/dusky.png") !important;}
+#light-fox-anniversary {background-image: url("pic/gruvbox-2.jpg") !important;}
+#dark-fox-anniversary {background-image: url("pic/old.dusky.png") !important;}
+#light-landscape {background-image: url("pic/gruvbox-l.jpg") !important;}
+#light-mountain {background-image: url("pic/gruvbox-l.png") !important;}
+#dark-beach {background-image: url("pic/gruvbox.png") !important;}
+#light-sky {background-image: url("pic/catppuccin.png") !important;}
+#light-beach {background-image: url("pic/green.png") !important;}
+#dark-landscape {background-image: url("pic/seasonal.png") !important;}
+
+:root:has(#dark-sky[aria-checked="true"]) body {background-image: url("pic/fullmoon.png") !important;}
+:root:has(#dark-mountain[aria-checked="true"]) body {background-image: url("pic/catppuccin-mocha.png") !important;}
+:root:has(#dark-panda[aria-checked="true"]) body {background-image: url("pic/midnight.png") !important;}
+:root:has(#light-panda[aria-checked="true"]) body {background-image: url("pic/dusky.png") !important;}
+:root:has(#light-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/gruvbox-2.jpg") !important;}
+:root:has(#dark-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/old.dusky.png") !important;}
+:root:has(#light-landscape[aria-checked="true"]) body {background-image: url("pic/gruvbox-l.jpg") !important;}
+:root:has(#light-mountain[aria-checked="true"]) body {background-image: url("pic/gruvbox-l.png") !important;}
+:root:has(#dark-beach[aria-checked="true"]) body {background-image: url("pic/gruvbox.png") !important;}
+:root:has(#light-sky[aria-checked="true"]) body {background-image: url("pic/catppuccin.png") !important;}
+:root:has(#light-beach[aria-checked="true"]) body {background-image: url("pic/green.png") !important;}
+:root:has(#dark-landscape[aria-checked="true"]) body {background-image: url("pic/seasonal.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/e94b1e49-c518-40d6-98e3-dffab6cc370d.avif");']) body{
+  background-image: url("pic/fullmoon.png") !important;}  
+  
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/af6073d2-cbb2-4e28-b642-3327d14808b2.avif");']) body{
+  background-image: url("pic/catppuccin-mocha.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/6b8eb3cf-f232-4c7b-a179-afd174555134.avif");']) body{
+  background-image: url("pic/midnight.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/dfd3762e-f77d-4b6e-ac75-32eb2549ef40.avif");']) body{
+  background-image: url("pic/dusky.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/a5a041de-9275-4eb5-8f21-a0171c82d388.avif");']) body{
+  background-image: url("pic/gruvbox-2.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/d8b71c77-9985-41d2-b98e-51bebc60e595.avif");']) body{
+  background-image: url("pic/old.dusky.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/d9289c5b-8c78-4b27-b5d8-afe7285ce7d1.avif");']) body{
+  background-image: url("pic/gruvbox-l.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/5344443f-f427-4029-bc6b-68bc22f83355.avif");']) body{
+  background-image: url("pic/gruvbox-l.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/966b18ad-3733-41c4-92f6-c89cdf1381d0.avif");']) body{
+  background-image: url("pic/gruvbox.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/45ecab20-ffb9-47b4-94ff-07a5f8b9f53f.avif");']) body{
+  background-image: url("pic/catppuccin.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/56a7f3ae-70cc-45f2-82ec-1d39acdd3b8d.avif");']) body{
+  background-image: url("pic/green.png") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/10e23599-85bc-4660-ae06-7a67befbbcf9.avif");']) body{
+  background-image: url("pic/seasonal.png") !important;}
+
+}
