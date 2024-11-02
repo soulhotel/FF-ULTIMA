@@ -1,5 +1,15 @@
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 
+/*
+TO CUSTOMIZE New Tab Wallpapers - replace a wallpaper in the (chrome/theme/pic) folder
+Rename your wallpaper as the one you are replacing - It's easier this way
+*/
+
+.wallpaper-list fieldset {
+  background-color: rgb(15, 15, 15) !important;
+  border-radius: 12px !important;
+}
+
 #dark-sky {background-image: url("pic/fullmoon.png") !important;}
 #dark-mountain {background-image: url("pic/catppuccin-mocha.png") !important;}
 #dark-panda {background-image: url("pic/midnight.png") !important;}
