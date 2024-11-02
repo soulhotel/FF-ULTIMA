@@ -14,6 +14,8 @@ To remove a certain feature, simple delete its line below, open website in new t
 
 @import url(theme/website-newtab.css);
 
+@import url(theme/website-newtab-wallpapers.css);
+
 @import url(theme/website-reddit.css);
 
 @import url(theme/website-yt.css);
@@ -21,4 +23,3 @@ To remove a certain feature, simple delete its line below, open website in new t
 @import url(theme/website-private.css);
 
 /*@import url(theme/websites.css);*/
-
