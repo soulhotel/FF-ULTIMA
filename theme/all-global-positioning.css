@@ -474,6 +474,9 @@ so this optimization will have to wait
 #urlbar .identity-box-button:hover
 {cursor: pointer !important; box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(35,35,35,0.9);}
 
+/* zoon controls seperator/border removed */
+#zoom-controls separator {display:none !important;}
+
 /*------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
 
