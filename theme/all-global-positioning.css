@@ -470,7 +470,8 @@ so this optimization will have to wait
 /* for user accessibility - pointer cursor to certain buttons  */
 .urlbarView-action:hover,
 #unified-extensions-panel toolbarbutton:hover,
-#urlbar .urlbar-page-action
+#urlbar .urlbar-page-action,
+#urlbar .identity-box-button
 {cursor: pointer !important;}
 
 /*------------------------------------------------------------------------------------*/
