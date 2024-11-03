@@ -23,6 +23,8 @@
 - `fix` revamped sidebar positioning adjustments when using the tabs-on-top layout
 - `qol` pointer cursor added to certain buttons around the navigation bar for user accessibility (ease of sight)
 - `qol` findbar theming enhanced
+- `todo` 👷 Rework scrollbars. Remove/seperate from global-theme files and theme accordingly with accent color variables
+- `todo` sidebar screen edges etc
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
