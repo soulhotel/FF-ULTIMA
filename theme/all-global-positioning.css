@@ -270,10 +270,6 @@ menubar > menu[open] {
     }
 }
 
-.autoscroller {
-    --panel-border-radius: 100% !important;
-    --panel-background: rgba(166,166,170,0.8) no-repeat center var(--autoscroll-background-image) !important;
-}
 
 /* Side bar *** ------------------------------------------------------------------------*/
 
@@ -328,6 +324,7 @@ menubar > menu[open] {
     margin-top:-2px !important;
 }
 
+
 /* Vertical Tabs ----------------------------------------------------------------------*/
 
 /*spacing corrections*/
@@ -380,6 +377,7 @@ menubar > menu[open] {
 
     }
 }      
+
 
 /*Autohide implementation ------------------------------------------------------------*/
 
@@ -455,25 +453,32 @@ so this optimization will have to wait
 
 }}}
 
-/* *** use before/after as a substitute for sidebar margins */
 
+/* Misc Modifications - To be moved to a more relevant file location -----------------*/
+
+/* Full screen button in the Menu (≡) Panel */
+#appMenu-fullscreen-button2 > .toolbarbutton-icon {
+    border-radius: 4px !important;
+}
+
+/* autoscroller restored to default style with adjustment */
+.autoscroller {
+    --panel-border-radius: 100% !important;
+    --panel-background: rgba(166,166,170,0.8) no-repeat center var(--autoscroll-background-image) !important;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* --------------------------------------------------*/
+
+/* *** use before/after as a substitute for sidebar margins */
 /*
 #sidebar-main::before {
     content:"'";
     background:red;
-
 }
 #sidebar-main::after {
     content:"'";
     background:red;
     opacity:0;
-}
-*/
-
-/* *** Need to figure out what modification is conflicting with the autoscroller, most likely an unspecific variable that was altered in the global-theme files*/
-
-/*
-.autoscroller {
---panel-border-radius: 100% !important;
 }
 */
