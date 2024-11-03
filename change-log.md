@@ -1,4 +1,4 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.2/ffultima1.9.2.zip) 1.9.2 latest
+### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.3/ffultima1.9.3.zip) 1.9.3 latest
 
 ###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 
@@ -10,7 +10,7 @@
 
 ### Change Log:
 - `fix` setting `ultima.tabs.autohide` is now stable and visual optimized with animation and overflow
-- `new` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
+- `new` `wip` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
 - `qol` New Tab Page menu background - blue tint reduced
 - `qol` tab audio indicator border removed
 - `fix` vertical tabs top alignment fixed #172
@@ -20,7 +20,7 @@
 - `qol` new tab button under vertical tabs - now follows selected tab color
 - `qol` autoscroller restored to default style #172
 - `fix` zoom button label margin mistargetted
-- `todo` state-specific wrapper for tabs when in tabs-on-top layout, adjusting sidebar-main height accordingly
+- `fix` revamped sidebar positioning adjustments when using the tabs-on-top layout
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
