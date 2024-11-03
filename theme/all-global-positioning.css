@@ -467,6 +467,12 @@ so this optimization will have to wait
     --panel-background: rgba(166,166,170,0.8) no-repeat center var(--autoscroll-background-image) !important;
 }
 
+/* for user accessibility - pointer cursor to certain buttons  */
+.urlbarView-action:hover,
+#unified-extensions-panel toolbarbutton:hover,
+#urlbar .urlbar-page-action
+{cursor: pointer !important;}
+
 /*------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
 
