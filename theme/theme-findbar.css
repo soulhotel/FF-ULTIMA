@@ -12,17 +12,26 @@ findbar{
 .findbar-container{
   height: 38px !important;
   padding-bottom: 4px !important;
+  margin-top:-2px;
 }
 
 .findbar-textbox{
-  width: 20em !important;
+  width: 27vw !important;
   padding-bottom: 9px !important;
   padding-top: 8px !important;
   border: 0px !important;
   background-color: var(--uc-background-main) !important;
   color: var(--uc-text) !important;
+  box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.9);
 }
 
 .findbar-textbox:focus{
   background-color: var(--uc-background-main) !important;
+}
+
+.findbar-closebutton {
+  border-radius: var(--uc-button-border-radius) !important;
+  width: 33px !important;
+  margin: -2px 8px 7px auto !important;
+  box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.9);
 }
