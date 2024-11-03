@@ -477,6 +477,14 @@ so this optimization will have to wait
 /* zoon controls seperator/border removed */
 #zoom-controls separator {display:none !important;}
 
+/* overflow icon changed to a "more" icon */
+#main-window:not([lwtheme]) #nav-bar-overflow-button {
+    list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+}
+#main-window[lwtheme] #nav-bar-overflow-button {
+    list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+}
+
 /*------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
 
