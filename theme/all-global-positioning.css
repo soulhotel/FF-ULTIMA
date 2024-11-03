@@ -270,6 +270,10 @@ menubar > menu[open] {
     }
 }
 
+.autoscroller {
+    --panel-border-radius: 100% !important;
+    --panel-background: rgba(166,166,170,0.8) no-repeat center var(--autoscroll-background-image) !important;
+}
 
 /* Side bar *** ------------------------------------------------------------------------*/
 
@@ -359,7 +363,7 @@ menubar > menu[open] {
 
 /*hide the vert tab bar*/
 
-@media (-moz-bool-pref: "ultima.disable.verticaltab.bar") { @media not (-moz-bool-pref: "ultima.tabs.autohide") {
+@media (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 
     #sidebar-main:has([expanded=""]) {
         width:5px !important;
@@ -375,7 +379,7 @@ menubar > menu[open] {
     #sidebar-box::before {
 
     }
-}}        
+}      
 
 /*Autohide implementation ------------------------------------------------------------*/
 
@@ -388,7 +392,9 @@ so this optimization will have to wait
 */
 
 
-@media (-moz-bool-pref: "ultima.tabs.autohide") { @media not (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+@media not (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 
     /*fixed positioning to overlay content instead of pushing it to the side*/
     #sidebar-main {       
@@ -447,7 +453,7 @@ so this optimization will have to wait
         }
     }	
 
-}}
+}}}
 
 /* *** use before/after as a substitute for sidebar margins */
 
