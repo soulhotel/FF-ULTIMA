@@ -1,3 +1,16 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+┏┓┏┓  ┳┳┓ ┏┳┓┳┳┳┓┏┓
+┣ ┣   ┃┃┃  ┃ ┃┃┃┃┣┫
+┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
+                   
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki
+Latest Version:    https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest                 
+License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
 /*color schemes*/
 user_pref("user.theme.dark.a", true); /*default dark mode*/
 user_pref("user.theme.light.a", true); /*default light mode*/
