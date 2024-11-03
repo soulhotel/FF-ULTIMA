@@ -19,7 +19,7 @@
 >
 - Add-on theme support, FF ULTIMA can be used with Firefox add-on themes.
 >
-- Color Scheme support, [create your own](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) or cycle through the [many options](https://github.com/soulhotel/FF-ULTIMA/wiki/Color-Schemes).
+- Color Scheme support, choose from the [many options](https://github.com/soulhotel/FF-ULTIMA/wiki/Color-Schemes) or learn how to [create your own](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme).
 >
 - Dark or Light mode themes, automatically cycle depending on your systems current Color Mode.
 >
