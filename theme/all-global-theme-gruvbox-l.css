@@ -423,7 +423,7 @@ Global styling - Icons
             
     /* global dialog box */
     :root[dialogroot] {
-        --in-content-page-background: var(--uc-background-solid) !important;
+        --in-content-page-background: var(--uc-background-layered) !important;
         color: var(--uc-text)  !important;
     }   
         
