@@ -404,9 +404,12 @@ so this optimization will have to wait
     }
     
     @media (-moz-bool-pref: "sidebar.revamp") {
-        #main-window:not([inFullscreen="true"]) #browser {
+        #main-window #browser {
             margin-left:55px !important;
         }
+        #main-window[inDOMFullscreen="true"] #browser {
+            margin-left:0px !important;
+        }   
         #main-window[inFullscreen="true"] #sidebar-main {
             top:0 !important;
             height:100vh !important;   
