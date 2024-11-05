@@ -489,7 +489,7 @@ menubar > menu[open] {
 #unified-extensions-panel toolbarbutton:hover,
 #urlbar .urlbar-page-action:hover,
 #urlbar .identity-box-button:hover
-{cursor: pointer !important; box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(35,35,35,0.9);}
+{cursor: pointer !important; box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem var(--uc-box-shadow);}
 
 /* zoom controls seperator/border removed */
 #zoom-controls separator {display:none !important;}
