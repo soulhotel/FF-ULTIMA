@@ -10,7 +10,7 @@
 
 ### Change Log:
 - `restored` Setting `ultima.tabs.autohide` autohide the new vertical tabs with smooth animation
-- `restored` Change the width of the vertical tabs with `ultima.tabs.width.small`, ultima.tabs.width.medium, ultima.tabs.width.large, or ultima.tabs.width.huge
+- `restored` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
 - `fix` MacOS stability around titlebar and window control buttons reached as of 133 update #166 (Thank you @alejandrosanchezcabana for the confirmation)
 - `new` `wip` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
 - `qol` New Tab Page menu background - blue tint reduced
