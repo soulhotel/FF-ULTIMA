@@ -343,6 +343,7 @@ menubar > menu[open] {
 }
 #vertical-tabs-newtab-button:hover,
 #tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button:hover {
+    cursor: pointer !important;
     box-shadow: var(--uc-box-shadow) !important;
 }
 /*pinned tabs*/
