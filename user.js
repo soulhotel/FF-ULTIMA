@@ -25,6 +25,10 @@ user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.tabs.autohide", true);
+user_pref("ultima.tabs.width.small", false);
+user_pref("ultima.tabs.width.medium", true);
+user_pref("ultima.tabs.width.large", false);
+user_pref("ultima.tabs.width.huge", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
