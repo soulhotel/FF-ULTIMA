@@ -115,6 +115,43 @@ Autohide
 }
 
 
+/* Vertical Tabs Width ------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+/* small width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.small") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.medium") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.large") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
+        :root, body, * {--uc-vertical-expanded-width: 250px !important;}
+        #tabbrowser-tabs {width: var(--uc-vertical-expanded-width) !important;}
+}}}}
+/* medium width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.medium") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.large") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
+        :root, body, * {--uc-vertical-expanded-width:300px !important;}
+        #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
+}}}}
+/* large width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.large") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.small") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
+        :root, body, * {--uc-vertical-expanded-width:350px !important;}
+        #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
+}}}}
+/* huge width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.huge") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.large") {
+        :root, body, * {--uc-vertical-expanded-width:450px !important;}
+        #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
+}}}}
+}
+
 /* OS Window controls -------------------------------------------------------------*/
 
 /*mac*/
