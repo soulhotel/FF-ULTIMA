@@ -339,7 +339,7 @@ menubar > menu[open] {
 }
 /*pinned tabs*/
 #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
-    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6);
+    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.7) !important;
 }
 
 
