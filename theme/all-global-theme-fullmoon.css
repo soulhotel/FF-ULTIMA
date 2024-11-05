@@ -49,6 +49,8 @@ Global styling - Icons
   --urlbar-icon-border-radius: var(--uc-all-border-radius);
   --button-border-radius: 10px;
   --uc-button-border-radius: 10px;
+  --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+  --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
 }
 
 
@@ -165,7 +167,7 @@ Global styling - Icons
         color: var(--uc-accent-i) !important;
     }
     & .tab-background[selected] {
-        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
+        box-shadow: var(--uc-box-shadow) !important;
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
@@ -184,6 +186,7 @@ Global styling - Icons
         margin-top: 3px !important; /*new*/
         background-color: var(--uc-urlbar-background) !important;
         border-radius: var(--uc-all-border-radius) !important;
+        box-shadow: 0.1rem 0.4rem 0.9rem -0.1rem rgba(25,25,25,0.9) !important;
     }
 
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
@@ -194,7 +197,7 @@ Global styling - Icons
         background-color: var(--uc-urlbar-background) !important;
         border-radius: 10px !important;
         border: 0 !important;
-        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+        box-shadow: var(--uc-box-shadow);
     }
 
     & #urlbar[open] > #urlbar-background {
@@ -325,13 +328,13 @@ Global styling - Icons
     }
     & #sidebar-box {
         background-color: var(--uc-transparent) !important;
-        box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.4);
+        box-shadow: var(--uc-box-shadow-panel);
     }
     & #sidebar-search-container #search-box, & #sidebar-search-container #viewButton {
         appearance: none !important;
         border-radius: 10px !important;
         background-color: var(--uc-accent-iv) !important;
-        box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+        box-shadow: var(--uc-box-shadow-panel);
     }
     & #bookmarksPanel #sidebar-search-container #search-box {
         appearance: none !important;
@@ -414,7 +417,7 @@ Global styling - Icons
 /* Global styling - applies everywhere ---------------------------------------------*/
 
 /* scroll bars */
-* {scrollbar-width:auto !important; scrollbar-color:rgba(50, 50, 50, 0.3) rgba(5,5,5, 0.0) !important;}
+* {scrollbar-width:auto !important; scrollbar-color:rgba(50, 50, 60, 0.3) rgba(5,5,5, 0.0) !important;}
 #navigator-toolbox {scrollbar-width:auto !important; scrollbar-color:rgba(50, 50, 60, 0.3) rgba(5,5,5, 0.0) !important;}     
     
 /* global dialog box */
@@ -471,13 +474,13 @@ splitter {@media (-moz-platform: windows) { & {
 }
 #sidebar-box {
     background-color: transparent !important;
-    box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.7);
+    box-shadow: var(--uc-box-shadow-panel);
 }
 #sidebar-search-container #search-box, & #sidebar-search-container #viewButton {
     appearance: none !important;
     border-radius: 10px !important;
     background-color: var(--uc-button-selected) !important;
-    box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+    box-shadow: var(--uc-box-shadow-panel);
 }
 #bookmarksPanel #sidebar-search-container #search-box {
     appearance: none !important;
