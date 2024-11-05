@@ -21,13 +21,12 @@
 - `qol` Audio indicator (for tabs) - now follows theme/color-scheme primary accent color
 - `qol` new tab button under vertical tabs - now follows selected tab color
 - `qol` autoscroller restored to default style #172
-- `fix` zoom button label margin mistargetted
 - `fix` readjusted sidebar positioning adjustments when using the tabs-on-top layout
-- `qol` pointer cursor added to certain buttons around the navigation bar (accessibility)
-- `qol` findbar theming enhanced
 - `qol` overflow icon on navigation bar changed to a "more" icon
 - `qol` context menu seperators reduced visibility
-- `todo` 👷 Rework scrollbars. Remove/seperate from global-theme files and theme accordingly with accent color variables
+- `qol` findbar theming enhanced
+- `qol` pointer cursor added to certain buttons around the navigation bar (accessibility)
+- `qol` vertical tabs scrollbar increased visibility (accessibility)
 - `todo` sidebar screen edges etc
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
