@@ -327,19 +327,27 @@ menubar > menu[open] {
 #sidebar-main[positionend="true"] {
 	margin: var(--uc-tab-margins-right) !important;
 }
-
+/* overflow seperator visibility reduced*/
+#tabbrowser-tabs[orient="vertical"] { &[overflow]::after {
+    opacity: 0.4 !important;
+}}
 /*quick styling*/
 #sidebar-main {
     border-radius: var(--uc-sidebar-border-radius);
     background:var(--uc-ultima-window) !important;
 }
 /*new tab button*/
-#vertical-tabs-newtab-button {
+#vertical-tabs-newtab-button,
+#tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button {
     border-radius:10px !important;
+}
+#vertical-tabs-newtab-button:hover,
+#tabbrowser-arrowscrollbox[orient="vertical"] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button:hover {
+    box-shadow: var(--uc-box-shadow) !important;
 }
 /*pinned tabs*/
 #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
-    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.7) !important;
+    box-shadow: var(--uc-box-shadow) !important;
 }
 
 
@@ -489,7 +497,7 @@ menubar > menu[open] {
 #unified-extensions-panel toolbarbutton:hover,
 #urlbar .urlbar-page-action:hover,
 #urlbar .identity-box-button:hover
-{cursor: pointer !important; box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem var(--uc-box-shadow);}
+{cursor: pointer !important; box-shadow: var(--uc-box-shadow);}
 
 /* zoom controls seperator/border removed */
 #zoom-controls separator {display:none !important;}
