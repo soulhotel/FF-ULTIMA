@@ -24,6 +24,7 @@
 - `qol` pointer cursor added to certain buttons around the navigation bar for user accessibility (ease of sight)
 - `qol` findbar theming enhanced
 - `qol` overflow icon on navigation bar changed to a "more" icon
+- `qol` context menu seperators reduced visibility
 - `todo` 👷 Rework scrollbars. Remove/seperate from global-theme files and theme accordingly with accent color variables
 - `todo` sidebar screen edges etc
 
