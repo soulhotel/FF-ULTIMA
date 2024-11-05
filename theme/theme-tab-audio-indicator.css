@@ -29,3 +29,5 @@
     fill: var(--uc-dark-color, white) !important;
     border-radius: var(--uc-all-border-radius) !important;
 }
+
+.tab-icon-overlay:hover{cursor: pointer !important;}
