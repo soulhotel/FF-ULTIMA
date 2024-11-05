@@ -424,7 +424,7 @@ Custom UI - Background
 /* Global styling - applies everywhere ---------------------------------------------*/
 
 /* scroll bars */
-* {scrollbar-width:auto !important; scrollbar-color:rgba(50, 50, 60, 0.0) rgba(5,5,5, 0.0) !important;}
+* {scrollbar-width:auto !important; scrollbar-color:rgba(70, 70, 80, 0.4) rgba(5,5,5, 0.0) !important;}
 #navigator-toolbox {scrollbar-width:auto !important; scrollbar-color:rgba(50, 50, 60, 0.3) rgba(5,5,5, 0.0) !important;}     
     
 /* global dialog box */
