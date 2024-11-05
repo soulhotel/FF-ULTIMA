@@ -6,7 +6,7 @@
                    
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki
-Latest Version:    https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest                 
+Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest                 
 License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
