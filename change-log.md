@@ -9,7 +9,8 @@
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### Change Log:
-- `fix` setting `ultima.tabs.autohide` is now stable and visual optimized with animation and overflow
+- `restored` Setting `ultima.tabs.autohide` autohide the new vertical tabs with smooth animation
+- `restored` Change the width of the vertical tabs with `ultima.tabs.width.small`, ultima.tabs.width.medium, ultima.tabs.width.large, or ultima.tabs.width.huge
 - `new` `wip` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
 - `qol` New Tab Page menu background - blue tint reduced
 - `qol` tab audio indicator border removed
