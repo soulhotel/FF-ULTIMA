@@ -1,14 +1,7 @@
 /*
 This page is undergoing heavy modification due to Firefox v131 changes to the browser,
-sections marked below with a (***) will indicate any ongoing progression or mods pending completion
-due to the expectation of changes and updates to Vertical Tabs as Firefox devs continue to patch the feature
-
-* sidebar-main wrapper can be used as container for entire vertical tabs sidebar with accented color,
-* sidebar-main wrapper can be given a margin of 5px, while keeping autohide feature trigger-able @ screen edge
-* vertical-tabs container (width) can be modded to expand content within, including individual tab width
-* sidebar-main width can only be ultered when these conditions above are met
-* the bullets above will also restore the ability to let the user set custom vertical tab widths
-* the bullets above will restore the original ff ultima design of vert tabs, and --uc-sidebar-border-radius
+sections marked below with a (***) will indicate any ongoing progression or mods pending completion -
+due to the expectations of change and updates to Vertical Tabs as Firefox devs continue to patch the feature
 */
 
 /*
@@ -19,19 +12,20 @@ ctrl+f to find a section:
 
 Global variables
 Compact spacing
-OS Window control margins
+OS Window Control Tweaks
 Title bar
 Nav bar
 Menu bar
 Browser Content
 Side bar ***
-Vertical Tabs ***
-Vertical Tabs settings ***
-Autohide
+Vertical Tabs Tweaks ***
+Vertical Tabs Disabled - setting
+Autohide Vertical Tabs - setting ***
+Vertical Tabs Width - settings
 */
 
 
-/* Global variables for quick modifications ------------------------------------------*/
+/* Global variables for quick modifications ----------------------------------------------*/
 
 :root, body, * {
     --chrome-content-separator-color: transparent;
@@ -115,71 +109,27 @@ Autohide
 }
 
 
-/* Vertical Tabs Width ------------------------------------------------------------*/
-
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-/* small width tabs */
-@media (-moz-bool-pref: "ultima.tabs.width.small") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.medium") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.large") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
-        :root, body, * {--uc-vertical-expanded-width: 250px !important;}
-        #tabbrowser-tabs {width: var(--uc-vertical-expanded-width) !important;}
-}}}}
-/* medium width tabs */
-@media (-moz-bool-pref: "ultima.tabs.width.medium") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.large") {
-    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
-        :root, body, * {--uc-vertical-expanded-width:300px !important;}
-        #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
-}}}}
-/* large width tabs */
-@media (-moz-bool-pref: "ultima.tabs.width.large") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.small") {
-    @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
-    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
-        :root, body, * {--uc-vertical-expanded-width:350px !important;}
-        #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
-}}}}
-/* huge width tabs */
-@media (-moz-bool-pref: "ultima.tabs.width.huge") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
-    @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
-    @media not (-moz-bool-pref: "ultima.tabs.width.large") {
-        :root, body, * {--uc-vertical-expanded-width:450px !important;}
-        #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
-}}}}
-}
-
-/* OS Window controls -------------------------------------------------------------*/
+/* OS Window Control Tweaks --------------------------------------------------------------*/
 
 /*mac*/
 @media (-moz-os-version: macos), (-moz-platform: macos) {
-    /*:root, body, * { --uc-window-control-margins: 84px;}
-    #nav-bar { margin-left: var(--uc-window-control-margins) !important;}*/
     toolbar {min-height: 0px !important;}
 }
 /*windows*/
 @media (-moz-platform: windows) {
-    /*:root, body, * { --uc-window-control-margins: 120px;}
-    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}*/
 }
 /*linux - kde spacing*/
 @media (-moz-platform: linux), (-moz-os-version: linux) {
-    /*:root, body, * { --uc-window-control-margins: 86px;}
-    #nav-bar { margin-right: var(--uc-window-control-margins) !important;}*/
     :root .titlebar-button {--uc-selected: transparent !important;background: transparent !important;background-color: transparent !important;}
 }
-
 /*option to disable window controls*/
 @media (-moz-bool-pref: "ultima.disable.windowcontrols.button") {
-    .titlebar-buttonbox-container {display:none !important;}
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {display:flex !important;}
+    .titlebar-buttonbox-container {display:none !important;}
 }
 
 
-/* Title bar ----------------------------------------------------------------------*/
+/* Title bar -----------------------------------------------------------------------------*/
 
 /*titlebar corrections*/
 .titlebar-spacer[type="pre-tabs"] {width:4px !important;}
@@ -190,9 +140,6 @@ Autohide
     #alltabs-button {
     	display: none !important;
     }
-}
-@media (-moz-bool-pref: "ultima.theme.icons") {
-    #alltabs-button { list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important; }
 }
 
 /*titlebar corrections*/
@@ -208,7 +155,7 @@ toolbar {
   }
 }
 
-/* Nav bar ------------------------------------------------------------------------*/
+/* Nav bar -------------------------------------------------------------------------------*/
 
 #nav-bar {
     min-height:var(--uc-navbar-height) !important;
@@ -235,7 +182,7 @@ toolbar {
 }
 
 
-/* Menu bar -----------------------------------------------------------------------*/
+/* Menu bar ------------------------------------------------------------------------------*/
 
 #toolbar-menubar {
     max-height: var(--uc-navbar-height) !important;
@@ -274,7 +221,7 @@ menubar > menu[open] {
 }
 
 
-/* Browser Content ----------------------------------------------------------------------*/
+/* Browser Content -----------------------------------------------------------------------*/
 
 /* remove default borders and shadows v131 */
 #appcontent { @media (-moz-bool-pref: "sidebar.revamp") { & {
@@ -308,7 +255,7 @@ menubar > menu[open] {
 }
 
 
-/* Side bar *** ------------------------------------------------------------------------*/
+/* Side bar *** --------------------------------------------------------------------------*/
 
 /* bigger sidebar, 50vw = 50% of the screen width */
 /* great for view-tab-in-sidebar extensions */
@@ -362,7 +309,7 @@ menubar > menu[open] {
 }
 
 
-/* Vertical Tabs ----------------------------------------------------------------------*/
+/* Vertical Tabs Tweaks ------------------------------------------------------------------*/
 
 /*spacing corrections*/
 #sidebar-main:has([expanded]) #vertical-tabs { &[visible] {
@@ -395,7 +342,8 @@ menubar > menu[open] {
     box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6);
 }
 
-/*hide the vert tab bar*/
+
+/* Vertical Tabs Disabled - setting ------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 
@@ -416,16 +364,7 @@ menubar > menu[open] {
 }      
 
 
-/*Autohide implementation ------------------------------------------------------------*/
-
-/*
-animation works well now,
-hard setting the size of the elements works well here because they wont overlap the sidebar itself
-animating the elements inside may cause visual stutters, an eye sore
-full screen optimization needs improvement but firefox developers are changing Firefox Fullscreen elements as well,
-so this optimization will have to wait
-*/
-
+/*Autohide Vertical Tabs - setting -------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
@@ -494,7 +433,45 @@ so this optimization will have to wait
 }}}
 
 
-/* Misc Modifications - To be moved to a more relevant file location -----------------*/
+/* Vertical Tabs Width - settings ------------------------------------------------------*/
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+/* small width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.small") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.medium") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.large") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
+        :root, body, * {--uc-vertical-expanded-width: 250px !important;}
+        #sidebar-main:has([expanded=""]) #tabbrowser-tabs {width: var(--uc-vertical-expanded-width) !important;}
+}}}}
+/* medium width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.medium") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.large") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
+        :root, body, * {--uc-vertical-expanded-width:300px !important;}
+        #sidebar-main:has([expanded=""]) #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
+}}}}
+/* large width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.large") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.small") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
+        :root, body, * {--uc-vertical-expanded-width:350px !important;}
+        #sidebar-main:has([expanded=""]) #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
+}}}}
+/* huge width tabs */
+@media (-moz-bool-pref: "ultima.tabs.width.huge") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
+    @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
+    @media not (-moz-bool-pref: "ultima.tabs.width.large") {
+        :root, body, * {--uc-vertical-expanded-width:450px !important;}
+        #sidebar-main:has([expanded=""]) #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
+}}}}
+}
+
+
+/* Misc Modifications - To be moved to a more relevant file location ------------------*/
 
 /* Full screen button in the Menu (≡) Panel */
 #appMenu-fullscreen-button2 > .toolbarbutton-icon {
@@ -532,7 +509,14 @@ so this optimization will have to wait
 
 /* context menu seperators reduced visibility */
 menupopup menuseparator {opacity:0.2 !important;}
-/*------------------------------------------------------------------------------------*/
+
+/* for global theme files - all tabs icon*/
+@media (-moz-bool-pref: "ultima.theme.icons") {
+    #alltabs-button { list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important; }
+}
+
+
+/*-------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
 
 /* *** use before/after as a substitute for sidebar margins */
