@@ -493,6 +493,8 @@ so this optimization will have to wait
     opacity: 0 !important;
 }
 
+/* context menu seperators reduced visibility */
+menupopup menuseparator {opacity:0.2 !important;}
 /*------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
 
