@@ -402,7 +402,7 @@ menubar > menu[open] {
     }
     #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
         top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 4px) !important;
-        height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height)) !important;
+        height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height) - 4px) !important;
     }
     
     
