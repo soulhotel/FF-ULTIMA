@@ -127,11 +127,13 @@ container tabs
 tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}
 
 /*safeguard - shrink the group container label when tabs are not expanded*/
-#sidebar-main:has(:not[expanded=""]) .tab-group-label-container {width:23px;}
-#sidebar-main:has(:not[expanded=""]) .tab-group-label {color: transparent !important;}
+@media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
+    #sidebar-main:has([closebuttons="activetab"]) .tab-group-label-container {width:23px !important;}
+    #sidebar-main:has([closebuttons="activetab"]) .tab-group-label {color: transparent !important;}
+}}
 @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
-    #sidebar-main:has([expanded=""]):not(:hover) .tab-group-label-container {width:23px;}
-    #sidebar-main:has([expanded=""]):not(:hover) .tab-group-label {color: transparent !important;}
+    #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label-container {width:23px !important;}
+    #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label {color: transparent !important;}
 }}
 
 /* remove double-background/border */
