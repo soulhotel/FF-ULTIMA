@@ -123,6 +123,9 @@ container tabs
 
 @media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") { 
 
+/* toggle collapse visibility */
+tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}
+
 /*safeguard - shrink the group container label when tabs are not expanded*/
 #sidebar-main:has(:not[expanded=""]) .tab-group-label-container {width:23px;}
 #sidebar-main:has(:not[expanded=""]) .tab-group-label {color: transparent !important;}
