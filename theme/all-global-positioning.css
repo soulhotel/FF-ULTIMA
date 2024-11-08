@@ -336,6 +336,9 @@ menubar > menu[open] {
 #vertical-pinned-tabs-container {
   margin-left: -1px !important;
 }
+#sidebar-main:has([expanded=""]) .tab-background {
+  margin-right: 7px !important;
+}
 /* overflow seperator visibility reduced*/
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {
     opacity: 0.4 !important;
