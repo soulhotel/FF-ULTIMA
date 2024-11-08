@@ -339,24 +339,7 @@ menubar > menu[open] {
 #sidebar-main:has([expanded=""]) .tab-background {
   margin-right: 7px !important;
 }
-#sidebar-main:has([expanded=""]) #vertical-tabs .tab-icon-stack {
-  margin-left: 1px !important;
-}
-#vertical-tabs .tab-icon-stack {
-  margin-left: 1px !important;
-}
-#sidebar-main:has([expanded=""]) #vertical-tabs #tabs-newtab-button .toolbarbutton-icon {
-  margin-left: 2px !important;
-}
-#vertical-tabs-newtab-button .toolbarbutton-icon {
-  margin-left: 5px !important;
-}
-#sidebar-main:has([expanded=""]) #vertical-pinned-tabs-container {
-  margin-left: -1px !important;
-}
-#vertical-pinned-tabs-container {
-  margin-left: 2px !important;
-}
+
 /* overflow seperator visibility reduced*/
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {
     opacity: 0.4 !important;
