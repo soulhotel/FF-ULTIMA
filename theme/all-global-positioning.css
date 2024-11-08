@@ -524,6 +524,11 @@ menupopup menuseparator {opacity:0.2 !important;}
     #alltabs-button { list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important; }
 }
 
+/* add box shadow to hovered tabs*/
+.tab-background { .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
+    box-shadow: var(--uc-box-shadow) !important;
+}}
+
 /* tab close button border radius */
 .tab-close-button {border-radius: 8px !important;}
 
