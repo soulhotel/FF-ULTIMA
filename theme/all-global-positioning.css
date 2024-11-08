@@ -327,6 +327,9 @@ menubar > menu[open] {
 #sidebar-main[positionend="true"] {
 	margin: var(--uc-tab-margins-right) !important;
 }
+#tabbrowser-tabs[orient="vertical"] {
+  margin-left: -1px !important;
+}
 /* overflow seperator visibility reduced*/
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {
     opacity: 0.4 !important;
