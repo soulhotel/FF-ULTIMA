@@ -327,8 +327,11 @@ menubar > menu[open] {
 #sidebar-main[positionend="true"] {
 	margin: var(--uc-tab-margins-right) !important;
 }
-.tab-icon-stack {
+#vertical-tabs .tab-icon-stack {
   margin-left: 1px !important;
+}
+#vertical-tabs #tabs-newtab-button .toolbarbutton-icon {
+  margin-left: 2px !important;
 }
 /* overflow seperator visibility reduced*/
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {
