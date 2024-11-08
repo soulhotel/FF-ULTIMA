@@ -333,6 +333,9 @@ menubar > menu[open] {
 #vertical-tabs #tabs-newtab-button .toolbarbutton-icon {
   margin-left: 2px !important;
 }
+#vertical-pinned-tabs-container {
+  margin-left: -1px !important;
+}
 /* overflow seperator visibility reduced*/
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {
     opacity: 0.4 !important;
