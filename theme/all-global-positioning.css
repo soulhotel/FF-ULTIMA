@@ -391,7 +391,6 @@ menubar > menu[open] {
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
 @media not (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
-
     /*fixed positioning to overlay content instead of pushing it to the side*/
     #sidebar-main {       
         position:fixed !important;
@@ -402,16 +401,20 @@ menubar > menu[open] {
     }
     
     @media (-moz-bool-pref: "sidebar.revamp") {
-        #main-window #browser {
+        #main-window:not([inDOMFullscreen="true"]) #browser:not(:has(#sidebar-main[hidden="true"])) {
             margin-left:50px !important;
         }
-        #main-window[inDOMFullscreen="true"] #browser {
-            margin-left:0px !important;
-        }   
-        #main-window[inFullscreen="true"] #sidebar-main {
-            top:0 !important;
-            height:100vh !important;   
-        }  
+
+        #main-window[inFullscreen="true"] {
+            #sidebar-main {
+                top:0 !important;
+                height:100vh !important;   
+            }
+    
+            #navigator-toolbox:has(+ #browser > #sidebar-main:not([hidden="true"])) {
+                padding-left: var(--uc-vertical-collapsed-width);
+            }
+        }
     }
     #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
         top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 4px) !important;
@@ -450,8 +453,7 @@ menubar > menu[open] {
             padding-inline-start: var(--tab-icon-end-margin);
             margin-left:12px !important;
         }
-    }	
-
+    }
 }}}
 
 
