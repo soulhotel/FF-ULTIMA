@@ -528,47 +528,86 @@ Global styling - Icons
         
     /* Global styling - Icons --------------==========----------------------------------*/
     
-    @media (-moz-bool-pref: "ultima.theme.icons") {
+@media (-moz-bool-pref: "ultima.theme.icons") {  
+    /*--extension menu--*/
+    #main-window:not([lwtheme]) #unified-extensions-button {
+      list-style-image: url("icons/extensions.svg") !important;
+      fill: var(--toolbarbutton-icon-fill) !important;
+    }
+    #main-window[lwtheme] #unified-extensions-button {
+      list-style-image: url("icons/extensions.svg") !important;
+      fill: var(--lwt-accent-color) !important;
+    }
+    /*--bookmarks folder icon--*/
+    .bookmark-item[container=true] {
+      list-style-image: url("icons/bm.png") !important;
+    }
+    /*--ublock on--*/
+    #ublock0_raymondhill_net-BAP image{
+      list-style-image: url("icons/ubon.png") !important;
+    }
+    /*--ublock off--*/
+    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
+      list-style-image: url("icons/uboff.png") !important;
+    }
+    #forward-button image{
+      list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+      stroke: var(--uc-accent-iii) !important;
+    }
+    #back-button image{
+      list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+      stroke: var(--uc-accent-iii) !important;
+    }
+    /* overflow icon changed to a "more" icon */
+    #nav-bar-overflow-button {
+        list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+    }
+    #alltabs-button {
+        list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important;
+    }
+}    
+    
+/*notification badges*/
+.toolbarbutton-badge {
+  background-color: rgba(0,0,0,0.3) !important;
+  box-shadow: 0 !important;
+  color: var(--uc-text) !important;
+  text-shadow: #FDFFFF 0.5px 0 15px!important;
+}
 
-        /*--extension menu--*/
-        #main-window:not([lwtheme]) #unified-extensions-button {
-          list-style-image: url("icons/extensions.svg") !important;
-          fill: var(--uc-accent-i) !important;
-        }
-        #main-window[lwtheme] #unified-extensions-button {
-          list-style-image: url("icons/extensions.svg") !important;
-          fill: var(--lwt-accent-color) !important;
-        }
-        /*--bookmarks folder icon--*/
-        .bookmark-item[container=true] {
-          list-style-image: url("icons/bm.png") !important;
-        }
-        /*--ublock on--*/
-        #ublock0_raymondhill_net-BAP image{
-          list-style-image: url("icons/ubon.png") !important;
-        }
-        /*--ublock off--*/
-        #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
-          list-style-image: url("icons/uboff.png") !important;
-        }
-        #forward-button image{
-          list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
-          stroke: var(--uc-accent-iii) !important;
-        }
-        #back-button image{
-          list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
-          stroke: var(--uc-accent-iii) !important;
-        }
-    
-    }
-    
-    /*--notification badges--*/
-    .toolbarbutton-badge {
-      background-color: rgba(0,0,0,0.3) !important;
-      box-shadow: 0 !important;
-      color: var(--uc-text) !important;
-      text-shadow: #FDFFFF 0.5px 0 15px!important;
-    }
-    
+/* autoscroller restored to default style with adjustment */
+.autoscroller {
+    --panel-border-radius: 100% !important;
+    --panel-background: rgba(166,166,170,0.8) no-repeat center var(--autoscroll-background-image) !important;
+}
+
+/* Full screen button in the Menu (≡) Panel */
+#appMenu-fullscreen-button2 > .toolbarbutton-icon {
+    border-radius: 4px !important;
+}
+
+/* for user accessibility - pointer cursor to certain buttons  */
+.urlbarView-action:hover,
+#unified-extensions-panel toolbarbutton:hover,
+#urlbar .urlbar-page-action:hover,
+#urlbar .identity-box-button:hover
+{cursor: pointer !important; box-shadow: var(--uc-box-shadow);}
+
+/* zoom controls seperator/border removed */
+#zoom-controls separator {display:none !important;}
+
+/* devtools bottom view splitter removed */
+.devtools-horizontal-splitter {
+    opacity: 0 !important;
+}
+
+/* context menu seperators reduced visibility */
+menupopup menuseparator {opacity:0.2 !important;}
+
+/* add box shadow to hovered tabs*/
+.tab-background { .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
+    box-shadow: var(--uc-box-shadow) !important;
+}}
+
 }
     
