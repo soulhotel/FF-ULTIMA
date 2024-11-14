@@ -128,7 +128,7 @@ Vertical Tabs Disabled - setting
 /* allow screen edge to toggle close button hover*/
 @media not (-moz-platform: macos) {
     .titlebar-close::after {
-        content: "";background-color:red;position: absolute;
+        content: "";background-color:none;position: absolute;
         z-index: 9999;top: 0;right: -5px;width: 10px;height: var(--uc-navbar-height);
     }
 }
