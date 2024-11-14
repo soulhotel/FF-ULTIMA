@@ -128,7 +128,7 @@ Vertical Tabs Disabled - setting
 /* allow screen edge to toggle close button hover*/
 @media not (-moz-platform: macos) {
     .titlebar-close::after {
-        content: "";background-color:none;position: absolute;
+        content: "";background-color:red;position: absolute;
         z-index: 9999;top: 0;right: -5px;width: 10px;height: var(--uc-navbar-height);
     }
 }
@@ -307,8 +307,8 @@ box-shadow: none !important;}}
 @media (-moz-bool-pref: "ultima.tabs.autohide"), (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     :root:has(#sidebar-box:not([hidden])) {
-        --uc-sb-margins: 0px 5px 0px 5px;
-        --uc-sb-margins-right: 0px 5px 0px 5px;
+        --uc-sb-margins: 0px 5px 0px 0px;
+        --uc-sb-margins-right: 0px 0px 0px 5px;
     }
 
     
@@ -443,7 +443,7 @@ box-shadow: none !important;}}
     /*browser space adjustments*/
     @media (-moz-bool-pref: "sidebar.revamp") {
         #main-window #browser {
-            margin-left:50px !important;
+            margin-left:55px !important;
         }
         #main-window[inDOMFullscreen="true"] #browser {
             margin-left:0px !important;
