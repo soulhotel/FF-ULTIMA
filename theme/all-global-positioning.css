@@ -128,7 +128,7 @@ Vertical Tabs Disabled - setting
 /* allow screen edge to toggle close button hover*/
 @media not (-moz-platform: macos) {
     .titlebar-close::after {
-        content: "";background-color:red;position: absolute;
+        content: "";background-color:none;position: absolute;
         z-index: 9999;top: 0;right: -5px;width: 10px;height: var(--uc-navbar-height);
     }
 }
@@ -355,6 +355,9 @@ box-shadow: none !important;}}
 }
 /* vertical toolbar tweaks*/
 .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
+.wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {justify-content: start !important;}
+
+
 .button-background {&.labelled { gap: 15px !important;}}
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {opacity: 0.4 !important;}}
 :root{--tabstrip-inner-border: 1px solid color-mix(in srgb, var(--uc-accent-ii) 75%, transparent) !important;}
@@ -434,16 +437,20 @@ box-shadow: none !important;}}
     }
     /*browser space adjustments*/
     @media (-moz-bool-pref: "sidebar.revamp") {
-        #main-window #browser {
+        #main-window:not([inDOMFullscreen="true"]) #browser:not(:has(#sidebar-main[hidden="true"])) {
             margin-left:55px !important;
         }
-        #main-window[inDOMFullscreen="true"] #browser {
-            margin-left:0px !important;
-        }   
-        #main-window[inFullscreen="true"] #sidebar-main {
-            top:0 !important;
-            height:100vh !important;   
-        }  
+
+        #main-window[inFullscreen="true"] {
+            #sidebar-main {
+                top:0 !important;
+                height:100vh !important;   
+            }
+
+            #navigator-toolbox:has(+ #browser > #sidebar-main:not([hidden="true"])) {
+                padding-left: var(--uc-vertical-collapsed-width);
+            }
+        }
     }
     /*fullscreen adjustments*/
     #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
