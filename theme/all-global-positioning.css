@@ -303,15 +303,7 @@ box-shadow: none !important;}}
     --uc-content-margins: 2px 0px 5px 5px;
 }
 
-/*if either of these settings are on - margin correction*/
-@media (-moz-bool-pref: "ultima.tabs.autohide"), (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
-    :root:has(#sidebar-box:not([hidden])) {
-        --uc-sb-margins: 0px 5px 0px 0px;
-        --uc-sb-margins-right: 0px 0px 0px 5px;
-    }
 
-    
 /* Vertical Tabs Width - settings ------------------------------------------------------*/
 
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
@@ -549,6 +541,21 @@ box-shadow: none !important;}}
     }
 
 }}
+
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    :root:has(#sidebar-box:not([hidden])) {
+        --uc-sb-margins: 0px 5px 0px 0px;
+        --uc-sb-margins-right: 0px 5px 0px 5px;
+    }
+} 
+@media (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    :root:has(#sidebar-box:not([hidden])) {
+        --uc-sb-margins: 0px 5px 0px 5px;
+        --uc-sb-margins-right: 0px 5px 0px 5px;
+    }
+}
 
 /*-------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
