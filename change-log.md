@@ -8,11 +8,17 @@
 
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
+>[!WARNING]
+> - Firefox 132+ required.
+> - User.js required.
+
 ### Change Log:
 - `restored` Setting `ultima.tabs.autohide` autohide the new vertical tabs with smooth animation
 - `restored` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
-- `new` tab groups has reached Firefox and a new FF Ultima setting to style them `ultima.xstyle.tabgroups.i`
-- `fix` MacOS stability around titlebar and window control buttons reached as of 133 update #166 (Thank you @alejandrosanchezcabana for the confirmation)
+- `new` tab groups has reached Firefox and a new FF Ultima setting to style them `ultima.xstyle.tabgroups.i`. You can now group your tabs like sidebery, and collapse them.
+- `fix` MacOS titlebar and window control button issues fixed as of v133 update #166 (Thank you @alejandrosanchezcabana for the confirmation)
+- `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato
+- `qol` Using `ultima.disable.verticaltab.bar` will now completely remove the vertical bar, still accessible via a shortcut button
 - `new` `wip` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
 - `qol` New Tab Page menu background - blue tint reduced
 - `qol` tab audio indicator border removed
@@ -28,7 +34,7 @@
 - `qol` findbar theming enhanced
 - `qol` pointer cursor added to certain buttons around the navigation bar (accessibility)
 - `qol` vertical tabs scrollbar increased visibility (accessibility)
-- `todo` sidebar screen edges etc
+- `qol` hovering the edge of the screen where the titlebar `x` close button is, will trigger as a hover (accessibility) #112 #141
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
