@@ -30,6 +30,7 @@
 - `qol` findbar theming enhanced
 - `qol` pointer cursor added to certain buttons around the navigation bar (accessibility)
 - `qol` vertical tabs scrollbar increased visibility (accessibility)
+- `qol` hovering the edge of the screen where the titlebar `x` close button is, will trigger as a hover (accessibility)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
