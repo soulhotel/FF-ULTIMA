@@ -49,6 +49,8 @@ user_pref("ultima.urlbar.hidebuttons", false);
 user_pref("ultima.xstyle.urlbar", false);
 
 /*alternate styles*/
+user_pref("ultima.spacing.compact", false);
+user_pref("ultima.spacing.compact.tabs", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
