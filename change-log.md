@@ -13,10 +13,10 @@
 > - User.js required.
 
 ### Change Log:
-- `restored` Setting `ultima.tabs.autohide` autohide the new vertical tabs with smooth animation
-- `restored` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
-- `new` tab groups has reached Firefox and a new FF Ultima setting to style them `ultima.xstyle.tabgroups.i`. You can now group your tabs like sidebery, and collapse them.
-- `fix` MacOS titlebar and window control button issues fixed as of v133 update #166 (Thank you @alejandrosanchezcabana for the confirmation)
+- `❗` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
+- `❗` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
+- `❗` tab groups has reached Firefox with new FF Ultima options to style them `ultima.xstyle.tabgroups.i` by @tthornton3-chwy, and `ultima.xstyle.tabgroups.ii`. You can now group your tabs like sidebery & collapse them!
+- `❗` MacOS titlebar and window control button issues fixed as of v133 update #166 (Thank you @alejandrosanchezcabana for the confirmation)
 - `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato
 - `qol` Using `ultima.disable.verticaltab.bar` will now completely remove the vertical bar, still accessible via a shortcut button
 - `new` `wip` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
@@ -29,6 +29,7 @@
 - `qol` new tab button under vertical tabs - now follows selected tab color
 - `qol` autoscroller restored to default style #172
 - `fix` readjusted sidebar positioning adjustments when using the tabs-on-top layout
+- `qol` Sidebar margin corrections *when in fullscreen* and added toolbar padding [#179](https://github.com/soulhotel/FF-ULTIMA/pull/179)
 - `qol` overflow icon on navigation bar changed to a "more" icon
 - `qol` context menu seperators reduced visibility
 - `qol` findbar theming enhanced
