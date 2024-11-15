@@ -194,66 +194,64 @@ container tabs
 @media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") { 
 
     @media (-moz-bool-pref: "sidebar.verticalTabs") {
-      .tab-group-label-container {
-        width: calc(var(--uc-vertical-collapsed-width) - 4px) !important;
-
-      }
+        .tab-group-label-container {
+            width: calc(var(--uc-vertical-collapsed-width) - 4px) !important;
+        }
     }
 
     @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-      .tab-group-label-container {
-        margin-inline: 18px !important;
-        height: 39px !important;
-      }
+        .tab-group-label-container {
+            margin-inline: 18px !important;
+            height: 39px !important;
+        }
     }
 
     .tab-group-label-container {
-      background-color: transparent !important;
-      border-radius: var(--uc-tab-border-radius) !important;
+        background-color: transparent !important;
+        border-radius: var(--uc-tab-border-radius) !important;
      }
     .tab-group-label {
-      /*height: 18px !important;*/
-      cursor: pointer !important;
+        height: 18px !important;
+        cursor: pointer !important;
       }
     tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
-    tab-group .tabbrowser-tab .tab-background {min-width:200px !important;}
 
     /* tab groups colors */
-    tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab .tab-stack {
-      background: color-mix(in lab, blue 20%, var(--uc-ultima-window) 50%) !important;
+    tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab {
+        background: color-mix(in lab, blue 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab {
-      background: color-mix(in lab, purple 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, purple 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab {
-      background: color-mix(in lab, cyan 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, cyan 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab {
-      background: color-mix(in lab, orange 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, orange 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab {
-      background: color-mix(in lab, yellow 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, yellow 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab {
-      background: color-mix(in lab, pink 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, pink 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-green"] .tabbrowser-tab {
-      background: color-mix(in lab, green 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, green 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-red"] .tabbrowser-tab {
-      background: color-mix(in lab, red 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, red 20%, var(--uc-ultima-window) 50%) !important;
     }
     tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab {
-      background: color-mix(in lab, gray 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, gray 20%, var(--uc-ultima-window) 50%) !important;
     }
 
 }
 /* ------------------------------------------------------------------------------------ */
 
 @media (-moz-bool-pref: "ultima.spacing.compact.tabs") { 
-.tab-background {
-  margin-block: 0px !important;
-  }
+    .tab-background {
+          margin-block: 0px !important;
+      }
 }
 /* ------------------------------------------------------------------------------------ */
 
