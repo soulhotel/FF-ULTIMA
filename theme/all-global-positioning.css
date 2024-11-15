@@ -389,6 +389,7 @@ box-shadow: none !important;}}
 
 /*extra extra---------------------------------*/
 
+/*consistent box shadows*/
 .tab-background {
   .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
       box-shadow: var(--uc-box-shadow) !important;
@@ -403,6 +404,14 @@ box-shadow: none !important;}}
 #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
     box-shadow: var(--uc-box-shadow) !important;
 }
+/*vertbar toolbar buttons*/
+:root{
+    --button-background-color-ghost-hover: var(--uc-button-selected) !important;
+    --button-background-color: var(--uc-button-selected) !important;
+    --button-background-color-hover: var(--uc-button-selected) !important;
+    --button-background-color-active: var(--uc-button-selected) !important;
+}
+
 /*--------------------------------------------*/
 
 
