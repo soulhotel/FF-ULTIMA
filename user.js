@@ -58,7 +58,6 @@ user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
-user_pref("ultima.xstyle.tabgroups.i", true);
 
 /*specific OS overrides (like titlebar buttons)*/
 /*user_pref("ultima.OS.kde", true);
