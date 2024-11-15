@@ -80,7 +80,7 @@ Vertical Tabs Disabled - setting
         --uc-sidebar-border-radius: 0px !important;
         --uc-button-border: 4px;
         /* margins */
-        --uc-content-margins: 0px;
+        --uc-content-margins: 0px !important;
         --uc-tab-margins-left: 0px;
         --uc-tab-margins-right: 0px; 
         --uc-sb-margins: 0px !important;
@@ -99,7 +99,7 @@ Vertical Tabs Disabled - setting
     --uc-tab-border-radius: 0px;
     --uc-sidebar-border-radius: 0px;
     /* margins */
-    --uc-content-margins: 0px;
+    --uc-content-margins: 0px !important;
     --uc-tab-margins-left: 0px;
     --uc-tab-margins-right: 0px; 
     --uc-sb-margins: 0px !important;
