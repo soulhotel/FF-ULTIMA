@@ -80,7 +80,7 @@ user_pref("toolkit.tabbox.switchByScrolling", false);
 user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
 user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 user_pref("widget.gtk.native-context-menus", false);
-user_pref("widget.gtk.non-native-titlebar-buttons.enabled", false);
+/*user_pref("widget.gtk.non-native-titlebar-buttons.enabled", false);*/
 
 user_pref("sidebar.revamp", true);
 user_pref("sidebar.verticalTabs", true);
