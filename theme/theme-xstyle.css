@@ -25,6 +25,11 @@ container tabs
     }
 }
 
+/*extras*/
+:root { --urlbar-box-bgcolor: color-mix(in srgb, var(--uc-button-selected) 50%, transparent) !important;}
+#identity-box, #tracking-protection-icon-container, #page-action-buttons {
+    margin-top:1px !important; margin-bottom:-1px !important; cursor: pointer !important;
+}
 
 /* theme colors -------------------------------------------------------------------------------------------------- */
 /*alternative styling for theme colors by rearranging current color palette/variables*/
