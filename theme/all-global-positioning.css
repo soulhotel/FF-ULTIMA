@@ -355,11 +355,11 @@ box-shadow: none !important;}}
 }
 /* vertical toolbar tweaks*/
 .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
-.wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {justify-content: start !important;}
+.wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {justify-content: start !important;margin-left:1px !important;}
 
 
 .button-background {&.labelled { gap: 15px !important;}}
-#tabbrowser-tabs[orient="vertical"] { &[overflow]::after {opacity: 0.4 !important;}}
+#tabbrowser-tabs[orient="vertical"] { &[overflow]::after {opacity: 0 !important;}}
 :root{--tabstrip-inner-border: 1px solid color-mix(in srgb, var(--uc-accent-ii) 75%, transparent) !important;}
 
 /*vt when not expanded*/
@@ -367,11 +367,14 @@ box-shadow: none !important;}}
     width:var(--uc-vertical-collapsed-width) !important;
     & .tabbrowser-tab {width:var(--uc-vertical-collapsed-width) !important;}
     /* keep tab group labels shrunken/hidden*/
+    @media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") {
     & .tab-group-label-container {width:23px !important;}
-    & .tab-group-label {color: transparent !important;}    
+    & .tab-group-label {color: transparent !important;}
+    }
     /* tab sizing tweaks*/
     & .tab-icon-stack {margin-left: 1px !important;}
     & #tabs-newtab-button .toolbarbutton-icon {margin-left: 2px !important;}
+    & #vertical-tabs-newtab-button .toolbarbutton-icon {margin-left: 2px !important;}
 }
 
 /*vt when expanded*/
@@ -380,6 +383,7 @@ box-shadow: none !important;}}
     /*tab sizing tweaks*/
     & .tab-icon-stack {margin-left: 1px !important;}
     & #tabs-newtab-button .toolbarbutton-icon {margin-left: 2px !important;}
+    & #vertical-tabs-newtab-button .toolbarbutton-icon {margin-left: 2px !important;}
     & .tab-label-container {margin-left: 4px !important;/*more space between tab icon and text*/}
    
 }
@@ -434,6 +438,7 @@ box-shadow: none !important;}}
         & .tabbrowser-tab[pinned=""]{width: 41px !important; min-width: 0px !important}
         & .tab-label-container, & .tab-close-button{ display: none !important;}
         & #tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
+        & #vertical-tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
     }
     /*browser space adjustments*/
     @media (-moz-bool-pref: "sidebar.revamp") {
