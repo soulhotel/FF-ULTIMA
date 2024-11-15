@@ -9,15 +9,17 @@
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 >[!WARNING]
-> - Firefox 132+ required.
+> - Firefox 133+ required.
 > - User.js required.
+> - Release targetted for November 29th.
 
 ### Change Log:
-- `❗` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
-- `❗` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
-- `❗` tab groups has reached Firefox with new FF Ultima options to style them `ultima.xstyle.tabgroups.i` by @tthornton3-chwy, and `ultima.xstyle.tabgroups.ii`. You can now group your tabs like sidebery & collapse them!
-- `❗` MacOS titlebar and window control button issues fixed as of v133 update #166 (Thank you @alejandrosanchezcabana for the confirmation)
-- `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato
+- `♻️` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
+- `♻️` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
+- `❗` Try out `Tab groups` has reached Firefox with new FF Ultima options to style them `ultima.xstyle.tabgroups.i` by @tthornton3-chwy!
+- `qol` Right clicking tabs and putting them into groups allows you to seperate and even collapse groups!
+- `fix` MacOS titlebar bugs are patched #166 (Thank you @alejandrosanchezcabana for confirmation)
+- `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato)
 - `qol` Using `ultima.disable.verticaltab.bar` will now completely remove the vertical bar, still accessible via a shortcut button
 - `new` `wip` Change your New Tab Wallpapers to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled`
 - `qol` New Tab Page menu background - blue tint reduced
