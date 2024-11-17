@@ -22,6 +22,7 @@
 - `qol` Wiki Up-to-Date!
 - `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato)
 - `qol` Using `ultima.disable.verticaltab.bar` will now completely remove the vertical bar, still accessible via a shortcut button
+- `qol``new` Setting `ultima.spacing.compact.tabs` to reduce spacing between tabs (vertical), letting you see more at once.
 - `new` `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` (wip. unstable)
 - `qol` New Tab Page menu background - blue tint reduced
 - `qol` tab audio indicator border removed
@@ -39,7 +40,7 @@
 - `qol` pointer cursor added to certain buttons around the navigation bar (accessibility)
 - `qol` vertical tabs scrollbar increased visibility (accessibility)
 - `qol` hovering the edge of the screen where the titlebar `x` close button is, will trigger as a hover (accessibility) #112 #141
-
+- `wip` Setting `ultima.xstyle.bookmarks.fading` makes the bookmarks toolbar fade in/out smoothly.
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
 ![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)
