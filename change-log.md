@@ -15,8 +15,8 @@
 
 ### Change Log:
 - `♻️` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
-- `♻️` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
-- `❗` Try out `Tab groups` has reached Firefox with new FF Ultima options to style them `ultima.xstyle.tabgroups.i` by @tthornton3-chwy!
+- `new` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
+- `new` Try out `Tab groups` has reached Firefox with new FF Ultima options to style them `ultima.xstyle.tabgroups.i` by @tthornton3-chwy!
 - `qol` Right clicking tabs and putting them into groups allows you to seperate and even collapse groups!
 - `fix` MacOS titlebar bugs are patched #166 (Thank you @alejandrosanchezcabana for confirmation)
 - `qol` Wiki Up-to-Date!
