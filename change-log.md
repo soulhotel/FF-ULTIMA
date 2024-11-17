@@ -11,7 +11,7 @@
 >[!WARNING]
 > - Firefox 133+ required.
 > - User.js required.
-> - Release targetted for November 29th.
+> - A lot of new settings, YAY! Read up!
 
 ### Change Log:
 - `♻️` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
