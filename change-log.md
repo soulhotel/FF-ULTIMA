@@ -9,14 +9,17 @@
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 >[!WARNING]
+> - If you are using Default Firefox before November 29th (version 132) DO NOT DOWNLOAD ⚠️
 > - Firefox 133+ required.
 > - User.js required.
 > - A lot of new settings, YAY! Read up!
 
 ### Change Log:
 - `♻️` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
-- `new` Change the width of the vertical tabs with `ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
-- `new` Firefox finally has `Tab groups` & You now have options to style them with `ultima.xstyle.tabgroups.i` by @tthornton3-chwy (Thank You) and `ultima.xstyle.tabgroups.ii`
+- `new` Change the width of the vertical tabs with:
+>`ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
+- `new` Firefox finally has **Tab Groups** & You now have options to style them with:
+>`ultima.xstyle.tabgroups.i` by @tthornton3-chwy and `ultima.xstyle.tabgroups.ii`
 - `qol` Right clicking tabs and putting them into groups allows you to seperate and even collapse groups!
 - `fix` MacOS titlebar bugs are patched #166 (Thank you @alejandrosanchezcabana for confirmation)
 - `qol` Wiki Up-to-Date!
