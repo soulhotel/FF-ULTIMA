@@ -9,10 +9,13 @@
 ###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 >[!WARNING]
-> - If you are using Default Firefox before November 29th (version 132) DO NOT DOWNLOAD ⚠️
 > - Firefox 133+ required.
 > - User.js required.
-> - A lot of new settings, YAY! Read up!
+> - A lot of new settings, YAY! **Click the Video** or read up!
+
+[![ffultima193preview](https://github.com/user-attachments/assets/1f4c2885-77c4-488f-95a6-055c58f8f572)](https://www.youtube.com/watch?v=KDwWr7QMV8s)
+
+
 
 ### Change Log:
 - `♻️` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
