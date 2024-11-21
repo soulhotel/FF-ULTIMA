@@ -302,6 +302,12 @@ box-shadow: none !important;}}
 :root:has(#sidebar-box[hidden][positionend]) {
     --uc-content-margins: 2px 0px 5px 5px;
 }
+:root:has(#sidebar-box[hidden],#sidebar-main[visible]) {
+    --uc-content-margins: 2px 5px 5px 5px;
+}
+:root:has(#sidebar-box[hidden][positionend],#sidebar-main[visible]) {
+    --uc-content-margins: 2px 5px 5px 5px;
+}
 
 
 /* Vertical Tabs Width - settings ------------------------------------------------------*/
