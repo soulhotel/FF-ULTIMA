@@ -172,7 +172,7 @@ toolbar {
 /*...*/
 #titlebar:has([inactive="true"]){z-index:997 !important;}
 #nav-bar {z-index:998 !important;}
-
+#nav-bar {border-top: 0px red red !important;}
 /*url bar*/
 /*autocorrect overlapping buttons (spacing) - when the Browser falls under a certain width*/
 @media (max-width: 700px) {
@@ -248,9 +248,6 @@ box-shadow: none !important;}}
 #main-window[lwtheme] {        
     & #tabbrowser-tabpanels browser[type] {
         outline: 3px solid var(--lwt-accent-color) !important;
-        @media (-moz-bool-pref: "ultima.xstyle.lwtheme") {
-            outline: 3px solid var(--arrowpanel-background) !important;
-        }
     }
 }
 
@@ -476,24 +473,6 @@ box-shadow: none !important;}}
         top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 4px) !important;
         height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height) - 4px) !important;
     }
-
-/* OLD unoptimized code
-    #sidebar-main:has([expanded]) {
-        transition: width 80ms linear 70ms !important;
-        will-change: width !important;
-        width:var(--uc-vertical-expanded-width) !important;
-    }    
-    #sidebar-main:has([expanded]):not(:hover) {
-        width: var(--uc-vertical-collapsed-width) !important;
-        z-index: 0;
-    }
-    #sidebar-main:has([expanded]):not(:hover) + #sidebar-box {
-        margin-left:var(--uc-spacing-px5) !important;
-    }
-    #sidebar-main:has([expanded]):hover + #sidebar-box {
-        margin-left:var(--uc-spacing-px0) !important;
-    }
-*/
     
 }}}
 
