@@ -1,11 +1,17 @@
-/* *** for future tab auto color support, blurred firefox window support */
-
-/*---------------------------- Unthemed Global Variables -----------------------------
-- Global variables used for ease of modification, and future customization
+/*---------------------------- Global Color Scheme Fallback -----------------------------
+- This file serves as a fallback for default color/design around the FF Ultima theme
+- Including global/default styles that are used throughout every other color scheme
+- Including a base/foundation for tab autotab color extension
  
 [Index] ctrl+f a line to find the specified section:
+Establishing custom variables
+Overwriting existing variables
+Applying variables to create the Dark Mode theme
+Adapting to add-on-theme styling
+Global styling - applies everywhere
+Global styling - Icons
+--------------------------------------------------------------------------------------*/
 
--------------------------------------------------------------------------------------*/
 
 :root, body, * {
   color-scheme: dark !important; /*--<--dont touch--*/
