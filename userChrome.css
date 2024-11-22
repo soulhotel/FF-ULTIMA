@@ -13,7 +13,6 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 @import url(theme/all-global-positioning.css);
 @import url(theme/all-color-schemes.css);
-@import url(theme/all-colors-lwtheme.css);
 
 @import url(theme/function-sidebar-autohide.css);
 @import url(theme/function-sidebery-autohide.css);
@@ -28,5 +27,3 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/theme-findbar.css);
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
-
-@import url(theme/all-global-theme-0.css);
