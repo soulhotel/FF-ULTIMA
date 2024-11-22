@@ -14,6 +14,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 /*color schemes*/
 user_pref("user.theme.dark.a", true); /*default dark mode*/
 user_pref("user.theme.light.a", true); /*default light mode*/
+user_pref("user.theme.adaptive", false); /*adaptive, wip*/
 user_pref("user.theme.dark.catppuccin", false);
 user_pref("user.theme.dark.catppuccin-mocha", false); /*by Draff*/
 user_pref("user.theme.dark.gruvbox", false);
@@ -29,6 +30,7 @@ user_pref("ultima.tabs.width.small", false);
 user_pref("ultima.tabs.width.medium", true);
 user_pref("ultima.tabs.width.large", false);
 user_pref("ultima.tabs.width.huge", false);
+user_pref("ultima.spacing.compact.tabs", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
@@ -38,7 +40,6 @@ user_pref("ultima.sidebar.longer", true);
 
 /*extra theming*/
 user_pref("ultima.theme.extensions", true);
-user_pref("ultima.theme.color.swap", true);
 user_pref("ultima.theme.icons", true);
 user_pref("ultima.theme.menubar", true);
 
@@ -58,15 +59,6 @@ user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
-
-/*specific OS overrides (like titlebar buttons)*/
-/*user_pref("ultima.OS.kde", true);
-user_pref("ultima.OS.gnome", false);
-user_pref("ultima.OS.mac", false);
-user_pref("ultima.OS.kde.wds", false);
-user_pref("ultima.OS.gnome.wds", false);
-user_pref("ultima.OS.gnome.wdl", false);
-user_pref("ultima.OS.notitlebar", false);*/
 
 /*other*/
 user_pref("browser.aboutConfig.showWarning", false);
