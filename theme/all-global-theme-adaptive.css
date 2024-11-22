@@ -1,22 +1,24 @@
-/*---------------------------- Dark Mode Global Variables -----------------------------
-- Global variables used for ease of modification, and future customization
+/*---------------------------- Global Color Scheme Fallback -----------------------------
+- This file serves as a fallback for default color/design around the FF Ultima theme
+- Including global/default styles that are used throughout every other color scheme
+- Including a base/foundation for tab autotab color extension
  
 [Index] ctrl+f a line to find the specified section:
 Establishing custom variables
 Overwriting existing variables
 Applying variables to create the Dark Mode theme
-Custom Icons
--------------------------------------------------------------------------------------*/
+Adapting to add-on-theme styling
+Global styling - applies everywhere
+Global styling - Icons
+--------------------------------------------------------------------------------------*/
 
-
-@media (prefers-color-scheme: dark) {
 
 /* Establishing custom variables - allowing most(/all) customization to be done in one place. */
     
 :root, body, * {
-    color-scheme: dark !important; /*--<--dont touch--*/
-    --uc-ultima-window: rgb(43, 42, 51);
-    --uc-text: rgb(255, 255, 255);
+
+    --uc-ultima-window: var(--toolbar-bgcolor);
+    --uc-text: var(--toolbox-non-lwt-textcolor);
     --uc-dark-color: #000;
     --uc-light-color: #fff;
     --uc-accent-i: #EDF783; /* accent colors - blues, yellows, etc. */
@@ -24,16 +26,16 @@ Custom Icons
     --uc-accent-iii: rgb(255, 255, 255);
     --uc-accent-iv: rgba(28, 27, 34, 0.5);
     --uc-accent-v: rgb(121, 161, 195);
-    --uc-background-main: rgb(35, 35, 42);
-    --uc-background-layered: rgba(28, 27, 34, 1);
+    --uc-background-main: var(--toolbox-non-lwt-bgcolor);
+    --uc-background-layered: var(--toolbox-non-lwt-bgcolor);
     --uc-transparent: rgba(0,0,0,0);
-    --uc-button-selected: rgba(25, 25, 35, 0.8);
-    --uc-tab-selected-bg: rgb(35, 35, 42);
-    --uc-urlbar-background: rgb(35, 35, 42);
-    --uc-panel-background: rgba(35, 35, 42,0.90);
-    --uc-panel-border: rgba(25, 25, 25, 0.5);
+    --uc-button-selected: color-mix(in srgb, currentColor 14%, transparent);
+    --uc-tab-selected-bg: var(--toolbox-non-lwt-bgcolor);
+    --uc-urlbar-background: var(--toolbox-non-lwt-bgcolor);
+    --uc-panel-background: var(--toolbox-non-lwt-bgcolor);
+    --uc-panel-border: rgba(45, 45, 45, 0.5);
     --uc-panel-border-ii: rgba(45, 45, 45, 0.5);
-    --uc-context-menu: rgb(35, 35, 42);
+    --uc-context-menu: color-mix(in srgb, currentColor 14%, rgb(30,30,40)) !important;
     --uc-tabs-background: var(--uc-background-main);
     --uc-sb-background: var(--uc-background-main);
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
@@ -57,15 +59,15 @@ Custom Icons
     --button-background-color-hover: var(--uc-button-selected) !important;
     --button-background-color-active: var(--uc-button-selected) !important;
 }
-
-
-
+    
+    
+    
     
 /* Overwriting existing variables ---------------------------------------------------*/
   
 #main-window:not([lwtheme]), :root:not([lwtheme]) {    
     
-    --toolbar-bgcolor: var(--uc-ultima-window) !important;
+    /*--toolbar-bgcolor: var(--uc-ultima-window) !important;*/
 
     --tab-selected-bgcolor: var(--uc-tab-selected-bg) !important;
     --tab-selected-textcolor: var(--uc-text) !important;
@@ -76,15 +78,15 @@ Custom Icons
     --toolbarbutton-hover-background: var(--uc-button-selected) !important;
     --button-active-bgcolor: var(--uc-button-selected) !important;
     --toolbarbutton-active-background: var(--uc-button-selected) !important;
-    --button-primary-bgcolor: var(--uc-accent-i) !important;
-    --button-primary-hover-bgcolor: var(--uc-accent-i) !important;
+    --button-primary-bgcolor: initial !important;
+    --button-primary-hover-bgcolor: initial !important;
     --buttons-destructive-hover-bgcolor: #9d1c1c;  /*red*/
     --buttons-destructive-active-bgcolor: #7d2828; /*red*/
     --toolbarbutton-icon-fill: var(--uc-text) !important; /*toolbar button color*/
 
-    --toolbar-field-background-color: var(--uc-accent-iv) !important;
-    --toolbar-field-border-color: var(--uc-accent-iii) !important;
-    --toolbar-field-focus-border-color: var(--uc-accent-iii) !important;
+    --toolbar-field-background-color: initial !important;
+    --toolbar-field-border-color: initial !important;
+    --toolbar-field-focus-border-color: initial !important;
     --urlbarView-result-button-selected-color: var(--uc-text) !important;
     --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
     --urlbarView-highlight-background: var(--uc-button-selected) !important;
@@ -107,16 +109,16 @@ Custom Icons
     --panel-background: var(--uc-panel-background) !important;
     --panel-item-hover-bgcolor: var(--uc-button-selected) !important;
     --panel-banner-item-hover-bgcolor: var(--uc-button-selected) !important;
-    --short-notification-background: var(--uc-accent-ii) !important;
+    --short-notification-background: initial !important;
     --panel-border-color: var(--uc-panel-border) !important;
-    --organizer-toolbar-background: var(--uc-accent-iv) !important;
-    --organizer-pane-background: var(--uc-accent-iv) !important;
-    --organizer-content-background: var(--uc-accent-iv) !important;
-    --organizer-hover-background: var(--uc-accent-iv) !important;
+    --organizer-toolbar-background: initial !important;
+    --organizer-pane-background: initial !important;
+    --organizer-content-background: initial !important;
+    --organizer-hover-background: initial !important;
     --organizer-selected-background: var(--uc-button-selected) !important;
     --organizer-focus-selected-color: var(--uc-button-selected) !important;
     --organizer-outline-color: rgb(0,221,255) !important;
-    --organizer-toolbar-field-background: var(--uc-accent-iv) !important;
+    --organizer-toolbar-field-background: initial !important;
     --organizer-toolbar-field-background-focused: rgb(66, 61, 98) !important;
     --content-select-background-image: none !important;
 } 
@@ -250,7 +252,7 @@ Custom Icons
 
 #main-window:not([lwtheme]) {  
     /* toolbar buttons */
-    & .toolbarbutton-1 {color:var(--uc-accent-ii) !important;}
+    & .toolbarbutton-1 {color:var(--uc-text) !important;}
     & .toolbarbutton-icon:hover,
     & .toolbarbutton-icon[open] {
         background-color: var(--uc-button-selected) !important;
@@ -313,7 +315,7 @@ Custom Icons
     }
 }   
     
-} /* < end of Theming */
+
     
 
 
@@ -359,6 +361,3 @@ Custom Icons
 }    
 
 
-
-
-} /* fin */
