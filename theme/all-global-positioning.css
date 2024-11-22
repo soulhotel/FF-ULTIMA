@@ -603,9 +603,13 @@ menupopup menuseparator {opacity:0.2 !important;}
         height:var(--uc-vertical-collapsed-width) !important;
         width:var(--uc-vertical-collapsed-width) !important;
         border-radius:18px !important;
-        transform:scale(0.55);
+        transform:scale(0.60);
         background-color:var(--uc-accent-ii) !important;
         & *{display:none !important;}
+    }
+    /*style the accessibility button like so: */
+    #main-window:not([lwtheme]) #sidebar-main:not(:hover) {
+        background:var(--uc-accent-ii) !important;
     }
     /* sidebar triggered by screen edge*/
     @media not (-moz-bool-pref: "ultima.spacing.compact") {
