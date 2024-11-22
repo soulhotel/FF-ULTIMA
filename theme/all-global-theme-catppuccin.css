@@ -35,7 +35,7 @@ Custom Icons
     --uc-panel-background: rgba(28, 27, 34, 0.95);
     --uc-panel-border: rgba(27, 25, 35, 1);
     --uc-panel-border-ii: rgba(70, 70, 80, 0.2);
-    --uc-context-menu: rgba(28, 27, 34,1);
+    --uc-context-menu: rgb(38, 36, 50);
     --uc-tabs-background: var(--uc-background-main);
     --uc-sb-background: var(--uc-background-main);
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
