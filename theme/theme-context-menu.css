@@ -52,7 +52,7 @@ menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
     menupopup, panel {
   color-scheme: light dark;
   --panel-background: var(--lwt-accent-color) !important;
-  --panel-color: color-mix(in srgb, var(--toolbar-color) 45%, var(--uc-light-color)) !important;
+  --panel-color: color-mix(in srgb, var(--toolbar-color) 35%, var(--tab-loading-fill)) !important;
   --panel-border-radius: var(--uc-all-border-radius) !important;
   --panel-border-color: var(--uc-panel-border-ii) !important;
   --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
