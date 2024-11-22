@@ -29,6 +29,8 @@
 - `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato)
 - `qol` Using `ultima.disable.verticaltab.bar` will now completely remove the vertical bar, still accessible via a shortcut button
 - `new` Setting `ultima.spacing.compact.tabs` to reduce spacing between tabs (vertical), letting you see more at once.
+- `qol` Using the theme *with* Add-On themes has been optimized a bit! #182
+- `wip` Setting `user.theme.adaptive` for use with Autotab color extension, WIP, just a foundation.
 - `qol` New Tab Page menu background - blue tint reduced
 - `qol` tab audio indicator border removed
 - `fix` vertical tabs top alignment fixed #172
