@@ -17,4 +17,4 @@ Preview:
 
 ![preview](./preview.png)
 
-Color schemes are easy to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/New-Color-scheme.md) page.
+Color schemes are easy to create: Learn how on the [New Color Scheme](https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/new-color-scheme.md) page.
