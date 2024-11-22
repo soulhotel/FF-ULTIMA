@@ -547,9 +547,11 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*browser space adjustments*/
     @media (-moz-bool-pref: "sidebar.revamp") {
         #main-window:not([inDOMFullscreen="true"]) #browser:not(:has(#sidebar-main[hidden="true"])) {
-            margin-left:55px !important;
+            margin-left:50px !important;
         }
-
+        #main-window:not([inDOMFullscreen="true"]) #browser:not(:has(#sidebar-main[hidden="true"],#sidebar-splitter[hidden="true"])) {
+            margin-left:55px !important;
+        }  
         #main-window[inFullscreen="true"] {
             #sidebar-main {
                 top:0 !important;
