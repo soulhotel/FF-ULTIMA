@@ -661,15 +661,15 @@ menupopup menuseparator {opacity:0.2 !important;}
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     :root:has(#sidebar-box:not([hidden])) {
-        --uc-sb-margins: 0px 5px 0px 0px;
-        --uc-sb-margins-right: 0px 5px 0px 5px;
+        --uc-sb-margins: 0px 5px -2px 0px;
+        --uc-sb-margins-right: 0px 5px -2px 5px;
     }
 } 
 @media (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     :root:has(#sidebar-box:not([hidden])) {
-        --uc-sb-margins: 0px 5px 0px 5px;
-        --uc-sb-margins-right: 0px 5px 0px 5px;
+        --uc-sb-margins: 0px 5px -1px 5px;
+        --uc-sb-margins-right: 0px 5px -1px 5px;
     }
 }
 
