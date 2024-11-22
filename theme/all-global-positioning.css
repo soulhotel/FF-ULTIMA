@@ -330,16 +330,16 @@ box-shadow: none !important;}}
 
 /*when second sidebar is open - margin correction*/
 :root:has(#sidebar-box[hidden]) {
-    --uc-content-margins: 2px 5px 5px 0px;
+    --uc-content-margins: 3px 5px 5px 0px;
 }
 :root:has(#sidebar-box[hidden][positionend]) {
-    --uc-content-margins: 2px 0px 5px 5px;
+    --uc-content-margins: 3px 0px 5px 5px;
 }
 :root:has(#sidebar-box[hidden],#sidebar-main[visible]) {
-    --uc-content-margins: 2px 5px 5px 5px;
+    --uc-content-margins: 3px 5px 5px 5px;
 }
 :root:has(#sidebar-box[hidden][positionend],#sidebar-main[visible]) {
-    --uc-content-margins: 2px 5px 5px 5px;
+    --uc-content-margins: 3px 5px 5px 5px;
 }
 
 /* Vertical Tabs Width - settings ------------------------------------------------------*/
@@ -672,15 +672,15 @@ menupopup menuseparator {opacity:0.2 !important;}
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     :root:has(#sidebar-box:not([hidden])) {
-        --uc-sb-margins: 3px 5px -1px 0px;
-        --uc-sb-margins-right: 3px 5px -1px 5px;
+        --uc-sb-margins: 2px 5px -2px 0px;
+        --uc-sb-margins-right: 2px 5px -2px 5px;
     }
 } 
 @media (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     :root:has(#sidebar-box:not([hidden])) {
-        --uc-sb-margins: 3px 5px 0px 5px;
-        --uc-sb-margins-right: 3px 5px 0px 5px;
+        --uc-sb-margins: 2px 5px -1px 5px;
+        --uc-sb-margins-right: 2px 5px -1px 5px;
     }
 }
 

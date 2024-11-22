@@ -32,7 +32,7 @@
     } 
     & #tabbrowser-tabpanels browser[type] {
         margin-top:4px !important;
-        outline: 3px solid var(--lwt-accent-color) !important;
+        outline: 4px solid var(--lwt-accent-color) !important;
     }   
 }    
     
