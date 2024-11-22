@@ -662,7 +662,7 @@ menupopup menuseparator {opacity:0.2 !important;}
         }  
     }
     /*fullscreen adjustments*/
-    #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main {
+    #main-window:not([inFullscreen="true"]) #navigator-toolbox:has([collapsed="false"]) + #browser #sidebar-main:hover {
         top:calc(var(--uc-navbar-height) + var(--uc-bookbar-height) + 4px) !important;
         height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height) - 4px) !important;
     }
