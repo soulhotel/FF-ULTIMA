@@ -6,6 +6,7 @@
     --lwt-accent-color: var(--arrowpanel-background) !important;
     --uc-background-layered: red !important;
     --uc-ultima-window: var(--lwt-accent-color) !important;
+    --uc-text: var(--lwt-text-color) !important
     /* main browser window background color */
     background-color: var(--lwt-accent-color) !important; 
     & body {background: var(--lwt-accent-color) !important;}  
