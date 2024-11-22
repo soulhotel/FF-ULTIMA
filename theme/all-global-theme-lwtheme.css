@@ -46,7 +46,6 @@
         background-color: color-mix(in srgb, var(--lwt-accent-color) 75%, #000) !important;
     }       
     & #sidebar-box {
-        box-shadow: var(--uc-box-shadow) !important;
         background-image: none !important;
     }
     & #sidebar-search-container #search-box,
