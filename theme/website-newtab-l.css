@@ -516,3 +516,58 @@ button, input {
 
 
 } /*--<--close out new tab document--*/
+
+
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+
+@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
+
+
+
+.search-wrapper .search-handoff-button, .search-wrapper input {
+    background: var(--newtab-background-color-secondary) !important;
+    width: 100% !important;
+    margin-left: 0% !important;
+}
+#newtab-search-text[keepfocus="true"]{
+    background-color:transparent !important;
+    appearance:none !important;
+}
+#searchSubmit {
+    border-radius: 100% !important;
+}
+#searchSuggestionTable {
+    background-color: rgba(110,110,130,0.3) !important;
+    border-radius: 19px !important;
+    padding: 0.4rem !important;
+    position: fixed;
+    top:55px !important;
+    backdrop-filter: blur(33px) !important;
+    background-blend-mode: overlay !important;
+    z-index:999 !important;
+} 
+.top-site-outer {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+ body:has(#searchSuggestionTable[hidden]) .top-site-outer {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+} 
+  
+#searchSuggestionTable .contentSearchSuggestionRow:hover {
+    background-color: red !important;
+    cursor:pointer !important;
+}
+#searchSuggestionTable .contentSearchSuggestionEntry:hover {  
+    background-color: red !important;
+}
+
+#searchSuggestionTable td:hover {
+    background-color:rgba(100,100,100,0.2) !important;
+    border-radius:10px !important;
+}
+  
+  
+}}}
