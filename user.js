@@ -59,6 +59,7 @@ user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
+user_pref("ultima.xstyle.bookmarks.fading", false);
 
 /*other*/
 user_pref("browser.aboutConfig.showWarning", false);
