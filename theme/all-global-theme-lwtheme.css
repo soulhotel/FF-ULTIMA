@@ -1,0 +1,204 @@
+
+
+/* Main window adjustments ----------------------------------------*/
+   
+#main-window[lwtheme] {
+    --lwt-accent-color: var(--arrowpanel-background) !important;
+    --uc-background-layered: red !important;
+    --uc-ultima-window: var(--lwt-accent-color) !important;
+    --uc-text: var(--lwt-text-color) !important;
+    --panel-item-hover-bgcolor: color-mix(in srgb, var(--lwt-accent-color) 75%, #000) !important;
+    /* main browser window background color */
+    background-color: var(--lwt-accent-color) !important; 
+    & body {background: var(--lwt-accent-color) !important;}  
+    /* keep consistency with the navigation assets (including the tabs container) */
+    & #nav-bar {background: initial !important;}
+    & #navigator-toolbox {
+        background-color: var(--toolbar-bgcolor) !important;
+        border-bottom: 0px solid transparent !important;
+    &:-moz-window-inactive {
+        background-color: var(--toolbar-bgcolor) !important;
+        color: var(--lwt-text-color) !important;}
+    }    
+}    
+    
+/* Browser Content adjustments ------------------------------------*/
+    
+#main-window[lwtheme] {
+    /* content window */
+    & #appcontent, & #browser, & #tabbrowser-tabbox, 
+    & #tabbrowser-tabpanels, & .browserSidebarContainer, & .browserStack { 
+        background: var(--uc-transparent) !important; 
+    } 
+    & #tabbrowser-tabpanels browser[type] {
+        margin-top:4px !important;
+        outline: 4px solid var(--lwt-accent-color) !important;
+    }   
+}    
+    
+/* Sidebars -------------------------------------------------------*/
+
+#main-window[lwtheme] {
+    & #sidebar-main {
+        background:var(--lwt-accent-color) !important;
+    }
+    & #sidebar {
+        background-color: color-mix(in srgb, var(--lwt-accent-color) 75%, #000) !important;
+    }       
+    & #sidebar-box {
+        background-image: none !important;
+    }
+    & #sidebar-search-container #search-box,
+    & #bookmarksPanel #sidebar-search-container #search-box,
+    & #sidebar-search-container #viewButton {
+        appearance: none !important;
+        border-radius: 10px !important;
+        background-color: color-mix(in srgb, var(--lwt-accent-color) 50%, #000) !important;
+        box-shadow: var(--uc-box-shadow-panel) !important;
+    }
+    & .sidebar-panel[lwt-sidebar] {
+        background-color: var(--uc-transparent) !important;
+    }
+}
+
+/* Tabs -----------------------------------------------------------*/
+    
+#main-window[lwtheme] { 
+    --tab-selected-bgcolor: var(--lwt-accent-color) !important;    
+    /* tabs container */
+    & #tabbrowser-tabs {
+        background: transparent !important;
+        --tab-loading-fill: var(--uc-accent-i) !important;
+    }
+    /* tabs - selected tabs */
+    & .tab-label-container[selected] {
+        color: var(--uc-accent-v) !important;
+    }
+    & .tab-background[selected] {
+        /*! box-shadow: var(--uc-box-shadow) !important; */
+    }
+    /* tabs - pinned tabs */
+    & .tab-label-container[pinned] {
+        color: var(--uc-accent-i) !important;
+    }
+    & .tabbrowser-tab[pinned=""] .tab-background,
+    & .tabbrowser-tab[pinned="true"] .tab-background {
+        background-color: var(--lwt-accent-color) !important;
+    }
+    & #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
+        /*box-shadow: var(--uc-box-shadow) !important;*/
+    }
+    /*tabs - all other tabs */
+    & .tab-label-container:not([selected=""],[pinned]) {
+        color: var(--uc-text) !important;
+    }
+    & .tab-background {
+        .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
+            /*box-shadow: var(--uc-box-shadow) !important;*/
+        }
+    }
+    /* tabs tooltip styling */
+    & .tab-preview-container {
+        background-color: var(--uc-tabs-background) !important;
+        color: var(--uc-text) !important;
+        width: 225px !important;
+        border: 1px solid var(--uc-panel-border) !important;
+    }
+    & .titlebar-spacer[type="post-tabs"] {opacity:0 !important;}
+    & #TabsToolbar-customization-target {
+        background: transparent !important;
+    }
+    & .tabbrowser-tab[pending="true"] {
+        opacity: 0.3 !important;
+    }
+    & toolbar {
+      &:-moz-window-inactive {
+        background-color: transparent !important;
+      }
+    }
+}
+
+/* URL Bar ------------------------------------------------------*/
+
+#main-window[lwtheme] {      
+    /* URL bar */
+    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+        margin-top: 3px !important; /*new*/
+        background-color: var(--lwt-accent-color) !important;
+        border-radius: var(--uc-all-border-radius) !important;
+    }
+    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+        border-radius: var(--uc-all-border-radius) !important;
+    }
+    & #urlbar-background, & #searchbar {
+        background-color: color-mix(in srgb, var(--lwt-accent-color) 15%, rgba(0,0,0,0.4)) !important;
+        border-radius: 10px !important;
+        border: 0 !important;
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(0,0,0,0.5);
+    }
+    & #urlbar[open] > #urlbar-background {
+        border-color: color-mix(in srgb, var(--lwt-accent-color) 15%, rgba(0,0,0,0.4)) !important;
+    }
+    & #urlbar[breakout][breakout-extend] {
+        background-color: transparent !important;
+        border-radius: 10px;
+    }
+    & #urlbar-zoom-button {
+        background-color: var(--uc-button-selected) !important;
+        margin-top:3px !important;
+    }
+    & .urlbarView-row {
+        &[selected] {
+            color: var(--uc-text) !important;
+        }
+    }
+}
+
+/* Buttons --------------------------------------------------------*/
+
+/* Popups/Menus ---------------------------------------------------*/
+
+#main-window[lwtheme] {  
+    --uc-button-selected: var(--panel-item-hover-bgcolor) !important;
+    /* extra styling - customize toolbar page */     
+    & #customization-container {background-color: var(--lwt-accent-color) !important;}
+    & #unified-extensions-button {fill: var(--lwt-text-color) !important;}
+    & #PersonalToolbar {background-color: transparent !important;}
+       
+     
+    /* menus */       
+    & .panel-subview-body {
+        background: var(--lwt-accent-color) !important;
+    }
+    & panelview,
+    & #unified-extensions-view {
+        background: var(--lwt-accent-color) !important;
+    }    
+    /* drop down menus */
+    & #ContentSelectDropdown > menupopup[customoptionstyling="true"]::part(arrowscrollbox) {
+        --panel-color: black !important;
+    }
+    & #ContentSelectDropdownPopup .menupopup-arrowscrollbox::part(content) {
+        --panel-color: black !important;
+    }
+    & #ContentSelectDropdownPopup menupopup,
+    & #ContentSelectDropdownPopup panel {
+        --panel-color: black !important;
+    }        
+         
+    /* extra styling - customize toolbar page */     
+    & #customization-container {background-color: var(--lwt-accent-color) !important;}    
+    & #menubar-items {background: transparent !important; color: var(--toolbar-field-color) !important;}
+    
+    /* context menus / right click menus */
+    & menupopup  {
+        --panel-background: var(--lwt-accent-color) !important;
+        --panel-color: var(--toolbar-field-color) !important;
+        /*--panel-padding-block: 4px !important;
+        --panel-padding: var(--panel-padding-block) 0;
+        --panel-border-radius: 4px;*/
+        --panel-border-color: color-mix(in srgb, var(--lwt-accent-color) 25%, rgba(0,0,0,0.3)) !important;      
+    }
+    
+}
+ 

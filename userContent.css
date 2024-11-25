@@ -1,24 +1,29 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+┏┓┏┓  ┳┳┓ ┏┳┓┳┳┳┓┏┓
+┣ ┣   ┃┃┃  ┃ ┃┃┃┃┣┫
+┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
+                   
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki
+Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest                 
+License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
 /* 
-https://github.com/soulhotel/FF-ULTIMA
-
-websites-newtab.css ~ NEW TABS
-
-websites.css ~ themes YOUTUBE and REDDIT
-
-website-scrollbars-and-pip.css ~ themes the scrollbar inside of your browser tab content
-
-To remove a certain feature, simple delete its line below, open website in new tab, no restart needed.
+- To remove a certain websites style, just delete its line below.
+- Then open the website in new tab, no restart needed.
 */
 
-@import url(theme/website-styles.css);
+@import url(theme/website-styles.css); /*styling for multiple websites*/
 
-@import url(theme/website-newtab.css);
+@import url(theme/website-newtab.css); /*new tab page*/
 
-@import url(theme/website-reddit.css);
+@import url(theme/website-newtab-wallpapers.css); /*new tab page wallpapers*/
 
-@import url(theme/website-yt.css);
+@import url(theme/website-reddit.css); /*reddit*/
 
-@import url(theme/website-private.css);
+@import url(theme/website-yt.css); /*youtube*/
 
-/*@import url(theme/websites.css);*/
-
+@import url(theme/website-private.css); /*private new tab page */

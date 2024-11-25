@@ -29,7 +29,6 @@ Theming Context Menu
 menupopup, panel {
   color-scheme: light dark;
   --panel-background: var(--uc-context-menu) !important;
-  --panel-color: var(--uc-text);
   --panel-border-radius: var(--uc-all-border-radius) !important;
   --panel-border-color: var(--uc-panel-border-ii) !important;
   --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
@@ -48,7 +47,27 @@ menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
 
 
 
+#main-window[lwtheme]{
+    
+    menupopup, panel {
+  color-scheme: light dark;
+  --panel-background: var(--lwt-accent-color) !important;
+  --panel-color: color-mix(in srgb, var(--toolbar-color) 35%, var(--tab-loading-fill)) !important;
+  --panel-border-radius: var(--uc-all-border-radius) !important;
+  --panel-border-color: var(--uc-panel-border-ii) !important;
+  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
+}
 
+menuitem:hover{
+  background-color: var(--uc-button-selected) !important;
+  color: var(--uc-text) !important;
+ }
 
+menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+  background-color: var(--uc-button-selected) !important;
+  color: var(--uc-text) !important;
+}
+}
 
 

@@ -148,7 +148,7 @@ possible spacing issues when the two are present at the same time. (temporarily 
     @media (prefers-color-scheme: light) {
 
         #sidebar-header, #sidebar {
-            background: var(---uc-sb-background) !important;
+            background: var(--uc-sb-background) !important;
         } 
         #main-window[lwtheme="true"] #sidebar,
         #main-window[lwtheme="true"] #sidebar-header {
@@ -159,4 +159,3 @@ possible spacing issues when the two are present at the same time. (temporarily 
 
     
 } /* -moz-bool-pref"ultima.tabs.vertical.hide" & "ultima.tabs.sidebar.autohide" */
-

@@ -104,7 +104,7 @@
 
     .sidebar-panel #search-box {
         -moz-appearance: none !important;
-        background-color: rgba(249, 249, 250, 0.1) !important;
+        background-color: var(--uc-button-selected) !important;
         color: inherit !important;
     }
 

@@ -14,11 +14,11 @@
 .tab-icon-overlay:not([crashed]) {
     z-index: 1; 
     opacity: 1 !important;
-    top: -5.5px; 
-    inset-inline-end: -6px; 
-    padding: 2px;
+    top: -8px !important; 
+    inset-inline-end: -6px !important; 
+    padding: 2px !important;
     stroke: var(--tab-icon-overlay-stroke, black) !important;
-    fill: var(--tab-icon-overlay-fill, white) !important;
+    fill: var(--uc-light-color, white) !important;
     fill-opacity: 1 !important;
     background-color: rgba(30,30,30,0.7) !important;
     border: 0px solid var(--tab-icon-overlay-fill) !important;
@@ -26,6 +26,8 @@
 
 .tab-icon-overlay:not([crashed]):hover {
     background-color: var(--tab-loading-fill) !important;
-    fill: var(--uc-dark-color, white) !important;
+    fill: var(--uc-dark-color, red) !important;
     border-radius: var(--uc-all-border-radius) !important;
 }
+
+.tab-icon-overlay:hover{cursor: pointer !important;}

@@ -1,5 +1,4 @@
 /*----------------------------------------------------------
-
 this file handles Alternative Styles for different aspects of the theme
 
 [Index: For ctrl+f a line to find a section]
@@ -7,13 +6,15 @@ this file handles Alternative Styles for different aspects of the theme
 URL Bar
 theme colors
 pinned tabs
+tab groups
+compact tabs
 container tabs
-
+bookmarks fade out
 ----------------------------------------------------------*/
 
 
-/* ------------------------------------------------------------------------------------ */
-/*alternative styling for URL Bar*/
+/* alternative styling for URL Bar ------------------------------------------------------------------------------- */
+
 
 @media (-moz-bool-pref: "ultima.xstyle.urlbar") {
 
@@ -25,8 +26,13 @@ container tabs
     }
 }
 
+/*extras*/
+:root { --urlbar-box-bgcolor: color-mix(in srgb, var(--uc-button-selected) 50%, transparent) !important;}
+#identity-box, #tracking-protection-icon-container, #page-action-buttons {
+    margin-top:1px !important; margin-bottom:-1px !important; cursor: pointer !important;
+}
 
-/* ------------------------------------------------------------------------------------ */
+/* theme colors -------------------------------------------------------------------------------------------------- */
 /*alternative styling for theme colors by rearranging current color palette/variables*/
 
 @media (-moz-bool-pref: "ultima.theme.color.swap") {
@@ -52,7 +58,7 @@ container tabs
 }
 
 
-/* ------------------------------------------------------------------------------------ */
+/* pinned tabs -------------------------------------------------------------------------------------------------- */
 /*alternative styling for pinned tabs*/
 
 @media (-moz-bool-pref: "ultima.xstyle.pinnedtabs.i") {
@@ -70,8 +76,145 @@ container tabs
   }
 }
 
+/* tab groups ---------------------------------------------------------------------------------------------- */
+/* alternative styling for tab groups for the new vertical tabs */
 
+@media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") { 
+
+    /*safeguard - shrink the group container label when tabs are not expanded*/
+    @media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main:has([closebuttons="activetab"]) .tab-group-label-container {width:23px !important;}
+        #sidebar-main:has([closebuttons="activetab"]) .tab-group-label {color: transparent !important;}
+    }}
+    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label-container {width:23px !important;}
+        #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label {color: transparent !important;}
+    }}
+
+    /* remove double-background/border */
+    .tab-group-label-container { tab-group:not([collapsed]) > &::after {
+        background-color: transparent !important;
+    }}
+
+    /* give tab-group label spacing similar to tabs + styling */
+    .tab-group-label-container {
+        margin-inline: 18px !important;
+        height: 39px !important;
+        background-color: transparent !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+    }
+    .tab-group-label {
+      /*height: 18px !important;*/
+      cursor: pointer !important;
+      border-radius: var(--uc-tab-border-radius) !important;
+      min-width: 10px !important;
+      border: 0px transparent solid !important;
+    }
+
+    /* tab groups colors */
+    tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab {
+      background: color-mix(in lab, blue 30%, var(--uc-ultima-window) 10%) !important;
+    }
+    tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab {
+      background: color-mix(in lab, purple 30%, var(--uc-ultima-window) 10%) !important;
+    }
+    tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab {
+      background: color-mix(in lab, cyan 50%, var(--uc-ultima-window) 70%) !important;
+    }
+    tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab {
+      background: color-mix(in lab, orange 50%, var(--uc-ultima-window) 70%) !important;
+    }
+    tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab {
+      background: color-mix(in lab, yellow 50%, var(--uc-ultima-window) 10%) !important;
+    }
+    tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab {
+      background: color-mix(in lab, pink 70%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-green"] .tabbrowser-tab {
+      background: color-mix(in lab, green 30%, var(--uc-ultima-window) 10%) !important;
+    }
+    tab-group[style*="--tab-group-color-red"] .tabbrowser-tab {
+      background: color-mix(in lab, red 30%, var(--uc-ultima-window) 10%) !important;
+    }
+    tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab {
+      background: color-mix(in lab, gray 30%, var(--uc-ultima-window) 10%) !important;
+    }
+
+    /* toggle collapse visibility */
+      tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
+
+} /* end tab groups styling */
+
+
+/* tab groups ---------------------------------------------------------------------------------------------- */
+
+/* by @tthornton3-chwy https://github.com/tthornton3-chwy */
+
+@media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") { 
+
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        .tab-group-label-container {
+            width: calc(var(--uc-vertical-collapsed-width) - 4px) !important;
+        }
+    }
+
+    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
+        .tab-group-label-container {
+            margin-inline: 18px !important;
+            height: 39px !important;
+        }
+    }
+
+    .tab-group-label-container {
+        background-color: transparent !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+     }
+    .tab-group-label {
+        height: 18px !important;
+        cursor: pointer !important;
+      }
+    tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
+
+    /* tab groups colors */
+    tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab {
+        background: color-mix(in lab, blue 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab {
+        background: color-mix(in lab, purple 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab {
+        background: color-mix(in lab, cyan 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab {
+        background: color-mix(in lab, orange 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab {
+        background: color-mix(in lab, yellow 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab {
+        background: color-mix(in lab, pink 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-green"] .tabbrowser-tab {
+        background: color-mix(in lab, green 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-red"] .tabbrowser-tab {
+        background: color-mix(in lab, red 20%, var(--uc-ultima-window) 50%) !important;
+    }
+    tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab {
+        background: color-mix(in lab, gray 20%, var(--uc-ultima-window) 50%) !important;
+    }
+
+}
+/* compact tabs ------------------------------------------------------------------------ */
+
+@media (-moz-bool-pref: "ultima.spacing.compact.tabs") { 
+    .tab-background {
+          margin-block: 0px !important;
+      }
+}
 /* ------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------ */
 /*alternative styling for container tabs*/
 /* *** currently only works for horizontal tabs, be patient, firefox's vertical tabs feature is still progressing! *** */
 
@@ -120,15 +263,22 @@ container tabs
 } 
 
 
-/* ------------------------------------------------------------------------------------ */
+/* bookmarks fade out -------------------------------------------------------------------------------------- */
 
-/* ------------------------------------------------------------------------------------ */
+@media (-moz-bool-pref: "ultima.xstyle.bookmarks.fading") {
+    #PlacesToolbar {
+      opacity: 0.2 !important;
+      transition: opacity 4s ease-out; /* Slow ease-out when not hovered */
+    }
 
-/* ------------------------------------------------------------------------------------ */
+    #PlacesToolbar:hover {
+      opacity: 1 !important;
+      transition: opacity 0.2s ease-in; /* Fast ease-in when hovered */
+    }
+}
 
-/* ------------------------------------------------------------------------------------ */
 
-/* ------------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------- */
 
-/* ------------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------- */
 
