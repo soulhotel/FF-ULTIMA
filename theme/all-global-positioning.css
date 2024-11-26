@@ -391,7 +391,13 @@ box-shadow: none !important;}}
     & #tabs-newtab-button .toolbarbutton-text {margin-left:4px !important;font-style: italic;}
 }
 /* vertical toolbar tweaks*/
-.wrapper:not(:hover) .tools-and-extensions { opacity:0 !important;}
+.button-background[type="icon ghost"] {
+  & label {
+    margin-left:5px !important;
+  }
+}
+.tools-and-extensions {margin-left:1px !important;}
+.wrapper:not(:hover) .tools-and-extensions { opacity:0.5 !important;}
 .wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {justify-content: start !important;margin-left:1px !important;}
 #vertical-pinned-tabs-container-separator {opacity:0 !important;}
 #vertical-pinned-tabs-container {padding-bottom: 2px !important;}
