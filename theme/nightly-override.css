@@ -1,0 +1,23 @@
+/*
+This file contains segments of code that serve as quick-patches/repairs for changes between Firefox versions, specifically Firefox Nightly.
+
+with the use of the 'nightly-override' setting on the about:config page,
+the theme can be evenly distributed to any user once a patch for a certain bug/change is added below
+*/
+
+/* VT Toolbar buttons using inconsistent style between firefox versions, requires this patch to correct positioning of button + labels */
+
+@media (-moz-bool-pref: "nightly.override") {
+  .button-background[type="icon ghost"] {
+    & label {
+      margin-left:5px !important;
+    }
+  }
+  .tools-and-extensions {margin-left:1px !important;}
+}
+
+/* */
+
+/* */
+
+/* */
