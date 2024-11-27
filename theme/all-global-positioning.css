@@ -393,6 +393,7 @@ box-shadow: none !important;}}
 /* vertical toolbar tweaks*/
 .tools-and-extensions:not(:hover){ opacity:0.5 !important;}
 .wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {justify-content: start !important;margin-left:1px !important;}
+@media (-moz-os-version: macos), (-moz-platform: macos) {.wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {justify-content: start !important;margin-left:3px !important;}}
 #vertical-pinned-tabs-container-separator {opacity:0 !important;}
 #vertical-pinned-tabs-container {padding-bottom: 2px !important;}
 .button-background {&.labelled { gap: 15px !important;}}
