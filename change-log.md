@@ -15,6 +15,7 @@
 - `wip` Setting `user.theme.adaptive` for use with Autotab color extension :warning: WIP, just a foundation
 - `wip` Setting `ultima.xstyle.bookmarks.fading` makes the bookmarks toolbar fade in/out, wip
 - `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` (wip. unstable)
+- `wip` `ultima.navbar.autohide`
 - `wip` Catppuccin-Frappe color-scheme, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
 ### <ins> On the Next Episode of FF Ultima:
