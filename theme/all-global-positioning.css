@@ -165,6 +165,7 @@ toolbar {
 /*nav bar height control*/
 #nav-bar {
     min-height:var(--uc-navbar-height) !important;
+    max-height: var(--uc-navbar-height) !important;
 }
 /*align child buttons vertically*/
 #nav-bar .toolbarbutton-1 {
@@ -183,6 +184,25 @@ toolbar {
 }
 @media (max-width: 600px) {
   #unified-extensions-button, #PanelUI-button {display:none}
+}
+
+@media (-moz-bool-pref: "ultima.navbar.autohide") { 
+    
+    #main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 4px !important;}
+    
+    #main-window:not(inFUllscreen) {
+        #nav-bar:not(:hover) > *:not(#urlbar-container) {
+            opacity: 0 !important;
+            transition: opacity 0.3s ease-in-out;
+        }
+        #nav-bar:hover > * {
+            opacity: 1 !important;
+        }
+        #nav-bar:not(:hover) #urlbar-container:not(:has([breakout-extend="true"])) {
+            display: none !important;
+        }   
+    }
+    
 }
 
 
@@ -526,9 +546,9 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*fixed positioning*/
     #sidebar-main {       
         position:fixed !important;
-        top:38px !important;
+        top:calc(var(--uc-navbar-height) - 2px) !important;
         left:0px !important;
-        height:calc(100vh - 40px) !important;
+        height:calc(100vh - var(--uc-navbar-height)) !important;
         z-index:999 !important;
     }
     /*autohide*/
@@ -575,23 +595,6 @@ menupopup menuseparator {opacity:0.2 !important;}
         height:calc(100vh - var(--uc-navbar-height) - var(--uc-bookbar-height) - 3px) !important;
     }
 
-/* OLD unoptimized code
-    #sidebar-main:has([expanded]) {
-        transition: width 80ms linear 70ms !important;
-        will-change: width !important;
-        width:var(--uc-vertical-expanded-width) !important;
-    }    
-    #sidebar-main:has([expanded]):not(:hover) {
-        width: var(--uc-vertical-collapsed-width) !important;
-        z-index: 0;
-    }
-    #sidebar-main:has([expanded]):not(:hover) + #sidebar-box {
-        margin-left:var(--uc-spacing-px5) !important;
-    }
-    #sidebar-main:has([expanded]):hover + #sidebar-box {
-        margin-left:var(--uc-spacing-px0) !important;
-    }
-*/
     
 }}}
 
@@ -631,9 +634,9 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*fixed positioning*/
     #sidebar-main {       
         position:fixed !important;
-        top:36px !important;
+        top:calc(var(--uc-navbar-height) - 2px) !important;
         left:0px !important;
-        height:calc(100vh - 40px) !important;
+        height:calc(100vh - var(--uc-navbar-height)) !important;
         z-index:999 !important;
     }
  
