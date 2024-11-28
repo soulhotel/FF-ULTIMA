@@ -618,7 +618,8 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*adjustments for elements within*/
     #sidebar-main:has([expanded=""]):not(:hover) {
         & .tabbrowser-tab{width: var(--uc-vertical-collapsed-width) !important; min-width: 0px !important;}
-        & .tabbrowser-tab[pinned=""]{width: 41px !important; min-width: 0px !important}
+        & .tabbrowser-tab[pinned]{width: 41px !important; min-width: 0px !important;}
+        & .tabbrowser-tab[pinned]{width: 41px !important; min-width: 0px !important;}
         & .tab-label-container, & .tab-close-button{ display: none !important;}
         & #tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
         & #vertical-tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
@@ -701,7 +702,7 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*adjustments for elements within*/
     #sidebar-main:has([expanded=""]):not(:hover) {
         & .tabbrowser-tab{width: var(--uc-vertical-collapsed-width) !important; min-width: 0px !important}
-        & .tabbrowser-tab[pinned=""]{width: 41px !important; min-width: 0px !important}
+        & .tabbrowser-tab[pinned]{width: 41px !important; min-width: 0px !important}
         & .tab-label-container, & .tab-close-button{ display: none !important;}
         & #tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
     }
