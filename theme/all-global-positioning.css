@@ -212,8 +212,8 @@ toolbar {
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
     
-    :root {--uc-topbars-combined-height: 3px !important;}
-    @media (-moz-bool-pref: "sidebar.verticalTabs") {#navigator-toolbox{ margin-left:40px !important;}}
+    :root {--uc-topbars-combined-height: 1px !important;}
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {#navigator-toolbox{ margin-left:50px !important;}}
     #navigator-toolbox:not(:hover) #TabsToolbar {visibility:collapse !important;}
     #navigator-toolbox:not(:hover) #PersonalToolbar {visibility:collapse !important;}
     #navigator-toolbox:not(:hover) #toolbar-menubar {visibility:collapse !important;}
@@ -240,6 +240,9 @@ toolbar {
     #urlbar[breakout] { & > .urlbar-input-container {
         height: 32px !important;
     }}
+    #urlbar:not([breakout-extend="true"]){opacity:0 !important;}
+    #navigator-toolbox:not(:hover) #urlbar { transform:scale(0.6);}
+    #urlbar[breakout-extend="true"] { transform:scale(1) !important;}
 }
 
 
