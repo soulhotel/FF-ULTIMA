@@ -21,6 +21,7 @@
 - `qol` Setting `ultima.spacing.compact` now reduces 2 to 18 more pixels vertically (Navigation Bar)
 - `new` When using add on themes, users can [quickly fix](https://github.com/soulhotel/FF-ULTIMA/wiki/Using-Add%E2%80%90On-Themes) **most** color issues with `ultima.theme.color.swap`. Note, optimization for add on themes with ff ultima are now at their best state, but there are still a 10% of themes that just wont look great. This is because of the variety of ways that an add-on theme developer may choose to use their color variables, it is impossible to have an all-for-one solution mixed in with ff ultima.
 - `fix` Midnight color scheme code bleeding into light mode #196
+- `fix` vertical tab width patched for Nightly
 
 ### <ins> On the Next Episode of FF Ultima:
 - `wip` New Tab Page Overhaul
