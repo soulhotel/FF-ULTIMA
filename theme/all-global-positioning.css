@@ -223,7 +223,7 @@ toolbar {
     #main-window:has(#navigator-toolbox:not(:hover)) #toolbar-menubar {visibility:collapse !important;}
     #main-window:has(#navigator-toolbox:not(:hover)) #nav-bar {opacity: 0 !important;}
     @media (-moz-bool-pref: "ultima.spacing.compact") {#main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 0.4px !important;}}
-    #main-window:not(inFUllscreen) {
+    #main-window:not([inFUllscreen]) {
         #navigator-toolbox:not(:hover) {
             transition: height 315ms linear 10ms !important;
         }
@@ -232,7 +232,7 @@ toolbar {
             opacity: 0 !important;
             transition: opacity 0s ease-in-out;
         }
-        #navigator-toolbox:hover #navbar * {
+        #navigator-toolbox:hover #nav-bar * {
             opacity: 1 !important;
         }
         #navigator-toolbox:not(:hover) #urlbar-container:not(:has([breakout-extend="true"])) {
