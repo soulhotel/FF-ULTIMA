@@ -631,13 +631,16 @@ menupopup menuseparator {opacity:0.2 !important;}
         height:var(--uc-vertical-collapsed-width) !important;
         width:var(--uc-vertical-collapsed-width) !important;
         border-radius:18px !important;
-        transform:scale(0.60);
+        transform:scale(0);
         background-color:var(--uc-accent-ii) !important;
         & *{display:none !important;}
     }
     /*style the accessibility button like so: */
     #main-window:not([lwtheme]) #sidebar-main:not(:hover) {
         background:var(--uc-accent-ii) !important;
+    }
+    @media (-moz-bool-pref: "ultima.disable.verticaltab.bar.withindicator") {
+        #sidebar-main:not(:hover) {transform:scale(0.60);}  
     }
     /* sidebar triggered by screen edge*/
     @media not (-moz-bool-pref: "ultima.spacing.compact") {
