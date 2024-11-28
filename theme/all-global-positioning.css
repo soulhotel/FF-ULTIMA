@@ -217,7 +217,7 @@ toolbar {
     #navigator-toolbox:not(:hover) #TabsToolbar {visibility:collapse !important;}
     #navigator-toolbox:not(:hover) #PersonalToolbar {visibility:collapse !important;}
     #navigator-toolbox:not(:hover) #toolbar-menubar {visibility:collapse !important;}
-    #navigator-toolbox:not(:hover) #nav-bar {opacity:  !important; top:-40px;}
+    #navigator-toolbox:not(:hover) #nav-bar {opacity: 0 !important; top:-40px;}
 
     @media (-moz-bool-pref: "ultima.spacing.compact") {:root {--uc-topbars-combined-height: 0.4px !important;}}
     
@@ -240,7 +240,7 @@ toolbar {
     #urlbar[breakout] { & > .urlbar-input-container {
         height: 32px !important;
     }}
-    #urlbar:not([breakout-extend="true"]){opacity:  !important; top:1px;}
+    #urlbar:not([breakout-extend="true"]){opacity: 0 !important; top:1px;}
     #navigator-toolbox:not(:hover) #urlbar { transform:scale(0.2); top:1px !important;}
     #urlbar[breakout-extend="true"] { transform:scale(1) !important;}
 }
