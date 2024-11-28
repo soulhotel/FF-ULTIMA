@@ -86,7 +86,7 @@ Vertical Tabs Disabled - setting
 #toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
 #navbar {z-index:997 !important;}
 #TabsToolbar {min-height: var(--uc-tabbar-height) !important; z-index:996 !important;}
-#tabbrowser-tabs { &[orient="horizontal"] {min-height: var(--uc-tabbar-height) !important;}}
+#tabbrowser-tabs[orient="horizontal"] {min-height: var(--uc-tabbar-height) !important;}}
 #PersonalToolbar {height: var(--uc-bookbar-height) !important; z-index:995 !important;}
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 2px 0 2px 0 !important;}
 
