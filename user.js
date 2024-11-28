@@ -25,6 +25,7 @@ user_pref("user.theme.dark.midnight", false);
 user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
+user_pref("ultima.disable.verticaltab.bar.withindicator", false);
 user_pref("ultima.tabs.autohide", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.width.small", false);
