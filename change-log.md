@@ -18,6 +18,7 @@
 - `qol` Using `ultima.disable.verticaltab.bar` now completely removes the Vertical Bar, with an **optional** quick access option `ultima.disable.verticaltab.bar.withindicator` #193
 - `new` Setting `ultima.tabs.belowURLbar` to have horizontal tabs (tab on top) layout below the URL bar
 - `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
+- `qol` Setting `ultima.spacing.compact` now reduces 2 to 18 more pixels vertically (Navigation Bar)
 - `new` When using add on themes, users can [quickly fix](https://github.com/soulhotel/FF-ULTIMA/wiki/Using-Add%E2%80%90On-Themes) **most** color issues with `ultima.theme.color.swap`. Note, optimization for add on themes with ff ultima are now at their best state, but there are still a 10% of themes that just wont look great. This is because of the variety of ways that an add-on theme developer may choose to use their color variables, it is impossible to have an all-for-one solution mixed in with ff ultima.
 - `fix` Midnight color scheme code bleeding into light mode #196
 
@@ -27,6 +28,10 @@
 - `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers
 - `wip` Catppuccin-Frappe color-scheme, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
-https://github.com/user-attachments/assets/6068493f-8a05-4aef-8ba4-290cf99ee82b
+
+
+https://github.com/user-attachments/assets/998fb2ef-3eca-4d0a-ab2e-76dec44cc15f
+
+
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
