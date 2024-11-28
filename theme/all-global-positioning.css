@@ -124,7 +124,7 @@ Vertical Tabs Disabled - setting
 /*option to disable window controls*/
 @media (-moz-bool-pref: "ultima.disable.windowcontrols.button") {
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {display:flex !important;}
-    .titlebar-buttonbox-container {display:none !important;}
+    .titlebar-buttonbox-container{display:none !important;}
 }
 /* allow screen edge to toggle close button hover*/
 @media not (-moz-platform: macos) {
@@ -316,7 +316,7 @@ box-shadow: none !important;}}
     #TabsToolbar { order: 2 !important; }
     #PersonalToolbar { order: 3 !important; }
     #TabsToolbar .titlebar-buttonbox-container {display: none !important;}
-    #nav-bar .titlebar-buttonbox-container {display: flex !important;}
+    @media not (-moz-bool-pref: "ultima.disable.windowcontrols.button") {#nav-bar .titlebar-buttonbox-container {display: flex !important;}}
 }
 
 
