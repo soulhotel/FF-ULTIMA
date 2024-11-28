@@ -212,34 +212,34 @@ toolbar {
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
     
-    #main-window:has(#navigator-toolbox:not(:hover)) {
-        --uc-menubar-height: 0px !important;
-        --uc-navbar-height: 3px !important;
-        --uc-tabbar-height: 0px !important;
-        --uc-bookbar-height: 0px !important;
-    }
-    #main-window:has(#navigator-toolbox:not(:hover)) #TabsToolbar {visibility:collapse !important;}
-    #main-window:has(#navigator-toolbox:not(:hover)) #PersonalToolbar {visibility:collapse !important;}
-    #main-window:has(#navigator-toolbox:not(:hover)) #toolbar-menubar {visibility:collapse !important;}
-    #main-window:has(#navigator-toolbox:not(:hover)) #nav-bar {opacity: 0 !important;}
-    @media (-moz-bool-pref: "ultima.spacing.compact") {#main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 0.4px !important;}}
-    #main-window:not([inFUllscreen]) {
-        #navigator-toolbox:not(:hover) {
-            transition: height 315ms linear 10ms !important;
-        }
-        #navigator-toolbox:not(:hover) .toolbarbutton-1,
-        #navigator-toolbox:not(:hover) .titlebar-buttonbox-container {
-            opacity: 0 !important;
-            transition: opacity 0s ease-in-out;
-        }
-        #navigator-toolbox:hover #nav-bar * {
-            opacity: 1 !important;
-        }
-        #navigator-toolbox:not(:hover) #urlbar-container:not(:has([breakout-extend="true"])) {
-            display: none !important;
-        }   
-    }
+    :root {--uc-topbars-combined-height: 3px !important;}
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {#navigator-toolbox{ margin-left:40px !important;}}
+    #navigator-toolbox:not(:hover) #TabsToolbar {visibility:collapse !important;}
+    #navigator-toolbox:not(:hover) #PersonalToolbar {visibility:collapse !important;}
+    #navigator-toolbox:not(:hover) #toolbar-menubar {visibility:collapse !important;}
+    #navigator-toolbox:not(:hover) #nav-bar {opacity: 0 !important;}
+
+    @media (-moz-bool-pref: "ultima.spacing.compact") {:root {--uc-topbars-combined-height: 0.4px !important;}}
     
+    #navigator-toolbox:not(:hover) {
+        transition: height 315ms linear 10ms !important;
+        height:var(--uc-topbars-combined-height) !important;
+    }
+    #navigator-toolbox:not(:hover) .toolbarbutton-1,
+    #navigator-toolbox:not(:hover) .titlebar-buttonbox-container {
+        opacity: 0 !important;
+        transition: opacity 0.9s ease-in-out;
+    }
+    #navigator-toolbox:hover #nav-bar * {
+        opacity: 1 !important;
+    }
+    #navigator-toolbox:hover {
+        --uc-topbars-combined-height: calc(var(--uc-menubar-height) + var(--uc-navbar-height) + var(--uc-tabbar-height) + var(--uc-bookbar-height)) !important;  
+    }
+        
+    #urlbar[breakout] { & > .urlbar-input-container {
+        height: 32px !important;
+    }}
 }
 
 
@@ -735,3 +735,4 @@ menupopup menuseparator {opacity:0.2 !important;}
     min-width: 0.1px !important;
     visibility: collapse !important;
 }
+
