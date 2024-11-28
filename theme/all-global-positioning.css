@@ -69,7 +69,7 @@ Vertical Tabs Disabled - setting
 }
 
 :root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {
-    --uc-navbar-height: 34px;
+    --uc-navbar-height: 38px;
 }
 
 :root:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important;}
