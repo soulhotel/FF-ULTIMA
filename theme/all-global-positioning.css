@@ -11,6 +11,7 @@ This file handles positioning of all main elements within the browser.
 ctrl+f to find a section:
 
 Global variables
+Toolbar spacing
 Compact spacing
 OS Window Control Tweaks
 Title bar
@@ -68,13 +69,28 @@ Vertical Tabs Disabled - setting
     --tab-block-margin: 2px;
 }
 
-:root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {
-    --uc-navbar-height: 38px;
-}
+
+/* Toolbar spacing -----------------------------------------------------------------------*/
+
+/* overriding toolbar heights with their default values for easier modification */
+
+#navigator-toolbox {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
+#toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
+#navbar {min-height:var(--uc-navbar-height) !important; max-height: var(--uc-navbar-height) !important; z-index:997 !important;}
+#nav-bar .toolbarbutton-1 {margin-top:2.5px !important;} /*align child buttons vertically*/
+#TabsToolbar {min-height: var(--uc-tabbar-height) !important; z-index:996 !important;}
+#tabbrowser-tabs[orient="horizontal"] {min-height: var(--uc-tabbar-height) !important;}}
+#PersonalToolbar {height: var(--uc-bookbar-height) !important; z-index:995 !important;}
+#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 2px 0 2px 0 !important;}
+
+/* tracking toolbar height even if it is not visible */
 
 :root:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important;}
 :root:has(#toolbar-menubar[inactive="true"]) {--uc-menubar-height: 0px !important;}
 :root { @media (-moz-bool-pref: "sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}}
+
+
+/* tracking toolbar height when fullscreened (no menubar or bookmarkbar, tab bar when using VT) */
 
 :root[inFullscreen="true"] {
     --uc-menubar-height: 0px !important;
@@ -82,13 +98,6 @@ Vertical Tabs Disabled - setting
     @media (-moz-bool-pref: "sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}
 }
 
-#navigator-toolbox {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
-#toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
-#navbar {z-index:997 !important;}
-#TabsToolbar {min-height: var(--uc-tabbar-height) !important; z-index:996 !important;}
-#tabbrowser-tabs[orient="horizontal"] {min-height: var(--uc-tabbar-height) !important;}}
-#PersonalToolbar {height: var(--uc-bookbar-height) !important; z-index:995 !important;}
-#tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 2px 0 2px 0 !important;}
 
 /* Compact spacing -----------------------------------------------------------------------*/
 
@@ -130,6 +139,7 @@ Vertical Tabs Disabled - setting
     --uc-sb-margins-right: 0px !important;
 }
 
+:root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {--uc-navbar-height: 38px;}
 
 /* OS Window Control Tweaks --------------------------------------------------------------*/
 
@@ -184,16 +194,6 @@ toolbar {
 }
 
 /* Nav bar -------------------------------------------------------------------------------*/
-
-/*nav bar height control*/
-#nav-bar {
-    min-height:var(--uc-navbar-height) !important;
-    max-height: var(--uc-navbar-height) !important;
-}
-/*align child buttons vertically*/
-#nav-bar .toolbarbutton-1 {
-    margin-top:2.5px !important;
-}
 
 /*url bar*/
 /*autocorrect overlapping buttons (spacing) - when the Browser falls under a certain width*/
