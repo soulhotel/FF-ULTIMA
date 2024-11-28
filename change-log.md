@@ -1,4 +1,4 @@
-### <ins> FF Ultima Version 1.9.5 Draft
+### <ins> FF Ultima Version 1.9.5 Release
 - **[Click Me ⬇️ Direct Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.5/ffultima1.9.5.zip)**
 - ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
@@ -9,6 +9,7 @@
 - Firefox 133+ required.
 - User.js required.
 - Stability is Among Us.
+- 🎊🎆🎉🍰🦃🍽️🙏🎁🎉🎆🎊
 
 ### <ins> Change Log:
 - `qol` Wiki Up-to-Date!
@@ -24,10 +25,10 @@
 - `fix` vertical tab width patched for Nightly
 
 ### <ins> On the Next Episode of FF Ultima:
-- `wip` New Tab Page Overhaul
-- `wip` Setting `user.theme.adaptive`
-- `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers
-- `wip` Catppuccin-Frappe color-scheme, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+- `wip` New Tab Page Overhaul (1)
+- `wip` Setting `user.theme.adaptive` (4)
+- `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers (2)
+- `wip` Catppuccin-Frappe color-scheme, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) (3)
 
 
 
