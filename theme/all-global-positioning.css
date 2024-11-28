@@ -76,10 +76,10 @@ Vertical Tabs Disabled - setting
 
 #navigator-toolbox {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
 #toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
-#navbar {min-height:var(--uc-navbar-height) !important; max-height: var(--uc-navbar-height) !important; z-index:997 !important;}
+#nav-bar {min-height:var(--uc-navbar-height) !important; max-height: var(--uc-navbar-height) !important; z-index:997 !important;}
 #nav-bar .toolbarbutton-1 {margin-top:2.5px !important;} /*align child buttons vertically*/
 #TabsToolbar {min-height: var(--uc-tabbar-height) !important; z-index:996 !important;}
-#tabbrowser-tabs[orient="horizontal"] {min-height: var(--uc-tabbar-height) !important;}}
+#tabbrowser-tabs[orient="horizontal"] {min-height: var(--uc-tabbar-height) !important;}
 #PersonalToolbar {height: var(--uc-bookbar-height) !important; z-index:995 !important;}
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 2px 0 2px 0 !important;}
 
@@ -369,7 +369,7 @@ box-shadow: none !important;}}
 /*custom margins*/
 #sidebar-box {
     margin: var(--uc-sb-margins) !important;
-    padding 0px !important;
+    padding: 0px !important;
     padding-inline-start: 0 !important;
     padding-inline-end: 0 !important;
     &[positionend] {margin: var(--uc-sb-margins-right) !important;}
