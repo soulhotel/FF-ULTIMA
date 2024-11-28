@@ -99,6 +99,8 @@ Vertical Tabs Disabled - setting
 }
 
 
+
+
 /* Compact spacing -----------------------------------------------------------------------*/
 
 /*compact spacing setting*/
@@ -195,6 +197,8 @@ toolbar {
 
 /* Nav bar -------------------------------------------------------------------------------*/
 
+
+
 /*url bar*/
 /*autocorrect overlapping buttons (spacing) - when the Browser falls under a certain width*/
 @media (max-width: 700px) {
@@ -203,7 +207,7 @@ toolbar {
   }
 }
 @media (max-width: 600px) {
-  #unified-extensions-button, #PanelUI-button {display:none}
+  #unified-extensions-button, #PanelUI-button {display:none;}
 }
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
@@ -217,10 +221,11 @@ toolbar {
     #main-window:has(#navigator-toolbox:not(:hover)) #TabsToolbar {visibility:collapse !important;}
     #main-window:has(#navigator-toolbox:not(:hover)) #PersonalToolbar {visibility:collapse !important;}
     #main-window:has(#navigator-toolbox:not(:hover)) #toolbar-menubar {visibility:collapse !important;}
+    #main-window:has(#navigator-toolbox:not(:hover)) #nav-bar {opacity: 0 !important;}
     @media (-moz-bool-pref: "ultima.spacing.compact") {#main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 0.4px !important;}}
     #main-window:not(inFUllscreen) {
         #navigator-toolbox:not(:hover) {
-            transition: height 115ms linear 4ms !important;
+            transition: height 315ms linear 10ms !important;
         }
         #navigator-toolbox:not(:hover) .toolbarbutton-1,
         #navigator-toolbox:not(:hover) .titlebar-buttonbox-container {
