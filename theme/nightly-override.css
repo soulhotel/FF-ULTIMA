@@ -10,7 +10,7 @@ the theme can be evenly distributed to any user once a patch for a certain bug/c
 @media (-moz-bool-pref: "nightly.override") {
   .button-background[type="icon ghost"] {
     & label {
-      margin-left:5px !important;
+      margin-left:10px !important;
     }
   }
   .tools-and-extensions {margin-left:1px !important;}
