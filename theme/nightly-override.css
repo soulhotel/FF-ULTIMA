@@ -1,0 +1,39 @@
+/*
+This file contains segments of code that serve as quick-patches/repairs for changes between Firefox versions, specifically Firefox Nightly.
+If necessary these patches will eventually be moved into the main files, and removed from here.
+*/
+
+
+
+@media (-moz-bool-pref: "nightly.override") {
+  
+/* VT Toolbar buttons using inconsistent style between firefox versions, requires this patch to correct positioning of button + labels */ 
+ 
+.button-background[type="icon ghost"] { & label {
+    display: none;
+}}  
+.tools-and-extensions {
+    margin-left:1px !important;
+    margin-bottom: 5px !important;
+} 
+.actions-list {
+    flex-direction: row !important;
+} 
+.expanded-button {
+    width: initial !important;
+}  
+
+/* Pinned tabs container forced grid behavior - to keep them always visible */  
+  
+#sidebar-main #vertical-pinned-tabs-container {
+  grid-template-columns: unset !important;  
+}  
+#sidebar-main:has([expanded]) #vertical-pinned-tabs-container {
+  grid-template-columns: repeat(auto-fit, minmax(var(--tab-pinned-min-width-expanded), auto)) !important;  
+}  
+#vertical-pinned-tabs-container-separator {opacity:0 !important; display: none !important;}  
+  
+} /* end */
+
+  
+

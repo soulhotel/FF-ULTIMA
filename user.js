@@ -25,7 +25,9 @@ user_pref("user.theme.dark.midnight", false);
 user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
+user_pref("ultima.disable.verticaltab.bar.withindicator", false);
 user_pref("ultima.tabs.autohide", true);
+user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.width.small", false);
 user_pref("ultima.tabs.width.medium", true);
 user_pref("ultima.tabs.width.large", false);
@@ -42,8 +44,10 @@ user_pref("ultima.sidebar.longer", true);
 user_pref("ultima.theme.extensions", true);
 user_pref("ultima.theme.icons", true);
 user_pref("ultima.theme.menubar", true);
+user_pref("ultima.theme.color.swap", false);
 
 /*url bar*/
+user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.urlbar.suggestions", true);
 user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hidebuttons", false);
@@ -51,7 +55,6 @@ user_pref("ultima.xstyle.urlbar", false);
 
 /*alternate styles*/
 user_pref("ultima.spacing.compact", false);
-user_pref("ultima.spacing.compact.tabs", false);
 user_pref("ultima.xstyle.tabgroups.i", true);
 user_pref("ultima.xstyle.tabgroups.ii", false);
 user_pref("ultima.xstyle.containertabs.i", false);
@@ -62,6 +65,7 @@ user_pref("ultima.xstyle.private", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
 
 /*other*/
+user_pref("nightly.override", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("devtools.debugger.remote-enabled", true);

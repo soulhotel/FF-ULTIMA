@@ -27,3 +27,5 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/theme-findbar.css);
 @import url(theme/theme-PIP.css);
 @import url(theme/theme-tab-audio-indicator.css);
+
+@import url(theme/nightly-override.css);

@@ -1,57 +1,39 @@
-### [Click Me ⬇️](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.3/ffultima1.9.3.zip) 1.9.3 latest
+### <ins> FF Ultima Version 1.9.5 Release
+- **[Click Me ⬇️ Direct Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.5/ffultima1.9.5.zip)**
+- ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
+- 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
+- ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
+- 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
-###### ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
+### <ins> Version Notes
+- Firefox 133+ required.
+- User.js required.
+- Stability is Among Us.
+- 🎊🎆🎉🍰🦃🍽️🙏🎁🎉🎆🎊
 
-###### 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
-
-###### ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
-
-###### 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
-
->[!WARNING]
-> - Firefox 133+ required.
-> - User.js required.
-> - A lot of new settings, YAY! **Click the Video** or read up!
-
-[![ffultima193preview](https://github.com/user-attachments/assets/1f4c2885-77c4-488f-95a6-055c58f8f572)](https://www.youtube.com/watch?v=KDwWr7QMV8s)
-
-
-
-### Change Log:
-- `♻️` Setting `ultima.tabs.autohide` autohides the Vertical Tabs with a smooth animation
-- `new` Change the width of the vertical tabs with:
->`ultima.tabs.width.small`, `ultima.tabs.width.medium`, `ultima.tabs.width.large`, or `ultima.tabs.width.huge`
-- `new` Firefox finally has **Tab Groups** & You now have options to style them with:
->`ultima.xstyle.tabgroups.i` by @tthornton3-chwy and `ultima.xstyle.tabgroups.ii`
-- `qol` Right clicking tabs and putting them into groups allows you to seperate and even collapse groups!
-- `fix` MacOS titlebar bugs are patched #166 (Thank you @alejandrosanchezcabana for confirmation)
+### <ins> Change Log:
 - `qol` Wiki Up-to-Date!
-- `qol` When using `ultima.disable.verticaltab.bar` with sidebar autohiding, hovering the screen edge will trigger the sidebar to expand #168 (Thank you @awwpotato)
-- `qol` Using `ultima.disable.verticaltab.bar` will now completely remove the vertical bar, still accessible via a shortcut button
-- `new` Setting `ultima.spacing.compact.tabs` to reduce spacing between tabs (vertical), letting you see more at once.
-- `qol` Using the theme *with* Add-On themes has been optimized a bit! #182
-- `wip` Setting `user.theme.adaptive` for use with Autotab color extension, WIP, just a foundation.
-- `qol` New Tab Page menu background - blue tint reduced
-- `qol` tab audio indicator border removed
-- `fix` vertical tabs top alignment fixed #172
-- `qol` Theme colors for `Full moon` (Default Dark Mode) adjusted/improved #172
-- `qol` PiP (mini video player) buttons - now follows theme/color-scheme primary accent color
-- `qol` Audio indicator (for tabs) - now follows theme/color-scheme primary accent color
-- `qol` new tab button under vertical tabs - now follows selected tab color
-- `qol` autoscroller restored to default style #172
-- `fix` readjusted sidebar positioning adjustments when using the tabs-on-top layout
-- `qol` Sidebar margin corrections *when in fullscreen* and added toolbar padding [#179](https://github.com/soulhotel/FF-ULTIMA/pull/179)
-- `qol` overflow icon on navigation bar changed to a "more" icon
-- `qol` context menu seperators reduced visibility
-- `qol` findbar theming enhanced
-- `qol` pointer cursor added to certain buttons around the navigation bar (accessibility)
-- `qol` vertical tabs scrollbar increased visibility (accessibility)
-- `qol` hovering the edge of the screen where the titlebar `x` close button is, will trigger as a hover (accessibility) #112 #141
-- `wip` Setting `ultima.xstyle.bookmarks.fading` makes the bookmarks toolbar fade in/out smoothly.
-- `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers, right on the New Tab page! Enabled via `browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled` (wip. unstable)
+- `fix` text and button spacing for Vertical Tabs Toolbar buttons #186
+- `new` Set the width of Vertical Tabs with: `ultima.tabs.width.small` to `ultima.tabs.width.huge`
+- `new` Tab Groups! Style them with: `ultima.xstyle.tabgroups.i` by @tthornton3-chwy or `ultima.xstyle.tabgroups.ii`
+- `qol` Using `ultima.disable.verticaltab.bar` now completely removes the Vertical Bar, with an **optional** quick access option `ultima.disable.verticaltab.bar.withindicator` #193
+- `new` Setting `ultima.tabs.belowURLbar` to have horizontal tabs (tab on top) layout below the URL bar
+- `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
+- `qol` Setting `ultima.spacing.compact` now reduces 2 to 18 more pixels vertically (Navigation Bar)
+- `new` When using add on themes, users can [quickly fix](https://github.com/soulhotel/FF-ULTIMA/wiki/Using-Add%E2%80%90On-Themes) **most** color issues with `ultima.theme.color.swap`. Note, optimization for add on themes with ff ultima are now at their best state, but there are still a 10% of themes that just wont look great. This is because of the variety of ways that an add-on theme developer may choose to use their color variables, it is impossible to have an all-for-one solution mixed in with ff ultima.
+- `fix` Midnight color scheme code bleeding into light mode #196
+- `fix` vertical tab width patched for Nightly
+
+### <ins> On the Next Episode of FF Ultima:
+- `wip` New Tab Page Overhaul (1)
+- `wip` Setting `user.theme.adaptive` (4)
+- `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers (2)
+- `wip` Catppuccin-Frappe color-scheme, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) (3)
+
+
+
+https://github.com/user-attachments/assets/998fb2ef-3eca-4d0a-ab2e-76dec44cc15f
 
 
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
-
-![ff-editions](https://github.com/user-attachments/assets/b7ca4a8c-1a8d-4f38-adae-be7a99b69e29)

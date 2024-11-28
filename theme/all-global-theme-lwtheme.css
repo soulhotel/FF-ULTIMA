@@ -28,7 +28,7 @@
     /* content window */
     & #appcontent, & #browser, & #tabbrowser-tabbox, 
     & #tabbrowser-tabpanels, & .browserSidebarContainer, & .browserStack { 
-        background: var(--uc-transparent) !important; 
+        background: var(--lwt-accent-color) !important; 
     } 
     & #tabbrowser-tabpanels browser[type] {
         margin-top:4px !important;
@@ -201,4 +201,11 @@
     }
     
 }
- 
+
+
+
+@media (-moz-bool-pref: "ultima.theme.color.swap") {
+    #main-window[lwtheme] {    
+        --lwt-accent-color: var(--tabpanel-background-color) !important;
+    }
+}
