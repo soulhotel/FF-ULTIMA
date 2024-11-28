@@ -93,8 +93,11 @@ Vertical Tabs Disabled - setting
 /* Compact spacing -----------------------------------------------------------------------*/
 
 /*compact spacing setting*/
-@media (-moz-bool-pref: "ultima.spacing.compact") { 
+@media (-moz-bool-pref: "ultima.spacing.compact") {   
     :root {
+        --uc-menubar-height: 28px;
+        --uc-navbar-height: 38px;
+        --uc-tabbar-height: 36px;
         /*rounded corners*/
         --uc-content-border-radius: 0px;
         --uc-tab-border-radius: 0px;
@@ -106,11 +109,11 @@ Vertical Tabs Disabled - setting
         --uc-tab-margins-right: 0px; 
         --uc-sb-margins: 0px !important;
         --uc-sb-margins-right: 0px !important;
-        }
-    #sidebar-box,#sidebar{
-        padding:0px !important;
-        --uc-all-border-radius:0px !important;
     }
+    #urlbar-container {margin-top: -3px !important;}
+    #urlbar{transform: scale(0.99);}
+    #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {transform: scale(0.98);}
+    #sidebar-box, #sidebar{padding:0px !important; --uc-all-border-radius:0px !important;}  
 }
 
 /*full screen compacting*/
@@ -205,16 +208,20 @@ toolbar {
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
     
-    #main-window:has(#navigator-toolbox:not(:hover)) {--uc-navbar-height: 4px !important;}
+    #main-window:has(#navigator-toolbox:not(:hover)) {
+        --uc-menubar-height: 0px !important;
+        --uc-navbar-height: 3px !important;
+        --uc-tabbar-height: 0px !important;
+        --uc-bookbar-height: 0px !important;
+    }
     #main-window:has(#navigator-toolbox:not(:hover)) #TabsToolbar {visibility:collapse !important;}
     #main-window:has(#navigator-toolbox:not(:hover)) #PersonalToolbar {visibility:collapse !important;}
+    #main-window:has(#navigator-toolbox:not(:hover)) #toolbar-menubar {visibility:collapse !important;}
     @media (-moz-bool-pref: "ultima.spacing.compact") {#main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 0.4px !important;}}
     #main-window:not(inFUllscreen) {
         #navigator-toolbox:not(:hover) {
-            height:var(--uc-navbar-height) !important;
-            transition: height 115ms linear 4ms !important;;
+            transition: height 115ms linear 4ms !important;
         }
-        #navigator-toolbox:hover {height: var(--uc-navigator-toolbox-height) !important;}
         #navigator-toolbox:not(:hover) .toolbarbutton-1,
         #navigator-toolbox:not(:hover) .titlebar-buttonbox-container {
             opacity: 0 !important;
@@ -587,7 +594,7 @@ menupopup menuseparator {opacity:0.2 !important;}
         position:fixed !important;
         top: calc(var(--uc-topbars-combined-height) - 2px) !important;
         left:0px !important;
-        height:calc(100vh - var(--uc-topbars-combined-height) - 2px) !important;
+        height:calc(100vh - var(--uc-topbars-combined-height)) !important;
         z-index:999 !important;
     }    
     /*autohide*/
@@ -670,7 +677,7 @@ menupopup menuseparator {opacity:0.2 !important;}
         position:fixed !important;
         top: calc(var(--uc-topbars-combined-height) - 2px) !important;
         left:0px !important;
-        height:calc(100vh - var(--uc-topbars-combined-height) - 2px) !important;
+        height:calc(100vh - var(--uc-topbars-combined-height)) !important;
         z-index:999 !important;
     } 
     /*autohide*/
