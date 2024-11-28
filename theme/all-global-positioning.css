@@ -212,12 +212,12 @@ toolbar {
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
     
-    :root {--uc-topbars-combined-height: 1px !important;}
+    :root {--uc-topbars-combined-height: 2px !important;}
     @media (-moz-bool-pref: "sidebar.verticalTabs") {#navigator-toolbox{ margin-left:50px !important;}}
     #navigator-toolbox:not(:hover) #TabsToolbar {visibility:collapse !important;}
     #navigator-toolbox:not(:hover) #PersonalToolbar {visibility:collapse !important;}
     #navigator-toolbox:not(:hover) #toolbar-menubar {visibility:collapse !important;}
-    #navigator-toolbox:not(:hover) #nav-bar {opacity: 0 !important;}
+    #navigator-toolbox:not(:hover) #nav-bar {opacity:  !important; top:-40px;}
 
     @media (-moz-bool-pref: "ultima.spacing.compact") {:root {--uc-topbars-combined-height: 0.4px !important;}}
     
@@ -228,7 +228,7 @@ toolbar {
     #navigator-toolbox:not(:hover) .toolbarbutton-1,
     #navigator-toolbox:not(:hover) .titlebar-buttonbox-container {
         opacity: 0 !important;
-        transition: opacity 0.9s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
     }
     #navigator-toolbox:hover #nav-bar * {
         opacity: 1 !important;
@@ -240,8 +240,8 @@ toolbar {
     #urlbar[breakout] { & > .urlbar-input-container {
         height: 32px !important;
     }}
-    #urlbar:not([breakout-extend="true"]){opacity:0 !important;}
-    #navigator-toolbox:not(:hover) #urlbar { transform:scale(0.6);}
+    #urlbar:not([breakout-extend="true"]){opacity:  !important; top:1px;}
+    #navigator-toolbox:not(:hover) #urlbar { transform:scale(0.2); top:1px !important;}
     #urlbar[breakout-extend="true"] { transform:scale(1) !important;}
 }
 
