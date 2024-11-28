@@ -364,6 +364,8 @@ Custom UI - Background
     
 /* Custom UI - Background ----------------------------------------------------------*/    
  
+@media (prefers-color-scheme: dark) {
+
 #main-window:not([lwtheme]) #nav-bar {transition: var(--ext-theme-background-transition) !important;
 background-image: url(pic/midnight-ui.gif) !important;
 background-repeat: no-repeat, no-repeat !important;background-position: 115% 100% !important;}
@@ -372,6 +374,5 @@ background-repeat: no-repeat, no-repeat !important;background-position: 115% 100
 color: var(--toolbar-color) !important; color-scheme: var(--toolbar-color-scheme) !important;
 background-image: url(pic/midnight-ui.gif) !important; border-top: 0px !important;
 background-repeat: no-repeat, no-repeat !important;background-position: 100% 100% !important;}
-    
-    
+      
 }
