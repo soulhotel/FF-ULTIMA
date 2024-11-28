@@ -592,9 +592,9 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*fixed positioning*/
     #sidebar-main {       
         position:fixed !important;
-        top: calc(var(--uc-topbars-combined-height)) !important;
+        top: calc(var(--uc-topbars-combined-height) - 2px) !important;
         left:0px !important;
-        height:calc(100vh - var(--uc-topbars-combined-height)) !important;
+        height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
         z-index:999 !important;
     }    
     /*autohide*/
@@ -675,9 +675,9 @@ menupopup menuseparator {opacity:0.2 !important;}
     /*fixed positioning*/
     #sidebar-main {       
         position:fixed !important;
-        top: calc(var(--uc-topbars-combined-height)) !important;
+        top: calc(var(--uc-topbars-combined-height) - 2px) !important;
         left:0px !important;
-        height:calc(100vh - var(--uc-topbars-combined-height)) !important;
+        height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
         z-index:999 !important;
     } 
     /*autohide*/
