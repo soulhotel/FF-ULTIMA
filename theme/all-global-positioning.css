@@ -222,7 +222,7 @@ toolbar {
     @media (-moz-bool-pref: "ultima.spacing.compact") {:root {--uc-topbars-combined-height: 0.4px !important;}}
     
     #navigator-toolbox:not(:hover) {
-        transition: height 315ms linear 10ms !important;
+        transition: height 215ms linear 10ms !important;
         height:var(--uc-topbars-combined-height) !important;
     }
     #navigator-toolbox:not(:hover) .toolbarbutton-1,
