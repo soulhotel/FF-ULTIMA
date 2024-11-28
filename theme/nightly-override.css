@@ -1,33 +1,39 @@
 /*
 This file contains segments of code that serve as quick-patches/repairs for changes between Firefox versions, specifically Firefox Nightly.
-
-with the use of the 'nightly-override' setting on the about:config page,
-the theme can be evenly distributed to any user once a patch for a certain bug/change is added below
+If necessary these patches will eventually be moved into the main files, and removed from here.
 */
 
-/* VT Toolbar buttons using inconsistent style between firefox versions, requires this patch to correct positioning of button + labels */
+
 
 @media (-moz-bool-pref: "nightly.override") {
   
-.button-background[type="icon ghost"] {
-  & label {
-    /*margin-left: 10px !important;*/
+/* VT Toolbar buttons using inconsistent style between firefox versions, requires this patch to correct positioning of button + labels */ 
+ 
+.button-background[type="icon ghost"] { & label {
     display: none;
-  }
-}
-  
-.tools-and-extensions {margin-left:1px !important;margin-bottom: 3px !important;}
+}}  
+.tools-and-extensions {
+    margin-left:1px !important;
+    margin-bottom: 5px !important;
+} 
 .actions-list {
-  flex-direction: row !important;
-  
+    flex-direction: row !important;
+} 
 .expanded-button {
-  width: initial !important;
+    width: initial !important;
 }  
+
+/* Pinned tabs container forced grid behavior - to keep them always visible */  
   
-}
+#sidebar-main #vertical-pinned-tabs-container {
+  grid-template-columns: unset !important;  
+}  
+#sidebar-main:has([expanded]) #vertical-pinned-tabs-container {
+  grid-template-columns: repeat(auto-fit, minmax(var(--tab-pinned-min-width-expanded), auto)) !important;  
+}  
+#vertical-pinned-tabs-container-separator {opacity:0 !important; display: none !important;}  
+  
+} /* end */
 
-/* */
+  
 
-/* */
-
-/* */
