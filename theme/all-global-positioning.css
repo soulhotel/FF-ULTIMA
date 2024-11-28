@@ -189,7 +189,8 @@ toolbar {
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
     
     #main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 4px !important;}
-    
+    #main-window:has(#nav-bar:not(:hover)) #TabsToolbar {visibility:collapse !important;}
+    @media (-moz-bool-pref: "ultima.spacing.compact") {#main-window:has(#nav-bar:not(:hover)) {--uc-navbar-height: 0.4px !important;}}
     #main-window:not(inFUllscreen) {
         #nav-bar:not(:hover) > *:not(#urlbar-container) {
             opacity: 0 !important;
@@ -278,6 +279,8 @@ box-shadow: none !important;}}
 
 /* Horizontal tabs ---------------------------------------------------------------------- */
 
+/* hide vt sidebar when horizontal */
+
 @media (-moz-bool-pref: "sidebar.revamp") { @media not (-moz-bool-pref: "sidebar.verticalTabs") {
     #sidebar-main{visibility:collapse !important;}
     @media not (-moz-bool-pref: "ultima.spacing.compact") { 
@@ -285,19 +288,35 @@ box-shadow: none !important;}}
         :root:has(#sidebar-box) #browser {margin-left: 3px !important;}}
 }}
 
+/* style for horizontal tabs */
+
+:root:has(#tabbrowser-tabs[orient="horizontal"]) {
+    --tab-min-height:20px !important;
+    --tab-border-radius: 10px !important;
+    #tabbrowser-tabs[orient="horizontal"] {margin-bottom: 3px !important;}
+}
 #tabbrowser-tabs[orient="horizontal"] {
     .tabbrowser-tab {
         &:not([pinned]) {
             max-width: 300px !important;
     }}
-
     .tabbrowser-tab {
         border-radius: 11px !important;
     }
-
     .tab-icon-stack[pinned] {
       margin-inline: 5px !important;
     }
+}
+
+/* option to have the tabs show under the url bar */
+
+@media (-moz-bool-pref: "ultima.tabs.belowURLbar") {
+    #toolbar-menubar { order: 0 !important; }
+    #navigator-toolbox #nav-bar { order: 1 !important; }
+    #TabsToolbar { order: 2 !important; }
+    #PersonalToolbar { order: 3 !important; }
+    #TabsToolbar .titlebar-buttonbox-container {display: none !important;}
+    #nav-bar .titlebar-buttonbox-container {display: flex !important;}
 }
 
 
@@ -679,14 +698,14 @@ menupopup menuseparator {opacity:0.2 !important;}
         --uc-sb-margins: 2px 5px -2px 0px;
         --uc-sb-margins-right: 2px 5px -2px 5px;
     }
-} 
+}} 
 @media (-moz-bool-pref: "ultima.disable.verticaltab.bar") {
 @media (-moz-bool-pref: "sidebar.verticalTabs") {
     :root:has(#sidebar-box:not([hidden])) {
         --uc-sb-margins: 2px 5px -1px 5px;
         --uc-sb-margins-right: 2px 5px -1px 5px;
     }
-}
+}}
 
 /*-------------------------------------------------------------------------------------*/
 /* --------------------------------------------------*/
