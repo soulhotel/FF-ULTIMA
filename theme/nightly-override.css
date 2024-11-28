@@ -8,12 +8,22 @@ the theme can be evenly distributed to any user once a patch for a certain bug/c
 /* VT Toolbar buttons using inconsistent style between firefox versions, requires this patch to correct positioning of button + labels */
 
 @media (-moz-bool-pref: "nightly.override") {
-  .button-background[type="icon ghost"] {
-    & label {
-      margin-left:10px !important;
-    }
+  
+.button-background[type="icon ghost"] {
+  & label {
+    /*margin-left: 10px !important;*/
+    display: none;
   }
-  .tools-and-extensions {margin-left:1px !important;}
+}
+  
+.tools-and-extensions {margin-left:1px !important;margin-bottom: 3px !important;}
+.actions-list {
+  flex-direction: row !important;
+  
+.expanded-button {
+  width: initial !important;
+}  
+  
 }
 
 /* */
