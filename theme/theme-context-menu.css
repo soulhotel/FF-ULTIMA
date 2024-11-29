@@ -1,30 +1,28 @@
-/* ----------------------------------------------------------
-- removing excess items from the context menu
-- context menu styling
-- color correction relative to system color scheme
------------------------------------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Theming the context menu (right-click menu)
+
+removing excess items from the context menu
+context menu theming
+color correction relative to system color scheme
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 #context-take-screenshot
 #context-sep-screenshots,
 #context-sendimage,
 #context-sep-setbackground,
-#context-openlinkinusercontext-menu
-    {
-        display: none !important;
-    }
-
+#context-openlinkinusercontext-menu {
+display: none !important;}
 #context-pocket,
 #context-savelinktopocket,
 #tabContextMenu #context_duplicateTab,         
 #tabContextMenu #context_duplicateTabs,
-#tabContextMenu #context_bookmarkSelectedTabs
-    {
-        display: none !important;
-    }
+#tabContextMenu #context_bookmarkSelectedTabs{
+display: none !important;}
 
-/* ----------------------------------------------------------
-Theming Context Menu
------------------------------------------------------------*/
+/* context menu theming */
 
 menupopup, panel {
   color-scheme: light dark;
@@ -44,8 +42,6 @@ menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
   background-color: var(--uc-button-selected) !important;
   color: var(--uc-text) !important;
 }
-
-
 
 #main-window[lwtheme]{
     
