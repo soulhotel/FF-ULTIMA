@@ -1,6 +1,7 @@
-/*
-https://github.com/soulhotel/FF-ULTIMA
-Global Positioning of main elements of the browser 
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Global Positioning for main elements of the browser 
 
 Global variables
 Toolbar spacing
@@ -16,10 +17,10 @@ Vertical Tabs Width - settings
 Vertical Tabs Tweaks
 Autohide Vertical Tabs - setting
 Vertical Tabs Disabled - setting
-*/
 
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* Global variables for quick modifications ----------------------------------------------*/
+/* Global variables for quick modifications ---------------------------------------------*/
 
 :root {
     --chrome-content-separator-color: transparent;
