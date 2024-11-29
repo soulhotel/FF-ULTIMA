@@ -8,7 +8,7 @@ If necessary these patches will eventually be moved into the main files, and rem
 @media (-moz-bool-pref: "nightly.override") {
   
 span.button-background.labelled label {
-    padding-left: 4px !important;
+    padding-left: 11px !important;
 }
 #vertical-pinned-tabs-container-separator {opacity:0 !important; display: none !important;}  
     
