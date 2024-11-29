@@ -1,8 +1,12 @@
-/*
-This file contains segments of code that serve as quick-patches/repairs for changes between Firefox versions, specifically Firefox Nightly.
-If necessary these patches will eventually be moved into the main files, and removed from here.
-*/
+/*///////////////////////////////////////////////////////////////////////////////////////\
 
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+
+Quick-patches/repairs for changes between Firefox versions, specifically Firefox Nightly.
+If necessary, these patches will eventually be moved into the main files.
+(and removed from here)
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 @media (-moz-bool-pref: "nightly.override") {
