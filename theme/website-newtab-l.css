@@ -1,10 +1,9 @@
-/*
-Note: this new tab theme is the creation of @Hachiko
-https://github.com/hachikoharuno/Beautiful-newtab-Firefox
-check them out if you like this theme!
-*/
+/*///////////////////////////////////////////////////////////////////////////////////////\
 
-/*----------------------NEW TAB HOME-----------------------*/
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         website-newtab.css continuation
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
