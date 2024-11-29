@@ -1,12 +1,14 @@
-/*
-This file handles all Color Schemes available in the chrome/theme folder.
-Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme
+/*///////////////////////////////////////////////////////////////////////////////////////\
 
-Use the template below to enter your theme into the list:
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Source all Color-Schemes available in the chrome/theme folder 
+Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme
 
-@import url('all-global-theme-MYTHEME.css') (-moz-bool-pref: "user.theme.dark.MYTHEME");
-@import url('all-global-theme-MYTHEME.css') (-moz-bool-pref: "user.theme.light.MYTHEME");
-*/
+Template:
+@import url('all-global-theme-YOURTHEME.css') (-moz-bool-pref: "user.theme.dark.YOURTHEME");
+@import url('all-global-theme-YOURTHEME.css') (-moz-bool-pref: "user.theme.light.YOURTHEME");
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 @import url('all-global-theme-lwtheme.css');
 @import url('all-global-theme-adaptive.css') (-moz-bool-pref: "user.theme.adaptive");
