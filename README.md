@@ -30,7 +30,7 @@
 
 ## Installation
 
-###### 🚨 Do not skip the installation instructions! Firefox v131+ Required. 🚨
+###### 🚨 Do not skip the installation instructions! Firefox v133+ Required. 🚨
 
 <details>
 <summary>Need help finding your Profile Folder? (Click Me)</summary>
