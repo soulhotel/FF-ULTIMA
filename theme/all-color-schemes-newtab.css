@@ -1,18 +1,16 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Attaches New Tab wallpapers to Users current color-scheme selection
+
+Use the example lines labeled YOURTHEME to enter your theme in the list
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 @media not (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
-  
-/*
-This file handles New Tab Backgrounds for Color Schemes.
-Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc/new-color-scheme.md
 
-Use the template below to enter your theme into the list:
-
-@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
-
-@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
-*/
-
-/*--------------------------------- DARK COLOR SCHEME SECTION ---------------------------------*/
+/* DARK COLOR SCHEME SECTION -----------------------------------------------*/
 
 @media (prefers-color-scheme: dark) {
 
@@ -26,9 +24,13 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("pic/midnight.png") !important;}}
 
+/*@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}*/
+  
+/*@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}*/  
+
 }
 
-/*--------------------------------- LIGHT COLOR SCHEME SECTION ---------------------------------*/
+/* LIGHT COLOR SCHEME SECTION ---------------------------------------------*/
 
 @media (prefers-color-scheme: light){
 
@@ -36,11 +38,19 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.png") !important;}}
 
-  
-  
-  
-  
-  
+/*@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}*/
+
+/*@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}*/
 }
+
+
+
+
+
+
+
+
+
+  
 }
 }
