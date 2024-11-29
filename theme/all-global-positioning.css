@@ -88,7 +88,7 @@ Vertical Tabs Disabled - setting
 :root:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important;}
 :root:has(#toolbar-menubar[inactive="true"]) {--uc-menubar-height: 0px !important;}
 :root { @media (-moz-bool-pref: "sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}}
-
+@media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
 
 /* tracking toolbar height when fullscreened (no menubar or bookmarkbar, tab bar when using VT) */
 
@@ -744,3 +744,4 @@ menupopup menuseparator {opacity:0.2 !important;}
     visibility: collapse !important;
 }
 
+@media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
