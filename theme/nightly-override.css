@@ -10,7 +10,7 @@ If necessary these patches will eventually be moved into the main files, and rem
 /* VT Toolbar buttons using inconsistent style between firefox versions, requires this patch to correct positioning of button + labels */ 
  
 .button-background[type="icon ghost"] { & label {
-    display: none;
+    display: none !important;
 }}  
 .tools-and-extensions {
     margin-left:1px !important;
