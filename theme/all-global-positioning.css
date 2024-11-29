@@ -428,7 +428,7 @@ box-shadow: none !important;}}
     @media not (-moz-bool-pref: "ultima.tabs.width.small") { 
     @media not (-moz-bool-pref: "ultima.tabs.width.large") {
     @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
-        :root, body, * {--uc-vertical-expanded-width:300px !important;}
+        :root, body, * {--uc-vertical-expanded-width:310px !important;}
         #sidebar-main:has([expanded=""]) #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
         #sidebar-main:has([expanded=""]) #vertical-tabs {width: var(--uc-vertical-expanded-width) !important;}
 }}}}
@@ -437,7 +437,7 @@ box-shadow: none !important;}}
     @media not (-moz-bool-pref: "ultima.tabs.width.small") {
     @media not (-moz-bool-pref: "ultima.tabs.width.medium") {
     @media not (-moz-bool-pref: "ultima.tabs.width.huge") {
-        :root, body, * {--uc-vertical-expanded-width:350px !important;}
+        :root, body, * {--uc-vertical-expanded-width:375px !important;}
         #sidebar-main:has([expanded=""]) #tabbrowser-tabs {width:var(--uc-vertical-expanded-width) !important;}
         #sidebar-main:has([expanded=""]) #vertical-tabs {width: var(--uc-vertical-expanded-width) !important;}
 }}}}
