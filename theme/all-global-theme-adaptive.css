@@ -1,17 +1,16 @@
-/*---------------------------- Global Color Scheme Fallback -----------------------------
-- This file serves as a fallback for default color/design around the FF Ultima theme
-- Including global/default styles that are used throughout every other color scheme
-- Including a base/foundation for tab autotab color extension
- 
-[Index] ctrl+f a line to find the specified section:
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Global Color Scheme Fallback, Adaptable Browser Theming
+
 Establishing custom variables
 Overwriting existing variables
 Applying variables to create the Dark Mode theme
 Adapting to add-on-theme styling
 Global styling - applies everywhere
 Global styling - Icons
---------------------------------------------------------------------------------------*/
 
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* Establishing custom variables - allowing most(/all) customization to be done in one place. */
     
@@ -211,7 +210,7 @@ Global styling - Icons
     & .titlebar-spacer[type="post-tabs"] {opacity:0 !important;}
 }
 
-/* URL Bar ----------------------------------------*/
+/* URL Bar --------------------------------------------------------*/
 
 #main-window:not([lwtheme]) {  
     /* URL bar */
