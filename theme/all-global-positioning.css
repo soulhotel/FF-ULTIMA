@@ -221,7 +221,13 @@ toolbar {
             transform: rotateX(92deg) !important;
             transition: transform 0.3s ease !important;
             opacity:0;
-        }/*
+        }
+        #urlbar[breakout] {
+            & > .urlbar-input-container {
+                height: 100% !important;
+            }
+        }       
+        /*
         #navigator-toolbox:not(:hover):not(:has(#urlbar[breakout-extend])) *:not(#urlbar[breakout-extend]) {opacity: 0 !important;}*/
         #navigator-toolbox:not(:hover) { #toolbar-menubar, #TabsToolbar, #PersonalToolbar { 
             opacity: 0 !important;
