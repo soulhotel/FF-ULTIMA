@@ -204,7 +204,7 @@ toolbar {
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
     #main-window[sizemode="normal"] {    
-
+        
         #sidebar-main {--uc-topbars-combined-height: 2px !important;}
         @media (-moz-bool-pref: "sidebar.verticalTabs") {
             #nav-bar {padding-left:42px !important;}
@@ -220,24 +220,21 @@ toolbar {
             transform-origin: top !important;
             transform: rotateX(92deg) !important;
             transition: transform 0.3s ease !important;
+            opacity:0;
         }/*
         #navigator-toolbox:not(:hover):not(:has(#urlbar[breakout-extend])) *:not(#urlbar[breakout-extend]) {opacity: 0 !important;}*/
-        #navigator-toolbox:not(:hover) {
-            #toolbar-menubar, #TabsToolbar, #PersonalToolbar { 
-                opacity: 0 !important;
-            }
-        }
-        #navigator-toolbox:not(:hover) {
-            .titlebar-buttonbox-container, #PanelUI-button, #nav-bar-customization-target *:not(#urlbar-container *) {
-                opacity:0 !important;
-            }
-        }
+        #navigator-toolbox:not(:hover) { #toolbar-menubar, #TabsToolbar, #PersonalToolbar { 
+            opacity: 0 !important;
+        }}
+        #navigator-toolbox:not(:hover) { .titlebar-buttonbox-container, #PanelUI-button, #nav-bar-customization-target *:not(#urlbar-container *) {
+            opacity:0 !important;
+        }}
         :root:not([sessionrestored]) #navigator-toolbox {
             transform:none !important;
-        } 
+        }   
         
     }
-}  
+}    
 
 
 /* Menu bar ------------------------------------------------------------------------------*/
