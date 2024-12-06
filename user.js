@@ -65,6 +65,10 @@ user_pref("ultima.xstyle.pinnedtabs.i", false);
 user_pref("ultima.xstyle.private", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
 
+/*new tab*/
+user_pref("user.theme.newtab.default", true);
+user_pref("user.theme.newtab.circular", false);
+
 /*other*/
 user_pref("nightly.override", true);
 user_pref("browser.aboutConfig.showWarning", false);
