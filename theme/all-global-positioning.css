@@ -460,7 +460,7 @@ box-shadow: none !important;}}
 
 /* global tweaks */
 #sidebar-main {
-    /*border-radius: var(--uc-sidebar-border-radius) !important;*/
+    -moz-window-dragging: drag;
     &:not([positionend="true"]) {margin: var(--uc-tab-margins-left) !important;}      
     &[positionend="true"] {margin: var(--uc-tab-margins-right) !important;}
     & .tab-close-button, & #vertical-tabs-newtab-button, & #tabs-newtab-button {border-radius: 8px !important;}
@@ -744,5 +744,7 @@ menupopup menuseparator {opacity:0.2 !important;}
     min-width: 0.1px !important;
     visibility: collapse !important;
 }
+
+
 
 @media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
