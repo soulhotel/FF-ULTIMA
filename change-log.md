@@ -15,6 +15,7 @@
 - `fix` text and button spacing for Vertical Tabs Toolbar buttons #186
 - `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
 - `fix` Setting `ultima.spacing.compact` now removes the top background showing over browser content #206
+- `fix` Windows Sidebar visibility (z-index correction) #205
 - `new` When using add on themes, users can [quickly fix](https://github.com/soulhotel/FF-ULTIMA/wiki/Using-Add%E2%80%90On-Themes) **most** color issues with `ultima.theme.color.swap`. Note, optimization for add on themes with ff ultima are now at their best state, but there are still a 10% of themes that just wont look great. This is because of the variety of ways that an add-on theme developer may choose to use their color variables, it is impossible to have an all-for-one solution mixed in with ff ultima.
 - `fix` vertical tab width patched for Nightly
 
