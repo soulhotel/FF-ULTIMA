@@ -204,7 +204,7 @@ toolbar {
 /* navbar autohiding */
 
 @media (-moz-bool-pref: "ultima.navbar.autohide") { 
-    #main-window[sizemode="normal"] {    
+    #main-window:is([sizemode="normal"],[sizemode="maximized"]) {   
         
         #sidebar-main {--uc-topbars-combined-height: 2px !important;}
         @media (-moz-bool-pref: "sidebar.verticalTabs") {
