@@ -13,7 +13,8 @@
 ### <ins> Change Log:
 - `qol` Wiki Up-to-Date!
 - `new` Catpuccin Frappe Edition *`color-scheme`*
-- `new` New Tab Overhaul
+- `new` New Tab Overhaul with `user.theme.newtab` settings
+- `qol` Wallpapers for `Full Moon` and `Midnight` have been updated/changed for better resolution
 - `fix` text and button spacing for Vertical Tabs Toolbar buttons #186
 - `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
 - `fix` Setting `ultima.spacing.compact` now removes the top background showing over browser content #206
