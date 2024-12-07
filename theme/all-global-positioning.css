@@ -633,7 +633,8 @@ menupopup menuseparator {opacity:0.2 !important;}
     }
     /* forcing visibility when context menu is active */
     @media (-moz-bool-pref: "ultima.disable.contextmenu.collapsing") {
-    #main-window:has(#toolbar-context-menu[hasbeenopened="true"]:hover) #sidebar-main:has([expanded]):not(:hover) {
+    #main-window:has(#toolbar-context-menu[hasbeenopened="true"]:hover) #sidebar-main:has([expanded]):not(:hover),
+    #main-window:has(#tabContextMenu[hasbeenopened="true"]:hover) #sidebar-main:has([expanded]):not(:hover) {
         width:var(--uc-vertical-expanded-width) !important;
         & .tabbrowser-tab{width: var(--uc-vertical-expanded-width) !important; min-width: initial !important;}
         & .tabbrowser-tab[pinned]{width: initial !important; min-width: initial !important;}
