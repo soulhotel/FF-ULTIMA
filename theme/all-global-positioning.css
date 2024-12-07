@@ -639,7 +639,7 @@ menupopup menuseparator {opacity:0.2 !important;}
         & .tabbrowser-tab{width: var(--uc-vertical-expanded-width) !important; min-width: initial !important;}
         & .tabbrowser-tab[pinned]{width: initial !important; min-width: initial !important;}
         & .tabbrowser-tab[pinned]{width: initial !important; min-width: initial !important;}
-        & .tab-label-container, & .tab-close-button{ display: initial !important;}
+        & .tab-label-container { display: initial !important;}
         & #tabs-newtab-button .toolbarbutton-text {opacity:initial !important;}
         & #vertical-tabs-newtab-button .toolbarbutton-text {opacity:initial !important;}        
     }
