@@ -142,7 +142,9 @@ Vertical Tabs Disabled - setting
 }
 /* windows */
 @media (-moz-platform: windows) {
-#tabbrowser-tabbox, .browserContainer, .browserStack, #tabbrowser-tabbox, #tabbrowser-tabpanels { z-index: 1 !important; }
+    #tabbrowser-tabbox, .browserContainer, .browserStack, #tabbrowser-tabbox, #tabbrowser-tabpanels {z-index: 1 !important;}
+    .titlebar-button {padding: 8px 11px !important; margin: 5px 0 3px 0 !important;}
+    .titlebar-buttonbox {margin-right: 1px !important;}    
 }
 /* linux - kde spacing */
 @media (-moz-platform: linux), (-moz-os-version: linux) {
