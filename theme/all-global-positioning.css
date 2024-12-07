@@ -629,6 +629,16 @@ menupopup menuseparator {opacity:0.2 !important;}
         & #tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
         & #vertical-tabs-newtab-button .toolbarbutton-text {opacity:0 !important;}
     }
+    /* forcing visibility when context menu is active */
+    #main-window:has(#toolbar-context-menu[hasbeenopened="true"]:hover) #sidebar-main:has([expanded]):not(:hover) {
+        width:var(--uc-vertical-expanded-width) !important;
+        & .tabbrowser-tab{width: var(--uc-vertical-expanded-width) !important; min-width: initial !important;}
+        & .tabbrowser-tab[pinned]{width: initial !important; min-width: initial !important;}
+        & .tabbrowser-tab[pinned]{width: initial !important; min-width: initial !important;}
+        & .tab-label-container, & .tab-close-button{ display: initial !important;}
+        & #tabs-newtab-button .toolbarbutton-text {opacity:initial !important;}
+        & #vertical-tabs-newtab-button .toolbarbutton-text {opacity:initial !important;}        
+    }
     /* browser space adjustments */
     @media (-moz-bool-pref: "sidebar.revamp") {
         #main-window:not([inDOMFullscreen="true"]) #browser:not(:has(#sidebar-main[hidden="true"])) {
