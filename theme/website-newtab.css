@@ -6,7 +6,7 @@ New Tab Page Circular Theme
 ladedadeda
 ----------------------------------------------------------*/
 
-@import url('wallpapers.css');
+@import url('all-color-schemes-wallpapers.css');
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 @media (-moz-bool-pref: "user.theme.newtab.default") {
   
