@@ -70,6 +70,20 @@ user_pref("ultima.xstyle.bookmarks.fading", false);
 user_pref("user.theme.newtab.default", true);
 user_pref("user.theme.newtab.circular", false);
 
+/*override wallpapers*/
+user_pref("user.theme.wallpaper.catppuccin", false);
+user_pref("user.theme.wallpaper.catppuccin-mocha", false);
+user_pref("user.theme.wallpaper.dusky", false);
+user_pref("user.theme.wallpaper.fullmoon", false);
+user_pref("user.theme.wallpaper.green", false);
+user_pref("user.theme.wallpaper.gruvbox", false);
+user_pref("user.theme.wallpaper.gruvbox.flowers", false);
+user_pref("user.theme.wallpaper.gruvbox.light", false);
+user_pref("user.theme.wallpaper.midnight", false);
+user_pref("user.theme.wallpaper.midnight2", false);
+user_pref("user.theme.wallpaper.seasonal", false);
+user_pref("user.theme.wallpaper.seasonal2", false);
+
 /*other*/
 user_pref("nightly.override", true);
 user_pref("browser.aboutConfig.showWarning", false);
