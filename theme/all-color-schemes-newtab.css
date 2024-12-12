@@ -16,16 +16,20 @@ Use the template below to enter your theme into the list:
 
 @media (prefers-color-scheme: dark) {
 
-@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("pic/fullmoon.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("https://w.wallhaven.cc/full/md/wallhaven-mdxvx1.jpg") !important;}}
 
 @media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
+
+@media (-moz-bool-pref: "user.theme.dark.catppuccin-frappe"){body{background-image: url("pic/catppuccin.png") !important;}}
 
 @media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("pic/catppuccin.png") !important;}}
 
 @media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("pic/midnight.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("https://w.wallhaven.cc/full/ey/wallhaven-ey9jvo.jpg") !important;}}
 
+  
+  
 }
 
 /*--------------------------------- LIGHT COLOR SCHEME SECTION ---------------------------------*/
@@ -37,10 +41,29 @@ Use the template below to enter your theme into the list:
 @media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.png") !important;}}
 
   
+     
+} 
   
-  
-  
+/*--------------------------------- OVERRIDE WALLPAPERS FEATURE --------------------------------*/
+
+@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+
+@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-mocha"){body{background-image: url("pic/catppuccin-mocha.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.dusky"){body{background-image: url("pic/dusky.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.fullmoon"){body{background-image: url("pic/fullmoon.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.fullmoon2"){body{background-image: url("pic/old.fullmoon.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.midnight"){body{background-image: url("pic/midnight.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.midnight2"){body{background-image: url("pic/old.midnight.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.green"){body{background-image: url("pic/green.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.gruvbox.light"){body{background-image: url("pic/gruvbox-l.jpg") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.gruvbox.flowers"){body{background-image: url("pic/gruvbox-l.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.seasonal"){body{background-image: url("pic/seasonal.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.seasonal2"){body{background-image: url("pic/seasonal2.png") !important;}}
+
+
   
 }
-}
-}
+  
+}} /*fin*/
