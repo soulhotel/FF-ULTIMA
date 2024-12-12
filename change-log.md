@@ -7,22 +7,24 @@
 
 ### <ins> Version Notes
 - Firefox 133+ required.
-- User.js required.
 - Stability is Among Us.
 - 🎊🎆🎉🍰🦃🍽️🙏🎁🎉🎆🎊
 
 ### <ins> Change Log:
 - `qol` Wiki Up-to-Date!
+- `new` Catpuccin Frappe Edition *`color-scheme`*
+- `new` New Tab Overhaul with `user.theme.newtab` settings
+- `qol` Wallpapers for `Full Moon` and `Midnight` have been updated/changed for better resolution
+- `qol` you can now drag/move the Browser Window *with* the Vertical-Tab Sidebar
 - `fix` text and button spacing for Vertical Tabs Toolbar buttons #186
-- `new` Set the width of Vertical Tabs with: `ultima.tabs.width.small` to `ultima.tabs.width.huge`
-- `new` Tab Groups! Style them with: `ultima.xstyle.tabgroups.i` by @tthornton3-chwy or `ultima.xstyle.tabgroups.ii`
-- `qol` Using `ultima.disable.verticaltab.bar` now completely removes the Vertical Bar, with an **optional** quick access option `ultima.disable.verticaltab.bar.withindicator` #193
-- `new` Setting `ultima.tabs.belowURLbar` to have horizontal tabs (tab on top) layout below the URL bar
 - `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
-- `qol` Setting `ultima.spacing.compact` now reduces 2 to 18 more pixels vertically (Navigation Bar)
+- `fix` Setting `ultima.spacing.compact` now removes the top background showing over browser content #206
+- `fix` Windows Sidebar visibility (z-index correction) #205
+- `fix` Windows titlebar button size/positioning `- o x`
+- `qol` Navbar Autohiding now works with Maximized Windows #209 (Thank you @boarder2 for the heads up!)
 - `new` When using add on themes, users can [quickly fix](https://github.com/soulhotel/FF-ULTIMA/wiki/Using-Add%E2%80%90On-Themes) **most** color issues with `ultima.theme.color.swap`. Note, optimization for add on themes with ff ultima are now at their best state, but there are still a 10% of themes that just wont look great. This is because of the variety of ways that an add-on theme developer may choose to use their color variables, it is impossible to have an all-for-one solution mixed in with ff ultima.
-- `fix` Midnight color scheme code bleeding into light mode #196
 - `fix` vertical tab width patched for Nightly
+- `wip` when using tabs autohide, the context menu (right click menu) will keep the sidebar expanded. (experimental)
 
 ### <ins> On the Next Episode of FF Ultima:
 - `wip` New Tab Page Overhaul (1)
