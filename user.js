@@ -24,7 +24,7 @@ user_pref("user.theme.dark.midnight", false);
 
 /*titlebar and tabs*/
 user_pref("ultima.disable.alltabs.button", true);
-user_pref("ultima.disable.contextmenu.collapsing", false);
+user_pref("ultima.disable.contextmenu.collapsing", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.disable.verticaltab.bar.withindicator", false);
