@@ -1,12 +1,14 @@
-/*---------------------------- Dark Mode Global Variables -----------------------------
-- Global variables used for ease of modification, and future customization
- 
-[Index] ctrl+f a line to find the specified section:
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         DARK Mode Color Scheme, Gruvbox
+
 Establishing custom variables
 Overwriting existing variables
 Applying variables to create the Dark Mode theme
 Custom Icons
--------------------------------------------------------------------------------------*/
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 
 @media (prefers-color-scheme: dark) {
@@ -318,7 +320,7 @@ Custom Icons
 } /* < end of Theming */
     
     
-/* Global styling - Icons ------------------------------------------------------------*/
+/* Custom Icons ------------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.theme.icons") {  
     /*--extension menu--*/

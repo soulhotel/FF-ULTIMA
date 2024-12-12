@@ -33,7 +33,10 @@
     & #tabbrowser-tabpanels browser[type] {
         margin-top:4px !important;
         outline: 4px solid var(--lwt-accent-color) !important;
-    }   
+    }
+    @media (-moz-bool-pref: "ultima.spacing.compact") {
+        & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
+    }
 }    
     
 /* Sidebars -------------------------------------------------------*/
@@ -58,6 +61,9 @@
     }
     & .sidebar-panel[lwt-sidebar] {
         background-color: var(--uc-transparent) !important;
+    }
+    @media (-moz-bool-pref: "ultima.spacing.compact") {
+        & #sidebar-main {top: calc(var(--uc-topbars-combined-height) - 0px) !important;}
     }
 }
 

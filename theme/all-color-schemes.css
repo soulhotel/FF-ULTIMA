@@ -13,7 +13,8 @@ Use the template below to enter your theme into the list:
 @import url('all-global-theme-fullmoon.css') (-moz-bool-pref: "user.theme.dark.a");
 @import url('all-global-theme-dusky.css') (-moz-bool-pref: "user.theme.light.a");
 @import url('all-global-theme-catppuccin.css') (-moz-bool-pref: "user.theme.dark.catppuccin"); 
-@import url('all-global-theme-catppuccin-mocha.css') (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"); 
+@import url('all-global-theme-catppuccin-frappe.css') (-moz-bool-pref: "user.theme.dark.catppuccin-frappe"); 
+@import url('all-global-theme-catppuccin-mocha.css') (-moz-bool-pref: "user.theme.dark.catppuccin-mocha");
 @import url('all-global-theme-gruvbox.css') (-moz-bool-pref: "user.theme.dark.gruvbox"); 
 @import url('all-global-theme-gruvbox-l.css') (-moz-bool-pref: "user.theme.light.gruvbox"); 
 @import url('all-global-theme-midnight.css') (-moz-bool-pref: "user.theme.dark.midnight");
