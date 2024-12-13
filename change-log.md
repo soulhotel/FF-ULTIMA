@@ -26,10 +26,4 @@
 - `fix` Vertical Tabs autohiding adaption #207 #210 #212
 - `fix` Container tabs styling restored #208
 
-
-
-https://github.com/user-attachments/assets/998fb2ef-3eca-4d0a-ab2e-76dec44cc15f
-
-
-
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
