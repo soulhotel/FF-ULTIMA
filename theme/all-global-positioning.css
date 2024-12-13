@@ -526,7 +526,10 @@ span.button-background.labelled label {padding-left: 5px !important;}
     /* full screen adjustment adjustments */
     @media (-moz-bool-pref: "sidebar.revamp") {
         #browser:has(#tabbrowser-tabs:not([expanded])) {
-            margin-left:55px !important;
+            margin-left:50px !important;        
+            &:has(#sidebar-box[checked="true"]:not([positionend])) {
+                margin-left:55px !important;
+            }
         }
         #main-window[inFullscreen="true"] {
             #sidebar-main {
