@@ -100,6 +100,7 @@ user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
 /*accessibility*/
 user_pref("findbar.highlightAll", true); 
