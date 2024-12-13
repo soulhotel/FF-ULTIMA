@@ -82,10 +82,10 @@ Use the template below to enter your theme into the list:
 #light-panda {background-image: url("pic/dusky.png") !important;}
 #light-fox-anniversary {background-image: url("pic/gruvbox-2.jpg") !important;}
 #dark-fox-anniversary {background-image: url("pic/old.dusky.png") !important;}
-#light-landscape {background-image: url("pic/gruvbox-l.jpg") !important;}
+#light-landscape {background-image: url("pic/catppuccin-frappe2.png") !important;}
 #light-mountain {background-image: url("pic/gruvbox-l.png") !important;}
 #dark-beach {background-image: url("pic/gruvbox.png") !important;}
-#light-sky {background-image: url("pic/catppuccin.png") !important;}
+#light-sky {background-image: url("pic/seasonal2.png") !important;}
 #light-beach {background-image: url("pic/green.png") !important;}
 #dark-landscape {background-image: url("pic/seasonal.png") !important;}
 
@@ -95,10 +95,10 @@ Use the template below to enter your theme into the list:
 :root:has(#light-panda[aria-checked="true"]) body {background-image: url("pic/dusky.png") !important;}
 :root:has(#light-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/gruvbox-2.jpg") !important;}
 :root:has(#dark-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/old.dusky.png") !important;}
-:root:has(#light-landscape[aria-checked="true"]) body {background-image: url("pic/gruvbox-l.jpg") !important;}
+:root:has(#light-landscape[aria-checked="true"]) body {background-image: url("pic/catppuccin-frappe2.png") !important;}
 :root:has(#light-mountain[aria-checked="true"]) body {background-image: url("pic/gruvbox-l.png") !important;}
 :root:has(#dark-beach[aria-checked="true"]) body {background-image: url("pic/gruvbox.png") !important;}
-:root:has(#light-sky[aria-checked="true"]) body {background-image: url("pic/catppuccin.png") !important;}
+:root:has(#light-sky[aria-checked="true"]) body {background-image: url("pic/seasonal2.png") !important;}
 :root:has(#light-beach[aria-checked="true"]) body {background-image: url("pic/green.png") !important;}
 :root:has(#dark-landscape[aria-checked="true"]) body {background-image: url("pic/seasonal.png") !important;}
 
