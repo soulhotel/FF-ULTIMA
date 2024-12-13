@@ -74,6 +74,8 @@ Use the template below to enter your theme into the list:
 
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 
+.wallpaper-input.dark-color {background-image: url("pic/walldisplay.png") !important;}
+  
 #dark-sky {background-image: url("pic/fullmoon.png") !important;}
 #dark-mountain {background-image: url("pic/catppuccin-frappe.png") !important;}
 #dark-panda {background-image: url("pic/midnight.png") !important;}
