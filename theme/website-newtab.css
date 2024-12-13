@@ -33,14 +33,14 @@ ladedadeda
     :root {
         --newtab-background-color-secondary: transparent !important;
         --newtab-element-hover-color:  rgba(24,24,24,0.9) !important;
-        --uc-panel-backgrounds: rgba(10,10,10,0.7);
+        --uc-panel-backgrounds: rgba(10,10,110,0.7);
         --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 5%, rgba(14,14,14,0.8)) !important;
         --mode-color: white;
     }
 }  
 @media (prefers-color-scheme: light) { 
     :root{
-        --newtab-background-color-secondary: rgba(220,220,230,0.4) !important;
+        --newtab-background-color-secondary: rgba(220,220,230,0.1) !important;
         --newtab-element-hover-color:  rgba(244,244,250,0.9) !important;
         --uc-panel-backgrounds: rgba(220,220,230,1);
         --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 35%, transparent) !important;
@@ -119,9 +119,16 @@ body {
     
 /* fine tuning */
 .top-site-outer .title {
-    font-weight: normal !important;
-    text-shadow: 1px 5px 10px rgba(30, 30, 130, 1) !important;
+    font-weight: bold !important;
     text-transform: capitalize !important;
+}
+@media (-moz-bool-pref: "ultima.xstyle.newtab.labels") {      
+    .top-site-outer .title span {
+        background: var(--newtab-background-color-secondary) !important;
+        filter: saturate(100%) !important;
+        backdrop-filter: blur(33px);
+        border-radius:18px !important;
+    }
 }
 .top-site-outer:hover .tile, .card-outer:hover .card { 
     background-color: transparent !important;
@@ -320,7 +327,9 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 .customize-menu .close-button:hover {
     background-color: var(--newtab-element-hover-color) !important;
 }
-
+.customize-menu .close-button-wrapper {
+    background-color: transparent !important;
+}
     
 /* home sections --------------------------------------------------------------- */ 
 
@@ -472,7 +481,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     }
     #searchSuggestionTable .contentSearchSuggestionEntry {
         background-color:transparent !important;
-        &:hover{background-color: rgb(35, 35, 39) !important;}
+        &:hover{background-color: var(--newtab-element-hover-color) !important;}
     }
     #searchSuggestionTable .contentSearchSuggestionEntry {
         padding: 8px 0 8px 0 !important;
@@ -484,6 +493,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     /*default search header*/
     .contentSearchSuggestionTable .contentSearchHeader {
         padding: 12px 0 12px 0 !important;
+        border-radius:18px !important;
         &:hover{cursor:pointer;text-decoration: underline;}
     }
     /*search with search engine suggestions container*/
