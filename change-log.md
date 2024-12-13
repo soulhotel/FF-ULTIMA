@@ -7,30 +7,24 @@
 
 ### <ins> Version Notes
 - Firefox 133+ required.
-- Stability is Among Us.
+- User.js required!
 - 🎊🎆🎉🍰🦃🍽️🙏🎁🎉🎆🎊
 
 ### <ins> Change Log:
-- `qol` Wiki Up-to-Date!
-- `new` Catpuccin Frappe Edition *`color-scheme`*
+- `new` Catpuccin Frappe Edition *`color-scheme`*, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 - `new` New Tab Overhaul with `user.theme.newtab` settings
 - `qol` Wallpapers for `Full Moon` and `Midnight` have been updated/changed for better resolution
+- `new` Use whatever wallpaper you want with `user.theme.wallpaper`'s
 - `qol` you can now drag/move the Browser Window *with* the Vertical-Tab Sidebar
 - `fix` text and button spacing for Vertical Tabs Toolbar buttons #186
 - `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
 - `fix` Setting `ultima.spacing.compact` now removes the top background showing over browser content #206
 - `fix` Windows Sidebar visibility (z-index correction) #205
-- `fix` Windows titlebar button size/positioning `- o x`
+- `fix` Windows (OS) titlebar button size/positioning `- o x`
 - `qol` Navbar Autohiding now works with Maximized Windows #209 (Thank you @boarder2 for the heads up!)
-- `new` When using add on themes, users can [quickly fix](https://github.com/soulhotel/FF-ULTIMA/wiki/Using-Add%E2%80%90On-Themes) **most** color issues with `ultima.theme.color.swap`. Note, optimization for add on themes with ff ultima are now at their best state, but there are still a 10% of themes that just wont look great. This is because of the variety of ways that an add-on theme developer may choose to use their color variables, it is impossible to have an all-for-one solution mixed in with ff ultima.
-- `fix` vertical tab width patched for Nightly
-- `wip` when using tabs autohide, the context menu (right click menu) will keep the sidebar expanded. (experimental)
-
-### <ins> On the Next Episode of FF Ultima:
-- `wip` New Tab Page Overhaul (1)
-- `wip` Setting `user.theme.adaptive` (4)
-- `wip` Change the New Tab Page *Wallpaper* to custom FF Ultima wallpapers (2)
-- `wip` Catppuccin-Frappe color-scheme, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) (3)
+- `wip` when using tabs autohide, the context menu (right click menu) will keep the sidebar expanded.
+- `fix` Vertical Tabs autohiding adaption #207 #210 #212
+- `fix` Container tabs styling restored #208
 
 
 
