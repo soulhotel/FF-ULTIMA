@@ -1,6 +1,5 @@
 name: Bugs, Errors, and Other Issues
 description: Report an issue to help us improve FF Ultima.
-title: " "
 labels:
   - "bug"
   - "issue"
