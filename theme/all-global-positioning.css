@@ -87,6 +87,15 @@ Vertical Tabs Disabled - setting
     @media (-moz-bool-pref: "sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}
 }
 
+/* Notification Deck */
+#tab-notification-deck {
+    position:absolute !important;
+    z-index:9000 !important;
+    top: var(--uc-topbars-combined-height) !important;
+    right:0 !important;
+    border-radius:10px !important;
+}
+.notificationbox-stack {border-bottom-left-radius:8px !important;border-bottom-left-radius:8px !important;}
 
 /* Compact spacing -----------------------------------------------------------------------*/
 
