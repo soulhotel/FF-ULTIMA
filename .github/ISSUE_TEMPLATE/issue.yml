@@ -7,7 +7,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!  
         Before submitting, have you already looked at the Wiki?  
         [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
 
