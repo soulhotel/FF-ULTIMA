@@ -208,13 +208,9 @@ bookmarks fade out
 /* ------------------------------------------------------------------------------------ */
 
 /* ------------------------------------------------------------------------------------------------------------ */
-/*alternative styling for container tabs*/
-/* *** currently only works for horizontal tabs, be patient, firefox's vertical tabs feature is still progressing! *** */
 
-/*---------------------------------------------------
-- Containerized tab styling
-- by Kaedriz
----------------------------------------------------*/
+/*alternative styling for container tabs*/
+/* by Kaedriz */
 
 /* Needs to be added to avoid overflowing, needs testing if this doesn't break anything */
 .tabbrowser-tab .tab-background {
@@ -224,11 +220,17 @@ bookmarks fade out
 /* Style 1 */
 /* Simply changing border to the left side of tab icon */
 @media (-moz-bool-pref: "ultima.xstyle.containertabs.i") {
-
-    .tabbrowser-tab .tab-background {
-        overflow: unset !important;
-    }
+    .tabbrowser-tab .tab-context-line {
+        border: 2px solid var(--identity-icon-color);
+        margin: 0 !important;
+        width: 100%;
+        height: 100% !important;
+        background: transparent !important;
+        border-radius: var(--tab-border-radius) !important;
+        opacity: 0.7;
+    } 
 }
+
 /* Style 2 */
 /* Border around full tab */
 @media (-moz-bool-pref: "ultima.xstyle.containertabs.ii") {
@@ -243,6 +245,7 @@ bookmarks fade out
     } 
     .tabbrowser-tab .tab-background {border: 2px solid var(--identity-icon-color);}
 }
+
 /* Style 3 */
 /* Full color overlay */
 @media (-moz-bool-pref: "ultima.xstyle.containertabs.iii") {
@@ -253,8 +256,11 @@ bookmarks fade out
         margin: 0 !important;
         opacity: 0.0;
     }
-    .tabbrowser-tab .tab-background {background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-ultima-window) 40%) !important;}
-    .tab-text[selected] {color:color-mix(in lab, var(--uc-text) 10%, var(--uc-ultima-window) 90%) !important;}
+    .tabbrowser-tab.identity-color-purple,.tabbrowser-tab.identity-color-red,.tabbrowser-tab.identity-color-blue
+    .tabbrowser-tab.identity-color-green,.tabbrowser-tab.identity-color-black,.tabbrowser-tab.identity-color-pink,.tabbrowser-tab.identity-color-purple {
+        .tab-background {background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-ultima-window) 40%) !important;}
+        .tab-text[selected] {color: var(--uc-ultima-window) !important;}
+    }
 } 
 
 
