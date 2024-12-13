@@ -1,5 +1,5 @@
-### <ins> FF Ultima Version 1.9.5 Release
-- **[Click Me ⬇️ Direct Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.5/ffultima1.9.5.zip)**
+### <ins> FF Ultima Version 1.9.7 Release
+- **[Click Me ⬇️ Direct Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.7/ffultima1.9.7.zip)**
 - ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
@@ -9,12 +9,14 @@
 - Firefox 133+ required.
 - User.js required!
 - 🎊🎆🎉🍰🦃🍽️🙏🎁🎉🎆🎊
+- Firefox Nightly users **must** have `nightly.override` enabled.
 
 ### <ins> Change Log:
 - `new` Catpuccin Frappe Edition *`color-scheme`*, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 - `new` New Tab Overhaul with `user.theme.newtab` settings
 - `qol` Wallpapers for `Full Moon` and `Midnight` have been updated/changed for better resolution
-- `new` Use whatever wallpaper you want with `user.theme.wallpaper`'s
+- `new` Use whatever wallpaper you want with `user.theme.wallpaper`s
+- `qol` Replace wallpapers in the `chrome/theme/pic` folder, to use your own wallpapers
 - `qol` you can now drag/move the Browser Window *with* the Vertical-Tab Sidebar
 - `fix` text and button spacing for Vertical Tabs Toolbar buttons #186
 - `new` Setting `ultima.navbar.autohide` autohide the Navigation Bar, unless hovered or URL bar focused
