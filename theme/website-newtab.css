@@ -286,11 +286,6 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-button, input {
-    color: inherit !important;
-    font-size: unset !important;
-}
-
 @media (min-width: 1122px) and (max-width: 1506px) {
 .top-sites-list :nth-child(8n) .context-menu {
     font-size: unset !important;
@@ -432,6 +427,21 @@ button, input {
 
 @media not (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
 
+    :root{
+        --newtab-border-color:rgba(120,120,120,0.1) !important;
+        --newtab-text-secondary-color: var(--mode-color) !important;
+    }
+    /* hide website shortcuts when focused on awesome bar */
+    .top-site-outer {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+     body:has(#searchSuggestionTable[hidden]) .top-site-outer {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    } 
+    
+    /* style awesome bar */
     .search-wrapper .search-handoff-button, .search-wrapper input {
         background: var(--newtab-background-color-secondary) !important;
         width: 100% !important;
@@ -446,37 +456,52 @@ button, input {
         border-radius: 100% !important;
     }
     #searchSuggestionTable {
-        background-color: rgba(100,100,110,0.1) !important;
-        border-radius: 19px !important;
-        padding: 0.4rem !important;
+        background-color: var(--newtab-background-color-secondary) !important;
+        border-radius: 18px !important;
+        padding: 0.6rem !important;
         position: fixed;
         top:55px !important;
         backdrop-filter: blur(150px) !important;
         background-blend-mode: overlay !important;
         z-index:999 !important;
     } 
-    .top-site-outer {
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-     body:has(#searchSuggestionTable[hidden]) .top-site-outer {
-        opacity: 1 !important;
-        pointer-events: auto !important;
-    } 
 
     #searchSuggestionTable .contentSearchSuggestionRow:hover {
         background-color: transparent !important;
         cursor:pointer !important;
     }
-    #searchSuggestionTable .contentSearchSuggestionEntry:hover {  
-        background-color: rgba(25,25,35,0.7) !important;
+    #searchSuggestionTable .contentSearchSuggestionEntry {
+        background-color:transparent !important;
+        &:hover{background-color: rgb(35, 35, 39) !important;}
     }
-
+    #searchSuggestionTable .contentSearchSuggestionEntry {
+        padding: 8px 0 8px 0 !important;
+    }
     #searchSuggestionTable td:hover {
-        background-color:rgba(100,100,100,0.0) !important;
+        background-color:transparent !important;
         border-radius:10px !important;
+    }  
+    /*default search header*/
+    .contentSearchSuggestionTable .contentSearchHeader {
+        padding: 12px 0 12px 0 !important;
+        &:hover{cursor:pointer;text-decoration: underline;}
     }
-    
+    /*search with search engine suggestions container*/
+    .contentSearchSuggestionTable .contentSearchOneOffsTable {
+        border-top: solid 10px transparent !important;
+        background-color: transparent !important;
+    } 
+    /*search engine buttons*/
+    .contentSearchSuggestionTable .contentSearchOneOffItem {
+        border-radius:18px !important;
+        &:hover{transform:scale(1.1) !important; cursor:pointer;}
+    }
+    /*search settings button*/
+    .contentSearchSuggestionTable .contentSearchSettingsButton {
+        border-radius:10px !important;
+        background-color: transparent !important;
+        &:hover{transform:scale(1.2) !important;text-decoration: underline;cursor:pointer;}
+    }
 }
 
 
