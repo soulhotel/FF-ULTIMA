@@ -21,7 +21,7 @@ Vertical Tabs Disabled - setting
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* Global variables for quick modifications ---------------------------------------------*/
-
+@media not (-moz-bool-pref: "nightly.override") {
 :root {
     --chrome-content-separator-color: transparent;
     --uc-collapsed-tabs-width: 41px;
@@ -763,3 +763,4 @@ menupopup menuseparator {opacity:0.2 !important;}
 
 
 @media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
+}

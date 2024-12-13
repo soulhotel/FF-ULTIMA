@@ -1,12 +1,11 @@
-/* -------------------------------------------------------------
-- for userContent
-- new.reddit.com broke my old styling, so i made a new one
-- Reddit uses numerous classes to style many elements, which means it will be harder for you to determine
-what exactly is being effected by a particular class. SO. I will be working top to bottom.
-First the main body background, then the navigation bar > search bar > side bars > content.
- ------------------------------------------------------------- */
+/*///////////////////////////////////////////////////////////////////////////////////////\
 
-/*--dark mode--*/
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         userContent theming Reddit
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* dark mode */
 
 @-moz-document domain("reddit.com"),
 domain("new.reddit.com"),

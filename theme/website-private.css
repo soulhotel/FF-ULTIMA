@@ -1,3 +1,10 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         userContent - Private window home page declutter
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
 @-moz-document url(about:privatebrowsing) {
     @media (-moz-bool-pref: "ultima.xstyle.private"){
     
@@ -18,7 +25,6 @@
         .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
             background: transparent !important;
         }
-
         /*wallpaper for dark mode*/
         @media (prefers-color-scheme: dark) {
             body{

@@ -1,43 +1,63 @@
 /*----------------------------------------------------------
-New Tab Page Circular Theme
+New Tab Page Overhaul
 
 [Index: For ctrl+f a line to find a section]
-
-ladedadeda
+variables
+website shortcuts
+search bar & logo
+widgets
+context menu
+customize menu
+home sections
+latest activity
+recommended section
+awesome bar
+new tab rounded tweaks
 ----------------------------------------------------------*/
 
 @import url('all-color-schemes-wallpapers.css');
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-@media (-moz-bool-pref: "user.theme.newtab.default") {
-  
 
-/* basics ------------------------------------------------------------ */     
 
-/* variables */
-    
-:root{
-    --uc-rounded-border: 100%;
-    --uc-less-rounded-border: 33px;
-    --uc-evenless-rounded-border: 10px;
+/* variables ------------------------------------------------------------------- */     
+
+:root {
+    --uc-fixed-rounding: 18px;
+    --uc-rounded-border: 18px;
+    --uc-less-rounded-border: 12px;
+    --uc-evenless-rounded-border: 8px;
     --mode-color: white;
+    --newtab-button-static-hover-background: transparent !important;
+    --button-background-color-ghost-hover: transparent !important;  
 }
-@media (prefers-color-scheme: dark){ :root{
-    --newtab-background-color-secondary: rgba(14,14,14,0.8) !important;
-    --newtab-element-hover-color:  rgba(24,24,24,0.9) !important;
-    --uc-panel-backgrounds: rgba(10,10,10,1);
-    --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 5%, rgba(14,14,14,0.8)) !important;
-    --mode-color: white;
-}}  
-@media (prefers-color-scheme: light){ :root{
-    --newtab-background-color-secondary: rgba(220,220,230,0.8) !important;
-    --newtab-element-hover-color:  rgba(250,250,250,0.9) !important;
-    --uc-panel-backgrounds: rgba(220,220,230,1);
-    --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 35%, transparent) !important;
-    --mode-color: black;
-}}  
+
+@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {    
+    :root {
+        --uc-rounded-border: 100%;
+        --uc-less-rounded-border: 100%;
+        --uc-evenless-rounded-border: 12px;
+    }
+}        
+@media (prefers-color-scheme: dark) {
+    :root {
+        --newtab-background-color-secondary: transparent !important;
+        --newtab-element-hover-color:  rgba(24,24,24,0.9) !important;
+        --uc-panel-backgrounds: rgba(10,10,110,0.7);
+        --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 5%, rgba(14,14,14,0.8)) !important;
+        --mode-color: white;
+    }
+}  
+@media (prefers-color-scheme: light) { 
+    :root{
+        --newtab-background-color-secondary: rgba(220,220,230,0.1) !important;
+        --newtab-element-hover-color:  rgba(244,244,250,0.9) !important;
+        --uc-panel-backgrounds: rgba(220,220,230,1);
+        --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 35%, transparent) !important;
+        --mode-color: black;
+    }
+}  
 
 body {
-    --newtab-background-color-secondary: transparent !important;
     --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -48,10 +68,37 @@ body {
 .section-title-container { visibility: hidden !important; }
 
     
-/* website shortcuts ------------------------------------------------- */ 
+/* website shortcuts ----------------------------------------------------------- */ 
     
+/* site shortcuts style */  
+.top-site-outer .tile {
+    border-radius: var(--uc-rounded-border) !important;
+    background: var(--newtab-background-color-secondary) !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0) !important;
+    color: var(--mode-color) !important;
+    font-size: 32px !important;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.top-site-outer .tile .icon-wrapper {
+    border-radius: var(--uc-less-rounded-border) !important;
+}
+.top-site-outer .tile .icon-wrapper::before {
+    opacity: 0.7 !important;
+}
+.top-site-icon{background-color: transparent !important;}
+@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {.top-site-icon{background-color: var(--mode-color) !important;}}
+    
+/* force consistent size */    
+.top-site-outer .default-icon {
+    width: 101% !important;
+    height: 101% !important;
+    background-size: 75% !important;
+}
+
 /* show site title on hover */ 
-    
 .outer-wrapper  .top-site-inner:hover .title,
 .outer-wrapper  .top-site-inner:hover .icon-pin-small {
     opacity: 1 !important;
@@ -60,173 +107,221 @@ body {
 .outer-wrapper  .top-site-inner .icon-pin-small {
     opacity: 0 !important;
 }
-
-/* site shortcuts style*/  
     
-.top-site-outer .tile {
-    border-radius: 18px !important;
+/* context menu */  
+.top-site-outer .context-menu-button {transform: scale(1.3);}
+.top-site-outer .context-menu-button:hover {transform: scale(1.7);}
+.top-site-outer .context-menu-button {
+    background-color: transparent !important;
+    border-radius: 50% !important;
+    inset-inline-end: -2px !important;
+    top: 0px !important;
+    transition: opacity 200ms;
+    border-radius: 80px !important;
+    fill: var(--mode-color) !important;
+}
+.top-site-outer .context-menu-button:is(:hover, :focus) {
+    background-color: color-mix(in srgb, var(--contrast-color), transparent) !important;
+    transition: opacity 200ms;
+    fill: var(--mode-color) !important;
+}
+    
+/* fine tuning */
+.top-site-outer .title {
+    font-weight: bold !important;
+    text-transform: capitalize !important;
+}
+@media (-moz-bool-pref: "ultima.xstyle.newtab.labels") {      
+    .top-site-outer .title span {
+        background: var(--newtab-background-color-secondary) !important;
+        filter: saturate(100%) !important;
+        backdrop-filter: blur(33px);
+        border-radius:18px !important;
+    }
+}
+.top-site-outer:hover .tile, .card-outer:hover .card { 
+    background-color: transparent !important;
+    transform: scale(1.15);
+}
+.top-site-outer:is(:focus-within) .tile, .card-outer:is(.active,:focus-within) .card{
+    background-color: transparent !important;
+    transform: scale(1.3);
+    box-shadow: none !important;
+}
+.top-site-outer:is(:focus-within) .title, .card-outer:is(.active,:focus-within) .card {
+    text-decoration: underline !important;
+    opacity:1 !important;
+}
+
+.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
     background: transparent !important;
-    filter: saturate(100%) !important;
-    backdrop-filter: blur(33px);
 }
-.top-site-outer .default-icon {
-    width: 101% !important;
-    height: 101% !important;
-    background-size: 75% !important;
-}
-.top-site-outer .tile .icon-wrapper {
-    border-radius: 12px !important;
-}
-
-.top-site-outer .tile .icon-wrapper::before {
-    opacity: 0.7 !important;
-}
-
     
-/* search bar -------------------------------------------------------- */ 
-
-/* search bar */  
     
+/* search bar & logo ----------------------------------------------------------- */
+
+.logo {display: none !important;}
+    
+/* spacing */  
+.search-wrapper .search-handoff-button, .search-wrapper input {
+    padding-inline-start: 0px !important;
+    padding-inline-end: 0px !important;
+}    
 .search-wrapper .logo-and-wordmark .wordmark {
     width: 66vw !important;
 }
-.search-inner-wrapper {
-    display: flex !important;
-    margin-top: 16px !important;
-    outline: none !important;
-    filter: saturate(140%) !important;
-    background-color: rgba(50, 50, 50, 0.1) !important;
-    border-radius: 18px !important;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    backdrop-filter: blur(33px);
-    background-blend-mode: overlay;
-    height: auto !important;
-}
-    
-/*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv may need to just remove*/        
+.search-wrapper .logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }    
+
+/* default style */    
+@media (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+    .search-inner-wrapper {
+        display: flex !important;
+        margin-top: 16px !important;
+        outline: none !important;
+        filter: saturate(140%) !important;
+        background-color: rgba(50, 50, 50, 0.1) !important;
+        border-radius: 18px !important;
+        box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+        backdrop-filter: blur(33px);
+        background-blend-mode: overlay;
+        height: auto !important;
+    }
+}       
 @supports -moz-bool-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
 .search-inner-wrapper:not(:focus){
     background: var(--newtab-pinnedsites-background) !important;
     backdrop-filter: blur(33px) !important;
-    filter: saturate(140%) !important;
+    filter: saturate(100%) !important;
 }}
-
-    .search-inner-wrapper:not(:focus) input, .search-wrapper:not(:active) input:focus{
-    background-color: var(--newtab-pinnedsites-background) !important;
+.search-inner-wrapper:not(:focus) input, .search-wrapper:not(:active) input:focus{
+    background-color: transparent !important;
     backdrop-filter: blur(33px) !important;
-    filter: saturate(140%) !important;
+    filter: saturate(100%) !important;
     border-radius: 34px !important;
-    }
-
-    .search-handoff-button{
+}
+.search-handoff-button{
     border-color: transparent !important;
     border-radius: 34px !important;
     box-shadow: none !important;
-    }
-
-    .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
+}
+.search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
     outline: 1px solid var(--button-active-bgcolor) !important;
     outline-offset: -1px !important;
     border: transparent !important;
     margin-left: 1px !important;
     z-index: 1 !important;
-    }
-
-    .search-wrapper .search-handoff-button, .search-wrapper input {
-    padding-inline-start: 0px !important;
-    padding-inline-end: 0px !important;
-    }
-
-    .search-wrapper .logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }
-
-    .search-wrapper .search-button:focus, .search-wrapper .search-button:hover {
+}
+.search-wrapper .search-button:focus, .search-wrapper .search-button:hover {
     fill: var(--mode-color) !important;
-    }
-
-    .search-wrapper .search-inner-wrapper:active input,
-    .search-wrapper input:focus {
+}
+.search-wrapper .search-inner-wrapper:active input,
+.search-wrapper input:focus {
     box-shadow: none !important;
-    }
+}
+.search-handoff-button .fake-textbox { text-align: center !important;}
+.search-wrapper .search-handoff-button { filter: grayscale(100%); }
 
-    /*--search bar oneliners for aesthetic ;)--*/
-    .search-handoff-button .fake-textbox { text-align: center !important;}
-    .search-wrapper .search-handoff-button { filter: grayscale(100%); }
-
-    browser[primary="true"][tabDialogShowing="true"],
-    #main-window[window-modal-open="true"] > body > #browser{
+browser[primary="true"][tabDialogShowing="true"],
+#main-window[window-modal-open="true"] > body > #browser{
     filter: blur(10px)
-    }
+}
 
-    @media (height > 700px) {
-    body:not(.inline-onboarding) .fixed-search .search-wrapper {
+@media (height > 700px) {
+body:not(.inline-onboarding) .fixed-search .search-wrapper {
     background-color: rgba(50, 50, 50, 0.1)  !important;
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
     backdrop-filter: blur(33px);
     border-color: transparent !important;
-    }}
-    /*--other panel, popup--*/
+    min-height: 195px !important;
+}}
 
-    .section-top-bar { display: block !important; }
-    .personalize-button { padding: 10px !important; }
-    .logo{ display: none !important; }
+    
+/* widgets --------------------------------------------------------------------- */ 
 
-    .icon.icon-settings {opacity: 85% !important;}
+.icon.icon-settings {opacity: 85% !important; color:var(--mod-color) !important}
+.personalize-button { padding: 8px !important; border-radius:100% !important;}
+.personalize-button:hover {
+    background-color: transparent !important;
+    transform: scale(1.5);
+    cursor: pointer;
+}  
+.weatherCard {
+    border-radius: var(--uc-fixed-rounding) !important;
+    background: var(--newtab-background-color-secondary) !important;
 
-    .context-menu {
-    background-color: var(--uc-background-ii)  !important;
-    border-radius: 18px !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0) !important;
+    color: var(--mode-color) !important;
+    &:hover{transform:scale(1.15);}
+}
+.weatherButtonContextMenuWrapper::after {
+    opacity:0 !important;
+}
+:root{--newtab-weather-background-color:var(--newtab-background-color-secondary) !important;}
+    
+    
+/* context menu ---------------------------------------------------------------- */ 
+
+/*default style*/    
+.context-menu {
+    background-color: var(--uc-panel-backgrounds)  !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
     padding: 0.4rem;
+    margin:1% 1% 0% 0% !important;
     position: relative;
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
     backdrop-filter: blur(33px);
     background-blend-mode: overlay;
     display: flex;
-    line-height: 25px;
-    }
-
-    .context-menu > ul > li > a, .context-menu > ul > li > button {
-    line-height: unset !important;
+    line-height: 26px;
+}
+.context-menu > ul > li > button:is(:focus, :hover) {
+    border-radius: 3px !important;
+    background: var(--newtab-element-hover-color) !important;
+}
+ 
+/* spacing */    
+.context-menu > ul {
+    margin: 5px !important;
+    padding: 2px !important;
+}
+.context-menu > ul > li > a, .context-menu > ul > li > button {
+    line-height: 26px !important;
+    padding: 2px 5px !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
     font-weight: normal !important;
-    color: var(--uc-text) !important;
-    }
-
-    .context-menu > ul > li.separator {
+    color: var(--mode-color) !important;
+}  
+    
+/* consistent line heights */
+.context-menu > ul > li.separator {
     display:flex !important;
     border-bottom: none !important;
     margin: 0px 0 !important;
     font-size: flex !important;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    }
+}
 
-    button, input {
-    color: inherit !important;
-    font-size: unset !important;
-    }
-
-    @media (min-width: 1122px) and (max-width: 1506px) {
-    .top-sites-list :nth-child(8n) .context-menu {
+@media (min-width: 1122px) and (max-width: 1506px) {
+.top-sites-list :nth-child(8n) .context-menu {
     font-size: unset !important;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) !important;
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    }}
+}}
 
-    /*--customize menu--*/
-
-    .customize-menu.customize-animate-enter-done,
-    .customize-menu.customize-animate-enter-active,
-    .customize-menu.customize-animate-exit-active,
-    .customize-menu.customize-animate-exit-done
-    { box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important; }
-
-    .context-menu > ul > li > button:is(:focus, :hover) {
-    border-radius: 10px;
-    background: var(--uc-background-ii) !important;
-    }
-
-    .customize-menu {
-    background-color: var(--uc-background-ii)  !important;
-    border-radius: 12px !important;
-    padding: 0.4rem;
+    
+/* customize menu -------------------------------------------------------------- */ 
+ 
+.customize-menu.customize-animate-enter-done,
+.customize-menu.customize-animate-enter-active,
+.customize-menu.customize-animate-exit-active,
+.customize-menu.customize-animate-exit-done { 
+    box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important;
+}
+.customize-menu {
+    background-color: var(--newtab-background-color-secondary)  !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
     position: relative;
     backdrop-filter: blur(33px);
     background-blend-mode: overlay;
@@ -234,102 +329,46 @@ body {
     height: auto !important;
     font-weight: normal !important;
     box-shadow: unset !important;
-    }
+}
+.customize-menu .close-button {
+    border-radius: 8px !important;
+    background-color: transparent !important;
+}    
+.customize-menu .close-button:hover {
+    background-color: var(--newtab-element-hover-color) !important;
+}
+.customize-menu .close-button-wrapper {
+    background-color: transparent !important;
+}
+    
+/* home sections --------------------------------------------------------------- */ 
 
-    .top-site-outer .context-menu-button { transform: scale(1.3); }
+.home-section .divider { border-top: unset !important; }
 
-    .home-section .divider { border-top: unset !important; }
-
-    .home-section .section .selector {
+.home-section .section .selector {
     border: none !important;
     box-shadow: 3px 10px 15px rgb(0 0 0 / 20%) !important;
     background: url("icons/down.svg") right no-repeat !important;
     background-origin: content-box !important;
-    }
+}
 
-    .home-section .external-link { text-decoration: none !important; }
-
-
-    .customize-menu .close-button {
-    box-shadow: 3px 10px 15px rgb(0 0 0 / 20%) !important;
-    font-weight: unset !important;
-    border-radius: 10px !important;
-    background-color: var(--newtab-background-color-secondary) !important;
-    }
-
-
-
-    .home-section .section .selector {
+.home-section .section .selector {
     background-color: var(--newtab-background-color-secondary) !important;
     border-radius: 10px !important;
-    }
+}
 
-    .customize-menu .close-button:hover
-    { background-color: var(--newtab-element-hover-color) !important; }
+    
+/* latest activity ------------------------------------------------------------- */ 
 
-
-
-    .top-site-icon{ background-color: transparent !important; }
-
-    .top-site-outer .title {
-    opacity: 80% !important;
-    font-weight: normal !important;
-    text-shadow: 1px 5px 10px rgba(30, 30, 30, 0.9);
-    text-transform: capitalize !important;
-    }
-
-    .top-site-outer:hover .tile, .card-outer:hover .card
-    { background-color: transparent !important; transform: scale(1.15);}
-
-    .top-site-outer:is(:focus-within) .tile, .card-outer:is(.active,:focus-within) .card{
-    background-color: transparent !important;
-    transform: scale(1.3);
-    box-shadow: none !important;
-    }
-
-    .top-site-outer:is(:focus-within) .title, .card-outer:is(.active,:focus-within) .card
-    { text-decoration: underline !important; }
-
-    .top-site-outer .context-menu-button {
-    background-color: transparent !important;
-    border-radius: 50% !important;
-    inset-inline-end: -10px !important;
-    top: 2px !important;
-    transition: opacity 200ms;
-    border-radius: 80px !important;
-    fill: var(--newtab-text-primary-color) !important;
-    }
-
-    .top-site-outer .context-menu-button:is(:hover, :focus) {
-    background-color: color-mix(in srgb, var(--contrast-color), transparent) !important;
-    transition: opacity 200ms;
-    fill: var(--newtab-text-primary-color) !important;
-    }
-
-    .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-      background: transparent !important;
-    }
-
-    /*--latest activity--*/
-
-    .card-outer .card {
+.card-outer .card {
     filter: saturate(105%) !important;
-    border-radius: 18px !important;
-    background-color: rgba(20, 25, 30, 0.6)  !important;
-    position: relative;
+    border-radius: var(--uc-evenless-rounded-border) !important;
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
     backdrop-filter: blur(33px);
     height: auto !important;
-    }
-
-    .card-outer > a { color: auto !important; }
-
-    .outer-wrapper a { color: auto !important; }
-
-    :root[lwt-newtab-brighttext] { --newtab-wordmark-color: #ffffffcb !important; }
-
-    .compact-cards .card-outer .card-context {
-    background-color: var(--newtab-background-color-secondary);
+}
+.compact-cards .card-outer .card-context {
+    background-color: transparent !important;
     border-radius: 18px;
     clip-path: inset(-1px -1px 4px);
     height: 32px;
@@ -338,157 +377,95 @@ body {
     top: 108px !important;
     inset-inline-end: 3px !important;
     inset-inline-start: auto;
-    }
-
-    .compact-cards .card-outer .card-preview-image-outer { 
-    border-radius: 16px 16px 0 0 !important;
-    }
-
-    .ds-highlights .section .section-list .card-outer .card-host-name {
+}
+.ds-highlights .section .section-list .card-outer .card-host-name {
     text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
-    color: var(--newtab-text-primary-color) !important;
-    }
-
-    .card-outer:not(.placeholder) .card-title {
+    color: var(--mode-color) !important;
+}
+.card-outer:not(.placeholder) .card-title {
     text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
-    }
-
-    .card-outer:is(:hover, :focus, :active, :focus-within, .active):not(.placeholder) .card-title, 
-    .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+}
+.card-outer:is(:hover, :focus, :active, :focus-within, .active):not(.placeholder) .card-title, 
+.card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
     --newtab-primary-action-background: blue !important;
-    color: var(--newtab-text-primary-color) !important;
+    color: var(--mode-color) !important;
     text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
     text-decoration: underline !important;
-    }
-
-    .compact-cards .card-outer .card-context>.card-context-icon {
-    fill: var(--newtab-text-primary-color) !important;
+}
+.compact-cards .card-outer .card-context>.card-context-icon {
+    fill: var(--mode-color) !important;
     opacity: 0.7 !important;
-    }
+}
 
 
-    .card-outer .context-menu-button, .card-outer .context-menu-button:active, .card-outer .context-menu-button:focus{
+.card-outer .context-menu-button, .card-outer .context-menu-button:active, .card-outer .context-menu-button:focus{
     margin-top: -5px !important;
     margin-right: -5px !important;
-    background-color: color-mix(in srgb, var(--contrast-color) 70%, transparent) !important;
+    background-color: transparent !important;
     border-color: transparent !important;
     transition-delay: 0ms !important;
     background-image: url("icons/more.svg") !important;
-    }
+}
 
-    .card-outer .context-menu-button { box-shadow: unset !important; }
+.card-outer .context-menu-button { box-shadow: unset !important; }
 
-    .ds-card .meta {
+    
+/* recommended section --------------------------------------------------------- */ 
+
+.ds-card .meta {
     filter: saturate(140%) !important;
-    background-color: rgba(20, 25, 40, 0.6)  !important;
-    position: relative;
+    background-color: var(--newtab-background-color-secondary)  !important;
     backdrop-filter: blur(33px);
     height: auto !important;
-    border-radius: 0 0 16px 16px !important;
-    }
+}
 
-    .ds-onboarding-container:not(.placeholder), .ds-card-grid .ds-card:not(.placeholder) {
+.ds-onboarding-container:not(.placeholder), .ds-card-grid .ds-card:not(.placeholder) {
     border-radius: 18px !important;
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
     background-color: transparent !important;
+}
+.ds-onboarding-container:not(.placeholder) .img-wrapper .img img,
+.ds-onboarding-container:not(.placeholder) .img-wrapper .img .placeholder-image,
+.ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img img,
+.ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img .placeholder-image {
+    border-radius: 16px 16px 0 0 !important;
+}
+
+.ds-card .context-menu-button, .ds-signup .context-menu-button {
+    background-color: transparent !important;
+    fill: var(--mode-color) !important;
+    margin-top:-10px !important;
+    transform: scale(1.2) !important;
     }
+.ds-card .context-menu-button:hover, .ds-signup .context-menu-button:hover {
+    transform: scale(1.7) !important;
+}
 
-    .ds-onboarding-container:not(.placeholder) .img-wrapper .img img, .ds-onboarding-container:not(.placeholder) .img-wrapper .img .placeholder-image, .ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img img, .ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img .placeholder-image
-    { border-radius: 16px 16px 0 0 !important; }
-
-
-    .ds-card:is(:hover, :focus, .active) .context-menu-button, .ds-signup:is(:hover, :focus, .active) .context-menu-button
-    { box-shadow: unset !important; }
-
-    @media (prefers-color-scheme: dark){
-    .ds-card .context-menu-button, .ds-signup .context-menu-button {
-      border: transparent !important;
-      margin-top: -5px !important;
-      margin-right: -5px !important;
-      background-color: color-mix(in srgb, var(--contrast-color) 70%, transparent) !important;
-      fill: var(--newtab-text-primary-color) !important;
-      transition-delay: 0ms !important;
-      background-image: url("icons/more.svg") !important;
-    }
-    }
-
-    .ds-card .ds-card-link:hover header {color: var(--newtab-text-primary-color) !important;}
-
-    .outer-wrapper a { color: var(--newtab-text-primary-color) !important; }
-
-    :root {
-    --newtab-primary-element-active-color: var(--newtab-text-primary-color) !important;
-    --newtab-primary-action-background: transparent !important;
-    --newtab-background-color: unset !important;
-    }
-
-    /*--recommendations, customizing--*/
-
-    .personalize-button:hover {
-    background-color: transparent;
-    transform: scale(1.3);
-    cursor: pointer;
-    }
-
-    .modalOverlayOuter {
-    background-color: rgba(20, 25, 40, 0.4)  !important;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    backdrop-filter: blur(33px);
-    background-blend-mode: overlay;
-    }
-
-    .modal {
-    background-color: rgba(10, 15, 30, 0.7)  !important;
-    font-size: unset !important;
-    border-radius: 16px !important;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    border-color: transparent !important;
-    }
-
-    .topsite-form .form-wrapper input[type="text"] {
-    background-color: #ffffff1e !important;
-    font-size: unset !important;
-    border-color: transparent !important;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    border-radius: 8px !important;
-    }
-
-    .actions {
-    border-top: 1px solid var(--newtab-border-color);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 15px 25px 0;
-    border-color: transparent !important;
-    }
-
-    .button, .actions button {
-    background-color: #ffffff1e !important;
-    border-color: transparent !important;
-    border-radius: 10px !important;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    }
-
-    .modal-overlay {
-    background-color: rgba(10, 15, 30, 0.4)  !important;
-    backdrop-filter: blur(33px) !important;
-    }
-
-    :root{
-    --newtab-pinnedsites-background: color-mix(in srgb, white 14%, transparent) ;
-    --newtab-pinnedsites-position-top: 0px ;
-    }
-
-
+ 
+/* awesome bar ----------------------------------------------------------------- */ 
 
 @media not (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
 
+    :root{
+        --newtab-border-color:rgba(120,120,120,0.1) !important;
+        --newtab-text-secondary-color: var(--mode-color) !important;
+    }
+    /* hide website shortcuts when focused on awesome bar */
+    .top-site-outer {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+     body:has(#searchSuggestionTable[hidden]) .top-site-outer {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    } 
+    
+    /* style awesome bar */
     .search-wrapper .search-handoff-button, .search-wrapper input {
         background: var(--newtab-background-color-secondary) !important;
         width: 100% !important;
         margin-left: 0% !important;
+        text-align: center !important;
     }
     #newtab-search-text[keepfocus="true"]{
         background-color:transparent !important;
@@ -498,42 +475,77 @@ body {
         border-radius: 100% !important;
     }
     #searchSuggestionTable {
-        background-color: rgba(110,110,130,0.3) !important;
-        border-radius: 19px !important;
-        padding: 0.4rem !important;
+        background-color: var(--newtab-background-color-secondary) !important;
+        border-radius: 18px !important;
+        padding: 0.6rem !important;
         position: fixed;
         top:55px !important;
-        backdrop-filter: blur(33px) !important;
+        backdrop-filter: blur(150px) !important;
         background-blend-mode: overlay !important;
         z-index:999 !important;
     } 
-    .top-site-outer {
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-     body:has(#searchSuggestionTable[hidden]) .top-site-outer {
-        opacity: 1 !important;
-        pointer-events: auto !important;
-    } 
 
     #searchSuggestionTable .contentSearchSuggestionRow:hover {
-        background-color: red !important;
+        background-color: transparent !important;
         cursor:pointer !important;
     }
-    #searchSuggestionTable .contentSearchSuggestionEntry:hover {  
-        background-color: red !important;
+    #searchSuggestionTable .contentSearchSuggestionEntry {
+        background-color:transparent !important;
+        &:hover{background-color: var(--newtab-element-hover-color) !important;}
     }
-
+    #searchSuggestionTable .contentSearchSuggestionEntry {
+        padding: 8px 0 8px 0 !important;
+    }
     #searchSuggestionTable td:hover {
-        background-color:rgba(100,100,100,0.2) !important;
+        background-color:transparent !important;
         border-radius:10px !important;
+    }  
+    /*default search header*/
+    .contentSearchSuggestionTable .contentSearchHeader {
+        padding: 12px 0 12px 0 !important;
+        border-radius:18px !important;
+        &:hover{cursor:pointer;text-decoration: underline;}
     }
-    
+    /*search with search engine suggestions container*/
+    .contentSearchSuggestionTable .contentSearchOneOffsTable {
+        border-top: solid 10px transparent !important;
+        background-color: transparent !important;
+    } 
+    /*search engine buttons*/
+    .contentSearchSuggestionTable .contentSearchOneOffItem {
+        border-radius:18px !important;
+        &:hover{transform:scale(1.1) !important; cursor:pointer;}
+    }
+    /*search settings button*/
+    .contentSearchSuggestionTable .contentSearchSettingsButton {
+        border-radius:10px !important;
+        background-color: transparent !important;
+        &:hover{transform:scale(1.2) !important;text-decoration: underline;cursor:pointer;}
+    }
 }
 
+
+/* new tab rounded tweaks ------------------------------------------------------ */
+    
+@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {
+    .wallpaper-input {
+        border-radius: var(--uc-fixed-rounding) !important;
+    }
+    .search-inner-wrapper {    
+        border-radius: 50px !important;
+    }    
+}    
     
     
-}} /*fin*/
+    
+    
+    
+    
+    
+    
+    
+} /*fin*/
+
 
 
 

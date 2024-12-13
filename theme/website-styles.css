@@ -1,17 +1,19 @@
-/* -------------------------------------------------------------
-- for userContent
+/*///////////////////////////////////////////////////////////////////////////////////////\
 
-- modifications for multiple websites
-- all scrollbars
-- PIP button (picture in picture)
-- about:config page
-- bing declutter
- ------------------------------------------------------------- */
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         userContent file for styling multiple sites
+
+scrollbars
+PiP
+about:config page
+bing declutter
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* all scrollbars */
 :root {
     scrollbar-width: auto !important;
-    scrollbar-color: rgba(170, 170, 170, 0.4) rgba(255,255,255, 0) !important;
+    scrollbar-color: rgba(110, 110, 110, 0.3) rgba(255,255,255, 0) !important;
 }
 
 /* PIP button */
@@ -26,7 +28,7 @@
     }
     /* ff ultima guide - style 1 */
     #toolbar::after {
-        content: "🇺 Type 'ultima' or 'user.theme' for FF Ultima theme settings";
+        content: "🇺 Type 'ultima' or 'user.theme' for FF Ultima theme settings 🇺";
         display: flex;
         padding: 10px 1px 0px 5px;
         border-radius: var(--uc-all-border-radius);

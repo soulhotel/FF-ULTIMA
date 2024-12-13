@@ -1,8 +1,10 @@
-/*-----------------------------------------------------------------------------
-- this file transforms the extension menu into a compact icon-only view
-- sourced from Firefox Mod Blur:
-- https://github.com/datguypiko/Firefox-Mod-Blur
------------------------------------------------------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Transform the extension menu into a compact icon-only view
+Original Source:   https://github.com/datguypiko/Firefox-Mod-Blur
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media (-moz-bool-pref: "ultima.theme.extensions") {
 

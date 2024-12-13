@@ -1,8 +1,10 @@
-/* ----------------------------------------------------------
-- Autohide Sidebery sidebar extension
-- this function is enabled by the tabs.sidebery.autohide setting in about:config
-- it will not affect other sidebars (history, favorites, notes, sideview, etc.)
------------------------------------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Autohide Sidebery, the other Sidebars remain static/resizable
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 @media (-moz-bool-pref: "ultima.sidebar.hidden") {
     @media (-moz-bool-pref: "ultima.sidebery.autohide") {
@@ -23,20 +25,11 @@
     :root {
         --bg: #1a1b26;
     }
-    /* safeguard 1/2 - when tabs are visible and sidebery is on the leftside of browser, they display over the tabs unaturally. */
-    #TabsToolbar-customization-target, #tabbrowser-tabs {
+    /*#TabsToolbar-customization-target, #tabbrowser-tabs {
         z-index: 999 !important;
-    }
-    /* removing the code block above will reproduce the issue */
+    }*/
     
-    /* hides the sidebar header */
-    /* outdated as of v131 ***
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-header {
-        display: none !important;
-    }
-    */
-    
-    /* sidebar adopts theme borders dependant on xstyle.squared being on or off */
+    /* sidebar adopts theme borders */
     #sidebar {
         border-radius: var(--uc-all-border-radius) !important;
     }
@@ -52,8 +45,6 @@
         width: var(--uc-sidebar-width) !important;
         max-width: var(--uc-sidebar-width) !important;
         z-index: 1;
-        /* safeguard 2/2 - z-index changed from 100 to 1, to accomodate safeguard 1 above. */
-        /* with this the function is very stable. */
     }
 
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] {
@@ -77,16 +68,6 @@
         --uc-sidebar-width: 0px;
     }
 
-    /*
-    #sidebar-splitter {
-        display: none;
-    }*/
-
-    /*
-    #sidebar-header {
-        overflow: hidden;
-    }*/
-
     #sidebar {
         transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
         min-width: var(--uc-sidebar-width) !important;
@@ -108,7 +89,7 @@
         color: inherit !important;
     }
 
-    /* Move statuspanel to the other side when sidebar is hovered so it doesn't get covered by sidebar */
+    /* Move statuspanel over so it doesn't get covered by sidebar */
 
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover~#appcontent #statuspanel {
         inset-inline: auto 0px !important;

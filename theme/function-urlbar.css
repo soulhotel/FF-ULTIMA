@@ -1,25 +1,27 @@
-/*----------------------------------------------------------------
-- alternate styles for the URL Bar
-- user preference toggles for search suggestions, centered text, hiding buttons
-----------------------------------------------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Alternative Styles for the URL Bar
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media (-moz-bool-pref: "ultima.urlbar.suggestions") {
-
-  #urlbar .search-one-offs:not([hidden]) {
-    display:none !important;
-  }
+  
+    #urlbar .search-one-offs:not([hidden]) {
+        display:none !important;
+    }
 
 }
 @media (-moz-bool-pref: "ultima.urlbar.centered") {
-
-  #urlbar .urlbar-input-box {
-    text-align: center;
-  }  
-  #urlbar .urlbar-input {
-    text-overflow: ellipsis !important;
-    overflow: hidden;
-    white-space: nowrap; 
-  }
+      
+    #urlbar .urlbar-input-box {
+        text-align: center;
+    }  
+    #urlbar .urlbar-input {
+        text-overflow: ellipsis !important;
+        overflow: hidden;
+        white-space: nowrap; 
+    }
 
 }
 

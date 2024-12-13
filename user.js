@@ -24,10 +24,10 @@ user_pref("user.theme.dark.midnight", false);
 
 /*titlebar and tabs*/
 user_pref("ultima.disable.alltabs.button", true);
-user_pref("ultima.disable.contextmenu.collapsing", false);
+user_pref("ultima.disable.contextmenu.collapsing", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
-user_pref("ultima.disable.verticaltab.bar.withindicator", false);
+user_pref("ultima.disable.verticaltab.bar.withindicator", true);
 user_pref("ultima.tabs.autohide", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.width.small", false);
@@ -65,14 +65,12 @@ user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
-
-/*new tab*/
-user_pref("user.theme.newtab.default", true);
-user_pref("user.theme.newtab.circular", false);
+user_pref("ultima.xstyle.newtab.rounded", false);
 
 /*override wallpapers*/
 user_pref("user.theme.wallpaper.catppuccin", false);
 user_pref("user.theme.wallpaper.catppuccin-mocha", false);
+user_pref("user.theme.wallpaper.catppuccin-frappe", false);
 user_pref("user.theme.wallpaper.dusky", false);
 user_pref("user.theme.wallpaper.fullmoon", false);
 user_pref("user.theme.wallpaper.green", false);
@@ -85,7 +83,7 @@ user_pref("user.theme.wallpaper.seasonal", false);
 user_pref("user.theme.wallpaper.seasonal2", false);
 
 /*other*/
-user_pref("nightly.override", true);
+user_pref("nightly.override", false);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("devtools.debugger.remote-enabled", true);
@@ -103,6 +101,7 @@ user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
 /*accessibility*/
 user_pref("findbar.highlightAll", true); 
@@ -121,6 +120,6 @@ user_pref("general.smoothScroll.msdPhysics.enabled", true);
 /*privacy*/
 user_pref("browser.send_pings", false); 
 user_pref("dom.event.clipboardevents.enabled", false); /* clipboard telemetry */
-user_pref("dom.battery.enabled", false); /* battery telemetry.. */
+user_pref("dom.battery.enabled", false); /* battery telemetry.. why???*/
 user_pref("extensions.pocket.enabled", false); 
 user_pref("datareporting.healthreport.uploadEnabled", false);
