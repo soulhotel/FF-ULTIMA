@@ -20,7 +20,7 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.catppuccin-frappe"){body{background-image: url("pic/catppuccin.png") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.catppuccin-frappe"){body{background-image: url("pic/catppuccin-frappe.png") !important;}}
 
 @media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("pic/catppuccin.png") !important;}}
 
@@ -49,6 +49,8 @@ Use the template below to enter your theme into the list:
 @media not (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
 
 @media (-moz-bool-pref: "user.theme.wallpaper.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-frappe"){body{background-image: url("pic/catppuccin-frappe.png") !important;}}
+@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-frappe2"){body{background-image: url("pic/catppuccin-frappe2.png") !important;}}
 @media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-mocha"){body{background-image: url("pic/catppuccin-mocha.png") !important;}}
 @media (-moz-bool-pref: "user.theme.wallpaper.dusky"){body{background-image: url("pic/dusky.png") !important;}}
 @media (-moz-bool-pref: "user.theme.wallpaper.fullmoon"){body{background-image: url("pic/fullmoon.png") !important;}}
@@ -73,7 +75,7 @@ Use the template below to enter your theme into the list:
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
 
 #dark-sky {background-image: url("pic/fullmoon.png") !important;}
-#dark-mountain {background-image: url("pic/catppuccin-mocha.png") !important;}
+#dark-mountain {background-image: url("pic/catppuccin-frappe2.png") !important;}
 #dark-panda {background-image: url("pic/midnight.png") !important;}
 #light-panda {background-image: url("pic/dusky.png") !important;}
 #light-fox-anniversary {background-image: url("pic/gruvbox-2.jpg") !important;}
@@ -86,7 +88,7 @@ Use the template below to enter your theme into the list:
 #dark-landscape {background-image: url("pic/seasonal.png") !important;}
 
 :root:has(#dark-sky[aria-checked="true"]) body {background-image: url("pic/fullmoon.png") !important;}
-:root:has(#dark-mountain[aria-checked="true"]) body {background-image: url("pic/catppuccin-mocha.png") !important;}
+:root:has(#dark-mountain[aria-checked="true"]) body {background-image: url("pic/catppuccin-frappe.png") !important;}
 :root:has(#dark-panda[aria-checked="true"]) body {background-image: url("pic/midnight.png") !important;}
 :root:has(#light-panda[aria-checked="true"]) body {background-image: url("pic/dusky.png") !important;}
 :root:has(#light-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/gruvbox-2.jpg") !important;}
