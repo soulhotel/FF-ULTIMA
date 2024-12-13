@@ -85,7 +85,7 @@ user_pref("user.theme.wallpaper.seasonal", false);
 user_pref("user.theme.wallpaper.seasonal2", false);
 
 /*other*/
-user_pref("nightly.override", true);
+user_pref("nightly.override", false);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("devtools.debugger.remote-enabled", true);
