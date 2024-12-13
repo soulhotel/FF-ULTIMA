@@ -28,7 +28,7 @@ bing declutter
     }
     /* ff ultima guide - style 1 */
     #toolbar::after {
-        content: "🇺 Type 'ultima' or 'user.theme' for FF Ultima theme settings";
+        content: "🇺 Type 'ultima' or 'user.theme' for FF Ultima theme settings 🇺";
         display: flex;
         padding: 10px 1px 0px 5px;
         border-radius: var(--uc-all-border-radius);
