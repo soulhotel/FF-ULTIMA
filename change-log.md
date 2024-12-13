@@ -13,7 +13,6 @@
 
 ### <ins> Change Log:
 - `new` Catpuccin Frappe Edition *`color-scheme`*, inspired by [reddit post](https://www.reddit.com/r/FirefoxCSS/comments/1gvrm1e/comment/ly69zbn/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
-- `new` New Tab Overhaul with `user.theme.newtab` settings
 - `qol` Wallpapers for `Full Moon` and `Midnight` have been updated/changed for better resolution
 - `new` Use whatever wallpaper you want with `user.theme.wallpaper`s
 - `qol` Replace wallpapers in the `chrome/theme/pic` folder, to use your own wallpapers
@@ -27,5 +26,6 @@
 - `wip` when using tabs autohide, the context menu (right click menu) will keep the sidebar expanded.
 - `fix` Vertical Tabs autohiding adaption #207 #210 #212
 - `fix` Container tabs styling restored #208
+- `qol` New Tab Page has been optimized. Improved spacing, less saturation, better hover, visual accessibility, compatibility with Firefox's awesome bar #189, and a new `ultima.xstyle.newtab.rounded` setting
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
