@@ -335,7 +335,7 @@ Custom Icons
     }
     /* bookmarks folder icon */
     .bookmark-item[container=true] {
-      list-style-image: url("icons/bm.png") !important;
+      list-style-image: url("icons/bm-l.png") !important;
     }
     /* ublock on */
     #ublock0_raymondhill_net-BAP image{
