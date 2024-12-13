@@ -27,7 +27,7 @@ user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.disable.contextmenu.collapsing", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
-user_pref("ultima.disable.verticaltab.bar.withindicator", false);
+user_pref("ultima.disable.verticaltab.bar.withindicator", true);
 user_pref("ultima.tabs.autohide", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.width.small", false);
@@ -70,6 +70,7 @@ user_pref("ultima.xstyle.newtab.rounded", false);
 /*override wallpapers*/
 user_pref("user.theme.wallpaper.catppuccin", false);
 user_pref("user.theme.wallpaper.catppuccin-mocha", false);
+user_pref("user.theme.wallpaper.catppuccin-frappe", false);
 user_pref("user.theme.wallpaper.dusky", false);
 user_pref("user.theme.wallpaper.fullmoon", false);
 user_pref("user.theme.wallpaper.green", false);
@@ -119,6 +120,6 @@ user_pref("general.smoothScroll.msdPhysics.enabled", true);
 /*privacy*/
 user_pref("browser.send_pings", false); 
 user_pref("dom.event.clipboardevents.enabled", false); /* clipboard telemetry */
-user_pref("dom.battery.enabled", false); /* battery telemetry.. */
+user_pref("dom.battery.enabled", false); /* battery telemetry.. why???*/
 user_pref("extensions.pocket.enabled", false); 
 user_pref("datareporting.healthreport.uploadEnabled", false);

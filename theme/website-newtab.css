@@ -1,9 +1,18 @@
 /*----------------------------------------------------------
-New Tab Page Circular Theme
+New Tab Page Overhaul
 
 [Index: For ctrl+f a line to find a section]
-
-ladedadeda
+variables
+website shortcuts
+search bar & logo
+widgets
+context menu
+customize menu
+home sections
+latest activity
+recommended section
+awesome bar
+new tab rounded tweaks
 ----------------------------------------------------------*/
 
 @import url('all-color-schemes-wallpapers.css');
@@ -239,6 +248,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 .weatherCard {
     border-radius: var(--uc-fixed-rounding) !important;
     background: var(--newtab-background-color-secondary) !important;
+
     filter: saturate(100%) !important;
     backdrop-filter: blur(33px);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0) !important;
@@ -535,6 +545,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     
     
 } /*fin*/
+
 
 
 
