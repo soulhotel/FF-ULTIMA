@@ -9,11 +9,11 @@ body:
         Thanks for taking the time to fill out this bug report!  
         Before submitting, have you already looked at the Wiki?  
         [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
-        
+
   - type: dropdown
     id: checked-wiki
     attributes:
-      label: Have you already looked at the Wiki
+      label: Have you already looked at the Wiki?
       description: [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
       options:
         - Yes
