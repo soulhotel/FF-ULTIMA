@@ -677,3 +677,4 @@ span.button-background.labelled label {
     
 
 @media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
+}
