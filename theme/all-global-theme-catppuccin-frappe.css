@@ -337,7 +337,7 @@ Custom Icons
     }
     /*--ublock on--*/
     #ublock0_raymondhill_net-BAP image{
-      list-style-image: url("icons/ubon.png") !important;
+      list-style-image: url("icons/ubon-c.png") !important;
     }
     /*--ublock off--*/
     #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
