@@ -83,7 +83,7 @@ Use the template below to enter your theme into the list:
 #light-fox-anniversary {background-image: url("pic/gruvbox-2.jpg") !important;}
 #dark-fox-anniversary {background-image: url("pic/old.dusky.png") !important;}
 #light-landscape {background-image: url("pic/catppuccin-frappe2.png") !important;}
-#light-mountain {background-image: url("pic/gruvbox-l.png") !important;}
+#light-mountain {background-image: url("pic/gruvbox.png") !important;}
 #dark-beach {background-image: url("pic/gruvbox.png") !important;}
 #light-sky {background-image: url("pic/seasonal2.png") !important;}
 #light-beach {background-image: url("pic/green.png") !important;}
@@ -96,7 +96,7 @@ Use the template below to enter your theme into the list:
 :root:has(#light-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/gruvbox-2.jpg") !important;}
 :root:has(#dark-fox-anniversary[aria-checked="true"]) body {background-image: url("pic/old.dusky.png") !important;}
 :root:has(#light-landscape[aria-checked="true"]) body {background-image: url("pic/catppuccin-frappe2.png") !important;}
-:root:has(#light-mountain[aria-checked="true"]) body {background-image: url("pic/gruvbox-l.png") !important;}
+:root:has(#light-mountain[aria-checked="true"]) body {background-image: url("pic/gruvbox.png") !important;}
 :root:has(#dark-beach[aria-checked="true"]) body {background-image: url("pic/gruvbox.png") !important;}
 :root:has(#light-sky[aria-checked="true"]) body {background-image: url("pic/seasonal2.png") !important;}
 :root:has(#light-beach[aria-checked="true"]) body {background-image: url("pic/green.png") !important;}
@@ -121,7 +121,7 @@ Use the template below to enter your theme into the list:
   body:not([style*="--"]){background-image: url("pic/old.dusky.png") !important;}
 
 :root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/d9289c5b-8c78-4b27-b5d8-afe7285ce7d1.avif");']) 
-  body:not([style*="--"]){background-image: url("pic/gruvbox-l.jpg") !important;}
+  body:not([style*="--"]){background-image: url("pic/gruvbox.png") !important;}
 
 :root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/5344443f-f427-4029-bc6b-68bc22f83355.avif");']) 
   body:not([style*="--"]){background-image: url("pic/gruvbox-l.png") !important;}
