@@ -8,8 +8,7 @@ ladedadeda
 
 @import url('all-color-schemes-wallpapers.css');
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-@media (-moz-bool-pref: "user.theme.newtab.default") {
-  
+
 
 /* basics ------------------------------------------------------------ */     
 
@@ -90,25 +89,27 @@ body {
 .search-wrapper .logo-and-wordmark .wordmark {
     width: 66vw !important;
 }
-.search-inner-wrapper {
-    display: flex !important;
-    margin-top: 16px !important;
-    outline: none !important;
-    filter: saturate(140%) !important;
-    background-color: rgba(50, 50, 50, 0.1) !important;
-    border-radius: 18px !important;
-    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
-    backdrop-filter: blur(33px);
-    background-blend-mode: overlay;
-    height: auto !important;
-}
-    
+
+@media (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+    .search-inner-wrapper {
+        display: flex !important;
+        margin-top: 16px !important;
+        outline: none !important;
+        filter: saturate(140%) !important;
+        background-color: rgba(50, 50, 50, 0.1) !important;
+        border-radius: 18px !important;
+        box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+        backdrop-filter: blur(33px);
+        background-blend-mode: overlay;
+        height: auto !important;
+    }
+}    
 /*vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv may need to just remove*/        
 @supports -moz-bool-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
 .search-inner-wrapper:not(:focus){
     background: var(--newtab-pinnedsites-background) !important;
     backdrop-filter: blur(33px) !important;
-    filter: saturate(140%) !important;
+    filter: saturate(100%) !important;
 }}
 
     .search-inner-wrapper:not(:focus) input, .search-wrapper:not(:active) input:focus{
@@ -498,12 +499,12 @@ body {
         border-radius: 100% !important;
     }
     #searchSuggestionTable {
-        background-color: rgba(110,110,130,0.3) !important;
+        background-color: rgba(100,100,110,0.1) !important;
         border-radius: 19px !important;
         padding: 0.4rem !important;
         position: fixed;
         top:55px !important;
-        backdrop-filter: blur(33px) !important;
+        backdrop-filter: blur(150px) !important;
         background-blend-mode: overlay !important;
         z-index:999 !important;
     } 
@@ -517,15 +518,15 @@ body {
     } 
 
     #searchSuggestionTable .contentSearchSuggestionRow:hover {
-        background-color: red !important;
+        background-color: transparent !important;
         cursor:pointer !important;
     }
     #searchSuggestionTable .contentSearchSuggestionEntry:hover {  
-        background-color: red !important;
+        background-color: rgba(25,25,35,0.7) !important;
     }
 
     #searchSuggestionTable td:hover {
-        background-color:rgba(100,100,100,0.2) !important;
+        background-color:rgba(100,100,100,0.0) !important;
         border-radius:10px !important;
     }
     
@@ -533,7 +534,7 @@ body {
 
     
     
-}} /*fin*/
+} /*fin*/
 
 
 
