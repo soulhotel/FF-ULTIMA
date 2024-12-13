@@ -65,10 +65,7 @@ user_pref("ultima.xstyle.containertabs.iii", true);
 user_pref("ultima.xstyle.pinnedtabs.i", false); 
 user_pref("ultima.xstyle.private", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
-
-/*new tab*/
-user_pref("user.theme.newtab.default", true);
-user_pref("user.theme.newtab.circular", false);
+user_pref("ultima.xstyle.newtab.rounded", false);
 
 /*override wallpapers*/
 user_pref("user.theme.wallpaper.catppuccin", false);
