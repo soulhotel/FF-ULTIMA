@@ -71,7 +71,7 @@
 3. For first time installation, you need to apply the `user.js` to firefox to access the theme settings.
 4. In the chrome folder, youll see the `user.js`, move it <ins>out the chrome folder and into the Profile Folder<ins>.
 5. Restart Firefox.
-6. <ins>**Wait** for Firefox to open<ins>, then delete the `user.js` file.
+6. <ins>**Wait** for Firefox to open</ins>, then delete the `user.js` file.
 7. Go to `about:config` and search for `ultima` to see all of your settings.
 
 ###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset or unless told otherwise :).
