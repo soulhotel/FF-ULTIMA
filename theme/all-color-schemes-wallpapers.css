@@ -16,7 +16,7 @@ Use the template below to enter your theme into the list:
 
 @media (prefers-color-scheme: dark) {
 
-@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("https://w.wallhaven.cc/full/md/wallhaven-mdxvx1.jpg") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("pic/fullmoon.png") !important;}}
 
 @media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
 
@@ -26,7 +26,7 @@ Use the template below to enter your theme into the list:
 
 @media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("https://w.wallhaven.cc/full/ey/wallhaven-ey9jvo.jpg") !important;}}
+@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("pic/midnight.png") !important;}}
 
   
   
