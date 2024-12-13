@@ -670,6 +670,10 @@ menupopup menuseparator {opacity:0.2 !important;}
 
 
 
-
+span.button-background.labelled label {
+    padding-left: 11px !important;
+}
+#vertical-pinned-tabs-container-separator {opacity:0 !important; display: none !important;}  
+    
 
 @media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
