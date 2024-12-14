@@ -7,12 +7,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Before submitting, have you already looked at the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
+        ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
 
   - type: dropdown
     id: checked-wiki
     attributes:
-      label: "Have you already looked at the Wiki?"
+      label: "Already looked at the Wiki?"
       description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
       options:
         - "No"
@@ -84,7 +84,7 @@ body:
   - type: textarea
     id: picture-video
     attributes:
-      label: "Picture/Video"
+      label: "Picture/Video of the Issue"
       description: "Screenshot(s) or video of the issue are preferred."
       placeholder: "Drag & Drop | Copy & Paste | or Link to Picture & Video"
     validations:
