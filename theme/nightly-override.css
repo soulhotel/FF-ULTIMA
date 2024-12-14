@@ -230,6 +230,7 @@ toolbar {
             --uc-topbars-combined-height: 2px !important;
             transform-origin: top !important;
             transform: rotateX(82deg) !important;
+            @media (-moz-platform: windows) {transform: rotateX(75deg) !important;}
             transition: height 0.3s ease !important;
         }
         #navigator-toolbox:not(:hover) #urlbar:not(:hover):not([breakout-extend]) {
