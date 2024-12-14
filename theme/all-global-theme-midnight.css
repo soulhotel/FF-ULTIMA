@@ -32,9 +32,9 @@ Custom Background
     --uc-background-main: rgb(5, 5, 5);
     --uc-background-layered: rgba(10, 10, 10, 1);
     --uc-transparent: rgba(0,0,0,0);
-    --uc-button-selected: rgba(27, 28, 33,1);
-    --uc-tab-selected-bg: rgba(19, 20, 28,1);
-    --uc-urlbar-background: rgba(7, 7, 7,0.6);
+    --uc-button-selected: rgba(27, 28, 29,1);
+    --uc-tab-selected-bg: rgba(19, 20, 24,1);
+    --uc-urlbar-background: rgba(7, 7, 7,1);
     --uc-panel-background: rgba(7, 7, 7, 0.95);
     --uc-panel-border: rgba(25, 25, 35, 1);
     --uc-panel-border-ii: rgba(35, 35, 45, 0.5);
@@ -221,7 +221,7 @@ Custom Background
         margin-top: 3px !important; /*new*/
         background-color: var(--uc-context-menu) !important;
         border-radius: var(--uc-all-border-radius) !important;
-        box-shadow: 0.1rem 0.4rem 0.9rem -0.1rem rgba(25,25,25,0.9) !important;
+        box-shadow: 0.1rem 0.4rem 0.7rem -0.1rem rgba(15,15,18,0.6) !important;
     }
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
         border-radius: var(--uc-all-border-radius) !important;
@@ -334,15 +334,16 @@ Custom Background
     }
     /*--bookmarks folder icon--*/
     .bookmark-item[container=true] {
-      list-style-image: url("icons/bm.png") !important;
+      list-style-image: url("icons/bm.svg") !important;
     }
-    /*--ublock on--*/
+    /* ublock on */
     #ublock0_raymondhill_net-BAP image{
-      list-style-image: url("icons/ubon.png") !important;
+      list-style-image: url("icons/ublock.svg") !important;
     }
-    /*--ublock off--*/
+    /* ublock off */
     #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
-      list-style-image: url("icons/uboff.png") !important;
+      list-style-image: url("icons/ublock.svg") !important;
+      fill: rgb(231, 107, 127) !important;
     }
     #forward-button image{
       list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
@@ -367,14 +368,23 @@ Custom Background
 /* Custom Background ----------------------------------------------------------*/    
  
 @media (prefers-color-scheme: dark) {
-
-#main-window:not([lwtheme]) #nav-bar {transition: var(--ext-theme-background-transition) !important;
-background-image: url(pic/midnight-ui.gif) !important;
-background-repeat: no-repeat, no-repeat !important;background-position: 115% 100% !important;}
+#main-window:not([lwtheme]) #navigator-toolbox,
+#main-window:not([lwtheme]) #nav-bar {
+    transition: var(--ext-theme-background-transition) !important;
+    background-image: url(pic/midnight-ui.gif) !important;
+    background-repeat: repeat, no-repeat !important;
+    background-position: 115% 100% !important;
+}
 
 #main-window:not([lwtheme]) findbar {
-color: var(--toolbar-color) !important; color-scheme: var(--toolbar-color-scheme) !important;
-background-image: url(pic/midnight-ui.gif) !important; border-top: 0px !important;
-background-repeat: no-repeat, no-repeat !important;background-position: 100% 100% !important;}
+    color: var(--toolbar-color) !important;
+    color-scheme: var(--toolbar-color-scheme) !important;
+    background-image: url(pic/midnight-ui.gif) !important;
+    border-top: 0px !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: 100% 100% !important;
+}
       
 }
+
+
