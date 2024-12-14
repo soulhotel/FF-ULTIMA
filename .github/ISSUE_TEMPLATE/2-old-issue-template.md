@@ -1,5 +1,5 @@
 ---
-name: Report an Issue (Old Template)
+name: 🚩 Report an Issue (Old Template)
 about: Report an Issue to help us improve.
 title: ''
 labels: ''
