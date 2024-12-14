@@ -10,25 +10,12 @@ body:
         ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
 
   - type: checkboxes
-    id: checked-wiki
+    id: confirmation
     attributes:
-      label: "Already looked at the Wiki?"
-      description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
+      label: "Please confirm:"
       options:
-        - label: "Yes"
-          required: true
-        - label: "No"
-          required: true
-
-  - type: checkboxes
-    id: contribution-check
-    attributes:
-      label: "Would you like to contribute to this development?"
-      options:
-        - label: "Yes"
-          required: true
-        - label: "No"
-          required: true
+        - label: "I have already looked at the Wiki."
+        - label: "I would like to contribute to this development."
 
   - type: textarea
     id: issue-description
