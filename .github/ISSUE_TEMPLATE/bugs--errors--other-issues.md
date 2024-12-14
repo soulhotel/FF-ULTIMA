@@ -1,5 +1,5 @@
 ---
-name: Bugs, Errors, Other Issues
+name: Report an Issue
 about: Report an Issue to help us improve.
 title: ''
 labels: ''
