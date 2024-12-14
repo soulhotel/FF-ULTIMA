@@ -15,8 +15,8 @@ body:
       label: "Have you already looked at the Wiki?"
       description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
       options:
-        - "Yes"
         - "No"
+        - "Yes"
     validations:
       required: true
   
@@ -61,14 +61,14 @@ body:
         - "Firefox"
         - "Firefox Nightly"
         - "Firefox Dev Edition"
-        - "Other"
+        - "Other Browser"
     validations:
       required: true
 
   - type: input
     id: other-browser
     attributes:
-      label: "If 'Other' browser was selected, specify here:"
+      label: "If `Other Browser` was selected, specify here:"
       placeholder: "Example: Waterfox v123"
     validations:
       required: false
@@ -82,8 +82,8 @@ body:
         - "No"
     validations:
       required: true
-
-  - type: input
+    
+  - type: textarea
     id: picture-video
     attributes:
       label: "Picture/Video"
