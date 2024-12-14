@@ -33,7 +33,7 @@ body:
   - type: textarea
     id: issue-description
     attributes:
-      label: "Describe the Feature | Suggestion | Modification"
+      label: "Describe the Feature | Suggestion | Modification:"
       placeholder: "A detailed description of what the Feature / Suggestion / Modification is"
     validations:
       required: true
@@ -41,8 +41,7 @@ body:
   - type: textarea
     id: picture-video
     attributes:
-      label: "Picture/Video of the desired outcome"
-      description: "Screenshot(s) or video if applicable"
+      label: "Picture/Video of the desired outcome (if applicable):"
       placeholder: "Drag & Drop | Copy & Paste | or Link to Picture & Video"
     validations:
       required: false
