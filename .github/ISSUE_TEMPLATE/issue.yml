@@ -54,8 +54,7 @@ body:
   - type: dropdown
     id: platform-browser
     attributes:
-      label: " "
-      description: "Choose your Web Browser"
+      label: "Web Browser"
       options:
         - "Firefox"
         - "Firefox Nightly"
