@@ -42,7 +42,7 @@ new tab rounded tweaks
     :root {
         --newtab-background-color-secondary: transparent !important;
         --newtab-element-hover-color:  rgba(24,24,24,0.9) !important;
-        --uc-panel-backgrounds: rgba(10,10,110,0.7);
+        --uc-panel-backgrounds: rgba(10,10,10,0.7);
         --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 5%, rgba(14,14,14,0.8)) !important;
         --mode-color: white;
     }
