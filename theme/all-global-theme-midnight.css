@@ -18,7 +18,7 @@ Custom Background
     
 :root, body, * {
     color-scheme: dark !important; /*--<--dont touch--*/
-    --uc-ultima-window: rgb(1, 1, 1);
+    --uc-ultima-window: rgb(0, 0, 0);
     --uc-text: rgb(230, 230, 230);
     --uc-dark-color: rgb(27, 25, 35);
     --uc-light-color: rgb(215, 218, 224);
