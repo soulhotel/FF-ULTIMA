@@ -46,7 +46,7 @@ body:
       label: "Platform/Desktop"
       options:
         - "Windows"
-        - "Linux"e
+        - "Linux"
         - "Mac"
     validations:
       required: true
