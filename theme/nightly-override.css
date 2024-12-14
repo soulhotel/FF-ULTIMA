@@ -450,7 +450,7 @@ box-shadow: none !important;}}
 
 /* vt container tweaks */
 #sidebar-main {
-    -moz-window-dragging: drag; /*allow dragging window via vt sb*/    
+    @media not (-moz-platform: windows) {-moz-window-dragging: drag;} /*allow dragging window via vt sb*/    
     margin: var(--uc-tab-margins) !important;
     & .tab-close-button, & #vertical-tabs-newtab-button, & #tabs-newtab-button {border-radius: 8px !important;}
     & #tabs-newtab-button .toolbarbutton-text {margin-left:4px !important;font-style: italic;}
