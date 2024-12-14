@@ -322,11 +322,10 @@ Custom Icons
     
     
     
-/* Custom Icons --------------------------------------------------------------------*/
-
+/* Custom Icons -----------------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.theme.icons") {  
-    /*--extension menu--*/
+    /* extension menu */
     #main-window:not([lwtheme]) #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;
       fill: var(--toolbarbutton-icon-fill) !important;
@@ -363,6 +362,8 @@ Custom Icons
         list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important;
     }
 }    
-    
 
-}
+
+
+
+} /* fin */
