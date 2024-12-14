@@ -12,6 +12,7 @@ body:
   - type: checkboxes
     id: confirmation
     attributes:
+      label: "Please confirm (not required):"
       options:
         - label: "I have already looked at the Wiki."
         - label: "I would like to contribute to this development."
@@ -20,7 +21,7 @@ body:
     id: issue-description
     attributes:
       label: "Describe the Feature | Suggestion | Modification:"
-      placeholder: "A detailed description of what the Feature / Suggestion / Modification is"
+      placeholder: "A detailed description of the Feature / Suggestion / Modification"
     validations:
       required: true
 
