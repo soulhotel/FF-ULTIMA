@@ -515,7 +515,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
     /* visibility trigger */
     #sidebar-main:has([expanded])::after {
         content: "";background-color:none;position: fixed;
-        z-index: 9999;top: var(--uc-topbars-combined-height);left: 0;width: 3px;height: 100vh;
+        z-index: 9999;top: var(--uc-topbars-combined-height);left: 0;width: 15px;height: 100vh;
     }    
     
     /* fixed positioning */
