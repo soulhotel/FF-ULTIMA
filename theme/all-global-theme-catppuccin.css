@@ -334,17 +334,18 @@ Custom Icons
     #main-window[lwtheme] #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;
     }
-    /*--bookmarks folder icon--*/
+    /* bookmarks folder icon */
     .bookmark-item[container=true] {
-      list-style-image: url("icons/bm.png") !important;
+      list-style-image: url("icons/bm.svg") !important;
     }
-    /*--ublock on--*/
+    /* ublock on */
     #ublock0_raymondhill_net-BAP image{
-      list-style-image: url("icons/ubon-l.png") !important;
+      list-style-image: url("icons/ublock.svg") !important;
     }
-    /*--ublock off--*/
+    /* ublock off */
     #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image{
-      list-style-image: url("icons/uboff.png") !important;
+      list-style-image: url("icons/ublock.svg") !important;
+      fill: rgb(231, 107, 127) !important;
     }
     #forward-button image{
       list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
