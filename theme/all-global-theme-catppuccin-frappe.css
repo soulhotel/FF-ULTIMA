@@ -320,10 +320,10 @@ Custom Icons
         
        
         
-/* Global styling - Icons ---------------------------------------------------------*/
-    
+/* Custom Icons -----------------------------------------------------------------*/
+
 @media (-moz-bool-pref: "ultima.theme.icons") {  
-    /*--extension menu--*/
+    /* extension menu */
     #main-window:not([lwtheme]) #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;
       fill: var(--toolbarbutton-icon-fill) !important;
@@ -331,7 +331,7 @@ Custom Icons
     #main-window[lwtheme] #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;
     }
-    /*--bookmarks folder icon--*/
+    /* bookmarks folder icon */
     .bookmark-item[container=true] {
       list-style-image: url("icons/bm.svg") !important;
     }
@@ -360,7 +360,9 @@ Custom Icons
         list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important;
     }
 }    
-    
 
-}
+
+
+
+} /* fin */
     
