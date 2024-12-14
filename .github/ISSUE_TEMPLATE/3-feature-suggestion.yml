@@ -12,7 +12,6 @@ body:
   - type: checkboxes
     id: confirmation
     attributes:
-      label: "Please confirm:"
       options:
         - label: "I have already looked at the Wiki."
         - label: "I would like to contribute to this development."
