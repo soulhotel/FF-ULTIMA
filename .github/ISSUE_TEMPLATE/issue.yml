@@ -24,8 +24,7 @@ body:
     id: issue-description
     attributes:
       label: "Describe the Issue"
-      description: "A detailed description of what the issue is."
-      placeholder: "Describe the Issue"
+      placeholder: "A detailed description of what the issue is."
     validations:
       required: true
 
@@ -33,7 +32,6 @@ body:
     id: expected-behavior
     attributes:
       label: "Expected Behavior"
-      description: "Describe what you expected to happen."
       placeholder: "A description of what you expected to happen"
     validations:
       required: true
