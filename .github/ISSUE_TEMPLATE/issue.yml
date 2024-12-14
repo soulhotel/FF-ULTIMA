@@ -46,7 +46,7 @@ body:
       label: "Platform/Desktop"
       options:
         - "Windows"
-        - "Linux"
+        - "Linux"e
         - "Mac"
     validations:
       required: true
@@ -54,7 +54,8 @@ body:
   - type: dropdown
     id: platform-browser
     attributes:
-      label: ""
+      label: " "
+      description: "Choose your Web Browser"
       options:
         - "Firefox"
         - "Firefox Nightly"
