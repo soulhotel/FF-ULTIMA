@@ -39,11 +39,12 @@ body:
   - type: markdown
     attributes:
       value: "### Platform/Desktop"
+      label: "Platform/Desktop"
 
   - type: dropdown
     id: platform-os
     attributes:
-      label: "Operating System"
+      label: "Platform/Desktop"
       options:
         - "Windows"
         - "Linux"
@@ -54,7 +55,7 @@ body:
   - type: dropdown
     id: platform-browser
     attributes:
-      label: "Web Browser"
+      #label: "Web Browser"
       options:
         - "Firefox"
         - "Firefox Nightly"
@@ -66,7 +67,7 @@ body:
   - type: input
     id: other-browser
     attributes:
-      label: "If `Other Browser` was selected, specify here:"
+      #label: "If `Other Browser` was selected, specify here:"
       placeholder: "Example: Waterfox v123"
     validations:
       required: false
