@@ -9,7 +9,7 @@ body:
       value: |
         ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
 
-  - type: checkbox
+  - type: dropdown
     id: checked-wiki
     attributes:
       label: "Already looked at the Wiki?"
@@ -19,8 +19,8 @@ body:
         - "No"
     validations:
       required: true
-  
-  - type: checkbox
+
+  - type: dropdown
     id: contribution-check
     attributes:
       label: "Would you like to contribute to this development?"
