@@ -39,7 +39,6 @@ body:
   - type: markdown
     attributes:
       value: "### Platform/Desktop"
-      label: "Platform/Desktop"
 
   - type: dropdown
     id: platform-os
