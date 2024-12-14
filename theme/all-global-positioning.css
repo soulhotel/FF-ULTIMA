@@ -471,7 +471,7 @@ box-shadow: none !important;}}
 
 /* global tweaks */
 #sidebar-main {
-    -moz-window-dragging: drag;
+    @media not (-moz-platform: windows) {-moz-window-dragging: drag;}
     &:not([positionend="true"]) {margin: var(--uc-tab-margins-left) !important;}      
     &[positionend="true"] {margin: var(--uc-tab-margins-right) !important;}
     & .tab-close-button, & #vertical-tabs-newtab-button, & #tabs-newtab-button {border-radius: 8px !important;}
