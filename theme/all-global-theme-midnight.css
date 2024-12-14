@@ -18,7 +18,7 @@ Custom Background
     
 :root, body, * {
     color-scheme: dark !important; /*--<--dont touch--*/
-    --uc-ultima-window: rgb(0, 0, 0);
+    --uc-ultima-window: rgb(1, 1, 1);
     --uc-text: rgb(230, 230, 230);
     --uc-dark-color: rgb(27, 25, 35);
     --uc-light-color: rgb(215, 218, 224);
@@ -32,9 +32,9 @@ Custom Background
     --uc-background-main: rgb(5, 5, 5);
     --uc-background-layered: rgba(10, 10, 10, 1);
     --uc-transparent: rgba(0,0,0,0);
-    --uc-button-selected: rgba(27, 28, 33,1);
-    --uc-tab-selected-bg: rgba(19, 20, 28,1);
-    --uc-urlbar-background: rgba(7, 7, 7,0.6);
+    --uc-button-selected: rgba(27, 28, 29,1);
+    --uc-tab-selected-bg: rgba(19, 20, 24,1);
+    --uc-urlbar-background: rgba(7, 7, 7,1);
     --uc-panel-background: rgba(7, 7, 7, 0.95);
     --uc-panel-border: rgba(25, 25, 35, 1);
     --uc-panel-border-ii: rgba(35, 35, 45, 0.5);
@@ -221,7 +221,7 @@ Custom Background
         margin-top: 3px !important; /*new*/
         background-color: var(--uc-context-menu) !important;
         border-radius: var(--uc-all-border-radius) !important;
-        box-shadow: 0.1rem 0.4rem 0.9rem -0.1rem rgba(25,25,25,0.9) !important;
+        box-shadow: 0.1rem 0.4rem 0.7rem -0.1rem rgba(15,15,18,0.6) !important;
     }
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
         border-radius: var(--uc-all-border-radius) !important;
@@ -332,7 +332,7 @@ Custom Background
     #main-window[lwtheme] #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;
     }
-    /* bookmarks folder icon */
+    /*--bookmarks folder icon--*/
     .bookmark-item[container=true] {
       list-style-image: url("icons/bm.svg") !important;
     }
@@ -386,3 +386,5 @@ Custom Background
 }
       
 }
+
+
