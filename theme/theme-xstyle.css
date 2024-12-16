@@ -149,6 +149,11 @@ bookmarks fade out
         .tab-group-label-container {
             width: calc(var(--uc-vertical-collapsed-width) - 4px) !important;
         }
+        @media not (-moz-bool-pref: "ultima.tabs.autohide") {
+            .tab-group-label-container {
+                width: 100px !important;
+            }            
+        }
     }
 
     @media not (-moz-bool-pref: "sidebar.verticalTabs") {
@@ -256,7 +261,7 @@ bookmarks fade out
         margin: 0 !important;
         opacity: 0.0;
     }
-    .tabbrowser-tab.identity-color-purple,.tabbrowser-tab.identity-color-red,.tabbrowser-tab.identity-color-blue
+    .tabbrowser-tab.identity-color-purple,.tabbrowser-tab.identity-color-red,.tabbrowser-tab.identity-color-blue,
     .tabbrowser-tab.identity-color-green,.tabbrowser-tab.identity-color-black,.tabbrowser-tab.identity-color-pink,.tabbrowser-tab.identity-color-purple {
         .tab-background {background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-ultima-window) 40%) !important;}
         .tab-text[selected] {color: var(--uc-ultima-window) !important;}
