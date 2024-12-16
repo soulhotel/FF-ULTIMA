@@ -203,6 +203,15 @@ bookmarks fade out
     }
 
 }
+
+
+        @media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
+
+            #sidebar-main:hover .tab-group-label-container {min-width:200px !important;}
+        }
+        @media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") {
+
+        }
 /* compact tabs ------------------------------------------------------------------------ */
 
 @media (-moz-bool-pref: "ultima.spacing.compact.tabs") { 
