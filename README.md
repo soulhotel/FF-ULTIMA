@@ -12,11 +12,13 @@
 
 [FF Add-On Store](https://addons.mozilla.org/en-US/firefox/addon/ff-ultima-companion/)
 
-> Obsolete extension - about:config & pref API'S are not accessible for Firefox anymore.
-
+> Obsolete extension - pref API'S are not accessible/limited for Firefox.
 
 
 https://github.com/user-attachments/assets/bbd96ce1-3589-4f58-98d0-c50c7f9b1a3c
+
+https://github.com/user-attachments/assets/67a1a0a0-3d93-4e2e-a0ad-aaae76d14bef
+
 
 ### <ins> 0. API & Size (01.05.2025)
 
