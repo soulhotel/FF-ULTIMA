@@ -1,0 +1,198 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Automatically apply color scheme colors to Sidebery
+
+Sidebery Automatic Theming
+Applying style to elements
+FF Ultima Companion Extension
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@-moz-document url-prefix("moz-extension://") {
+
+/* Sidebery Automatic Theming ----------------------------------------------------------------- */
+
+@media (-moz-boz-pref: "ultima.sidebery.automatic.theming") {
+
+@media (-moz-bool-pref: "user.theme.dark.a") { :root {
+        --ut-bg: rgb(35, 35, 42) !important;
+        --ut-fg: white !important;
+}}
+@media (-moz-bool-pref: "user.theme.light.a") { :root {
+        --ut-bg: rgb(244, 244, 255) !important;
+        --ut-fg: rgb(5, 5, 5) !important;
+}}
+@media (-moz-bool-pref: "user.theme.dark.catppuccin") { :root {
+        --ut-bg: rgb(38, 36, 50) !important;
+        --ut-fg: rgb(198, 170, 232) !important;
+}}
+@media (-moz-bool-pref: "user.theme.dark.catppuccin-frappe") { :root {
+        --ut-bg: rgb(41, 44, 60) !important;
+        --ut-fg: rgb(205, 214, 244) !important;
+}}
+@media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha") { :root {
+        --ut-bg: rgb(24, 24, 37) !important;
+        --ut-fg: rgb(205, 214, 244) !important;
+}}
+@media (-moz-bool-pref: "user.theme.dark.gruvbox") { :root {
+        --ut-bg: rgb(40, 40, 45) !important;
+        --ut-fg: rgb(237, 221, 170) !important;
+}}
+@media (-moz-bool-pref: "user.theme.dark.midnight") { :root {
+        --ut-bg: rgb(5, 5, 5) !important;
+        --ut-fg: rgb(230, 230, 230) !important;
+}}
+@media (-moz-bool-pref: "user.theme.light.gruvbox") { :root {
+        --ut-bg: rgb(250, 220, 220) !important;
+        --ut-fg: rgb(198, 63, 41) !important;
+}}
+
+
+/* Applying style to elements ---------------------------------------------------------------- */
+
+/* Header Panel ------------------------------------------------*/
+
+body:has([class="root Sidebar"]) { /*sidebery*/
+
+    #root.root {--toolbar-el-overlay-selected-bg: rgba(50, 51, 54,0.5);}
+    #root.root {--toolbar-el-overlay-hover-bg: rgba(50, 51, 54,0.5);}
+    #root.root {--toolbar-el-overlay-active-border: rgba(220, 221, 242,0.5);}
+    #root.root {--toolbar-el-overlay-active-bg: rgba(50, 51, 54,0.5);}
+    #root.root {--toolbar-el-overlay-active-border: rgba(50, 51, 54,0.5);}
+    #root.root {--nav-btn-accent: rgb(78, 80, 145);}
+    @media (prefers-color-scheme: light) {
+      #root.root {--toolbar-el-overlay-selected-bg: rgb(73, 99, 163);}
+      #root.root {--toolbar-el-overlay-hover-bg: rgb(73, 99, 163);}
+      #root.root {--toolbar-el-overlay-active-bg: rgb(73, 99, 163);}
+    }
+    .NavigationBar .nav-item .audio {display: none !important;}
+
+/* Pinned Tabs -----------------------------------------------*/
+
+    #root.root {--tabs-pinned-width: 24vw;--tabs-pinned-height: 40px;}
+    @media (max-width: 250px) {
+      #root.root {
+        --tabs-pinned-width: 23.5vw;
+        --tabs-pinned-height: 40px;
+      }
+    }
+    @media (max-width: 165px) {
+      #root.root {
+        --tabs-pinned-width: 23vw;
+        --tabs-pinned-height: 40px;
+      }
+    }
+    @media (max-width: 125px) {
+      #root.root {
+        --tabs-pinned-width: 22vw;
+        --tabs-pinned-height: 40px;
+      }
+    }
+    @media (max-width: 84px) {
+      #root.root {
+        --tabs-pinned-width: 20.5vw;
+        --tabs-pinned-height: 19px;
+      }
+      .PinnedTabsBar .tab-wrapper .fav {
+        transform: scale(0.6);
+      }
+    }
+    @media (max-width: 42px) {
+      #root.root {
+        --tabs-pinned-width: 15px;
+        --tabs-pinned-height: 19px;
+      }
+      .PinnedTabsBar .audio {
+        display: none !important;
+      }
+      .PinnedTabsBar[data-audible] svg.-loud,
+      .PinnedTabsBar[data-muted] svg.-mute {
+        display: none !important;
+      }
+    }
+
+/* Tabs ----------------------------------------------------*/
+
+    #root.root {--tabs-normal-fg: var(--ut-fg);}
+    #root.root {--tabs-activated-bg: var(--ut-bg);}
+    #root.root {--general-border-radius: 10px;}
+    #root.root {--general-margin: 2px;}
+    #root.root {--frame-el-overlay-selected-border: var(--ut-fg);}
+    #root.root {--frame-el-overlay-selected-bg: rgba(50, 51, 54,0.5);}
+    #root.root {--tabs-border-radius: 10px;}
+    #root.root {--tabs-indent: 20px;}
+    @media (prefers-color-scheme: light) {
+      #root.root {--frame-el-overlay-selected-bg: var(--ut-fg);}
+      #root.root {--frame-el-overlay-selected-border: rgba(220, 221, 242,0.5);}
+    }
+    .Tab[data-pin="false"] .fav {margin-left: 9px;}
+    #root.root {--tabs-audio-btn-width: 30px;}
+
+/* Fix Tabs Tree --------------------------------------------*/
+
+    @media screen and (max-width: 42px) {
+      #root {--tabs-indent: unset !important;}
+      .ScrollBox > .scroll-container {overflow: hidden;}
+      .Tab .body::after {display: none !important;}
+      .Tab .audio {
+        left: 10px;
+        transform: scale(0.8);
+        transform: translateY(6px) translateX(-15px);
+        z-index: 99 !important;
+      }
+      .Tab[data-audible] svg.-loud,
+      .Tab[data-muted] svg.-mute {
+        transform: translateY(0px) translateX(0px);
+      }
+    }
+
+/* Bookmarks ------------------------------------------------*/
+
+    #root.root {--bookmarks-indent: 0px;}
+
+/* Context Menu ---------------------------------------------*/
+
+    #root.root {--ctx-menu-padding: 3px;}
+    @media (prefers-color-scheme: dark) {
+      #root.root {--popup-bg: color-mix(in lab, var(--ut-bg) 70%, rgb(50,50,50) 30%) !important;}
+    }
+    @media (prefers-color-scheme: light) {
+      #root.root {--popup-bg: color-mix(in lab, var(--ut-bg) 70%, rgb(50,50,50) 30%) !important;}
+    }
+
+/* Noti -----------------------------------------------------*/
+
+    #root.root {--notification-bg: #111117ff;}
+    #root.root {--notification-fg: rgb(251, 251, 254);}
+    
+} /* end of sidebery */
+
+
+
+
+/* FF Ultima Companion Extension -------------------------------------------------- */
+
+body:has(button[data-tab="Color Schemes"]), /*ff ultima companion*/
+body:has(button[data-tab="Color Schemes"]) #sidebar, /*ff ultima companion*/
+body:has(button[data-tab="Color Schemes"]) .tab-button, /*ff ultima companion*/
+body:has(button[data-tab="Color Schemes"]) .preferences, /*ff ultima companion*/
+body #listLayout, body #buttonLayout, /*browserhub*/
+body:has(#listLayout,#buttonLayout)  /*browserhub*/
+{
+    background-color: var(--ut-bg) !important;
+    color: var(--ut-fg) !important;
+}
+body:has(button[data-tab="Color Schemes"]) .tab-button, /*ff ultima companion*/
+body:has(button[data-tab="Color Schemes"]) .preferences /*ff ultima companion*/
+{
+    border: 1px solid var(--ut-fg) !important;
+}
+
+ 
+
+
+
+
+}} /*fin*/
+

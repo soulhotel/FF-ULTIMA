@@ -5,7 +5,7 @@
 rgba(35, 35, 42);      full moon darker
 rgb(43, 42, 51);       full moon dark 
 rgb(216, 217, 248);    dusky light 
-rgba(255,255,255);     white 
+rgba(255,255,255);     dusky white 
 rgb(38, 36, 50);       catppuccin dark
 rgb(40, 40, 45);       gruvbox dark
 rgb(5, 5, 5);          midnight dark
@@ -33,13 +33,13 @@ rgb(5, 5, 5);          midnight dark
   --toolbar-el-overlay-selected-bg: #0d0d0dff;
 }
 #root.root {
-  --toolbar-el-overlay-hover-bg: #0d0d0dff;
+  --toolbar-el-overlay-hover-bg: rgba(50,50,60,0.9);
 }
 #root.root {
   --toolbar-el-overlay-active-border: #ffffffff;
 }
 #root.root {
-  --toolbar-el-overlay-active-bg: #0d0d0dff;
+  --toolbar-el-overlay-active-bg: rgba(50,50,60,0.9);
 }
 #root.root {
   --toolbar-el-overlay-active-border: #1a1a1aff;
@@ -115,7 +115,7 @@ rgb(5, 5, 5);          midnight dark
   --tabs-normal-fg: rgb(251, 251, 254);
 }
 #root.root {
-  --tabs-activated-bg: #0d0d0dff;
+  --tabs-activated-bg: rgba(50,50,60,0.9);
 }
 #root.root {
   --general-border-radius: 10px;
@@ -127,7 +127,7 @@ rgb(5, 5, 5);          midnight dark
   --frame-el-overlay-selected-border: #ffffffff;
 }
 #root.root {
-  --frame-el-overlay-selected-bg: #0d0d0dff;
+  --frame-el-overlay-selected-bg: rgba(50,50,60,0.9);
 }
 #root.root {
   --tabs-border-radius: 10px;
