@@ -64,7 +64,8 @@ Vertical Tabs Disabled - setting
     /* Toolbar spacing -----------------------------------------------------------------------*/
     
     /* overriding toolbar heights with their default values for easier modification */
-    #navigator-toolbox {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
+    #main-window:not([chromehidden="menubar toolbar location directories status extrachrome "]) #navigator-toolbox
+    {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
     #toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
     #nav-bar {min-height:var(--uc-navbar-height) !important; max-height: var(--uc-navbar-height) !important; z-index:997 !important;}
     #nav-bar .toolbarbutton-1 {margin-top:2.5px !important;} /*align child buttons vertically*/
@@ -86,6 +87,16 @@ Vertical Tabs Disabled - setting
         @media (-moz-bool-pref: "sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}
     }
     
+  /* Notification Deck */
+  #tab-notification-deck {
+      position:absolute !important;
+      z-index:9000 !important;
+      top: var(--uc-topbars-combined-height) !important;
+      right:0 !important;
+      border-radius:10px !important;
+  }
+  .notificationbox-stack {border-bottom-left-radius:8px !important;border-bottom-left-radius:8px !important;}
+
     
     /* Compact spacing -----------------------------------------------------------------------*/
     

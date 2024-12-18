@@ -1,0 +1,35 @@
+name: 🆕 Features, Suggestions, & Request
+description: Suggest feature's, improvements or modifications to the theme.
+title: "[Feature Request] "
+labels:
+  - "enhancement"
+  - "issue"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: "Please confirm (not required):"
+      options:
+        - label: "I have already looked at the Wiki."
+        - label: "I would like to contribute to this development."
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: "Describe the Feature | Suggestion | Modification:"
+      placeholder: "A detailed description of the Feature / Suggestion / Modification"
+    validations:
+      required: true
+
+  - type: textarea
+    id: picture-video
+    attributes:
+      label: "Picture/Video of the desired outcome (if applicable):"
+      placeholder: "Drag & Drop | Copy & Paste | or Link to Picture & Video"
+    validations:
+      required: false
