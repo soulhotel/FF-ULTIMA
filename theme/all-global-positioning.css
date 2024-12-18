@@ -544,9 +544,9 @@ span.button-background.labelled label {padding-left: 5px !important;}
     /* fixed positioning */
     #sidebar-main {       
         position:fixed !important;
-        top: calc(var(--uc-topbars-combined-height) - 2px) !important;
+        top: calc(var(--uc-topbars-combined-height) - 4px) !important;
         left:0px !important;
-        height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
+        height:calc(100vh - var(--uc-topbars-combined-height) + 3px) !important;
         z-index:999 !important;
     }
     
@@ -592,7 +592,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
             margin-left:55px !important;
         }  
         #main-window[inFullscreen="true"] {
-            #sidebar-main {top:0 !important; height:100vh !important;   }
+            #sidebar-main {top:-1px !important; height:100vh !important;   }
             #navigator-toolbox:has(+ #browser > #sidebar-main:not([hidden="true"])) {padding-left: 55px;}
         }
     }
