@@ -29,3 +29,9 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/theme-tab-audio-indicator.css);
 
 @import url(theme/nightly-override.css);
+
+
+@media (-moz-bool-pref: "nightly-override") {
+  :root {--uc-vertical-collapsed-width:101px;}
+  #sidebar-main:has([expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index:100000000000000 !important;}   
+}
