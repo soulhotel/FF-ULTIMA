@@ -8,32 +8,48 @@ If necessary, these patches will eventually be moved into the main files.
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+@media (-moz-bool-pref: "nightly.override.2") {
 
-@media (-moz-bool-pref: "nightly.override") {
-  
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+
+    :root:has(#tabbrowser-tabs[expanded]) {
+        --uc-vertical-collapsed-width:100px !important;
+        #sidebar-main {left:-45px !important;}
+        #vertical-pinned-tabs-container {padding-left: 52px !important;}
+        #tabbrowser-arrowscrollbox[orient="vertical"] .tabbrowser-tab {padding-left: 45px !important;}
+        #tabbrowser-arrowscrollbox[orient="vertical"] #tabbrowser-arrowscrollbox-periphery {padding-left: 45px !important;}
+        .tools-and-extensions {padding-left: 45px !important;}        
+        @media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
+            .tab-group-label-container  {margin-left: 50px !important;}
+            .tab-group-label-container {max-width: 48px !important;}
+            #sidebar-main:hover .tab-group-label-container {min-width:200px !important;}
+        }
+        @media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") {
+            .tab-group-label-container  {margin-left: 62px !important;}
+        }
+    }
+    /*.tools-and-extensions[orientation="vertical"] {padding-left: 45px !important;}*/
+    .wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {
+        justify-content: start !important;
+        margin-left:47px !important;
+    }
+    @media (-moz-os-version: macos), (-moz-platform: macos) { .wrapper:not(:hover) .tools-and-extensions[orientation="horizontal"] {
+        justify-content: start !important;
+        margin-left:3px !important;
+    }}
+        
+}    
+            
+}
+
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
-FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         Global Positioning for main elements of the browser 
-
-Global variables
-Toolbar spacing
-Compact spacing
-OS Window Control Tweaks
-Title bar
-Nav bar
-Menu bar
-Browser Content
-Horizontal tabs
-Side bar
-Vertical Tabs Width - settings
-Vertical Tabs Tweaks
-Autohide Vertical Tabs - setting
-Vertical Tabs Disabled - setting
+AUTOHIDE VERTICAL TABS (BY COMPLETELY HIDING THEM)
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* Global variables for quick modifications ---------------------------------------------*/
+@media (-moz-bool-pref: "nightly.override") {
+  
 
 :root {
     --chrome-content-separator-color: transparent;
@@ -68,7 +84,7 @@ Vertical Tabs Disabled - setting
 /* Toolbar spacing -----------------------------------------------------------------------*/
 
 /* overriding toolbar heights with their default values for easier modification */
-#main-window:not([chromehidden="menubar toolbar location directories status extrachrome "]) #navigator-toolbox {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
+#navigator-toolbox {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
 #toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
 #nav-bar {min-height:var(--uc-navbar-height) !important; max-height: var(--uc-navbar-height) !important; z-index:997 !important;}
 #nav-bar .toolbarbutton-1 {margin-top:2.5px !important;} /*align child buttons vertically*/
@@ -90,16 +106,7 @@ Vertical Tabs Disabled - setting
     @media (-moz-bool-pref: "sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}
 }
 
-/* Notification Deck */
-#tab-notification-deck {
-    position:absolute !important;
-    z-index:9000 !important;
-    top: var(--uc-topbars-combined-height) !important;
-    right:0 !important;
-    border-radius:10px !important;
-}
-.notificationbox-stack {border-bottom-left-radius:8px !important;border-bottom-left-radius:8px !important;}
-  
+
 /* Compact spacing -----------------------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.spacing.compact") {  
@@ -694,9 +701,7 @@ menupopup menuseparator {opacity:0.2 !important;}
 
 
 
-@media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
-
-  
+}  
 } /* end */
 
   
