@@ -30,8 +30,9 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 @import url(theme/nightly-override.css);
 
-
+/* will expand on this method for the 135 nightly update soon. Restoring Vertical tab collapsed visual.
 @media not (-moz-bool-pref: "nightly-override") {
   :root {--uc-vertical-collapsed-width:101px;}
   #sidebar-main:has([expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index:10000 !important;}   
 }
+*/
