@@ -33,8 +33,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 @media not (-moz-bool-pref: "nightly-override") {
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
-  
-    
+   
     /* the verttab container (collapsed width) should now be >100px to escape the scripted state behavior of firefox */
     :root {--uc-vertical-collapsed-width: 101px;}
     /* but the content inside of the verttab container should remain how it was, 56px works */
