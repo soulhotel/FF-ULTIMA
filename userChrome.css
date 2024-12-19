@@ -30,17 +30,22 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 @import url(theme/nightly-override.css);
 
-/* will expand on this method for the 135 nightly update soon. Restoring Vertical tab collapsed visual.
+
 @media not (-moz-bool-pref: "nightly-override") {
 @media (-moz-bool-pref: "ultima.tabs.autohide") {
   
-    :root {--uc-vertical-collapsed-width:101px;}
-    #sidebar-main * {--uc-vertical-collapsed-width:56px !important;}
-    #sidebar-main:has(#tabbrowser-tabs[expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index:1000 !important;}   
-    #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {
-        z-index:0 !important;
-      }   
+    
+    /* the verttab container (collapsed width) should now be >100px to escape the scripted state behavior of firefox */
+    :root {--uc-vertical-collapsed-width: 101px;}
+    /* but the content inside of the verttab container should remain how it was, 56px works */
+    #sidebar-main * {--uc-vertical-collapsed-width: 56px !important;}
+    
+    /* the tabbrowsertabbox (browser content) needs to overlay the extra unused verttab container space, when not hovered */
+    #sidebar-main:has(#tabbrowser-tabs[expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index: 1000 !important;}
+    
+    /* the verttab container should not overlay browser content when it is in firefox's built-in collapsed-state */
+    #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {z-index: 0 !important;}   
   
 }
 }
-*/
+
