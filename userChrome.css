@@ -32,7 +32,15 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 /* will expand on this method for the 135 nightly update soon. Restoring Vertical tab collapsed visual.
 @media not (-moz-bool-pref: "nightly-override") {
-  :root {--uc-vertical-collapsed-width:101px;}
-  #sidebar-main:has([expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index:10000 !important;}   
+@media (-moz-bool-pref: "ultima.tabs.autohide") {
+  
+    :root {--uc-vertical-collapsed-width:101px;}
+    #sidebar-main:has(#tabbrowser-tabs[expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index:1000 !important;}   
+    #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {
+        width: var(--uc-vertical-collapsed-width) !important;
+        z-index:0 !important;
+      }   
+  
+}
 }
 */
