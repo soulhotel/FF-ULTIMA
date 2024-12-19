@@ -64,8 +64,9 @@
 ###### ⬇️ Choose *one* of the installation methods below. ⬇️
 
 <details><summary>The Easy Way</summary>
- 
->
+
+###### ℹ️ Autoconfig Users should download the Source instead of the release Zip ℹ️
+
 1. Download the latest version on the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest).
 2. Copy everything in the ffultima.zip into your `chrome` folder.
 3. For first time installation, you need to apply the `user.js` to firefox to access the theme settings.
