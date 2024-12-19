@@ -21,7 +21,7 @@ Vertical Tabs Disabled - setting
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* Global variables for quick modifications ---------------------------------------------*/
-@media not (-moz-bool-pref: "nightly.override") {
+
 :root {
     --chrome-content-separator-color: transparent;
     --uc-collapsed-tabs-width: 41px;
@@ -89,13 +89,16 @@ Vertical Tabs Disabled - setting
 
 /* Notification Deck */
 #tab-notification-deck {
-  position:absolute !important;
-  z-index:9000 !important;
-  top: var(--uc-topbars-combined-height) !important;
-  right:0 !important;
-  border-radius:10px !important;
+    position:absolute !important;
+    z-index:9000 !important;
+    top: var(--uc-topbars-combined-height) !important;
+    right:0 !important;
+    border-radius:10px !important;
 }
-.notificationbox-stack {border-bottom-left-radius:8px !important;border-bottom-left-radius:8px !important;}
+.notificationbox-stack {
+  border-bottom-left-radius:8px !important;
+  border-bottom-left-radius:8px !important;
+}
 
 
 /* Compact spacing -----------------------------------------------------------------------*/
@@ -196,7 +199,6 @@ Vertical Tabs Disabled - setting
 toolbar {
   &:-moz-window-inactive {
     background-color: var(--toolbar-bgcolor) !important;
-    /*! color: -moz-headerbarinactivetext; */
   }
 }
 
@@ -544,9 +546,9 @@ span.button-background.labelled label {padding-left: 5px !important;}
     /* fixed positioning */
     #sidebar-main {       
         position:fixed !important;
-        top: calc(var(--uc-topbars-combined-height) - 2px) !important;
+        top: calc(var(--uc-topbars-combined-height) - 4px) !important;
         left:0px !important;
-        height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
+        height:calc(100vh - var(--uc-topbars-combined-height) + 3px) !important;
         z-index:999 !important;
     }
     
@@ -608,11 +610,11 @@ span.button-background.labelled label {padding-left: 5px !important;}
     /* accessibility button */
     #sidebar-main:not(:hover) {       
         position:fixed !important;
-        top:calc(100vh - 75px) !important;
-        left:-20px !important; &[positionend]{}
-        height:var(--uc-vertical-collapsed-width) !important;
+        top:85vh !important;
+        left:calc(var(--uc-vertical-collapsed-width) * -1 + 8px) !important; &[positionend]{}
+        height:5vh !important;
         width:var(--uc-vertical-collapsed-width) !important;
-        border-radius:18px !important;
+        border-radius:5px !important;
         transform:scale(0);
         background-color:var(--uc-accent-ii) !important;
         & *{display:none !important;}
@@ -622,7 +624,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
         background:var(--uc-accent-ii) !important;
     }
     @media (-moz-bool-pref: "ultima.disable.verticaltab.bar.withindicator") {
-        #sidebar-main:not(:hover) {transform:scale(0.60);}  
+        #sidebar-main:not(:hover) {transform:scale(1);z-index:1001 !important;}  
     }
     /* sidebar triggered by screen edge */
     @media not (-moz-bool-pref: "ultima.spacing.compact") {
@@ -663,7 +665,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
     /* browser space adjustments */
     @media (-moz-bool-pref: "sidebar.revamp") {
         #main-window[inFullscreen="true"] #sidebar-main:hover {
-            top:0 !important;
+            top:-2px !important;
             height:100vh !important;
         }  
     }
@@ -687,7 +689,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
 /*-----------------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------*/
-/*extra extra ---------------------------------*/
+/* extra extra --------------------------------*/
     
 /* notification badges */
 .toolbarbutton-badge {
@@ -756,12 +758,15 @@ menupopup menuseparator {opacity:0.2 !important;}
     
 #navigator-toolbox {scrollbar-width:auto !important; scrollbar-color:rgba(70, 70, 80, 0.2) rgba(5,5,5, 0.0) !important;}  
 
+.tabbrowser-tab[pending] .tab-content {
+  opacity: 0.2 !important;
+}    
 
 /*--------------------------------------------------------------------------------------------------------------------*/
+    
+    
+    
 
-
-
-}  
     
     
     
