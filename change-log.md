@@ -6,13 +6,17 @@
 - 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### <ins> Version Notes
-- Firefox 133+ required.
+- Firefox 133+ required
+- User.js required
 - 🎊🎆🎉🍰🦃🍽️🙏🎁🎉🎆🎊
-/*- Firefox Nightly users **must** have `nightly.override` enabled.*/
 
 ### <ins> Change Log:
 - `new` Catpuccin Frappe Edition *`color-scheme`*
+- `new` Autoconfig support (Thank you @tthornton3-chwy for the contribution!)
+- `new` Setting `ultima.enable.js.config` to restore old autohiding mod with **no** visual stutter [#227](https://github.com/soulhotel/FF-ULTIMA/pull/227) @tthornton3-chwy
+- `new` Autoconfig wiki todo
+- `new` Setting `ultima.enable.nightly.config` to maintain necessary quick-patches for future Nightly Updates that may break a certain feature
 - `fix` Vertical Tabs autohiding for Nightly #207 #212
-- `fix` Adjustments to new tab audio indicator #225
+- `fix` Adjustments for new audio indicator overlay #225
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
