@@ -107,8 +107,9 @@ user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.ena
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
 /*accessibility*/
-user_pref("findbar.highlightAll", true); 
+user_pref("findbar.highlightAll", true);
 user_pref("browser.tabs.insertAfterCurrent", true);
+user_pref("browser.search.context.loadInBackground", true);
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
 user_pref("full-screen-api.transition-duration.enter", "0 0");
 user_pref("full-screen-api.transition-duration.leave", "0 0");
