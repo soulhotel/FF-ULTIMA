@@ -592,8 +592,8 @@ span.button-background.labelled label {padding-left: 5px !important;}
             margin-left:55px !important;
         }  
         #main-window[inFullscreen="true"] {
-            #sidebar-main {top:-1px !important; height:100vh !important;   }
-            #navigator-toolbox:has(+ #browser > #sidebar-main:not([hidden="true"])) {padding-left: 55px;}
+            #sidebar-main {top:-3px !important; height:100vh !important;   }
+            #navigator-toolbox:has(+ #browser > #sidebar-main:not([hidden="true"])) {padding-left: var(--uc-vertical-collapsed-width);}
         }
     }
     
