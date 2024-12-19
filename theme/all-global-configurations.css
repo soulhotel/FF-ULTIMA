@@ -15,7 +15,7 @@ Autoconfig Configurations
     
 }
 
-/* Nightly Configurations (quick patches specific to nightly) ----------------------------------------------- */
+/* Autoconfig Configurations ----------------------------------------------- */
 
 @media (-moz-bool-pref: "ultima.enable.js.config") {
     
