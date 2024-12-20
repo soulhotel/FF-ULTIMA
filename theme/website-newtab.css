@@ -451,15 +451,17 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
         --newtab-text-secondary-color: var(--mode-color) !important;
     }
     /* hide website shortcuts when focused on awesome bar */
+    @media (-moz-bool-pref: "browser.newtabpage.activity-stream.showSearch") {
     .top-site-outer {
         opacity: 0 !important;
         pointer-events: none !important;
     }
+    
      body:has(#searchSuggestionTable[hidden]) .top-site-outer {
         opacity: 1 !important;
         pointer-events: auto !important;
     } 
-    
+    }
     /* style awesome bar */
     .search-wrapper .search-handoff-button, .search-wrapper input {
         background: var(--newtab-background-color-secondary) !important;
@@ -545,15 +547,3 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     
     
 } /*fin*/
-
-
-
-
-
-
-
-
-
-
-
-
