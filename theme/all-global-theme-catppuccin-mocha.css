@@ -31,10 +31,10 @@ Custom Icons
     --uc-background-main: rgb(24, 24, 37);
     --uc-background-layered: rgb(17, 17, 27);
     --uc-transparent: rgba(0,0,0,0);
-    --uc-button-selected: rgb(24, 24, 37);
+    --uc-button-selected: rgb(17,17,27);
     --uc-tab-selected-bg: rgb(17,17,27);
     --uc-urlbar-background: rgb(24, 24, 37);
-    --uc-panel-background: rgb(17, 17, 27);
+    --uc-panel-background: rgb(24, 24, 37);
     --uc-panel-border: rgba(27, 25, 35, 1);
     --uc-panel-border-ii: rgba(70, 70, 80, 0.2);
     --uc-context-menu: rgb(49, 50, 68);
