@@ -38,7 +38,8 @@ Autoconfig Configurations
         /* the tabbrowsertabbox (browser content) needs to overlay the extra unused verttab container space, when not hovered */
         #sidebar-main:has(#tabbrowser-tabs[expanded]):not(:hover) ~ #tabbrowser-tabbox {z-index: 1000 !important;}   
         /* the verttab container should not overlay browser content when it is in firefox's built-in collapsed-state */
-        #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {z-index: 0 !important;}   
+        #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {z-index: 0 !important;}
+        #sidebar-main:not(:hover) ~ #sidebar-box {z-index: 1002 !important;}
         @media (-moz-bool-pref: "ultima.disable.verticaltab.bar.withindicator") {
             #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {z-index:1001 !important;}  
         }
