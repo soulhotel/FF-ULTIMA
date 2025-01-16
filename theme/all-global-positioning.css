@@ -96,8 +96,14 @@ Vertical Tabs Disabled - setting
     border-radius:10px !important;
 }
 .notificationbox-stack {
-  border-bottom-left-radius:8px !important;
-  border-bottom-left-radius:8px !important;
+    position: absolute !important;
+    z-index:9000 !important;
+    top:0px !important;
+    border-bottom-left-radius:8px !important;
+    border-bottom-left-radius:8px !important;    
+}
+:root:has(.notificationbox-stack[prepend-notifications="true"] div) #urlbar {
+    display:none !important;
 }
 
 
