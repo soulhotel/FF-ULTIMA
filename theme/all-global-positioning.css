@@ -102,7 +102,7 @@ Vertical Tabs Disabled - setting
     border-bottom-left-radius:8px !important;
     border-bottom-left-radius:8px !important;    
 }
-:root:has(.notificationbox-stack[prepend-notifications="true"] div) #urlbar {
+:root:has(.notificationbox-stack[prepend-notifications="true"] .infobar) #urlbar {
     display:none !important;
 }
 
