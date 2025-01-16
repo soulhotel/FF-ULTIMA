@@ -84,7 +84,7 @@ user_pref("user.theme.wallpaper.seasonal2", false);
 
 /*other*/
 user_pref("ultima.enable.nightly.config", false);
-user_pref("ultima.enable.js.config", false);
+user_pref("ultima.enable.js.config", true);
 
 /*other other*/
 user_pref("browser.aboutConfig.showWarning", false);
