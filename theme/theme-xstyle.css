@@ -80,7 +80,7 @@ bookmarks fade out
         #sidebar-main:has([closebuttons="activetab"]) .tab-group-label {color: transparent !important;}
     }}
     @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
-        #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label-container {width:23px !important;}
+        .tab-group-label-container {width:23px !important;}
         #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label {color: transparent !important;}
     }}
 
