@@ -92,7 +92,7 @@ bookmarks fade out
     /* give tab-group label spacing similar to tabs + styling */
     .tab-group-label-container {
         margin-inline: 18px !important;
-        height: 39px !important;
+        height: 29px !important;
         background-color: transparent !important;
         border-radius: var(--uc-tab-border-radius) !important;
     }
@@ -100,7 +100,7 @@ bookmarks fade out
       /*height: 18px !important;*/
       cursor: pointer !important;
       border-radius: var(--uc-tab-border-radius) !important;
-      min-width: 10px !important;
+      /*min-width: 10px !important;*/
       border: 0px transparent solid !important;
     }
 
@@ -205,13 +205,19 @@ bookmarks fade out
 }
 
 
-        @media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
+@media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
+    #sidebar-main:hover .tab-group-label-container {min-width:200px !important;}
+}
 
-            #sidebar-main:hover .tab-group-label-container {min-width:200px !important;}
+@media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii"),@media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        tab-group {
+            #tabbrowser-tabs[expanded] & {
+                margin-inline-start: 0px !important;
+            }
         }
-        @media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") {
-
-        }
+    }
+}
 /* compact tabs ------------------------------------------------------------------------ */
 
 @media (-moz-bool-pref: "ultima.spacing.compact.tabs") { 
@@ -268,7 +274,7 @@ bookmarks fade out
         width: 100%;
         height: 100% !important;
         margin: 0 !important;
-        opacity: 0.0;
+        opacity:  0.0;
     }
     .tabbrowser-tab.identity-color-purple,.tabbrowser-tab.identity-color-red,.tabbrowser-tab.identity-color-blue,
     .tabbrowser-tab.identity-color-green,.tabbrowser-tab.identity-color-black,.tabbrowser-tab.identity-color-pink,.tabbrowser-tab.identity-color-purple {
