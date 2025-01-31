@@ -27,7 +27,7 @@
 >
 - See more detail on [what FF Ultima has to offer](https://github.com/soulhotel/FF-ULTIMA/wiki#what-does-ff-ultima-offer) through the Wiki.
 >
-- Next Release: Autoconfig Integration (optional)
+- Autoconfig Integration
 >
 
 ## Installation
