@@ -72,4 +72,27 @@ html[dark] .sbsb_a {
     color: var(--yt-spec-static-brand-white) !important;
 }
 
+/* theater mode adjustments*/
+/*remove black bars*/
+ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy {
+  background: none !important;
+}
+/* border radios*/
+.video-stream.html5-main-video {
+  border-radius: 10px !important;
+}
+
+/*context menus expanded*/
+.ytp-panel-menu {
+  padding: 8px !important;
+  &.ytp-menuitem {border-radius:8px !important}
+}
+
+/* Iridium extension - bigger mini player */
+html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) #movie_player {
+  height: 366px !important;
+  width: 650px !important;
+}
+
+
 }

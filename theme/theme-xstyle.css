@@ -82,13 +82,23 @@ bookmarks fade out
     @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
         .tab-group-label-container {width:23px !important;}
         #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label {color: transparent !important;}
-    }}
-
+    }}    
+    /*forced sizing*/
+    .tab-group-label {
+      #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+        width: 23px !important;
+        min-height: 23px !important;
+        max-width: 23px !important;
+        margin: auto;
+        font-size: 0;
+        height: 23px !important;
+        border-radius: 100% !important;
+      }
+    }   
     /* remove double-background/border */
     .tab-group-label-container { tab-group:not([collapsed]) > &::after {
         background-color: transparent !important;
     }}
-
     /* give tab-group label spacing similar to tabs + styling */
     .tab-group-label-container {
         margin-inline: 18px !important;
@@ -103,8 +113,7 @@ bookmarks fade out
       /*min-width: 10px !important;*/
       border: 0px transparent solid !important;
     }
-
-    /* tab groups colors */
+    /* tab groups colors *//*
     tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab {
       background: color-mix(in lab, blue 30%, var(--uc-ultima-window) 10%) !important;
     }
@@ -132,7 +141,7 @@ bookmarks fade out
     tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab {
       background: color-mix(in lab, gray 30%, var(--uc-ultima-window) 10%) !important;
     }
-
+*/
     /* toggle collapse visibility */
       tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 
@@ -300,6 +309,17 @@ bookmarks fade out
 
 
 /* ---------------------------------------------------------------------------------------------- */
+
+img[src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRUlEQVQ4T41TTWjUQBjNTBJ3I7vZzZ/Wi4sX8WBlDwpWsCy9qqhHqR6KWL160It49eDJk7UoKP7gQQTFiyfFFqmg4LkI7epFYZPNZtWkJJOMb7bZEktZDczu/Hzzvve9Nx+RNn31en1SUZQz2J6SON81OCbkO37fMMae9nq9heIVUljItmHclxXl3GbQ4jpl7JHr+zPYSwfY+aFsWdaiQunEqMvDM5ZlS57nHRUgAwBkfozM0wljCyxNr/T7/WO6rk9vU1W2XgFpdFz3uqZpi1q5fFNVlEkweQImZ4lpmodVWV4SgUmazne73UuYVjAyjDDPKta/MTji7yD+Yh4/QZD94bDulPNDrut+GlWGbdstmZC3IkboQRzHWaGStCfNshgl7AuCYHUUAFxqoIRlSkgJFFeJY9sRFmVk/4bsjf8RESy+gsXujPM1ARACQANAAAAzr30UDrUty5cp1QEQEaAtA22vuAF7TsGel//Q4DjiXw004PyL0OAeXtx51/PSuq5zidKW7/vvtwLZUa0e4aXSczAey124KwCa8Vr8OfgZxPD7F4YoI4JYU7D0gwisVCqtMAyfOZZlF4Fjxg6sPyTbnget2TiKxiVVbXLOL2DMwJGV/Pwg+uBjSVU37sOBW51O5/JGL5iG8Y5SOg47m7Vard9ut3uFbFWI/QPUt+f+v8ArPC3mxWYSTG5Dj1nsB9BkP/5FF4pvbKfjDOZgcsPz/WtD8L8AxKZlGFch5MkkSU6gJ7piD4wMldIHnNLXcGmuqMMfsGP6IYOu2qkAAAAASUVORK5CYII="],
+img[src="page-icon:https://github.com/sponsors/accounts"],
+img[src*="github"] {
+background-image: url('https://w7.pngwing.com/pngs/319/426/png-transparent-github-gitlab-computer-icons-logo-github-thumbnail.png') !important;
+background-size: contain !important;
+background-repeat: no-repeat !important;
+display: inline-block !important;
+border-radius:100% !important;
+  
+}
 
 /* ---------------------------------------------------------------------------------------------- */
 
