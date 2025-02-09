@@ -157,16 +157,22 @@ Style 2: Tab Group shrinks into a tab like Icon
     }
 
     /*when using tab autohide*/
-    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
-        #sidebar-main
+    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {                
+        #tabbrowser-tabs:not([expanded])
+            .tab-group-label {
+                min-width:25px !important;
+                max-width:25px !important;
+                border-radius:17px !important;
+                margin-left:15px !important;
+        }
+        #tabbrowser-tabs[expanded]
             .tab-group-label {
                 min-width:20px !important;
                 max-width:150px !important;
                 border-radius:17px !important;
-                margin-left:12px !important;
-        }
-        
-        #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover)
+                margin-left:15px !important;
+        }        
+        #tabbrowser-tabs[expanded]:not(:hover)
             .tab-group-label {
                 min-width:20px !important;
                 max-width:20px !important;
