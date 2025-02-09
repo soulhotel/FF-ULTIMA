@@ -6,6 +6,8 @@ File Desc:         permanent tab audio playing indicator
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 
+/* Firefox Version <= 135 */
+
 :root {
     --tab-icon-overlay-stroke: var(--uc-button-selected) !important;
 }
@@ -37,9 +39,18 @@ File Desc:         permanent tab audio playing indicator
 
 /*#tabbrowser-tabs[orient="horizontal"] {*/
 
+
+/* Firefox Version = 135+ */
+
     .tab-audio-button {
-        background-color: rgba(30,30,30,0.7) !important;
+        position:fixed !important;
+        margin-top:-18px !important;
+        margin-left:8px !important;
+        background-color: rgba(30,30,30,0.6) !important;
+        border-radius:100% !important;
         --button-icon-fill:  var(--uc-light-color, white) !important;
+        --button-size-icon-small: 15px !important;
+        --button-min-height-small: 15px !important;
     }
     .tab-audio-button:hover {
         --button-icon-fill: var(--tab-loading-fill) !important;
