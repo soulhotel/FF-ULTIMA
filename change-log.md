@@ -10,11 +10,13 @@
 - Firefox 135+ required
 - Autoconfig Users should download the Source instead of the release Zip.
 - This version restores features that may have broken from the 135 update.
+- 🚨 Do you use the Midnight Color-Scheme? I'd like some feedback on this post: #243 🚨
 
 ### <ins> Change Log:
 - `fix` overlay positioning for "Unsent Crash Report Notification" #242
 - `fix` tab groups have been restored. Code snippets simplified as well #250
 - `fix` tab audio indicator positioning restored.
+- `qol` Midnight *color-scheme* Color adjustments, less yellow's #243
 - `wip` Autoconfig support restoration
 - `wip` Setting `ultima.enable.js.config` disabled, disable it if you do not use the provided user.js.
 - `wip` Autoconfig wiki todo
