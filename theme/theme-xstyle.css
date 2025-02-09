@@ -79,11 +79,16 @@ Spacing correction for all tab group styles
 
 ----------------------------------------------------------------*/
 
-tab-group {
-    #tabbrowser-tabs & {
-        &:not([collapsed])::before {
-            inset-inline-start: 1px !important;
+@media not (-moz-bool-pref: "ultima.xstyle.tabgroups.i"), @media not (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") { 
+    tab-group {
+        #tabbrowser-tabs & {
+            &:not([collapsed])::before {
+                inset-inline-start: 1px !important;
+            }
         }
+    }
+    .tab-group-label {
+        margin-left:15px !important;
     }
 }
 
