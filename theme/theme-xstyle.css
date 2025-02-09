@@ -99,7 +99,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
     /*defaults*/
     .tab-group-label {
         min-width:20px !important;
-        max-width:100px !important;
+        max-width:150px !important;
         cursor: pointer !important;
         border-radius:1px !important;
     }
@@ -116,7 +116,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
         #tabbrowser-tabs[expanded]
             .tab-group-label {
                 min-width:42px !important;
-                max-width:100px !important;
+                max-width:150px !important;
                 border-radius:1px !important;
         }
         #tabbrowser-tabs[expanded]:not(:hover)
@@ -151,7 +151,7 @@ Style 2: Tab Group shrinks into a tab like Icon
     /*defaults*/
     .tab-group-label {
         min-width:20px !important;
-        max-width:100px !important;
+        max-width:150px !important;
         cursor: pointer !important;
         border-radius:17px !important;
     }
@@ -161,7 +161,7 @@ Style 2: Tab Group shrinks into a tab like Icon
         #sidebar-main
             .tab-group-label {
                 min-width:20px !important;
-                max-width:100px !important;
+                max-width:150px !important;
                 border-radius:17px !important;
                 margin-left:12px !important;
         }
