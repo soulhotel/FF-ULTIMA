@@ -69,119 +69,142 @@ bookmarks fade out
   }
 }
 
-/* tab groups ---------------------------------------------------------------------------------------------- */
+/* tab groups --------------------------------------------------------------------------------------------------- */
+
 /* alternative styling for tab groups for the new vertical tabs */
 
-@media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") { 
+/*----------------------------------------------------------------
 
-    /*safeguard - shrink the group container label when tabs are not expanded*/
-    @media not (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
-        #sidebar-main:has([closebuttons="activetab"]) .tab-group-label-container {width:23px !important;}
-        #sidebar-main:has([closebuttons="activetab"]) .tab-group-label {color: transparent !important;}
-    }}
-    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
-        .tab-group-label-container {width:23px !important;}
-        #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover) .tab-group-label {color: transparent !important;}
-    }}    
-    /*forced sizing*/
-    .tab-group-label {
-      #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
-        width: 23px !important;
-        min-height: 23px !important;
-        max-width: 23px !important;
-        margin: auto;
-        font-size: 0;
-        height: 23px !important;
-        border-radius: 100% !important;
-      }
-    }   
-    /* remove double-background/border */
-    .tab-group-label-container { tab-group:not([collapsed]) > &::after {
-        background-color: transparent !important;
-    }}
-    /* give tab-group label spacing similar to tabs + styling */
-    .tab-group-label-container {
-        margin-inline: 18px !important;
-        height: 29px !important;
-        background-color: transparent !important;
-        border-radius: var(--uc-tab-border-radius) !important;
-    }
-    .tab-group-label {
-      /*height: 18px !important;*/
-      cursor: pointer !important;
-      border-radius: var(--uc-tab-border-radius) !important;
-      /*min-width: 10px !important;*/
-      border: 0px transparent solid !important;
-    }
-    /* tab groups colors *//*
-    tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab {
-      background: color-mix(in lab, blue 30%, var(--uc-ultima-window) 10%) !important;
-    }
-    tab-group[style*="--tab-group-color-purple"] .tabbrowser-tab {
-      background: color-mix(in lab, purple 30%, var(--uc-ultima-window) 10%) !important;
-    }
-    tab-group[style*="--tab-group-color-cyan"] .tabbrowser-tab {
-      background: color-mix(in lab, cyan 50%, var(--uc-ultima-window) 70%) !important;
-    }
-    tab-group[style*="--tab-group-color-orange"] .tabbrowser-tab {
-      background: color-mix(in lab, orange 50%, var(--uc-ultima-window) 70%) !important;
-    }
-    tab-group[style*="--tab-group-color-yellow"] .tabbrowser-tab {
-      background: color-mix(in lab, yellow 50%, var(--uc-ultima-window) 10%) !important;
-    }
-    tab-group[style*="--tab-group-color-pink"] .tabbrowser-tab {
-      background: color-mix(in lab, pink 70%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="--tab-group-color-green"] .tabbrowser-tab {
-      background: color-mix(in lab, green 30%, var(--uc-ultima-window) 10%) !important;
-    }
-    tab-group[style*="--tab-group-color-red"] .tabbrowser-tab {
-      background: color-mix(in lab, red 30%, var(--uc-ultima-window) 10%) !important;
-    }
-    tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab {
-      background: color-mix(in lab, gray 30%, var(--uc-ultima-window) 10%) !important;
-    }
-*/
-    /* toggle collapse visibility */
-      tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
+Spacing correction for all tab group styles
 
-} /* end tab groups styling */
+----------------------------------------------------------------*/
 
+tab-group {
+    #tabbrowser-tabs & {
+        &:not([collapsed])::before {
+            inset-inline-start: 1px !important;
+        }
+    }
+}
 
-/* tab groups ---------------------------------------------------------------------------------------------- */
+/*----------------------------------------------------------------
 
-/* by @tthornton3-chwy https://github.com/tthornton3-chwy */
+Style 1: Text labels always visible
+Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
+
+----------------------------------------------------------------*/
 
 @media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") { 
 
-    @media (-moz-bool-pref: "sidebar.verticalTabs") {
-        .tab-group-label-container {
-            width: calc(var(--uc-vertical-collapsed-width) - 4px) !important;
-        }
-        @media not (-moz-bool-pref: "ultima.tabs.autohide") {
-            .tab-group-label-container {
-                width: 100px !important;
-            }            
-        }
-    }
-
-    @media not (-moz-bool-pref: "sidebar.verticalTabs") {
-        .tab-group-label-container {
-            margin-inline: 18px !important;
-            height: 39px !important;
-        }
-    }
-
-    .tab-group-label-container {
-        background-color: transparent !important;
-        border-radius: var(--uc-tab-border-radius) !important;
-     }
+    /*defaults*/
     .tab-group-label {
-        height: 18px !important;
+        min-width:20px !important;
+        max-width:100px !important;
         cursor: pointer !important;
-      }
-    tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
+        border-radius:1px !important;
+    }
 
+    /*when using tab autohide*/
+    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        #tabbrowser-tabs:not([expanded])
+            .tab-group-label {
+                min-width:50px !important;
+                max-width:50px !important;
+                border-radius:1px !important;
+                margin-left:0px !important;
+        }       
+        #tabbrowser-tabs[expanded]
+            .tab-group-label {
+                min-width:42px !important;
+                max-width:100px !important;
+                border-radius:1px !important;
+        }
+        #tabbrowser-tabs[expanded]:not(:hover)
+            .tab-group-label {
+                min-width:42px !important;
+                max-width:42px !important;
+                border-radius:1px !important;
+        }
+    }}    
+
+    /*spacing correction*/
+    tab-group {
+        #tabbrowser-tabs[expanded] & {
+            margin-inline-start: 0 !important;
+        }
+    }
+
+    /* toggle collapse visibility */
+      tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
+    
+
+}
+
+/*----------------------------------------------------------------
+
+Style 2: Tab Group shrinks into a tab like Icon
+
+----------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") { 
+
+    /*defaults*/
+    .tab-group-label {
+        min-width:20px !important;
+        max-width:100px !important;
+        cursor: pointer !important;
+        border-radius:17px !important;
+    }
+
+    /*when using tab autohide*/
+    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        #sidebar-main
+            .tab-group-label {
+                min-width:20px !important;
+                max-width:100px !important;
+                border-radius:17px !important;
+                margin-left:12px !important;
+        }
+        
+        #sidebar-main:has([expanded=""],[closebuttons="activetab"]):not(:hover)
+            .tab-group-label {
+                min-width:20px !important;
+                max-width:20px !important;
+                border-radius:100% !important;
+                color: transparent !important;
+        }
+    }}    
+
+    /*spacing correction*/
+    tab-group {
+        #tabbrowser-tabs[expanded] & {
+            margin-inline-start: 0 !important;
+        }
+    }
+
+    /* toggle collapse visibility */
+      tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
+    
+
+}
+
+/*----------------------------------------------------------------
+
+Tab groups with Color mixed backgrounds
+
+----------------------------------------------------------------*/
+
+@media (-moz-bool-pref: "ultima.xstyle.tabgroups.with.colormix") {
+   /* remove accent group color border */ 
+    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+        tab-group {
+            #tabbrowser-tabs & {
+                &:not([collapsed])::before {
+                    inset-inline-start: -10px !important;
+                }
+            }
+        }
+    }
     /* tab groups colors */
     tab-group[style*="--tab-group-color-blue"] .tabbrowser-tab {
         background: color-mix(in lab, blue 20%, var(--uc-ultima-window) 50%) !important;
@@ -210,24 +233,11 @@ bookmarks fade out
     tab-group[style*="--tab-group-color-gray"] .tabbrowser-tab {
         background: color-mix(in lab, gray 20%, var(--uc-ultima-window) 50%) !important;
     }
-
+    
 }
 
 
-@media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
-    #sidebar-main:hover .tab-group-label-container {min-width:200px !important;}
-}
-
-@media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii"),@media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") {
-    @media (-moz-bool-pref: "sidebar.verticalTabs") {
-        tab-group {
-            #tabbrowser-tabs[expanded] & {
-                margin-inline-start: 0px !important;
-            }
-        }
-    }
-}
-/* compact tabs ------------------------------------------------------------------------ */
+/* compact tabs ------------------------------------------------------------------------------------------------- */
 
 @media (-moz-bool-pref: "ultima.spacing.compact.tabs") { 
     .tab-background {
@@ -322,4 +332,15 @@ border-radius:100% !important;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
 
