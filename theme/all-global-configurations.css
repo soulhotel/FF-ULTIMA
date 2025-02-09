@@ -37,6 +37,8 @@ Autoconfig Configurations
         #sidebar-main * {--uc-vertical-collapsed-width: 56px !important;}    
         /* the tabbrowsertabbox (browser content) needs to overlay the extra unused verttab container space, when not hovered */
         #tabbrowser-tabbox {z-index: 999 !important;}
+        /* and the secondary sidebar, needs to overlay extra space of the 100px vertical tabs */
+        #sidebar-box {z-index: 9999 !important;}
         #sidebar-main:has([expanded]):hover ~ #tabbrowser-tabbox {z-index: 998 !important;}
         /* the verttab container should not overlay browser content when it is in firefox's built-in collapsed-state */
         #sidebar-main:not(:has([expanded]) {z-index:1001 !important;} 
@@ -49,4 +51,3 @@ Autoconfig Configurations
 } /*end js*/
 
   
-
