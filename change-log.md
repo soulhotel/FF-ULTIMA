@@ -9,17 +9,19 @@
 
 ### <ins> Version Notes
 - This version restores features that may have broken from the 135 update.
+- DISABLE `ultima.enable.js.config`.
 - Firefox 135+ required.
 
 ### <ins> Change Log:
 - `fix` Vertical tabs overlay priority restored to overlay the secondary sidebar when hovered.
-- `fix` Tab groups have been restored. Code snippets simplified as well #250
-- `qol` Midnight *color-scheme* Color adjustments, less yellow's #243
-- `fix` Overlay positioning for "Unsent Crash Report Notification" #242
+- `fix` Tab groups have been restored. Code snippets simplified as well. #250
+- `new` Setting `ultima.xstyle.tabgroups.withcolormix` to use a colored background with either the 1 or 2 style.
+- `qol` Midnight *color-scheme* Color adjustments, less yellow's. #243
+- `fix` Overlay positioning for "Unsent Crash Report Notification". #242
 - `fix` Tab audio indicator positioning restored.
-- `wip` Autoconfig support restoration
+- `wip` Autoconfig support restoration.
 - `wip` Setting `ultima.enable.js.config` disabled, disable it if you do not use the provided user.js.
-- `wip` Autoconfig wiki todo
+- `wip` Autoconfig wiki todo.
 
 https://github.com/user-attachments/assets/32edce46-943d-43fb-b977-682f98e6fa73
 
