@@ -182,6 +182,11 @@ Vertical Tabs Disabled - setting
     }
 }
 
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-pinned-tabs-container {
+  width: 50px !important;
+}      
+    
+
 /* Title bar -----------------------------------------------------------------------------*/
 
 /* titlebar corrections */
