@@ -181,10 +181,6 @@ Vertical Tabs Disabled - setting
         z-index: 9999;top: 0;right: -5px;width: 10px;height: var(--uc-navbar-height);
     }
 }
-
-#tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-pinned-tabs-container {
-  width: 50px !important;
-}      
     
 
 /* Title bar -----------------------------------------------------------------------------*/
@@ -481,6 +477,10 @@ box-shadow: none !important;}}
         #sidebar-main:has([expanded=""]) #vertical-tabs {width: var(--uc-vertical-expanded-width) !important;}
 }}}}
 }
+
+#tabbrowser-tabs[orient="vertical"]:not([expanded]) #vertical-pinned-tabs-container {
+  width: 54px !important;
+}      
 
 
 /* Vertical Tabs Tweaks ------------------------------------------------------------------*/
