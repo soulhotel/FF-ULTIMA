@@ -59,6 +59,7 @@ user_pref("ultima.xstyle.urlbar", false);
 user_pref("ultima.spacing.compact", false);
 user_pref("ultima.xstyle.tabgroups.i", true);
 user_pref("ultima.xstyle.tabgroups.ii", false);
+user_pref("ultima.xstyle.tabgroups.with.colormix", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
