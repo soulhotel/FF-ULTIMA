@@ -39,9 +39,10 @@ Autoconfig Configurations
         #tabbrowser-tabbox {z-index: 999 !important;}
         #sidebar-main:has(#tabbrowser-tabs[orient="vertical"]:not([expanded])) {z-index: 996 !important;}
         #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):hover {z-index: 999 !important;}
-        #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):not(:hover) {z-index: 997 !important;}
-        #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):hover ~ #sidebar-box {z-index: 998 !important;}
-        #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):hover ~ #tabbrowser-tabbox {z-index: 998 !important;}
+        #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):not(:hover) {z-index: 996 !important;}
+        #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):hover ~ #sidebar-box:not(:hover) {z-index: 998 !important;}
+        #sidebar-main:has(#tabbrowser-tabs[orient="vertical"][expanded]):hover ~ #tabbrowser-tabbox {z-index: 997 !important;}
+        #sidebar-box:hover {z-index: 1002 !important;}
         /* the verttab container should not overlay browser content when it is in firefox's built-in collapsed-state */
 
         @media (-moz-bool-pref: "ultima.disable.verticaltab.bar.withindicator") {
