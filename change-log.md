@@ -22,6 +22,7 @@
 - `wip` Autoconfig support restoration.
 - `wip` Setting `ultima.enable.js.config` disabled, disable it if you do not use the provided user.js.
 - `wip` Autoconfig wiki todo.
+- *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
 
 https://github.com/user-attachments/assets/32edce46-943d-43fb-b977-682f98e6fa73
 
