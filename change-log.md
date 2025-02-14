@@ -13,12 +13,8 @@
 - Firefox 135+ required.
 
 ### <ins> Change Log:
+- `qol` [ea1711a](https://github.com/soulhotel/FF-ULTIMA/commit/ea1711a0eface7392e1ba3ce71bec1b2537988de)
 - `fix` Vertical tabs overlay priority restored to overlay the secondary sidebar when hovered.
-- `fix` Tab groups have been restored. Code snippets simplified as well. #250
-- `new` Setting `ultima.xstyle.tabgroups.withcolormix` to use a colored background with either the 1 or 2 style.
-- `qol` Midnight *color-scheme* Color adjustments, less yellow's. #243
-- `fix` Overlay positioning for "Unsent Crash Report Notification". #242
-- `fix` Tab audio indicator positioning restored.
 - `wip` Autoconfig support restoration.
 - `wip` Setting `ultima.enable.js.config` disabled, disable it if you do not use the provided user.js.
 - `wip` Autoconfig wiki todo.
