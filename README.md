@@ -88,10 +88,20 @@
 2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile-folder\chrome`.
 3. In the terminal, git clone the repo to install/update to the latest version:
 ```
-# cd your/profile-folder/chrome                            # cd into profile folder
-git clone https://github.com/soulhotel/FF-ULTIMA.git       # git clone inside
-mv FF-ULTIMA/* FF-ULTIMA/.* .                              # clean up double folder
-rmdir FF-ULTIMA                                            # remove the extra folder
+# WINDOWS
+# 1. cd your\profile-folder\chrome # 2. git clone ff ultima into your chrome folder
+# 3. clean up the double folder
+
+cd C:\Users\YOU\AppData\Roaming\Mozilla\Firefox\Profiles\yourDOTprofile\chrome
+git clone https://github.com/soulhotel/FF-ULTIMA.git
+mv FF-ULTIMA\* FF-ULTIMA\.* .      rmdir FF-ULTIMA
+```
+```
+# LINUX
+
+cd ~/Mozilla/Firefox/Profiles/yourDOTprofile/chrome
+git clone https://github.com/soulhotel/FF-ULTIMA.git
+mv FF-ULTIMA/* FF-ULTIMA/.* .      rmdir FF-ULTIMA
 ```
 5. In your chrome folder you'll have a file named `user.js`.
 6. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
