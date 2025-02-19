@@ -102,7 +102,7 @@ rmdir FF-ULTIMA
 ```
 # LINUX
 
-cd ~/Mozilla/Firefox/Profiles/yourDOTprofile/chrome
+cd ~/.mozilla/firefox/yourDOTprofile/chrome
 git clone https://github.com/soulhotel/FF-ULTIMA.git
 mv FF-ULTIMA/* FF-ULTIMA/.* .
 rmdir FF-ULTIMA
