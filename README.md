@@ -90,22 +90,17 @@
 ```
 # WINDOWS
 
-# 1. cd your\profile-folder\chrome
-# 2. git clone ff ultima into your chrome folder
-# 3. clean up the double folder
+# 1. Navigate to your Firefox Profile Folder
+# 2. Git clone FF-Ultima into a `chrome` folder
 
-cd C:\Users\YOU\AppData\Roaming\Mozilla\Firefox\Profiles\yourDOTprofile\chrome
-git clone https://github.com/soulhotel/FF-ULTIMA.git
-mv FF-ULTIMA\* FF-ULTIMA\.* .
-rmdir FF-ULTIMA
+cd C:\Users\You\AppData\Roaming\Mozilla\Firefox\Profiles\YourProfileFolder
+git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 ```
 ```
 # LINUX
 
-cd ~/.mozilla/firefox/yourDOTprofile/chrome
-git clone https://github.com/soulhotel/FF-ULTIMA.git
-mv FF-ULTIMA/* FF-ULTIMA/.* .
-rmdir FF-ULTIMA
+cd ~/.mozilla/firefox/YourProfileFolder
+git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 ```
 5. In your chrome folder you'll have a file named `user.js`.
 6. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
