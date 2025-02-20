@@ -9,23 +9,32 @@ File Desc:         userContent file for theming YT
 
 @-moz-document domain("youtube.com") {
 
+@media (prefers-color-scheme: light) { :root{
+  --generic-background: rgba(20,20,20,0.7);   
+}} 
+@media (prefers-color-scheme: light) { :root{
+  --generic-background: rgba(255,255,255,0.3);   
+}}    
+  
+  
+  
 /*--side bar--*/
 #contentContainer, #guide-content.ytd-app {
-  background-color: rgba(0,0,0,0.1) !important;
+  background-color: var(--generic-background) !important;
   filter: saturate(140%) !important;
   backdrop-filter: blur(33px);
 }
 
 /*--notification popups--*/
 .style-scope.ytd-popup-container {
-  background-color: rgba(20,20,20,0.7) !important;
+  background-color: var(--generic-background) !important;
   filter: saturate(70%) !important;
   backdrop-filter: blur(33px);
   border-radius: 10px !important;
 }
 
 .ytd-multi-page-menu-renderer {
-  background-color: rgba(20,20,20,0.7) !important;
+  background-color: var(--generic-background) !important;
   filter: saturate(110%) !important;
   backdrop-filter: blur(33px);
 }
@@ -33,7 +42,7 @@ File Desc:         userContent file for theming YT
 /*--search bar popup--*/
 html[dark] .sbsb_a {
   background: var(--yt-spec-raised-background);
-  background-color: rgba(20,20,20,0.7) !important;
+  background-color: var(--generic-background) !important;
   filter: saturate(140%) !important;
   backdrop-filter: blur(33px);
   border-radius: 10px !important;
