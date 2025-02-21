@@ -83,12 +83,19 @@ html[dark] .sbsb_a {
 
 /* theater mode adjustments*/
 /*remove black bars*/
-ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy:not(:hover) {
+ytd-watch-flexy[full-bleed-player] #full-bleed-container:not(:hover) {
   background: none !important;
 }
+ytd-watch-flexy[fullscreen] #full-bleed-container:not(:hover) {
+  background: #000 !important;
+}
 /* border radios*/
-.video-stream.html5-main-video {
+ytd-watch-flexy[full-bleed-player] .video-stream.html5-main-video:not(:hover) {
   border-radius: 10px !important;
+}
+
+ytd-watch-flexy[fullscreen] .video-stream.html5-main-video {
+  border-radius: 0px !important;
 }
 
 /*context menus expanded*/
@@ -136,7 +143,7 @@ position `fixed` (inside of the movie player) instead of `absolute`
 */
 
 html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) .ytp-chrome-bottom {
-    width: 100% !important;
+    width: 97% !important;
 }
 /*
 progress bar container width (set inline) needs to be overwritten to fit mini-player size.
