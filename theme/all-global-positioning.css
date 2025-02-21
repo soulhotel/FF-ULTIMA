@@ -372,7 +372,7 @@ box-shadow: none !important;}}
     @media not -moz-pref("ultima.disable.windowcontrols.button") {#nav-bar .titlebar-buttonbox-container {display: flex !important;}}
 }
 
-@media not -moz-pref("sidebar.revamp") {
+@media not -moz-pref("sidebar.verticalTabs") {
     :root{
     --uc-content-margins: 2px 5px 5px 5px; 
     }
