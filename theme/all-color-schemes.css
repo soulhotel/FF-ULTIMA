@@ -4,19 +4,19 @@ Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a
 
 Use the template below to enter your theme into the list:
 
-@import url('all-global-theme-MYTHEME.css') (-moz-bool-pref: "user.theme.dark.MYTHEME");
-@import url('all-global-theme-MYTHEME.css') (-moz-bool-pref: "user.theme.light.MYTHEME");
+@import url('all-global-theme-MYTHEME.css') -moz-pref("user.theme.dark.MYTHEME");
+@import url('all-global-theme-MYTHEME.css') -moz-pref("user.theme.light.MYTHEME");
 */
 
 @import url('all-global-theme-lwtheme.css');
-@import url('all-global-theme-adaptive.css') (-moz-bool-pref: "user.theme.adaptive");
-@import url('all-global-theme-fullmoon.css') (-moz-bool-pref: "user.theme.dark.a");
-@import url('all-global-theme-dusky.css') (-moz-bool-pref: "user.theme.light.a");
-@import url('all-global-theme-catppuccin.css') (-moz-bool-pref: "user.theme.dark.catppuccin"); 
-@import url('all-global-theme-catppuccin-frappe.css') (-moz-bool-pref: "user.theme.dark.catppuccin-frappe"); 
-@import url('all-global-theme-catppuccin-mocha.css') (-moz-bool-pref: "user.theme.dark.catppuccin-mocha");
-@import url('all-global-theme-gruvbox.css') (-moz-bool-pref: "user.theme.dark.gruvbox"); 
-@import url('all-global-theme-gruvbox-l.css') (-moz-bool-pref: "user.theme.light.gruvbox"); 
-@import url('all-global-theme-midnight.css') (-moz-bool-pref: "user.theme.dark.midnight");
+@import url('all-global-theme-adaptive.css') -moz-pref("user.theme.adaptive");
+@import url('all-global-theme-fullmoon.css') -moz-pref("user.theme.dark.a");
+@import url('all-global-theme-dusky.css') -moz-pref("user.theme.light.a");
+@import url('all-global-theme-catppuccin.css') -moz-pref("user.theme.dark.catppuccin");
+@import url('all-global-theme-catppuccin-frappe.css') -moz-pref("user.theme.dark.catppuccin-frappe");
+@import url('all-global-theme-catppuccin-mocha.css') -moz-pref("user.theme.dark.catppuccin-mocha");
+@import url('all-global-theme-gruvbox.css') -moz-pref("user.theme.dark.gruvbox");
+@import url('all-global-theme-gruvbox-l.css') -moz-pref("user.theme.light.gruvbox");
+@import url('all-global-theme-midnight.css') -moz-pref("user.theme.dark.midnight");
 
 

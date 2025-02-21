@@ -31,7 +31,7 @@ new tab rounded tweaks
     --button-background-color-ghost-hover: transparent !important;  
 }
 
-@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {    
+@media -moz-pref("ultima.xstyle.newtab.rounded") {
     :root {
         --uc-rounded-border: 100%;
         --uc-less-rounded-border: 100%;
@@ -89,7 +89,7 @@ body {
     opacity: 0.7 !important;
 }
 .top-site-icon{background-color: transparent !important;}
-@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {.top-site-icon{background-color: var(--mode-color) !important;}}
+@media -moz-pref("ultima.xstyle.newtab.rounded") {.top-site-icon{background-color: var(--mode-color) !important;}}
     
 /* force consistent size */    
 .top-site-outer .default-icon {
@@ -131,7 +131,7 @@ body {
     font-weight: bold !important;
     text-transform: capitalize !important;
 }
-@media (-moz-bool-pref: "ultima.xstyle.newtab.labels") {      
+@media -moz-pref("ultima.xstyle.newtab.labels") {
     .top-site-outer .title span {
         background: var(--newtab-background-color-secondary) !important;
         filter: saturate(100%) !important;
@@ -173,7 +173,7 @@ body {
 .search-wrapper .logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }    
 
 /* default style */    
-@media (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+@media -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
     .search-inner-wrapper {
         display: flex !important;
         margin-top: 16px !important;
@@ -444,14 +444,14 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
  
 /* awesome bar ----------------------------------------------------------------- */ 
 
-@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
+@media not -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
 
     :root{
         --newtab-border-color:rgba(120,120,120,0.1) !important;
         --newtab-text-secondary-color: var(--mode-color) !important;
     }
     /* hide website shortcuts when focused on awesome bar */
-    @media (-moz-bool-pref: "browser.newtabpage.activity-stream.showSearch") {
+    @media -moz-pref("browser.newtabpage.activity-stream.showSearch") {
     .top-site-outer {
         opacity: 0 !important;
         pointer-events: none !important;
@@ -529,7 +529,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 
 /* new tab rounded tweaks ------------------------------------------------------ */
     
-@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {
+@media -moz-pref("ultima.xstyle.newtab.rounded") {
     .wallpaper-input {
         border-radius: var(--uc-fixed-rounding) !important;
     }

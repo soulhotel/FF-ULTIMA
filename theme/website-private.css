@@ -6,7 +6,7 @@ File Desc:         userContent - Private window home page declutter
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 @-moz-document url(about:privatebrowsing) {
-    @media (-moz-bool-pref: "ultima.xstyle.private"){
+    @media -moz-pref("ultima.xstyle.private"){
     
         /*hide private browsing tab info*//*
         .showPrivate {

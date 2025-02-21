@@ -15,35 +15,35 @@ FF Ultima Companion Extension
 
 @media (-moz-boz-pref: "ultima.sidebery.automatic.theming") {
 
-@media (-moz-bool-pref: "user.theme.dark.a") { :root {
+@media -moz-pref("user.theme.dark.a") { :root {
         --ut-bg: rgb(35, 35, 42) !important;
         --ut-fg: white !important;
 }}
-@media (-moz-bool-pref: "user.theme.light.a") { :root {
+@media -moz-pref("user.theme.light.a") { :root {
         --ut-bg: rgb(244, 244, 255) !important;
         --ut-fg: rgb(5, 5, 5) !important;
 }}
-@media (-moz-bool-pref: "user.theme.dark.catppuccin") { :root {
+@media -moz-pref("user.theme.dark.catppuccin") { :root {
         --ut-bg: rgb(38, 36, 50) !important;
         --ut-fg: rgb(198, 170, 232) !important;
 }}
-@media (-moz-bool-pref: "user.theme.dark.catppuccin-frappe") { :root {
+@media -moz-pref("user.theme.dark.catppuccin-frappe") { :root {
         --ut-bg: rgb(41, 44, 60) !important;
         --ut-fg: rgb(205, 214, 244) !important;
 }}
-@media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha") { :root {
+@media -moz-pref("user.theme.dark.catppuccin-mocha") { :root {
         --ut-bg: rgb(24, 24, 37) !important;
         --ut-fg: rgb(205, 214, 244) !important;
 }}
-@media (-moz-bool-pref: "user.theme.dark.gruvbox") { :root {
+@media -moz-pref("user.theme.dark.gruvbox") { :root {
         --ut-bg: rgb(40, 40, 45) !important;
         --ut-fg: rgb(237, 221, 170) !important;
 }}
-@media (-moz-bool-pref: "user.theme.dark.midnight") { :root {
+@media -moz-pref("user.theme.dark.midnight") { :root {
         --ut-bg: rgb(5, 5, 5) !important;
         --ut-fg: rgb(230, 230, 230) !important;
 }}
-@media (-moz-bool-pref: "user.theme.light.gruvbox") { :root {
+@media -moz-pref("user.theme.light.gruvbox") { :root {
         --ut-bg: rgb(250, 220, 220) !important;
         --ut-fg: rgb(198, 63, 41) !important;
 }}

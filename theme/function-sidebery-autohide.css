@@ -6,8 +6,8 @@ File Desc:         Autohide Sidebery, the other Sidebars remain static/resizable
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-@media (-moz-bool-pref: "ultima.sidebar.hidden") {
-    @media (-moz-bool-pref: "ultima.sidebery.autohide") {
+@media -moz-pref("ultima.sidebar.hidden") {
+    @media -moz-pref("ultima.sidebery.autohide") {
         #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] { 
             --uc-sidebar-width: 0.4px !important; 
             margin:0 !important;
@@ -15,13 +15,13 @@ File Desc:         Autohide Sidebery, the other Sidebars remain static/resizable
     }
 }
 
-@media (-moz-bool-pref: "ultima.sidebery.autohide") {
-    @media (-moz-bool-pref: "ultima.sidebar.longer") {
+@media -moz-pref("ultima.sidebery.autohide") {
+    @media -moz-pref("ultima.sidebar.longer") {
         #sidebar-box {--uc-sidebar-hover-width: 400px !important;} 
     }
 }
 
-@media (-moz-bool-pref: "ultima.sidebery.autohide") {
+@media -moz-pref("ultima.sidebery.autohide") {
     :root {
         --bg: #1a1b26;
     }

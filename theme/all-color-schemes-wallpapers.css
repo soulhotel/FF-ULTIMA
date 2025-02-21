@@ -1,5 +1,5 @@
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
   
 /*
 This file handles New Tab Backgrounds for Color Schemes.
@@ -7,26 +7,26 @@ Create Your Own - TUTORIAL: https://github.com/soulhotel/FF-ULTIMA/blob/main/doc
 
 Use the template below to enter your theme into the list:
 
-@media (-moz-bool-pref: "user.theme.dark.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
+@media -moz-pref("user.theme.dark.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
 
-@media (-moz-bool-pref: "user.theme.light.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
+@media -moz-pref("user.theme.light.MYTHEME"){body{background-image: url("pic/MYTHEME.png") !important;}
 */
 
 /*--------------------------------- DARK COLOR SCHEME SECTION ---------------------------------*/
 
 @media (prefers-color-scheme: dark) {
 
-@media (-moz-bool-pref: "user.theme.dark.a"){body{background-image: url("pic/fullmoon.png") !important;}}
+@media -moz-pref("user.theme.dark.a"){body{background-image: url("pic/fullmoon.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
+@media -moz-pref("user.theme.dark.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.catppuccin-frappe"){body{background-image: url("pic/catppuccin-frappe.png") !important;}}
+@media -moz-pref("user.theme.dark.catppuccin-frappe"){body{background-image: url("pic/catppuccin-frappe.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.catppuccin-mocha"){body{background-image: url("pic/catppuccin.png") !important;}}
+@media -moz-pref("user.theme.dark.catppuccin-mocha"){body{background-image: url("pic/catppuccin.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
+@media -moz-pref("user.theme.dark.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.dark.midnight"){body{background-image: url("pic/midnight.png") !important;}}
+@media -moz-pref("user.theme.dark.midnight"){body{background-image: url("pic/midnight.png") !important;}}
 
   
   
@@ -36,9 +36,9 @@ Use the template below to enter your theme into the list:
 
 @media (prefers-color-scheme: light){
 
-@media (-moz-bool-pref: "user.theme.light.a"){body{background-image: url("pic/dusky.png") !important;}}
+@media -moz-pref("user.theme.light.a"){body{background-image: url("pic/dusky.png") !important;}}
 
-@media (-moz-bool-pref: "user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.png") !important;}}
+@media -moz-pref("user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.png") !important;}}
 
   
      
@@ -46,23 +46,23 @@ Use the template below to enter your theme into the list:
   
 /*--------------------------------- OVERRIDE WALLPAPERS FEATURE --------------------------------*/
 
-@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
 
-@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-frappe"){body{background-image: url("pic/catppuccin-frappe.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-frappe2"){body{background-image: url("pic/catppuccin-frappe2.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.catppuccin-mocha"){body{background-image: url("pic/catppuccin-mocha.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.dusky"){body{background-image: url("pic/dusky.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.fullmoon"){body{background-image: url("pic/fullmoon.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.fullmoon2"){body{background-image: url("pic/old.fullmoon.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.midnight"){body{background-image: url("pic/midnight.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.midnight2"){body{background-image: url("pic/old.midnight.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.green"){body{background-image: url("pic/green.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.gruvbox.light"){body{background-image: url("pic/gruvbox-l.jpg") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.gruvbox.flowers"){body{background-image: url("pic/gruvbox-l.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.seasonal"){body{background-image: url("pic/seasonal.png") !important;}}
-@media (-moz-bool-pref: "user.theme.wallpaper.seasonal2"){body{background-image: url("pic/seasonal2.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin"){body{background-image: url("pic/catppuccin.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin-frappe"){body{background-image: url("pic/catppuccin-frappe.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin-frappe2"){body{background-image: url("pic/catppuccin-frappe2.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin-mocha"){body{background-image: url("pic/catppuccin-mocha.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.dusky"){body{background-image: url("pic/dusky.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.fullmoon"){body{background-image: url("pic/fullmoon.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.fullmoon2"){body{background-image: url("pic/old.fullmoon.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.midnight"){body{background-image: url("pic/midnight.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.midnight2"){body{background-image: url("pic/old.midnight.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.green"){body{background-image: url("pic/green.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.gruvbox"){body{background-image: url("pic/gruvbox.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.gruvbox.light"){body{background-image: url("pic/gruvbox-l.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.gruvbox.flowers"){body{background-image: url("pic/gruvbox-l.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.seasonal"){body{background-image: url("pic/seasonal.png") !important;}}
+@media -moz-pref("user.theme.wallpaper.seasonal2"){body{background-image: url("pic/seasonal2.png") !important;}}
 
 
   

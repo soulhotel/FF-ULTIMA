@@ -34,7 +34,7 @@
         margin-top:4px !important;
         outline: 4px solid var(--lwt-accent-color) !important;
     }
-    @media (-moz-bool-pref: "ultima.spacing.compact") {
+    @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
     }
 }    
@@ -62,7 +62,7 @@
     & .sidebar-panel[lwt-sidebar] {
         background-color: var(--uc-transparent) !important;
     }
-    @media (-moz-bool-pref: "ultima.spacing.compact") {
+    @media -moz-pref("ultima.spacing.compact") {
         & #sidebar-main {top: calc(var(--uc-topbars-combined-height) - 0px) !important;}
     }
 }
@@ -210,7 +210,7 @@
 
 
 
-@media (-moz-bool-pref: "ultima.theme.color.swap") {
+@media -moz-pref("ultima.theme.color.swap") {
     #main-window[lwtheme] {    
         --lwt-accent-color: var(--tabpanel-background-color) !important;
     }

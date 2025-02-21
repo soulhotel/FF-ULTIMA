@@ -5,14 +5,14 @@ File Desc:         Alternative Styles for the URL Bar
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@media (-moz-bool-pref: "ultima.urlbar.suggestions") {
+@media -moz-pref("ultima.urlbar.suggestions") {
   
     #urlbar .search-one-offs:not([hidden]) {
         display:none !important;
     }
 
 }
-@media (-moz-bool-pref: "ultima.urlbar.centered") {
+@media -moz-pref("ultima.urlbar.centered") {
       
     #urlbar .urlbar-input-box {
         text-align: center;
@@ -25,7 +25,7 @@ File Desc:         Alternative Styles for the URL Bar
 
 }
 
-@media (-moz-bool-pref: "ultima.urlbar.hidebuttons") {
+@media -moz-pref("ultima.urlbar.hidebuttons") {
 
   #urlbar #identity-box,
   #urlbar #page-action-buttons,

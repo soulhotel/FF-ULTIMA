@@ -6,7 +6,7 @@ Original Source:   https://github.com/datguypiko/Firefox-Mod-Blur
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@media (-moz-bool-pref: "ultima.theme.extensions") {
+@media -moz-pref("ultima.theme.extensions") {
 
 /*  Clean and tight extensions menu */
 #unified-extensions-panel #unified-extensions-view {

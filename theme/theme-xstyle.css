@@ -16,7 +16,7 @@ bookmarks fade out
 /* alternative styling for URL Bar ------------------------------------------------------------------------------- */
  
  
-@media (-moz-bool-pref: "ultima.xstyle.urlbar") {
+@media -moz-pref("ultima.xstyle.urlbar") {
  
     #main-window[lwtheme], #main-window:not([lwtheme]) {
       & #urlbar-background, & #searchbar {
@@ -35,7 +35,7 @@ bookmarks fade out
 /* theme colors -------------------------------------------------------------------------------------------------- */
 /*alternative styling for theme colors by rearranging current color palette/variables*/
 /*
-@media (-moz-bool-pref: "ultima.theme.color.swap") {
+@media -moz-pref("ultima.theme.color.swap") {
  
     #main-window[lwtheme] #unified-extensions-button {
         list-style-image: url("icons/extensions.svg") !important;
@@ -54,7 +54,7 @@ bookmarks fade out
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 /*alternative styling for pinned tabs*/
  
-@media (-moz-bool-pref: "ultima.xstyle.pinnedtabs.i") {
+@media -moz-pref("ultima.xstyle.pinnedtabs.i") {
   @media (prefers-color-scheme: dark) {
     .tabbrowser-tab[pinned=""] .tab-background, .tabbrowser-tab[pinned="true"] .tab-background {
       background-color: var(--tab-selected-bgcolor) !important;
@@ -79,7 +79,7 @@ Spacing correction for all tab group styles
  
 ----------------------------------------------------------------*/
  
-@media not (-moz-bool-pref: "ultima.xstyle.tabgroups.i"), @media not (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") { 
+@media not -moz-pref("ultima.xstyle.tabgroups.i"), @media not -moz-pref("ultima.xstyle.tabgroups.ii") {
     tab-group {
         #tabbrowser-tabs & {
             &:not([collapsed])::before {
@@ -98,7 +98,7 @@ Spacing correction for all tab group styles
     }
 }
 
-@media (-moz-bool-pref: "sidebar.verticalTabs") {
+@media -moz-pref("sidebar.verticalTabs") {
     tab-group {
         #tabbrowser-tabs[expanded] & {
             &:not([collapsed])::before {
@@ -115,7 +115,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
  
 ----------------------------------------------------------------*/
  
-@media (-moz-bool-pref: "ultima.xstyle.tabgroups.i") { 
+@media -moz-pref("ultima.xstyle.tabgroups.i") {
  
     /*defaults*/
     .tab-group-label {
@@ -126,7 +126,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
     }
  
     /*when using tab autohide*/
-    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media -moz-pref("ultima.tabs.autohide") { @media -moz-pref("sidebar.verticalTabs") {
         #tabbrowser-tabs:not([expanded])
             .tab-group-label {
                 min-width:50px !important;
@@ -147,7 +147,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
                 max-width:42px !important;
                 border-radius:1px !important;
         }
-        @media (-moz-bool-pref: "ultima.enable.nightly.config") {
+        @media -moz-pref("ultima.enable.nightly.config") {
         #tabbrowser-tabs[expanded]:not(:hover)
             .tab-group-label {
                 min-width:47px !important;
@@ -177,7 +177,7 @@ Style 2: Tab Group shrinks into a tab like Icon
  
 ----------------------------------------------------------------*/
  
-@media (-moz-bool-pref: "ultima.xstyle.tabgroups.ii") { 
+@media -moz-pref("ultima.xstyle.tabgroups.ii") {
  
     /*defaults*/
     .tab-group-label {
@@ -188,7 +188,7 @@ Style 2: Tab Group shrinks into a tab like Icon
     }
  
     /*when using tab autohide*/
-    @media (-moz-bool-pref: "ultima.tabs.autohide") { @media (-moz-bool-pref: "sidebar.verticalTabs") {                
+    @media -moz-pref("ultima.tabs.autohide") { @media -moz-pref("sidebar.verticalTabs") {
         #tabbrowser-tabs:not([expanded])
             .tab-group-label {
                 min-width:25px !important;
@@ -231,9 +231,9 @@ Tab groups with Color mixed backgrounds
  
 ----------------------------------------------------------------*/
  
-@media (-moz-bool-pref: "ultima.xstyle.tabgroups.with.colormix") {
+@media -moz-pref("ultima.xstyle.tabgroups.with.colormix") {
    /* remove accent group color border */ 
-    @media (-moz-bool-pref: "sidebar.verticalTabs") {
+    @media -moz-pref("sidebar.verticalTabs") {
         tab-group {
             #tabbrowser-tabs & {
                 &:not([collapsed])::before {
@@ -276,7 +276,7 @@ Tab groups with Color mixed backgrounds
  
 /* compact tabs ------------------------------------------------------------------------------------------------- */
  
-@media (-moz-bool-pref: "ultima.spacing.compact.tabs") { 
+@media -moz-pref("ultima.spacing.compact.tabs") {
     .tab-background {
           margin-block: 0px !important;
       }
@@ -295,7 +295,7 @@ Tab groups with Color mixed backgrounds
  
 /* Style 1 */
 /* Simply changing border to the left side of tab icon */
-@media (-moz-bool-pref: "ultima.xstyle.containertabs.i") {
+@media -moz-pref("ultima.xstyle.containertabs.i") {
     .tabbrowser-tab .tab-context-line {
         border: 2px solid var(--identity-icon-color);
         margin: 0 !important;
@@ -309,7 +309,7 @@ Tab groups with Color mixed backgrounds
  
 /* Style 2 */
 /* Border around full tab */
-@media (-moz-bool-pref: "ultima.xstyle.containertabs.ii") {
+@media -moz-pref("ultima.xstyle.containertabs.ii") {
     .tabbrowser-tab .tab-context-line {
         border: 2px solid var(--identity-icon-color);
         margin: 0 !important;
@@ -324,7 +324,7 @@ Tab groups with Color mixed backgrounds
  
 /* Style 3 */
 /* Full color overlay */
-@media (-moz-bool-pref: "ultima.xstyle.containertabs.iii") {
+@media -moz-pref("ultima.xstyle.containertabs.iii") {
 /* Will needs tweaks as text color could be unreadable in some combinations */
     .tabbrowser-tab .tab-context-line {
         width: 100%;
@@ -342,7 +342,7 @@ Tab groups with Color mixed backgrounds
  
 /* bookmarks fade out -------------------------------------------------------------------------------------- */
  
-@media (-moz-bool-pref: "ultima.xstyle.bookmarks.fading") {
+@media -moz-pref("ultima.xstyle.bookmarks.fading") {
     #PlacesToolbar {
       opacity: 0.2 !important;
       transition: opacity 4s ease-out; /* Slow ease-out when not hovered */
