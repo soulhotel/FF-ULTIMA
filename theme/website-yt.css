@@ -83,7 +83,7 @@ html[dark] .sbsb_a {
 
 /* theater mode adjustments*/
 /*remove black bars*/
-ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy {
+ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy:not(:hover) {
   background: none !important;
 }
 /* border radios*/
@@ -97,11 +97,50 @@ ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy {
   &.ytp-menuitem {border-radius:8px !important}
 }
 
-/* Iridium extension - bigger mini player */
+/* Iridium extension - adjustments */
+
+/*
+Extensions height width are 225/400
+I'm using 366/650 for visibility
+*/
+
 html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) #movie_player {
-  height: 366px !important;
-  width: 650px !important;
+    top: unset !important;
+    left: unset !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 650px !important; /*400px*/
+    height: 366px !important; /*225px*/
+    z-index: 9998 !important;
 }
+/*
+these are being overwritten inline by yt,
+important tags fix it but they may need to be
+applied and de-applied for when the mini player is triggered
+*/
+
+html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) .video-stream.html5-main-video {
+    top: unset !important;
+    left: unset !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 650px !important; /*400px*/
+    height: auto !important; /*225px*/
+    position: fixed !important;
+    z-index: 9999 !important;
+}
+/*
+height and width should technically match #movie_player
+important tags to applied only when the mini player is triggered
+position `fixed` (inside of the movie player) instead of `absolute`
+*/
+
+html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) .ytp-chrome-bottom {
+    width: 100% !important;
+}
+/*
+progress bar container width (set inline) needs to be overwritten to fit mini-player size.
+*/
 
 
 }
