@@ -83,13 +83,16 @@ html[dark] .sbsb_a {
 
 /* theater mode adjustments*/
 /*remove black bars*/
+/*
 ytd-watch-flexy[full-bleed-player] #full-bleed-container:not(:hover) {
   background: none !important;
 }
 ytd-watch-flexy[fullscreen] #full-bleed-container:not(:hover) {
   background: #000 !important;
 }
+*/
 /* border radios*/
+/*
 ytd-watch-flexy[full-bleed-player] .video-stream.html5-main-video:not(:hover) {
   border-radius: 10px !important;
 }
@@ -97,7 +100,7 @@ ytd-watch-flexy[full-bleed-player] .video-stream.html5-main-video:not(:hover) {
 ytd-watch-flexy[fullscreen] .video-stream.html5-main-video {
   border-radius: 0px !important;
 }
-
+*/
 /*context menus expanded*/
 .ytp-panel-menu {
   padding: 8px !important;
