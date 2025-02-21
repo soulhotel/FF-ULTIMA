@@ -30,6 +30,7 @@ user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.disable.verticaltab.bar.withindicator", true);
 user_pref("ultima.tabs.autohide", true); /* marked for removal */
 user_pref("sidebar.expandOnHover", true); /* marked for replacement */
+user_pref("sidebar.animation.expand-on-hover.duration-ms", 200);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.width.small", false);
 user_pref("ultima.tabs.width.medium", true);
