@@ -9,8 +9,8 @@ File Desc:         userContent file for theming YT
 
 @-moz-document domain("youtube.com") {
 
-@media (prefers-color-scheme: light) { :root{
-  --generic-background: rgba(20,20,20,0.7);   
+@media (prefers-color-scheme: dark) { :root{
+  --generic-background: rgba(20,20,20,0.5);   
 }} 
 @media (prefers-color-scheme: light) { :root{
   --generic-background: rgba(255,255,255,0.3);   
