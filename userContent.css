@@ -37,7 +37,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
     .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
-        margin: 0 10vw;  
+        /* margin: 0 5vw; */
         justify-content: center !important;    
     }
 }
