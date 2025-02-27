@@ -31,3 +31,13 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 /*@import url(theme/sidebery-theming.css); WIP */
 
 @import url(a/a.css);
+
+
+/* temporary fix for firefox 135 new tab spacing */
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+    .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
+        margin: 0 10vw;  
+        justify-content: center !important;    
+    }
+}
