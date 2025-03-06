@@ -69,6 +69,7 @@ bookmarks fade out
     #sidebar-main:hover #vertical-pinned-tabs-container {
     & .tab-label-container {
         display: flex !important;
+        margin-left:12px !important;
     }
     }
 }
