@@ -54,19 +54,23 @@ bookmarks fade out
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 /*alternative styling for pinned tabs*/
  
-@media -moz-pref("ultima.xstyle.pinnedtabs.i") {
-  @media (prefers-color-scheme: dark) {
-    .tabbrowser-tab[pinned=""] .tab-background, .tabbrowser-tab[pinned="true"] .tab-background {
-      background-color: var(--tab-selected-bgcolor) !important;
-      box-shadow: inset 0 !important;
+@media -moz-pref("sidebar.ExpandOnHover"), -moz-pref("ultima.xstyle.pinnedtabs.i") {
+    #vertical-pinned-tabs-container tab {
+        grid-column-start: 1   !important;
     }
-  }
-  @media (prefers-color-scheme: light) {
-    .tabbrowser-tab[pinned=""] .tab-background, .tabbrowser-tab[pinned="true"] .tab-background {
-      background-color: var(--tab-selected-bgcolor) !important;
-      box-shadow: inset 0 !important;
+    #tabbrowser-tabs[orient="vertical"] {
+        &:not([expanded]):hover {
+            & .tab-label-container {
+                display: flex !important;
+            }
+        }
     }
-  }
+    /*need adjustment hide labels when autohidden but not hovered*/
+    #sidebar-main:hover #vertical-pinned-tabs-container {
+    & .tab-label-container {
+        display: flex !important;
+    }
+    }
 }
  
 /* tab groups --------------------------------------------------------------------------------------------------- */
