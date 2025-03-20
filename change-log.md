@@ -11,6 +11,7 @@
 - Much of the source had to be readjusted for this 137 update, please use the user.js and look over the changes in the user.js file, many tab related settings have been removed/adjusted to work with firefox's native vertical tab autohiding.
 - Firefox 137+ required.
 - User.js required.
+- Video below!
 
 ### <ins> Some of my Comments in the Firefox Topic on Vertical Tabs
 - [Recommended styling of the sidebar views](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460)
@@ -24,6 +25,9 @@
 - `fix` Media Playing Icon on tabs restored.
 - `wip` Autoconfig support restoration.
 - *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
+
+
+https://github.com/user-attachments/assets/a618cb6b-1435-409b-b0f9-7e199a87a6eb
 
 https://github.com/user-attachments/assets/32edce46-943d-43fb-b977-682f98e6fa73
 
