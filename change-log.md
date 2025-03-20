@@ -19,6 +19,7 @@
 ### <ins> Change Log:
 - `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings. You can also now change the size (width) of the vertical tabs by dragging it with your mouse to a desired width. There is a bug where the second sidebar will sometimes glitch position when you hover the vertical tabs (when both are visible), this is a firefox version issue, they are aware of it.
 - `new` Setting `ultima.xstyle.tabgroups.with.colormix` Tab group styles are fully restore and this setting will add the group-colored background like before.
+- `new` Setting `ultima.xstyle.pinnedtabs.i` when using tab autohiding the pinned tabs will be listed vertically.
 - `qol` Some privacy preferences that were altered by the theme will be reset to their default values, these should left to be dealt with by the user. [ea1711a](https://github.com/soulhotel/FF-ULTIMA/commit/ea1711a0eface7392e1ba3ce71bec1b2537988de)
 - `fix` Media Playing Icon on tabs restored.
 - `wip` Autoconfig support restoration.
