@@ -28,15 +28,10 @@ user_pref("ultima.disable.contextmenu.collapsing", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.disable.verticaltab.bar.withindicator", true);
-user_pref("ultima.tabs.autohide", true); /* marked for removal */
 user_pref("browser.tabs.tabMinWidth", 0);
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
 user_pref("sidebar.expandOnHover", true); /* marked for replacement */
 user_pref("ultima.tabs.belowURLbar", true);
-user_pref("ultima.tabs.width.small", false);
-user_pref("ultima.tabs.width.medium", true);
-user_pref("ultima.tabs.width.large", false);
-user_pref("ultima.tabs.width.huge", false);
 user_pref("ultima.spacing.compact.tabs", false);
 
 /*sidebar*/
