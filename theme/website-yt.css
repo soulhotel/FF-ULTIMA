@@ -1,14 +1,13 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         userContent file for theming YT
+File Desc:         userContent file for theming YT, FF Ultima Subtle Blur theme
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*--YT Theme--*/
-
 @-moz-document domain("youtube.com") {
 
+/* variables -----------------------------------------------------------*/ 
 @media (prefers-color-scheme: dark) { :root{
   --generic-background: rgba(20,20,20,0.5);   
 }} 
@@ -16,30 +15,27 @@ File Desc:         userContent file for theming YT
   --generic-background: rgba(255,255,255,0.3);   
 }}    
   
-  
-  
-/*--side bar--*/
+/* side bar ------------------------------------------------------------*/
 #contentContainer, #guide-content.ytd-app {
   background-color: var(--generic-background) !important;
   filter: saturate(140%) !important;
   backdrop-filter: blur(33px);
 }
 
-/*--notification popups--*/
+/* Notification Popup --------------------------------------------------*/  
 .style-scope.ytd-popup-container {
   background-color: var(--generic-background) !important;
   filter: saturate(70%) !important;
   backdrop-filter: blur(33px);
   border-radius: 10px !important;
 }
-
 .ytd-multi-page-menu-renderer {
   background-color: var(--generic-background) !important;
   filter: saturate(110%) !important;
   backdrop-filter: blur(33px);
 }
 
-/*--search bar popup--*/
+/* search results popup ------------------------------------------------*/  
 html[dark] .sbsb_a {
   background: var(--yt-spec-raised-background);
   background-color: var(--generic-background) !important;
@@ -48,19 +44,46 @@ html[dark] .sbsb_a {
   border-radius: 10px !important;
 }
 
-/*--video player, context menu--*/
-.ytp-popup.ytp-contextmenu { border-radius: 10px !important; }
+/* video player --------------------------------------------------------*/
 
+/*context menu*/
+.ytp-popup.ytp-contextmenu { 
+    border-radius: 10px !important;
+    background-color: var(--generic-background) !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    border-radius: 10px !important;
+}
+.ytp-panel-menu {
+    padding: 8px !important;
+}
+.ytp-menuitem:hover {
+    border-radius: 10px !important; /* nogo for tables */
+    clip-path: xywh(0 0 100% 100% round 0.5em) !important;
+}
 
+  
+  
+/* side bar ------------------------------------------------------------*/
+/* side bar ------------------------------------------------------------*/
+/* side bar ------------------------------------------------------------*/
+/* side bar ------------------------------------------------------------*/
+/* side bar ------------------------------------------------------------*/
+/* side bar ------------------------------------------------------------*/
+  
+  
 /* Youtube logo red to blue */
 /*
-.yt-spec-icon-shape path[fill="#FF0000"] 
-{fill: #4291d7 !important;}
+.yt-spec-icon-shape path[fill="#FF0000"] {
+    fill: #4291d7 !important;
+}
 */
 
 /*SEEKBAR COLOR*/
 /*
-.ytp-swatch-background-color { background-color: #fffd80 !important; }
+.ytp-swatch-background-color { 
+    background-color: #fffd80 !important; 
+}
 */
 
 /*--notifications badge color now yellow--*/
@@ -69,8 +92,9 @@ html[dark] .sbsb_a {
 .yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
     background-color: #fffd80 !important;
     color: #2b2b2b !important;
+}
 */
-} .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
+.yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
     border: 0px solid rgba(0,0,0,0.8) !important;
 }
 
@@ -101,11 +125,6 @@ ytd-watch-flexy[fullscreen] .video-stream.html5-main-video {
   border-radius: 0px !important;
 }
 */
-/*context menus expanded*/
-.ytp-panel-menu {
-  padding: 8px !important;
-  &.ytp-menuitem {border-radius:8px !important}
-}
 
 /* Iridium extension - adjustments */
 
@@ -119,8 +138,8 @@ html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) #movie_player
     left: unset !important;
     bottom: 10px !important;
     right: 10px !important;
-    width: 650px !important; /*400px*/
-    height: 366px !important; /*225px*/
+    width: 400px !important; /*400px 650px*/
+    height: 225px !important; /*225px 366px*/
     z-index: 9998 !important;
 }
 /*
@@ -134,7 +153,7 @@ html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) .video-stream
     left: unset !important;
     bottom: 10px !important;
     right: 10px !important;
-    width: 650px !important; /*400px*/
+    width: 400px !important; /*400px*/
     height: auto !important; /*225px*/
     position: fixed !important;
     z-index: 9999 !important;
