@@ -375,12 +375,11 @@ border-radius:100% !important;
  
 /* ---------------------------------------------------------------------------------------------- */
 
-
 /*
 
-in regards to  237 https://github.com/soulhotel/FF-ULTIMA/issues/247 
-forcing highlight on all popup panel and menu text as a work-along setting for the auto tab color extension
-or highlighting selected text ditto for the reasoning 
+in regards to  237 https://github.com/soulhotel/FF-ULTIMA/issues/247
+specific styling meant to correct the flaws presented with the use of the adaptive tab color extension
+
 */
  
  @media -moz-pref("ultima.xstyle.autotabcolor") {
