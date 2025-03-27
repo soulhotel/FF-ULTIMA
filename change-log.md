@@ -7,21 +7,19 @@
 - 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### <ins> Version Notes
-- Firefox delivers ExpandOnHover (vertical tab autohiding)!
-- Much of the source had to be readjusted for this 137 update, please use the user.js and look over the changes in the user.js file, many tab related settings have been removed/adjusted to work with firefox's native vertical tab autohiding.
+- Firefox 137 delivers ExpandOnHover Autohiding❕ Much of the source had to be readjusted for this 137 update, settings like tab autohiding and tab width are no longer needed! Other tab related settings have been adjusted to work with firefox's Vertical Tab ExpandOnHover. :warning: There is a bug where the second sidebar will sometimes glitch out of position when you hover the verttabs (when both are visible), this is a firefox issue that occurs even on a clean install/profile, they are aware of it.
+- I've brought some issues and recommendations to the attention and acknowledgement of Mozilla Staff via the original Vertical Tabs Announcement thread on Mozilla:
+   - [Recommended styling of the sidebar views](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460)
+   - [Keeping the Verttabs expanded even when the context menu (right click menu) is triggered](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87360/highlight/true#M33459)
 - Firefox 137+ required.
 - User.js required.
 - Video below!
 
-### <ins> Some of my Comments in the Firefox Topic on Vertical Tabs
-- [Recommended styling of the sidebar views](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460)
-- [Keeping the Vertical Tabs expanded when the context menu (right click menu) is triggered inside of it](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87360/highlight/true#M33459)
-
 ### <ins> Change Log:
-- `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings. You can also now change the size (width) of the vertical tabs by dragging it with your mouse to a desired width. There is a bug where the second sidebar will sometimes glitch position when you hover the vertical tabs (when both are visible), this is a firefox version issue, they are aware of it.
+- `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings. You can also now change the size (width) of the vertical tabs by dragging it with your mouse to a desired width.
 - `new` Setting `ultima.xstyle.tabgroups.with.colormix` Tab group styles are fully restore and this setting will add the group-colored background like before.
 - `new` Setting `ultima.xstyle.pinnedtabs.i` when using tab autohiding the pinned tabs will be listed vertically.
-- `qol` Some privacy preferences that were altered by the theme will be reset to their default values, these should left to be dealt with by the user. [ea1711a](https://github.com/soulhotel/FF-ULTIMA/commit/ea1711a0eface7392e1ba3ce71bec1b2537988de)
+- `qol` Undoing some privacy preferences that were previously altered by the theme back to their default values, these should left to be dealt with by the user. [ea1711a](https://github.com/soulhotel/FF-ULTIMA/commit/ea1711a0eface7392e1ba3ce71bec1b2537988de)
 - `fix` Media Playing Icon on tabs restored.
 - `wip` Autoconfig support restoration.
 - *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
