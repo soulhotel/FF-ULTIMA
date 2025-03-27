@@ -538,6 +538,12 @@ span.button-background.labelled label {padding-left: 5px !important;}
   }
 }
 
+/* toolbar buttons */
+.tools-and-extensions[orientation="horizontal"] {
+    justify-content: center !important;
+    margin-left: -10px !important;
+}
+
 /* Vertical Tabs Disabled - setting ------------------------------------------------------*/
 
 @media -moz-pref("ultima.disable.verticaltab.bar") {
