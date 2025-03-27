@@ -477,7 +477,7 @@ great for view-tab-in-sidebar extensions
     }
 }
 
-#tabbrowser-arrowscrollbox-periphery {z-index:-1 !important;}
+#tabbrowser-arrowscrollbox-periphery {z-index:0 !important;}
 
 
 #tabbrowser-tabs[orient="vertical"] { &[overflow]::after {opacity: 0 !important;}}
