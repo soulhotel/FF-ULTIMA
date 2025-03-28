@@ -7,7 +7,9 @@
 - 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### <ins> Version Notes
-- Firefox 137 delivers ExpandOnHover Autohiding❕ Much of the source had to be readjusted for this 137 update, settings like tab autohiding and tab width are no longer needed! Other tab related settings have been adjusted to work with firefox's Vertical Tab ExpandOnHover. :warning: There is a bug where the second sidebar will sometimes glitch out of position when you hover the verttabs (when both are visible), this is a firefox issue that occurs even on a clean install/profile, they are aware of it.
+- `Firefox 137 delivers ExpandOnHover Auto-hiding!` *And most* of FF Ultima's source went through edit to work for FF 137.
+- Theme settings, like tab auto-hiding and tab width, are no longer needed. Other tab related settings have been adjusted to work with firefox's Vertical Tab ExpandOnHover. Changes are reflected in the user.js list.
+- :warning: There is a bug where the second sidebar will sometimes glitch out of position when you hover the verttabs (when both are visible). This is a Firefox issue, not caused by the theme. They are aware of it.
 - I've brought some issues and recommendations to the attention and acknowledgement of Mozilla Staff via the original Vertical Tabs Announcement thread on Mozilla:
    - [Recommended styling of the sidebar views](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460)
    - [Keeping the Verttabs expanded even when the context menu (right click menu) is triggered](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87360/highlight/true#M33459)
@@ -21,13 +23,19 @@
 - `new` Setting `ultima.xstyle.pinnedtabs.i` when using tab autohiding the pinned tabs will be listed vertically.
 - `qol` Undoing some privacy preferences that were previously altered by the theme back to their default values, these should left to be dealt with by the user. [ea1711a](https://github.com/soulhotel/FF-ULTIMA/commit/ea1711a0eface7392e1ba3ce71bec1b2537988de)
 - `fix` Media Playing Icon on tabs restored.
+- `fix` New Tab buttons functionality restored.
 - `wip` Autoconfig support restoration.
 - *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
 
+> toggle expandonhover via the settings sidebar
 
 https://github.com/user-attachments/assets/a618cb6b-1435-409b-b0f9-7e199a87a6eb
 
+> more tab groups preview
+
 https://github.com/user-attachments/assets/32edce46-943d-43fb-b977-682f98e6fa73
+
+> tab audio indicator adjustments
 
 ![2025-02-09_01-21](https://github.com/user-attachments/assets/0392493f-2dad-407a-addf-b073f6ccab41)
 
