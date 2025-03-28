@@ -9,7 +9,7 @@
 ### <ins> Version Notes
 - `Firefox 137 delivers ExpandOnHover Auto-hiding!` *And most* of FF Ultima's source went through edit to work for FF 137.
 - Theme settings, like tab auto-hiding and tab width, are no longer needed. Other tab related settings have been adjusted to work with firefox's Vertical Tab ExpandOnHover. Changes are reflected in the user.js list.
-- :warning: There is a bug where the second sidebar will sometimes glitch out of position when you hover the verttabs (when both are visible). This is a Firefox issue, not caused by the theme. They are aware of it.
+- :warning: There is a bug where the second sidebar will sometimes [glitch out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) when you hover the verttabs (when both are visible). This is a Firefox issue, not caused by the theme. They are aware of it.
 - I've brought some issues and recommendations to the attention and acknowledgement of Mozilla Staff via the original Vertical Tabs Announcement thread on Mozilla:
    - [Recommended styling of the sidebar views](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460)
    - [Keeping the Verttabs expanded even when the context menu (right click menu) is triggered](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87360/highlight/true#M33459)
