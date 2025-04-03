@@ -24,6 +24,7 @@
 - `qol` Undoing some privacy preferences that were previously altered by the theme back to their default values, these should left to be dealt with by the user. [ea1711a](https://github.com/soulhotel/FF-ULTIMA/commit/ea1711a0eface7392e1ba3ce71bec1b2537988de)
 - `fix` Media Playing Icon on tabs restored.
 - `fix` New Tab buttons functionality restored.
+- `fix` Right Border-line on Vertical Tabs (when expand-hover) removed.
 - `wip` Autoconfig support restoration.
 - *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
 
