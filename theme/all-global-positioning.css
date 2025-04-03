@@ -1340,7 +1340,7 @@ menupopup menuseparator {opacity:0.2 !important;}
   & #sidebar-main {
     &[sidebar-launcher-expanded], &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded]) {
       &:not([sidebar-positionend]) {
-        border-inline-end: 0px solid var(--sidebar-border-color);
+        border-inline-end: 0px solid var(--sidebar-border-color) !important;
       }
     }
   }
