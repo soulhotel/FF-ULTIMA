@@ -73,7 +73,7 @@ bookmarks fade out
     }
     }
 }
- 
+
 /* tab groups --------------------------------------------------------------------------------------------------- */
  
 /* alternative styling for tab groups for the new vertical tabs */
@@ -374,43 +374,30 @@ border-radius:100% !important;
 }
  
 /* ---------------------------------------------------------------------------------------------- */
-
-/*
-
-in regards to  237 https://github.com/soulhotel/FF-ULTIMA/issues/247
-specific styling meant to correct the flaws presented with the use of the adaptive tab color extension
-
-*/
  
- @media -moz-pref("ultima.xstyle.autotabcolor") {
-
-
-
- }
-
-/* New Tab Buttons on top ---------------------------------------------------------------------------------------- */
-
 @media -moz-pref("ultima.xstyle.newtabbutton.ontop.i") { 
-#vertical-tabs-newtab-button {
-    order: -1 !important;
-}
-#tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow]) ~ #new-tab-button, #tabbrowser-tabs[orient="horizontal"] > #vertical-tabs-newtab-button, #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button, #tabbrowser-arrowscrollbox[overflowing] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #tabbrowser-tabs:not([hasadjacentnewtabbutton])[orient="horizontal"] > #tabbrowser-arrowscrollbox > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #TabsToolbar[customizing] #tabs-newtab-button {
-    display: flex !important;
-}
+    #vertical-tabs-newtab-button {
+        order: -1 !important;
+    }
+    #tabbrowser-tabs[hasadjacentnewtabbutton]:not([overflow]) ~ #new-tab-button, #tabbrowser-tabs[orient="horizontal"] > #vertical-tabs-newtab-button, #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button, #tabbrowser-arrowscrollbox[overflowing] > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #tabbrowser-tabs:not([hasadjacentnewtabbutton])[orient="horizontal"] > #tabbrowser-arrowscrollbox > #tabbrowser-arrowscrollbox-periphery > #tabs-newtab-button, #TabsToolbar[customizing] #tabs-newtab-button {
+        display: flex !important;
+    }
+    /*#tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {
+        display: none !important;      
+    }*/
 }
 
 @media -moz-pref("ultima.xstyle.newtabbutton.ontop.ii") { 
-/*first button visible in vertical tabs collapsed state*/
-#tabbrowser-arrowscrollbox-periphery {
-  order: -1 !important;
+    /*first button visible in vertical tabs collapsed state*/
+    #tabbrowser-arrowscrollbox-periphery {
+      order: -1 !important;
+    }
+    #vertical-tabs-newtab-button {
+      order: -1 !important;
+      /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
+    }
+    /*second button visible in vertical tabs expanded state*/
+    #vertical-tabs-newtab-button {
+      order: -1 !important;
+    }    
 }
-#vertical-tabs-newtab-button {
-  order: -1 !important;
-  /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
-}
-/*second button visible in vertical tabs expanded state*/
-#vertical-tabs-newtab-button {
-  order: -1 !important;
-}    
-}
- 
