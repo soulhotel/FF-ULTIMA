@@ -469,7 +469,7 @@ box-shadow: none !important;}}
 }    
 
 /* custom splitter - resizeable bar */
-#sidebar-launcher-splitter {
+:root:not([inDOMFullscreen="true"]) #sidebar-launcher-splitter {
     @media -moz-pref("sidebar.revamp") {
         padding:2px !important;
         margin: 55px 0px 55px 0px !important;
