@@ -1,6 +1,4 @@
-### <ins> FF Ultima Version 1.9.9 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.9/ffultima1.9.9.zip)**
-- **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
+### <ins> FF Ultima Version 1.9.9 Release- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/1.9.9/ffultima1.9.9.zip)**- **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
@@ -13,6 +11,9 @@
 
 ### <ins> Change Log:
 - `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings
+- `new` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser window
+- 
+- spacing corrections
 - `new` Setting `ultima.xstyle.newtabbutton.ontop.i` & `ultima.xstyle.newtabbutton.ontop.ii` Vertical Tab New Tab buttons will sit at the top of the Sidebar
 - `fix` resizable-bars (splitters) for both sidebars are now styled and easier to trigger on hover
 - `qol` Mini toolbar buttons under vertical tabs are now centered
