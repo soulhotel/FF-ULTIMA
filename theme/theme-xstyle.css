@@ -77,7 +77,17 @@ bookmarks fade out
 /* tab groups --------------------------------------------------------------------------------------------------- */
  
 /* alternative styling for tab groups for the new vertical tabs */
- 
+
+.tab-group-label {
+  tab-group[collapsed] > .tab-group-label-container > & {
+    background-color: light-dark(var(--tab-group-color-pale), var(--tab-group-color));
+    color: light-dark(var(--tab-group-color), var(--tab-group-color-pale)); 
+    outline-offset: -1px;
+    /* above ^ are all default values except for the change in alpha seen below */
+    outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
+  }
+}
+
 /*----------------------------------------------------------------
  
 Spacing correction for all tab group styles
