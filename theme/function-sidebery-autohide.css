@@ -11,6 +11,7 @@ Adjustment for Sideberry only setups
 /* Hiding sidebery ----------------------------------------------------------------------*/
 
 @media -moz-pref("ultima.sidebery.autohide") {
+@media not -moz-pref("ultima.sidebar.autohide") {
 
 /* this method allows the sidebar-splitter (resizeable bar) to be used to resize the expanded sidebar width */ 
     
@@ -56,11 +57,13 @@ Adjustment for Sideberry only setups
     }
 
 }
+}
 
 /* Adjustment for Sideberry only setups --------------------------------------------------*/
 
 @media -moz-pref("ultima.sidebery.autohide") {
 @media -moz-pref("ultima.disable.verticaltab.bar") {
+@media not -moz-pref("ultima.sidebar.autohide") {
 
     /*left then right*/
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] { 
@@ -76,7 +79,7 @@ Adjustment for Sideberry only setups
     }
     
     /*browser content margins left then right*/
-    #main-window:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
+    #main-window[inDOMFullscreen="false"]:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
         margin-left:var(--browser-content-margin-4-sb-autohide) !important;
     }
     #main-window:has(#sidebar-box[checked="true"][sidebar-positionend]) #tabbrowser-tabbox {
@@ -104,5 +107,6 @@ Adjustment for Sideberry only setups
         
     }
       
+}
 }
 }
