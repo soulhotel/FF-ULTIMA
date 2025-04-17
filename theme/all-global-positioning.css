@@ -759,6 +759,13 @@ menupopup menuseparator {opacity:0.2 !important;}
   }
 }
 
+/* 4/17/2025 firefox 137-138+ */
+
+@media -moz-pref("sidebar.visibility", "expand-on-hover") {
+  #sidebar-box {
+    --sidebar-border-color: light-dark(rgba(207, 207, 216,0), rgba(82, 82, 94,0)) !important;
+  }
+}
 
 /*--------------------------------------------------------------------------------------------------------------------*/
     
