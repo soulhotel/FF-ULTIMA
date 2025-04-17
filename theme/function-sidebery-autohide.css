@@ -55,7 +55,15 @@ Adjustment for Sideberry only setups
     .sidebar-panel {
         background-color: transparent !important;
     }
-
+    /*
+    #main-window:-moz-window-inactive {
+        --uc-sidebar-collapsed-width: 38px !important;
+        #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) { 
+            --uc-sidebar-collapsed-width: 38px !important;
+            max-width: var(--uc-sidebar-collapsed-width) !important;
+        }
+    }
+    */
 }
 }
 
