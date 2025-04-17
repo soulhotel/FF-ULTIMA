@@ -8,6 +8,7 @@
 - `Firefox 137 delivers with ExpandOnHover Auto-hiding!`
 - Sidebar [glitching out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) [error fixed](https://whattrainisitnow.com/beta/)!
 - New optional settings, user.js is not necessarily required for returning Users.
+- Firefox 138, tab groups can now be dragged/moved & tabs can now be moved around them.
 - Firefox 138+ required.
 
 ### <ins> Change Log:
@@ -18,6 +19,7 @@
 - `new` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser window #279
 - `qol` Setting `ultima.sidebery.autohide` restored to overlay browser content when used vertical tab bar is disabled (`ultima.disable.verticaltab.bar`) #283
 - `fix` spacing corrections
+- `qol` Sidebar white/gray border removed
 - `qol` Mini toolbar buttons under vertical tabs are now centered
 - `new` Setting `ultima.xstyle.newtabbutton.ontop.i` & `ultima.xstyle.newtabbutton.ontop.ii` Vertical Tab New Tab buttons will sit at the top of the Sidebar
 - `wip` Autoconfig support restoration.
