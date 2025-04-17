@@ -13,6 +13,7 @@ Menu bar
 Browser Content
 Horizontal tabs
 Side bar
+Sidebar Seperator
 Vertical Tabs Tweaks
 Vertical Tabs Disabled - setting
 Extra modifications woth no place to go (yet)
@@ -457,6 +458,28 @@ box-shadow: none !important;}}
     box-shadow: 1px 2px 6px 0 light-dark(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)) !important;
     border: 0px solid var(--sidebar-border-color) !important;
 }}}
+
+
+/* Sidebar Seperator ----------------------------------------------------------------------*/
+
+@media -moz-pref("ultima.sidebar.seperator") {
+  
+    #sidebar-box:not([sidebar-positionend]) {
+        order:7 !important;
+        margin-right:5px !important;
+        @media -moz-pref("ultima.spacing.compact") {
+            margin-right:0px !important;
+        }        
+    }
+  
+    #main-window:has(#sidebar-box:not([sidebar-positionend])) #tabbrowser-tabbox {
+        margin-left:-5px !important;
+    }
+
+    #main-window:has(#sidebar-box:not([sidebar-positionend])) #sidebar-splitter{
+        order:6 !important;
+    }
+}
 
 
 /* Vertical Tabs Sidebar ------------------------------------------------------------------*/
