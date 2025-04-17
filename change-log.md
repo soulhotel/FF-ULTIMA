@@ -6,23 +6,34 @@
 
 ### <ins> Version Notes
 - `Firefox 137 delivers with ExpandOnHover Auto-hiding!`
-- Sidebar [glitching out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) error fixed!
+- Sidebar [glitching out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) [error fixed](https://whattrainisitnow.com/beta/)!
+- New optional settings, user.js is not necessarily required for returning Users.
 - Firefox 138+ required.
 
 ### <ins> Change Log:
 - `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings
-- `new` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser window
-- 
-- spacing corrections
-- `new` Setting `ultima.xstyle.newtabbutton.ontop.i` & `ultima.xstyle.newtabbutton.ontop.ii` Vertical Tab New Tab buttons will sit at the top of the Sidebar
-- `fix` resizable-bars (splitters) for both sidebars are now styled and easier to trigger on hover
+- `info` Setting `ultima.sidebar.longer` `ultima.sidebar.hidden` no longer needed. Sidebar can now be resized with the resizeable-bar
+- `fix` resizable-bars (splitters) for both sidebars are now styled and functional triggers on ALL sidebars
+- `fix` Window outlines in fullscreen videos, fixed #280
+- `new` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser window #279
+- `qol` Setting `ultima.sidebery.autohide` restored to overlay browser content when used vertical tab bar is disabled (`ultima.disable.verticaltab.bar`) #283
+- `fix` spacing corrections
 - `qol` Mini toolbar buttons under vertical tabs are now centered
+- `new` Setting `ultima.xstyle.newtabbutton.ontop.i` & `ultima.xstyle.newtabbutton.ontop.ii` Vertical Tab New Tab buttons will sit at the top of the Sidebar
 - `wip` Autoconfig support restoration.
 - *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
 
 > Sidebar resizing, positioning, left/right
 
 https://github.com/user-attachments/assets/b66c4dd4-c38b-4774-8182-80e67a0a1369
+
+> Sidebar seperator, new setting
+
+https://github.com/user-attachments/assets/481a3d36-1dbf-4413-b51b-4b8e56606da0
+
+> Sidebery resizing
+
+https://github.com/user-attachments/assets/02e408a6-0cc1-496f-9388-1f4ef0958327
 
 > New Tab Button On Top
 
