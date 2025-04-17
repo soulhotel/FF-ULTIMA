@@ -464,21 +464,44 @@ box-shadow: none !important;}}
 
 @media -moz-pref("ultima.sidebar.seperator") {
   
-    #sidebar-box:not([sidebar-positionend]) {
+    /*vert tabs left, sidebar right*/
+    #sidebar-box[checked="true"]:not([sidebar-positionend]) {
         order:7 !important;
         margin-right:5px !important;
         @media -moz-pref("ultima.spacing.compact") {
             margin-right:0px !important;
         }        
-    }
-  
-    #main-window:has(#sidebar-box:not([sidebar-positionend])) #tabbrowser-tabbox {
+    }  
+    #main-window:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
         margin-left:-5px !important;
+        @media -moz-pref("ultima.spacing.compact") {
+            margin-left:0px !important;
+        }     
     }
-
-    #main-window:has(#sidebar-box:not([sidebar-positionend])) #sidebar-splitter{
+    #main-window:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #sidebar-splitter {
         order:6 !important;
     }
+    
+    /*vert tabs right, sidebar left*/
+    #sidebar-box[checked="true"][sidebar-positionend] {
+        order:1 !important;
+        margin-left:5px !important;
+        @media -moz-pref("ultima.spacing.compact") {
+            margin-left:0px !important;
+        }        
+    }  
+    #main-window:has(#sidebar-box[sidebar-positionend]) #tabbrowser-tabbox {
+        margin-right:-9px !important;
+        margin-left:5px !important;
+        @media -moz-pref("ultima.spacing.compact") {
+            margin-left:0px !important;
+            margin-right:0px !important;
+        }     
+    }
+    #main-window:has(#sidebar-box[checked="true"][sidebar-positionend]) #sidebar-splitter {
+        order:1 !important;
+    }        
+    
 }
 
 
