@@ -3,101 +3,106 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Autohide Sidebery, the other Sidebars remain static/resizable
 
+Hiding sidebery
+Adjustment for Sideberry only setups
+
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-@media -moz-pref("ultima.sidebar.hidden") {
-    @media -moz-pref("ultima.sidebery.autohide") {
-        #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] { 
-            --uc-sidebar-width: 0.4px !important; 
-            margin:0 !important;
-        }
-    }
-}
+/* Hiding sidebery ----------------------------------------------------------------------*/
 
 @media -moz-pref("ultima.sidebery.autohide") {
-    @media -moz-pref("ultima.sidebar.longer") {
-        #sidebar-box {--uc-sidebar-hover-width: 400px !important;} 
-    }
-}
 
-@media -moz-pref("ultima.sidebery.autohide") {
-    :root {
-        --bg: #1a1b26;
-    }
-    /*#TabsToolbar-customization-target, #tabbrowser-tabs {
-        z-index: 999 !important;
-    }*/
+/* this method allows the sidebar-splitter (resizeable bar) to be used to resize the expanded sidebar width */ 
     
-    /* sidebar adopts theme borders */
-    #sidebar {
-        border-radius: var(--uc-all-border-radius) !important;
-    }
+    :root {--browser-content-margin-4-sb-autohide:36px;}
     
-    /* autohide */
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-        --uc-sidebar-width: 38px;
-        --uc-sidebar-hover-width: 320px;
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) { 
+        --uc-sidebar-collapsed-width: 38px;
         --uc-autohide-sidebar-delay: 4ms;
-        /* Waiting time before hiding sidebar */
         position: relative;
-        min-width: var(--uc-sidebar-width) !important;
-        width: var(--uc-sidebar-width) !important;
-        max-width: var(--uc-sidebar-width) !important;
-        z-index: 1;
+        min-width: 14em;
+        max-width: var(--uc-sidebar-collapsed-width) !important;
+    }
+    #main-window:has(#sidebar-splitter:hover) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
+    #main-window:has(#sidebar-splitter:hover) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) { 
+        min-width: 14em;
+        max-width: 75vw !important; 
     }
 
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] {
         direction: rtl;
     }
-
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]>* {
         direction: ltr;
     }
-
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl) {
         direction: ltr;
     }
-
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl)>* {
         direction: rtl;
     }
 
-    /* HIDE SIDE BAR IN FULL SCREEN */
-    #main-window[titlepreface*="[S] "][inFullscreen="true"] #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
-        --uc-sidebar-width: 0px;
+    #sidebar-box {
+        transition: max-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+        min-width: var(--uc-sidebar-collapsed-width) !important;
+        will-change: max-width;
     }
-
-    #sidebar {
-        transition: min-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
-        min-width: var(--uc-sidebar-width) !important;
-        will-change: min-width;
-    }
-
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover>#sidebar {
-        min-width: var(--uc-sidebar-hover-width) !important;
+        max-width: var(--uc-sidebar-collapsed-width) !important;
         transition-delay: 0ms !important;
     }
-
     .sidebar-panel {
         background-color: transparent !important;
     }
 
-    .sidebar-panel #search-box {
-        -moz-appearance: none !important;
-        background-color: var(--uc-button-selected) !important;
-        color: inherit !important;
+}
+
+/* Adjustment for Sideberry only setups --------------------------------------------------*/
+
+@media -moz-pref("ultima.sidebery.autohide") {
+@media -moz-pref("ultima.disable.verticaltab.bar") {
+
+    /*left then right*/
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] { 
+        position: fixed !important;
+        top:var(--uc-topbars-combined-height) !important;
+        left:1px !important;
+        right:unset !important;
+        height:calc(100vh - var(--uc-topbars-combined-height) - 5px) !important;
     }
-
-    /* Move statuspanel over so it doesn't get covered by sidebar */
-
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover~#appcontent #statuspanel {
-        inset-inline: auto 0px !important;
+    #sidebar-box[sidebar-positionend][sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+        left:unset !important;
+        right:5px !important;
     }
-
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([positionend]):hover~#appcontent #statuspanel-label {
-        margin-inline: 0px !important;
-        border-left-style: solid !important;
+    
+    /*browser content margins left then right*/
+    #main-window:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
+        margin-left:var(--browser-content-margin-4-sb-autohide) !important;
     }
-
+    #main-window:has(#sidebar-box[checked="true"][sidebar-positionend]) #tabbrowser-tabbox {
+        margin-right:var(--browser-content-margin-4-sb-autohide) !important;
+    }    
+    
+    /*fullscreen adjust*/
+    #main-window[inFullscreen="true"] {
+        & #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+            top:var(--uc-topbars-combined-height) !important;
+        }
+        & #sidebar-box[sidebar-positionend][sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+        right:1px !important;
+        }
+        & #tabbrowser-tabbox {
+            --browser-content-margin-4-sb-autohide:33px !important;
+        }
+    }
+    
+    /*compact spacing adjust*/
+    @media -moz-pref("ultima.spacing.compact") {
+        & #tabbrowser-tabbox {
+            --browser-content-margin-4-sb-autohide:33px !important;
+        }        
+        
+    }
+      
+}
 }
