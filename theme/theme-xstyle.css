@@ -359,31 +359,30 @@ Tab groups with Color mixed backgrounds
 /* bookmarks autohide -------------------------------------------------------------------------------------- */
  
 @media -moz-pref("ultima.xstyle.bookmarks.autohide") {
-    :root:not(:has(#navigator-toolbox:hover)):not(:has(#main-window[inFullscreen="true"])) {
-        
-        /* set smaller height when not hovered, compatible with all features */
-        --uc-bookbar-height:4px !important;
-        
-        /* make-shift indicator, consistent with theming */
-        #PlacesToolbar:not(:hover) {
-            background-color:var(--uc-accent-ii) !important;
-            border-radius:12px !important;
-            opacity:0.5 !important;
-            width:80% !important; margin-inline:10% !important;
-        }    
-        
-        /* hide internal elements */   
-        #PlacesToolbarItems {
-            opacity: 0 !important;
-            transition: opacity 0.3s ease-out; 
+    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)) {       
+        &#main-window:not([inFullscreen="true"]) {
+            
+            /* set smaller height when not hovered, compatible with all features */
+            --uc-bookbar-height:4px !important;
+            /* make-shift indicator, consistent with theming */
+            #PlacesToolbar:not(:hover) {
+                background-color:var(--uc-accent-ii) !important;
+                border-radius:12px !important;
+                opacity:0.5 !important;
+                width:80% !important; margin-inline:10% !important;
+            }    
+            /* hide internal elements */   
+            #PlacesToolbarItems {
+                opacity: 0 !important;
+                transition: opacity 0.3s ease-out; 
+            }
+            #PlacesToolbarItems:hover {
+                opacity: 1 !important;
+                transition: opacity 0.2s ease-in;
+            }
+            
         }
-        #PlacesToolbarItems:hover {
-            opacity: 1 !important;
-            transition: opacity 0.2s ease-in;
-        }
-        
     }
-    
 }
 
 
