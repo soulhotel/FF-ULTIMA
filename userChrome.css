@@ -15,7 +15,6 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/all-color-schemes.css);
 
 @import url(theme/function-sidebar-autohide.css);
-@import url(theme/function-sidebery-autohide.css);
 @import url(theme/function-privatemode.css); /* sourced from MOG */
 @import url(theme/function-urlbar.css);
 @import url(theme/function-extensions-menu.css);
