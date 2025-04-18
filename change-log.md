@@ -16,7 +16,7 @@
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` Vertical Tab autohiding can be enabled/disabled in the Settings Sidebar
 - `fyi • ℹ️ • ` Firefox 138, tab groups can now be dragged/moved & tabs can now be moved around them
-- `fyi • ℹ️ • ` Remove Setting `ultima.sidebar.longer` & `ultima.sidebar.hidden`
+- `fyi • ℹ️ • ` Remove Settings `ultima.sidebar.longer`,`ultima.sidebar.hidden`,`ultima.disable.contextmenu.collapsing`
 - `fix • 🔴 • ` Window outlines in fullscreen videos, fixed #280
 - `fix • 🔴 • ` spacing corrections, left/right
 - `fix • 🔴 • ` All sidebar splitters (resizeable bar) are styled and work great
