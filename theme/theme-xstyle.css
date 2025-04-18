@@ -383,7 +383,7 @@ Tab groups with Color mixed backgrounds
         #PlacesToolbar:not(:hover) {
             background-color:var(--uc-accent-ii) !important;
             border-radius:12px !important;
-            opacity:0.7 !important;
+            opacity:0.5 !important;
             width:80% !important; margin-inline:10% !important;
         }    
         
