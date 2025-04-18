@@ -13,7 +13,6 @@ Menu bar
 Browser Content
 Horizontal tabs
 Side bar
-Sidebar Seperator
 Vertical Tabs Tweaks
 Vertical Tabs Disabled - setting
 Extra modifications woth no place to go (yet)
@@ -401,7 +400,7 @@ box-shadow: none !important;}}
 #sidebar-splitter {
     background-color: transparent !important;
     border: transparent solid 0px !important;
-    padding:2px !important;
+    padding:2.5px !important;
     margin: 55px 0px 55px 0px !important;
     border-radius: 10px !important;
     opacity: 0.5 !important;
@@ -517,7 +516,7 @@ box-shadow: none !important;}}
 /* custom splitter - resizeable bar */
 :root:not([inDOMFullscreen="true"]) #sidebar-launcher-splitter {
     @media -moz-pref("sidebar.revamp") {
-        padding:2px !important;
+        padding:2.5px !important;
         margin: 55px 0px 55px 0px !important;
         border-radius: 10px !important;
         opacity: 0.5 !important;
@@ -766,6 +765,8 @@ menupopup menuseparator {opacity:0.2 !important;}
     --sidebar-border-color: light-dark(rgba(207, 207, 216,0), rgba(82, 82, 94,0)) !important;
   }
 }
+
+
 
 /*--------------------------------------------------------------------------------------------------------------------*/
     
