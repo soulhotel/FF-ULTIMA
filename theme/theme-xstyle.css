@@ -361,35 +361,42 @@ Tab groups with Color mixed backgrounds
     :root:has(#navigator-toolbox:not(:hover)) {
         #PlacesToolbar {
           opacity: 0.05 !important;
-          transition: opacity 4s ease-out; /* Slow ease-out when not hovered */
+          transition: opacity 4s ease-out;
         }
 
         #PlacesToolbar:hover {
           opacity: 1 !important;
-          transition: opacity 0.2s ease-in; /* Fast ease-in when hovered */
+          transition: opacity 0.2s ease-in;
         }
     }
 }
  
-/* bookmarks fade out -------------------------------------------------------------------------------------- */
+/* bookmarks autohide -------------------------------------------------------------------------------------- */
  
 @media -moz-pref("ultima.xstyle.bookmarks.autohide") {
-    :root:not(:has(#navigator-toolbox:hover)):not(:has(#main-window[inFullscreen="true"])) {      
-        --uc-bookbar-height:3px !important;
-        #PersonalToolbar::before {
-        content: ""; background-color:var(--uc-accent-ii); opacity:0.5; border-radius:12px;
-        position: absolute; z-index: 1;bottom: 0;right: 0;left:0;
-        height: var(--uc-bookbar-height); width: 80%; margin-inline:10%;
+    :root:not(:has(#navigator-toolbox:hover)):not(:has(#main-window[inFullscreen="true"])) {
+        
+        /* set smaller height when not hovered, compatible with all features */
+        --uc-bookbar-height:4px !important;
+        
+        /* make-shift indicator, consistent with theming */
+        #PlacesToolbar:not(:hover) {
+            background-color:var(--uc-accent-ii) !important;
+            border-radius:12px !important;
+            opacity:0.7 !important;
+            width:80% !important; margin-inline:10% !important;
+        }    
+        
+        /* hide internal elements */   
+        #PlacesToolbarItems {
+            opacity: 0 !important;
+            transition: opacity 0.3s ease-out; 
+        }
+        #PlacesToolbarItems:hover {
+            opacity: 1 !important;
+            transition: opacity 0.2s ease-in;
         }
         
-        #PlacesToolbar {
-          opacity: 0 !important;
-          transition: opacity 0.3s ease-out; /* Slow ease-out when not hovered */
-        }
-        #PlacesToolbar:hover {
-          opacity: 1 !important;
-          transition: opacity 0.2s ease-in; /* Fast ease-in when hovered */
-        }
     }
     
 }
