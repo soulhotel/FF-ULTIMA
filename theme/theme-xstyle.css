@@ -4,15 +4,18 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Alternative styles and settings for elements within the browser
  
 URL Bar
-theme colors
 pinned tabs
 tab groups
 compact tabs
 container tabs
 bookmarks fade out
- 
+bookmarks autohide
+new tab button on top or bottom
+highlight aboutconfig tab
+
 \////////////////////////////////////////////////////////////////////////////////////////*/
  
+
 /* alternative styling for URL Bar ------------------------------------------------------------------------------- */
  
  
@@ -31,25 +34,7 @@ bookmarks fade out
 #identity-box, #tracking-protection-icon-container, #page-action-buttons {
     margin-top:1px !important; margin-bottom:-1px !important; cursor: pointer !important;
 }
- 
-/* theme colors -------------------------------------------------------------------------------------------------- */
-/*alternative styling for theme colors by rearranging current color palette/variables*/
-/*
-@media -moz-pref("ultima.theme.color.swap") {
- 
-    #main-window[lwtheme] #unified-extensions-button {
-        list-style-image: url("icons/extensions.svg") !important;
-        fill: var(--lwt-text-color) !important;
-    }
-    #main-window[lwtheme] body {
-        background: var(--arrowpanel-background) !important;
-    }    
-    #main-window[lwtheme] #tabbrowser-tabpanels browser[type] {
-        margin-top:4px !important;
-        outline: 4px solid var(--arrowpanel-background) !important;
-    }
-}
-*/
+
  
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 /*alternative styling for pinned tabs*/
@@ -401,8 +386,10 @@ Tab groups with Color mixed backgrounds
     
 }
 
+
 /* ---------------------------------------------------------------------------------------------- */
  
+
 img[src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRUlEQVQ4T41TTWjUQBjNTBJ3I7vZzZ/Wi4sX8WBlDwpWsCy9qqhHqR6KWL160It49eDJk7UoKP7gQQTFiyfFFqmg4LkI7epFYZPNZtWkJJOMb7bZEktZDczu/Hzzvve9Nx+RNn31en1SUZQz2J6SON81OCbkO37fMMae9nq9heIVUljItmHclxXl3GbQ4jpl7JHr+zPYSwfY+aFsWdaiQunEqMvDM5ZlS57nHRUgAwBkfozM0wljCyxNr/T7/WO6rk9vU1W2XgFpdFz3uqZpi1q5fFNVlEkweQImZ4lpmodVWV4SgUmazne73UuYVjAyjDDPKta/MTji7yD+Yh4/QZD94bDulPNDrut+GlWGbdstmZC3IkboQRzHWaGStCfNshgl7AuCYHUUAFxqoIRlSkgJFFeJY9sRFmVk/4bsjf8RESy+gsXujPM1ARACQANAAAAzr30UDrUty5cp1QEQEaAtA22vuAF7TsGel//Q4DjiXw004PyL0OAeXtx51/PSuq5zidKW7/vvtwLZUa0e4aXSczAey124KwCa8Vr8OfgZxPD7F4YoI4JYU7D0gwisVCqtMAyfOZZlF4Fjxg6sPyTbnget2TiKxiVVbXLOL2DMwJGV/Pwg+uBjSVU37sOBW51O5/JGL5iG8Y5SOg47m7Vard9ut3uFbFWI/QPUt+f+v8ArPC3mxWYSTG5Dj1nsB9BkP/5FF4pvbKfjDOZgcsPz/WtD8L8AxKZlGFch5MkkSU6gJ7piD4wMldIHnNLXcGmuqMMfsGP6IYOu2qkAAAAASUVORK5CYII="],
 img[src="page-icon:https://github.com/sponsors/accounts"],
 img[src*="github"] {
@@ -414,8 +401,10 @@ border-radius:100% !important;
  
 }
  
-/* ---------------------------------------------------------------------------------------------- */
- 
+
+/* new tab button ------------------------------------------------------------------------------------------ */
+
+
 @media -moz-pref("ultima.xstyle.newtabbutton.ontop.i") { 
     #vertical-tabs-newtab-button {
         order: -1 !important;
@@ -441,4 +430,12 @@ border-radius:100% !important;
     #vertical-tabs-newtab-button {
       order: -1 !important;
     }    
+}
+
+
+/* highlight aboutconfig tab ------------------------------------------------------------------------------- */
+
+
+@media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
+    #tabbrowser-tabs tab[label="Advanced Preferences"] .tab-background {outline-color: var(--uc-accent-ii) !important;}
 }
