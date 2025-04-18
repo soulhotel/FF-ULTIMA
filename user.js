@@ -22,27 +22,21 @@ user_pref("user.theme.dark.gruvbox", false);
 user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 
-/*titlebar and tabs*/
+/*titlebar, tabbar*/
 user_pref("ultima.disable.alltabs.button", true);
-user_pref("ultima.disable.contextmenu.collapsing", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.disable.verticaltab.bar.withindicator", true);
+user_pref("ultima.xstyle.bookmarks.autohide", true);
+user_pref("ultima.spacing.compact.tabs", false);
+user_pref("ultima.tabs.belowURLbar", true);
 user_pref("browser.tabs.tabMinWidth", 0);
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
-user_pref("sidebar.expandOnHover", true); /* marked for replacement */
-user_pref("ultima.tabs.belowURLbar", true);
-user_pref("ultima.spacing.compact.tabs", false);
+user_pref("sidebar.expandOnHover", true); 
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebery.autohide", true);
-
-/*extra theming*/
-user_pref("ultima.theme.extensions", true);
-user_pref("ultima.theme.icons", true);
-user_pref("ultima.theme.menubar", true);
-user_pref("ultima.theme.color.swap", false);
 
 /*url bar*/
 user_pref("ultima.navbar.autohide", false);
@@ -50,6 +44,12 @@ user_pref("ultima.urlbar.suggestions", true);
 user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hidebuttons", false);
 user_pref("ultima.xstyle.urlbar", false);
+
+/*extra theming*/
+user_pref("ultima.theme.extensions", true);
+user_pref("ultima.theme.icons", true);
+user_pref("ultima.theme.menubar", true);
+user_pref("ultima.theme.color.swap", false);
 
 /*alternate styles*/
 user_pref("ultima.spacing.compact", false);
@@ -65,7 +65,6 @@ user_pref("ultima.xstyle.newtabbutton.ontop.ii", false);
 user_pref("ultima.xstyle.newtab.rounded", false);
 user_pref("ultima.xstyle.private", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
-user_pref("ultima.xstyle.bookmarks.autohide", true);
 user_pref("ultima.xstyle.newtab.rounded", false);
 
 /*override wallpapers*/
@@ -124,8 +123,4 @@ user_pref("general.smoothScroll.msdPhysics.enabled", true);
 
 /*privacy*/
 user_pref("browser.send_pings", false); 
-user_pref("dom.battery.enabled", false);
 user_pref("extensions.pocket.enabled", false);
-
-user_pref("dom.event.clipboardevents.enabled", true); /* marked for removal */
-user_pref("datareporting.healthreport.uploadEnabled", false); /* marked for removal */
