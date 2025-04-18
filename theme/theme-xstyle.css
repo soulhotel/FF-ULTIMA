@@ -377,8 +377,9 @@ Tab groups with Color mixed backgrounds
     :root:not(:has(#navigator-toolbox:hover)):not(:has(#main-window[inFullscreen="true"])) {      
         --uc-bookbar-height:3px !important;
         #PersonalToolbar::before {
-        content: "";background-color:var(--uc-accent-ii);position: absolute;
-        z-index: 1;bottom: 0;right: 0;left:0;width: 80%;height: var(--uc-bookbar-height); border-radius:12px; margin-inline:10%;
+        content: ""; background-color:var(--uc-accent-ii); opacity:0.5; border-radius:12px;
+        position: absolute; z-index: 1;bottom: 0;right: 0;left:0;
+        height: var(--uc-bookbar-height); width: 80%; margin-inline:10%;
         }
         
         #PlacesToolbar {
