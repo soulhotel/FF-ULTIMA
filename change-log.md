@@ -26,6 +26,8 @@
 - `qol` Thinner Vertical Tabs
 - `qol` Tab group white border removed
 - `qol` Mini toolbar buttons under vertical tabs are now centered
+- `qol` Setting `ultima.spacing.compact` now shrinks tab margins slightly
+- `qol` Setting `ultima.spacing 
 - `new` Setting `ultima.xstyle.newtabbutton.ontop.i` & `ultima.xstyle.newtabbutton.ontop.ii` Vertical Tab New Tab buttons will sit at the top of the Sidebar
 - `wip` Autoconfig support restoration.
 - *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
