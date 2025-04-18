@@ -37,8 +37,6 @@ user_pref("ultima.spacing.compact.tabs", false);
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebery.autohide", true);
-user_pref("ultima.sidebar.hidden", false);
-user_pref("ultima.sidebar.longer", true);
 
 /*extra theming*/
 user_pref("ultima.theme.extensions", true);
@@ -67,6 +65,7 @@ user_pref("ultima.xstyle.newtabbutton.ontop.ii", false);
 user_pref("ultima.xstyle.newtab.rounded", false);
 user_pref("ultima.xstyle.private", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
+user_pref("ultima.xstyle.bookmarks.autohide", true);
 user_pref("ultima.xstyle.newtab.rounded", false);
 
 /*override wallpapers*/
