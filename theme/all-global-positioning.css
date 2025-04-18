@@ -562,7 +562,7 @@ just need to find the right combination of sidebar-launcher events
 }
 :root:has([sidebar-launcher-expanded][sidebar-panel-open])) {
   & #sidebar-box:not([sidebar-positionend]) {
-        margin-inline-start: 533.3666687px !important;
+        margin-inline-start: 50.3666687px !important;
   }
 }
 
