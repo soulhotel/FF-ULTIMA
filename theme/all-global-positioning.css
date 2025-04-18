@@ -139,7 +139,8 @@ Extra modifications woth no place to go (yet)
     #urlbar{transform: scale(0.99);}
     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {transform: scale(0.98);}
     #sidebar-box, #sidebar{padding:0px !important; --uc-all-border-radius:0px !important;} 
-    
+    .tab-background {margin-block: 1px !important;}
+
 }
 
 /*full screen compacting*/
