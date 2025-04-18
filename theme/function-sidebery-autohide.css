@@ -87,6 +87,9 @@ Adjustment for Sideberry only setups
     }
     
     /*browser content margins left then right*/
+    #main-window:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
+        margin-left:var(--browser-content-margin-4-sb-autohide) !important;
+    }
     #main-window[inDOMFullscreen="false"]:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
         margin-left:var(--browser-content-margin-4-sb-autohide) !important;
     }
