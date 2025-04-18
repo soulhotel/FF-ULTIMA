@@ -21,35 +21,34 @@ bing declutter
 
 /* about:config page*/
 @-moz-document url(chrome://browser/content/browser.xul), url(about:config) {
-    @media (prefers-color-scheme: dark){
-        html, body {
-            background: rgb(43, 42, 51) !important;
+    @media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
+
+        /* ff ultima guide - style 1 */
+        #toolbar::after {
+            content: "🇺 Type 'ultima' or 'user.theme' for FF Ultima theme settings 🇺";
+            display: flex;
+            padding: 10px 1px 0px 5px;
+            border-radius: var(--uc-all-border-radius);
+            background: var(--in-content-page-background);
+            color: white;
+            font-size: 16px;
         }
+        /* ff ultima guide - style 2 */
+        /*
+        body::before {
+            content: "↓ type 'ultima' to configure the FF Ultima theme ⤝⥄⤞ type 'user.theme' to switch between color schemes ↓";
+            display: flex;
+            padding: 8px 8px 8px 3%;
+            border-radius: var(--uc-all-border-radius);
+            background: rgb(71, 66, 143);
+            color: white;
+            font-weight: bolder;
+            font-size: 16px;
+        }
+        */
     }
-    /* ff ultima guide - style 1 */
-    #toolbar::after {
-        content: "🇺 Type 'ultima' or 'user.theme' for FF Ultima theme settings 🇺";
-        display: flex;
-        padding: 10px 1px 0px 5px;
-        border-radius: var(--uc-all-border-radius);
-        background: var(--in-content-page-background);
-        color: white;        
-        font-size: 16px;
-    }
-    /* ff ultima guide - style 2 */
-    /*
-    body::before {
-        content: "↓ type 'ultima' to configure the FF Ultima theme ⤝⥄⤞ type 'user.theme' to switch between color schemes ↓";
-        display: flex;
-        padding: 8px 8px 8px 3%;
-        border-radius: var(--uc-all-border-radius);
-        background: rgb(71, 66, 143);
-        color: white;
-        font-weight: bolder;
-        font-size: 16px;
-    }
-    */
 }
+
 
 /*--------------------------------------------------------------------------------*/
 
