@@ -546,8 +546,6 @@ box-shadow: none !important;}}
 }
 
 
-
-
 /* positioning */
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabbox {
@@ -586,6 +584,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
 /* pinned tabs container */    
 #vertical-pinned-tabs-container {padding-bottom: 0px !important;}
 #vertical-pinned-tabs-container-separator {opacity:0 !important; display: none !important;}
+#vertical-pinned-tabs-container tab:last-of-type {padding-bottom: 15px !important;}
 
 /* vt when not expanded */
 #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {
