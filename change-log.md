@@ -7,30 +7,32 @@
 - 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### <ins> Version Notes
-- `Firefox 137 delivers with ExpandOnHover Auto-hiding!`
+- *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite part - to a point where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it, while it last. Stability.*
+- **Thank you** to everyone that have been reporting issues and beta changes
 - Sidebar [glitching out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) [error fixed](https://whattrainisitnow.com/beta/)!
-- Firefox 138, tab groups can now be dragged/moved & tabs can now be moved around them.
-- User.js recommended (not required) for new settings.
-- Firefox 138+ required.
+- User.js recommended (not required) for new settings
+- Firefox 138+ required
 
 ### <ins> Change Log:
-- `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings
-- `info` Remove Setting `ultima.sidebar.longer` & `ultima.sidebar.hidden`.
-- `fix` Window outlines in fullscreen videos, fixed #280
-- `fix` spacing corrections
-- `fix` All sidebar splitters (resizeable bar) are styled and functional
-- `fix` Setting `ultima.sidebery.autohide` will overlay browser-content when vertical tabs are disabled (`ultima.disable.verticaltab.bar`) #283
-- `new` Setting `ultima.xstyle.bookmarks.autohide` autohide bookmarks bar
-- `new` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser window #279
-- `qol` Sidebar white/gray border removed
-- `qol` Thinner Vertical Tabs
-- `qol` Tab group white border removed
-- `qol` Mini toolbar buttons under vertical tabs are now centered
-- `qol` Setting `ultima.spacing.compact` now shrinks tab margins slightly
-- `qol` Setting `ultima.spacing 
-- `new` Setting `ultima.xstyle.newtabbutton.ontop.i` & `ultima.xstyle.newtabbutton.ontop.ii` Vertical Tab New Tab buttons will sit at the top of the Sidebar
-- `wip` Autoconfig support restoration.
-- *** Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
+- `fyi • ℹ️ • ` Vertical Tab autohiding can be enabled/disabled in the Settings Sidebar
+- `fyi • ℹ️ • ` Firefox 138, tab groups can now be dragged/moved & tabs can now be moved around them
+- `fyi • ℹ️ • ` Remove Setting `ultima.sidebar.longer` & `ultima.sidebar.hidden`
+- `fix • 🔴 • ` Window outlines in fullscreen videos, fixed #280
+- `fix • 🔴 • ` spacing corrections, left/right
+- `fix • 🔴 • ` All sidebar splitters (resizeable bar) are styled and work great
+- `fix • 🔴 • ` Setting `ultima.sidebery.autohide` overlays webpage when verttabs are disabled #283
+- `new • 🟢 • ` Setting `ultima.xstyle.bookmarks.autohide` autohide bookmarks bar
+- `new • 🟢 • ` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser #279
+- `new • 🟢 • ` Setting `ultima.xstyle.newtabbutton.ontop.i` puts the New Tab button at the top of the Verttabs
+- `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` highlights the aboutconfig Tab
+- `qol • 🟡 • ` Sidebar white/gray border removed
+- `qol • 🟡 • ` Thinner Vertical Tabs
+- `qol • 🟡 • ` Tab group white border removed
+- `qol • 🟡 • ` Mini toolbar buttons under vertical tabs are now centered
+- `qol • 🟡 • ` Setting `ultima.spacing.compact` now shrinks tab margins slightly
+- `wip • 🔵 • `  Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
+
+
 
 > Bookmarksbar autohiding
 
