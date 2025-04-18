@@ -77,7 +77,7 @@ bookmarks fade out
 /* tab groups --------------------------------------------------------------------------------------------------- */
  
 /* alternative styling for tab groups for the new vertical tabs */
-
+ 
 .tab-group-label {
   tab-group[collapsed] > .tab-group-label-container > & {
     background-color: light-dark(var(--tab-group-color-pale), var(--tab-group-color));
@@ -358,18 +358,41 @@ Tab groups with Color mixed backgrounds
 /* bookmarks fade out -------------------------------------------------------------------------------------- */
  
 @media -moz-pref("ultima.xstyle.bookmarks.fading") {
-    #PlacesToolbar {
-      opacity: 0.2 !important;
-      transition: opacity 4s ease-out; /* Slow ease-out when not hovered */
-    }
- 
-    #PlacesToolbar:hover {
-      opacity: 1 !important;
-      transition: opacity 0.2s ease-in; /* Fast ease-in when hovered */
+    :root:has(#navigator-toolbox:not(:hover)) {
+        #PlacesToolbar {
+          opacity: 0.05 !important;
+          transition: opacity 4s ease-out; /* Slow ease-out when not hovered */
+        }
+
+        #PlacesToolbar:hover {
+          opacity: 1 !important;
+          transition: opacity 0.2s ease-in; /* Fast ease-in when hovered */
+        }
     }
 }
  
+/* bookmarks fade out -------------------------------------------------------------------------------------- */
  
+@media -moz-pref("ultima.xstyle.bookmarks.autohide") {
+    :root:not(:has(#navigator-toolbox:hover)):not(:has(#main-window[inFullscreen="true"])) {      
+        --uc-bookbar-height:3px !important;
+        #PersonalToolbar::before {
+        content: "";background-color:var(--uc-accent-ii);position: absolute;
+        z-index: 1;bottom: 0;right: 0;left:0;width: 80%;height: var(--uc-bookbar-height); border-radius:12px; margin-inline:10%;
+        }
+        
+        #PlacesToolbar {
+          opacity: 0 !important;
+          transition: opacity 0.3s ease-out; /* Slow ease-out when not hovered */
+        }
+        #PlacesToolbar:hover {
+          opacity: 1 !important;
+          transition: opacity 0.2s ease-in; /* Fast ease-in when hovered */
+        }
+    }
+    
+}
+
 /* ---------------------------------------------------------------------------------------------- */
  
 img[src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRUlEQVQ4T41TTWjUQBjNTBJ3I7vZzZ/Wi4sX8WBlDwpWsCy9qqhHqR6KWL160It49eDJk7UoKP7gQQTFiyfFFqmg4LkI7epFYZPNZtWkJJOMb7bZEktZDczu/Hzzvve9Nx+RNn31en1SUZQz2J6SON81OCbkO37fMMae9nq9heIVUljItmHclxXl3GbQ4jpl7JHr+zPYSwfY+aFsWdaiQunEqMvDM5ZlS57nHRUgAwBkfozM0wljCyxNr/T7/WO6rk9vU1W2XgFpdFz3uqZpi1q5fFNVlEkweQImZ4lpmodVWV4SgUmazne73UuYVjAyjDDPKta/MTji7yD+Yh4/QZD94bDulPNDrut+GlWGbdstmZC3IkboQRzHWaGStCfNshgl7AuCYHUUAFxqoIRlSkgJFFeJY9sRFmVk/4bsjf8RESy+gsXujPM1ARACQANAAAAzr30UDrUty5cp1QEQEaAtA22vuAF7TsGel//Q4DjiXw004PyL0OAeXtx51/PSuq5zidKW7/vvtwLZUa0e4aXSczAey124KwCa8Vr8OfgZxPD7F4YoI4JYU7D0gwisVCqtMAyfOZZlF4Fjxg6sPyTbnget2TiKxiVVbXLOL2DMwJGV/Pwg+uBjSVU37sOBW51O5/JGL5iG8Y5SOg47m7Vard9ut3uFbFWI/QPUt+f+v8ArPC3mxWYSTG5Dj1nsB9BkP/5FF4pvbKfjDOZgcsPz/WtD8L8AxKZlGFch5MkkSU6gJ7piD4wMldIHnNLXcGmuqMMfsGP6IYOu2qkAAAAASUVORK5CYII="],
