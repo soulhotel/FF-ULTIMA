@@ -7,7 +7,7 @@
 - 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
 
 ### <ins> Version Notes
-- *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite part - to a point where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it, while it last. Stability.*
+- *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite song - to that part where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it while it last. Stability.*
 - **Thank you** to everyone that have been reporting issues and beta changes
 - Sidebar [glitching out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) [error fixed](https://whattrainisitnow.com/beta/)!
 - User.js recommended (not required) for new settings
