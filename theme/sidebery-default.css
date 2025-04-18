@@ -61,6 +61,14 @@ rgb(5, 5, 5);          midnight dark
 .NavigationBar .nav-item .audio {
   display: none !important;
 }
+@media (max-width: 50px) {
+  .BottomBar {
+    padding-left:1px;
+  }
+  .static-btns {
+    padding-left:3px;
+  }
+}
 
 /* Pinned Tabs -----------------------------------------------*/
 
