@@ -439,3 +439,58 @@ border-radius:100% !important;
 @media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
     #tabbrowser-tabs tab[label="Advanced Preferences"] .tab-background {outline-color: var(--uc-accent-ii) !important;}
 }
+
+
+/* sidebar theming ----------------------------------------------------------------------------------------- */
+
+
+@media -moz-pref("ultima.xstyle.sidebar.theming") {
+
+/* customize sidebar ----------------------------------------------------*/
+
+/*sidebar header*/
+button[title="Close"] .button-background {
+    cursor: pointer !important;
+}
+
+/*sidebar check boxes*/
+@layer input-common { #input {
+    accent-color: var(--uc-accent-v) !important;
+}}
+
+/*sidebar links*/
+.customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+    color: var(--uc-accent-v) !important;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link) {
+    color: var(--uc-accent-v) !important;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* bookmarks sidebar ----------------------------------------------------*/
+
+/*sidebar header*/
+button[title="Close sidebar"] .button-background {
+    cursor: pointer !important;
+}
+
+/*text list*/
+.sidebar-placesTree {
+    appearance: none;
+    background-color: rgba(150,150,150,0.05) !important;
+    color: var(--uc-accent-i) !important;
+    border: 0.5px solid color-mix(in srgb, currentColor 24%, transparent) !important;
+    border-radius: var(--border-radius-medium) !important;
+    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
+    margin: 2% 2% 133px 2% !important;
+    padding-left:12px !important
+}
+
+/* history sidebar ------------------------------------------------------*/
+
+}
+
