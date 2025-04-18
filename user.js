@@ -87,6 +87,7 @@ user_pref("ultima.enable.nightly.config", false);
 user_pref("ultima.enable.js.config", false);
 
 /*other other*/
+user_pref("ultima.xstyle.highlight.aboutconfig", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("devtools.debugger.remote-enabled", true);
