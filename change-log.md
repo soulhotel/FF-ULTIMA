@@ -17,7 +17,7 @@
 - `info` Vertical Tab autohiding is now just Firefox's native ExpandOnHover with some adjustment, this can be enabled/disabled in Sidebar Settings
 - `info` Remove Setting `ultima.sidebar.longer` & `ultima.sidebar.hidden`.
 - `fix` Window outlines in fullscreen videos, fixed #280
-- `fix` spacing corrections
+- `fix` spacing corrections, thinner vertical tabs
 - `fix` All sidebar splitters (resizeable bar) are styled and functional
 - `fix` Setting `ultima.sidebery.autohide` will overlay browser-content when vertical tabs are disabled (`ultima.disable.verticaltab.bar`) #283
 - `new` Setting `ultima.xstyle.bookmarks.autohide` autohide bookmarks bar
