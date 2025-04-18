@@ -25,14 +25,17 @@
 - `new • 🟢 • ` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser #279
 - `new • 🟢 • ` Setting `ultima.xstyle.newtabbutton.ontop.i` puts the New Tab button at the top of the Verttabs
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` highlights the aboutconfig Tab
+- `new • 🟢 • `  Adaptive Tab Color [Extension now supportted](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) #247
 - `qol • 🟡 • ` Sidebar white/gray border removed
 - `qol • 🟡 • ` Thinner Vertical Tabs
 - `qol • 🟡 • ` Tab group white border removed
 - `qol • 🟡 • ` Mini toolbar buttons under vertical tabs are now centered
 - `qol • 🟡 • ` Setting `ultima.spacing.compact` now shrinks tab margins slightly
-- `wip • 🔵 • `  Adaptive Color Scheme, Adjustments for adaptive tab extension compatibility.
 
 
+> Adaptive Tab Color Support
+
+https://github.com/user-attachments/assets/789a31ea-d17a-4292-994e-97147f2c2a59
 
 > Bookmarksbar autohiding
 
