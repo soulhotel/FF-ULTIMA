@@ -12,6 +12,8 @@ bookmarks fade out
 bookmarks autohide
 new tab button on top or bottom
 highlight aboutconfig tab
+sidebar extra theming
+sidebery expand on inactive windows
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
  
@@ -441,7 +443,7 @@ border-radius:100% !important;
 }
 
 
-/* sidebar theming ----------------------------------------------------------------------------------------- */
+/* sidebar extra theming ----------------------------------------------------------------------------------------- */
 
 
 @media -moz-pref("ultima.xstyle.sidebar.theming") {
@@ -492,5 +494,14 @@ button[title="Close sidebar"] .button-background {
 
 /* history sidebar ------------------------------------------------------*/
 
+}
+
+
+/* sidebery expand on inactive windows ----------------------------------*/
+
+@media -moz-pref("ultima.sidebery.expandon.inactive.windows") {
+#sidebar-box:-moz-window-inactive:not(:hover) { 
+  max-width: unset !important;
+}
 }
 
