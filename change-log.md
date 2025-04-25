@@ -26,6 +26,7 @@
 - `new • 🟢 • ` Setting `ultima.xstyle.newtabbutton.ontop.i` puts the New Tab button at the top of the Verttabs
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` highlights the aboutconfig Tab
 - `new • 🟢 • `  Adaptive Tab Color [Extension now supported](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) #247
+- `new • 🟢 • ` Setting `ultima.sidebery.expandon.inactive.windows` to keep sidebars expanded on inactive windows. (accessibility) #248 @whatsnewsisyphus
 - `qol • 🟡 • ` Sidebar white/gray border removed
 - `qol • 🟡 • ` Thinner Vertical Tabs
 - `qol • 🟡 • ` Tab group white border removed
