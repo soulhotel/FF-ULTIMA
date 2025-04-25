@@ -84,11 +84,16 @@ user_pref("user.theme.wallpaper.midnight2", false);
 user_pref("user.theme.wallpaper.seasonal", false);
 user_pref("user.theme.wallpaper.seasonal2", false);
 
-/*other*/
+/*new tab page*/
+user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
+user_pref("browser.newtabpage.activity-stream.newtabWallpapers.customWallpaper.enabled", true);
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
+
+/*extra configs*/
 user_pref("ultima.enable.nightly.config", false);
 user_pref("ultima.enable.js.config", false);
 
-/*other other*/
+/*extra necessary*/
 user_pref("ultima.xstyle.highlight.aboutconfig", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
@@ -97,19 +102,19 @@ user_pref("devtools.chrome.enabled", true);
 user_pref("devtools.debugger.prompt-connection", false);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("layout.css.has-selector.enabled", true);
-user_pref("toolkit.tabbox.switchByScrolling", false);
 user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
 user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 user_pref("widget.gtk.native-context-menus", false);
 user_pref("sidebar.revamp", true);
 user_pref("sidebar.verticalTabs", true);
+
+/*extra recommended*/
+user_pref("toolkit.tabbox.switchByScrolling", false);
 user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
-user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
-user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
-/*accessibility*/
+/*extra accessibility*/
 user_pref("findbar.highlightAll", true);
 user_pref("browser.tabs.insertAfterCurrent", true);
 user_pref("browser.search.context.loadInBackground", true);
@@ -124,6 +129,6 @@ user_pref("apz.overscroll.enabled", true);
 user_pref("general.smoothScroll", true);
 user_pref("general.smoothScroll.msdPhysics.enabled", true);
 
-/*privacy*/
+/*extra privacy*/
 user_pref("browser.send_pings", false); 
 user_pref("extensions.pocket.enabled", false);
