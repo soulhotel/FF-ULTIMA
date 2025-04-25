@@ -14,7 +14,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 /*color schemes*/
 user_pref("user.theme.dark.a", true); /*default dark mode*/
 user_pref("user.theme.light.a", true); /*default light mode*/
-user_pref("user.theme.adaptive", false); /*adaptive, wip*/
+user_pref("user.theme.adaptive", false); /*Auto Tab Color Extension*/
 user_pref("user.theme.dark.catppuccin", false);
 user_pref("user.theme.dark.catppuccin-frappe", false);
 user_pref("user.theme.dark.catppuccin-mocha", false); /*by Draff*/
