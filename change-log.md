@@ -21,6 +21,7 @@
 - `fix • 🔴 • ` spacing corrections, left/right
 - `fix • 🔴 • ` All sidebar splitters (resizeable bar) are styled and work great
 - `fix • 🔴 • ` Setting `ultima.sidebery.autohide` overlays webpage when verttabs are disabled #283
+- `fix` Ssdebar splitter visibility when in full screen videos #280
 - `new • 🟢 • ` Setting `ultima.xstyle.bookmarks.autohide` autohide bookmarks bar
 - `new • 🟢 • ` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser #279
 - `new • 🟢 • ` Setting `ultima.xstyle.newtabbutton.ontop.i` puts the New Tab button at the top of the Verttabs
