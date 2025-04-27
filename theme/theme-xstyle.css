@@ -361,7 +361,7 @@ Tab groups with Color mixed backgrounds
 /* bookmarks autohide -------------------------------------------------------------------------------------- */
  
 @media -moz-pref("ultima.xstyle.bookmarks.autohide") {
-    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)) {       
+    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover))/*keepcontextmenuopen->*/:has(#placesContext:not(:hover)) {
         &#main-window:not([inFullscreen="true"]) {
             
             /* set smaller height when not hovered, compatible with all features */
