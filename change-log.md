@@ -23,8 +23,8 @@
 - `fix • 🔴 • ` Setting `ultima.sidebery.autohide` overlays webpage when verttabs are disabled #283
 - `fix` Ssdebar splitter visibility when in full screen videos #280
 - `new • 🟢 • ` Setting `ultima.xstyle.bookmarks.autohide` autohide bookmarks bar
-- `new • 🟢 • ` Setting `ultima.xstyle.bookmarks.centered` autohide bookmarks bar #284
-- `new • 🟢 • ` Setting `ultima.sidebar.seperator` seeprates the two sidebars to opposite sides of the Browser #279
+- `new • 🟢 • ` Setting `ultima.xstyle.bookmarks.centered` center the bookmarks bar #284
+- `new • 🟢 • ` Setting `ultima.sidebar.seperator` seperate the two sidebars to opposite sides of the Browser #279
 - `new • 🟢 • ` Setting `ultima.xstyle.newtabbutton.ontop.i` puts the New Tab button at the top of the Verttabs
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` highlights the aboutconfig Tab
 - `new • 🟢 • `  Adaptive Tab Color [Extension now supported](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) #247
