@@ -388,6 +388,15 @@ Tab groups with Color mixed backgrounds
 }
 
 
+/* bookmarks centered -------------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.xstyle.bookmarks.centered") {
+#PlacesToolbarItems {
+  justify-content: center !important;
+}
+}
+
+
 /* ---------------------------------------------------------------------------------------------- */
  
 
