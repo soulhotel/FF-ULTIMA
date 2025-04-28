@@ -28,6 +28,7 @@ user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.disable.verticaltab.bar", false);
 user_pref("ultima.disable.verticaltab.bar.withindicator", true);
 user_pref("ultima.xstyle.bookmarks.autohide", true);
+user_pref("ultima.xstyle.bookmarks.centered", false);
 user_pref("ultima.spacing.compact.tabs", false);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("browser.tabs.tabMinWidth", 0);
