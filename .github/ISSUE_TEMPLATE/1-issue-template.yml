@@ -9,27 +9,72 @@ body:
       value: |
         ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
 
-  - type: dropdown
+  - type: checkboxes
     id: checked-wiki
     attributes:
-      label: "Already looked at the Wiki?"
+      label: "Have you looked at the Wiki?"
       description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
       options:
-        - "No"
-        - "Yes"
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
     validations:
-      required: true
+      required: false
 
-  - type: dropdown
+  - type: checkboxes
     id: userjs-applied
     attributes:
       label: "First time Install? Do you see this message on about:config?"
-      description: "Follow installation instructions [Step 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
+      description: "If No, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
       options:
-        - "No"
-        - "Yes"
+        - label: "Yes"
+          required: false
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: platform-os
+    attributes:
+      label: "What OS (operating system) are you on?"
+      description: "All OS (operating systems) are fully supported. But note, testing on Mac is a little limited!"
+      options:
+        - label: "Windows"
+          required: false
+        - label: "Linux"
+          required: false
+        - label: "Mac"
+          required: false
     validations:
       required: true
+
+  - type: checkboxes
+    id: platform-browser
+    attributes:
+      label: "What Browser are you on?"
+      description: "Firefox forks are supported, so long as the theme supports the Firefox Version #."
+      options:
+        - label: "Firefox Default"
+          required: false
+        - label: "Firefox Nightly"
+          required: false
+        - label: "Firefox Beta/Developer"
+          required: false
+        - label: "Librewolf"
+          required: false
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: browser-updated
+    attributes:
+      label: "Is your browser updated to the latest version?"
+      description: "Is your browser updated to the latest version?"
+      options:
+        - label: "Yes"
+          required: false
+    validations:
+      required: false
 
   - type: textarea
     id: issue-description
@@ -39,51 +84,6 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: "### Platform/Desktop"
-
-  - type: dropdown
-    id: platform-os
-    attributes:
-      label: "Platform/Desktop"
-      options:
-        - "Windows"
-        - "Linux"
-        - "Mac"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: platform-browser
-    attributes:
-      label: "Web Browser"
-      options:
-        - "Firefox"
-        - "Firefox Nightly"
-        - "Firefox Dev Edition"
-        - "Other Browser"
-    validations:
-      required: true
-
-  - type: input
-    id: other-browser
-    attributes:
-      label: "If `Other Browser` was selected, specify here:"
-      placeholder: "Example: Waterfox v123"
-    validations:
-      required: false
-
-  - type: dropdown
-    id: browser-updated
-    attributes:
-      label: "Is your browser updated to the latest version?"
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-    
   - type: textarea
     id: picture-video
     attributes:
@@ -92,16 +92,3 @@ body:
       placeholder: "Drag & Drop | Copy & Paste | or Link to Picture & Video"
     validations:
       required: false
-      
-  - type: checkboxes
-    id: checkedd-wiki
-    attributes:
-      label: "Already looked at the Wiki?"
-      description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
-      options:
-        - label: "Yes"
-          required: true
-        - label: "No"
-          required: false
-    validations:
-      required: true
