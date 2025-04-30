@@ -15,7 +15,7 @@ body:
       label: "Issue Checklist"
       description: "![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e) <br> First time install? If you don't see the welcome message on your about:config page, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
       options:
-        - label: "I looked at the Wiki."
+        - label: "I've looked at the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?"
           required: true
         - label: "I've seen the welcome message on about:config"
           required: true
@@ -26,71 +26,7 @@ body:
         - label: "My OS (operating system) is Windows"
         - label: "My OS (operating system) is Linux"
         - label: "My OS (operating system) is Mac"
-        
-  - type: checkboxes
-    id: checked-wiki
-    attributes:
-      label: "Have you looked at the Wiki?"
-      description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
-      options:
-        - label: "Yes"
-          required: false
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: userjs-applied
-    attributes:
-      label: "First time Install? Do you see this welcome message in about:config?"
-      description: "![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e) <br> If No, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
-      options:
-        - label: "Yes"
-          required: false
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: browser-updated
-    attributes:
-      label: "Is your Browser updated to the latest version?"
-      description: "Is your Browser updated to the latest version?"
-      options:
-        - label: "Yes"
-          required: false
-    validations:
-      required: false
-
-  - type: checkboxes
-    id: platform-browser
-    attributes:
-      label: "What Browser are you on?"
-      description: "Firefox forks are supported, so long as the theme supports the Firefox Version #."
-      options:
-        - label: "Firefox Default"
-          required: false
-        - label: "Firefox Nightly"
-          required: false
-        - label: "Firefox Beta/Developer"
-          required: false
-        - label: "Librewolf"
-          required: false
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: platform-os
-    attributes:
-      label: "What OS (operating system) are you on?"
-      description: "All OS (operating systems) are fully supported. But, testing on Mac is a little limited!"
-      options:
-        - label: "Windows"
-          required: false
-        - label: "Linux"
-          required: false
-        - label: "Mac"
-          required: false
-    validations:
-      required: true
+        - label: "My Browser is on the latest version"
 
   - type: textarea
     id: issue-description
