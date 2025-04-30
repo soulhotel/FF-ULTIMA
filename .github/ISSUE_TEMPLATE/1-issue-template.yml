@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
+        ### Before submitting, Please fill out the checklist.
 
   - type: checkboxes
     id: confirmations
@@ -19,13 +19,13 @@ body:
           required: true
         - label: "I've seen the welcome message on about:config"
           required: true
-        - label: "My Browser is Firefox (Default)"
-        - label: "My Browser is Firefox (Nightly)"
-        - label: "My Browser is Firefox (Beta/Developer)"
-        - label: "My Browser is Librewolf (fork)"
-        - label: "My OS (operating system) is Windows"
-        - label: "My OS (operating system) is Linux"
-        - label: "My OS (operating system) is Mac"
+        - label: "My Browser is Firefox (Default) 🟠"
+        - label: "My Browser is Firefox (Nightly) 🟣"
+        - label: "My Browser is Firefox (Beta/Developer) 🔵"
+        - label: "My Browser is Librewolf (fork) 🐺"
+        - label: "My OS (operating system) is Windows 🪟"
+        - label: "My OS (operating system) is Linux 🐧"
+        - label: "My OS (operating system) is Mac 💻"
         - label: "My Browser is on the latest version"
 
   - type: textarea
