@@ -764,7 +764,9 @@ menupopup menuseparator {opacity:0.2 !important;}
 .tabbrowser-tab[pending] .tab-content {
   opacity: 0.2 !important;
 }    
-
+.tab-icon-image[pending] {
+  filter: grayscale(60%) !important;
+}
 
 /* 4/1/2025 firefox 137 */
 
