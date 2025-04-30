@@ -38,7 +38,7 @@ Use the template below to enter your theme into the list:
 
 @media -moz-pref("user.theme.light.a"){body{background-image: url("pic/dusky.jpg") !important;}}
 
-@media -moz-pref("user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.jpg") !important;}}
+@media -moz-pref("user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-3.jpg") !important;}}
 
   
      
@@ -124,7 +124,7 @@ Use the template below to enter your theme into the list:
   body:not([style*="--"]){background-image: url("pic/gruvbox.jpg") !important;}
 
 :root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/5344443f-f427-4029-bc6b-68bc22f83355.avif");']) 
-  body:not([style*="--"]){background-image: url("pic/gruvbox-l.jpg") !important;}
+  body:not([style*="--"]){background-image: url("pic/gruvbox-3.jpg") !important;}
 
 :root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/966b18ad-3733-41c4-92f6-c89cdf1381d0.avif");']) 
   body:not([style*="--"]){background-image: url("pic/gruvbox.jpg") !important;}
