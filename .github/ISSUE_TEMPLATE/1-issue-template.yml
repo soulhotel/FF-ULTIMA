@@ -19,20 +19,23 @@ body:
         - "Yes"
     validations:
       required: true
-  
-  - type: textarea
-    id: issue-description
+
+  - type: dropdown
+    id: userjs-applied
     attributes:
-      label: "Describe the Issue"
-      placeholder: "A detailed description of what the issue is."
+      label: "First time Install? Do you see this message on about:config?"
+      description: "Follow installation instructions [Step 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
+      options:
+        - "No"
+        - "Yes"
     validations:
       required: true
 
   - type: textarea
-    id: expected-behavior
+    id: issue-description
     attributes:
-      label: "Expected Behavior"
-      placeholder: "A description of what you expected to happen"
+      label: "Describe the Issue"
+      placeholder: "A detailed description of the issue. Or what you expect to happen."
     validations:
       required: true
 
