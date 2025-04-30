@@ -17,15 +17,13 @@ body:
       options:
         - label: "Yes"
           required: false
-        - label: "No"
-          required: false
     validations:
       required: false
 
   - type: checkboxes
     id: userjs-applied
     attributes:
-      label: "First time Install? Do you see this message on about:config?"
+      label: "First time Install? Do you see this message on about:config? ![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)"
       description: "If No, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
       options:
         - label: "Yes"
