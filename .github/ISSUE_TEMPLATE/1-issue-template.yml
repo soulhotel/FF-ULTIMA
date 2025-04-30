@@ -12,7 +12,6 @@ body:
   - type: checkboxes
     id: checked-wiki
     attributes:
-      label: " "
       description: "Have you looked at the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?"
       options:
         - label: "Yes"
