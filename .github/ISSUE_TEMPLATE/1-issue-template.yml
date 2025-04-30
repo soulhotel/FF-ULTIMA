@@ -92,3 +92,16 @@ body:
       placeholder: "Drag & Drop | Copy & Paste | or Link to Picture & Video"
     validations:
       required: false
+      
+  - type: checkboxes
+    id: checkedd-wiki
+    attributes:
+      label: "Already looked at the Wiki?"
+      description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
+      options:
+        - label: "Yes"
+          required: true
+        - label: "No"
+          required: false
+    validations:
+      required: true
