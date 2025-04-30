@@ -79,7 +79,10 @@
 4. In the chrome folder, youll see the `user.js`, move it <ins>out the chrome folder and into the Profile Folder<ins>.
 5. Restart Firefox.
 6. <ins>**Wait** for Firefox to open</ins>, then delete the `user.js` file.
-7. Go to `about:config` and search for `ultima` to see all of your settings.
+7. Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
+
+![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
+
 
 ###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset or unless told otherwise :).
 </details>
@@ -110,7 +113,9 @@ git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 6. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
 7. Restart Firefox.
 8. **Wait** for Firefox to open, then delete the `user.js` file.
-9. Go to `about:config` and search for `ultima` to see all of your settings.
+9. Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
+
+![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
 
 ###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :).
 
