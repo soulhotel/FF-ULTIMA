@@ -23,8 +23,8 @@ body:
   - type: checkboxes
     id: userjs-applied
     attributes:
-      label: "First time Install? Do you see this message on about:config?"
-      description: "![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e) If No, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
+      label: "First time Install? Do you see this welcome message in about:config?"
+      description: "![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e) <br> If No, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
       options:
         - label: "Yes"
           required: false
@@ -32,19 +32,15 @@ body:
       required: false
 
   - type: checkboxes
-    id: platform-os
+    id: browser-updated
     attributes:
-      label: "What OS (operating system) are you on?"
-      description: "All OS (operating systems) are fully supported. But note, testing on Mac is a little limited!"
+      label: "Is your Browser updated to the latest version?"
+      description: "Is your Browser updated to the latest version?"
       options:
-        - label: "Windows"
-          required: false
-        - label: "Linux"
-          required: false
-        - label: "Mac"
+        - label: "Yes"
           required: false
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: platform-browser
@@ -64,15 +60,19 @@ body:
       required: true
 
   - type: checkboxes
-    id: browser-updated
+    id: platform-os
     attributes:
-      label: "Is your browser updated to the latest version?"
-      description: "Is your browser updated to the latest version?"
+      label: "What OS (operating system) are you on?"
+      description: "All OS (operating systems) are fully supported. But, testing on Mac is a little limited!"
       options:
-        - label: "Yes"
+        - label: "Windows"
+          required: false
+        - label: "Linux"
+          required: false
+        - label: "Mac"
           required: false
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: issue-description
