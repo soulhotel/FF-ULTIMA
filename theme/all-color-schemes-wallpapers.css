@@ -38,7 +38,7 @@ Use the template below to enter your theme into the list:
 
 @media -moz-pref("user.theme.light.a"){body{background-image: url("pic/dusky.jpg") !important;}}
 
-@media -moz-pref("user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-3.jpg") !important;}}
+@media -moz-pref("user.theme.light.gruvbox"){body{background-image: url("pic/gruvbox-l.jpg") !important;}}
 
   
      
