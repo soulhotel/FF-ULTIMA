@@ -36,42 +36,45 @@
 
 ## Installation
 
-###### 🚨 Do not skip the installation instructions! Firefox v133+ Required. 🚨
+###### 🚨 Do not skip the installation instructions! 🚨
 
 <details>
-<summary>Need help finding your Profile Folder? (Click Me)</summary>
+<summary>Finding your Profile Folder (where the theme files go)</summary>
 
-<br>
+###### 🛈 Two ways to find your Profile Folder. Choose one: 🛈
+1. Go to the about:support page/url.
+2. Open directory
+3. This takes you to your profile folder, typically named "default.release"
 
-> userChrome Themes work by communicating with a chrome folder located in your Firefox Profile folder, think of it as your User Interface. This folder typically holds `.css` files with the purpose of customizing elements of the Browser. There are two easy ways to access this folder:
+<img src="https://github.com/user-attachments/assets/e520eb35-f09c-4925-92f6-44be4ec18d51" width="850" />
 
-1. Go to the `about:support` page
-- In the URL Bar, type `about:support`.
-- Look for the **Profile Folder** row. Open the folder.
-- In that folder, create a new folder named `chrome` (If it doesnt already exist).
-
-![aboutsupport](theme/pic/assets/about_support.png)
-
-2. Go to the `about:profiles` page
-- In the URL Bar, type `about:profiles`.
-- Your profile will say `This is the profile in use and...`.
-- Look for the **Root Directory** row, and click **Open Directory**.
-- In the opened Folder, create a new folder named `chrome` (if it doesnt already exist).
+>
+1. Go to the about:profiles page/url.
+2. If you have multiple firefox profiles, make sure you are working with the right one.
+3. Open directory
+4. This takes you to your profile folder, typically named "default.release"
  
-![alt text](theme/pic/assets/profilelocation.png)
+<img src="https://github.com/user-attachments/assets/8e58c276-1015-436d-8414-6d4db3a4be4b" width="850" />
 </details>
 
 <details>
-<summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
-  
-![addonthemespage](theme/pic/assets/installprep.png)
+<summary>Initial Setup</summary>
+
+###### 🛈 This is mostly for first time Installation: 🛈
+
+- [x] If your Profile Folder does not have a `chrome` folder, create one.
+- [x] If your Profile Folder already has a `chrome` folder, empty it.
+- [x] The theme will automatically enable userChrome stylesheets via user.js
+- [x] Please have Firefox's System-Theme enabled. You can change this later.
+
+<img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
 </details>
 
 ###### ⬇️ Choose *one* of the installation methods below. ⬇️
 
 <details><summary>The Easy Way</summary>
 
-###### ℹ️ Autoconfig Users should download the Source instead of the release Zip ℹ️
+###### 🛈 Autoconfig Users should download the Source instead of the release Zip 🛈
 
 1. Download the latest version on the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest).
 2. Copy everything in the ffultima.zip into your `chrome` folder.
@@ -83,14 +86,16 @@
 
 ![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
 
+###### 🛈 The user.js only needs to be applied in two scenarios: 🛈
+- It's your first time installing the theme.
+- Or the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) says "user.js required" for new settings/versions of the theme.
 
-###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset or unless told otherwise :).
+###### 🛈 How to [update the theme (wiki)](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new theme version 🛈
 </details>
 
 <details><summary>The Hard Way</summary>
 
->
-###### This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
+###### 🛈 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people. 🛈
 1. Open a terminal in your Profiles `chrome` folder.
 2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile-folder\chrome`.
 3. In the terminal, git clone the repo to install/update to the latest version:
@@ -117,9 +122,11 @@ git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 
 ![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
 
-###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :).
+###### 🛈 The user.js only needs to be applied in two scenarios: 🛈
+- It's your first time installing the theme.
+- Or the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) says "user.js required" for new settings/versions of the theme.
 
-###### :accessibility: Reading the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) is always recommended. When new versions of the theme come out - and they include new preferences in the about:config page, you may want to open the new user.js file and compare it to your current settings. You can either add the settings manually in the about:config page... or load your own editted user.js file to add the new settings and keep your old the same way.
+###### 🛈 How to [update the theme (wiki)](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new theme version 🛈
 </details>
 
 
