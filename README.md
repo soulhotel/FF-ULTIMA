@@ -19,7 +19,7 @@
 
 - Windows, Linux and Mac OS Support.
 >
-- `Vertical Tabs` and a `One Line Nav Bar`.
+- `Vertical Tabs`, `Tabs on Top/Bottom`, or `Autohide Everything` layouts.
 >
 - Add-on theme support, FF ULTIMA can be used with Firefox add-on themes.
 >
@@ -27,7 +27,7 @@
 >
 - Dark or Light mode themes, automatically cycle depending on your systems current Color Mode.
 >
-- Multiple Options for Tabs, autohiding, spacing, accessibility [and more](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings).
+- Multiple Options for Tabs, autohiding, spacing, theming, accessibility [and more](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings).
 >
 - See more detail on [what FF Ultima has to offer](https://github.com/soulhotel/FF-ULTIMA/wiki#what-does-ff-ultima-offer) through the Wiki.
 >
