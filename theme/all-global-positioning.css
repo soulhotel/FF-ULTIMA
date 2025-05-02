@@ -822,6 +822,10 @@ menupopup menuseparator {opacity:0.2 !important;}
     }
 }
 
+#import-button {
+  display: none !important;
+}
+
 /*--------------------------------------------------------------------------------------------------------------------*/
     
 
