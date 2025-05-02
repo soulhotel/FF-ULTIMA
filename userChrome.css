@@ -52,11 +52,17 @@ need confirmation on mac and gnome
         height: 20px !important;
         border-radius: 10px !important;
     }
+    @media (-moz-platform: windows) {
+        .titlebar-button > .toolbarbutton-icon {
+            width: 12px !important;
+            height: 12px !important;
+        }
+    }  
 }
 
 /* carl traffic lights*/
 @media -moz-pref("ultima.navbar.windowcontrols.carl") {
-    /* custom background */
+    /* custom backgrounds */
     .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/carl-min.png") !important;}
     .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
     .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
@@ -72,7 +78,7 @@ need confirmation on mac and gnome
 
 /* standard traffic lights */
 @media -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
-    /* custom background */
+    /* custom backgrounds */
     .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/traffic-min.png") !important;}
     .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
     .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
