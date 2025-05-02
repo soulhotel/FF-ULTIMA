@@ -38,7 +38,7 @@
 - `2.1 • 🟡 • ` Theme size reduced by 5-9Mib (all wallpapers converted to JPG & some even upscaled)
 - `2.1 • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) has been improved
 - `2.1 • 🟡 • ` Midnight Color Scheme adjustments. More Black. Only White accents. Animated background only with `user.theme.dark.midnight.animated` #243
-
+- `2.1 • 🟡 • ` Tab Groups visual optimization 
 
 
 > Adaptive Tab Color Support
