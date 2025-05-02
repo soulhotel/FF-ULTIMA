@@ -75,7 +75,7 @@ Extra modifications woth no place to go (yet)
 #nav-bar {min-height:var(--uc-navbar-height) !important; max-height: var(--uc-navbar-height) !important; z-index:997 !important;}
 #nav-bar .toolbarbutton-1 {margin-top:2.5px !important;} /*align child buttons vertically*/
 #TabsToolbar {min-height: var(--uc-tabbar-height) !important; z-index:996 !important;}
-#tabbrowser-tabs[orient="horizontal"] {max-height: var(--uc-tabbar-height) !important;}
+#tabbrowser-tabs[orient="horizontal"]:not([movingtab=""]) {max-height: var(--uc-tabbar-height) !important;padding-top:4px;padding-left:4px !important}
 #PersonalToolbar {height: var(--uc-bookbar-height) !important; z-index:995 !important;}
 #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 2px 0 2px 0 !important;}
 
