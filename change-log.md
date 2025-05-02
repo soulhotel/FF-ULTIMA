@@ -1,15 +1,12 @@
 ### <ins> FF Ultima Version 2.0 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.0/ffultima2.0.zip)**
-- **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
-- ⬇️ Please follow the [installation instructions](https://github.com/soulhotel/FF-ULTIMA#installation) on main page.
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.0/ffultima2.0.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
-- 🎨 Learn how to [create a Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) like [Catppuccin](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/catppuccin/readme.md) or [Gruvbox](https://github.com/soulhotel/FF-ULTIMA/blob/next-release/theme/color-schemes/gruvbox-light/readme.md).
-
+- ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
+  
 ### <ins> Version Notes
 - *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite song - to that part where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it while it last. Stability.*
 - **Thank you** to everyone that have been reporting issues and beta changes
-- Sidebar [glitching out of position](https://connect.mozilla.org/t5/discussions/firefox-sidebar-and-vertical-tabs-try-them-out-in-nightly/m-p/87361/highlight/true#M33460) [error fixed](https://whattrainisitnow.com/beta/)!
 - User.js recommended (not required) for new settings
 - Firefox 138+ required
 
@@ -34,6 +31,7 @@
 - `qol • 🟡 • ` Tab group white border removed
 - `qol • 🟡 • ` Mini toolbar buttons under vertical tabs are now centered
 - `qol • 🟡 • ` Setting `ultima.spacing.compact` now shrinks tab margins slightly
+- `2.1 • 🟡 • `  The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) has been improved. 
 
 
 > Adaptive Tab Color Support
