@@ -21,6 +21,7 @@ user_pref("user.theme.dark.catppuccin-mocha", false); /*by Draff*/
 user_pref("user.theme.dark.gruvbox", false);
 user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
+user_pref("user.theme.dark.midnight.animated", false);
 
 /*titlebar, tabbar*/
 user_pref("ultima.disable.alltabs.button", true);
