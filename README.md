@@ -91,6 +91,8 @@
 - Or the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) says "user.js required" for new settings/versions of the theme.
 
 ###### 🛈 How to [update the theme (wiki)](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new theme version 🛈
+
+###### 🛈 Video for [installing FF Ultima](https://youtu.be/FDYYm-Tt39I) 2.0 (youtube) 🛈
 </details>
 
 <details><summary>The Hard Way</summary>
