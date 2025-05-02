@@ -35,6 +35,7 @@ menupopup, panel {
 menuitem:hover{
   background-color: var(--uc-button-selected) !important;
   color: var(--uc-text) !important;
+  border-radius: 6px !important;
  }
 
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
