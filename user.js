@@ -34,7 +34,11 @@ user_pref("ultima.spacing.compact.tabs", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("browser.tabs.tabMinWidth", 0);
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
-user_pref("sidebar.expandOnHover", true); 
+user_pref("sidebar.expandOnHover", true);
+user_pref("ultima.navbar.autohide", false);
+user_pref("ultima.navbar.windowcontrols.carl", false);
+user_pref("ultima.navbar.windowcontrols.trafficlights", false);
+user_pref("ultima.navbar.windowcontrols.whiteout", false);
 
 /*sidebar*/
 user_pref("ultima.sidebar.autohide", false);
@@ -44,7 +48,6 @@ user_pref("ultima.sidebery.expandon.inactive.windows", false);
 user_pref("ultima.xstyle.sidebar.theming", true);
 
 /*url bar*/
-user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.urlbar.suggestions", true);
 user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hidebuttons", false);
