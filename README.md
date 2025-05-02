@@ -92,7 +92,7 @@
 
 ###### 🛈 How to [update the theme (wiki)](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new theme version 🛈
 
-###### 🛈 Video for [installing FF Ultima](https://youtu.be/FDYYm-Tt39I) 2.0 (youtube) 🛈
+###### 🛈 Video for [installing FF Ultima](https://www.youtube.com/watch?v=FDYYm-Tt39I&list=PLTVs0Y4lTV55tEwbkGwlooQinDbge3a6O&index=3) 2.0 (youtube) 🛈
 </details>
 
 <details><summary>The Hard Way</summary>
