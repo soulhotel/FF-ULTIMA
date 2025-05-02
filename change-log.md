@@ -37,6 +37,7 @@
 - `2.1 • 🟢 • ` Setting `ultima.navbar.windowcontrols.carl` to customize window controls (carl theme)
 - `2.1 • 🟡 • ` Theme size reduced by 5-9Mib (all wallpapers converted to JPG & some even upscaled)
 - `2.1 • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) has been improved
+- `2.1 • 🟡 • ` Midnight Color Scheme adjustments. More Black. Only White accents. Animated background only with `user.theme.dark.midnight.animated` #243
 
 
 
@@ -63,5 +64,13 @@ https://github.com/user-attachments/assets/02e408a6-0cc1-496f-9388-1f4ef0958327
 > New Tab Button On Top
 
 https://github.com/user-attachments/assets/ecbba1bf-7535-4d6e-bfb7-0db2dd5db4c5
+
+<!--
+
+> Midnight Color Scheme
+
+https://github.com/user-attachments/assets/116143ff-b0b7-4a50-bd85-7d773871f5fc
+
+-->
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
