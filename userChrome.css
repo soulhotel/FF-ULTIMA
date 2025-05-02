@@ -30,7 +30,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/all-global-configurations.css);
 
 
-/* tab group inset line -------------------------------------------------*/
+/* tab group adjustments ------------------------------------------------*/
 
 #tabbrowser-tabs[orient="vertical"][expanded] {
   & tab-group > :is(.tab-group-label-container,
@@ -39,6 +39,32 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
     [multiselected]) {
     margin-inline-start: 0 !important;
   }
+}
+
+tab-group .tabbrowser-tab:first-of-type {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+
+tab-group .tabbrowser-tab:last-of-type {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+.tab-group-label-container {
+    #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after {
+        opacity:0 !important;
+    }
+}
+
+@media -moz-pref("ultima.xstyle.tabgroups.with.colormix") {
+    .tab-group-line {
+        opacity: 0 !important;
+        /*
+        display: none !important;
+         background-color: transparent !important;
+        */
+    }
 }
 
 /* custom window controls -----------------------------------------------*/
