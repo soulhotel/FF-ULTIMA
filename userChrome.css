@@ -29,6 +29,18 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/theme-windowcontrols.css); 
 @import url(theme/all-global-configurations.css);
 
+
+/* tab group inset line -------------------------------------------------*/
+
+#tabbrowser-tabs[orient="vertical"][expanded] {
+  & tab-group > :is(.tab-group-label-container,
+    .tabbrowser-tab), &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],
+    [movingtab-ungroup]) .tabbrowser-tab:is(:active,
+    [multiselected]) {
+    margin-inline-start: 0 !important;
+  }
+}
+
 /* custom window controls -----------------------------------------------*/
 
 /*experimental*/
