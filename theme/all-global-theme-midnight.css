@@ -22,11 +22,11 @@ Custom Background
     --uc-text: rgb(230, 230, 230);
     --uc-dark-color: rgb(27, 25, 35);
     --uc-light-color: rgb(215, 218, 224);
-    --uc-accent-i: rgb(198, 170, 232); /*purp*/
-    --uc-accent-ii: rgb(230, 230, 230); /*blue*/
-    --uc-accent-iii: rgb(215, 218, 224); /*light*/
-    --uc-accent-iv: rgba(7, 7, 7,0.6); /*dark*/
-    --uc-accent-v: rgb(255, 254, 222); /*yellow*/
+    --uc-accent-i: rgb(198, 170, 232);
+    --uc-accent-ii: rgb(230, 230, 230); 
+    --uc-accent-iii: rgb(215, 218, 224); 
+    --uc-accent-iv: rgba(7, 7, 7,0.6);
+    --uc-accent-v: rgb(255, 254, 222); 
     --uc-accent-vi: white;
     --uc-accent-vii: rgb(44, 55, 80); /*darker blue*/
     --uc-background-main: rgb(5, 5, 5);
@@ -274,7 +274,7 @@ Custom Background
     }
     @media (-moz-platform: windows) {
         .titlebar-close:hover {
-            background-color: var(--uc-accent-vi) !important;
+            background-color: rgb(255,0,0) !important;
         }
     }
 }
@@ -369,27 +369,16 @@ Custom Background
  
 @media (prefers-color-scheme: dark) {
 
-/* navbar partial background */
-#main-window:not([lwtheme]) #nav-bar {
-    transition: var(--ext-theme-background-transition) !important;
-    background-image: url(pic/midnight-ui.gif) !important;
-    background-repeat: no-repeat, no-repeat !important;
-    background-position: 115% 100% !important;
-}
-/* findbar partial background */
-#main-window:not([lwtheme]) findbar {
-    color: var(--toolbar-color) !important;
-    color-scheme: var(--toolbar-color-scheme) !important;
-    background-image: url(pic/midnight-ui.gif) !important;
-    border-top: 0px !important;
-    background-repeat: no-repeat, no-repeat !important;
-    background-position: 100% 100% !important;
-} 
-/* verttabs partial background */
-@media -moz-pref("user.theme.dark.midnight.sidebar") {
-    #main-window:not([lwtheme]) #sidebar-main {
+/* with animated background*/
+@media -moz-pref("user.theme.dark.midnight.animated") {
+    /* navbar partial background */
+    #main-window:not([lwtheme]) #nav-bar {
         transition: var(--ext-theme-background-transition) !important;
+        background-image: url(pic/midnight-ui.gif) !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: 115% 100% !important;
     }
+    /* verttabs partial background */   
     #main-window:not([lwtheme]) #sidebar-main::before {
         content: "" !important;
         position: absolute !important;
@@ -404,27 +393,18 @@ Custom Background
         opacity: 0.4 !important; /* Set desired opacity (0.0 to 1.0) */
         z-index: -1 !important; /* Ensure it stays behind content */
     }
+    #main-window:not([lwtheme]) #sidebar-main {transition: var(--ext-theme-background-transition) !important;}
 }
-/* verttabs extended background */
-@media -moz-pref("user.theme.dark.midnight.sidebar.extended") {
-    #main-window:not([lwtheme]) #sidebar-main {
-        transition: var(--ext-theme-background-transition) !important;
-    }
-    #main-window:not([lwtheme]) #sidebar-main::before {
-        content: "" !important;
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        background-image: url(pic/midnight-ui.gif) !important;
-        background-repeat: repeat-y !important;
-        background-position: 0 0 !important;
-        background-size: 700px 200px !important; /* From your previous setup */
-        opacity: 0.5 !important; /* Set desired opacity (0.0 to 1.0) */
-        z-index: -1 !important; /* Ensure it stays behind content */
-    }
-}    
+/* findbar partial background */
+#main-window:not([lwtheme]) findbar {
+    color: var(--toolbar-color) !important;
+    color-scheme: var(--toolbar-color-scheme) !important;
+    background-image: url(pic/midnight-ui.gif) !important;
+    border-top: 0px !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: 100% 100% !important;
+} 
+
 /* navbar extended background */
 /*
 #main-window:not([lwtheme]) #navigator-toolbox,
