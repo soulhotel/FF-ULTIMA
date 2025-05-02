@@ -134,10 +134,13 @@ git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 
 [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
 - FAQ
-- Theme settings overview
-- Sidebery config
-- List of Color schemes
-- Color scheme creation
-- Spreadsheets
+- All theme settings
+- How to create color schemes
+- How to install, uninstall, update
+- Autotab color configuration
+- Sidebery configurations
+- List of Color Schemes
+- Variable Spreadsheet
+- More
 
 ## Enjoy
