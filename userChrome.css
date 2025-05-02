@@ -37,6 +37,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @media -moz-pref("ultima.navbar.windowcontrols.carl") {
     .titlebar-min > .toolbarbutton-icon,
     .titlebar-max > .toolbarbutton-icon,
+    .titlebar-restore > .toolbarbutton-icon,
     .titlebar-close > .toolbarbutton-icon {
         -moz-default-appearance: none !important;
         background-size: 16px 16px !important;
@@ -50,5 +51,6 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
     /*carl*/
     .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/carl-min.png") !important;}
     .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
     .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/carl-close.png") !important;}
 }
