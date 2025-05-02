@@ -27,7 +27,7 @@ Custom Background
     --uc-accent-iii: rgb(215, 218, 224); /*light*/
     --uc-accent-iv: rgba(7, 7, 7,0.6); /*dark*/
     --uc-accent-v: rgb(255, 254, 222); /*yellow*/
-    --uc-accent-vi: rgb(33, 70, 193); /*red*/
+    --uc-accent-vi: white;
     --uc-accent-vii: rgb(44, 55, 80); /*darker blue*/
     --uc-background-main: rgb(5, 5, 5);
     --uc-background-layered: rgba(10, 10, 10, 1);
