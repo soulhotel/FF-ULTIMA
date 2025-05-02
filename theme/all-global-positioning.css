@@ -801,21 +801,26 @@ menupopup menuseparator {opacity:0.2 !important;}
 :root[sidebar-expand-on-hover] {
     & #sidebar-main {
         &:not([sidebar-positionend]) {
-            margin-right: -3px;
+            margin-right: -4px;
         }
         &[sidebar-positionend] {
-            margin-right:3px;
+            margin-right:4px;
             margin-left: -0px !important; 
         }
     }
 }
 
-/* 4/18/2025 */
-/*
-#reload-button {
-    cursor: wait !important;
+/* 5/2/2025 */
+
+#sidebar-main {
+    &:not([sidebar-positionend]) {
+        margin-right: -4px;
+    }
+    &[sidebar-positionend] {
+        margin-right:4px;
+        margin-left: -0px !important; 
+    }
 }
-*/
 
 /*--------------------------------------------------------------------------------------------------------------------*/
     
