@@ -34,7 +34,8 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 /* custom window controls -----------------------------------------------*/
 /*experimental*/
 
-@media -moz-pref("ultima.navbar.windowcontrols.carl") {
+@media -moz-pref("ultima.navbar.windowcontrols.carl"),
+-moz-pref("ultima.navbar.windowcontrols.trafficlights") {
     .titlebar-min > .toolbarbutton-icon,
     .titlebar-max > .toolbarbutton-icon,
     .titlebar-restore > .toolbarbutton-icon,
@@ -47,10 +48,20 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
         height: 20px !important;
         border-radius: 10px !important;
     }
+}
 
+@media -moz-pref("ultima.navbar.windowcontrols.carl") {
     /*carl*/
     .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/carl-min.png") !important;}
     .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
     .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
     .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/carl-close.png") !important;}
+}
+
+@media -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
+    /*carl*/
+    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/traffic-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/traffic-close.png") !important;}
 }
