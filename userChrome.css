@@ -32,6 +32,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 /* tab group adjustments ------------------------------------------------*/
 
+/*spacing*/
 #tabbrowser-tabs[orient="vertical"][expanded] {
   & tab-group > :is(.tab-group-label-container,
     .tabbrowser-tab), &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],
@@ -40,23 +41,32 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
     margin-inline-start: 0 !important;
   }
 }
-
-tab-group .tabbrowser-tab:first-of-type {
-    border-top-left-radius: 8px !important;
-    border-top-right-radius: 8px !important;
+/* rounded border */
+/*vert*/
+#main-window:has(#tabbrowser-tabs[orient="vertical"]) {
+    tab-group .tabbrowser-tab:first-of-type {
+        border-radius: 8px 8px 0px 0px !important;
+    }
+    tab-group .tabbrowser-tab:last-of-type {
+        border-radius: 0px 0px 8px 8px !important;
+    }
 }
-
-tab-group .tabbrowser-tab:last-of-type {
-    border-bottom-left-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
+/*hori*/
+#main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
+    tab-group .tabbrowser-tab:first-of-type {
+        border-radius: 8px 0px 0px 8px !important;
+    }
+    tab-group .tabbrowser-tab:last-of-type {
+        border-radius: 0px 8px 8px 0px !important;
+    }
 }
-
+/*group line doesnt except tabs*/
 .tab-group-label-container {
     #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after {
         opacity:0 !important;
     }
 }
-
+/*group line hidden with color mix*/
 @media -moz-pref("ultima.xstyle.tabgroups.with.colormix") {
     .tab-group-line {
         opacity: 0 !important;
