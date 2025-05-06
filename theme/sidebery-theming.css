@@ -7,12 +7,16 @@ Sidebery Automatic Theming
 Applying style to elements
 FF Ultima Companion Extension
 
+ditto reevaluate entire file 
+
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 @-moz-document url-prefix("moz-extension://") {
 
 /* Sidebery Automatic Theming ----------------------------------------------------------------- */
 
+
+        /* extension needs proper id, these values can be adjuated */
 @media (-moz-boz-pref: "ultima.sidebery.automatic.theming") {
 
 @media -moz-pref("user.theme.dark.a") { :root {
