@@ -1,0 +1,289 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Automatically apply color scheme colors to Sidebery
+
+Sidebery Automatic Theming
+Applying styles to sidebery based on Users current color scheme
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") {
+    :root {
+        --icu-test:"Styles only wrapped inside of sidebery-usercontent";
+    }
+}
+@media -moz-pref("user.theme.sidebery") {
+    @-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") {
+        :root {
+            --icu-2:"Styles wrapped inside of sidebery-usercontent, which is wrapped inside of a moz-pref";
+        }    
+}
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { 
+    @media -moz-pref("user.theme.sidebery") {
+        :root {
+            --icu-3:"Styles wrapped inside of a moz-pref, which is wrapped inside of a sidebery-usercontent";
+        }   
+  }
+}
+  
+/* Sidebery Automatic Theming ----------------------------------------------------------------- */
+
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { 
+@media -moz-pref("user.theme.sidebery") {  
+   
+:root { /*color management -------------------------------------*/
+    /* apply dark mode colors */
+    @media (prefers-color-scheme: dark) {
+        @media -moz-pref("user.theme.dark.a") {
+            --ut-background: rgb(35, 35, 42) !important;
+            --uc-text: white !important;
+            --uc-accent-i: rgb(121, 161, 195) !important;
+            --uc-accent-v: rgb(121, 161, 195);
+            --uc-button-selected: #33303b;
+        }
+        @media -moz-pref("user.theme.dark.catppuccin") {
+            --ut-background: rgb(38, 36, 50) !important;
+            --uc-text: rgb(198, 170, 232) !important;
+            --uc-accent-i: rgb(198, 170, 232) !important;
+            --uc-accent-v: rgb(177, 227, 173);
+            --uc-button-selected: rgba(17, 18, 23,0.8);
+        }
+        @media -moz-pref("user.theme.dark.catppuccin-frappe") {
+            --ut-background: rgb(41, 44, 60) !important;
+            --uc-text: rgb(205, 214, 244) !important;
+            --uc-accent-i: rgb(244, 184, 228) !important;
+            --uc-accent-v: rgb(238, 190, 190);
+            --uc-button-selected: rgb(30, 30, 46);
+        }
+        @media -moz-pref("user.theme.dark.catppuccin-mocha") {
+            --ut-background: rgb(24, 24, 37) !important;
+            --uc-text: rgb(205, 214, 244) !important;
+            --uc-accent-i: rgb(203, 166, 247); !important;
+            --uc-accent-v: rgb(166, 227, 161);
+            --uc-button-selected: rgb(17,17,27);
+        }
+        @media -moz-pref("user.theme.dark.gruvbox") {
+            --ut-background: rgb(40, 40, 45) !important;
+            --uc-text: rgb(237, 221, 170) !important;
+            --uc-accent-i: rgb(237, 221, 170) !important;
+            --uc-accent-v: rgb(228, 127, 45);
+        }
+        @media -moz-pref("user.theme.dark.midnight") {
+            --ut-background: rgb(0, 0, 0) !important;
+            --uc-text: rgb(230, 230, 230) !important;
+            --uc-accent-i: rgb(198, 170, 232) !important;
+            --uc-accent-v: rgb(255, 254, 222) !important; 
+            --uc-button-selected: rgba(17, 18, 22,1);
+            --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(14,14,14,0.8) !important;
+        }
+    }
+    /* apply light mode colors */
+    @media (prefers-color-scheme: light) {
+        @media -moz-pref("user.theme.light.a") {
+            --ut-background: rgb(250, 250, 250) !important;
+            --uc-text: rgb(77, 77, 77) !important;
+            --uc-accent-i: rgba(144,144,200,0.8);
+            --uc-accent-v: rgb(108, 152, 255);
+            --uc-button-selected: rgb(230, 230, 234);
+        }
+        @media -moz-pref("user.theme.light.gruvbox") {
+            --ut-background: rgb(215, 215, 215) !important;
+            --uc-text: rgb(168, 91, 81) !important;
+            --uc-accent-i: pink !important;
+            --uc-accent-v: rgb(72, 136, 141);
+            --uc-button-selected: rgba(221, 147, 112,0.5);
+        }
+        --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.5) !important;;
+    }
+    /* adaptive styles */
+    @media -moz-pref("user.theme.adaptive") {
+        --ut-background: light-dark(white, rgb(23, 22, 30)) !important; !important;
+        --uc-text: light-dark(black, white) !important;
+        --uc-accent-i: light-dark(black, white) !important;
+        --uc-accent-v: light-dark(black, white) !important;
+        --uc-button-selected: light-dark(rgba(190,190,190,0.3), rgba(10,10,10,0.3)) !important;
+        --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(55,55,55,0.4) !important;
+    }  
+    --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+    --uc-button-border-radius: 10px;
+    --uc-context-menu: color-mix(in srgb, var(--ut-background) 90%, black 10%) !important;
+} /*end of color management*/
+
+    
+    
+/*pinned tab color, regular tab color, selected tab colors, unloaded tab color
+  
+all tabs
+background: transparent !important;
+color: var(--uc-text) !important;
+     
+regular tab selected
+background: var(--uc-button-selected) !important;
+color: var(--uc-accent-v) !important;
+box-shadow: var(--uc-box-shadow) !important;
+
+pinned tabs
+background: --tab-selected-bgcolor
+color: var(--uc-accent-i) !important;   
+box-shadow: var(--uc-box-shadow) !important;    
+
+hover:
+background: --tab-selected-bgcolor    
+    
+    */    
+    
+/* Background --------------------------------------------------*/
+
+@media (prefers-color-scheme: dark) { #root.root {
+    /* dark mode background here */
+    --frame-bg: var(--ut-background) !important;
+    --toolbar-bg: var(--ut-background) !important;
+    --frame-fg: var(--uc-text) !important;
+    --toolbar-fg: var(--uc-text) !important;
+}}
+
+@media (prefers-color-scheme: light) { #root.root {
+    /* light mode background here */
+    --frame-bg: var(--ut-background) !important;
+    --toolbar-bg: var(--ut-background) !important;
+    --frame-fg: var(--uc-text) !important;
+    --toolbar-fg: var(--uc-text) !important;
+}}
+
+/* Global (to Sidebery) Styles ---------------------------------*/    
+    
+#root.root {    
+    --general-margin: 2px !important;  
+    --general-border-radius: var(--uc-button-border-radius) !important;
+}    
+/* Header Panel ------------------------------------------------*/
+
+#root.root {
+    --toolbar-scrollbar-color: var(--uc-accent-i) !important;
+    --frame-el-overlay-selected-bg: var(--uc-button-selected) !important;
+    --frame-el-overlay-selected-border: var(--uc-accent-i) !important;
+    --frame-el-overlay-hover-bg: var(--uc-button-selected) !important;
+    --frame-scrollbar-color: var(--uc-accent-i) !important;
+    --toolbar-el-overlay-selected-bg: var(--uc-button-selected) !important;
+    --toolbar-el-overlay-hover-bg: var(--uc-button-selected) !important;
+    --toolbar-el-overlay-active-bg: var(--uc-button-selected) !important;
+    --toolbar-el-overlay-active-border: var(--uc-accent-i) !important;
+    --nav-btn-fg: var(--uc-text) !important;
+    --nav-btn-accent: color-mix(in srgb, var(--uc-accent-v) 40%, black 60%) !important;
+    --nav-btn-active-shadow: var(--uc-box-shadow) !important;
+}
+
+.NavigationBar .nav-item .audio { display: none !important; }
+@media (max-width: 50px) { .BottomBar{padding-left:1px !important;}.static-btns{padding-left:3px !important;} }
+
+/* Pinned Tabs -----------------------------------------------*/
+
+#root.root {--tabs-pinned-width: 24vw !important; --tabs-pinned-height: 40px !important;}
+@media (max-width: 250px) {
+    #root.root {--tabs-pinned-width: 23.5vw !important; --tabs-pinned-height: 40px !important;}
+}
+@media (max-width: 165px) {
+    #root.root {--tabs-pinned-width: 23vw !important; --tabs-pinned-height: 40px !important;}
+}
+@media (max-width: 125px) {
+    #root.root {--tabs-pinned-width: 22vw !important; --tabs-pinned-height: 40px !important;}
+}
+@media (max-width: 84px) {
+    #root.root {--tabs-pinned-width: 20.5vw !important; --tabs-pinned-height: 19px !important;}
+    .PinnedTabsBar .tab-wrapper .fav {transform: scale(0.6) !important;} /* even smaller */
+}
+@media (max-width: 42px) {
+    #root.root {--tabs-pinned-width: 15px !important; --tabs-pinned-height: 19px !important;}
+    .PinnedTabsBar[data-audible] svg.-loud, .PinnedTabsBar[data-muted] svg.-mute {display: none !important;} /* even smaller than smaller */
+}
+
+/* Tabs ----------------------------------------------------*/
+
+#root.root {
+    --tabs-normal-fg: var(--uc-text) !important;
+    --tabs-normal-bg: transparent;
+    --tabs-activated-bg: var(--uc-button-selected) !important;
+    --tabs-activated-fg: var(--uc-accent-v) !important;
+    --tabs-border-radius: var(--uc-button-border-radius) !important;
+    --tabs-activated-shadow: var(--uc-box-shadow) !important;
+    --tabs-progress-bg: var(--uc-accent-v) !important;
+    --tabs-height: 35px !important;
+    
+    --tabs-discarded-favicon-opacity: 0.05 !important;
+    --tabs-discarded-title-opacity: 0.15 !important;
+    --tabs-indent: 30px !important; /* OR 20 */
+    --tabs-audio-btn-width: 30px !important;
+    --ntb-border-radius: var(--uc-button-border-radius) !important;
+}
+
+.Tab[data-pin="false"] .fav {margin-left: 9px !important;}
+
+/* Fix Tabs Tree --------------------------------------------*/
+
+@media screen and (max-width: 42px) {
+    #root {
+        --tabs-indent: unset !important;
+    }
+    .ScrollBox > .scroll-container {
+        overflow: hidden !important;
+    }
+    .Tab .body::after {
+        display: none !important;
+    }
+    .Tab .audio {
+        left: 10px !important;
+        transform: scale(0.8) !important;
+        transform: translateY(6px) translateX(-15px) !important;
+        z-index: 99 !important;
+    }
+    .Tab[data-audible] svg.-loud,
+    .Tab[data-muted] svg.-mute {
+        transform: translateY(0px) translateX(0px) !important;
+    }
+}
+
+/* Bookmarks ------------------------------------------------*/
+
+#root.root {
+    --bookmarks-indent: 0px !important;
+}
+
+/* Popups --------------------------------------------------*/
+
+#root.root {
+    --ctx-menu-bg: var(--uc-context-menu) !important;
+    --ctx-menu-fg: var(--uc-text) !important;
+  
+    --ctx-menu-padding: 5px !important;
+    --ctx-menu-border-radius: 8px !important;
+    --ctx-menu-text-opt-inner-gap: 5px !important;
+ 
+    --ctx-menu-separator: var(--ut-background) !important;
+    --ctx-menu-shadow: 0 0 0 2px var(--uc-accent-i), 0 1px 16px 0 rgba(0,0,0,0.5) !important;
+    
+    --popup-bg: var(--uc-context-menu) !important;
+    --popup-fg: var(--uc-text) !important;
+    --popup-scrollbar-color: var(--uc-accent-i)
+        
+    --notification-bg: var(--uc-context-menu) !important;
+    --notification-fg: var(--uc-text) !important;
+    
+    --btn-border-radius: var(--uc-button-border-radius) !important;
+    --scroll-color:  color-mix(in srgb, var(--uc-accent-i) 40%, transparent 60%) !important;
+}
+    
+@media -moz-pref("user.theme.dark.a"), @media -moz-pref("user.theme.dark.midnight") {
+    #root.root {
+            --ctx-menu-shadow: 0 0 0 1px rgb(56, 60, 64), 0 1px 16px 0 rgba(0,0,0,0.282) !important;
+        }
+}
+@media -moz-pref("user.theme.light.a"), @media -moz-pref("user.theme.light.gruvbox") {
+    #root.root {
+            --ctx-menu-shadow: 0 0 0 1px var(--uc-accent-i), 0 1px 16px 0 rgba(100,100,100,0.282) !important;
+        }
+}
+
+
+}} /* end of sidebery automatic theming, end of sidebery doc */
+
