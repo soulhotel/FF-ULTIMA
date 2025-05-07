@@ -11,17 +11,16 @@
 - Firefox 138+ required
 
 ### <ins> Change Log:
-- `fyi • 🔴 • ` Vertical Tab autohiding can be enabled/disabled in the Settings Sidebar
+- `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
 - `new • 🟢 • ` Sidebery AUTOMATIC theming based on current Color Scheme. Enabled through `user.theme.sidebery` #291
-- `new • 🟢 • `  Adaptive Tab Color [Extension now supported](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration)
+- `new • 🟢 • `  Adaptive Tab Color [Extension supported](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration)  as of ffu 2.0
 - `new • 🟢 • ` Setting `ultima.navbar.windowcontrols` to customize window controls (3 traffic light options) #285
 - `qol • 🟡 • ` Theme size reduced by 5-9Mib (all wallpapers converted to JPG & some even upscaled)
-- `qol • 🟡 • ` While sidebery isn't a priority for this theme, i did give it a little more attention to detail while re-theming it. It looks great now.
 - `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever.
 - `qol • 🟡 • ` Midnight Color Scheme adjustments. More Black. Only White accents. Animated background only with `user.theme.dark.midnight.animated` #243
-- `qol • 🟡 • ` Dusky color scheme adjustments. Less blue, More Dusky.
-- `qol • 🟡 • ` Gruvbox-light color scheme adjustments. It actually looks great.
-- `qol • 🟡 • ` Tab Groups visual optimization 
+- `qol • 🟡 • ` Dusky color scheme adjustments, less blue, more Dusky
+- `qol • 🟡 • ` Gruvbox-light color scheme adjustments
+- `qol • 🟡 • ` Tab Groups visual optimization
 
 > Sidebery automatic theming
 
@@ -35,6 +34,9 @@ https://github.com/user-attachments/assets/38df6a16-157e-4378-b340-cdda5d48b2ba
 
 https://github.com/user-attachments/assets/116143ff-b0b7-4a50-bd85-7d773871f5fc
 
-> Sidebery automatic theming
+> Adaptive Tab Color Support
+
+https://github.com/user-attachments/assets/789a31ea-d17a-4292-994e-97147f2c2a59
+
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
