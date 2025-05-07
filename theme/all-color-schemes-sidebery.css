@@ -4,34 +4,24 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Automatically apply color scheme colors to Sidebery
 
 Sidebery Automatic Theming
-Applying styles to sidebery based on Users current color scheme
+Color Management
+Applying it all to Sidebery elements
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { /* ignore */
+:root {--icu-test:"Styles only wrapped inside of a sidebery-usercontent";}} @media -moz-pref("user.theme.sidebery") {
 @-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") {
-    :root {
-        --icu-test:"Styles only wrapped inside of sidebery-usercontent";
-    }
-}
-@media -moz-pref("user.theme.sidebery") {
-    @-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") {
-        :root {
-            --icu-2:"Styles wrapped inside of sidebery-usercontent, which is wrapped inside of a moz-pref";
-        }    
-}
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { 
-    @media -moz-pref("user.theme.sidebery") {
-        :root {
-            --icu-3:"Styles wrapped inside of a moz-pref, which is wrapped inside of a sidebery-usercontent";
-        }   
-  }
-}
+:root {--icu-2:"Styles wrapped inside of a sidebery-usercontent, which is wrapped inside of a moz-pref";}    }
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { @media -moz-pref("user.theme.sidebery") {
+:root {--icu-3:"Styles wrapped inside of a moz-pref, which is wrapped inside of a sidebery-usercontent";}   }}
   
 /* Sidebery Automatic Theming ----------------------------------------------------------------- */
-
+/* Color Management for all color schemes ----------------------------------------------------- */  
+    
 @-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { 
 @media -moz-pref("user.theme.sidebery") {  
-   
+
 :root { /*color management -------------------------------------*/
     /* apply dark mode colors */
     @media (prefers-color-scheme: dark) {
@@ -110,29 +100,8 @@ Applying styles to sidebery based on Users current color scheme
     --uc-context-menu: color-mix(in srgb, var(--ut-background) 90%, black 10%) !important;
 } /*end of color management*/
 
-    
-    
-/*pinned tab color, regular tab color, selected tab colors, unloaded tab color
-  
-all tabs
-background: transparent !important;
-color: var(--uc-text) !important;
-     
-regular tab selected
-background: var(--uc-button-selected) !important;
-color: var(--uc-accent-v) !important;
-box-shadow: var(--uc-box-shadow) !important;
-
-pinned tabs
-background: --tab-selected-bgcolor
-color: var(--uc-accent-i) !important;   
-box-shadow: var(--uc-box-shadow) !important;    
-
-hover:
-background: --tab-selected-bgcolor    
-    
-    */    
-    
+/* Applying it all to Sidebery elements ------------------------------------------------------- */
+   
 /* Background --------------------------------------------------*/
 
 @media (prefers-color-scheme: dark) { #root.root {
