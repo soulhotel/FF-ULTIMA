@@ -28,8 +28,9 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 @import url(theme/website-private.css); /*private new tab page */
 
-@import url(MyuserContent.css);
+@import url(theme/all-color-schemes-sidebery.css); /* sidebery color schemes */
 
+@import url(MyuserContent.css);
 
 /* temporary fix for firefox 135 new tab spacing */
 
