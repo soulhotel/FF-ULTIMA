@@ -18,11 +18,11 @@ Custom Icons
 :root, body, * {
     color-scheme: light !important;
     --uc-ultima-window: rgb(220, 220, 220);
-    --uc-text: rgb(198, 63, 41);
-    --uc-dark-color: rgb(89, 53, 34);
+    --uc-text: rgb(168, 91, 81);
+    --uc-dark-color: rgb(168, 91, 81);
     --uc-light-color: #fff;
     --uc-accent-i: rgb(72, 136, 141); /* accent colors - blues, yellows, etc. */
-    --uc-accent-ii: #17347B;
+    --uc-accent-ii: pink;
     --uc-accent-iii: rgb(89, 53, 34);
     --uc-accent-iv: rgb(220, 220, 220);
     --uc-accent-v: rgb(206, 95, 20);
@@ -32,13 +32,13 @@ Custom Icons
     --uc-background-main: rgb(250, 220, 220);
     --uc-background-layered: rgb(255, 255, 255);
     --uc-transparent: rgba(0,0,0,0);
-    --uc-button-selected: rgb(114, 155, 170);
-    --uc-tab-selected-bg: rgb(221, 147, 112);
-    --uc-urlbar-background: rgb(220, 220, 220);
+    --uc-button-selected: rgba(114, 155, 170,0.5);
+    --uc-tab-selected-bg: rgba(221, 147, 112,0.5);
+    --uc-urlbar-background: rgb(215, 215, 215);
     --uc-panel-background: rgb(230, 225, 225);
     --uc-panel-border: rgba(66, 25, 25, 1);
     --uc-panel-border-ii: rgba(66, 40, 40, 0.5);
-    --uc-context-menu: rgb(250, 220, 220);
+    --uc-context-menu: rgb(230, 225, 225);
     --uc-tabs-background: var(--uc-background-main);
     --uc-sb-background: var(--uc-background-main);
     --uc-sb-background-container: var(--uc-transparent);
@@ -172,14 +172,18 @@ Custom Icons
     }
     /* tabs - selected tabs */
     & .tab-label-container[selected] {
-        color: var(--uc-accent-viii) !important;
+        color: var(--uc-accent-iii) !important;
     }
     & .tab-background[selected] {
         box-shadow: var(--uc-box-shadow) !important;
     }
+    & .tab-background[multiselected] {
+        outline-color: var(--uc-accent-ii) !important;
+        outline-offset: none !important;
+    }
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
-        color: var(--uc-accent-vii) !important;
+        color: var(--uc-accent-viii) !important;
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {

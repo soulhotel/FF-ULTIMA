@@ -762,7 +762,7 @@ menupopup menuseparator {opacity:0.2 !important;}
 #navigator-toolbox {scrollbar-width:auto !important; scrollbar-color:rgba(70, 70, 80, 0.2) rgba(5,5,5, 0.0) !important;}  
 
 .tabbrowser-tab[pending] .tab-content {
-  opacity: 0.2 !important;
+  opacity: 0.15 !important;
 }    
 .tab-icon-image[pending] {
   filter: grayscale(60%) !important;
