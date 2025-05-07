@@ -6,20 +6,30 @@
   
 ### <ins> Version Notes
 - *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite song - to that part where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it while it last. Stability.*
-- **Thank you** to everyone that have been reporting issues and beta changes
+- Check out the First Video below! Or watch it [@youtube](https://www.youtube.com/watch?v=xtUBmixQHvo&list=PLTVs0Y4lTV55tEwbkGwlooQinDbge3a6O&index=1) for better quality.
 - User.js recommended (not required) for new settings
 - Firefox 138+ required
 
 ### <ins> Change Log:
-- `fyi • ℹ️ • ` Vertical Tab autohiding can be enabled/disabled in the Settings Sidebar
-- `qol • 🔴 • ` Sidebery color scheme support
-- `new • 🟢 • ` Sidebery internal style now automatically handled via `ultima.` Allowing automatic light/dark mode, and color scheme adjustments
+- `fyi • 🔴 • ` Vertical Tab autohiding can be enabled/disabled in the Settings Sidebar
+- `new • 🟢 • ` Sidebery AUTOMATIC theming based on current Color Scheme. Enabled through `user.theme.sidebery` #291
 - `new • 🟢 • `  Adaptive Tab Color [Extension now supported](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration)
-- `new • 🟢 • ` Setting `ultima.navbar.windowcontrols` to customize window controls (3 traffic light options)
+- `new • 🟢 • ` Setting `ultima.navbar.windowcontrols` to customize window controls (3 traffic light options) #285
 - `qol • 🟡 • ` Theme size reduced by 5-9Mib (all wallpapers converted to JPG & some even upscaled)
-- `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) has been improved
+- `qol • 🟡 • ` While sidebery isn't a priority for this theme, i did give it a little more attention to detail while re-theming it. It looks great now.
+- `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever.
 - `qol • 🟡 • ` Midnight Color Scheme adjustments. More Black. Only White accents. Animated background only with `user.theme.dark.midnight.animated` #243
+- `qol • 🟡 • ` Dusky color scheme adjustments. Less blue, More Dusky.
+- `qol • 🟡 • ` Gruvbox-light color scheme adjustments. It actually looks great.
 - `qol • 🟡 • ` Tab Groups visual optimization 
+
+> Sidebery automatic theming
+
+https://github.com/user-attachments/assets/38df6a16-157e-4378-b340-cdda5d48b2ba
+
+> Carl Window controls
+
+![Image](https://github.com/user-attachments/assets/4d04d204-023c-4c7c-b4e8-72237538d122)
 
 > Midnight Color Scheme
 
