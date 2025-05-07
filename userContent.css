@@ -12,28 +12,19 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* 
-- To remove a certain websites style, just delete its line below.
-- Then open the website in new tab, no restart needed.
+- Dont like a websites styling? remove the line associated below.
 */
 
 @import url(theme/website-styles.css); /*styling for multiple websites*/
-
 @import url(theme/website-newtab.css); /*new tab page*/
-
 @import url(theme/website-newtab-wallpapers.css); /*new tab page wallpapers*/
-
 @import url(theme/website-reddit.css); /*reddit*/
-
 @import url(theme/website-yt.css); /*youtube*/
-
 @import url(theme/website-private.css); /*private new tab page */
-
 @import url(theme/all-color-schemes-sidebery.css); /* sidebery color schemes */
-
 @import url(MyuserContent.css);
 
 /* temporary fix for firefox 135 new tab spacing */
-
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
     .outer-wrapper .ds-top-sites .top-sites .top-sites-list {
         /* margin: 0 5vw; */
