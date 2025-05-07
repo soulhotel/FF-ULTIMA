@@ -468,8 +468,9 @@ box-shadow: none !important;}}
 #sidebar { @media -moz-pref("sidebar.revamp") { & {
     box-shadow: 1px 2px 6px 0 light-dark(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)) !important;
     border: 0px solid var(--sidebar-border-color) !important;
+    outline: none !important;
 }}}
-
+/* FIREFOX IM TIRED OF YOUR GOT DAM BOREDERS MANNNNNNNNN FR JUST STOP FR STOP */
 
 /* Sidebar Seperator ----------------------------------------------------------------------*/
 
