@@ -123,6 +123,7 @@ user_pref("browser.tabs.hoverPreview.enabled", true);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("network.http.max-connections", 300);
+user_pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh", false);
 
 /* extra accessibility */
 user_pref("findbar.highlightAll", true);
