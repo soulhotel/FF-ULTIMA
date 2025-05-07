@@ -175,7 +175,7 @@ tab groups
         color: var(--uc-accent-i) !important;
         border: 0.5px solid color-mix(in srgb, currentColor 24%, transparent) !important;
         border-radius: var(--border-radius-medium) !important;
-        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8) !important;
+        box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6) !important;
         margin: 2% 2% 133px 2% !important;
         padding-left:12px !important
     }
