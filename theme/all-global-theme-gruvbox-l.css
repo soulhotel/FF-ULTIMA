@@ -29,7 +29,7 @@ Custom Icons
     --uc-accent-vi: rgb(206, 95, 20);
     --uc-accent-vii: rgb(243, 182, 221);
     --uc-accent-viii: rgb(55, 55, 105);
-    --uc-background-main: rgb(250, 220, 220);
+    --uc-background-main: rgb(230, 224, 224);
     --uc-background-layered: rgb(255, 255, 255);
     --uc-transparent: rgba(0,0,0,0);
     --uc-button-selected: rgba(114, 155, 170,0.5);
@@ -158,7 +158,7 @@ Custom Icons
         background:var(--uc-ultima-window) !important;
     }
     #sidebar {
-        /*background:var(--uc-sb-background) !important;*/
+        background:var(--uc-sb-background) !important;
     }
 }    
 
