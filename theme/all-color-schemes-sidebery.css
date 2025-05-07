@@ -9,9 +9,9 @@ Applying it all to Sidebery elements
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { /* ignore */
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { /* ignore mee */
 :root {--icu-test:"Styles only wrapped inside of a sidebery-usercontent";}} @media -moz-pref("user.theme.sidebery") {
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") {
+@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { /* regexp sees */
 :root {--icu-2:"Styles wrapped inside of a sidebery-usercontent, which is wrapped inside of a moz-pref";}    }
 @-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { @media -moz-pref("user.theme.sidebery") {
 :root {--icu-3:"Styles wrapped inside of a moz-pref, which is wrapped inside of a sidebery-usercontent";}   }}
@@ -19,7 +19,7 @@ Applying it all to Sidebery elements
 /* Sidebery Automatic Theming ----------------------------------------------------------------- */
 /* Color Management for all color schemes ----------------------------------------------------- */  
     
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { 
+@-moz-document regexp("moz-extension://.*/sidebar/sidebar.html") {
 @media -moz-pref("user.theme.sidebery") {  
 
 :root { /*color management -------------------------------------*/
