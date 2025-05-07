@@ -14,26 +14,26 @@ replace the icons
 
 /* carl traffic lights*/
 @media -moz-pref("ultima.navbar.windowcontrols.carl") {
-    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/carl-min.png") !important;}
-    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
-    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
-    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/carl-close.png") !important;}
+    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/carl-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/carl-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/carl-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/carl-close.png") !important;}
 }
 
 /* standard traffic lights */
 @media -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
-    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/traffic-min.png") !important;}
-    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
-    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
-    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/traffic-close.png") !important;}
+    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/traffic-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/traffic-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/traffic-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/traffic-close.png") !important;}
 }
 
 /* whiteout traffic lights */
 @media -moz-pref("ultima.navbar.windowcontrols.whiteout") {
-    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-minmaxrestore.png") !important;}
-    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-minmaxrestore.png") !important;}
-    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-minmaxrestore.png") !important;}
-    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-close.png") !important;}
+    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/whiteout-close.png") !important;}
 }
 
 /* custom window controls activation -------------------------------------------*/
