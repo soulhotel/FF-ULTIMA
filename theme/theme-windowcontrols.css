@@ -1,0 +1,69 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Theme window controls for all OS's 
+
+custom window controls
+readjust appearance, size, & borders
+replace the icons
+custom window controls themes
+carl
+traffic lights
+whiteout
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* custom window controls ------------------------------------------------------*/
+
+@media -moz-pref("ultima.navbar.windowcontrols.carl"), -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
+    
+    /* readjust appearance, size, & borders */ 
+    .titlebar-min > .toolbarbutton-icon,
+    .titlebar-max > .toolbarbutton-icon,
+    .titlebar-restore > .toolbarbutton-icon,
+    .titlebar-close > .toolbarbutton-icon {
+        -moz-default-appearance: none !important;
+        background-size: 16px 16px !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        width: 20px !important;
+        height: 20px !important;
+        border-radius: 10px !important;
+    }    
+  
+    /* replace the icons */
+    .titlebar-min {list-style-image:url("") !important;}
+    .titlebar-max {list-style-image:url("") !important;}
+    .titlebar-restore {list-style-image:url("") !important;}
+    .titlebar-close {list-style-image:url("") !important;} 
+  
+    /* or remove the icons */
+    .titlebar-button {list-style-image:none !important;}    
+    
+}
+
+/* custom window controls themes -----------------------------------------------*/
+
+/* carl traffic lights*/
+@media -moz-pref("ultima.navbar.windowcontrols.carl") {
+    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/carl-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/carl-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/carl-close.png") !important;}
+}
+
+/* standard traffic lights */
+@media -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
+    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/traffic-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/traffic-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/traffic-close.png") !important;}
+}
+
+/* whiteout traffic lights */
+@media -moz-pref("ultima.navbar.windowcontrols.whiteout") {
+    .titlebar-min > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("theme/icons/whiteout-close.png") !important;}
+}
