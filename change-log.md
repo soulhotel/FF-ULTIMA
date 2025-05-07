@@ -34,9 +34,9 @@ https://github.com/user-attachments/assets/38df6a16-157e-4378-b340-cdda5d48b2ba
 
 https://github.com/user-attachments/assets/116143ff-b0b7-4a50-bd85-7d773871f5fc
 
-> Adaptive Tab Color Support
+> Tab Groups 
 
-https://github.com/user-attachments/assets/789a31ea-d17a-4292-994e-97147f2c2a59
+https://github.com/user-attachments/assets/434ba0b7-5916-4294-97d8-ac439c2e3f9b
 
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
