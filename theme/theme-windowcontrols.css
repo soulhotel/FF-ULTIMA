@@ -15,7 +15,9 @@ whiteout
 
 /* custom window controls ------------------------------------------------------*/
 
-@media -moz-pref("ultima.navbar.windowcontrols.carl"), -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
+@media -moz-pref("ultima.navbar.windowcontrols.carl"),
+-moz-pref("ultima.navbar.windowcontrols.trafficlights"),
+-moz-pref("ultima.navbar.windowcontrols.whiteout") {
     
     /* readjust appearance, size, & borders */ 
     .titlebar-min > .toolbarbutton-icon,
