@@ -648,10 +648,9 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
 /* Vertical Tabs Disabled - setting ------------------------------------------------------*/
 
-@media -moz-pref("ultima.disable.verticaltab.bar") {
 @media -moz-pref("sidebar.verticalTabs") {
+@media -moz-pref("ultima.disable.verticaltab.bar") {
 @media not -moz-pref("ultima.disable.verticaltab.bar.notprivate") {
-
     /* accessibility button */
     #sidebar-main:not(:hover) {       
         position:fixed !important;
@@ -686,50 +685,55 @@ span.button-background.labelled label {padding-left: 5px !important;}
         --uc-content-margins: 3px 5px 5px 5px;
         --uc-sb-margins: 2px 0px 5px 5px;
         --uc-sb-margins-right: 2px 5px 5px 0px;
+    }
+    /* no vertical tab resizing with this setting, it interferes with the sidebar */
+    #main-window:has(#sidebar-main) #sidebar-launcher-splitter {
+        display:none !important;
     }
 }}}
-@media -moz-pref("ultima.disable.verticaltab.bar.notprivate") {
 @media -moz-pref("sidebar.verticalTabs") {
 @media not -moz-pref("ultima.disable.verticaltab.bar") {
-    
-:root:not([privatebrowsingmode="temporary"]) {
-
-    /* accessibility button */
-    #sidebar-main:not(:hover) {       
-        position:fixed !important;
-        top:85vh !important;
-        left:calc(var(--uc-vertical-collapsed-width) * -1 + 8px) !important; &[positionend]{}
-        height:5vh !important;
-        width:55px !important;
-        border-radius:7px !important;
-        transform:scale(0);
-        background-color:var(--uc-accent-ii) !important;
-        & *{display:none !important;}
-    }
-    /* style the accessibility button like so: */
-    #main-window:not([lwtheme]) #sidebar-main:not(:hover) {
-        background:var(--uc-accent-ii) !important;
-    }
-    @media -moz-pref("ultima.disable.verticaltab.bar.withindicator") {
-        #sidebar-main:not(:hover) {transform:scale(1);z-index:1001 !important;}  
-    }
-    /* sidebar triggered by screen edge */
-    @media not -moz-pref("ultima.spacing.compact") {
-        #sidebar-box::before {
-          content: "";background-color:none;position: absolute;
-          z-index: 998;top: 0; bottom: 0;left: -5px;width: 1px;height: auto;
+@media -moz-pref("ultima.disable.verticaltab.bar.notprivate") {
+    #main-window:not([privatebrowsingmode="temporary"]) {
+        /* accessibility button */
+        & #sidebar-main:not(:hover) {       
+            position:fixed !important;
+            top:85vh !important;
+            left:calc(var(--uc-vertical-collapsed-width) * -1 + 8px) !important; &[positionend]{}
+            height:5vh !important;
+            width:55px !important;
+            border-radius:7px !important;
+            transform:scale(0);
+            background-color:var(--uc-accent-ii) !important;
+            & *{display:none !important;}
         }
-        #sidebar-box::after {
-          content: "";background-color:none;position: absolute;
-          z-index: 998;top: 0; bottom: 0;right: -5px;width: 1px;height: auto;
+        /* style the accessibility button like so: */
+        &:not([lwtheme]) #sidebar-main:not(:hover) {
+            background:var(--uc-accent-ii) !important;
         }
-    }
-    :root {
+        @media -moz-pref("ultima.disable.verticaltab.bar.withindicator") {
+            & #sidebar-main:not(:hover) {transform:scale(1);z-index:1001 !important;}  
+        }
+        /* sidebar triggered by screen edge */
+        @media not -moz-pref("ultima.spacing.compact") {
+            & #sidebar-box::before {
+              content: "";background-color:none;position: absolute;
+              z-index: 998;top: 0; bottom: 0;left: -5px;width: 1px;height: auto;
+            }
+            & #sidebar-box::after {
+              content: "";background-color:none;position: absolute;
+              z-index: 998;top: 0; bottom: 0;right: -5px;width: 1px;height: auto;
+            }
+        }
         --uc-content-margins: 3px 5px 5px 5px;
         --uc-sb-margins: 2px 0px 5px 5px;
         --uc-sb-margins-right: 2px 5px 5px 0px;
-    }
-}
+
+        /* no vertical tab resizing with this setting, it interferes with the sidebar */
+        &:has(#sidebar-main) #sidebar-launcher-splitter {
+            display:none !important;
+        }
+    }  
 }}}
 
 
