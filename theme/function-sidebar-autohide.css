@@ -84,12 +84,12 @@ Adjustments for disabled vertical tab bar
         top:calc(var(--uc-topbars-combined-height) - 1px) !important;
         height:calc(100vh - var(--uc-topbars-combined-height) - 5px) !important;
         /*left side*/
-        left:1px !important;
+        left:-1px !important;
         right:unset !important;
         /*right side*/
         &[sidebar-positionend]{
             left:unset !important;
-            right:5px !important;            
+            right:3px !important;            
         }
     }    
     /*browser content margins left then right*/
@@ -281,12 +281,12 @@ Adjustments for disabled vertical tab bar
         top:calc(var(--uc-topbars-combined-height) - 1px) !important;
         height:calc(100vh - var(--uc-topbars-combined-height) - 5px) !important;
         /*left side*/
-        left:6px !important;
+        left:-1px !important;
         right:unset !important;
         /*right side*/
         &[sidebar-positionend]{
             left:unset !important;
-            right:5px !important;            
+            right:3px !important;            
         }
     }    
     /*browser content margins left then right*/
@@ -396,3 +396,5 @@ Adjustments for disabled vertical tab bar
 }
 }
 }
+
+
