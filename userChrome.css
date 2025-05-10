@@ -35,3 +35,12 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
     padding-block: 2px !important;
   }
 }
+
+.tab-group-label {
+  #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+    &::first-letter {
+      line-height: var(--tab-label-line-height) !important;
+      padding-block: 2px !important;
+    }
+  }
+}
