@@ -556,14 +556,14 @@ just need to find the right combination of sidebar-launcher events
   & #tabbrowser-tabbox {
     &:not([sidebar-positionend]) {
       &[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]), &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open]) {
-        margin-inline-start: 50.3666687px !important;
+        margin-inline-start: 49.3666687px !important;
       }
     }
   }
 }
 :root:has([sidebar-launcher-expanded][sidebar-panel-open])) {
   & #sidebar-box:not([sidebar-positionend]) {
-        margin-inline-start: 50.3666687px !important;
+        margin-inline-start: 49.3666687px !important;
   }
 }
 
