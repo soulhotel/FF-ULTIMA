@@ -28,6 +28,7 @@ user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.windowcontrols.carl", false);
 user_pref("ultima.navbar.windowcontrols.trafficlights", false);
 user_pref("ultima.navbar.windowcontrols.whiteout", false);
+user_pref("ultima.navbar.windowcontrols.fluent", false);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.xstyle.bookmarks.centered", true);
 user_pref("ultima.xstyle.bookmarks.autohide", true);
