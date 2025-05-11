@@ -1,5 +1,5 @@
-### <ins> FF Ultima Version 2.1 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.1/ffultima2.1.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
+### <ins> FF Ultima Version 2.2 Release
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.2/ffultima2.2.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
 - ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
@@ -12,14 +12,8 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `new • 🟢 • ` Sidebery AUTOMATIC theming based on current Color Scheme. Enabled through `user.theme.sidebery` #291
-- `new • 🟢 • `  Adaptive Tab Color [Extension supported](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration)  as of ffu 2.0
-- `new • 🟢 • ` Setting `ultima.navbar.windowcontrols` to customize window controls (3 traffic light options) #285
-- `qol • 🟡 • ` Theme size reduced by 5-9Mib (all wallpapers converted to JPG & some even upscaled)
+- `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
 - `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever.
-- `qol • 🟡 • ` Midnight Color Scheme adjustments. More Black. Only White accents. Animated background only with `user.theme.dark.midnight.animated` #243
-- `qol • 🟡 • ` Dusky color scheme adjustments, less blue, more Dusky
-- `qol • 🟡 • ` Gruvbox-light color scheme adjustments
 - `qol • 🟡 • ` Tab Groups visual optimization
 
 > Sidebery automatic theming
