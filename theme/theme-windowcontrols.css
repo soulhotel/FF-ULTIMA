@@ -7,6 +7,7 @@ custom window controls themes
 custom window controls activation
 readjust appearance, size, & borders
 replace the icons
+fine adjustments for specific themes
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -36,25 +37,33 @@ replace the icons
     .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/whiteout-close.png") !important;}
 }
 
+/* fluent */
+@media -moz-pref("ultima.navbar.windowcontrols.fluent") {
+    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/fluent-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/fluent-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/fluent-res.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/fluent-close.png") !important;}
+}
+
 /* custom window controls activation -------------------------------------------*/
 
 @media -moz-pref("ultima.navbar.windowcontrols.carl"),
 -moz-pref("ultima.navbar.windowcontrols.trafficlights"),
--moz-pref("ultima.navbar.windowcontrols.whiteout") {
+-moz-pref("ultima.navbar.windowcontrols.whiteout"),
+-moz-pref("ultima.navbar.windowcontrols.fluent") {
     
     /* readjust appearance, size, & borders */ 
-    .titlebar-min > .toolbarbutton-icon,
-    .titlebar-max > .toolbarbutton-icon,
-    .titlebar-restore > .toolbarbutton-icon,
-    .titlebar-close > .toolbarbutton-icon {
-        -moz-default-appearance: none !important;
-        background-size: 16px 16px !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        width: 20px !important;
-        height: 20px !important;
-        border-radius: 10px !important;
-    }    
+    .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+         & > .toolbarbutton-icon {
+             -moz-default-appearance: none !important;
+             background-size: 16px 16px !important;
+             background-repeat: no-repeat !important;
+             background-position: center !important;
+             width: 20px !important;
+             height: 20px !important;
+             border-radius: 10px !important;
+        }
+    }
   
     /* replace the icons */
     .titlebar-min {list-style-image:url("") !important;}
@@ -67,4 +76,15 @@ replace the icons
     
 }
 
+/* fine adjustments for specific themes ----------------------------------------*/
 
+/*fluent*/
+@media -moz-pref("ultima.navbar.windowcontrols.fluent") {
+    .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+         & > .toolbarbutton-icon {
+            background-size: 20px 20px !important;
+            width: 22px !important;
+            height: 22px !important;
+            margin-inline:4px !important;
+        }    
+}
