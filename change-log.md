@@ -6,8 +6,7 @@
   
 ### <ins> Version Notes
 - *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite song - to that part where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it while it last. Stability.*
-- Check out the First Video below! Or watch it [@youtube](https://www.youtube.com/watch?v=xtUBmixQHvo&list=PLTVs0Y4lTV55tEwbkGwlooQinDbge3a6O&index=1) for better quality.
-- User.js recommended (not required) for new settings
+- User.js ...
 - Firefox 138+ required
 
 ### <ins> Change Log:
