@@ -22,6 +22,7 @@ user_pref("user.theme.dark.gruvbox", false);
 user_pref("user.theme.light.gruvbox", false);
 user_pref("user.theme.dark.midnight", false);
 user_pref("user.theme.dark.midnight.animated", false);
+user_pref("user.theme.dark.scarlet", false); /*wip design stage*/
 
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
