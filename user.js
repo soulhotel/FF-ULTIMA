@@ -31,7 +31,7 @@ user_pref("ultima.navbar.windowcontrols.whiteout", false);
 user_pref("ultima.navbar.windowcontrols.fluent", false);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.xstyle.bookmarks.centered", true);
-user_pref("ultima.xstyle.bookmarks.autohide", true);
+user_pref("ultima.xstyle.bookmarks.autohide", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
 
 /* sidebar */
