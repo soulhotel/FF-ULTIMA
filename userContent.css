@@ -15,6 +15,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 - Dont like a websites styling? remove the line associated below.
 */
 
+@import url(theme/website-aboutconfig.css); /*styling for aboutconfig*/
 @import url(theme/website-styles.css); /*styling for multiple websites*/
 @import url(theme/website-newtab.css); /*new tab page*/
 @import url(theme/website-newtab-wallpapers.css); /*new tab page wallpapers*/
