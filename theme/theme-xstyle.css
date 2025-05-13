@@ -192,7 +192,7 @@ tab groups
 /* highlight aboutconfig tab ------------------------------------------------------------------------------- */
 @media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
     #tabbrowser-tabs tab[label="Advanced Preferences"] .tab-background {
-        --uc-box-shadow: 0rem 0rem 0.4rem 0rem var(--uc-accent-ii);
+        outline-color: color-mix(in srgb, var(--uc-accent-ii) 60%, transparent) !important;
     }
 }
 
