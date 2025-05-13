@@ -18,5 +18,6 @@ Use the template below to enter your theme into the list:
 @import url('all-global-theme-gruvbox.css') -moz-pref("user.theme.dark.gruvbox");
 @import url('all-global-theme-gruvbox-l.css') -moz-pref("user.theme.light.gruvbox");
 @import url('all-global-theme-midnight.css') -moz-pref("user.theme.dark.midnight");
+@import url('all-global-theme-scarlet.css') -moz-pref("user.theme.dark.scarlet");
 
 
