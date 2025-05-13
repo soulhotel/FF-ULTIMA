@@ -84,7 +84,7 @@ Applying it all to Sidebery elements
             --uc-accent-v: rgb(72, 136, 141);
             --uc-button-selected: rgba(221, 147, 112,0.5);
         }
-        --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.5) !important;;
+        --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.5) !important;
     }
     /* adaptive styles */
     @media -moz-pref("user.theme.adaptive") {
