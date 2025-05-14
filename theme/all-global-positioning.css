@@ -165,6 +165,7 @@ Extra modifications woth no place to go (yet)
 /* mac */
 @media (-moz-os-version: macos), (-moz-platform: macos) {
     toolbar {min-height: 0px !important;}
+    .titlebar-buttonbox {margin-right: 19px !important;} /*match title bar button margin from right side of browser */
 }
 /* windows */
 @media (-moz-platform: windows) {
