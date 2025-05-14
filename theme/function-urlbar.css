@@ -41,3 +41,9 @@ File Desc:         Alternative Styles for the URL Bar
   
 }
 
+.search-one-offs button {
+    cursor: pointer !important;
+    &:hover{
+        transform:scale(1.1);
+    }
+}
