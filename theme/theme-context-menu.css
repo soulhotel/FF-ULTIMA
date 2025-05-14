@@ -9,7 +9,6 @@ color correction relative to system color scheme
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-#context-take-screenshot
 #context-sep-screenshots,
 #context-sendimage,
 #context-sep-setbackground,
@@ -19,51 +18,63 @@ display: none !important;}
 #context-savelinktopocket,
 #tabContextMenu #context_duplicateTab,         
 #tabContextMenu #context_duplicateTabs,
-#tabContextMenu #context_bookmarkSelectedTabs{
-display: none !important;}
+#tabContextMenu #context_bookmarkSelectedTabs,
+#context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"] {
+    display: none !important;
+}
 
 /* context menu theming */
 
+@media -moz-pref("ultima.spacing.compact.contextmenu") {
+    menuitem {
+        --menuitem-padding: .15em .3em;
+    }
+}
+@media -moz-pref("ultima.spacing.relaxed.contextmenu") {
+    menuitem {
+        --menuitem-padding: .50em .5em;
+    }
+}
+
 menupopup, panel {
-  color-scheme: light dark;
-  --panel-background: var(--uc-context-menu) !important;
-  --panel-border-radius: var(--uc-all-border-radius) !important;
-  --panel-border-color: var(--uc-panel-border-ii) !important;
-  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
+    color-scheme: light dark;
+    --panel-background: var(--uc-context-menu) !important;
+    --panel-border-radius: var(--uc-all-border-radius) !important;
+    --panel-border-color: var(--uc-panel-border-ii) !important;
+    --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
 }
 
 menuitem:hover{
-  background-color: var(--uc-button-selected) !important;
-  color: var(--uc-text) !important;
-  border-radius: 6px !important;
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-text) !important;
+    border-radius: 6px !important;
  }
 
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
-  background-color: var(--uc-button-selected) !important;
-  color: var(--uc-text) !important;
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-text) !important;
 }
 
-#main-window[lwtheme]{
-    
+#main-window[lwtheme]{ 
     menupopup, panel {
-  color-scheme: light dark;
-  --panel-background: var(--lwt-accent-color) !important;
-  --panel-color: color-mix(in srgb, var(--toolbar-color) 35%, var(--tab-loading-fill)) !important;
-  --panel-border-radius: var(--uc-all-border-radius) !important;
-  --panel-border-color: var(--uc-panel-border-ii) !important;
-  --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
+        color-scheme: light dark;
+        --panel-background: var(--lwt-accent-color) !important;
+        --panel-color: color-mix(in srgb, var(--toolbar-color) 35%, var(--tab-loading-fill)) !important;
+        --panel-border-radius: var(--uc-all-border-radius) !important;
+        --panel-border-color: var(--uc-panel-border-ii) !important;
+        --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
 }
 
 menuitem:hover{
-  background-color: var(--uc-button-selected) !important;
-  color: var(--uc-text) !important;
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-text) !important;
  }
 
 menu:where([_moz-menuactive="true"]:not([disabled="true"])),
 menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
-  background-color: var(--uc-button-selected) !important;
-  color: var(--uc-text) !important;
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-text) !important;
 }
 }
 
