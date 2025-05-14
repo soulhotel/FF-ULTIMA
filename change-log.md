@@ -5,7 +5,7 @@
 - ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
   
 ### <ins> Version Notes
-- *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite song - to that part where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it while it last. Stability.*
+- Once again, a big Thank You, to everyone that's been reporting issues to me early. You guys are the ones keeping the theme one step ahead.
 - User.js recommended (not required)
 - Firefox 138+ required
 
