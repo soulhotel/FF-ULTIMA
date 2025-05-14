@@ -28,7 +28,7 @@ Use the template below to enter your theme into the list:
 
 @media -moz-pref("user.theme.dark.midnight"){body{background-image: url("pic/midnight.jpg") !important;}}
 
-@media -moz-pref("user.theme.dark.scarlet"){body{background-image: url("pic/scarlet/9.png") !important;}}
+@media -moz-pref("user.theme.dark.scarlet"){body{background-image: url("pic/scarlet.jpg") !important;}}
 
   
   
