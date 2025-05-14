@@ -13,12 +13,14 @@
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
 - `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever.
 - `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
-- `new • 🟢 • ` Setting to increase or decrease context menu spacing 8c208c2
+- `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` now matches aboutconfig page colors to color scheme
+- `new • 🟢 • ` Settings `ultima.spacing.compact.contextmenu`/`ultima.spacing.relaxed.contextmenu` to change context menu spacing 8c208c2
 - `qol • 🟡 • ` Tab Groups visual optimization
 
-> Sidebery automatic theming
+> Aboutconfig
+Adaptive to color scheme
 
-https://github.com/user-attachments/assets/38df6a16-157e-4378-b340-cdda5d48b2ba
+![Vid_20250514_045957](https://github.com/user-attachments/assets/7cf5bfe7-f2a7-4d4a-90fb-e0781476c972)
 
 > Context Menu Spacing
 
