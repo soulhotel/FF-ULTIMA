@@ -1,13 +1,13 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         DARK Mode Color Scheme, Scarlet (wip)
+File Desc:         DARK Mode Color Scheme, Catppuccin Mocha
 
 Establishing custom variables
 Overwriting existing variables
 Applying variables to create the Dark Mode theme
 Custom Icons
-
+rgb(173, 36, 55);
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -17,27 +17,27 @@ Custom Icons
         
 :root, body, * {
     color-scheme: dark !important; /*--<--dont touch--*/
-    --uc-ultima-window: rgb(173, 36, 55);
+    --uc-ultima-window: rgb(111, 32, 46);
     --uc-text: white;
     --uc-dark-color: rgb(27, 25, 35);
     --uc-light-color: rgb(215, 218, 224);
     --uc-accent-i: rgb(241, 196, 198); /*purp*/
-    --uc-accent-ii: rgb(51, 152, 171); /*blue*/
+    --uc-accent-ii: rgb(152, 103, 111); /*blue*/
     --uc-accent-iii: rgb(51, 152, 171); /*light*/
     --uc-accent-iv: rgb(51, 152, 171); /*dark*/
-    --uc-accent-v: rgb(51, 152, 171); /*green*/
+    --uc-accent-v: rgb(255, 50, 68); /*green*/
     --uc-accent-vi: rgb(51, 152, 171); /*red*/
     --uc-accent-vii: rgb(44, 55, 80); /*darker blue*/
     --uc-background-main: rgb(111, 32, 46);
     --uc-background-layered: rgb(17, 17, 27);
     --uc-transparent: rgba(0,0,0,0);
-    --uc-button-selected: rgb(111, 32, 46);
-    --uc-tab-selected-bg: rgb(111, 32, 46);
-    --uc-urlbar-background: rgb(111, 32, 46);
+    --uc-button-selected: rgb(82, 33, 41);
+    --uc-tab-selected-bg: rgb(82, 33, 41);
+    --uc-urlbar-background: rgb(82, 33, 41);
     --uc-panel-background: rgb(24, 24, 37);
-    --uc-panel-border: rgba(27, 25, 35, 1);
-    --uc-panel-border-ii: rgba(70, 70, 80, 0.2);
-    --uc-context-menu: rgb(255, 50, 68);
+    --uc-panel-border: rgb(255, 50, 68);
+    --uc-panel-border-ii: rgb(255, 50, 68);
+    --uc-context-menu: rgb(24, 24, 37);
     --uc-tabs-background: var(--uc-background-main);
     --uc-sb-background: var(--uc-background-main);
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
