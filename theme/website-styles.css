@@ -19,50 +19,6 @@ bing declutter
 /* PIP button */
 .pip-wrapper {transform: scale(0.6);}
 
-/* about:config page*/ /* need to move this to a new file */
-@-moz-document url(chrome://browser/content/browser.xul), url(about:config) {
-@media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
-
-body::before {
-    content:
-        "\
-        ✅ If you see this text, congratulations! FF Ultima is properly setup. \A
-        📝 To change theme settings, Type: ultima \A
-        📝 To change color schemes, Type: user.theme \A
-        🇺 Need help? Visit the FF Ultima Wiki https://github.com/soulhotel/FF-ULTIMA/wiki \A
-        ";
-
-    display: block;
-    position:flex;
-    z-index:-1 !important;
-    margin: 10px 10px 0px 10px;
-    padding:12px 32px;
-    border: var(--prefs-table-border);
-    border-radius: 5px;
-    white-space: pre-line;
-    line-height: 1.5;        
-    font-size: var(--font-size-root);
-    color: var(--in-content-text-color);
-    background: var(--in-content-page-background);        
-}
- 
-@media -moz-pref("ultima.disable.verticaltab.bar") { @media -moz-pref("ultima.disable.verticaltab.bar.notprivate") {               
-body::after {content: "\ Only use one of these settings! \A \A  ultima.disable.verticaltab.bar \A ultima.disable.verticaltab.bar.notprivate \A "; position:absolute;display: block; z-index:100; top:0.8%; left:50%; transform: translateX(-50%); height:115px; width:25vw; min-width:200px; padding:22px 32px; border: 3px solid rgb(255,150,50); border-radius: 5px; white-space: pre-line;line-height: 1.6; font-size: 1.2em; color: var(--in-content-text-color); background: var(--in-content-page-background); box-shadow: 5px 5px 5px rgba(15, 15, 15, 1); }
-}}       
-@media -moz-pref("ultima.sidebar.autohide") { @media -moz-pref("ultima.sidebery.autohide") {               
-body::after {content: "\ Only use one of these settings! \A \A  ultima.sidebery.autohide \A ultima.sidebar.autohide \A "; position:absolute;display: block; z-index:100; top:0.8%; left:50%; transform: translateX(-50%); height:115px; width:25vw; min-width:200px; padding:22px 32px; border: 3px solid rgb(255,150,50); border-radius: 5px; white-space: pre-line;line-height: 1.6; font-size: 1.2em; color: var(--in-content-text-color); background: var(--in-content-page-background); box-shadow: 5px 5px 5px rgba(15, 15, 15, 1); }
-}}     
-@media -moz-pref("ultima.navbar.windowcontrols.carl") { @media -moz-pref("ultima.navbar.windowcontrols.trafficlights") {           
-body::after {content: "\ Only use one of these settings! \A \A  ultima.navbar.windowcontrols \A "; position:absolute;display: block; z-index:100; top:0.8%; left:50%; transform: translateX(-50%); height:115px; width:25vw; min-width:200px; padding:22px 32px; border: 3px solid rgb(255,150,50); border-radius: 5px; white-space: pre-line;line-height: 1.6; font-size: 1.2em; color: var(--in-content-text-color); background: var(--in-content-page-background); box-shadow: 5px 5px 5px rgba(15, 15, 15, 1); }
-}}     
-@media -moz-pref("ultima.sidebar.autohide") { @media -moz-pref("ultima.sidebery.autohide") {               
-body::after {content: "\ Only use one of these settings! \A \A  ultima.sidebery.autohide \A ultima.sidebar.autohide \A "; position:absolute;display: block; z-index:100; top:0.8%; left:50%; transform: translateX(-50%); height:115px; width:25vw; min-width:200px; padding:22px 32px; border: 3px solid rgb(255,150,50); border-radius: 5px; white-space: pre-line;line-height: 1.6; font-size: 1.2em; color: var(--in-content-text-color); background: var(--in-content-page-background); box-shadow: 5px 5px 5px rgba(15, 15, 15, 1); }
-}}    
-    
-    
-}} /* end aboutconfig page */
-
-
 /*--------------------------------------------------------------------------------*/
 
 /*bing declutter*/
