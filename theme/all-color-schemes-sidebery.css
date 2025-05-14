@@ -67,6 +67,13 @@ Applying it all to Sidebery elements
             --uc-button-selected: rgba(17, 18, 22,1);
             --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(14,14,14,0.8) !important;
         }
+        @media -moz-pref("user.theme.dark.scarlet") {
+            --ut-background: rgb(82, 33, 41) !important;
+            --uc-text: white !important;
+            --uc-accent-i: rgb(51, 152, 171) !important;
+            --uc-accent-v: rgb(51, 152, 171) !important; 
+            --uc-button-selected: rgb(92, 43, 51);
+        }
     }
     /* apply light mode colors */
     @media (prefers-color-scheme: light) {
