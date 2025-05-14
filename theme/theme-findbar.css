@@ -26,7 +26,7 @@ findbar{
   background-color: var(--uc-background-main) !important;
   color: var(--uc-text) !important;
   box-shadow: var(--uc-box-shadow);
-  border-radius: var(--uc-all-border-radius);
+  border-radius: var(--uc-all-border-radius) !important;
 }
 .findbar-textbox:focus{
   background-color: var(--uc-background-main) !important;
