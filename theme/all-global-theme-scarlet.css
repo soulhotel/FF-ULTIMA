@@ -28,8 +28,8 @@ rgb(173, 36, 55);
     --uc-accent-v: rgb(255, 50, 68); /*green*/
     --uc-accent-vi: rgb(51, 152, 171); /*red*/
     --uc-accent-vii: rgb(44, 55, 80); /*darker blue*/
-    --uc-background-main: rgb(111, 32, 46);
-    --uc-background-layered: rgb(17, 17, 27);
+    --uc-background-main: rgb(82, 33, 41);
+    --uc-background-layered: rgb(82, 33, 41);
     --uc-transparent: rgba(0,0,0,0);
     --uc-button-selected: rgb(82, 33, 41);
     --uc-tab-selected-bg: rgb(82, 33, 41);
