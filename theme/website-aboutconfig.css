@@ -4,7 +4,7 @@ if you see this text
 warning messages
 */
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:config) {
+@-moz-document url("about:config") {
 @media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
 
 /* color management ------------------------------------------------------------------------------*/
@@ -70,13 +70,7 @@ warning messages
 
 body::before {
     content:
-        "\
-        ✅ If you see this text, congratulations! FF Ultima is properly setup. \A
-        📝 To change theme settings, Type: ultima \A
-        📝 To change color schemes, Type: user.theme \A
-        🇺 Need help? Visit the FF Ultima Wiki https://github.com/soulhotel/FF-ULTIMA/wiki \A
-        ";
-
+        "\✅ If you see this text, congratulations! FF Ultima is properly setup. \A 📝 To change theme settings, Type: ultima \A 📝 To change color schemes, Type: user.theme \A 🇺 Need help? Visit the FF Ultima Wiki https://github.com/soulhotel/FF-ULTIMA/wiki \A";
     display: block;
     z-index:-1 !important;
     margin: 10px 10px 0px 10px;
@@ -91,11 +85,10 @@ body::before {
 }
 
 input, #prefs {
-    border-radius: 8px !important
+    border-radius: 8px !important;
 }
 
-#prefs .has-user-value:has(span[data-l10n-args='{"value":"true"}']) th[scope="row"]::before
-{
+#prefs .has-user-value:has(span[data-l10n-args='{"value":"true"}']) th[scope="row"]::before {
     content: "🟢 ";
     position:absolute;
     left:18px;
