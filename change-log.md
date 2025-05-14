@@ -6,30 +6,22 @@
   
 ### <ins> Version Notes
 - *For the first time in a long time, nothing’s falling apart. Like singing along to your favorite song - to that part where no other can sway your heart. All the pieces are strung so that you cant bite your tongue. So enjoy it while it last. Stability.*
-- User.js ...
+- User.js recommended (not required)
 - Firefox 138+ required
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
 - `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever.
+- `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
+- `new • 🟢 • ` Setting to increase or decrease context menu spacing 8c208c2
 - `qol • 🟡 • ` Tab Groups visual optimization
 
 > Sidebery automatic theming
 
 https://github.com/user-attachments/assets/38df6a16-157e-4378-b340-cdda5d48b2ba
 
-> Carl Window controls
+> Context Menu Spacing
 
-![Image](https://github.com/user-attachments/assets/4d04d204-023c-4c7c-b4e8-72237538d122)
-
-> Midnight Color Scheme
-
-https://github.com/user-attachments/assets/116143ff-b0b7-4a50-bd85-7d773871f5fc
-
-> Tab Groups 
-
-https://github.com/user-attachments/assets/434ba0b7-5916-4294-97d8-ac439c2e3f9b
-
+![context menu spacing](https://github.com/user-attachments/assets/5632017f-518c-4e00-b3ef-6d8cf58c0085)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
