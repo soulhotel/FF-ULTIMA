@@ -6,8 +6,8 @@
   
 ### <ins> Version Notes
 - Once again, a big Thank You, to everyone that's been reporting issues to me early. You guys are the ones keeping the theme one step ahead.
-- User.js recommended (not required)
-- Firefox 138+ required
+- User.js recommended (not required).
+- Firefox 138+ required.
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
