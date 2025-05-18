@@ -23,6 +23,10 @@ display: none !important;}
     display: none !important;
 }
 
+#context_unloadTab {
+  display: initial !important;
+}
+
 /* context menu theming */
 
 @media -moz-pref("ultima.spacing.compact.contextmenu") {
