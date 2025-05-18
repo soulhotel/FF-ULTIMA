@@ -15,6 +15,7 @@
 - `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` now matches aboutconfig page colors to color scheme
 - `new • 🟢 • ` Settings `ultima.spacing.compact.contextmenu`/`ultima.spacing.relaxed.contextmenu` to change context menu spacing 8c208c2
+- `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long while, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme.
 - `qol • 🟡 • ` Tab Groups visual optimization
 
 > Aboutconfig
@@ -25,5 +26,8 @@ Adaptive to color scheme
 > Context Menu Spacing
 
 ![context menu spacing](https://github.com/user-attachments/assets/5632017f-518c-4e00-b3ef-6d8cf58c0085)
+
+![image](https://github.com/user-attachments/assets/72247b14-67e3-4043-b061-0df6ed11e36a)
+
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
