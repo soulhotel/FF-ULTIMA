@@ -11,11 +11,11 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever.
+- `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever
 - `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` now matches aboutconfig page colors to color scheme
 - `new • 🟢 • ` Settings `ultima.spacing.compact.contextmenu`/`ultima.spacing.relaxed.contextmenu` to change context menu spacing 8c208c2
-- `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long while, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme.
+- `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long while, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme e63a57a
 - `qol • 🟡 • ` Tab Groups visual optimization
 
 > Aboutconfig
