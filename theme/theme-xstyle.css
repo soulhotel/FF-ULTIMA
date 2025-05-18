@@ -330,6 +330,22 @@ Spacing correction for all tab group styles
     }
 } 
 
+/* may 10th?, tab sizing optimization */
+/*tab group padding resizes when expand on hover*/
+.tab-group-label {
+
+    #tabbrowser-tabs[orient="vertical"][expanded] & {
+        padding-block: 2px !important;
+    }
+    #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
+        &::first-letter {
+            line-height: var(--tab-label-line-height) !important;
+            padding-block: 2px !important;
+        }
+    }
+  
+}
+
 /*----------------------------------------------------------------
 Style 1: Text labels always visible
 Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
