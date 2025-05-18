@@ -27,19 +27,3 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/theme-tab-audio-indicator.css);
 @import url(theme/theme-windowcontrols.css); 
 @import url(theme/all-global-configurations.css);
-
-
-/*tab group padding resizes when expand on hover*/
-.tab-group-label {
-
-    #tabbrowser-tabs[orient="vertical"][expanded] & {
-        padding-block: 2px !important;
-    }
-    #tabbrowser-tabs[orient="vertical"]:not([expanded]) & {
-        &::first-letter {
-            line-height: var(--tab-label-line-height) !important;
-            padding-block: 2px !important;
-        }
-    }
-  
-}
