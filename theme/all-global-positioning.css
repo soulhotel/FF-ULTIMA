@@ -875,8 +875,15 @@ menupopup menuseparator {opacity:0.2 !important;}
 }
 
 #import-button {
-  display: none !important;
+    display: none !important;
 }
+
+/* 5/18/2025 */
+
+.urlbarView-button-menu {
+    cursor: pointer !important;  
+}
+
 
 /*--------------------------------------------------------------------------------------------------------------------*/
     
