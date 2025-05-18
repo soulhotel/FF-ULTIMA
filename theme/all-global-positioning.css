@@ -743,7 +743,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
     
 /* notification badges */
 .toolbarbutton-badge {
-  background-color: rgba(0,0,0,0.3) !important;
+  background-color: rgba(0,0,0,0.08) !important;
   box-shadow: 0 !important;
   color: var(--uc-text) !important;
   text-shadow: #FDFFFF 0.5px 0 15px!important;
