@@ -28,24 +28,13 @@ tab groups
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 
-@media -moz-pref("sidebar.ExpandOnHover"), -moz-pref("ultima.xstyle.pinnedtabs.i") {
-    #vertical-pinned-tabs-container tab {
-        grid-column-start: 1   !important;
-    }
-    #tabbrowser-tabs[orient="vertical"] {
-        &:not([expanded]):hover {
-            & .tab-label-container {
-                display: flex !important;
-            }
-        }
-    }
-    /*need adjustment hide labels when autohidden but not hovered*/
-    #sidebar-main:hover #vertical-pinned-tabs-container {
-    & .tab-label-container {
-        display: flex !important;
-        margin-left:12px !important;
-    }
-    }
+@media -moz-pref("ultima.xstyle.pinnedtabs.i") {
+    #vertical-pinned-tabs-container {
+        height: fit-content !important;
+        min-height: fit-content !important;
+        max-height: 200px !important;
+    #vertical-pinned-tabs-splitter:not(:hover) {
+        opacity:0.1 !important;
 }
 
 /* URL Bar (transparent url bar) --------------------------------------------------------------------------- */
