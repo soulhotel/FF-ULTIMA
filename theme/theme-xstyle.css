@@ -33,11 +33,14 @@ tab groups
         height: fit-content !important;
         min-height: fit-content !important;
         max-height: 200px !important;
+    }
     #vertical-pinned-tabs-splitter:not(:hover) {
-        opacity:0.1 !important;
+        opacity:0.05 !important;
+    }
 }
 
 /* URL Bar (transparent url bar) --------------------------------------------------------------------------- */
+
 @media -moz-pref("ultima.xstyle.urlbar") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         & #urlbar-background, & #searchbar {
@@ -46,7 +49,7 @@ tab groups
         }
     }
 }
-#identity-box,#tracking-protection-icon-container,#page-action-buttons {
+#identity-box,#tracking-protection-icon-container, #page-action-buttons {
     margin-top:1px !important;
     margin-bottom:-1px !important;
     cursor: pointer !important;
@@ -56,18 +59,19 @@ tab groups
 }
 
 /* bookmarks centered -------------------------------------------------------------------------------------- */
+
 @media -moz-pref("ultima.xstyle.bookmarks.centered") { #PlacesToolbarItems {
     justify-content: center !important;
 }}
 
 /* bookmarks fade out -------------------------------------------------------------------------------------- */
+
 @media -moz-pref("ultima.xstyle.bookmarks.fading") {
     :root:has(#navigator-toolbox:not(:hover)) {
         #PlacesToolbar {
           opacity: 0.05 !important;
           transition: opacity 4s ease-out;
         }
-
         #PlacesToolbar:hover {
           opacity: 1 !important;
           transition: opacity 0.2s ease-in;
@@ -76,6 +80,7 @@ tab groups
 }
  
 /* bookmarks autohide -------------------------------------------------------------------------------------- */
+
 @media -moz-pref("ultima.xstyle.bookmarks.autohide") {
 :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)) {
 &#main-window:not([inFullscreen="true"]) {           
@@ -101,7 +106,6 @@ tab groups
 
 /* new tab button ------------------------------------------------------------------------------------------ */
 
-
 @media -moz-pref("ultima.xstyle.newtabbutton.ontop.i") { 
     #vertical-tabs-newtab-button {
         order: -1 !important;
@@ -114,26 +118,19 @@ tab groups
         display: none !important;      
     }
 }
-
 @media -moz-pref("ultima.xstyle.newtabbutton.ontop.ii") { 
     /*first button visible in vertical tabs collapsed state*/
-    #tabbrowser-arrowscrollbox-periphery {
-      order: -1 !important;
-    }
-    #vertical-tabs-newtab-button {
-      order: -1 !important;
-      /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
-    }
+    #tabbrowser-arrowscrollbox-periphery { order: -1 !important; }
+    /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
+    #vertical-tabs-newtab-button { order: -1 !important; } 
     /*second button visible in vertical tabs expanded state*/
-    #vertical-tabs-newtab-button {
-      order: -1 !important;
-    }    
+    #vertical-tabs-newtab-button { order: -1 !important; }    
 }
 
 /* sidebar extra theming (not sidebery) -------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.xstyle.sidebar.theming") {
-    /* customize sidebar ----------------------------------------------------*/   
+    /* customize sidebar ------------------------------------------------*/   
     /*sidebar header*/
     button[title="Close"] .button-background {
         cursor: pointer !important;
@@ -145,14 +142,13 @@ tab groups
     /*sidebar links*/
     .customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
         color: var(--uc-accent-v) !important;
-        cursor: pointer; text-decoration: underline;
-        
+        cursor: pointer; text-decoration: underline;      
     }
     .sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link) {
         color: var(--uc-accent-v) !important;
         cursor: pointer; text-decoration: underline;    
     }
-    /* bookmarks sidebar ----------------------------------------------------*/
+    /* bookmarks sidebar ------------------------------------------------*/
     /*sidebar header*/
     button[title="Close sidebar"] .button-background {
         cursor: pointer !important;
@@ -168,14 +164,15 @@ tab groups
         margin: 2% 2% 133px 2% !important;
         padding-left:12px !important
     }
-    /* history sidebar ------------------------------------------------------*/
+    /* history sidebar --------------------------------------------------*/
 }
 
 /* sidebery expand on inactive windows ----------------------------------------------------------------------*/
+
 @media -moz-pref("ultima.sidebery.expandon.inactive.windows") {
-#sidebar-box:-moz-window-inactive:not(:hover) { 
-  max-width: unset !important;
-}
+    #sidebar-box:-moz-window-inactive:not(:hover) { 
+        max-width: unset !important;
+    }
 }
 
 /* highlight aboutconfig tab ------------------------------------------------------------------------------- */
@@ -435,7 +432,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
     /* toggle collapse visibility */
       tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 }
- 
+    
 /*----------------------------------------------------------------
 Tab groups with Color mixed backgrounds
 ----------------------------------------------------------------*/
