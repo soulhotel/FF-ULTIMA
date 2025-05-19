@@ -69,6 +69,7 @@ user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.xstyle.tabgroups.i", true);
 user_pref("ultima.xstyle.tabgroups.ii", false);
 user_pref("ultima.xstyle.tabgroups.with.colormix", false);
+user_pref("ultima.xstyle.tabgroups.with.colormix.ii", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
