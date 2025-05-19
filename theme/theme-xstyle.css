@@ -490,6 +490,6 @@ Tab groups with Color mixed backgrounds
         z-index: 10 !important;
         background-color: var(--tab-group-color-invert) !important;
         position: relative !important;
-        opacity: 0.2 !important;
+        opacity: 0.4 !important;
     }
 }     
