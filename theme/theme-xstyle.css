@@ -481,3 +481,18 @@ Tab groups with Color mixed backgrounds
     } 
 }
 
+@media -moz-pref("ultima.xstyle.tabgroups.with.colormix.ii") {
+    .tab-context-line {
+        border-radius: 5px !important;
+        translate: 0px 10px !important;
+        margin: 0 !important;
+        width: 50% !important;
+        height: 13px !important;
+        filter: blur(13px) !important;
+        overflow: visible !important;
+        z-index: 10 !important;
+        background-color: var(--tab-group-color-invert) !important;
+        position: relative !important;
+        opacity: 0.2 !important;
+    }
+}     
