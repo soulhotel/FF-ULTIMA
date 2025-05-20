@@ -5,15 +5,20 @@ File Desc:         Alternative Styles for the URL Bar
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+.search-one-offs button {
+    cursor: pointer !important;
+    &:hover{
+        transform:scale(1.1);
+    }
+}
+
 @media -moz-pref("ultima.urlbar.suggestions") {
-  
     #urlbar .search-one-offs:not([hidden]) {
         display:none !important;
     }
-
 }
-@media -moz-pref("ultima.urlbar.centered") {
-      
+
+@media -moz-pref("ultima.urlbar.centered") {   
     #urlbar .urlbar-input-box {
         text-align: center;
     }  
@@ -22,28 +27,30 @@ File Desc:         Alternative Styles for the URL Bar
         overflow: hidden;
         white-space: nowrap; 
     }
-
 }
 
 @media -moz-pref("ultima.urlbar.hidebuttons") {
-
-  #urlbar #identity-box,
-  #urlbar #page-action-buttons,
-  #urlbar #tracking-protection-icon-container {
-    opacity: 0 !important;
-  }
-  #urlbar:hover #identity-box,
-  #urlbar:hover #page-action-buttons,
-  #urlbar:hover #tracking-protection-icon-container {
-    opacity: 1 !important;
-    transition: opacity 100ms ease !important;
-  }
-  
+    #urlbar #identity-box,
+    #urlbar #page-action-buttons,
+    #urlbar #tracking-protection-icon-container {
+        opacity: 0 !important;
+    }
+    #urlbar:hover #identity-box,
+    #urlbar:hover #page-action-buttons,
+    #urlbar:hover #tracking-protection-icon-container {
+        opacity: 1 !important;
+        transition: opacity 100ms ease !important;
+    }
 }
 
-.search-one-offs button {
-    cursor: pointer !important;
-    &:hover{
-        transform:scale(1.1);
+@media -moz-pref("ultima.urlbar.animate.open") {
+    #urlbar[breakout] {
+        max-height: var(--urlbar-min-height) !important;
+        transition: max-height 1s ease !important;
+        will-change: max-height;
+    }
+    #urlbar[breakout][breakout-extend] {
+        overflow: hidden !important;
+        max-height: 600px !important; /* Choose a value big enough to cover the tallest state */
     }
 }
