@@ -118,7 +118,7 @@ Extra modifications woth no place to go (yet)
 @media -moz-pref("sidebar.verticalTabs") {
     /*  vt on left & sidebar closed */
     :root:has(#sidebar-main:not([sidebar-positionend=""])):has(#sidebar-box:not([checked="true"])) {
-        --uc-content-margins: 2px 5px 5px 0px;
+        --uc-content-margins: 2px 5px 5px -2px;
     }
     /*  vt on left & sidebar open */
     :root:has(#sidebar-main:not([sidebar-positionend=""])):has(#sidebar-box[checked="true"]) {
@@ -629,7 +629,7 @@ box-shadow: none !important;}}
 browsercontent shifts margins when expand (default firefox behavior)
 this can be applied to sidebar-box as well, it has the same margin-inline
 just need to find the right combination of sidebar-launcher events
-*/
+*//*
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabbox {
     &:not([sidebar-positionend]) {
@@ -638,7 +638,7 @@ just need to find the right combination of sidebar-launcher events
       }
     }
   }
-}
+}*/
 :root:has([sidebar-launcher-expanded][sidebar-panel-open])) {
   & #sidebar-box:not([sidebar-positionend]) {
         margin-inline-start: 49.3666687px !important;
