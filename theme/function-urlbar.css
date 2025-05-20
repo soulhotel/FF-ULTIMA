@@ -5,12 +5,19 @@ File Desc:         Alternative Styles for the URL Bar
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+/* some visual clarity modifications --------------------------------- */
+
 .search-one-offs button {
     cursor: pointer !important;
     &:hover{
         transform:scale(1.1);
     }
 }
+.urlbarView-row:hover .urlbarView-favicon {
+    transform:scale(1.5);
+}
+
+/* urlbar settings --------------------------------------------------- */
 
 @media -moz-pref("ultima.urlbar.suggestions") {
     #urlbar .search-one-offs:not([hidden]) {
