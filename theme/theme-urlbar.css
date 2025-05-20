@@ -17,7 +17,25 @@ File Desc:         Alternative Styles for the URL Bar
     transform:scale(1.5);
 }
 
+#identity-box,#tracking-protection-icon-container, #page-action-buttons {
+    margin-top:1px !important;
+    margin-bottom:-1px !important;
+    cursor: pointer !important;
+}
+:root {
+    --urlbar-box-bgcolor: color-mix(in srgb, var(--uc-button-selected) 50%, transparent) !important;
+}
+
 /* urlbar settings --------------------------------------------------- */
+
+@media -moz-pref("ultima.urlbar.transparent") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        & #urlbar-background, & #searchbar {
+            background-color: transparent !important;
+            box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(0,0,0,0);
+        }
+    }
+}
 
 @media -moz-pref("ultima.urlbar.suggestions") {
     #urlbar .search-one-offs:not([hidden]) {
