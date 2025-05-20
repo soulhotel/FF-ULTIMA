@@ -942,6 +942,11 @@ spacer[part="overflow-end-indicator"], spacer[part="overflow-start-indicator"] {
   
 
 
+/* 5/20/2025 */
+
+#appMenu-popup toolbarbutton:hover {
+    box-shadow: var(--uc-box-shadow) !important;
+}
 
 
 
