@@ -5,7 +5,7 @@ File Desc:         ALTERNATIVE STYLES for seperate sections of the browser
 
 compact tabs
 pinned tabs
-URL Bar
+nav bar
 bookmarks centered
 bookmarks fade out
 bookmarks autohide
@@ -39,23 +39,18 @@ tab groups
     }
 }
 
-/* URL Bar (transparent url bar) --------------------------------------------------------------------------- */
+/* nav bar ------------------------------------------------------------------------------------------------------ */
 
-@media -moz-pref("ultima.xstyle.urlbar") {
-    #main-window[lwtheme], #main-window:not([lwtheme]) {
-        & #urlbar-background, & #searchbar {
-            background-color: transparent !important;
-            box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(0,0,0,0);
-        }
+@media -moz-pref("ultima.navbar.hidebuttons") {
+    #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
+        opacity:0 !important;
+        transition:opacity ease 2s;
     }
-}
-#identity-box,#tracking-protection-icon-container, #page-action-buttons {
-    margin-top:1px !important;
-    margin-bottom:-1px !important;
-    cursor: pointer !important;
-}
-:root {
-    --urlbar-box-bgcolor: color-mix(in srgb, var(--uc-button-selected) 50%, transparent) !important;
+    :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
+    :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
+    :root:has(#downloadsPanel[panelopen="true"]) #downloads-button {
+        opacity: 1 !important;
+    }
 }
 
 /* bookmarks centered -------------------------------------------------------------------------------------- */
@@ -496,3 +491,6 @@ Tab groups with Color mixed backgrounds
         .tab-context-line {opacity: 0.8 !important;}
     }
 }     
+
+
+
