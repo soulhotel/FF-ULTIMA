@@ -164,6 +164,13 @@ body::after {
         }
     }
 }
-
+@media -moz-pref("ultima.spacing.relaxed") {
+    @media -moz-pref("ultima.spacing.compact") {
+        body::after {
+            content: "\ Only use one of these settings! \A \A  ultima.spacing.compact \A ultima.spacing.relaxed (NOTE: relaxed spacing is WIP design) \A ";
+            display: block;
+        }
+    }
+}
 
 }} /* end aboutconfig page */
