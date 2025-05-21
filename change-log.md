@@ -25,10 +25,6 @@
 - `qol • 🟡 • ` Setting `ultima.xstyle.urlbar` renamed -> `ultima.urlbar.transparent` to group it with other urlbar settings. `function-urlbar.css` also renamed -> `theme-urlbar.css` 29ee54a 00b5eb8
 - `qol • 🟡 • ` Tab Groups visual optimization
 
-> Aboutconfig adaptive colors
-
-![Vid_20250514_045957](https://github.com/user-attachments/assets/7cf5bfe7-f2a7-4d4a-90fb-e0781476c972)
-
 > Navbar hide buttons
 
 ![navbar hide buttons](https://github.com/user-attachments/assets/a6b169c5-a16f-46f3-bbd9-79c9ef654fa0)
@@ -36,6 +32,10 @@
 > Context Menu Spacing
 
 ![context menu spacing](https://github.com/user-attachments/assets/5632017f-518c-4e00-b3ef-6d8cf58c0085)
+
+> Aboutconfig adaptive colors
+
+![Vid_20250514_045957](https://github.com/user-attachments/assets/7cf5bfe7-f2a7-4d4a-90fb-e0781476c972)
 
 ![image](https://github.com/user-attachments/assets/72247b14-67e3-4043-b061-0df6ed11e36a)
 
