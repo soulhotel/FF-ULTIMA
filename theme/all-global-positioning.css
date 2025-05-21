@@ -629,7 +629,8 @@ box-shadow: none !important;}}
 browsercontent shifts margins when expand (default firefox behavior)
 this can be applied to sidebar-box as well, it has the same margin-inline
 just need to find the right combination of sidebar-launcher events
-*//*
+*/
+/*
 :root[sidebar-expand-on-hover] {
   & #tabbrowser-tabbox {
     &:not([sidebar-positionend]) {
@@ -759,7 +760,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
     @media -moz-pref("ultima.tabs.vertical.hide.as.indicator") {
         #sidebar-main:not([sidebar-positionend=""]) {margin-right:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
         #sidebar-main[sidebar-positionend=""] {margin-left:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-        #sidebar-main:not([sidebar-positionend=""]):not(:hover) {height:30vh;top:45vh !important;left:-44px !important; border-radius:10px !important;opacity:1;}
+        #sidebar-main:not([sidebar-positionend=""]):not(:hover) {height:50vh;top:30vh !important;left:-44px !important; border-radius:10px !important;opacity:1;}
         #sidebar-main[sidebar-positionend=""]:not(:hover) {height:30vh;top:45vh !important;right:-44px !important; border-radius:10px !important;opacity:1;}
 
         /* sidebar triggered by screen edge */
@@ -940,8 +941,6 @@ spacer[part="overflow-end-indicator"], spacer[part="overflow-start-indicator"] {
     background-image: none !important;
 }
   
-
-
 /* 5/20/2025 */
 
 #appMenu-popup toolbarbutton:hover {
