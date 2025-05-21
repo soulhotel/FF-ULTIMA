@@ -73,6 +73,7 @@ user_pref("sidebar.expandOnHover", true);
 
 /* alternate styles */
 user_pref("ultima.spacing.compact", false);
+user_pref("ultima.spacing.relaxed", false); /*wip*/
 user_pref("ultima.spacing.compact.contextmenu", false);
 user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.xstyle.containertabs.i", false);
