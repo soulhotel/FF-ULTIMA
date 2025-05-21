@@ -36,6 +36,13 @@ user_pref("ultima.xstyle.bookmarks.centered", true);
 user_pref("ultima.xstyle.bookmarks.autohide", false);
 user_pref("ultima.xstyle.bookmarks.fading", false);
 
+/* url bar */
+user_pref("ultima.urlbar.animate.open", true);
+user_pref("ultima.urlbar.suggestions", true);
+user_pref("ultima.urlbar.centered", true);
+user_pref("ultima.urlbar.hidebuttons", false);
+user_pref("ultima.urlbar.transparent", false);
+
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebar.seperator", false);
@@ -63,12 +70,6 @@ user_pref("ultima.xstyle.tabgroups.with.colormix.ii", false);
 user_pref("browser.tabs.tabMinWidth", 0); /*caution*/
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
 user_pref("sidebar.expandOnHover", true);
-
-/* url bar */
-user_pref("ultima.urlbar.suggestions", true);
-user_pref("ultima.urlbar.centered", true);
-user_pref("ultima.urlbar.hidebuttons", false);
-user_pref("ultima.urlbar.transparent", false);
 
 /* alternate styles */
 user_pref("ultima.spacing.compact", false);
