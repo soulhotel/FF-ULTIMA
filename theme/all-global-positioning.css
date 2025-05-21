@@ -176,7 +176,7 @@ Extra modifications woth no place to go (yet)
     /* when sidebar seperator is on */
     @media -moz-pref("ultima.sidebar.seperator") {
         :root:has(#sidebar-box[checked="true"]):has(#sidebar-main:not([sidebar-positionend=""])) {
-            --uc-content-margins: 2px 0px 5px 0px !important;
+            --uc-content-margins: 2px 0px 5px -2px !important;
         }
         :root:has(#sidebar-box[checked="true"]):has(#sidebar-main[sidebar-positionend=""]) {
             --uc-content-margins: 2px -2px 5px 0px !important;
@@ -413,6 +413,7 @@ box-shadow: none !important;}}
         margin: var(--uc-content-margins) !important;
         border-radius: var(--uc-content-border-radius) !important;
         outline: 2px solid var(--uc-ultima-window) !important;
+        @media -moz-pref("ultima.spacing.compact") {margin-left:-2px !important;} /*5/21/2025 remove this and apply to sidebarmain conditions*/
     }
 }
 #main-window[lwtheme] {
