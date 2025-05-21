@@ -51,8 +51,15 @@ user_pref("ultima.spacing.compact.tabs", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.disable.verticaltab.bar", false);
-user_pref("ultima.disable.verticaltab.bar.notprivate", false);
-user_pref("ultima.disable.verticaltab.bar.withindicator", true);
+user_pref("ultima.disable.verticaltab.bar.as.indicator", true);
+user_pref("ultima.disable.verticaltab.bar.as.mini", false);
+user_pref("ultima.xstyle.pinnedtabs.i", false);
+user_pref("ultima.xstyle.newtabbutton.ontop.i", false);
+user_pref("ultima.xstyle.newtabbutton.ontop.ii", false);
+user_pref("ultima.xstyle.tabgroups.i", true);
+user_pref("ultima.xstyle.tabgroups.ii", false);
+user_pref("ultima.xstyle.tabgroups.with.colormix", false);
+user_pref("ultima.xstyle.tabgroups.with.colormix.ii", false);
 user_pref("browser.tabs.tabMinWidth", 0); /*caution*/
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
 user_pref("sidebar.expandOnHover", true);
@@ -67,16 +74,9 @@ user_pref("ultima.urlbar.transparent", false);
 user_pref("ultima.spacing.compact", false);
 user_pref("ultima.spacing.compact.contextmenu", false);
 user_pref("ultima.spacing.relaxed.contextmenu", false);
-user_pref("ultima.xstyle.tabgroups.i", true);
-user_pref("ultima.xstyle.tabgroups.ii", false);
-user_pref("ultima.xstyle.tabgroups.with.colormix", false);
-user_pref("ultima.xstyle.tabgroups.with.colormix.ii", false);
 user_pref("ultima.xstyle.containertabs.i", false);
 user_pref("ultima.xstyle.containertabs.ii", false);
 user_pref("ultima.xstyle.containertabs.iii", true);
-user_pref("ultima.xstyle.pinnedtabs.i", false);
-user_pref("ultima.xstyle.newtabbutton.ontop.i", false);
-user_pref("ultima.xstyle.newtabbutton.ontop.ii", false);
 user_pref("ultima.xstyle.newtab.rounded", false); /*new tab page*/
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
 
