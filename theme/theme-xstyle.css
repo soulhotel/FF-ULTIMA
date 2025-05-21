@@ -25,6 +25,11 @@ tab groups
           margin-block: -0.4px !important;
       }
 }
+@media -moz-pref("ultima.spacing.relaxed") {
+    :root, #main-window, body {--uc-content-margins: 15px 40px 40px 15px !important;}
+    #sidebar-box {margin-top:15px !important; margin-bottom: 40px !important;}
+    /*wip design tbd - setting for the fullscreen/uw enjoyers */
+}
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 
