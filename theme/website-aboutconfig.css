@@ -13,7 +13,7 @@ warning messages
     /* apply dark mode colors */
     @media (prefers-color-scheme: dark) {
         @media -moz-pref("user.theme.dark.a") {
-            --ut-background: rgb(43, 42, 51);
+            --ut-background: rgb(40, 39, 48);
             --uc-accent-i: rgb(121, 161, 195);
             --in-content-page-background: var(--ut-background) !important;
             --in-content-box-border-color: var(--uc-accent-i) !important;
