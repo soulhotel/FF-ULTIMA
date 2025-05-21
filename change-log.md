@@ -39,5 +39,8 @@
 
 ![image](https://github.com/user-attachments/assets/72247b14-67e3-4043-b061-0df6ed11e36a)
 
+> Preview of ultima.spacing.relaxed Setting, still in design stage.. trying to make something "comfy" for Fullscreen/Ultrawide/Split-View enjoyers like myself.
+
+![Screenshot_20250520_215928](https://github.com/user-attachments/assets/099624e9-329f-4500-be13-c0baf8f80234)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
