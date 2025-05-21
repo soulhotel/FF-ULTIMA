@@ -40,7 +40,7 @@
 
 ![image](https://github.com/user-attachments/assets/72247b14-67e3-4043-b061-0df6ed11e36a)
 
-> Preview of ultima.spacing.relaxed Setting. Still in design stage.. trying to make something "comfy" for Fullscreen/Ultrawide/Split-View enjoyers like myself. But can be used now.
+> Preview of ultima.spacing.relaxed Setting. Trying to make something "comfy" for Fullscreen/Ultrawide/Split-View enjoyers like myself. Still in a design stage but recommendations are welcome.
 
 ![Screenshot_20250520_225549](https://github.com/user-attachments/assets/dd41b966-c48e-405d-8378-30d76fc19734)
 
