@@ -11,18 +11,19 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fyi • ℹ️ • ` Settings `ultima.disable.verticaltab.bar` & `ultima.disable.verticaltab.bar.withindicator` renamed to -> `ultima.tabs.vertical.hide` & `ultima.tabs.vertical.hide.as.indicator` for organization. Also `ultima.tabs.vertical.hide.as.mini` is a new setting
-- `qol • 🟡 • ` The [Settings Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) is better than ever
-- `fix • 🔴 • ` Much of the global positioning logic needs to be improved, and so revisions have begun in that aspect. Positioning of margins, borders, spacing between sidebars has been improved in most scenarios.
+- `fyi • ℹ️ • ` Setting `ultima.xstyle.urlbar` --renamed-> `ultima.urlbar.transparent` to group it with other urlbar settings
+- `fyi • ℹ️ • ` Setting `function-urlbar.css` --renamed--> `theme-urlbar.css` 29ee54a 00b5eb8
+- `fyi • ℹ️ • ` Settings `ultima.disable.verticaltab.bar` & `ultima.disable.verticaltab.bar.withindicator` --renamed--> `ultima.tabs.vertical.hide` & `ultima.tabs.vertical.hide.as.indicator` for organization.
+- `fix • 🔴 • ` Much of the global positioning logic needs to be improved, and so revisions have begun in that aspect. Positioning of margins, borders, spacing between sidebars has been improved in most effected scenarios.
 - `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
+- `new • 🟢 • ` Setting `ultima.tabs.vertical.hide.as.mini` experimental mini-view for vertical tabs
 - `new • 🟢 • ` Setting `ultima.xstyle.tabgroups.with.colormix.ii` a new background style for grouped tabs
+- `new • 🟢 • ` Setting `ultima.urlbar.animate.open` urlbar animates height when first opened/triggered 0b40670
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` now matches aboutconfig page colors to color scheme, tab border also removed
 - `new • 🟢 • ` Settings `ultima.spacing.compact.contextmenu`/`ultima.spacing.relaxed.contextmenu` to change context menu spacing 8c208c2
-- `new • 🟢 • ` Setting `ultima.urlbar.animate.open` urlbar animates height when first opened/triggered 0b40670
-- `new • 🟢 • ` Setting `ultima.navbar.hidebuttons` to hide all url bar buttons excluding menus that are triggered, or downlaod button when downloading d82e1cc
-- `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long while, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme e63a57a
+- `new • 🟢 • ` Setting `ultima.navbar.hidebuttons` to hide all navbar buttons excluding menus that are triggered, or downlaod button when downloading d82e1cc
+- `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long time, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme e63a57a
 - `qol • 🟡 • ` As of Firefox 140, pinned tabs are now limited to a scrollable box with limited size. I've reverted this change *inside of* `ultima.xstyle.pinnedtabs.i` 899e820
-- `qol • 🟡 • ` Setting `ultima.xstyle.urlbar` renamed -> `ultima.urlbar.transparent` to group it with other urlbar settings. `function-urlbar.css` also renamed -> `theme-urlbar.css` 29ee54a 00b5eb8
 - `qol • 🟡 • ` Tab Groups visual optimization
 
 > Navbar hide buttons
