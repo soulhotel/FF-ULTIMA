@@ -18,16 +18,19 @@
 - `new • 🟢 • ` Setting `ultima.xstyle.tabgroups.with.colormix.ii` a new background style for grouped tabs
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` now matches aboutconfig page colors to color scheme, tab border also removed
 - `new • 🟢 • ` Settings `ultima.spacing.compact.contextmenu`/`ultima.spacing.relaxed.contextmenu` to change context menu spacing 8c208c2
-- `new • 🟢 • ` Setting `ultima.navbar.hidebuttons` to hide all url bar buttons when not focused or hovered d82e1cc
+- `new • 🟢 • ` Setting `ultima.navbar.hidebuttons` to hide all url bar buttons excluding menus that are triggered, or downlaod button when downloading d82e1cc
 - `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long while, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme e63a57a
 - `qol • 🟡 • ` As of Firefox 140, pinned tabs are now limited to a scrollable box with limited size. I've reverted this change *inside of* `ultima.xstyle.pinnedtabs.i` 899e820
 - `qol • 🟡 • ` Setting `ultima.xstyle.urlbar` renamed -> `ultima.urlbar.transparent` to group it with other urlbar settings. `function-urlbar.css` also renamed -> `theme-urlbar.css` 29ee54a 00b5eb8
 - `qol • 🟡 • ` Tab Groups visual optimization
 
-> Aboutconfig
-Adaptive to color scheme
+> Aboutconfig adaptive colors
 
 ![Vid_20250514_045957](https://github.com/user-attachments/assets/7cf5bfe7-f2a7-4d4a-90fb-e0781476c972)
+
+> Navbar hide buttons
+
+![navbar hide buttons](https://github.com/user-attachments/assets/a6b169c5-a16f-46f3-bbd9-79c9ef654fa0)
 
 > Context Menu Spacing
 
