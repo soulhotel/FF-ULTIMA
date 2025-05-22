@@ -118,10 +118,10 @@ body::after {
     background: var(--background-color-box);
     box-shadow: 0px 8px 15px 10px rgba(35, 25, 15, 1);
 }
-@media -moz-pref("ultima.disable.verticaltab.bar") {
-    @media -moz-pref("ultima.disable.verticaltab.bar.notprivate") {
+@media -moz-pref("ultima.tabs.vertical.hide.in.screencorner") {
+    @media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
         body::after {
-            content: "\ Only use one of these settings! \A \A  ultima.disable.verticaltab.bar \A ultima.disable.verticaltab.bar.notprivate \A ";
+            content: "\ Only use one of these settings! \A \A  hide.in.screencorner \A hide.in.screenedge \A ";
             display: block;
         }
     }
