@@ -250,7 +250,7 @@ tab groups
 /*----------------------------------------------------------------
 Spacing correction for all tab group styles
 ----------------------------------------------------------------*/
-@media not -moz-pref("ultima.xstyle.tabgroups.i"), @media not -moz-pref("ultima.xstyle.tabgroups.ii") {
+@media not -moz-pref("ultima.tabs.tabgroups.label.1"), @media not -moz-pref("ultima.tabs.tabgroups.label.2") {
     tab-group {
         #tabbrowser-tabs & {
             &:not([collapsed])::before {
