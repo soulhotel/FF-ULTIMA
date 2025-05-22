@@ -598,6 +598,23 @@ box-shadow: none !important;}}
 
 /* Vertical Tabs Sidebar ------------------------------------------------------------------*/
 
+:root[sidebar-expand-on-hover]:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
+    & #sidebar-main {
+        position: absolute !important;
+    }
+    & #browser {
+        padding-left:50px;
+    }
+}
+:root[sidebar-expand-on-hover]:has(#sidebar-box[checked="true"][sidebar-positionend]) {
+    & #sidebar-main {
+        position: absolute !important;
+    }
+    & #browser {
+        padding-right:50px;
+    }
+}
+
 /* update scrollbox */
 .tabbrowser-tab:not([pinned], [fadein]) {
     max-width: 0.1px !important; /*dont touch*/
@@ -626,21 +643,6 @@ box-shadow: none !important;}}
 }
 
 
-/*
-browsercontent shifts margins when expand (default firefox behavior)
-this can be applied to sidebar-box as well, it has the same margin-inline
-just need to find the right combination of sidebar-launcher events
-*/
-/*
-:root[sidebar-expand-on-hover] {
-  & #tabbrowser-tabbox {
-    &:not([sidebar-positionend]) {
-      &[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]), &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open]) {
-        margin-inline-start: 49.3666687px !important;
-      }
-    }
-  }
-}*/
 :root:has([sidebar-launcher-expanded][sidebar-panel-open])) {
   & #sidebar-box:not([sidebar-positionend]) {
         margin-inline-start: 49.3666687px !important;
@@ -730,84 +732,98 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
 @media -moz-pref("sidebar.verticalTabs") {
 @media -moz-pref("ultima.tabs.vertical.hide") {
-    @media not -moz-pref("ultima.tabs.vertical.hide.as.indicator") { @media not -moz-pref("ultima.tabs.vertical.hide.as.mini") {
-        :root:not([privatebrowsingmode="temporary"]) {
-            #sidebar-main:not([sidebar-positionend=""]) {margin-right:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-            #sidebar-main[sidebar-positionend=""] {margin-left:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-            #sidebar-main:not([sidebar-positionend=""]):not(:hover) {height:0vh;top:45vh !important;left:-44px !important; border-radius:10px !important;opacity:1;}
-            #sidebar-main[sidebar-positionend=""]:not(:hover) {height:0vh;top:45vh !important;right:-44px !important; border-radius:10px !important;opacity:1;}
+    
+    :root[sidebar-expand-on-hover]:not([privatebrowsingmode="temporary"]) {
 
-            /* sidebar triggered by screen edge */
-            @media not -moz-pref("ultima.spacing.compact") {
-                #sidebar-box::before {
-                  content: "";background-color:none;position: absolute;
-                  z-index: 998;top: 0; bottom: 0;left: -5px;width: 3px;height: auto;
-                }
-                #sidebar-box::after {
-                  content: "";background-color:none;position: absolute;
-                  z-index: 998;top: 0; bottom: 0;right: -5px;width: 3px;height: auto;
-                }
+        & #sidebar-main {
+            position: absolute !important; z-index:-1 !important;  
+        }
+        & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
+            & #browser {
+                padding-left: 0px;
+            }  
+        }
+        & :has(#sidebar-box[checked="true"][sidebar-positionend]) {
+            & #browser {
+                padding-right: 0px;
             }
-
-            --uc-sb-margins: 2px 0px 5px 5px;
-            --uc-sb-margins-right: 2px 5px 5px 0px;
-
-            #sidebar-launcher-splitter {
+        }       
+        & :has(#sidebar-main) {
+            & #sidebar-launcher-splitter {
                 display:none !important;
             }
-            #sidebar-main{z-index:-1 !important;}
         }
-    }}
-    @media -moz-pref("ultima.tabs.vertical.hide.as.indicator") {
-        #sidebar-main:not([sidebar-positionend=""]) {margin-right:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-        #sidebar-main[sidebar-positionend=""] {margin-left:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-        #sidebar-main:not([sidebar-positionend=""]):not(:hover) {height:50vh;top:30vh !important;left:-44px !important; border-radius:10px !important;opacity:1;}
-        #sidebar-main[sidebar-positionend=""]:not(:hover) {height:30vh;top:45vh !important;right:-44px !important; border-radius:10px !important;opacity:1;}
-
+        & #tabbrowser-tabbox {
+            &:not([sidebar-positionend]) {
+                &[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]), &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open]) {
+                    margin-inline-start: 0 !important;
+                }
+            }
+        }
+                 
+        @media -moz-pref("ultima.tabs.vertical.hide.in.screencorner") {
+            & #sidebar-main {
+                transition: left ease 0.5s;
+                z-index:1000 !important;
+                box-shadow: var(--uc-box-shadow) !important;
+                border-radius:10px !important;
+            }
+            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
+                & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
+                    left:-45px !important;
+                    top:65vh !important;
+                    height:25vh !important;
+                    filter: brightness(60%);
+                }
+            }
+            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
+                #sidebar-main[sidebar-positionend=""]:not(:hover) {
+                    right:-45px !important;
+                    top:65vh !important;
+                    height:25vh !important;
+                    filter: brightness(60%);
+                }
+            }
+        }
+        @media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
+            & #sidebar-main {
+                transition: left ease 0.5s;
+                z-index:1000 !important;
+                box-shadow: var(--uc-box-shadow) !important;
+                border-radius:10px !important;
+            }
+            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
+                & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
+                    left:-45px !important;
+                    top:5vh !important;
+                    height:85vh !important;
+                    filter: brightness(80%);
+                }
+            }
+            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
+                #sidebar-main[sidebar-positionend=""]:not(:hover) {
+                    right:-45px !important;
+                    top:5vh !important;
+                    height:85vh !important;
+                    filter: brightness(80%);
+                }
+            }
+        }
         /* sidebar triggered by screen edge */
+        --uc-sb-margins: 2px 0px 5px 5px;
+        --uc-sb-margins-right: 2px 5px 5px 0px; 
         @media not -moz-pref("ultima.spacing.compact") {
             #sidebar-box::before {
-              content: "";background-color:none;position: absolute;
-              z-index: 998;top: 0; bottom: 0;left: -5px;width: 3px;height: auto;
+                content: "";background-color:none;position: absolute;
+                z-index: 998;top: 0; bottom: 0;left: 0px;width: 3px;height: auto;
             }
             #sidebar-box::after {
-              content: "";background-color:none;position: absolute;
-              z-index: 998;top: 0; bottom: 0;right: -5px;width: 3px;height: auto;
+                content: "";background-color:none;position: absolute;
+                z-index: 998;top: 0; bottom: 0;right: 0px;width: 3px;height: auto;
             }
-        }
-        :root {
-            --uc-sb-margins: 2px 0px 5px 5px;
-            --uc-sb-margins-right: 2px 5px 5px 0px;
-        }
-        #main-window:has(#sidebar-main) #sidebar-launcher-splitter {
-            display:none !important;
-        }
+        }   
     }
-    @media -moz-pref("ultima.tabs.vertical.hide.as.mini") {
-        #sidebar-main:not([sidebar-positionend=""]) {margin-right:-53.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-        #sidebar-main[sidebar-positionend=""] {margin-left:-49.37px !important; box-shadow: var(--uc-box-shadow) !important;}
-        #sidebar-main:not([sidebar-positionend=""]):not(:hover) {height:30vh;top:64vh !important; border-radius:10px !important;}
-        #sidebar-main[sidebar-positionend=""]:not(:hover) {height:30vh;top:64vh !important; border-radius:10px !important;}
-
-        /* sidebar triggered by screen edge */
-        @media not -moz-pref("ultima.spacing.compact") {
-            #sidebar-box::before {
-              content: "";background-color:none;position: absolute;
-              z-index: 998;top: 0; bottom: 0;left: -5px;width: 3px;height: auto;
-            }
-            #sidebar-box::after {
-              content: "";background-color:none;position: absolute;
-              z-index: 998;top: 0; bottom: 0;right: -5px;width: 3px;height: auto;
-            }
-        }
-        :root {
-            --uc-sb-margins: 2px 0px 5px 5px;
-            --uc-sb-margins-right: 2px 5px 5px 0px;
-        }
-        #main-window:has(#sidebar-main) #sidebar-launcher-splitter {
-            display:none !important;
-        }
-    }
+    
 }}
 
 
