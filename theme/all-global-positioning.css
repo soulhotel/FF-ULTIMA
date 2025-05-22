@@ -797,7 +797,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
                     left:-45px !important;
                     top:5vh !important;
                     height:85vh !important;
-                    filter: brightness(80%);
+                    filter: brightness(90%);
                 }
             }
             & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
@@ -805,7 +805,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
                     right:-45px !important;
                     top:5vh !important;
                     height:85vh !important;
-                    filter: brightness(80%);
+                    filter: brightness(90%);
                 }
             }
         }
