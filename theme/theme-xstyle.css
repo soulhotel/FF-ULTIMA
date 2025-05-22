@@ -69,7 +69,7 @@ tab groups
 }
 /* bookmarks fade out -------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.navbar.bookmarks.fading") {
+@media -moz-pref("ultima.navbar.bookmarks.fadeout") {
     :root:has(#navigator-toolbox:not(:hover)) {
         #PlacesToolbar {
           opacity: 0.05 !important;
