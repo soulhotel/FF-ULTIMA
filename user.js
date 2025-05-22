@@ -34,6 +34,7 @@ user_pref("ultima.navbar.windowcontrols.carl", false);
 user_pref("ultima.navbar.windowcontrols.trafficlights", false);
 user_pref("ultima.navbar.windowcontrols.whiteout", false);
 user_pref("ultima.navbar.windowcontrols.fluent", false);
+user_pref("ultima.navbar.theme.extensionspanel", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 
 
@@ -84,7 +85,7 @@ user_pref("ultima.xstyle.newtab.rounded", false); /*new tab page*/
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
 
 /* xtra theming */
-user_pref("ultima.theme.extensions", true);
+
 user_pref("ultima.theme.icons", true);
 user_pref("ultima.theme.menubar", true);
 user_pref("ultima.theme.color.swap", false);
