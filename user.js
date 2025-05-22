@@ -60,17 +60,17 @@ user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.newtabbutton.ontop.i", false);
 user_pref("ultima.tabs.newtabbutton.ontop.ii", false);
+user_pref("ultima.tabs.pinnedtabs.style.i", false);
 user_pref("ultima.tabs.vertical.hide", false);
 user_pref("ultima.tabs.vertical.hide.in.screencorner", false);
 user_pref("ultima.tabs.vertical.hide.in.screenedge", true);
 user_pref("sidebar.expandOnHover", true);
-user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
-user_pref("ultima.xstyle.pinnedtabs.i", false);
 user_pref("ultima.xstyle.tabgroups.i", true);
 user_pref("ultima.xstyle.tabgroups.ii", false);
 user_pref("ultima.xstyle.tabgroups.with.colormix", false);
 user_pref("ultima.xstyle.tabgroups.with.colormix.ii", false);
 user_pref("browser.tabs.tabMinWidth", 0); /*caution*/
+user_pref("sidebar.animation.expand-on-hover.duration-ms", 120);
 
 /* alternate styles */
 user_pref("ultima.spacing.compact", false);
