@@ -33,7 +33,7 @@ tab groups
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.xstyle.pinnedtabs.i") {
+@media -moz-pref("ultima.tabs.pinnedtabs.style.i") {
     #vertical-pinned-tabs-container {
         height: fit-content !important;
         min-height: fit-content !important;
@@ -61,13 +61,15 @@ tab groups
 
 /* bookmarks centered -------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.xstyle.bookmarks.centered") { #PlacesToolbarItems {
+@media -moz-pref("ultima.navbar.bookmarks.centered") { #PlacesToolbarItems {
     justify-content: center !important;
 }}
-
+#personal-toolbar-empty {
+    width: 5px !important;
+}
 /* bookmarks fade out -------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.xstyle.bookmarks.fading") {
+@media -moz-pref("ultima.navbar.bookmarks.fading") {
     :root:has(#navigator-toolbox:not(:hover)) {
         #PlacesToolbar {
           opacity: 0.05 !important;
@@ -82,7 +84,7 @@ tab groups
  
 /* bookmarks autohide -------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.xstyle.bookmarks.autohide") {
+@media -moz-pref("ultima.navbar.bookmarks.autohide") {
 :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)) {
 &#main-window:not([inFullscreen="true"]) {           
             /* set smaller height when not hovered, compatible with all features */
@@ -107,7 +109,7 @@ tab groups
 
 /* new tab button ------------------------------------------------------------------------------------------ */
 
-@media -moz-pref("ultima.xstyle.newtabbutton.ontop.i") { 
+@media -moz-pref("ultima.tabs.newtabbutton.ontop.i") { 
     #vertical-tabs-newtab-button {
         order: -1 !important;
     }
@@ -119,7 +121,7 @@ tab groups
         display: none !important;      
     }
 }
-@media -moz-pref("ultima.xstyle.newtabbutton.ontop.ii") { 
+@media -moz-pref("ultima.tabs.newtabbutton.ontop.ii") { 
     /*first button visible in vertical tabs collapsed state*/
     #tabbrowser-arrowscrollbox-periphery { order: -1 !important; }
     /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
