@@ -340,7 +340,7 @@ Style 1: Text labels always visible
 Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
 ----------------------------------------------------------------*/
  
-@media -moz-pref("ultima.xstyle.tabgroups.i") {
+@media -moz-pref("ultima.tabs.tabgroups.label.1") {
     /*defaults*/
     .tab-group-label {
         min-width:20px !important;
@@ -394,7 +394,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
  Style 2: Tab Group shrinks into a tab like Icon 
 ----------------------------------------------------------------*/
  
-@media -moz-pref("ultima.xstyle.tabgroups.ii") { 
+@media -moz-pref("ultima.tabs.tabgroups.label.2") { 
     /*defaults*/
     .tab-group-label {
         min-width:20px !important;
@@ -440,7 +440,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
 Tab groups with Color mixed backgrounds
 ----------------------------------------------------------------*/
  
-@media -moz-pref("ultima.xstyle.tabgroups.with.colormix") {
+@media -moz-pref("ultima.tabs.tabgroups.background.1") {
    /* remove accent group color border */ 
     @media -moz-pref("sidebar.verticalTabs") {
         tab-group {
@@ -481,7 +481,7 @@ Tab groups with Color mixed backgrounds
     } 
 }
 
-@media -moz-pref("ultima.xstyle.tabgroups.with.colormix.ii") {
+@media -moz-pref("ultima.tabs.tabgroups.background.2") {
     .tab-context-line {
         border-radius: 5px !important;
         translate: 0px 10px !important;
