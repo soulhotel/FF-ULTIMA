@@ -33,7 +33,7 @@ tab groups
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.tabs.pinnedtabs.style.i") {
+@media -moz-pref("ultima.tabs.pinnedtabs.style.1") {
     #vertical-pinned-tabs-container {
         height: fit-content !important;
         min-height: fit-content !important;
@@ -109,7 +109,7 @@ tab groups
 
 /* new tab button ------------------------------------------------------------------------------------------ */
 
-@media -moz-pref("ultima.tabs.newtabbutton.ontop.i") { 
+@media -moz-pref("ultima.tabs.newtabbutton.ontop.1") { 
     #vertical-tabs-newtab-button {
         order: -1 !important;
     }
@@ -121,7 +121,7 @@ tab groups
         display: none !important;      
     }
 }
-@media -moz-pref("ultima.tabs.newtabbutton.ontop.ii") { 
+@media -moz-pref("ultima.tabs.newtabbutton.ontop.2") { 
     /*first button visible in vertical tabs collapsed state*/
     #tabbrowser-arrowscrollbox-periphery { order: -1 !important; }
     /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
