@@ -130,6 +130,9 @@ Adjustments for disabled vertical tab bar
         & #tabbrowser-tabbox {
             --browser-content-margin-4-sb-autohide:33px !important;
         }
+        & #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+            height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
+        }
     }
 
 }
