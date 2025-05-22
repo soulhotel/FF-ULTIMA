@@ -26,6 +26,14 @@ File Desc:         Alternative Styles for the URL Bar
     --urlbar-box-bgcolor: color-mix(in srgb, var(--uc-button-selected) 50%, transparent) !important;
 }
 
+#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+    #searchbar:focus-within {
+        outline-offset: 0px !important;
+        outline-width: 2px !important;
+        outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 80%, transparent) !important;
+    }
+}
+
 /* urlbar settings --------------------------------------------------- */
 
 @media -moz-pref("ultima.urlbar.transparent") {
