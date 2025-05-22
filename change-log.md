@@ -6,24 +6,51 @@
   
 ### <ins> Version Notes
 - Once again, a big Thank You, to everyone that's been reporting issues to me early. You guys are the ones keeping the theme one step ahead. Same goes for those who made recommendations that I've been able to incorporate into the theme, thank you for the contributions. 🎉 @dreadbalaur 🎉 @ApenasOLinco 🎉 @whatsnewsisyphus 🎉 @alexacon 🎉 @ShKev03
-- User.js recommended (not required).
+- User.js required.
 - Firefox 138+ required.
+
+
+<details><summary>Settings have been changed! (returning Users please click here) ⚠️</summary>
+  
+>
+- Theme settings were a bit of a mess. `1`, Some settings had names that were confusing for what they do. `2`, Some settings were not organized in their relevant sections. Ive made some modifications to fix those two issues once and for all. Please delete these old setting names in your about config page.
+
+![image](https://github.com/user-attachments/assets/e8fcd7f0-1e13-431e-b3de-765545c444bd)
+
+| Old Setting                                      | New Setting                                       |
+|--------------------------------------------------|---------------------------------------------------|
+| ultima.disable.verticaltab.bar                   | ultima.tabs.vertical.hide                         |
+| ultima.disable.verticaltab.bar.withindicator     | ultima.tabs.vertical.hide.in.screencorner         |
+| ultima.disable.verticaltab.bar.withindicator     | ultima.tabs.vertical.hide.in.screenedge (new)     |
+| ultima.theme.extensions                                        | ultima.navbar.theme.extensionspanel |
+| ultima.xstyle.bookmarks.autohide                                  | ultima.navbar.bookmarks.autohide |
+| ultima.xstyle.bookmarks.centered                                  | ultima.navbar.bookmarks.centered |
+| ultima.xstyle.bookmarks.fading                                      | ultima.navbar.bookmarks.fadout |
+| ultima.xstyle.newtabbutton.ontop.i                                | ultima.tabs.newtabbutton.ontop.1 |
+| ultima.xstyle.newtabbutton.ontop.ii                               | ultima.tabs.newtabbutton.ontop.2 |
+| ultima.xstyle.pinnedtabs.i                                                | ultima.tabs.pinnedtabs.1 |
+| ultima.xstyle.tabgroups.i                                            | ultima.tabs.tabgroups.label.1 |
+| ultima.xstyle.tabgroups.ii                                           | ultima.tabs.tabgroups.label.2 |
+| ultima.xstyle.tabgroups.with.colormix                           | ultima.tabs.tabgroups.background.1 |
+| ultima.xstyle.tabgroups.with.colormix.ii                  | ultima.tabs.tabgroups.background.2 (new) |
+| ultima.xstyle.urlbar | ultima.urlbar.transparent                                                     |
+
+</details>
+
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fyi • ℹ️ • ` Setting `ultima.xstyle.urlbar` --renamed-> `ultima.urlbar.transparent` to group it with other urlbar settings
-- `fyi • ℹ️ • ` Setting `function-urlbar.css` --renamed--> `theme-urlbar.css` 29ee54a 00b5eb8
-- `fyi • ℹ️ • ` Settings `ultima.disable.verticaltab.bar` & `ultima.disable.verticaltab.bar.withindicator` --renamed--> `ultima.tabs.vertical.hide` & `ultima.tabs.vertical.hide.as.indicator` for organization.
-- `fix • 🔴 • ` Much of the global positioning logic needs to be improved, and so revisions have begun in that aspect. Positioning of margins, borders, spacing between sidebars has been improved in most effected scenarios.
+- `fyi • ℹ️ • ` File `function-urlbar.css` --renamed--> `theme-urlbar.css` 29ee54a 00b5eb8
+- `fix • 🔴 • ` Much of the global positioning logic needed to be improved, and so revisions have begun. Positioning of margins, borders, spacing between sidebars, are the best they've ever been.
 - `fix • 🔴 • ` Color scheme creation tutorial link fix @ApenasOLinco #296
-- `new • 🟢 • ` Setting `ultima.tabs.vertical.hide.as.mini` experimental mini-view for vertical tabs
-- `new • 🟢 • ` Setting `ultima.xstyle.tabgroups.with.colormix.ii` a new background style for grouped tabs
+- `new • 🟢 • ` Setting `ultima.tabs.vertical.hide.in.screenedge` fully hide the vertical tabs, hovering the screen edge will expand them
+- `new • 🟢 • ` Setting `ultima.xstyle.tabgroups.background.2` a new background style for grouped tabs
 - `new • 🟢 • ` Setting `ultima.urlbar.animate.open` urlbar animates height when first opened/triggered 0b40670
 - `new • 🟢 • ` Setting `ultima.xstyle.highlight.aboutconfig` now matches aboutconfig page colors to color scheme, tab border also removed
 - `new • 🟢 • ` Settings `ultima.spacing.compact.contextmenu`/`ultima.spacing.relaxed.contextmenu` to change context menu spacing 8c208c2
-- `new • 🟢 • ` Setting `ultima.navbar.hidebuttons` to hide all navbar buttons excluding menus that are triggered, or downlaod button when downloading d82e1cc
+- `new • 🟢 • ` Setting `ultima.navbar.hidebuttons` to hide all navbar buttons excluding menus that are triggered, or download button when downloading d82e1cc
 - `qol • 🟡 • ` The `Unload Tab` context menu option has been in firefox for a long time, for some reason this option is disabled in some instances. It is now forcefully enabled in the theme e63a57a
-- `qol • 🟡 • ` As of Firefox 140, pinned tabs are now limited to a scrollable box with limited size. I've reverted this change *inside of* `ultima.xstyle.pinnedtabs.i` 899e820
+- `qol • 🟡 • ` As of Firefox 140, pinned tabs are now limited to a scrollable box with limited size. I've reverted this change *inside of* `ultima.tabs.pinnedtabs.style.1` 899e820
 - `qol • 🟡 • ` Tab Groups visual optimization
 
 > Navbar hide buttons
