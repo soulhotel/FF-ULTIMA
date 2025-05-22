@@ -53,6 +53,10 @@
 - `qol • 🟡 • ` As of Firefox 140, pinned tabs are now limited to a scrollable box with limited size. I've reverted this change *inside of* `ultima.tabs.pinnedtabs.style.1` 899e820
 - `qol • 🟡 • ` Tab Groups visual optimization
 
+> Vertical Tab Hide Settings
+
+https://github.com/user-attachments/assets/20241a30-a7c5-4430-a6b5-ad65433005f9
+
 > Navbar hide buttons
 
 ![navbar hide buttons](https://github.com/user-attachments/assets/a6b169c5-a16f-46f3-bbd9-79c9ef654fa0)
