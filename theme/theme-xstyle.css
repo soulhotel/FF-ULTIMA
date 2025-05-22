@@ -250,7 +250,7 @@ tab groups
 /*----------------------------------------------------------------
 Spacing correction for all tab group styles
 ----------------------------------------------------------------*/
-@media not -moz-pref("ultima.tabs.tabgroups.label.1"), @media not -moz-pref("ultima.tabs.tabgroups.label.2") {
+@media not -moz-pref("ultima.tabs..label.1"), @media not -moz-pref("ultima.tabs..label.2") {
     tab-group {
         #tabbrowser-tabs & {
             &:not([collapsed])::before {
@@ -311,7 +311,7 @@ Spacing correction for all tab group styles
     }
 }
 /*group line hidden with color mix*/
-@media -moz-pref("ultima.xstyle.tabgroups.with.colormix") {
+@media -moz-pref("ultima.tabs.tabgroups.background.1") {
     .tab-group-line {
         opacity: 0 !important;
         /*display: none !important;
