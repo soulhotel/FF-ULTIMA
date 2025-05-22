@@ -27,14 +27,15 @@ user_pref("user.theme.dark.scarlet", false);  /*wip design stage*/
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.hidebuttons", true);
+user_pref("ultima.navbar.bookmarks.centered", true);
+user_pref("ultima.navbar.bookmarks.autohide", false);
+user_pref("ultima.navbar.bookmarks.fading", false);
 user_pref("ultima.navbar.windowcontrols.carl", false);
 user_pref("ultima.navbar.windowcontrols.trafficlights", false);
 user_pref("ultima.navbar.windowcontrols.whiteout", false);
 user_pref("ultima.navbar.windowcontrols.fluent", false);
 user_pref("ultima.disable.windowcontrols.button", false);
-user_pref("ultima.xstyle.bookmarks.centered", true);
-user_pref("ultima.xstyle.bookmarks.autohide", false);
-user_pref("ultima.xstyle.bookmarks.fading", false);
+
 
 /* url bar */
 user_pref("ultima.urlbar.animate.open", true);
