@@ -55,11 +55,11 @@ user_pref("ultima.sidebery.expandon.inactive.windows", false);
 
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);
-user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.disable.alltabs.button", true);
-user_pref("ultima.disable.verticaltab.bar", false);
-user_pref("ultima.disable.verticaltab.bar.as.indicator", true);
-user_pref("ultima.disable.verticaltab.bar.as.mini", false);
+user_pref("ultima.tabs.belowURLbar", true);
+user_pref("ultima.tabs.vertical.hide", false);
+user_pref("ultima.tabs.vertical.hide.in.screencorner", false);
+user_pref("ultima.tabs.vertical.hide.in.screenedge", true);
 user_pref("ultima.xstyle.pinnedtabs.i", false);
 user_pref("ultima.xstyle.newtabbutton.ontop.i", false);
 user_pref("ultima.xstyle.newtabbutton.ontop.ii", false);
