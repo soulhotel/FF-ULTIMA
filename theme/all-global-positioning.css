@@ -732,11 +732,17 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
 @media -moz-pref("sidebar.verticalTabs") {
 @media -moz-pref("ultima.tabs.vertical.hide") {
-    :root[privatebrowsingmode="temporary"][sidebar-expand-on-hover][sidebar-positionend]:has(#sidebar-box[open]) {
-          & #browser { padding-left: 50px !important;}
-          & #sidebar-box { z-index: 1002 !important; }
+
+    :root[privatebrowsingmode="temporary"] {
+        & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
+              & #browser { padding-left: 0px !important; }
+              & #sidebar-box[checked="true"]:not([sidebar-positionend]) { left:53px !important; }
+        }
+        & :has(#sidebar-box[checked="true"][sidebar-positionend]) {
+            & #browser { padding-right: 0px !important; }
+            & #sidebar-box[checked="true"][sidebar-positionend] { right:53px !important; }
+    }   
       
-    }
     :root[sidebar-expand-on-hover]:not([privatebrowsingmode="temporary"]) {
 
         & #sidebar-main {
