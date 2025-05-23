@@ -732,7 +732,11 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
 @media -moz-pref("sidebar.verticalTabs") {
 @media -moz-pref("ultima.tabs.vertical.hide") {
-    
+    :root[privatebrowsingmode="temporary"][sidebar-expand-on-hover][sidebar-positionend]:has(#sidebar-box[open]) {
+          & #browser { padding-left: 50px !important;}
+          & #sidebar-box { z-index: 1002 !important; }
+      
+    }
     :root[sidebar-expand-on-hover]:not([privatebrowsingmode="temporary"]) {
 
         & #sidebar-main {
