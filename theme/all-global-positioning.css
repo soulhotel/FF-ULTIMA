@@ -747,7 +747,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
         & #sidebar-main {
             position: absolute !important; z-index:-1 !important;
-            @media (-moz-os-version: macos), (-moz-platform: macos) { z-index:1 !important; left:-60px !important;}
+            @media (-moz-os-version: macos), (-moz-platform: macos) { z-index:1 !important; left:-45px !important;}
         }
         & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
             & #browser {
