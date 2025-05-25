@@ -735,19 +735,8 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
     :root[privatebrowsingmode="temporary"] {
         & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
-              & #browser { padding-left: 0px !important; }
-              & #sidebar-box[checked="true"]:not([sidebar-positionend]) { left:53px !important; }
-        }
-        & :has(#sidebar-box[checked="true"][sidebar-positionend]) {
-            & #browser { padding-right: 0px !important; }
-            & #sidebar-box[checked="true"][sidebar-positionend] { right:53px !important; }
-        }
-    }   
-  
-    :root[privatebrowsingmode="temporary"] {
-        & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
-              & #browser { padding-left: 0px !important; }
-              & #sidebar-box[checked="true"]:not([sidebar-positionend]) { left:53px !important; }
+            & #browser { padding-left: 0px !important; }
+            & #sidebar-box[checked="true"]:not([sidebar-positionend]) { left:53px !important; }
         }
         & :has(#sidebar-box[checked="true"][sidebar-positionend]) {
             & #browser { padding-right: 0px !important; }
@@ -757,7 +746,8 @@ span.button-background.labelled label {padding-left: 5px !important;}
     :root[sidebar-expand-on-hover]:not([privatebrowsingmode="temporary"]) {
 
         & #sidebar-main {
-            position: absolute !important; z-index:-1 !important;  
+            position: absolute !important; z-index:-1 !important;
+            @media (-moz-os-version: macos), (-moz-platform: macos) { z-index:1 !important; left:-60px !important;}
         }
         & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
             & #browser {
