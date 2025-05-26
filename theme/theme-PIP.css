@@ -27,5 +27,21 @@ File Desc:         PiP (picture-in-picture) Styling
 }
 
 /*remove rounded corners*/
-.player-holder #browser
-    {border-radius:0px !important;}
+.player-holder #browser {
+    border-radius:0px !important;
+}
+.control-button, .control-item {
+  border-radius: 10px !important;
+}
+
+/* keep audio slider visible */
+/* inspired by endgame0 https://www.reddit.com/r/FirefoxCSS/comments/1kuyu02/firefox_picture_in_picture_is_almost_perfect_but/ */
+@media (width <= 630px) {
+  #audio-scrubber {
+    display: block !important;
+    position: fixed !important;
+    top: 16px !important;
+    left: 50vw !important;
+    transform: translateX(-50%) !important;
+  }
+}
