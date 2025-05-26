@@ -15,11 +15,15 @@
 - `fix • 🔴 • ` ...
 - `new • 🟢 • ` ...
 - `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
-- `qol • 🟡 • ` ...
+- `qol • 🟡 • ` Tab Group optimization
 
 > PiP always visible volume slider
 
 ![PiP](https://github.com/user-attachments/assets/f872e39b-5546-4e3e-8304-774d3c266f19)
+
+> Tab groups 
+
+https://github.com/user-attachments/assets/0d8e0127-7910-4eb7-96ac-622417bb7d5d
 
 > Preview of ultima.spacing.relaxed Setting. Trying to make something "comfy" for Fullscreen/Ultrawide/Split-View enjoyers like myself. Still in a design stage but recommendations are welcome.
 
