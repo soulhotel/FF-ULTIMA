@@ -15,6 +15,7 @@
 - `fix • 🔴 • ` ...
 - `new • 🟢 • ` ...
 - `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
+- `new • 🟢 • ` Tab group backgrounds (1,2,3) can now be combined or seperated, 1. for full background color, 2. for blurred tab color, 3. for color line.
 - `qol • 🟡 • ` Tab Group optimization
 
 > PiP always visible volume slider
