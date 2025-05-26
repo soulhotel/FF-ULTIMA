@@ -67,6 +67,7 @@ user_pref("ultima.tabs.vertical.hide.in.screenedge", true);
 user_pref("sidebar.expandOnHover", true);
 user_pref("ultima.tabs.tabgroups.label.1", false);
 user_pref("ultima.tabs.tabgroups.label.2", true);
+user_pref("ultima.tabs.tabgroups.label.tthornton", false);
 user_pref("ultima.tabs.tabgroups.background.1", true);
 user_pref("ultima.tabs.tabgroups.background.2", false);
 user_pref("browser.tabs.tabMinWidth", 0); /*caution*/
