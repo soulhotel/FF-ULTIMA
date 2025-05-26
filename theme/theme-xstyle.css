@@ -338,9 +338,8 @@ Spacing correction for all tab group styles
 tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 .tab-group-label {cursor: pointer !important;}
 
-
 /*----------------------------------------------------------------
-Style 1: Text labels always visible
+Style T: Text labels always visible
 Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
 ----------------------------------------------------------------*/
  
@@ -355,7 +354,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
 }
  
 /*----------------------------------------------------------------
- Style 2: Tab Group shrinks into a tab like Icon 
+ Style 1: Tab Group shrinks into a tab like Icon 
 ----------------------------------------------------------------*/
  
 @media -moz-pref("ultima.tabs.tabgroups.label.1") { 
@@ -363,6 +362,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
         min-width:20px !important;
         max-width:150px !important;
         border-radius:17px !important;
+        margin-left:15px !important;
     }
     .tab-group-label[aria-description="Unnamed Group — Tab Group"] {
         max-width:25px !important; width:25px !important; min-width: 25px !important;
@@ -371,7 +371,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
 }
 
 /*----------------------------------------------------------------
- Style 3: Tab Group Line Indicator
+ Style 2: Tab Group Line Indicator
 ----------------------------------------------------------------*/
 
 @media -moz-pref("ultima.tabs.tabgroups.label.2") { 
@@ -400,6 +400,7 @@ Tab groups with Color mixed backgrounds
 ----------------------------------------------------------------*/
  
 @media -moz-pref("ultima.tabs.tabgroups.background.1") {
+     
    /* remove accent group color border */ 
     @media -moz-pref("sidebar.verticalTabs") {
         tab-group {
@@ -459,5 +460,15 @@ Tab groups with Color mixed backgrounds
     }
 }     
 
-
-
+@media -moz-pref("ultima.tabs.tabgroups.background.3") {
+    .tab-group-line {
+        opacity:1 !important;
+    }
+    .tab-group-line {
+      #tabbrowser-tabs[orient="vertical"] & {
+        #tabbrowser-tabs[expanded] & {
+          inset-inline-start: 2px !important;
+        }
+      }
+    }
+}
