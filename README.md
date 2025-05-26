@@ -134,6 +134,13 @@ git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 
 ## Documentation
 
+>[!WARNING]
+> **PLEASE,** If you have any issue related to the theme..
+>
+> Do not treat The [FirefoxCSS subreddit](https://www.reddit.com/r/FirefoxCSS/) as theme support.
+>
+> You will get the best help here, by [submitting an "Issue"](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue).
+
 [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
 - FAQ
 - All theme settings
