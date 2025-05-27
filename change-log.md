@@ -11,7 +11,7 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a scrollable box with limited size. I've reverted this change *inside of* `ultima.tabs.pinnedtabs.style.1` 899e820
+- `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. I've reverted this change *inside of* `ultima.tabs.pinnedtabs.style.1` 899e820
 - `fix • 🔴 • ` ...
 - `new • 🟢 • ` ...
 - `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
