@@ -1,4 +1,4 @@
-### <ins> FF Ultima Version 2.6 Release
+### <ins> FF Ultima Version 2.5.5 Release
 - **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.6/ffultima2.6.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
@@ -12,16 +12,19 @@
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
 - `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. I've reverted this change *inside of* `ultima.tabs.pinnedtabs.style.1` 899e820
-- `fix • 🔴 • ` ...
+- `fix • 🔴 • ` Sidebery Animation transition fluidity #300 @TBroderick99 0fa0db8
 - `new • 🟢 • ` ...
 - `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
 - `new • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` Tab Group optimization
 
+> Sidebar Animation smoothing
+
+https://github.com/user-attachments/assets/da331532-efbc-4268-9e89-018f0da86742
+
 > PiP always visible volume slider
 
 ![PiP](https://github.com/user-attachments/assets/f872e39b-5546-4e3e-8304-774d3c266f19)
-
 
 > Tab groups combining backgrounds
 
