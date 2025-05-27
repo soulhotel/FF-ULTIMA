@@ -747,7 +747,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
 
         & #sidebar-main {
             position: absolute !important; z-index:-1 !important;
-            z-index:1 !important; left:-45px !important;
+            z-index:1 !important; left:-45px !important; opacity: 0 !important;
         }
         & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
             & #browser {
@@ -778,6 +778,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
                 z-index:1000 !important;
                 box-shadow: var(--uc-box-shadow) !important;
                 border-radius:10px !important;
+                opacity: 1 !important;
             }
             & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
                 & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
@@ -802,6 +803,7 @@ span.button-background.labelled label {padding-left: 5px !important;}
                 z-index:1000 !important;
                 box-shadow: var(--uc-box-shadow) !important;
                 border-radius:10px !important;
+                opacity: 1 !important;
             }
             & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
                 & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
