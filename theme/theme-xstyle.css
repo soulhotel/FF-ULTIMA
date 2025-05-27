@@ -393,6 +393,9 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
     .tab-group-line {
         opacity:0 !important;
     }
+    .tab-group-label:hover {
+        transform:scale(1.05);
+    }
 }
     
 /*----------------------------------------------------------------
