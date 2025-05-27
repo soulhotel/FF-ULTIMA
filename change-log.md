@@ -16,6 +16,7 @@
 - `new • 🟢 • ` ...
 - `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
 - `new • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
+- `qol • 🟡 • ` User.js Vertical Tab adjustments (animation speed & first-time visibility) 6fd8b17
 - `qol • 🟡 • ` Tab Group optimization
 
 > Sidebar Animation smoothing
