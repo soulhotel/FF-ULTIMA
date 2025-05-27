@@ -60,15 +60,6 @@ Adjustments for disabled vertical tab bar
     .sidebar-panel {
         background-color: transparent !important;
     }
-    /*
-    #main-window:-moz-window-inactive {
-        --uc-sidebar-collapsed-width: 38px !important;
-        #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) {
-            --uc-sidebar-collapsed-width: 38px !important;
-            max-width: var(--uc-sidebar-collapsed-width) !important;
-        }
-    }
-    */
 }
 }
 
@@ -158,6 +149,7 @@ Adjustments for disabled vertical tab bar
         position: relative;
         min-width: 14em;
         max-width: var(--uc-sidebar-collapsed-width) !important;
+        transition: max-width 0.2s linear 0ms !important;
     }
     #sidebar-box:not(:hover) * {
         opacity:0.5;
@@ -182,26 +174,18 @@ Adjustments for disabled vertical tab bar
     }
 
     #sidebar-box {
-        transition: max-width 115ms linear var(--uc-autohide-sidebar-delay) !important;
+        transition: max-width 0.2s linear 0ms !important;
         min-width: var(--uc-sidebar-collapsed-width) !important;
         will-change: max-width;
     }
     #sidebar-box:hover>#sidebar {
+        transition: max-width 115ms linear 0s !important;
         max-width: var(--uc-sidebar-collapsed-width) !important;
         transition-delay: 0ms !important;
     }
     .sidebar-panel {
         background-color: transparent !important;
     }
-    /*
-    #main-window:-moz-window-inactive {
-        --uc-sidebar-collapsed-width: 38px !important;
-        #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) {
-            --uc-sidebar-collapsed-width: 38px !important;
-            max-width: var(--uc-sidebar-collapsed-width) !important;
-        }
-    }
-    */
 }
 }
 
