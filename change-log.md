@@ -14,6 +14,7 @@
 - `new • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` User.js Vertical Tab adjustments (animation speed & first-time visibility) 6fd8b17
 - `qol • 🟡 • ` Adjustments to pinned tabs container height with `ultima.tabs.pinned.style.1` 83bce1e
+- `qol • 🟡 • ` Adjustments to urlbar outlining
 - `qol • 🟡 • ` Tab Group optimization
 
 > Sidebar Animation smoothing
