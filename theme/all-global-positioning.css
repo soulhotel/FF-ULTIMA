@@ -677,7 +677,8 @@ span.button-background.labelled label {padding-left: 5px !important;}
 /* pinned tabs container */
 #vertical-pinned-tabs-container {padding-bottom: 0px !important;}
 #vertical-pinned-tabs-container-separator {opacity:0 !important; display: none !important;}
-#vertical-pinned-tabs-container tab:last-of-type {padding-bottom: 15px !important;}
+#main-window:not([sidebar-expand-on-hover]) #vertical-pinned-tabs-container tab {padding-bottom: 8px !important;}
+#main-window[sidebar-expand-on-hover] #vertical-pinned-tabs-container tab:last-of-type {padding-bottom: 16px !important;}
 
 /* vt when not expanded */
 #sidebar-main:not(:has(#tabbrowser-tabs[expanded])) {
