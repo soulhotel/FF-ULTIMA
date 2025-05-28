@@ -10,7 +10,7 @@
 - `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. With `ultima.tabs.pinnedtabs.style.1` 899e820, the pinned tabs max-height is unlimited.
 - `fix • 🔴 • ` Sidebery Animation transition fluidity #300 @TBroderick99 0fa0db8
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.label.2` a *compact* pill style (see video below)
-- `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller size) (wip positioning decisions)
+- `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller sizes) 0aab3b1
 - `qol • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
 - `qol • 🟡 • ` Adjustments to pinned tabs container height with `ultima.tabs.pinned.style.1` 83bce1e
