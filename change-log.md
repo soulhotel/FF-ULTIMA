@@ -9,6 +9,7 @@
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
 - `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. With `ultima.tabs.pinnedtabs.style.1` 899e820, the pinned tabs max-height is unlimited.
 - `fix • 🔴 • ` Sidebery Animation transition fluidity #300 @TBroderick99 0fa0db8
+- `fix • 🔴 • `  Pinned tab spacing correction when not using expand on hover e3bfba5
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.label.2` a *compact* pill style for tab groups (see video below)
 - `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller sizes) 0aab3b1
 - `qol • 🟡 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
