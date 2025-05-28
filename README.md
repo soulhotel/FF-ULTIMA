@@ -143,6 +143,7 @@ git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 
 [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
 - FAQ
+- Why User.js?
 - All theme settings
 - How to create color schemes
 - How to install, uninstall, update
