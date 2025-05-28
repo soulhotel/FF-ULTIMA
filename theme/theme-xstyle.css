@@ -128,7 +128,9 @@ tab groups
     /*not necessary but #tabbrowser-arrowscrollbox-periphery is the container for this button*/
     #vertical-tabs-newtab-button { order: -1 !important; } 
     /*second button visible in vertical tabs expanded state*/
-    #vertical-tabs-newtab-button { order: -1 !important; }    
+    #vertical-tabs-newtab-button { order: -1 !important; }
+    /*vertical-pinned-tabs-container*/
+    #vertical-pinned-tabs-container { order: -2 !important; }
 }
 
 /* sidebar extra theming (not sidebery) -------------------------------------------------------------------- */
