@@ -9,10 +9,10 @@
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
 - `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. With `ultima.tabs.pinnedtabs.style.1` 899e820, the pinned tabs max-height is unlimited.
 - `fix • 🔴 • ` Sidebery Animation transition fluidity #300 @TBroderick99 0fa0db8
-- `new • 🟢 • ` ...
-- `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
-- `new • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
-- `qol • 🟡 • ` User.js Vertical Tab adjustments (animation speed & first-time visibility) 6fd8b17
+- `new • 🟢 • ` Setting `ultima.tabs.tabgroups.label.2` a *compact* pill style (see video below)
+- `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller size) (wip positioning decisions)
+- `qol • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
+- `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
 - `qol • 🟡 • ` Adjustments to pinned tabs container height with `ultima.tabs.pinned.style.1` 83bce1e
 - `qol • 🟡 • ` With `ultima.tabs.newtabbutton.ontop.1`, the new tab button no longer duplicates when there are enough opened tabs to trigger the scrollbar @dreadbalaur 0cdc8ae
 - `qol • 🟡 • ` Adjustments to urlbar outlining
