@@ -11,7 +11,7 @@
 - `fix • 🔴 • ` Sidebery Animation transition fluidity #300 @TBroderick99 0fa0db8
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.label.2` a *compact* pill style for tab groups (see video below)
 - `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller sizes) 0aab3b1
-- `qol • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
+- `qol • 🟡 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
 - `qol • 🟡 • ` Adjustments to pinned tabs container height with `ultima.tabs.pinned.style.1` 83bce1e
 - `qol • 🟡 • ` With `ultima.tabs.newtabbutton.ontop.1`, the new tab button no longer duplicates when there are enough opened tabs to trigger the scrollbar @dreadbalaur 0cdc8ae
