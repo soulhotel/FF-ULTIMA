@@ -133,6 +133,14 @@ tab groups
     #vertical-pinned-tabs-container { order: -2 !important; }
 }
 
+/* disable tab update dot ---------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.tabs.disable.update.dot") {
+    .tab-content[titlechanged]:not([selected]) {
+        background-image:none !important;
+    }
+}
+
 /* sidebar extra theming (not sidebery) -------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.xstyle.sidebar.theming") {
