@@ -57,6 +57,7 @@ user_pref("ultima.sidebery.expandon.inactive.windows", false);
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);
 user_pref("ultima.disable.alltabs.button", true);
+user_pref("ultima.tabs.disable.update.dot", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.newtabbutton.ontop.1", false);
 user_pref("ultima.tabs.newtabbutton.ontop.2", false);
