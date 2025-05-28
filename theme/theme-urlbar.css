@@ -36,6 +36,13 @@ File Desc:         Alternative Styles for the URL Bar
         outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 80%, transparent) !important;
 }
 
+/* 5/28/2025 - new urlbar searchmode switcher */
+#urlbar-searchmode-switcher {
+  &[open] {
+    background-color: var(--uc-button-selected) !important;
+  }
+}
+
 /* urlbar settings --------------------------------------------------- */
 
 @media -moz-pref("ultima.urlbar.transparent") {
