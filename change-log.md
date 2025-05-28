@@ -1,19 +1,20 @@
-### <ins> FF Ultima Version 2.5.5 Release- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.6/ffultima2.6.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**- 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).- ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.- ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
+### <ins> FF Ultima Version 2.6 Release- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.6/ffultima2.6.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**- 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).- ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.- ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
   
 ### <ins> Version Notes
-- As of Firefox 140: Hovering the Browser edge with vertical tabs no longer keeps the vertical tabs expanded! And the extensions button (`e`,`🧩`) can now be removed from the Navbar!
-- User.js not required.
+- As of Firefox 140: The extensions button (`e`,`🧩`) can now be removed from the Navbar.
 - Firefox 138+ required.
+- User.js not required.
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. I've reverted this change *inside of* `ultima.tabs.pinnedtabs.style.1` 899e820
+- `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. With `ultima.tabs.pinnedtabs.style.1` 899e820, the pinned tabs max-height is unlimited.
 - `fix • 🔴 • ` Sidebery Animation transition fluidity #300 @TBroderick99 0fa0db8
 - `new • 🟢 • ` ...
 - `new • 🟢 • ` PiP mini video player's volime slider will now always be visible (when smaller size).
 - `new • 🟢 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` User.js Vertical Tab adjustments (animation speed & first-time visibility) 6fd8b17
 - `qol • 🟡 • ` Adjustments to pinned tabs container height with `ultima.tabs.pinned.style.1` 83bce1e
+- `qol • 🟡 • ` With `ultima.tabs.newtabbutton.ontop.1`, the new tab button no longer duplicates when there are enough opened tabs to trigger the scrollbar @dreadbalaur 0cdc8ae
 - `qol • 🟡 • ` Adjustments to urlbar outlining
 - `qol • 🟡 • ` Tab Group optimization
 
