@@ -409,6 +409,11 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
     .tab-group-label:hover {
         transform:scale(1.05);
     }
+    .tab-group-label {
+        #tabbrowser-tabs[orient="vertical"][expanded] & {
+            padding: 0px 12px !important;
+        }
+    }
 }
     
 /*----------------------------------------------------------------
