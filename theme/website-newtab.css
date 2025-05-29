@@ -169,9 +169,15 @@ body {
 }    
 .search-wrapper .logo-and-wordmark .wordmark {
     width: 66vw !important;
+    fill: var(--mode-color) !important;
 }
+.logo-and-wordmark .wordmark {
+    width: 66vw !important;
+    fill: var(--mode-color) !important;
+}    
 .search-wrapper .logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }    
-
+.logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }  
+    
 /* default style */    
 @media -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
     .search-inner-wrapper {
