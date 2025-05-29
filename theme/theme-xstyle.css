@@ -46,12 +46,12 @@ tab groups
 }
 
 /* vertical tab action buttons ---------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.tabs.vertical.hide.bottom.buttons") {
+@media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons") {
 .tools-and-extensions.actions-list {
     & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
     }
 }
-@media -moz-pref("ultima.tabs.vertical.hide.bottom.buttons.off.hover") {
+@media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons.off.hover") {
 .tools-and-extensions.actions-list[orientation="vertical"] {
     & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
     }
