@@ -13,6 +13,8 @@
 - `fix • 🔴 • ` Setting `ultima.tabs.newtabbutton.ontop.2`, the new tab button now remains under pinned tabs when there are enough opened tabs to trigger the scrollbar #301 dd35439
 - `new • 🟢 • ` Setting `ultima.tabs.disable.update.dot` to remove the Dot (indicator) that shows up on tabs
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.label.2` a *compact* pill style for tab groups (see video below)
+- `new • 🟢 • ` Setting `ultima.tabs.vertical.hide.bottom.buttons` to hide the action buttons from the vertical tabs c04d148
+- `new • 🟢 • ` Setting `ultima.tabs.vertical.hide.bottom.buttons.off.hover` to hide the action buttons, when not hovering the vertical tabs c04d148
 - `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller sizes) 0aab3b1
 - `qol • 🟡 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
