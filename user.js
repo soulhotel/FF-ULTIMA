@@ -65,6 +65,8 @@ user_pref("ultima.tabs.pinnedtabs.style.1", false);
 user_pref("ultima.tabs.vertical.hide", false);
 user_pref("ultima.tabs.vertical.hide.in.screencorner", false);
 user_pref("ultima.tabs.vertical.hide.in.screenedge", true);
+user_pref("ultima.tabs.vertical.hide.bottom.buttons", false);
+user_pref("ultima.tabs.vertical.hide.bottom.buttons.off.hover", true);
 user_pref("ultima.tabs.tabgroups.label.1", false);
 user_pref("ultima.tabs.tabgroups.label.2", true);
 user_pref("ultima.tabs.tabgroups.label.tthornton", false);
