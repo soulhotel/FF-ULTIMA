@@ -1,13 +1,13 @@
 ### <ins> FF Ultima Version 2.6 Release- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.6/ffultima2.6.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**- 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).- ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.- ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
   
 ### <ins> Version Notes
+- A very calm update; Mostly *quality of life* adjustments and minor fixes.
 - As of Firefox 140: The extensions button (`e`,`🧩`) can now be removed from the Navbar.
-- User.js recommended (not required).
+- User.js recommended (but not required).
 - Firefox 138+ required.
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fyi • ℹ️ • ` As of Firefox 140, pinned tabs are now limited to a tiny scrollable box. With `ultima.tabs.pinnedtabs.style.1` 899e820, the pinned tabs max-height is unlimited.
 - `fix • 🔴 • ` Sidebery Animation transition fluidity #300 0fa0db8 @TBroderick99
 - `fix • 🔴 • ` Pinned tab spacing correction when not using expand on hover #302 e3bfba5 @rh1nehart
 - `fix • 🔴 • ` Setting `ultima.tabs.newtabbutton.ontop.2`, the new tab button now remains under pinned tabs when there are enough opened tabs to trigger the scrollbar #301 dd35439
@@ -16,9 +16,8 @@
 - `qol • 🟡 • ` PiP mini video player's volume slider will now always be visible (when smaller sizes) 0aab3b1
 - `qol • 🟡 • ` Tab group backgrounds can now be completely combined/seperated (color background, blurred tab color, color line)
 - `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
-- `qol • 🟡 • ` Adjustments to pinned tabs container height with `ultima.tabs.pinned.style.1` 83bce1e
+- `qol • 🟡 • ` Pinned tabs container height unlimited with `ultima.tabs.pinned.style.1` 83bce1e 899e820
 - `qol • 🟡 • ` With `ultima.tabs.newtabbutton.ontop.1`, the new tab button no longer duplicates when there are enough opened tabs to trigger the scrollbar #301 0cdc8ae @dreadbalaur
-- `qol • 🟡 • ` Adjustments to urlbar outlining
 - `qol • 🟡 • ` Tab Group optimization
 
 > Sidebar Animation smoothing
