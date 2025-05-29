@@ -39,8 +39,8 @@ tab groups
         min-height: fit-content !important;
         max-height: fit-content !important;
     }
-    #vertical-pinned-tabs-splitter:not(:hover) {
-        opacity:0.05 !important;
+    #vertical-pinned-tabs-splitter {
+        display:none !important;
     }
 }
 
