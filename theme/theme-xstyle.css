@@ -5,6 +5,7 @@ File Desc:         ALTERNATIVE STYLES for seperate sections of the browser
 
 compact tabs
 pinned tabs
+vertical tab action buttons
 nav bar
 bookmarks centered
 bookmarks fade out
@@ -41,6 +42,18 @@ tab groups
     }
     #vertical-pinned-tabs-splitter {
         display:none !important;
+    }
+}
+
+/* vertical tab action buttons ---------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vertical.hide.bottom.buttons") {
+.tools-and-extensions.actions-list {
+    & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
+    }
+}
+@media -moz-pref("ultima.tabs.vertical.hide.bottom.buttons.off.hover") {
+.tools-and-extensions.actions-list[orientation="vertical"] {
+    & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
     }
 }
 
