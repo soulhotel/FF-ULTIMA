@@ -298,6 +298,7 @@ Spacing correction for all tab group styles
 }
 /* rounded border */
 /*vert*/
+/*
 #main-window:has(#tabbrowser-tabs[orient="vertical"]) {
     tab-group .tabbrowser-tab:first-of-type {
         border-radius: 8px 8px 0px 0px !important;
@@ -305,7 +306,7 @@ Spacing correction for all tab group styles
     tab-group .tabbrowser-tab:last-of-type {
         border-radius: 0px 0px 8px 8px !important;
     }
-}
+}*/
 /*hori*/
 #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
     tab-group .tabbrowser-tab:first-of-type {
@@ -394,6 +395,7 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
     .tab-group-label {
         border-radius:17px !important;
         line-height:0.8 !important;
+        z-index:5 !important;
     }
     #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
         color: transparent !important;
