@@ -2,8 +2,8 @@
   
 ### <ins> Version Notes
 - As of Firefox 140: The extensions button (`e`,`🧩`) can now be removed from the Navbar.
+- User.js recommended (not required).
 - Firefox 138+ required.
-- User.js not required.
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
