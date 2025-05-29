@@ -32,6 +32,10 @@ https://github.com/user-attachments/assets/da331532-efbc-4268-9e89-018f0da86742
 
 ![PiP](https://github.com/user-attachments/assets/f872e39b-5546-4e3e-8304-774d3c266f19)
 
+> New `ultima.tabs.vertical.hide.the.bottom.buttons.off.hover`, gives you more space to see tabs by hiding excess action buttons. While `ultima.tabs.vertical.hide.the.bottom.buttons` will always hide the action buttons, except for Settings.
+
+![Vid_20250529_174426](https://github.com/user-attachments/assets/c84d3411-1f7b-4a5d-86ac-915e8a042096)
+
 > Tab groups combining backgrounds
 
 https://github.com/user-attachments/assets/7131ab0a-8fd8-4976-a670-ae33ba03a06c
