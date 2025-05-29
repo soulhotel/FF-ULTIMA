@@ -48,7 +48,7 @@ Adjustments for disabled vertical tab bar
     }
 
     #sidebar-box {
-        transition: max-width 0.2s linear 0ms !important;
+        transition: max-width 0.4s linear 0ms !important;
         min-width: var(--uc-sidebar-collapsed-width) !important;
         will-change: max-width;
     }
