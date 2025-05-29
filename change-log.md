@@ -18,6 +18,7 @@
 - `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
 - `qol • 🟡 • ` Pinned tabs container height unlimited with `ultima.tabs.pinned.style.1` 83bce1e 899e820
 - `qol • 🟡 • ` With `ultima.tabs.newtabbutton.ontop.1`, the new tab button no longer duplicates when there are enough opened tabs to trigger the scrollbar #301 0cdc8ae @dreadbalaur
+- `qol • 🟡 • ` Firefox 140+ New Tab Page changes reverted
 - `qol • 🟡 • ` Discarded tabs should respect relative moz preference w
 - `qol • 🟡 • ` Tab Group optimization
 
