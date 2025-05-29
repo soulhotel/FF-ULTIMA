@@ -54,7 +54,6 @@ tab groups
         max-width: 53px !important;
         & moz-button[view="viewCustomizeSidebar"] {}
     }
-     
 }
 @media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons.off.hover") {
     .tools-and-extensions.actions-list[orientation="vertical"] {
