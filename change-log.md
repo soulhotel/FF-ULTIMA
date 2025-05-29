@@ -1,7 +1,7 @@
 ### <ins> FF Ultima Version 2.6 Release- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.6/ffultima2.6.zip)** - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**- 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).- ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.- ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
   
 ### <ins> Version Notes
-- A very calm update; Mostly *quality of life* adjustments and minor fixes.
+- This is a very small but impactful update. Mostly centered around *quality of life*, with some minor fixes.
 - As of Firefox 140: The extensions button (`e`,`🧩`) can now be removed from the Navbar.
 - User.js recommended (but not required).
 - Firefox 138+ required.
@@ -18,8 +18,8 @@
 - `qol • 🟡 • ` Vertical Tab animation speed fluidity & first-time visibility trigger (user.js) 6fd8b17
 - `qol • 🟡 • ` Pinned tabs container height unlimited with `ultima.tabs.pinned.style.1` 83bce1e 899e820
 - `qol • 🟡 • ` With `ultima.tabs.newtabbutton.ontop.1`, the new tab button no longer duplicates when there are enough opened tabs to trigger the scrollbar #301 0cdc8ae @dreadbalaur
+- `qol • 🟡 • ` Unloaded/discarded/pending tabs will now respect browser.tabs.fadeOutUnloadedTabs when set to false #303 6bc1723
 - `qol • 🟡 • ` Firefox 140+ New Tab Page changes reverted
-- `qol • 🟡 • ` Discarded tabs should respect relative moz preference w
 - `qol • 🟡 • ` Tab Group optimization
 
 > Sidebar Animation smoothing
