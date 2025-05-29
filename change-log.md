@@ -8,7 +8,7 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fix • 🔴 • ` Sidebery Animation transition fluidity #300 0fa0db8 @TBroderick99
+- `fix • 🔴 • ` Sidebery animation fluidity #300 0fa0db8 @TBroderick99
 - `fix • 🔴 • ` Pinned tab spacing correction when not using expand on hover #302 e3bfba5 @rh1nehart
 - `fix • 🔴 • ` Setting `ultima.tabs.newtabbutton.ontop.2`, the new tab button now remains under pinned tabs when there are enough opened tabs to trigger the scrollbar #301 dd35439
 - `new • 🟢 • ` Setting `ultima.tabs.disable.update.dot` to remove the Dot (indicator) that shows up on tabs
@@ -24,11 +24,11 @@
 - `qol • 🟡 • ` Firefox 140+ New Tab Page changes reverted
 - `qol • 🟡 • ` Tab Group optimization
 
-> Sidebar Animation smoothing
+> Sidebar transition animation
 
 https://github.com/user-attachments/assets/da331532-efbc-4268-9e89-018f0da86742
 
-> PiP always visible volume slider
+> When the PiP reaches a very small size, the volume slider dissappears, but now, it will always be accessible
 
 ![PiP](https://github.com/user-attachments/assets/f872e39b-5546-4e3e-8304-774d3c266f19)
 
@@ -38,7 +38,7 @@ https://github.com/user-attachments/assets/da331532-efbc-4268-9e89-018f0da86742
 
 ![Vid_20250529_180401](https://github.com/user-attachments/assets/f78123cf-a299-40b7-b3bb-803a3c75b4a8)
 
-> Tab groups combining backgrounds
+> Tab groups backgrounds can be combined and/or seperated
 
 https://github.com/user-attachments/assets/7131ab0a-8fd8-4976-a670-ae33ba03a06c
 
