@@ -11,6 +11,7 @@
 - `fix • 🔴 • ` Sidebery animation fluidity #300 0fa0db8 @TBroderick99
 - `fix • 🔴 • ` Pinned tab spacing correction when not using expand on hover #302 e3bfba5 @rh1nehart
 - `fix • 🔴 • ` Setting `ultima.tabs.newtabbutton.ontop.2`, the new tab button now remains under pinned tabs when there are enough opened tabs to trigger the scrollbar #301 dd35439
+- `new • 🟢 • ` Setting `ultima.sidebar.hide.header` to hide the new sidebar header/title f29aa49
 - `new • 🟢 • ` Setting `ultima.tabs.disable.update.dot` to remove the Dot (indicator) that shows up on tabs
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.label.2` a *compact* pill style for tab groups (see video below)
 - `new • 🟢 • ` Setting `ultima.tabs.vertical.hide.the.bottom.buttons` to hide the action buttons from the vertical tabs c04d148
