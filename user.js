@@ -47,6 +47,7 @@ user_pref("ultima.urlbar.transparent", false);
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebar.seperator", false);
+user_pref("ultima.sidebar.hide.header", true);
 user_pref("ultima.xstyle.sidebar.theming", true);
 
 /* sidebery */
