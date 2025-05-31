@@ -13,6 +13,7 @@ bookmarks autohide
 new tab button
 sidebar extra theming (not sidebery)
 sidebery expand on inactive windows
+sidebar hide new header
 highlight aboutconfig tab
 tab containers
 tab groups
@@ -198,11 +199,18 @@ tab groups
     /* history sidebar --------------------------------------------------*/
 }
 
-/* sidebery expand on inactive windows ----------------------------------------------------------------------*/
+/* sidebery expand on inactive windows --------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.sidebery.expandon.inactive.windows") {
     #sidebar-box:-moz-window-inactive:not(:hover) { 
         max-width: unset !important;
+    }
+}
+/* sidebar hide new header ---------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.sidebar.hide.header") {
+    #sidebar-panel-header {
+      display: none !important;
     }
 }
 
