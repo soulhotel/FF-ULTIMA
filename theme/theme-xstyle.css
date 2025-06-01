@@ -472,7 +472,6 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
         }
     }
 }
-    
 /*----------------------------------------------------------------
 Tab groups with Color mixed backgrounds
 ----------------------------------------------------------------*/
@@ -539,8 +538,9 @@ Tab groups with Color mixed backgrounds
 }     
 
 @media -moz-pref("ultima.tabs.tabgroups.background.3") {
-    .tab-group-line {
-        opacity:1 !important;
+    :root:has(#tabbrowser-tabs[orient="vertical"]),
+    :root:has(#tabbrowser-tabs[orient="horizontal"]) {
+        .tab-group-line {opacity:1 !important;}            
     }
     .tab-group-line {
       #tabbrowser-tabs[orient="vertical"] & {
@@ -549,4 +549,16 @@ Tab groups with Color mixed backgrounds
         }
       }
     }
+}
+
+.toolbarbutton-badge-stack, .toolbarbutton-text {
+    transition: background-color 0.6s ease !important;
+}
+
+.tab-context-line, .tabbrowser-tab {
+    transition: background-color 2s ease 0.5s !important;
+}
+
+.tab-group-line {
+    transition: opacity 0.8s ease 0.2s !important;
 }
