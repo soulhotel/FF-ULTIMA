@@ -39,6 +39,7 @@ user_pref("ultima.disable.windowcontrols.button", false);
 
 /* url bar */
 user_pref("ultima.urlbar.animate.open", true);
+user_pref("ultima.urlbar.animate.options", true);
 user_pref("ultima.urlbar.suggestions", true);
 user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hidebuttons", false);
