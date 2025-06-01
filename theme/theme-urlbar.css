@@ -13,9 +13,6 @@ File Desc:         Alternative Styles for the URL Bar
         transform:scale(1.1);
     }
 }
-.urlbarView-row:hover .urlbarView-favicon {
-    transform:scale(1.5);
-}
 
 #identity-box,#tracking-protection-icon-container, #page-action-buttons {
     margin-top:1px !important;
@@ -94,5 +91,16 @@ File Desc:         Alternative Styles for the URL Bar
     #urlbar[breakout][breakout-extend] {
         overflow: hidden !important;
         max-height: 600px !important; /* Choose a value big enough to cover the tallest state */
+    }
+    .urlbarView-row-inner {
+        .urlbarView-favicon, .urlbarView-type-icon {
+            transition: margin-left 1s ease-in-out !important;
+        }
+    }
+    .urlbarView-row-inner:hover {
+        .urlbarView-favicon, .urlbarView-type-icon {
+            margin-left:-27px !important;
+            transition: margin-left 1.6s ease-in-out !important;
+        }
     }
 }
