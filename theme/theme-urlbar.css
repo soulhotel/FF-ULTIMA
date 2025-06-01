@@ -92,6 +92,8 @@ File Desc:         Alternative Styles for the URL Bar
         overflow: hidden !important;
         max-height: 600px !important; /* Choose a value big enough to cover the tallest state */
     }
+}
+@media -moz-pref("ultima.urlbar.animate.options") {
     .urlbarView-row-inner {
         .urlbarView-favicon, .urlbarView-type-icon {
             transition: margin-left 1s ease-in-out !important;
