@@ -182,12 +182,15 @@ Extra modifications woth no place to go (yet)
             --uc-content-margins: 2px -2px 5px 0px !important;
         }
     }
-    /* when vt off & hori tabs on */
-    @media not -moz-pref("sidebar.verticalTabs") {
-        :root { --uc-content-margins: 2px 5px 5px 5px !important; }
+}
+/* when vt off & hori tabs on */
+@media not -moz-pref("sidebar.verticalTabs") {
+    :root {
+        --uc-content-margins: 2px 5px 5px 5px !important;
+        --uc-sb-margins: 2px -4px 5px 5px;
+        --uc-sb-margins-right: 2px 5px 5px -4px;
     }
 }
-
 
 /* Compact spacing -----------------------------------------------------------------------*/
 
@@ -460,12 +463,6 @@ box-shadow: none !important;}}
     @media not -moz-pref("ultima.disable.windowcontrols.button") {#nav-bar .titlebar-buttonbox-container {display: flex !important;}}
 }
 
-@media not -moz-pref("sidebar.verticalTabs") {
-    :root{
-    --uc-content-margins: 2px 5px 5px 5px;
-    }
-}
-
 @media -moz-pref("sidebar.verticalTabs") {
     :root:has(#sidebar-main:not([sidebar-positionend=""])) {
         --uc-content-margins: 2px 5px 5px 5px;
@@ -623,25 +620,26 @@ box-shadow: none !important;}}
 }
 
 /* custom splitter - resizeable bar */
-:root:not([inDOMFullscreen="true"]) #sidebar-launcher-splitter {
-    @media -moz-pref("sidebar.revamp") {
-        padding:2.5px !important;
-        margin: 55px 0px 55px 0px !important;
-        border-radius: 10px !important;
-        opacity: 0.5 !important;
-        display:flex !important;
-        &:hover {
-            padding: 2.5px !important; margin: 55px 0px !important;
-            border-radius: 10px !important; opacity: 0.5 !important;
-            display: flex !important;
-            background-color: var(--uc-accent-ii) !important;
-        }
-        &[style="order: 4;"] {
+@media -moz-pref("sidebar.verticalTabs") {
+    :root:not([inDOMFullscreen="true"]) #sidebar-launcher-splitter {
+        @media -moz-pref("sidebar.revamp") {
+            padding:2.5px !important;
             margin: 55px 0px 55px 0px !important;
+            border-radius: 10px !important;
+            opacity: 0.5 !important;
+            display:flex !important;
+            &:hover {
+                padding: 2.5px !important; margin: 55px 0px !important;
+                border-radius: 10px !important; opacity: 0.5 !important;
+                display: flex !important;
+                background-color: var(--uc-accent-ii) !important;
+            }
+            &[style="order: 4;"] {
+                margin: 55px 0px 55px 0px !important;
+            }
         }
     }
 }
-
 
 :root:has([sidebar-launcher-expanded][sidebar-panel-open])) {
   & #sidebar-box:not([sidebar-positionend]) {
@@ -926,7 +924,6 @@ menupopup menuseparator {opacity:0.2 !important;}
         }
     }
 }
-
 /* 4/1/2025 firefox 137 */
 
 :root[sidebar-expand-on-hover] {
@@ -982,12 +979,7 @@ spacer[part="overflow-end-indicator"], spacer[part="overflow-start-indicator"] {
     box-shadow: var(--uc-box-shadow) !important;
 }
 
-/* 5/29/2025 141 */
 
-/* hide sidebar header for sidebery */
-#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] #sidebar-panel-header {
-  display: none !important;
-}
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 
