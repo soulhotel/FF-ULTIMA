@@ -647,6 +647,17 @@ box-shadow: none !important;}}
   }
 }
 
+:root:has(#sidebar-main[sidebar-launcher-expanded=""]:not([sidebar-positionend=""])):has(#sidebar-box[checked]) {
+    #sidebar-launcher-splitter:not([state="dragging"]) {
+        margin-left:-49px !important;margin-right:49px !important;
+    }
+}
+
+:root:has(#sidebar-main[sidebar-launcher-expanded=""][sidebar-positionend=""]):has(#sidebar-box[checked]) {
+    #sidebar-launcher-splitter:not([state="dragging"]) {
+        margin-right:-47px !important;margin-left:47px !important;
+    }
+}
 
 /* extra tweaks */
 #sidebar-main {
