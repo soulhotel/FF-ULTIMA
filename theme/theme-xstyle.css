@@ -388,6 +388,9 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
         border-radius:2px !important;
         margin-left:15px !important;
     }
+    .tab-group-line {
+        opacity:0 !important;
+    }
 }
  
 /*----------------------------------------------------------------
@@ -405,38 +408,67 @@ Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy
         max-width:25px !important; width:25px !important; min-width: 25px !important;
         padding-inline: 0 !important;
     }
+    .tab-group-line {
+        opacity:0 !important;
+    }
 }
 
 /*----------------------------------------------------------------
  Style 2: Tab Group Line Indicator
 ----------------------------------------------------------------*/
 
-@media -moz-pref("ultima.tabs.tabgroups.label.2") { 
-    /*defaults*/
-    .tab-group-label-container, .tab-group-label {
-        max-height:10px !important; height:10px !important; min-height:10px !important;
-        min-width:18px !important; max-width:150px !important;
+@media -moz-pref("ultima.tabs.tabgroups.label.2") {   
+    :root:has(#tabbrowser-tabs[orient="vertical"]) {  
+        /*defaults*/
+        .tab-group-label-container, .tab-group-label {
+            max-height:10px !important; height:10px !important; min-height:10px !important;
+            min-width:18px !important; max-width:150px !important;
+        }
+        .tab-group-label {
+            border-radius:17px !important;
+            line-height:0.7 !important;
+            z-index:5 !important;
+            margin-top: -2px !important;
+            &[aria-expanded="true"] {
+                margin-top: 2px !important;
+            }
+            &:hover {
+                transform:scale(1.05);
+            }
+        }
+        #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
+            color: transparent !important;
+        }
+        .tab-group-line {
+            opacity:0 !important;
+        }
+        .tab-group-label {
+            #tabbrowser-tabs[orient="vertical"][expanded] & {
+                padding: 0px 12px !important;
+            }
+        }
     }
-    .tab-group-label {
-        border-radius:17px !important;
-        line-height:0.8 !important;
-        z-index:5 !important;
-    }
-    #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
-        color: transparent !important;
-    }
-    .tab-group-label[aria-expanded="true"] {
-        margin-top: 7px !important;
-    }
-    .tab-group-line {
-        opacity:0 !important;
-    }
-    .tab-group-label:hover {
-        transform:scale(1.05);
-    }
-    .tab-group-label {
-        #tabbrowser-tabs[orient="vertical"][expanded] & {
-            padding: 0px 12px !important;
+    :root:has(#tabbrowser-tabs[orient="horizontal"]) {  
+        /*defaults*/
+        .tab-group-label-container, .tab-group-label {
+            max-height:12px !important; height:12px !important; min-height:12px !important;
+            min-width:55px !important; max-width:200px !important;
+        }
+        .tab-group-label {
+            border-radius:17px !important;
+            margin-top: 30px !important;
+            line-height:0.8 !important;
+            z-index:5 !important;
+            margin-inline:0 !important;
+            &[aria-expanded="true"] {
+                margin-top: 30px !important;
+            }
+            &:hover {
+                transform:scale(1.05);
+            }
+        }
+        .tab-group-line {
+            opacity:0 !important;
         }
     }
 }
