@@ -76,9 +76,10 @@ user_pref("ultima.tabs.tabgroups.background.2", true);
 user_pref("ultima.tabs.tabgroups.background.3", false);
 
 /* vertical tabs defaults */
-user_pref("sidebar.verticalTabs", true);
+user_pref("sidebar.revamp", true);
 user_pref("sidebar.expandOnHover", true);
-user_pref("sidebar.expandOnHoverMessage.dismissed", true);
+user_pref("sidebar.revamp.defaultLauncherVisible", true);
+user_pref("sidebar.expandOnHoverMessage.dismissed", false);
 user_pref("sidebar.visibility", "expand-on-hover");
 user_pref("sidebar.revamp.round-content-area", false); /*handled by theme*/
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 140);
@@ -124,6 +125,9 @@ user_pref("ultima.enable.nightly.config", false);
 user_pref("ultima.enable.js.config", false);
 
 /* extra required */
+user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
+user_pref("browser.theme.content-theme", 0);
+user_pref("browser.theme.toolbar-theme", 0);
 user_pref("ultima.xstyle.highlight.aboutconfig", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
