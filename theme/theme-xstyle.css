@@ -518,20 +518,22 @@ Tab groups with Color mixed backgrounds
     } 
 }
 
-@media -moz-pref("ultima.tabs.tabgroups.background.2") {
-    .tab-context-line {
-        border-radius: 5px !important;
-        translate: 0px 10px !important;
-        margin: 0 !important;
-        width: 50% !important;
-        height: 13px !important;
-        filter: blur(13px) !important;
-        overflow: visible !important;
-        z-index: 10 !important;
-        background-color: var(--tab-group-color-invert) !important;
-        position: relative !important;
-        opacity: 0.5 !important;
-    }
+/* background 2, stems from a modificiation of a style, authored by probe 2k, github.com/probe2k */
+
+@media -moz-pref("ultima.tabs.tabgroups.background.2") { 
+    .tab-context-line { 
+        border-radius: 5px !important; 
+        translate: 0px 10px !important; 
+        margin: 0 !important; 
+        width: 50% !important; 
+        height: 13px !important; 
+        filter: blur(13px) !important; 
+        overflow: visible !important; 
+        z-index: 10 !important; 
+        background-color: var(--tab-group-color-invert) !important; 
+        position: relative !important; 
+        opacity: 0.5 !important; 
+    } 
     @media (prefers-color-scheme: light) {
         .tab-context-line {opacity: 0.8 !important;}
     }
