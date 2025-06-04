@@ -55,10 +55,7 @@ Adjustments for disabled vertical tab bar
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover>#sidebar {
         transition: max-width 115ms linear 0s !important;
         max-width: var(--uc-sidebar-collapsed-width) !important;
-        /* transition-delay: 0ms !important; 
-         maybe experiment without the forced delay 
-        */
-        
+        transition-delay: 0ms !important;
     }
     .sidebar-panel {
         background-color: transparent !important;
@@ -184,7 +181,7 @@ Adjustments for disabled vertical tab bar
     #sidebar-box:hover>#sidebar {
         transition: max-width 115ms linear 0s !important;
         max-width: var(--uc-sidebar-collapsed-width) !important;
-     /*   transition-delay: 0ms !important;*/
+        transition-delay: 0ms !important;
     }
     .sidebar-panel {
         background-color: transparent !important;
