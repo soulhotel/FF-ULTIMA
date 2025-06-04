@@ -297,6 +297,7 @@ tab-group .tabbrowser-tab {
     }
 }
 
+/* Background Style 3, default group line */
 @media -moz-pref("ultima.tabs.tabgroups.background.3") {
     :root:has(#tabbrowser-tabs[orient="vertical"]),
     :root:has(#tabbrowser-tabs[orient="horizontal"]) {
@@ -308,6 +309,36 @@ tab-group .tabbrowser-tab {
           inset-inline-start: 3px !important;
         }
       }
+    }
+}
+
+/* Background Style 4, dashed border container */
+@media -moz-pref("ultima.tabs.tabgroups.background.4") {
+    #main-window:has(#tabbrowser-tabs[orient="vertical"]) {
+        tab-group tab {border-inline: 2px var(--tab-group-color) dashed !important;}
+        tab-group tab:first-of-type {
+            border-top-left-radius: 11px !important;
+            border-top-right-radius: 11px !important;
+            border-top: 2px var(--tab-group-color) dashed !important;
+        }
+        tab-group tab:last-of-type {
+            border-bottom-left-radius: 11px !important;
+            border-bottom-right-radius: 11px !important;
+            border-bottom: 2px var(--tab-group-color) dashed !important;
+        }
+    }
+    #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
+        tab-group tab {border-block: 2px var(--tab-group-color) dashed !important;}
+        tab-group tab:first-of-type {
+            border-top-left-radius: 5px !important;
+            border-bottom-left-radius: 5px !important;
+            border-left: 2px var(--tab-group-color) dashed !important;
+        }
+        tab-group tab:last-of-type {
+            border-top-right-radius: 5px !important;
+            border-bottom-right-radius: 5px !important;
+            border-right: 2px var(--tab-group-color) dashed !important;
+        }
     }
 }
 
