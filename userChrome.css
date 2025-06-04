@@ -20,6 +20,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/function-extensions-menu.css);
 
 @import url(theme/theme-xstyle.css);
+@import url(theme/theme-tab-styles.css);
 @import url(theme/theme-context-menu.css);
 @import url(theme/theme-statuspanel.css);
 @import url(theme/theme-findbar.css);
@@ -27,3 +28,7 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 @import url(theme/theme-tab-audio-indicator.css);
 @import url(theme/theme-windowcontrols.css); 
 @import url(theme/all-global-configurations.css);
+
+
+--panel-shadow: none !important;
+/*theme-context-menu*/
