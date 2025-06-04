@@ -126,6 +126,9 @@ user_pref("ultima.enable.nightly.config", false);
 user_pref("ultima.enable.js.config", false);
 
 /* extra required */
+user_pref("extensions.activeThemeID", "default-theme@mozilla.org");Add commentMore actions
+user_pref("browser.theme.content-theme", 0);
+user_pref("browser.theme.toolbar-theme", 0);
 user_pref("ultima.xstyle.highlight.aboutconfig", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
