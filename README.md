@@ -29,7 +29,7 @@
 >
 - Multiple Options for tabs, autohiding, spacing, theming, accessibility [and more](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings).
 >
-- Autoconfig integration, Sidebery integration, Auto Tab Color integration
+- Autoconfig integration, Sidebery integration, Auto Tab Color integration.
 >
 - See more detail on [what FF Ultima has to offer](https://github.com/soulhotel/FF-ULTIMA/wiki#what-does-ff-ultima-offer) through the Wiki.
 >
@@ -64,7 +64,7 @@
 
 - [x] If your Profile Folder does not have a `chrome` folder, create one.
 - [x] If your Profile Folder already has a `chrome` folder, empty it.
-- [x] The theme will automatically enable userChrome stylesheets via user.js
+- [x] The theme will automatically enable userChrome stylesheets via user.js.
 - [x] Please have Firefox's System-Theme enabled. You can change this later.
 
 <img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
