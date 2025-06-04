@@ -91,9 +91,9 @@ user_pref("ultima.spacing.compact", false);
 user_pref("ultima.spacing.relaxed", false); /*wip*/
 user_pref("ultima.spacing.compact.contextmenu", false);
 user_pref("ultima.spacing.relaxed.contextmenu", false);
-user_pref("ultima.xstyle.containertabs.i", false);
-user_pref("ultima.xstyle.containertabs.ii", false);
-user_pref("ultima.xstyle.containertabs.iii", true);
+user_pref("ultima.tabs.tabContainer.1", false);
+user_pref("ultima.tabs.tabContainer.2", false);
+user_pref("ultima.tabs.tabContainer.3", true);
 user_pref("ultima.xstyle.newtab.rounded", false); /*new tab page*/
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
 
