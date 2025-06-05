@@ -599,7 +599,7 @@ box-shadow: none !important;}}
     & #sidebar-main {
         position: absolute !important;
     }
-    & #browser {
+    &:not([inDOMFullscreen="true"]) #browser {
         padding-left:50px;
     }
 }
@@ -607,7 +607,7 @@ box-shadow: none !important;}}
     & #sidebar-main {
         position: absolute !important;
     }
-    & #browser {
+    &:not([inDOMFullscreen="true"]) #browser {
         padding-right:50px;
     }
 }
