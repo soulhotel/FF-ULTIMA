@@ -48,6 +48,8 @@ menupopup, panel {
     --panel-shadow: 0 0 var(--panel-shadow-margin) hsla(0,0%,0%,.2); 
 }
 
+menupopup {--panel-shadow:none !important;}
+
 menuitem:hover{
     background-color: var(--uc-button-selected) !important;
     color: var(--uc-text) !important;
