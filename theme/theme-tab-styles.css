@@ -326,6 +326,10 @@ tab-group .tabbrowser-tab {
             border-bottom-right-radius: 11px !important;
             border-bottom: 2px var(--tab-group-color) dashed !important;
         }
+        &:has(#sidebar-box[checked]) #vertical-tabs {
+            margin-left:-1px !important;
+            margin-right:-1px !important;
+        }
     }
     #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
         tab-group tab {border-block: 2px var(--tab-group-color) dashed !important;}
