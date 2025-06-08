@@ -91,7 +91,7 @@
 - Only use the *`# restart firefox`* line, for the Firefox Browser that you are using.
 - This method assumes (in *`# CLEANUP USER.JS`*) that your Firefox Browser can restart in 5 seconds.
 
-> 🛈 What that Code do? These codeblocks can be copy/pasted and run in one go. It navigates to your Firefox Profile Folder... Downloads the theme into a chrome folder via Git... Then copies the user.js found inside to your Profile Folder... It then restarts Firefox and removes the user.js... It waits for running commands to finish before moving on to the next. Fully automating the Installation Process.
+> 🛈 What that Code do? These codeblocks can be copy/pasted/entered in one go. It navigates to your Firefox Profile Folder... Downloads the theme into a chrome folder via Git... Then copies the user.js found inside to your Profile Folder... It then restarts Firefox and removes the user.js... It waits for running commands to finish before moving on to the next. Fully automating the Installation Process.
 
 ###### LINUX (BASH)
 ```
