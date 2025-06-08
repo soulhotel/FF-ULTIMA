@@ -1,19 +1,15 @@
-# <p align="center"> FF ULTIMA... </p>
-
-###### <p align="center">. . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).</p>
-
 <div align="center">
 
-![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) <!-- ![GitHub Release Date](https://img.shields.io/github/release-date/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue) --> ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
+# FF ULTIMA...
+
+###### . . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
+
+![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
 
 </div>
 
-<!--
-<div align='center'><a href='https://www.websitecounterfree.com'><img src='https://www.websitecounterfree.com/c.php?d=9&id=65926&s=1' border='0' alt='Free Website Counter'></a><br / ><small><a href='https://www.websitecounterfree.com' title="Free Website Counter">Free Website Counter</a></small></div>
--->
-
-![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802)
-
+<!-- ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802) -->
+![ffultima-editions-2.0](https://github.com/user-attachments/assets/dc1882e6-6543-41bd-aff7-ded2b96ffb97)
 
 ## Features
 
@@ -85,75 +81,92 @@
 7. Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
 
 ![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
-
-###### 🛈 The user.js only needs to be applied in two scenarios: 🛈
-- It's your first time installing the theme.
-- Or the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) says "user.js required" for new settings/versions of the theme.
-
-###### 🛈 How to [update the theme (wiki)](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new theme version 🛈
-
-###### 🛈 Video for [installing FF Ultima](https://www.youtube.com/watch?v=FDYYm-Tt39I&list=PLTVs0Y4lTV55tEwbkGwlooQinDbge3a6O&index=3) 2.0 (youtube) 🛈
 </details>
 
 <details><summary>The Hard Way</summary>
-
+ 
 ###### 🛈 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people. 🛈
-1. Open a terminal in your Profiles `chrome` folder.
-2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile-folder\chrome`.
-3. In the terminal, git clone the repo to install/update to the latest version:
-```
-# WINDOWS
+- This method automates every step of the "Easy Way" Installation.
+- Replace *`YourProfileFolder`* with the name of your Profile Folder.
+- Only use the *`# start firefox`* line, for the Firefox Browser that you are using.
+- This method assumes (in *`# REMOVE USER.JS`*) that your Firefox Browser can restart in 5 seconds.
 
-# 1. Navigate to your Firefox Profile Folder
-# 2. Git clone FF-Ultima into a `chrome` folder
-
-cd C:\Users\You\AppData\Roaming\Mozilla\Firefox\Profiles\YourProfileFolder
-git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
+###### LINUX (BASH)
 ```
-```
-# LINUX
+# DOWNLOAD FF ULTIMA -----------------------
 
 cd ~/.mozilla/firefox/YourProfileFolder
 git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
+cd chrome && cp "user.js" "../user.js"
+
+# RESTART FIREFOX --------------------------
+
+pkill -9 -f firefox && while pgrep -f firefox >/dev/null; do sleep 0.5; done
+pkill -9 -f librewolf && while pgrep -f librewolf >/dev/null; do sleep 0.5; done
+firefox &                    # start firefox
+firefox-developer-edition &  # start developer edition
+firefox-nightly &            # start nightly
+librewolf &                  # start librewolf
+
+# CLEANUP USER.JS --------------------------
+
+sleep 5 && cd ../ && rm user.js
 ```
-5. In your chrome folder you'll have a file named `user.js`.
-6. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
-7. Restart Firefox.
-8. **Wait** for Firefox to open, then delete the `user.js` file.
-9. Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
+###### WINDOWS (POWERSHELL NOT CMD)
+```
+# DOWNLOAD FF ULTIMA -----------------------
 
-![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
+Set-Location "$env:APPDATA\Mozilla\Firefox\Profiles\YourProfileFolder"
+git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
+Set-Location "chrome"; Copy-Item "user.js" "..\user.js"
 
-###### 🛈 The user.js only needs to be applied in two scenarios: 🛈
-- It's your first time installing the theme.
-- Or the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) says "user.js required" for new settings/versions of the theme.
+# RESTART FIREFOX --------------------------
 
-###### 🛈 How to [update the theme (wiki)](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new theme version 🛈
+Get-Process -Name firefox, firefox-developer-edition, firefox-nightly, librewolf -ErrorAction SilentlyContinue | ForEach-Object { $_.Kill() }
+while (Get-Process -Name firefox, firefox-developer-edition, firefox-nightly, librewolf -ErrorAction SilentlyContinue) { Start-Sleep -Milliseconds 500 }
+Start-Process "firefox.exe"                    # start firefox
+Start-Process "firefox-developer-edition.exe"  # start developer edition
+Start-Process "firefox-nightly.exe"            # start nightly
+Start-Process "librewolf.exe"                  # start librewolf
+
+# CLEANUP USER.JS --------------------------
+
+Start-Sleep -Seconds 5; Set-Location ".."; Remove-Item "user.js" -ErrorAction SilentlyContinue
+```
+###### MAC (just copy Linux because Mac is *basically Linux*)
+```
+  ,-.       _,---._ __  / \
+ /  )    .-'       `./ /   \
+(  (   ,'            `/    /|         
+ \  `-"             \'\   / |         whats in the box? oh..
+  `.              ,  \ \ /  |         
+   /`.          ,'-`----Y   |         it's linux.
+  (            ;        |   '
+  |  ,-.    ,-'         |  /
+  |  | (   |        hjw | /
+  )  |  \  `.___________|/
+  `--'   `--'
+```
 </details>
 
+###### ✅ What to do *after* you Install FF Ultima ✅
+<details><summary>Post Installation</summary>
 
-## Documentation
-
->[!WARNING]
-> **PLEASE,** If you have any issue related to the theme..
 >
-> Do not treat The [FirefoxCSS subreddit](https://www.reddit.com/r/FirefoxCSS/) as theme support.
->
-> You will get the best help here, by [submitting an "Issue"](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue).
+- Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
 
-[Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
-- FAQ
-- Why User.js?
-- All theme settings
-- How to create color schemes
-- How to install, uninstall, update
-- Autotab color configuration
-- Sidebery configurations
-- List of Color Schemes
-- Variable Spreadsheet
-- More
+![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
+- Visit [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) to learn more about what is possible:
+    - Frequently asked questions
+    - All theme settings (previews & explanations)
+    - How to install, [uninstall](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Uninstall-the-Theme), [update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme)
+    - Sidebery configuration (optional)
+    - Videos, documentation, and a whole lot more..
+</details>
 
 ## Enjoy
-
-![gif](https://github.com/user-attachments/assets/dc1882e6-6543-41bd-aff7-ded2b96ffb97)
+>[!WARNING]
+> **PLEASE,** If you have any issue related to the theme.. Do not treat The [FirefoxCSS subreddit](https://www.reddit.com/r/FirefoxCSS/) as theme support.
+>
+> You will get the best help here, by [submitting an "Issue"](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue).
 
