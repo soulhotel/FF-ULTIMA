@@ -6,17 +6,25 @@
 - ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
   
 ### <ins> Version Notes
-- This is a very small but impactful update. Mostly centered around *quality of life*, with some minor fixes.
-- As of Firefox 140: The extensions button (`e`,`🧩`) can now be removed from the Navbar.
-- User.js recommended (not required) for new settings.
+- Another small but impactful update. With some *quality of life* changes, optimizations & minor fixes.
 - Firefox 138+ required.
+- User.js not required.
 
 ### <ins> Change Log:
-- `fyi • ℹ️ • ` If you depend on Sidebery, please visit [the Sidebery Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Sidebery-Configuration)
-- `fix • 🔴 • ` Correcting panel shadow changes introduced in recent firefox update dad3532
-- `new • 🟢 • ` 
+- `fyi • ℹ️ • ` "The Hard Way" installation method now automates every Step-4-Install for Linux, Mac, Windows de7e58e b15b828
+- `fix • 🔴 • ` Optimization for Fullscreen scenarios
+- `fix • 🔴 • ` Context menu's `panel shadow` changes are fixed dad3532
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.4` to wrap all tabs for a group inside of a *dashed* style box 0fe9bc4
-- `qol • 🟡 • ` Setting `ultima.tabs.tabContainers.1`,2,3 have been revamped. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations 18d3473
-- in regards to xstyle.css, many preferences have been properly sectioned off via new preference name. and can be further sectioned off into sectioned files, existing or not.
+- `qol • 🟡 • ` New Tab Page Context Menu's hover color correction, weather widget scale on hover removed
+- `qol • 🟡 • ` All Tab related settings are now organized within [`theme-tab-styles.css`](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/theme-tab-styles.css) instead of `theme-xstyle.css`
+- `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
+
+### <ins> Support:
+
+> This section of the release page will only exist for this release.
+
+1 Year ago I rejected the idea of [Donations](#136). But now I'm at a point where I realize - Income plays a huge part in, the time you have *for the things you love*.
+
+I've gaining so much while maintaining Ultima. Like knowledge and an avenue for creativity as a Hobby. But I'm losing so much too. I'm losing time to maintain it. I'm losing the time I could use towards getting started on other projects (Shout out to [userChrome Companion](https://github.com/soulhotel/userChrome-Companion)!). I'm losing income in the real world & pretty sure we are all losing income in these current times.. For anyone that would like to further support the development of FF Ultima or support my efforts in creating/maintaining.. And ONLY if you are able to.. You can now [Sponsor me here](https://github.com/sponsors/soulhotel).
