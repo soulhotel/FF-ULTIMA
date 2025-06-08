@@ -88,7 +88,7 @@
 ###### 🛈 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people. 🛈
 - This method automates every step of the "Easy Way" Installation.
 - Replace *`YourProfileFolder`* with the name of your Profile Folder.
-- Only use the *`# start firefox`* line, for the Firefox Browser that you are using.
+- Only use the *`# restart firefox`* line, for the Firefox Browser that you are using.
 - This method assumes (in *`# REMOVE USER.JS`*) that your Firefox Browser can restart in 5 seconds.
 
 ###### LINUX (BASH)
@@ -103,10 +103,10 @@ cd chrome && cp "user.js" "../user.js"
 
 pkill -9 -f firefox && while pgrep -f firefox >/dev/null; do sleep 0.5; done
 pkill -9 -f librewolf && while pgrep -f librewolf >/dev/null; do sleep 0.5; done
-firefox &                    # start firefox
-firefox-developer-edition &  # start developer edition
-firefox-nightly &            # start nightly
-librewolf &                  # start librewolf
+firefox &                    # restart firefox
+firefox-developer-edition &  # restart developer edition
+firefox-nightly &            # restart nightly
+librewolf &                  # restart librewolf
 
 # CLEANUP USER.JS --------------------------
 
@@ -124,10 +124,10 @@ Set-Location "chrome"; Copy-Item "user.js" "..\user.js"
 
 Get-Process -Name firefox, firefox-developer-edition, firefox-nightly, librewolf -ErrorAction SilentlyContinue | ForEach-Object { $_.Kill() }
 while (Get-Process -Name firefox, firefox-developer-edition, firefox-nightly, librewolf -ErrorAction SilentlyContinue) { Start-Sleep -Milliseconds 500 }
-Start-Process "firefox.exe"                    # start firefox
-Start-Process "firefox-developer-edition.exe"  # start developer edition
-Start-Process "firefox-nightly.exe"            # start nightly
-Start-Process "librewolf.exe"                  # start librewolf
+Start-Process "firefox.exe"                    # restart firefox
+Start-Process "firefox-developer-edition.exe"  # restart developer edition
+Start-Process "firefox-nightly.exe"            # restart nightly
+Start-Process "librewolf.exe"                  # restart librewolf
 
 # CLEANUP USER.JS --------------------------
 
