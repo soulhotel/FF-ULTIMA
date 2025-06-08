@@ -89,7 +89,7 @@
 - This method automates every step of the "Easy Way" Installation.
 - Replace *`YourProfileFolder`* with the name of your Profile Folder.
 - Only use the *`# restart firefox`* line, for the Firefox Browser that you are using.
-- This method assumes (in *`# REMOVE USER.JS`*) that your Firefox Browser can restart in 5 seconds.
+- This method assumes (in *`# CLEANUP USER.JS`*) that your Firefox Browser can restart in 5 seconds.
 
 ###### LINUX (BASH)
 ```
