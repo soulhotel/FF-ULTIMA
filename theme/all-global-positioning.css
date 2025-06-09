@@ -616,7 +616,7 @@ box-shadow: none !important;}}
 .tabbrowser-tab:not([pinned], [fadein]) {
     max-width: 0.1px !important; /*dont touch*/
     min-width: 0.1px !important; /*dont touch*/
-    visibility: collapse !important; /*dont touch*/
+    /*visibility: collapse !important;*/ /*dont touch*/
 }
 
 /* custom splitter - resizeable bar */
