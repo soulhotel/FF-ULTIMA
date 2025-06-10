@@ -86,14 +86,14 @@
 <details><summary>The Hard Way</summary>
  
 ###### 🛈 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people. 🛈
-- This method automates every step of the "Easy Way" Installation.
-- Replace *`YourProfileFolder`* with the name of your Profile Folder.
-- Only use the *`# restart firefox`* line, for the Firefox Browser that you are using.
-- This method assumes (in *`# CLEANUP USER.JS`*) that your Firefox Browser can restart in 5 seconds.
 
-> 🛈 What that Code do? These codeblocks can be copy/pasted/entered in one go. It navigates to your Firefox Profile Folder... Downloads the theme into a chrome folder via Git... Then copies the user.js found inside to your Profile Folder... It then restarts Firefox and removes the user.js... It waits for running commands to finish before moving on to the next. Fully automating the Installation Process.
+###### 🛈 What that Code do? This method installs the Theme by running git_.sh from the themes [.github folder](https://github.com/soulhotel/FF-ULTIMA/tree/main/.github). It finds your Firefox Profile Folder... Downloads the theme via Git... Then copies the user.js from chrome to Profile Folder... It then restarts Firefox and removes the user.js... It waits for running commands to finish before moving on to the next. Fully automating the Installation Process.
 
-###### LINUX (BASH)
+###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/FF-ULTIMA/blob/main/.github/git_linux.sh)):
+```
+bash <(curl -s https://raw.githubusercontent.com/soulhotel/FF-ULTIMA/main/.github/git_linux.sh)
+```
+###### OR TYPE COMMANDS:
 ```
 # DOWNLOAD FF ULTIMA -----------------------
 
@@ -114,7 +114,13 @@ librewolf &                  # restart librewolf
 
 sleep 5 && cd ../ && rm user.js
 ```
-###### WINDOWS (POWERSHELL NOT CMD)
+
+
+###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/FF-ULTIMA/blob/main/.github/git_windows.ps1)):
+```
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/FF-ULTIMA/main/.github/git_windows.ps1')"
+```
+###### OR TYPE COMMANDS:
 ```
 # DOWNLOAD FF ULTIMA -----------------------
 
