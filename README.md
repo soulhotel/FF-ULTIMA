@@ -78,70 +78,32 @@
 4. In the chrome folder, youll see the `user.js`, move it <ins>out the chrome folder and into the Profile Folder<ins>.
 5. Restart Firefox.
 6. <ins>**Wait** for Firefox to open</ins>, then delete the `user.js` file.
-7. Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
-
-![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
 </details>
 
 <details><summary>The Hard Way</summary>
  
 ###### 🛈 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people. 🛈
 
-###### 🛈 What that Code do? This method installs the Theme by running git_.sh from the themes [.github folder](https://github.com/soulhotel/FF-ULTIMA/tree/main/.github). It finds your Firefox Profile Folder... Downloads the theme via Git... Then copies the user.js from chrome to Profile Folder... It then restarts Firefox and removes the user.js... It waits for running commands to finish before moving on to the next. Fully automating the Installation Process.
-
-###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/FF-ULTIMA/blob/main/.github/git_linux.sh)):
+###### YOU CAN JUST:
 ```
-bash <(curl -s https://raw.githubusercontent.com/soulhotel/FF-ULTIMA/main/.github/git_linux.sh)
-```
-###### OR TYPE COMMANDS:
-```
-# DOWNLOAD FF ULTIMA -----------------------
-
 cd ~/.mozilla/firefox/YourProfileFolder
 git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 cd chrome && cp "user.js" "../user.js"
 
-# RESTART FIREFOX --------------------------
-
-pkill -9 -f firefox && while pgrep -f firefox >/dev/null; do sleep 0.5; done
-pkill -9 -f librewolf && while pgrep -f librewolf >/dev/null; do sleep 0.5; done
-firefox &                    # restart firefox
-firefox-developer-edition &  # restart developer edition
-firefox-nightly &            # restart nightly
-librewolf &                  # restart librewolf
-
-# CLEANUP USER.JS --------------------------
-
-sleep 5 && cd ../ && rm user.js
+# but the following script can do it all for you, including restarting firefox and cleaning up user.js
 ```
 
+###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
+```
+bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.sh)
+```
 
-###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/FF-ULTIMA/blob/main/.github/git_windows.ps1)):
+###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
 powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/FF-ULTIMA/main/.github/git_windows.ps1')"
 ```
-###### OR TYPE COMMANDS:
-```
-# DOWNLOAD FF ULTIMA -----------------------
 
-Set-Location "$env:APPDATA\Mozilla\Firefox\Profiles\YourProfileFolder"
-git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
-Set-Location "chrome"; Copy-Item "user.js" "..\user.js"
-
-# RESTART FIREFOX --------------------------
-
-Get-Process -Name firefox, firefox-developer-edition, firefox-nightly, librewolf -ErrorAction SilentlyContinue | ForEach-Object { $_.Kill() }
-while (Get-Process -Name firefox, firefox-developer-edition, firefox-nightly, librewolf -ErrorAction SilentlyContinue) { Start-Sleep -Milliseconds 500 }
-Start-Process "firefox.exe"                    # restart firefox
-Start-Process "firefox-developer-edition.exe"  # restart developer edition
-Start-Process "firefox-nightly.exe"            # restart nightly
-Start-Process "librewolf.exe"                  # restart librewolf
-
-# CLEANUP USER.JS --------------------------
-
-Start-Sleep -Seconds 5; Set-Location ".."; Remove-Item "user.js" -ErrorAction SilentlyContinue
-```
-###### MAC (just copy Linux because Mac is *basically Linux*)
+###### MAC ([COPY LINUX](https://github.com/soulhotel/git-userChrome))
 ```
   ,-.       _,---._ __  / \
  /  )    .-'       `./ /   \
@@ -150,7 +112,7 @@ Start-Sleep -Seconds 5; Set-Location ".."; Remove-Item "user.js" -ErrorAction Si
   `.              ,  \ \ /  |         
    /`.          ,'-`----Y   |         it's linux.
   (            ;        |   '
-  |  ,-.    ,-'         |  /
+  |  ,-.    ,-'         |  /          because Mac is basically linux..
   |  | (   |        hjw | /
   )  |  \  `.___________|/
   `--'   `--'
