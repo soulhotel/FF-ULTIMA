@@ -102,12 +102,12 @@ sidebery expand on inactive windows
                         width: 600px !important; height: 40px !important;
                         @media -moz-pref("ultima.navbar.bookmarks.float.left") {
                             left: 67px !important; transform: translateX(0) !important;
-                            right: unset !important; width:600px !important;
+                            right: unset !important;
                             /* z index needs specified handling here */
                         }
                         @media -moz-pref("ultima.navbar.bookmarks.float.right") {
                             left: unset !important; transform: translateX(0) !important;
-                            right: 17px !important; width:600px !important;
+                            right: 17px !important;
                         }
                         @media -moz-pref("ultima.navbar.bookmarks.float.compact") {
                             height:30px !important;
