@@ -40,6 +40,18 @@ File Desc:         Alternative Styles for the URL Bar
   }
 }
 
+/* 6/11/2025 - 140.0b7 - new search mode switcher */
+@media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
+    @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+        #urlbar-searchmode-switcher {
+            margin-bottom:-2px !important;
+        }
+        #urlbar[open] #urlbar-searchmode-switcher {
+            background-color: transparent !important;
+        }
+    }
+}
+
 /* urlbar settings --------------------------------------------------- */
 
 @media -moz-pref("ultima.urlbar.transparent") {
