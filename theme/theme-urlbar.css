@@ -25,6 +25,7 @@ File Desc:         Alternative Styles for the URL Bar
 
 #urlbar[open] {
     box-shadow: var(--uc-box-shadow) !important;
+    --urlbarView-separator-color: transparent !important;
 }
 
 #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within {
@@ -47,7 +48,7 @@ File Desc:         Alternative Styles for the URL Bar
 @media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
     @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
         #urlbar-searchmode-switcher {
-            margin-bottom: 1px !important;
+            margin-top:1px !important;
         }
         #urlbar[open] #urlbar-searchmode-switcher {
             background-color: transparent !important;
@@ -118,6 +119,35 @@ File Desc:         Alternative Styles for the URL Bar
         .urlbarView-favicon, .urlbarView-type-icon {
             margin-left:-27px !important;
             transition: margin-left 1.6s ease-in-out !important;
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.float") {
+    #urlbar {
+        transition: transform 0.3s ease-in-out !important;
+        &[open] {
+            --urlbarView-separator-color: transparent !important;
+            padding-top:3px !important;
+            & #urlbar-background {
+                box-shadow: var(--uc-box-shadow) !important;
+            }
+        }
+        &[breakout-extend] {
+            transform: translateY(20vh) scale(1.3);
+        }
+        /*situational*/
+        &:hover:not([open]) {
+            transition: transform 0.3s ease-in-out 5s !important;
+            transform: translateY(20vh) scale(1.3) !important;
+        }
+    }
+    /*situational*/
+    :root:has(#urlbar-searchmode-switcher[open]) {
+        & #urlbar  {
+            padding-bottom:0px !important;
+            transition: transform 0.3s ease-in-out 5s !important;
+            transform: translateY(20vh) scale(1.3) !important;
         }
     }
 }
