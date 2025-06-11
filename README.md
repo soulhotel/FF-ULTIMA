@@ -90,7 +90,7 @@ cd ~/.mozilla/firefox/YourProfileFolder
 git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
 cd chrome && cp "user.js" "../user.js"
 
-# but the following script can do it all for you, including restarting firefox and cleaning up user.js
+# OR (preferable) USE THE CODE BELOW..
 ```
 
 ###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
