@@ -15,6 +15,7 @@
 - `fix • 🔴 • ` Optimization for Fullscreen scenarios
 - `fix • 🔴 • ` Context menu's `panel shadow` changes are fixed dad3532
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.4` to wrap all tabs for a group inside of a *dashed* style box 0fe9bc4
+- `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview)
 - `qol • 🟡 • ` New Tab Page Context Menu's hover color correction, weather widget scale on hover removed
 - `qol • 🟡 • ` All Tab related settings are now organized within [`theme-tab-styles.css`](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/theme-tab-styles.css) instead of `theme-xstyle.css`
 - `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
