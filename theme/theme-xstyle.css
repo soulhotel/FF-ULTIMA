@@ -116,6 +116,7 @@ sidebery expand on inactive windows
                             width:200px !important;
                         }
                     }
+                    /* situational adjustments: nav bar autohide, tabs on top layout */
                     /* append a ::before to the navbar that tracks X location of the floating bookmark bar here */
                 }
 
