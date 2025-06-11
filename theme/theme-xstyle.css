@@ -28,7 +28,8 @@ sidebery expand on inactive windows
     :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
     :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
     :root:has(#downloadsPanel[panelopen="true"]) #downloads-button,
-    #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"] {
+    #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"],
+    #nav-bar:not(:focus-within):not(:hover) #urlbar-searchmode-switcher[open] {
         opacity: 1 !important;
     }
 }
