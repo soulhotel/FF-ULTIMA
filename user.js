@@ -50,6 +50,7 @@ user_pref("ultima.urlbar.suggestions", true);
 user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hidebuttons", false);
 user_pref("ultima.urlbar.transparent", false);
+user_pref("ultima.urlbar.float", false);
 
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);
