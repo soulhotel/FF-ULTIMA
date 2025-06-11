@@ -100,7 +100,7 @@ bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/g
 
 ###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/FF-ULTIMA/main/.github/git_windows.ps1')"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.ps1')"
 ```
 
 ###### MAC ([COPY LINUX](https://github.com/soulhotel/git-userChrome))
