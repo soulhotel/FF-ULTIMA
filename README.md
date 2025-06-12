@@ -81,18 +81,10 @@
 </details>
 
 <details><summary>The Hard Way</summary>
- 
-###### 🛈 This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people. 🛈
 
-###### YOU CAN JUST:
-```
-cd ~/.mozilla/firefox/YourProfileFolder
-git clone https://github.com/soulhotel/FF-ULTIMA.git chrome
-cd chrome && cp "user.js" "../user.js"
-
-# OR (preferable) USE THE CODE BELOW..
-```
-
+>
+For this method, all you need is Git and a Terminal. It's harder for the less technical of people, but truth be told, this is the real "Easy Way".. I made a tool called [gituserChrome](https://github.com/soulhotel/git-userChrome), it fully automates the Installation Process of any userChrome theme, handling user.js, restarts, backing up existing chrome, etc.. By pasting one command (with the source of the theme attached) in terminal, you can fully install and update FF Ultima.
+- To Install FF Ultima - copy/paste the command for your operating system.
 ###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
 bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.sh)
@@ -118,6 +110,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
   `--'   `--'
 ```
 </details>
+
+
 
 ###### ✅ What to do *after* you Install FF Ultima ✅
 <details><summary>Post Installation</summary>
