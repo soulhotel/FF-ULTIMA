@@ -16,10 +16,13 @@
 - `fix • 🔴 • ` Context menu's `panel shadow` changes are fixed dad3532
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.4` to wrap all tabs for a group inside of a *dashed* style box 0fe9bc4
 - `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1
+- `new • 🟢 • ` Setting `ultima.urlbar.float` url bar transitions into a floating center when in use 4cb9bb8
 - `qol • 🟡 • ` New Tab Page Context Menu's hover color correction, weather widget scale on hover removed
 - `qol • 🟡 • ` All Tab related settings are now organized within [`theme-tab-styles.css`](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/theme-tab-styles.css) instead of `theme-xstyle.css`
 - `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
 - `qol • 🟡 • ` New Search Mode Switcher adjustments for theme e5827b4 08125a8
+
+https://github.com/user-attachments/assets/f0c7744a-f527-4025-b300-191922babacb
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
 
