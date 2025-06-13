@@ -7,8 +7,8 @@
   
 ### <ins> Version Notes
 - Another small but impactful update. With some *quality of life* changes, & version fixes.
+- User.js (recommended) not required.
 - Firefox 138+ required.
-- User.js not required.
 
 ### <ins> Change Log:
 - `fyi • ℹ️ • ` "The Hard Way" installation method now automates every Step-4-Install for Linux, Mac, Windows de7e58e b15b828
