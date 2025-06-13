@@ -33,11 +33,11 @@ https://github.com/user-attachments/assets/f0c7744a-f527-4025-b300-191922babacb
 https://github.com/user-attachments/assets/3aeadb12-dd2a-403b-a31f-0cb5784489ba
 ###### Full 4k Video uncropped on [Youtube](https://www.youtube.com/watch?v=Mz7gmYP2_1A&list=PLTVs0Y4lTV56Kapji1pVjMsMqE6PAHwzl&index=1)
 
-### <ins> Support:
+## 💝 Support:
 
-> This `Support` section will dissappear after this release 🚨
+> This `Support` section will dissappear after this release
 
-1 Year ago I rejected the idea of [Donations](#136). But now I'm at a point where I realize - Income plays a huge part in, the time you have *for the things you love*.
+So, 1 year ago, I rejected the idea of [Donations](#136). But now I'm at a point where I realize - Income plays a huge part in, the time you have *for the things you love*.
 
 I've gained a lot while maintaining Ultima, like knowledge and an avenue for creativity as a hobby. But I'm losing a lot too. I'm losing time to maintain it. I'm losing the time I could use towards getting started on other projects (Shout out to [userChrome Companion](https://github.com/soulhotel/userChrome-Companion)). I'm losing income in the real world & pretty sure we are all losing income in these current 2025 times.. For anyone that would like to further support the development of FF Ultima or support my efforts in creating/maintaining.. And <ins>ONLY</ins> if you are able to.. You can now [`💝 Sponsor Me`](https://github.com/sponsors/soulhotel).
 
