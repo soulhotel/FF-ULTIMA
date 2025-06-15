@@ -32,3 +32,119 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 
 --panel-shadow: none !important;
 /*theme-context-menu*/
+
+
+
+@media -moz-pref("sidebar.verticalTabs") {
+@media -moz-pref("ultima.tabs.vertical.hide") {
+
+    @media -moz-pref("ultima.tabs.vertical.hide.private") {
+        :root[privatebrowsingmode="temporary"] {
+            & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
+                  & #browser { padding-left: 0px !important; }
+                  & #sidebar-box[checked="true"]:not([sidebar-positionend]) { left:3px !important; }
+            }
+            & :has(#sidebar-box[checked="true"][sidebar-positionend]) {
+                & #browser { padding-right: 0px !important; }
+                & #sidebar-box[checked="true"][sidebar-positionend] { right:3px !important; }
+            }
+        }    
+
+        :root[sidebar-expand-on-hover]{
+
+            & #sidebar-main {
+                position: absolute !important; z-index:-1 !important;
+                z-index:1 !important; opacity: 0 !important;
+
+            }
+            & :has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
+                & #browser {
+                    padding-left: 0px;
+                }  
+            }
+            & :has(#sidebar-box[checked="true"][sidebar-positionend]) {
+                & #browser {
+                    padding-right: 0px;
+                }
+            }       
+            & :has(#sidebar-main) {
+                & #sidebar-launcher-splitter {
+                    display:none !important;
+                }
+            }
+            & #tabbrowser-tabbox {
+                &:not([sidebar-positionend]) {
+                    &[sidebar-launcher-expanded][sidebar-launcher-hovered]:not([sidebar-panel-open]), &[sidebar-ongoing-animations]:not([sidebar-launcher-expanded], [sidebar-panel-open]) {
+                        margin-inline-start: 0 !important;
+                    }
+                }
+            }
+
+            @media -moz-pref("ultima.tabs.vertical.hide.in.screencorner") {
+                & #sidebar-main {
+                    transition: left ease 0.5s;
+                    z-index:1000 !important;
+                    box-shadow: var(--uc-box-shadow) !important;
+                    border-radius:10px !important;
+                    opacity: 1 !important;
+                }
+                & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
+                    & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
+                        left:-45px !important;
+                        top:65vh !important;
+                        height:25vh !important;
+                        filter: brightness(60%);
+                    }
+                }
+                & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
+                    #sidebar-main[sidebar-positionend=""]:not(:hover) {
+                        right:-45px !important;
+                        top:65vh !important;
+                        height:25vh !important;
+                        filter: brightness(60%);
+                    }
+                }
+            }
+            @media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
+                & #sidebar-main {
+                    transition: left ease 0.5s;
+                    z-index:1000 !important;
+                    box-shadow: var(--uc-box-shadow) !important;
+                    border-radius:10px !important;
+                    opacity: 1 !important;
+                }
+                & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
+                    & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
+                        left:-45px !important;
+                        top:5vh !important;
+                        height:85vh !important;
+                        filter: brightness(90%);
+                    }
+                }
+                & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
+                    #sidebar-main[sidebar-positionend=""]:not(:hover) {
+                        right:-45px !important;
+                        top:5vh !important;
+                        height:85vh !important;
+                        filter: brightness(90%);
+                    }
+                }
+            }
+            /* sidebar triggered by screen edge */
+            --uc-sb-margins: 2px 0px 5px 5px;
+            --uc-sb-margins-right: 2px 5px 5px 0px; 
+            @media not -moz-pref("ultima.spacing.compact") {
+                #sidebar-box::before {
+                    content: "";background-color:none;position: absolute;
+                    z-index: 998;top: 0; bottom: 0;left: 0px;width: 3px;height: auto;
+                }
+                #sidebar-box::after {
+                    content: "";background-color:none;position: absolute;
+                    z-index: 998;top: 0; bottom: 0;right: 0px;width: 3px;height: auto;
+                }
+            }   
+        }    
+    }
+    
+    
+}}
