@@ -82,9 +82,14 @@
 
 <details><summary>The Hard Way</summary>
 
->
-For this method, all you need is Git and a Terminal. It's harder for the less technical of people, but truth be told, this is the real "Easy Way".. I made a tool called [gituserChrome](https://github.com/soulhotel/git-userChrome), it fully automates the Installation Process of any userChrome theme, handling user.js, restarts, backing up existing chrome, etc.. By pasting one command (with the source of the theme attached) in terminal, you can fully install and update FF Ultima.
-- To Install FF Ultima - copy/paste the command for your operating system.
+###### 🛈 For this method, all you need is Git and a Terminal. It's harder for the less technical of people 🛈
+
+- This automated tool requires no download. It runs by fetching [gituserChrome](https://github.com/soulhotel/git-userChrome)
+- Locates all profile folders and allows you to specify which one to install FF Ultima to
+- It renames any present chrome/ folder to /chrome.old, then uses git to install the theme to a new chrome/ folder
+- It also handles moving user.js, specifying which firefox to restart, and user.js removal
+- To Install FF Ultima - copy/paste the command for your operating system
+
 ###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
 bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.sh)
@@ -109,6 +114,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
   )  |  \  `.___________|/
   `--'   `--'
 ```
+>
+
+> More on [gituserChrome](https://github.com/soulhotel/git-userChrome): When inspecting the source, the tool is pretty simple, but suprisingly it isn't the standard when sharing userChrome themes.. It's set up so that it can download any userChrome theme (not just FF Ultima) with just 1 command (example: `curl gituserChrome randomTheme.git`). And factors in scenarios where you want to target a specific Profile Folder, specific Firefox install, handling clean firefox restarts across any OS and user.js cases and clean ups. I'd love to see it used by more theme creators and obviously since it's just a simple script (1 for windows, 1 for linux/mac) it can be used locally & can be changed by anyone that wants to expand on it.
+
 </details>
 
 
