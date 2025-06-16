@@ -86,7 +86,7 @@
 
 - This automated tool requires no download. It runs by fetching [gituserChrome](https://github.com/soulhotel/git-userChrome)
 - Locates all profile folders and allows you to specify which one to install FF Ultima to
-- It renames any present chrome/ folder to /chrome.old, then uses git to install the theme to a new chrome/ folder
+- It renames any present chrome/ folder to chrome.old/, then uses git to install the theme to a new chrome/ folder
 - It also handles moving user.js, specifying which firefox to restart, and user.js removal
 - To Install FF Ultima - copy/paste the command for your operating system
 
