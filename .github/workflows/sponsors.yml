@@ -22,12 +22,12 @@ jobs:
           # This should point to your project's readme, or any other type of markdown file you want to add sponsorship information to.
           file: 'README.md'
 
-      # Commit and push changes back to the repository
-      - name: Commit and Push
+      # Deploy the changes back to the main branch of the repository
+      - name: Commit and Push to GitHub 🚀
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: update sponsors list [auto]"
-          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }} HEAD:main
+          git commit -m "chore: update sponsors list [auto]" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git HEAD:main
 
