@@ -99,7 +99,7 @@ input, #prefs {
 
     
 body::after {
-    position: fixed;
+    position: absolute;
     display: none;
     z-index: 100;
     top: 0.8%;
@@ -142,20 +142,6 @@ body::after {
         }
     }
 }
-@media not -moz-pref("user.theme.adaptive") { @media not -moz-pref("user.theme.dark.a") { @media not -moz-pref("user.theme.dark.catppuccin") { @media not -moz-pref("user.theme.dark.catppuccin-frappe") { 
-@media not -moz-pref("user.theme.dark.catppuccin-mocha") { @media not -moz-pref("user.theme.dark.gruvbox") { @media not -moz-pref("user.theme.dark.midnight") {
-        body::after {
-            content: "\ No Color Scheme is selected for Dark Mode! \A \A  This can cause issues! \A ";
-            display: block;
-        }
-}}}}}}}
-
-@media not -moz-pref("user.theme.light.a") { @media not -moz-pref("user.theme.light.gruvbox") {
-        body::after {
-            content: "\ No Color Scheme is selected for Light Mode! \A \A  This can cause issues! \A ";
-            display: block;
-        }
-}}
 @media -moz-pref("ultima.spacing.relaxed") {
     @media -moz-pref("ultima.spacing.compact") {
         body::after {
