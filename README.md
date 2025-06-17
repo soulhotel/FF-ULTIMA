@@ -143,10 +143,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 
 ## Enjoy
 
+*And a special Thank You, for sponsoring this project*
+
 <!-- sponsors --><a href="https://github.com/s0flY" target="_blank" rel="noopener noreferrer" style="display:inline-block; text-align:center; margin: 0 10px;"> <img src="https://github.com/s0flY.png" width="80" alt="s0flY" /><br/> <span>@s0flY</span> </a><!-- sponsors -->
 
->[!WARNING]
-> **PLEASE,** If you have any issue related to the theme.. Do not treat The [FirefoxCSS subreddit](https://www.reddit.com/r/FirefoxCSS/) as theme support.
->
-> You will get the best help here, by [submitting an "Issue"](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue).
 
