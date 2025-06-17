@@ -22,12 +22,12 @@ jobs:
           # This should point to your project's readme, or any other type of markdown file you want to add sponsorship information to.
           file: 'README.md'
 
-      # Deploy the changes back to the main branch of the repository
-      - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          # Typically this should be the name of the base branch, in many cases this is 'main'.
-          branch: main
+      # Commit and push changes back to the repository
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update sponsors list [auto]"
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }} HEAD:main
 
-          # As we're deploying changes to our markdown files, this needs to be . to push the root directory back to the repository.
-          folder: '.'
