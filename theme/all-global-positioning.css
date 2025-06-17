@@ -616,9 +616,9 @@ box-shadow: none !important;}}
 /* update scrollbox */
 /*
 .tabbrowser-tab:not([pinned], [fadein]) {
-    max-width: 0.1px !important; /*dont touch*/
-    min-width: 0.1px !important; /*dont touch*/
-    visibility: collapse !important; /*dont touch*/
+    max-width: 0.1px !important;
+    min-width: 0.1px !important;
+    visibility: collapse !important;
 }
 */
 
