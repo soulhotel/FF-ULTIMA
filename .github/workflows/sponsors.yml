@@ -23,7 +23,12 @@ jobs:
 
           # This should point to your project's readme, or any other type of markdown file you want to add sponsorship information to.
           file: 'README.md'
-
+          
+          # Template
+          template: '<a href="https://github.com/{{{ login }}}" target="_blank" rel="noopener noreferrer" style="display:inline-block; text-align:center; margin: 0 10px;">
+          <img src="https://github.com/{{{ login }}}.png" width="80" alt="{{{ login }}}" /><br/>
+          <span>@{{{ login }}}</span>
+          </a>'
       # Deploy the changes back to the main branch of the repository
       - name: Commit and Push to GitHub 🚀
         run: |
