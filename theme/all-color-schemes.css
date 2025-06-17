@@ -9,7 +9,7 @@ Use the template below to enter your theme into the list:
 */
 
 @import url('all-global-theme-lwtheme.css');
-@import url('all-global-theme-adaptive.css') -moz-pref("user.theme.adaptive");
+@import url('all-global-theme-adaptive.css');
 @import url('all-global-theme-fullmoon.css') -moz-pref("user.theme.dark.a");
 @import url('all-global-theme-dusky.css') -moz-pref("user.theme.light.a");
 @import url('all-global-theme-catppuccin.css') -moz-pref("user.theme.dark.catppuccin");
