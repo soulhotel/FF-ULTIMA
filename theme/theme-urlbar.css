@@ -10,13 +10,16 @@ File Desc:         Alternative Styles for the URL Bar
 .search-one-offs button {
     cursor: pointer !important;
     &:hover{
-        transform:scale(1.1);
+        transform: scale(1.1);
     }
 }
 
 #identity-box,#tracking-protection-icon-container, #page-action-buttons {
-    margin-top:1px !important;
-    margin-bottom:-1px !important;
+    margin-top: 0px !important;
+    margin-bottom: -1px !important;
+    cursor: pointer !important;
+}
+#identity-icon-box * {
     cursor: pointer !important;
 }
 :root {
@@ -48,7 +51,9 @@ File Desc:         Alternative Styles for the URL Bar
 @media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
     @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
         #urlbar-searchmode-switcher {
-            margin-top:1px !important;
+            margin-top: 0px !important;
+            margin-bottom: -1px !important;
+            cursor: pointer !important;
         }
         #urlbar[open] #urlbar-searchmode-switcher {
             background-color: transparent !important;
