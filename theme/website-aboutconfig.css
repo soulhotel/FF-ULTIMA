@@ -156,18 +156,34 @@ body::after {
             display: block;
         }
 }}
-@media -moz-pref("ultima.xstyle.tabgroups.with.colormix.ii") {
-    @media -moz-pref("ultima.xstyle.tabgroups.with.colormix") {
-        body::after {
-            content: "\ Only use one tab group color mix! \A \A  they don't blend well together! \A ";
-            display: block;
-        }
-    }
-}
 @media -moz-pref("ultima.spacing.relaxed") {
     @media -moz-pref("ultima.spacing.compact") {
         body::after {
             content: "\ Only use one of these settings! \A \A  ultima.spacing.compact \A ultima.spacing.relaxed (NOTE: relaxed spacing is WIP design) \A ";
+            display: block;
+        }
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.left") {
+    @media -moz-pref("ultima.navbar.bookmarks.float") {
+        body::after {
+            content: "\ FYI \A \A  ultima.navbar.bookmarks.float is a WIP \A and ultima.navbar.bookmarks.float.left is not worth using right now \A ";
+            display: block;
+        }
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.autohide") {
+    @media -moz-pref("ultima.navbar.bookmarks.float") {
+        body::after {
+            content: "\ FYI \A \A  ultima.navbar.bookmarks.float is a WIP \A and ultima.navbar.bookmarks.float.autohide is not worth using right now \A ";
+            display: block;
+        }
+    }
+}
+@media -moz-pref("ultima.tabs.vertical.hide.private") {
+    @media not -moz-pref("ultima.tabs.vertical.hide") {
+        body::after {
+            content: "\ You need both of these settings! \A \A  ultima.tabs.vertical.hide \A ultima.tabs.vertical.hide.private \A ";
             display: block;
         }
     }
