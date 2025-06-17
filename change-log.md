@@ -25,7 +25,7 @@
 - `qol • 🟡 • ` New Search Mode Switcher adjustments for theme e5827b4 08125a8
 - `qol • 🟡 • ` Setting `ultima.tabs.vertical.hide.private` can be used to enable hide behavior when in Private windows #309
 - `qol • 🟡 • ` [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) improvements. It no longer needs `user.theme.adaptive` 498cf06
-- `qol • 🟡 • ` Also, when no color scheme is selected, Firefox will default to its default appearance (with minor theme enhancements)
+- `qol • 🟡 • ` When no color scheme is selected, Firefox will default to its default appearance (with minor theme enhancements)
 - `wip • ℹ️ • ` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release.
 
 > New Tab Page Corrections (light mode as well)
@@ -48,9 +48,6 @@ https://github.com/user-attachments/assets/3aeadb12-dd2a-403b-a31f-0cb5784489ba
 
 So, 1 year ago, I rejected the idea of [Donations](#136). But now I'm at a point where I realize - Income plays a huge part in, the time you have *for the things you love*.
 
-I've gained a lot while maintaining Ultima, like knowledge and an avenue for creativity as a hobby. But I'm losing a lot too. I'm losing time to maintain it. I'm losing the time I could use towards getting started on other projects (Shout out to [userChrome Companion](https://github.com/soulhotel/userChrome-Companion)). I'm losing income in the real world & pretty sure we are all losing income in these current 2025 times.. For anyone that would like to further support the development of FF Ultima or support my efforts in creating/maintaining.. And <ins>ONLY</ins> if you are able to.. You can now:
-
-[![💖 Sponsor Me](https://img.shields.io/badge/💖%20Sponsor%20Me-f19ef7?style=for-the-badge&labelColor=f19ef7&color=f19ef7)](https://github.com/sponsors/soulhotel)
-
+I've gained a lot while maintaining Ultima, like knowledge and an avenue for creativity as a hobby. But I'm losing a lot too. I'm losing time to maintain it. I'm losing the time I could use towards getting started on other projects (Shout out to [userChrome Companion](https://github.com/soulhotel/userChrome-Companion)). I'm losing income in the real world & pretty sure we are all losing income in these current 2025 times.. For anyone that would like to further support the development of FF Ultima or support my efforts in creating/maintaining.. And <ins>ONLY</ins> if you are able to.. You can now
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
