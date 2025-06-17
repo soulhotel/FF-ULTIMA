@@ -1,4 +1,6 @@
 name: Sponsors Appreciation in README
+permissions:
+  contents: write
 on:
   workflow_dispatch:
   schedule:
