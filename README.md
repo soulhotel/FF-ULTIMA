@@ -4,12 +4,17 @@
 
 ###### . . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
 
-![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)  ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)  ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
-
-</div>
+![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue)
+![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) 
+![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
+[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=for-the-badge&label=Sponsors%20💖&color=f19ef7)](https://github.com/sponsors/soulhotel)
 
 <!-- ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802) -->
 ![ffultima-editions-2.0](https://github.com/user-attachments/assets/dc1882e6-6543-41bd-aff7-ded2b96ffb97)
+
+</div>
+
 
 ## Features
 
@@ -121,7 +126,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 </details>
 
 
-
 ###### ✅ What to do *after* you Install FF Ultima ✅
 <details><summary>Post Installation</summary>
 
@@ -138,6 +142,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 </details>
 
 ## Enjoy
+
+<!-- sponsors -->
+<!-- sponsors -->
+
 >[!WARNING]
 > **PLEASE,** If you have any issue related to the theme.. Do not treat The [FirefoxCSS subreddit](https://www.reddit.com/r/FirefoxCSS/) as theme support.
 >
