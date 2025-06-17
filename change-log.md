@@ -12,20 +12,26 @@
 - Firefox 138+ required.
 
 ### <ins> Change Log:
-- `fyi • ℹ️ • ` "The Hard Way" installation method now automates every Step-4-Install for Linux, Mac, Windows de7e58e b15b828
-- `fix • 🔴 • ` Optimization for Fullscreen scenarios
-- `fix • 🔴 • ` Context menu's `panel shadow` changes are fixed dad3532
+- `fyi • ℹ️ • ` "The Hard Way" installation method now [automates](https://github.com/soulhotel/git-userChrome) installation for Linux, Mac, Windows de7e58e b15b828
+- `fix • 🔴 • ` Corrections for Fullscreen scenarios
+- `fix • 🔴 • ` Context menu's `panel shadow` changes are not theme related (but fixed) dad3532
 - `new • 🟢 • ` Setting `ultima.tabs.tabgroups.4` to wrap all tabs for a group inside of a *dashed* style box 0fe9bc4
-- `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1
+<!-- - `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1 -->
 - `new • 🟢 • ` Setting `ultima.urlbar.float` url bar transitions into a floating center when in use 4cb9bb8
-- `qol • 🟡 • ` New Tab Page Context Menu's hover color correction, weather widget scale on hover removed
+- `qol • 🟡 • ` New Tab Page • hover color correction, weather widget scale on hover removed
+- `qol • 🟡 • ` Setting `ultima.tabs.pinnedtabs.style.1` enabled by default to revert the new limited visibility (user.js)
 - `qol • 🟡 • ` All Tab related settings are now organized within [`theme-tab-styles.css`](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/theme-tab-styles.css) instead of `theme-xstyle.css`
 - `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
 - `qol • 🟡 • ` New Search Mode Switcher adjustments for theme e5827b4 08125a8
 - `qol • 🟡 • ` Setting `ultima.tabs.vertical.hide.private` can be used to enable hide behavior when in Private windows #309
-- `qol • 🟡 • ` Adaptive Tab Color integration has slight improvements. You no longer need to toggle `user.theme.adaptive`, just disable any current color scheme and you are good to go.
-- `qol • 🟡 • ` When no color scheme is selected, Firefox will default to default appearance with only some FF Ultima adjustments (spacing, shadows, etc)
-- `wip • ℹ️ • ` The current color scheme application logic is a bit bloated, It's about time I rework it to be more *simple*.
+- `qol • 🟡 • ` [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) improvements. It no longer needs `user.theme.adaptive` 498cf06
+- `qol • 🟡 • ` Also, when no color scheme is selected, Firefox will default to its default appearance (with minor theme enhancements)
+- `wip • ℹ️ • ` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release.
+
+> New Tab Page Corrections (light mode as well)
+
+![Screenshot_20250617_143551](https://github.com/user-attachments/assets/f145fbab-e716-4a43-8be2-26e3cc02511b)
+![Vid_20250617_171436](https://github.com/user-attachments/assets/f680d1e5-2f0b-4b80-81ca-b621aed23b5b)
 
 > New Floating URL Bar Setting
 
