@@ -9,22 +9,29 @@ File Desc:         Theming the status panel
 #statuspanel-label {border-radius: 7px !important;}
 
 #statuspanel {
-&:not([hidden]) {
-    max-width: calc(100% - 5px);
-    position: absolute;
-    bottom: 1vh !important;
-    left: 1vw !important;
-    border-radius: 7px !important;
-    padding-top: 2em;
-    pointer-events: none;  
-}
+    &:not([hidden]) {
+        max-width: calc(100% - 1vw);
+        position: absolute;
+        bottom: 1vh !important;
+        left: 1vw !important;
+        border-radius: 7px !important;
+        padding-block: 2px !important;
+        pointer-events: none;
+    }
+    & #statuspanel-label {
+        margin-block:3px !important;
+        border:none !important;
+        background-color: var(--uc-ultima-window) !important;
+        color: var(--uc-text) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
 }
 
 #main-window:not([lwtheme="true"]) #statuspanel-label {
   @media (not (prefers-contrast)) and (not (-moz-platform: linux)) {
     & {
       background-color: var(--uc-background-layered) !important;
-      border-color: rgba(15,15,15,0.5);
+      border-color: rgba(15,15,15,0);
     }
   }
 }
