@@ -1,10 +1,3 @@
-/*///////////////////////////////////////////////////////////////////////////////////////\
-
-FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         An Adaptive Theme with only minor modification to default Firefox Appearance & Global Color Scheme Fallback
-
-\////////////////////////////////////////////////////////////////////////////////////////*/
-
 @media not -moz-pref("user.theme.dark.a") {
 @media not -moz-pref("user.theme.light.a") {
 @media not -moz-pref("user.theme.dark.catppuccin") {
@@ -20,6 +13,7 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
 :root, body, * {
     --uc-ultima-window: var(--toolbar-bgcolor);
     --uc-text: var(--toolbox-non-lwt-textcolor);
+
     --uc-transparent: rgba(0,0,0,0);
     --uc-button-selected: var(--toolbarbutton-hover-background);
     --uc-tab-selected-bg: var(--toolbarbutton-hover-background);
@@ -39,21 +33,26 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
     --urlbar-icon-border-radius: var(--uc-all-border-radius);
     --button-border-radius: 10px;
     --uc-button-border-radius: 10px;
-    --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
-    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.8);
+    --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6);
+    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0.6);
     --inactive-titlebar-opacity: 1 !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
     /*vertical tab toolbar buttons v*/
 }
- 
 #main-window:not([lwtheme]) {      
     --toolbar-bgcolor: ActiveCaption !important;
     --toolbox-bgcolor-inactive: ActiveCaption !important;
     --toolbox-textcolor-inactive: ActiveCaptionText !important;    
 }
-    
-/* Main window adjustments ----------------------------------------*/
-    
+#main-window[lwtheme] {      
+    --uc-accent-i: var(--lwt-accent-color);
+    --uc-accent-ii: var(--lwt-accent-color);
+    --uc-accent-iii: var(--lwt-accent-color);
+    --uc-accent-iv: var(--lwt-accent-color);
+    --uc-accent-v: var(--lwt-accent-color);
+}    
+
+/* Main window adjustments ----------------------------------------*/  
 #main-window:not([lwtheme]) {  
     /* keep consistency with the navigation assets (including the tabs container) */
     & #navigator-toolbox {
@@ -64,8 +63,7 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
     }    
 }
 
-/* Browser Content adjustments ------------------------------------*/
-    
+/* Browser Content adjustments ------------------------------------*/    
 #main-window:not([lwtheme]) {  
     /* content window */
     & #appcontent, & #browser, & #tabbrowser-tabbox, 
@@ -75,7 +73,6 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
 }
 
 /* Sidebars -------------------------------------------------------*/
-
 #main-window:not([lwtheme]) {  
     #sidebar-main {
         background:var(--uc-ultima-window) !important;
@@ -83,10 +80,10 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
 }    
 
 /* Tabs -----------------------------------------------------------*/
-    
 #main-window:not([lwtheme]) {  
     & .tab-background[selected] {
         box-shadow: var(--uc-box-shadow) !important;
+        background: var(--uc-tab-selected-bg) !important;
     }
     & #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
         box-shadow: var(--uc-box-shadow) !important;
@@ -107,7 +104,6 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
 }
 
 /* URL Bar --------------------------------------------------------*/
-
 #main-window:not([lwtheme]) {  
     /* URL bar */
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
@@ -133,7 +129,6 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
 }
 
 /* Buttons --------------------------------------------------------*/
-
 #main-window:not([lwtheme]) {  
     & .titlebar-button {
       border-radius: var(--uc-button-border-radius);
@@ -146,7 +141,6 @@ File Desc:         An Adaptive Theme with only minor modification to default Fir
 }
     
 /* Custom Icons -----------------------------------------------------------------*/
-
 @media -moz-pref("ultima.theme.icons") {
     #forward-button image{
       list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
