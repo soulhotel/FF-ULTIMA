@@ -39,6 +39,13 @@
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
     /*vertical tab toolbar buttons v*/
 }
+@media (prefers-color-scheme: light) { 
+:root, body, * {
+    --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(45,45,45,0.3);
+    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(35,35,35,0.4);
+}
+}
+
 #main-window:not([lwtheme]) {      
     --toolbar-bgcolor: ActiveCaption !important;
     --toolbox-bgcolor-inactive: ActiveCaption !important;
