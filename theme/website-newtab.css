@@ -245,7 +245,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 /* widgets --------------------------------------------------------------------- */ 
 
 .icon.icon-settings {opacity: 85% !important; color:var(--mod-color) !important}
-.personalize-button { padding: 8px !important; border-radius:100% !important;}
+.personalize-button { /*! padding: 8px !important; */ border-radius:100% !important;}
 .personalize-button:hover {
     background-color: transparent !important;
     transform: scale(1.5);
