@@ -23,6 +23,8 @@
 - `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
 - `qol • 🟡 • ` New Search Mode Switcher adjustments for theme e5827b4 08125a8
 - `qol • 🟡 • ` Setting `ultima.tabs.vertical.hide.private` can be used to enable hide behavior when in Private windows #309
+- `qol • 🟡 • ` Adaptive Tab Color integration has slight improvements. You no longer need to toggle `user.theme.adaptive`, just disable any current color scheme and you are good to go.
+- `qol • 🟡 • ` When no color scheme is selected, Firefox will default to default appearance with only some FF Ultima adjustments (spacing, shadows, etc)
 - `wip • ℹ️ • ` The current color scheme application logic is a bit bloated, It's about time I rework it to be more *simple*.
 
 > New Floating URL Bar Setting
