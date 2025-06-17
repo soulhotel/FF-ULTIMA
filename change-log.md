@@ -22,6 +22,7 @@
 - `qol • 🟡 • ` All Tab related settings are now organized within [`theme-tab-styles.css`](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/theme-tab-styles.css) instead of `theme-xstyle.css`
 - `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
 - `qol • 🟡 • ` New Search Mode Switcher adjustments for theme e5827b4 08125a8
+- `qol • 🟡 • ` Setting `ultima.tabs.vertical.hide.private` can be used to enable hide behavior when in Private windows #309
 - `wip • ℹ️ • ` The current color scheme application logic is a bit bloated, It's about time I rework it to be more *simple*.
 
 > New Floating URL Bar Setting
