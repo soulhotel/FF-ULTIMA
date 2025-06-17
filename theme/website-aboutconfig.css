@@ -99,7 +99,7 @@ input, #prefs {
 
     
 body::after {
-    position: absolute;
+    position: fixed;
     display: none;
     z-index: 100;
     top: 0.8%;
