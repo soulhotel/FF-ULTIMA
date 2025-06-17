@@ -13,7 +13,6 @@
 :root, body, * {
     --uc-ultima-window: var(--toolbar-bgcolor);
     --uc-text: var(--toolbox-non-lwt-textcolor);
-
     --uc-transparent: rgba(0,0,0,0);
     --uc-button-selected: var(--toolbarbutton-hover-background);
     --uc-tab-selected-bg: var(--toolbarbutton-hover-background);
@@ -22,6 +21,7 @@
     --uc-panel-border: rgba(45, 45, 45, 0.5);
     --uc-panel-border-ii: rgba(45, 45, 45, 0.5);
     --uc-context-menu: Menu;
+    --uc-background-main: var(--toolbar-field-background-color);
     --uc-tabs-background: var(--uc-background-main);
     --uc-sb-background: var(--uc-background-main);
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
