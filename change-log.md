@@ -1,53 +1,24 @@
-### <ins> FF Ultima Version 2.7 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.7/ffultima2.7.zip)**
+### <ins> FF Ultima Version 2.8 Release
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.8/ffultima2.8.zip)**
 - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
-- ⚙️ How to [Update the Theme](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) to a new version.
+- ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- Another small but impactful update. With some *quality of life* changes, & version fixes.
-- Check out the Video at the bottom, it's pretty cool!
-- User.js (recommended) not required.
+- 2.8 could possibly wait a month or two for release. As long as there are no major Firefox changes coming up.
 - Firefox 138+ required.
+- User.js not required.
 
 ### <ins> Change Log:
-- `fyi • ℹ️ • ` "The Hard Way" installation method now [automates](https://github.com/soulhotel/git-userChrome) installation for Linux, Mac, Windows de7e58e b15b828
-- `fix • 🔴 • ` Corrections for Fullscreen scenarios
-- `fix • 🔴 • ` Context menu's `panel shadow` changes are not theme related (but fixed) dad3532
-- `new • 🟢 • ` Setting `ultima.tabs.tabgroups.4` to wrap all tabs for a group inside of a *dashed* style box 0fe9bc4
-<!-- - `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1 -->
-- `new • 🟢 • ` Setting `ultima.urlbar.float` url bar transitions into a floating center when in use 4cb9bb8
-- `qol • 🟡 • ` New Tab Page • hover color correction, weather widget scale on hover removed
-- `qol • 🟡 • ` Setting `ultima.tabs.pinnedtabs.style.1` enabled by default to revert the new limited visibility (user.js)
-- `qol • 🟡 • ` All Tab related settings are now organized within [`theme-tab-styles.css`](https://github.com/soulhotel/FF-ULTIMA/blob/main/theme/theme-tab-styles.css) instead of `theme-xstyle.css`
-- `qol • 🟡 • ` Container Tab Styles have been revamped: `ultima.tabs.tabContainers.1`,2,3. Functionality is now fully independant of Tab groups, and styles can be mixed/matched/seperated in a total of 8 to 128 style combinations (when considering tab groups or not) 18d3473
-- `qol • 🟡 • ` New Search Mode Switcher adjustments for theme e5827b4 08125a8
-- `qol • 🟡 • ` Setting `ultima.tabs.vertical.hide.private` can be used to enable hide behavior when in Private windows #309
-- `qol • 🟡 • ` [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) improvements. It no longer needs `user.theme.adaptive` 498cf06
-- `qol • 🟡 • ` When no color scheme is selected, Firefox will default to its default appearance (with minor theme enhancements)
-- `wip • ℹ️ • ` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release.
+- `fyi • ℹ️ • ` 
+- `fix • 🔴 • ` 
+- `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1
+- `new • 🟢 • ` 
+- `qol • 🟡 • ` Ublock Origin extension panel automatically adjust to color scheme e1ddb8c
+- `qol • 🟡 • `
+- `wip • 🟡 • ` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release.
 
-> New Tab Page Corrections (light mode as well)
+> Ublock automatic theming
 
-![Screenshot_20250617_143551](https://github.com/user-attachments/assets/f145fbab-e716-4a43-8be2-26e3cc02511b)
-![Vid_20250617_171436](https://github.com/user-attachments/assets/f680d1e5-2f0b-4b80-81ca-b621aed23b5b)
-
-> New Floating URL Bar Setting
-
-https://github.com/user-attachments/assets/f0c7744a-f527-4025-b300-191922babacb
-
-> This is [userChrome Companion](https://github.com/soulhotel/userChrome-Companion). *Instead of* relying on the **about:config** page and **user.js**, I see a future where FF Ultima works alongside userChrome Companion. Maybe you see that future as well. Depending on the development of `UCC` and how **easier** it is for both you and me, it can become a possibility. Definitely want opinions on this.
-
-https://github.com/user-attachments/assets/3aeadb12-dd2a-403b-a31f-0cb5784489ba
-###### Full 4k Video uncropped on [Youtube](https://www.youtube.com/watch?v=Mz7gmYP2_1A&list=PLTVs0Y4lTV56Kapji1pVjMsMqE6PAHwzl&index=1)
-
-## 💝 Support:
-
-> This `Support` section will dissappear after this release
-
-So, 1 year ago, I rejected the idea of [Donations](#136). But now I'm at a point where I realize - Income plays a huge part in, the time you have *for the things you love*.
-
-I've gained a lot while maintaining Ultima, like knowledge and an avenue for creativity as a hobby. But I'm losing a lot too. I'm losing time to maintain it. I'm losing the time I could use towards getting started on other projects (Shout out to [userChrome Companion](https://github.com/soulhotel/userChrome-Companion)). I'm losing income in the real world & pretty sure we are all losing income in these current 2025 times.. For anyone that would like to further support the development of FF Ultima or support my efforts in creating/maintaining.. And <ins>ONLY</ins> if you are able to.. You can now
-
-> FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
+![ublock](https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131)
