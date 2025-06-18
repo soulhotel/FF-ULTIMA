@@ -23,6 +23,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/website-yt.css); /*youtube*/
 @import url(theme/website-private.css); /*private new tab page */
 @import url(theme/all-color-schemes-sidebery.css); /* sidebery color schemes */
+@import url(theme/theme-extension-ublock.css); /* theme ublock origin popup */
 @import url(MyuserContent.css);
 
 /* temporary fix for firefox 135 new tab spacing */
