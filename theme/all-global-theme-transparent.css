@@ -10,6 +10,15 @@ Custom Icons
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+@media not -moz-pref("user.theme.dark.a") {
+@media not -moz-pref("user.theme.light.a") {
+@media not -moz-pref("user.theme.dark.catppuccin") {
+@media not -moz-pref("user.theme.dark.catppuccin-frappe") {
+@media not -moz-pref("user.theme.dark.catppuccin-mocha") {
+@media not -moz-pref("user.theme.dark.gruvbox") {
+@media not -moz-pref("user.theme.light.gruvbox") {
+@media not -moz-pref("user.theme.dark.midnight") {
+@media not -moz-pref("user.theme.dark.scarlet") {
 
 @media (prefers-color-scheme: dark), @media (prefers-color-scheme: light) {
 
@@ -35,7 +44,7 @@ Custom Icons
     --uc-panel-background: light-dark(rgb(255, 255, 255), rgba(35, 35, 42,0.90));
     --uc-panel-border: light-dark(rgba(25, 25, 25, 1), rgba(25, 25, 25, 0.5));
     --uc-panel-border-ii: light-dark(rgba(25, 25, 25, 0.5), rgba(45, 45, 45, 0.5));
-    --uc-context-menu: light-dark(rgba(255, 255, 255, 1), rgb(35, 35, 42));
+    --uc-context-menu: transparent;
     --uc-tabs-background: var(--uc-background-main);
     --uc-sb-background: var(--uc-background-main);
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
@@ -362,3 +371,4 @@ Custom Icons
 
 
 } /* fin */
+}}}}}}}}}
