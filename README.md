@@ -145,6 +145,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 
 *And a special Thank You, for sponsoring this project*
 
-<!-- sponsors --><!-- sponsors -->
+<!-- sponsors --><a href="https://github.com/s0flY"><img src="https:&#x2F;&#x2F;github.com&#x2F;s0flY.png" width="60px" alt="User avatar: " /></a><a href="https://github.com/Rhodkee"><img src="https:&#x2F;&#x2F;github.com&#x2F;Rhodkee.png" width="60px" alt="User avatar: Rachel " /></a><!-- sponsors -->
 
 
