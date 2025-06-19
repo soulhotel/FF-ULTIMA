@@ -27,7 +27,7 @@ jobs:
           # Template
           template: |
             <p align="center">
-              {{#each sponsors}}
+              {{#each}}
                 <a href="https://github.com/{{{ login }}}" target="_blank" rel="noopener noreferrer" style="display:inline-block; text-align:center; margin: 10px;">
                   <img src="https://github.com/{{{ login }}}.png" width="80" height="80" style="border-radius: 50%;" alt="{{{ login }}}" /><br/>
                   <sub><b>@{{{ login }}}</b></sub>
