@@ -27,9 +27,7 @@ jobs:
           # Template
           template: |
             {{#each}}
-              <a href="https://github.com/{{login}}" target="_blank" rel="noopener noreferrer" style="margin: 10px; display: inline-block;">
-                <img src="https://github.com/{{login}}.png" width="80" height="80" style="border-radius: 50%;" alt="Sponsor" />
-              </a>
+              <img src="https://github.com/{{login}}.png" style="border-radius:50%" />
             {{/each}}
       # Deploy the changes back to the main branch of the repository
       - name: Commit and Push to GitHub 🚀
