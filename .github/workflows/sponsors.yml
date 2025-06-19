@@ -25,8 +25,12 @@ jobs:
           file: 'README.md'
           
           # Template
-          template: '<a href="https://github.com/{{{ login }}}" target="_blank" rel="noopener noreferrer" style="display:inline-block; text-align:center; margin: 0 10px;"> <img src="https://github.com/{{{ login }}}.png" width="80" alt="{{{ login }}}" /><br/> <span>@{{{ login }}}</span> </a>'
-
+          template: |
+            {{#each}}
+              <a href="https://github.com/{{login}}" target="_blank" rel="noopener noreferrer" style="margin: 10px; display: inline-block;">
+                <img src="https://github.com/{{login}}.png" width="80" height="80" style="border-radius: 50%;" alt="Sponsor" />
+              </a>
+            {{/each}}
       # Deploy the changes back to the main branch of the repository
       - name: Commit and Push to GitHub 🚀
         run: |
