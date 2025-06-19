@@ -26,14 +26,16 @@ jobs:
           
           # Template
           template: |
-            <p align="center">
+            <p align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
               {{#each}}
-                <a href="https://github.com/{{{ login }}}" target="_blank" rel="noopener noreferrer" style="display:inline-block; text-align:center; margin: 10px;">
-                  <img src="https://github.com/{{{ login }}}.png" width="80" height="80" style="border-radius: 50%;" alt="{{{ login }}}" /><br/>
-                  <sub><b>@{{{ login }}}</b></sub>
+                <a href="https://github.com/{{ login }}" target="_blank" rel="noopener noreferrer" style="text-align:center; margin: 10px;">
+                  <img src="https://github.com/{{ login }}.png" width="80" height="80" style="border-radius: 50%;" alt="{{ login }}" />
+                  <br />
+                  <sub><b>@{{ login }}</b></sub>
                 </a>
               {{/each}}
             </p>
+
       # Deploy the changes back to the main branch of the repository
       - name: Commit and Push to GitHub 🚀
         run: |
