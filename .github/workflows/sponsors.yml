@@ -25,10 +25,8 @@ jobs:
           file: 'README.md'
           
           # Template
-          template: |
-            {{#each}}
-              <img src="https://github.com/{{login}}.png" style="border-radius:50%" />
-            {{/each}}
+          #template: |
+
       # Deploy the changes back to the main branch of the repository
       - name: Commit and Push to GitHub 🚀
         run: |
