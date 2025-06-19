@@ -140,6 +140,7 @@ File Desc:         Alternative Styles for the URL Bar
         }
         &[breakout-extend] {
             transform: translateY(20vh) scale(1.3);
+            max-width:30vw !important; margin-left:10vw !important; /* control position */
         }
         /*situational*/
         &:hover:not([open]) {
