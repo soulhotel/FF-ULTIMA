@@ -20,3 +20,4 @@ Use the template below to enter your theme into the list:
 @import url('all-global-theme-midnight.css') -moz-pref("user.theme.dark.midnight");
 @import url('all-global-theme-scarlet.css') -moz-pref("user.theme.dark.scarlet");
 @import url('all-global-theme-adaptive.css');
+@import url('all-global-theme-transparent.css') -moz-pref("user.theme.transparent");
