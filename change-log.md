@@ -16,7 +16,7 @@
 - `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1
 - `new • 🟢 • ` 
 - `qol • 🟡 • ` Ublock Origin extension panel automatically adjust to color scheme e1ddb8c
-- `qol • 🟡 • `
+- `qol • 🟡 • ` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
 - `wip • 🟡 • ` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release.
 
 > Ublock automatic theming
