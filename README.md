@@ -87,7 +87,7 @@
 
 <details><summary>The Hard Way</summary>
 
-###### 🛈 For this method, all you need is Git and a Terminal. It's harder for the less technical of people 🛈
+###### 🛈 For this method, all you need is Git and a Terminal. It's harder for the less technical people 🛈
 
 - This automated tool requires no download. It runs by fetching [gituserChrome](https://github.com/soulhotel/git-userChrome)
 - Locates all profile folders and allows you to specify which one to install FF Ultima to
