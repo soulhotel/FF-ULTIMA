@@ -1,5 +1,7 @@
-/*----------------------------------------------------------
-New Tab Page Overhaul
+/*///////////////////////////////////////////////////////////////////////////////////////\
+ 
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         New Tab Page Overhaul, inspired by @hachikoharuno https://github.com/hachikoharuno/Beautiful-newtab-Firefox
 
 [Index: For ctrl+f a line to find a section]
 variables
@@ -13,11 +15,11 @@ latest activity
 recommended section
 awesome bar
 new tab rounded tweaks
-----------------------------------------------------------*/
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 @import url('all-color-schemes-wallpapers.css');
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-
 
 /* variables ------------------------------------------------------------------- */     
 
