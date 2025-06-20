@@ -445,10 +445,11 @@ box-shadow: none !important;}}
     --tab-border-radius: 10px !important;
 }
 #tabbrowser-tabs[orient="horizontal"] {
+    /* https://github.com/soulhotel/FF-ULTIMA/issues/308#issuecomment-2989927172
     .tabbrowser-tab {
         &:not([pinned]) {
             max-width: 300px !important;
-    }}
+    }}*/
     .tab-icon-stack[pinned] {
       margin-inline: 0px !important; /*previously 5*/
     }
@@ -614,13 +615,13 @@ box-shadow: none !important;}}
 }
 
 /* update scrollbox */
-/*
+
 .tabbrowser-tab:not([pinned], [fadein]) {
     max-width: 0.1px !important;
     min-width: 0.1px !important;
     visibility: collapse !important;
 }
-*/
+
 
 /* custom splitter - resizeable bar */
 @media -moz-pref("sidebar.verticalTabs") {
