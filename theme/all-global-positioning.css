@@ -3,6 +3,7 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Global Positioning for main elements of the browser
 
+Update Scrollbox
 Global variables
 Toolbar spacing
 Global spacing
@@ -20,9 +21,25 @@ Vertical Tabs Hidden in Private
 Extra modifications woth no place to go (yet)
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
-:root[inDOMFullscreen] #tabbrowser-tabbox {
-  margin-inline-start: 0px !important;
+
+/* Update Scrollbox ---------------------------------------------------------------------*/
+
+/* The importance of "Update Scrollbox"..
+ * Tabs in Firefox, when closed, aren't actually being closed.
+ * Closed Tabs are collapsed/hidden before being un-rendered, essentially put in a background state.
+ * You can see this live with the Browser Toolbox.
+    * - When you close a tab without this code snippet active, there is a visible gap (maybe 2px) where the closed tab used to be.
+    * - With the code snippet active, there is no gap due to the forced collapse of the closed tab.
+    * - Tab shuffling animation can definitely hide the gap too.
+    * - Also `visibility: collapse` is native/safe behavior.
+* This codeblock basically forces tabs that don't "exist" anymore to not exist "properly". And forces the scrollbox to adjust it's calculation for the collapsed closed tab (no space).
+*/
+.tabbrowser-tab:not([pinned], [fadein]) {
+    max-width: 0.1px !important;
+    min-width: 0.1px !important;
+    visibility: collapse !important;
 }
+
 /* Global variables for quick modifications ---------------------------------------------*/
 
 :root {
@@ -92,6 +109,9 @@ Extra modifications woth no place to go (yet)
     --uc-menubar-height: 0px !important;
     --uc-bookbar-height: 0px !important;
     @media -moz-pref("sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}
+}
+:root[inDOMFullscreen] #tabbrowser-tabbox {
+  margin-inline-start: 0px !important;
 }
 
 /* Notification Deck */
@@ -613,15 +633,6 @@ box-shadow: none !important;}}
         padding-right:50px;
     }
 }
-
-/* update scrollbox */
-
-.tabbrowser-tab:not([pinned], [fadein]) {
-    max-width: 0.1px !important;
-    min-width: 0.1px !important;
-    visibility: collapse !important;
-}
-
 
 /* custom splitter - resizeable bar */
 @media -moz-pref("sidebar.verticalTabs") {
