@@ -5,9 +5,6 @@ File Desc:         Theming the status panel
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-#statuspanel-label {border-radius: 7px !important;}
-
 #statuspanel {
     &:not([hidden]) {
         max-width: calc(100% - 1vw);
@@ -22,6 +19,7 @@ File Desc:         Theming the status panel
         margin-block:1px !important;
         padding-block: 4px !important;
         border:none !important;
+        border-radius: 7px !important;
         background-color: var(--uc-ultima-window) !important;
         color: var(--uc-text) !important;
         box-shadow: var(--uc-box-shadow) !important;
@@ -30,12 +28,10 @@ File Desc:         Theming the status panel
 }
 
 #main-window:not([lwtheme="true"]) #statuspanel-label {
-  @media (not (prefers-contrast)) and (not (-moz-platform: linux)) {
-    & {
-      background-color: var(--uc-background-layered) !important;
-      border-color: rgba(15,15,15,0);
+    @media (not (prefers-contrast)) and (not (-moz-platform: linux)) {
+        & {
+            background-color: var(--uc-background-layered) !important;
+            border-color: rgba(15,15,15,0);
+        }
     }
-  }
 }
-
-
