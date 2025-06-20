@@ -22,5 +22,5 @@ jobs:
               run: |
                   curl -X POST -H "Authorization: bearer $GH_TOKEN" \
                        -H "Content-Type: application/json" \
-                       -d '{"query":"mutation { createDiscussion(input: {repositoryId: \"REPO_ID_HERE\", categoryId: \"'"$CATEGORY_ID"'\", title: \"'"${TITLE//$'\n'/ }"'\", body: \"'"${BODY//$'\n'/\\n"}'"\"}) { discussion { id url } } }"}' \
+                       -d '{"query":"mutation { createDiscussion(input: {repositoryId: \"R_kgDOLhn1XQ\", categoryId: \"'"$CATEGORY_ID"'\", title: \"'"${TITLE//$'\n'/ }"'\", body: \"'"${BODY//$'\n'/\\n"}'"\"}) { discussion { id url } } }"}' \
                        https://api.github.com/graphql
