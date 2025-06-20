@@ -1,28 +1,20 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         Automatically apply color scheme colors to Sidebery
+File Desc:         Sidebery Automatic Theming; Auto apply color scheme colors to Sidebery
 
-Sidebery Automatic Theming
 Color Management
 Applying it all to Sidebery elements
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { /* ignore mee */
-:root {--icu-test:"Styles only wrapped inside of a sidebery-usercontent";}} @media -moz-pref("user.theme.sidebery") {
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { /* regexp sees */
-:root {--icu-2:"Styles wrapped inside of a sidebery-usercontent, which is wrapped inside of a moz-pref";}    }
-@-moz-document url-prefix("moz-extension://ae1b42b4-e727-4d62-9940-327c26813571/") { @media -moz-pref("user.theme.sidebery") {
-:root {--icu-3:"Styles wrapped inside of a moz-pref, which is wrapped inside of a sidebery-usercontent";}   }}
-  
-/* Sidebery Automatic Theming ----------------------------------------------------------------- */
+
 /* Color Management for all color schemes ----------------------------------------------------- */  
     
 @-moz-document regexp("moz-extension://.*/sidebar/sidebar.html") {
 @media -moz-pref("user.theme.sidebery") {  
 
-:root { /*color management -------------------------------------*/
+:root {
     /* apply dark mode colors */
     @media (prefers-color-scheme: dark) {
         @media -moz-pref("user.theme.dark.a") {
@@ -105,8 +97,9 @@ Applying it all to Sidebery elements
     --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
     --uc-button-border-radius: 10px;
     --uc-context-menu: color-mix(in srgb, var(--ut-background) 90%, black 10%) !important;
-} /*end of color management*/
+}
 
+  
 /* Applying it all to Sidebery elements ------------------------------------------------------- */
    
 /* Background --------------------------------------------------*/
