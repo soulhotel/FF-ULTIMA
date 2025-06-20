@@ -15,7 +15,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/all-color-schemes.css);
 
 @import url(theme/function-sidebar-autohide.css);
-@import url(theme/function-privatemode.css); /* sourced from MOG */
+@import url(theme/function-privatemode.css);
 @import url(theme/theme-urlbar.css);
 @import url(theme/function-extensions-menu.css);
 
