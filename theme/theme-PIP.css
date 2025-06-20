@@ -6,7 +6,6 @@ File Desc:         PiP (picture-in-picture) Styling
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*seek bar progress bar*/
-
 #scrubber::-moz-range-progress{
     background-color: var(--uc-accent-i) !important;
 } #scrubber::-moz-range-thumb{
@@ -15,12 +14,10 @@ File Desc:         PiP (picture-in-picture) Styling
 }
 
 /*close and PIP buttons are hovered*/
-
 #close, #unpip{
     background-color: rgba(255, 255, 255, 0.1) !important;
     fill: #fff !important;
 }
-
 #close:is(:hover, :focus-visible), #unpip:is(:hover, :focus-visible){
     background-color: var(--uc-accent-i) !important;
     fill: #1c1c1c !important;
@@ -36,31 +33,29 @@ File Desc:         PiP (picture-in-picture) Styling
 
 /* keep audio slider visible */
 @media (width <= 630px) {
-  #audio-scrubber {
-    display: block !important;
-    position: fixed !important;
-    bottom: 38x !important;
-    right: 122px !important;
-    transform: translateX(-50%) !important;
-  }
+    #audio-scrubber {
+        display: block !important;
+        position: fixed !important;
+        bottom: 38x !important;
+        right: 122px !important;
+        transform: translateX(-50%) !important;
+    }
 }
-
 @media (width <= 580px) {
-  #audio-scrubber {
-    display: block !important;
-    position: fixed !important;
-    top: 25px !important;
-    left: 50vw !important;
-    transform: translateX(-50%) !important;
-  }
+    #audio-scrubber {
+        display: block !important;
+        position: fixed !important;
+        top: 25px !important;
+        left: 50vw !important;
+        transform: translateX(-50%) !important;
+    }
 }
-
 @media (width <= 290px) {
-  #audio-scrubber {
-    display: block !important;
-    position: fixed !important;
-    top: 16% !important;
-    left: 50vw !important;
-    transform: translateX(-50%) !important;
-  }
+    #audio-scrubber {
+        display: block !important;
+        position: fixed !important;
+        top: 16% !important;
+        left: 50vw !important;
+        transform: translateX(-50%) !important;
+    }
 }
