@@ -1,8 +1,13 @@
-/*
+/*///////////////////////////////////////////////////////////////////////////////////////\
+ 
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         About Config Messaging & Auto theming
+
 color management
 if you see this text
 warning messages
-*/
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 @-moz-document url("about:config") {
 @media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
