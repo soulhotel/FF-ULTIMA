@@ -11,15 +11,18 @@
 - User.js not required.
 
 ### <ins> Change Log:
-- `fyi • ℹ️ • ` 
-- `fix • 🔴 • ` 
-- `new • 🟢 • ` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1
-- `new • 🟢 • ` 
-- `qol • 🟡 • ` Ublock Origin extension panel automatically adjust to color scheme e1ddb8c
-- `qol • 🟡 • ` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
-- `wip • 🟡 • ` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release.
+- `fyi • ℹ️ •` If you use [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) be advised that `user.theme.adaptive` is no longer needed.
+- `fix • 🔴 •` ...
+- `new • 🟢 •` Settings `ultima.navbar.bookmarks.float` new style and usability for bookmarks bar (see preview) 5d6aab1
+- `qol • 🟡 •` Ublock Origin extension panel automatically adjust to color scheme e1ddb8c
+- `qol • 🟡 •` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
+- `wip • 🟡 •` The current color scheme logic is a bit bloated; Reworking it to be more *simple* is a goal for the next release;
 
-> Color Schemes can rely on a simple `user.theme.default` format (or user.theme.catpuccin-mocha). One file can manage both light & dark mode versions of the same theme (light-dark). Managing add on themes, color modes, becomes a lot easier. Number of files in the source would then be reduced by 3. Simplifying makes transparency easier to implement as well.
+<!--
+- `fyifixnewqolwip • ℹ️🔴🟢🟡 •`
+-->
+
+> Color Schemes can rely on a simple `user.theme.default` format, which would then handle both dark mode `full moon (default)` and light mode `dusky (default)`. One file to manage both. Managing add on themes, color modes, becomes a lot easier. Number of files in the source would then be reduced by 3. Simplifying this makes transparency `user.theme.transparent` easier to implement as well. And other color schemes (like `user.theme.gruvbox`) can have both dark/light managed in the same place.
 
 ![image](https://github.com/user-attachments/assets/161e4fb5-610a-42dc-9b61-dc16f554e32f)
 
