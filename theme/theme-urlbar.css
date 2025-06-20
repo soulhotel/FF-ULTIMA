@@ -32,9 +32,9 @@ File Desc:         Alternative Styles for the URL Bar
 }
 
 #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within {
-        outline-offset: 0px !important;
-        outline-width: 2px !important;
-        outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 80%, transparent) !important;
+    outline-offset: 0px !important;
+    outline-width: 2px !important;
+    outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 80%, transparent) !important;
 }
 
 /* 5/28/2025 - new urlbar searchmode switcher */
