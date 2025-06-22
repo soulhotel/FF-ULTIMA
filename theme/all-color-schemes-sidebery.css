@@ -66,6 +66,15 @@ Applying it all to Sidebery elements
             --uc-accent-v: rgb(51, 152, 171) !important; 
             --uc-button-selected: rgb(92, 43, 51);
         }
+        @media -moz-pref("user.theme.dark.kanagawa-wave") {
+            --ut-background: #1F1F28 !important;
+            --uc-text: #DCD7BA !important;
+            --uc-accent-i: #2A2A37 !important;
+            --uc-accent-v: #DCD7BA !important; 
+            --uc-button-selected: #2A2A37 !important;
+            --uc-context-menu: #2A2A37  !important;
+            --uc-inactive-tab-text: #727169 !important;
+        }
     }
     /* apply light mode colors */
     @media (prefers-color-scheme: light) {
@@ -94,9 +103,10 @@ Applying it all to Sidebery elements
         --uc-button-selected: light-dark(rgba(190,190,190,0.3), rgba(10,10,10,0.3)) !important;
         --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(55,55,55,0.4) !important;
     }  
+    --uc-inactive-tab-text: var(--uc-text);
     --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.8);
     --uc-button-border-radius: 10px;
-    --uc-context-menu: color-mix(in srgb, var(--ut-background) 90%, black 10%) !important;
+    --uc-context-menu: color-mix(in srgb, var(--ut-background) 90%, black 10%);
 }
 
   
@@ -170,7 +180,7 @@ Applying it all to Sidebery elements
 /* Tabs ----------------------------------------------------*/
 
 #root.root {
-    --tabs-normal-fg: var(--uc-text) !important;
+    --tabs-normal-fg: var(--uc-inactive-tab-text) !important;
     --tabs-normal-bg: transparent;
     --tabs-activated-bg: var(--uc-button-selected) !important;
     --tabs-activated-fg: var(--uc-accent-v) !important;
