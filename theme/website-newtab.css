@@ -1,5 +1,7 @@
-/*----------------------------------------------------------
-New Tab Page Overhaul
+/*///////////////////////////////////////////////////////////////////////////////////////\
+ 
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         New Tab Page Overhaul, inspired by @hachikoharuno https://github.com/hachikoharuno/Beautiful-newtab-Firefox
 
 [Index: For ctrl+f a line to find a section]
 variables
@@ -13,11 +15,11 @@ latest activity
 recommended section
 awesome bar
 new tab rounded tweaks
-----------------------------------------------------------*/
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
 
 @import url('all-color-schemes-wallpapers.css');
 @-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
-
 
 /* variables ------------------------------------------------------------------- */     
 
@@ -25,13 +27,13 @@ new tab rounded tweaks
     --uc-fixed-rounding: 18px;
     --uc-rounded-border: 18px;
     --uc-less-rounded-border: 12px;
-    --uc-evenless-rounded-border: 8px;
+    --uc-evenless-rounded-border: 9px;
     --mode-color: white;
     --newtab-button-static-hover-background: transparent !important;
     --button-background-color-ghost-hover: transparent !important;  
 }
 
-@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {    
+@media -moz-pref("ultima.xstyle.newtab.rounded") {
     :root {
         --uc-rounded-border: 100%;
         --uc-less-rounded-border: 100%;
@@ -41,8 +43,8 @@ new tab rounded tweaks
 @media (prefers-color-scheme: dark) {
     :root {
         --newtab-background-color-secondary: transparent !important;
-        --newtab-element-hover-color:  rgba(24,24,24,0.9) !important;
-        --uc-panel-backgrounds: rgba(10,10,10,0.7);
+        --newtab-element-hover-color:  rgba(240,240,250,0.6) !important;
+        --uc-panel-backgrounds: rgba(20,20,20,0.5);
         --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 5%, rgba(14,14,14,0.8)) !important;
         --mode-color: white;
     }
@@ -50,10 +52,10 @@ new tab rounded tweaks
 @media (prefers-color-scheme: light) { 
     :root{
         --newtab-background-color-secondary: rgba(220,220,230,0.1) !important;
-        --newtab-element-hover-color:  rgba(244,244,250,0.9) !important;
-        --uc-panel-backgrounds: rgba(220,220,230,1);
+        --newtab-element-hover-color:  rgba(20,20,45,0.6) !important;
+        --uc-panel-backgrounds: rgba(240,240,240,1);
         --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 35%, transparent) !important;
-        --mode-color: black;
+        --mode-color: rgb(17,17,17);
     }
 }  
 
@@ -89,7 +91,7 @@ body {
     opacity: 0.7 !important;
 }
 .top-site-icon{background-color: transparent !important;}
-@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {.top-site-icon{background-color: var(--mode-color) !important;}}
+@media -moz-pref("ultima.xstyle.newtab.rounded") {.top-site-icon{background-color: var(--mode-color) !important;}}
     
 /* force consistent size */    
 .top-site-outer .default-icon {
@@ -131,7 +133,7 @@ body {
     font-weight: bold !important;
     text-transform: capitalize !important;
 }
-@media (-moz-bool-pref: "ultima.xstyle.newtab.labels") {      
+@media -moz-pref("ultima.xstyle.newtab.labels") {
     .top-site-outer .title span {
         background: var(--newtab-background-color-secondary) !important;
         filter: saturate(100%) !important;
@@ -169,11 +171,17 @@ body {
 }    
 .search-wrapper .logo-and-wordmark .wordmark {
     width: 66vw !important;
+    fill: var(--mode-color) !important;
 }
+.logo-and-wordmark .wordmark {
+    width: 66vw !important;
+    fill: var(--mode-color) !important;
+}    
 .search-wrapper .logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }    
-
+.logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }  
+    
 /* default style */    
-@media (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+@media -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
     .search-inner-wrapper {
         display: flex !important;
         margin-top: 16px !important;
@@ -239,7 +247,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 /* widgets --------------------------------------------------------------------- */ 
 
 .icon.icon-settings {opacity: 85% !important; color:var(--mod-color) !important}
-.personalize-button { padding: 8px !important; border-radius:100% !important;}
+.personalize-button { /*! padding: 8px !important; */ border-radius:100% !important;}
 .personalize-button:hover {
     background-color: transparent !important;
     transform: scale(1.5);
@@ -253,7 +261,6 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     backdrop-filter: blur(33px);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0) !important;
     color: var(--mode-color) !important;
-    &:hover{transform:scale(1.15);}
 }
 .weatherButtonContextMenuWrapper::after {
     opacity:0 !important;
@@ -267,7 +274,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 .context-menu {
     background-color: var(--uc-panel-backgrounds)  !important;
     border-radius: var(--uc-evenless-rounded-border) !important;
-    padding: 0.4rem;
+    padding: 0.4rem 0.1em;
     margin:1% 1% 0% 0% !important;
     position: relative;
     box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
@@ -277,10 +284,13 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     line-height: 26px;
 }
 .context-menu > ul > li > button:is(:focus, :hover) {
-    border-radius: 3px !important;
+    border-radius: 5px !important;
     background: var(--newtab-element-hover-color) !important;
+    color: var(--uc-panel-backgrounds) !important;
 }
- 
+.weatherButtonContextMenu .context-menu {z-index: 1000 !important;} /*doesnt work its populated*/
+.weather .weatherSponsorText {display:none !important;}
+    
 /* spacing */    
 .context-menu > ul {
     margin: 5px !important;
@@ -344,6 +354,10 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 /* home sections --------------------------------------------------------------- */ 
 
 .home-section .divider { border-top: unset !important; }
+
+.toggle-button, .selector {
+    cursor: pointer !important;
+}
 
 .home-section .section .selector {
     border: none !important;
@@ -444,22 +458,24 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
  
 /* awesome bar ----------------------------------------------------------------- */ 
 
-@media not (-moz-bool-pref: "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
+@media not -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
 
     :root{
         --newtab-border-color:rgba(120,120,120,0.1) !important;
         --newtab-text-secondary-color: var(--mode-color) !important;
     }
     /* hide website shortcuts when focused on awesome bar */
+    @media -moz-pref("browser.newtabpage.activity-stream.showSearch") {
     .top-site-outer {
         opacity: 0 !important;
         pointer-events: none !important;
     }
+    
      body:has(#searchSuggestionTable[hidden]) .top-site-outer {
         opacity: 1 !important;
         pointer-events: auto !important;
     } 
-    
+    }
     /* style awesome bar */
     .search-wrapper .search-handoff-button, .search-wrapper input {
         background: var(--newtab-background-color-secondary) !important;
@@ -527,7 +543,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 
 /* new tab rounded tweaks ------------------------------------------------------ */
     
-@media (-moz-bool-pref: "ultima.xstyle.newtab.rounded") {
+@media -moz-pref("ultima.xstyle.newtab.rounded") {
     .wallpaper-input {
         border-radius: var(--uc-fixed-rounding) !important;
     }
@@ -545,15 +561,3 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     
     
 } /*fin*/
-
-
-
-
-
-
-
-
-
-
-
-

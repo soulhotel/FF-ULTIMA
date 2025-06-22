@@ -1,0 +1,37 @@
+name: Sponsors Appreciation in README
+permissions:
+  contents: write
+on:
+  workflow_dispatch:
+  schedule:
+    # This is a cron schedule, it will run every day at 15:30. You can change this to whatever you want.x
+    - cron: 30 15 * * 0
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      # Generate the sponsors
+      - name: Generate Sponsors 💖
+        uses: JamesIves/github-sponsors-readme-action@v1
+        with:
+          # The name of this should correspond with the name you gave your secret, in my example this is 'PAT'.
+          token: ${{ secrets.PAT }}
+
+          # This should point to your project's readme, or any other type of markdown file you want to add sponsorship information to.
+          file: 'README.md'
+          
+          # Template
+          #template: |
+
+      # Deploy the changes back to the main branch of the repository
+      - name: Commit and Push to GitHub 🚀
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: update sponsors list [auto]" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}.git HEAD:main

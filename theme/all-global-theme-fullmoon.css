@@ -322,7 +322,7 @@ Custom Icons
     
 /* Custom Icons -----------------------------------------------------------------*/
 
-@media (-moz-bool-pref: "ultima.theme.icons") {  
+@media -moz-pref("ultima.theme.icons") {
     /* extension menu */
     #main-window:not([lwtheme]) #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;

@@ -1,21 +1,26 @@
-# <p align="center"> FF ULTIMA... </p>
-
-###### <p align="center">. . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).</p>
-
 <div align="center">
 
-![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) <!-- ![GitHub Release Date](https://img.shields.io/github/release-date/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue) --> ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
+# FF ULTIMA...
+
+###### . . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
+
+![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue)
+![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) 
+![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
+[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=for-the-badge&label=Sponsors%20💖&color=f19ef7)](https://github.com/sponsors/soulhotel)
+
+<!-- ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802) -->
+![ffultima-editions-2.0](https://github.com/user-attachments/assets/dc1882e6-6543-41bd-aff7-ded2b96ffb97)
 
 </div>
-
-![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802)
 
 
 ## Features
 
 - Windows, Linux and Mac OS Support.
 >
-- `Vertical Tabs` and a `One Line Nav Bar`.
+- `Vertical Tabs`, `Tabs on Top/Bottom`, or `Autohide Everything` layouts.
 >
 - Add-on theme support, FF ULTIMA can be used with Firefox add-on themes.
 >
@@ -23,93 +28,123 @@
 >
 - Dark or Light mode themes, automatically cycle depending on your systems current Color Mode.
 >
-- Multiple Options for Tabs, autohiding, spacing, accessibility [and more](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings).
+- Multiple Options for tabs, autohiding, spacing, theming, accessibility [and more](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings).
+>
+- Autoconfig integration, Sidebery integration, Auto Tab Color integration.
 >
 - See more detail on [what FF Ultima has to offer](https://github.com/soulhotel/FF-ULTIMA/wiki#what-does-ff-ultima-offer) through the Wiki.
 >
 
 ## Installation
 
-###### 🚨 Do not skip the installation instructions! Firefox v133+ Required. 🚨
+###### Do not skip the installation instructions! 🚨
 
 <details>
-<summary>Need help finding your Profile Folder? (Click Me)</summary>
+<summary>Finding your Profile Folder (where the theme files go)</summary>
 
-<br>
+###### 🛈 Two ways to find your Profile Folder. Choose one: 🛈
+1. Go to the about:support page/url.
+2. Open directory
+3. This takes you to your profile folder, typically named "default.release"
 
-> userChrome Themes work by communicating with a chrome folder located in your Firefox Profile folder, think of it as your User Interface. This folder typically holds `.css` files with the purpose of customizing elements of the Browser. There are two easy ways to access this folder:
+<img src="https://github.com/user-attachments/assets/e520eb35-f09c-4925-92f6-44be4ec18d51" width="850" />
 
-1. Go to the `about:support` page
-- In the URL Bar, type `about:support`.
-- Look for the **Profile Folder** row. Open the folder.
-- In that folder, create a new folder named `chrome` (If it doesnt already exist).
-
-![aboutsupport](theme/pic/assets/about_support.png)
-
-2. Go to the `about:profiles` page
-- In the URL Bar, type `about:profiles`.
-- Your profile will say `This is the profile in use and...`.
-- Look for the **Root Directory** row, and click **Open Directory**.
-- In the opened Folder, create a new folder named `chrome` (if it doesnt already exist).
+>
+1. Go to the about:profiles page/url.
+2. If you have multiple firefox profiles, make sure you are working with the right one.
+3. Open directory
+4. This takes you to your profile folder, typically named "default.release"
  
-![alt text](theme/pic/assets/profilelocation.png)
+<img src="https://github.com/user-attachments/assets/8e58c276-1015-436d-8414-6d4db3a4be4b" width="850" />
 </details>
 
 <details>
-<summary>Have system theme enabled for first install, not firefox dark/light. (Click Me) </summary>
-  
-![addonthemespage](theme/pic/assets/installprep.png)
+<summary>Initial Setup</summary>
+
+###### 🛈 This is mostly for first time Installation: 🛈
+
+- [x] If your Profile Folder does not have a `chrome` folder, create one.
+- [x] If your Profile Folder already has a `chrome` folder, empty it.
+- [x] The theme will automatically enable userChrome stylesheets via user.js.
+- [x] Please have Firefox's System-Theme enabled. You can change this later.
+
+<img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
 </details>
 
-###### ⬇️ Choose *one* of the installation methods below. ⬇️
+###### Choose *one* of the installation methods below. ⬇️
 
 <details><summary>The Easy Way</summary>
- 
->
+
+###### 🛈 Autoconfig Users should download the Source instead of the release Zip 🛈
+
 1. Download the latest version on the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest).
 2. Copy everything in the ffultima.zip into your `chrome` folder.
 3. For first time installation, you need to apply the `user.js` to firefox to access the theme settings.
 4. In the chrome folder, youll see the `user.js`, move it <ins>out the chrome folder and into the Profile Folder<ins>.
 5. Restart Firefox.
 6. <ins>**Wait** for Firefox to open</ins>, then delete the `user.js` file.
-7. Go to `about:config` and search for `ultima` to see all of your settings.
-
-###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset or unless told otherwise :).
 </details>
 
 <details><summary>The Hard Way</summary>
 
+###### 🛈 For this method, all you need is Git and a Terminal. It's harder for the less technical people 🛈
+
+- This automated tool requires no download. It runs by fetching [gituserChrome](https://github.com/soulhotel/git-userChrome)
+- Locates all profile folders and allows you to specify which one to install FF Ultima to
+- It renames any present chrome/ folder to chrome.old/, then uses git to install the theme to a new chrome/ folder
+- It also handles moving user.js, specifying which firefox to restart, and user.js removal
+- To Install FF Ultima - copy/paste the command for your operating system
+
+###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
+```
+bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.sh)
+```
+
+###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/git-userChrome)):
+```
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.ps1')"
+```
+
+###### MAC ([COPY LINUX](https://github.com/soulhotel/git-userChrome))
+```
+  ,-.       _,---._ __  / \
+ /  )    .-'       `./ /   \
+(  (   ,'            `/    /|         
+ \  `-"             \'\   / |         whats in the box? oh..
+  `.              ,  \ \ /  |         
+   /`.          ,'-`----Y   |         it's linux.
+  (            ;        |   '
+  |  ,-.    ,-'         |  /          because Mac is basically linux..
+  |  | (   |        hjw | /
+  )  |  \  `.___________|/
+  `--'   `--'
+```
 >
-###### This method involves using Git and the Terminal - allowing easier updates. Harder for the less technical of people.
-1. Open a terminal in your Profiles `chrome` folder.
-2. Or in the terminal, navigate to your Profiles chrome folder `cd your\profile-folder\chrome`.
-3. In the terminal, git clone the repo to install/update to the latest version:
-```
-# cd your/profile-folder/chrome                            # cd into profile folder
-git clone https://github.com/soulhotel/FF-ULTIMA.git       # git clone inside
-mv FF-ULTIMA/* FF-ULTIMA/.* .                              # clean up double folder
-rmdir FF-ULTIMA                                            # remove the extra folder
-```
-5. In your chrome folder you'll have a file named `user.js`.
-6. Move the `user.js` file <ins>OUT of the chrome folder and INTO your Profile Folder.</ins>
-7. Restart Firefox.
-8. **Wait** for Firefox to open, then delete the `user.js` file.
-9. Go to `about:config` and search for `ultima` to see all of your settings.
 
-###### :warning: You only need to touch the user.js when installing the theme for the first time. It's function is to enable userChrome and add theme settings to the about:config page. Do not copy the user.js file into the Profile Folder <ins>if you are just updating the theme to a new version</ins>. Unless you want all of your saved settings to be reset :).
+> More on [gituserChrome](https://github.com/soulhotel/git-userChrome): When inspecting the source, the tool is pretty simple, but suprisingly it isn't the standard when sharing userChrome themes.. It's set up so that it can download any userChrome theme (not just FF Ultima) with just 1 command (example: `curl gituserChrome randomTheme.git`). And factors in scenarios where you want to target a specific Profile Folder, specific Firefox install, handling clean firefox restarts across any OS and user.js cases and clean ups. I'd love to see it used by more theme creators and obviously since it's just a simple script (1 for windows, 1 for linux/mac) it can be used locally & can be changed by anyone that wants to expand on it.
 
-###### :accessibility: Reading the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest) is always recommended. When new versions of the theme come out - and they include new preferences in the about:config page, you may want to open the new user.js file and compare it to your current settings. You can either add the settings manually in the about:config page... or load your own editted user.js file to add the new settings and keep your old the same way.
 </details>
 
 
-## Documentation
+###### What to do *after* installing FF Ultima.. ✅
+<details><summary>Post Installation (finding the settings & visiting the wiki)</summary>
 
-[Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)
-- FAQ
-- Theme settings overview
-- Sidebery config
-- List of Color schemes
-- Color scheme creation
-- Spreadsheets
+>
+- Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
+
+![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
+- Visit [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) to learn more about what is possible:
+    - Frequently asked questions
+    - All theme settings (full overview)
+    - How to install, [uninstall](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Uninstall-the-Theme), [update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme)
+    - Sidebery configuration (optional)
+    - Videos, documentation, and a whole lot more..
+</details>
 
 ## Enjoy
+
+*And a special Thank You, for sponsoring this project*
+
+<!-- sponsors --><a href="https://github.com/s0flY"><img src="https:&#x2F;&#x2F;github.com&#x2F;s0flY.png" width="60px" alt="User avatar: " /></a><a href="https://github.com/Rhodkee"><img src="https:&#x2F;&#x2F;github.com&#x2F;Rhodkee.png" width="60px" alt="User avatar: Rachel " /></a><!-- sponsors -->
+
+

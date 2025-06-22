@@ -1,0 +1,26 @@
+name: Post Release Announcement
+
+on:
+    release:
+        types: [published]
+
+jobs:
+    create-discussion:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Post to GitHub Discussions
+              env:
+                  GH_TOKEN: ${{ secrets.APAT }}  # ← Use your personal token for posts as yourself
+                  CATEGORY_ID: DIC_kwDOLhn1Xc4CeM9L
+                  TITLE: |
+                      🚀 Wake up! New FF Ultima ${{ github.event.release.tag_name }} just dropped!
+                  BODY: |
+                      🚀 FF Ultima ${{ github.event.release.name }} Released  
+                      - **[Click Me ➡️ Release Page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest)**
+
+                      Feel free to voice your opinions, recommendations, frustrations & more here.
+              run: |
+                  curl -X POST -H "Authorization: bearer $GH_TOKEN" \
+                       -H "Content-Type: application/json" \
+                       -d '{"query":"mutation { createDiscussion(input: {repositoryId: \"R_kgDOLhn1XQ\", categoryId: \"'"$CATEGORY_ID"'\", title: \"'"${TITLE//$'\n'/ }"'\", body: \"'"${BODY//$'\n'/\\n"}'"\"}) { discussion { id url } } }"}' \
+                       https://api.github.com/graphql

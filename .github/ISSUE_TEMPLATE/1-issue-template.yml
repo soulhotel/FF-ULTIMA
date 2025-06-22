@@ -7,84 +7,40 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Before submitting, have you already looked through the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)?
+        ### Before submitting, Please fill out the checklist.
 
-  - type: dropdown
-    id: checked-wiki
+  - type: checkboxes
+    id: confirmations
     attributes:
-      label: "Already looked at the Wiki?"
-      description: "[FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)"
+      label: "My Checklist:"
+      description: "![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e) <br> First time install? If you don't see this ↑ welcome message on your about:config page, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
       options:
-        - "No"
-        - "Yes"
-    validations:
-      required: true
-  
+        - label: "I've looked at the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)."
+          required: true
+        - label: "I've seen the welcome message on about:config."
+          required: true
+        - label: "🟠 My Browser is Firefox (Default)."
+        - label: "🟣 My Browser is Firefox (Nightly)."
+        - label: "🔵 My Browser is Firefox (Beta/Developer)."
+        - label: "⚪ My Browser is Librewolf (fork)."
+        - label: "My OS (operating system) is Windows."
+        - label: "My OS (operating system) is Linux."
+        - label: "My OS (operating system) is Mac."
+        - label: "My Browser is on the latest version."
+
   - type: textarea
     id: issue-description
     attributes:
-      label: "Describe the Issue"
-      placeholder: "A detailed description of what the issue is."
+      label: "The Issue:"
+      description: "A detailed description of the issue. Or what you expect to happen."
+      placeholder: "A detailed description of the issue. Or what you expect to happen."
     validations:
       required: true
 
-  - type: textarea
-    id: expected-behavior
-    attributes:
-      label: "Expected Behavior"
-      placeholder: "A description of what you expected to happen"
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: "### Platform/Desktop"
-
-  - type: dropdown
-    id: platform-os
-    attributes:
-      label: "Platform/Desktop"
-      options:
-        - "Windows"
-        - "Linux"
-        - "Mac"
-    validations:
-      required: true
-
-  - type: dropdown
-    id: platform-browser
-    attributes:
-      label: "Web Browser"
-      options:
-        - "Firefox"
-        - "Firefox Nightly"
-        - "Firefox Dev Edition"
-        - "Other Browser"
-    validations:
-      required: true
-
-  - type: input
-    id: other-browser
-    attributes:
-      label: "If `Other Browser` was selected, specify here:"
-      placeholder: "Example: Waterfox v123"
-    validations:
-      required: false
-
-  - type: dropdown
-    id: browser-updated
-    attributes:
-      label: "Is your browser updated to the latest version?"
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
-    
   - type: textarea
     id: picture-video
     attributes:
-      label: "Picture/Video of the Issue"
+      label: "Picture/Video of the Issue:"
       description: "Screenshot(s) or video of the issue are preferred."
       placeholder: "Drag & Drop | Copy & Paste | or Link to Picture & Video"
     validations:

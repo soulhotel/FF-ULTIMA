@@ -22,19 +22,19 @@ Custom Background
     --uc-text: rgb(230, 230, 230);
     --uc-dark-color: rgb(27, 25, 35);
     --uc-light-color: rgb(215, 218, 224);
-    --uc-accent-i: rgb(198, 170, 232); /*purp*/
-    --uc-accent-ii: rgb(230, 230, 230); /*blue*/
-    --uc-accent-iii: rgb(215, 218, 224); /*light*/
-    --uc-accent-iv: rgba(7, 7, 7,0.6); /*dark*/
-    --uc-accent-v: rgb(255, 234, 117); /*yellow*/
-    --uc-accent-vi: rgb(33, 70, 193); /*red*/
+    --uc-accent-i: rgb(198, 170, 232);
+    --uc-accent-ii: rgb(230, 230, 230); 
+    --uc-accent-iii: rgb(215, 218, 224); 
+    --uc-accent-iv: rgba(7, 7, 7,0.6);
+    --uc-accent-v: rgb(255, 254, 222); 
+    --uc-accent-vi: white;
     --uc-accent-vii: rgb(44, 55, 80); /*darker blue*/
     --uc-background-main: rgb(5, 5, 5);
     --uc-background-layered: rgba(10, 10, 10, 1);
     --uc-transparent: rgba(0,0,0,0);
     --uc-button-selected: rgba(27, 28, 29,1);
-    --uc-tab-selected-bg: rgba(19, 20, 24,1);
-    --uc-urlbar-background: rgba(7, 7, 7,1);
+    --uc-tab-selected-bg: rgba(14, 14, 18,1);
+    --uc-urlbar-background: rgba(14, 14, 18,1);
     --uc-panel-background: rgba(7, 7, 7, 0.95);
     --uc-panel-border: rgba(25, 25, 35, 1);
     --uc-panel-border-ii: rgba(35, 35, 45, 0.5);
@@ -50,7 +50,7 @@ Custom Background
     --urlbar-icon-border-radius: var(--uc-all-border-radius);
     --button-border-radius: 10px;
     --uc-button-border-radius: 10px;
-    --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(10,10,10,0.8);
+    --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(14,14,14,0.8);
     --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(10,10,10,0.8);
     --inactive-titlebar-opacity: 1 !important;
     --toolbox-non-lwt-bgcolor-inactive: ActiveCaption !important;
@@ -274,7 +274,7 @@ Custom Background
     }
     @media (-moz-platform: windows) {
         .titlebar-close:hover {
-            background-color: var(--uc-accent-vi) !important;
+            background-color: rgb(255,0,0) !important;
         }
     }
 }
@@ -323,7 +323,7 @@ Custom Background
     
 /* Custom Icons --------------------------------------------------------*/
  
-@media (-moz-bool-pref: "ultima.theme.icons") {  
+@media -moz-pref("ultima.theme.icons") {
     /*--extension menu--*/
     #main-window:not([lwtheme]) #unified-extensions-button {
       list-style-image: url("icons/extensions.svg") !important;
@@ -368,14 +368,34 @@ Custom Background
 /* Custom Background ----------------------------------------------------------*/    
  
 @media (prefers-color-scheme: dark) {
-#main-window:not([lwtheme]) #navigator-toolbox,
-#main-window:not([lwtheme]) #nav-bar {
-    transition: var(--ext-theme-background-transition) !important;
-    background-image: url(pic/midnight-ui.gif) !important;
-    background-repeat: repeat, no-repeat !important;
-    background-position: 115% 100% !important;
-}
 
+/* with animated background*/
+@media -moz-pref("user.theme.dark.midnight.animated") {
+    /* navbar partial background */
+    #main-window:not([lwtheme]) #nav-bar {
+        transition: var(--ext-theme-background-transition) !important;
+        background-image: url(pic/midnight-ui.gif) !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: 115% 100% !important;
+    }
+    /* verttabs partial background */   
+    #main-window:not([lwtheme]) #sidebar-main::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-image: url(pic/midnight-ui.gif) !important;
+        background-repeat: repeat-y !important;
+        background-position: 0 0 !important;
+        background-size: 75px 200px !important; /* From your previous setup */
+        opacity: 0.4 !important; /* Set desired opacity (0.0 to 1.0) */
+        z-index: -1 !important; /* Ensure it stays behind content */
+    }
+    #main-window:not([lwtheme]) #sidebar-main {transition: var(--ext-theme-background-transition) !important;}
+}
+/* findbar partial background */
 #main-window:not([lwtheme]) findbar {
     color: var(--toolbar-color) !important;
     color-scheme: var(--toolbar-color-scheme) !important;
@@ -383,8 +403,18 @@ Custom Background
     border-top: 0px !important;
     background-repeat: no-repeat, no-repeat !important;
     background-position: 100% 100% !important;
+} 
+
+/* navbar extended background */
+/*
+#main-window:not([lwtheme]) #navigator-toolbox,
+#main-window:not([lwtheme]) #nav-bar {
+    transition: var(--ext-theme-background-transition) !important;
+    background-image: url(pic/midnight-ui.gif) !important;
+    background-repeat: repeat, no-repeat !important;
+    background-position: 115% 100% !important;
 }
-      
+*/ 
 }
 
 
