@@ -129,6 +129,8 @@ user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"
 /* extra configs */
 user_pref("ultima.enable.nightly.config", false);
 user_pref("ultima.enable.js.config", false);
+user_pref("widget.windows.mica", true);
+user_pref("widget.windows.mica.popups", true);
 
 /* extra required */
 user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
