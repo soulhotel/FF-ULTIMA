@@ -1,0 +1,57 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Transform the extension menu into a compact icon-only view
+Sourced:           https://github.com/datguypiko/Firefox-Mod-Blur
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media -moz-pref("ultima.navbar.theme.extensionspanel") {
+
+    #unified-extensions-panel #unified-extensions-view {
+        width: 100% !important;
+    }
+
+    #unified-extensions-view {
+        --uei-icon-size: 22px; /* icon size */
+        --firefoxcss-number-of-extensions-in-a-row: 4; /* icons per row */
+    }
+
+    #unified-extensions-view .panel-header,
+    #unified-extensions-view .panel-header + toolbarseparator,
+    #unified-extensions-view .panel-subview-body + toolbarseparator,
+    #unified-extensions-view #unified-extensions-manage-extensions,
+    #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton,
+    #unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents {
+        display:none !important;
+    }
+    #unified-extensions-view .panel-subview-body {
+        padding:4px !important;
+    }
+    #unified-extensions-view .unified-extensions-item .unified-extensions-item-icon,
+    #unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack {
+        margin-inline-end: 0px !important;
+    }
+    #unified-extensions-view #overflowed-extensions-list,
+    #unified-extensions-view #unified-extensions-area,
+    #unified-extensions-view .unified-extensions-list {
+        display: grid !important;
+        grid-template-columns: repeat(var(--firefoxcss-number-of-extensions-in-a-row), auto);
+        justify-items: left !important;
+        align-items: left !important;
+    }
+    #unified-extensions-view .unified-extensions-list,
+    #unified-extensions-view .unified-extensions-list .unified-extensions-item {
+        max-width: max-content;
+    }
+    #unified-extensions-view #unified-extensions-area {
+        padding-bottom: 3px !important;
+        border-bottom: 1px solid #aeaeae33 !important;
+    }
+    #wrapper-edit-controls:is([place="palette"],
+    [place="panel"]) > #edit-controls, #wrapper-zoom-controls:is([place="palette"],
+    :is(panelview, #widget-overflow-fixed-list) .toolbaritem-combined-buttons {
+        margin: 0px !important;
+    }
+
+}

@@ -1,0 +1,51 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Context Menu Settings
+
+custom spacing
+restore unload tab option
+remove excess options
+
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* custom spacing -------------------------------------------------- */
+
+@media -moz-pref("ultima.spacing.compact.contextmenu") {
+    menupopup, menuitem {
+        --menuitem-padding: .15em .3em !important;
+    }
+}
+@media -moz-pref("ultima.spacing.relaxed.contextmenu") {
+    menupopup, menuitem {
+        --menuitem-padding: .55em .7em !important;
+    }
+}
+
+
+/* restore unload tab option --------------------------------------- */
+
+#context_unloadTab {
+  display: initial !important;
+}
+
+
+/* remove excess options ------------------------------------------- */
+
+#context-sep-screenshots,
+#context-sendimage,
+#context-sep-setbackground,
+#context-openlinkinusercontext-menu {
+display: none !important;}
+#context-pocket,
+#context-savelinktopocket,
+#tabContextMenu #context_duplicateTab,         
+#tabContextMenu #context_duplicateTabs,
+#tabContextMenu #context_bookmarkSelectedTabs,
+#context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"] {
+    display: none !important;
+}
+
+
+

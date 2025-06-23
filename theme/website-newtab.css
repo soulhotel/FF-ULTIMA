@@ -1,0 +1,566 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+ 
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         New Tab Page Overhaul, inspired by @hachikoharuno https://github.com/hachikoharuno/Beautiful-newtab-Firefox
+
+[Index: For ctrl+f a line to find a section]
+variables
+website shortcuts
+search bar & logo
+widgets
+context menu
+customize menu
+home sections
+latest activity
+recommended section
+awesome bar
+new tab rounded tweaks
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@import url('all-color-schemes-wallpapers.css');
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+
+/* variables ------------------------------------------------------------------- */     
+
+:root {
+    --uc-fixed-rounding: 18px;
+    --uc-rounded-border: 18px;
+    --uc-less-rounded-border: 12px;
+    --uc-evenless-rounded-border: 9px;
+    --mode-color: white;
+    --newtab-button-static-hover-background: transparent !important;
+    --button-background-color-ghost-hover: transparent !important;  
+}
+@media -moz-pref("ultima.xstyle.newtab.rounded") {
+    :root {
+        --uc-rounded-border: 100%;
+        --uc-less-rounded-border: 100%;
+        --uc-evenless-rounded-border: 12px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --newtab-background-color-secondary: color-mix(in srgb, var(--uc-browser-color) 5%, transparent) !important;
+        --newtab-element-hover-color:  rgba(265,265,265,0.2) !important;
+        --uc-panel-backgrounds: color-mix(in srgb, var(--uc-browser-color) 40%, transparent);
+        --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
+        --mode-color: var(--uc-text);
+    }
+}  
+@media (prefers-color-scheme: light) { 
+    :root{
+        --newtab-background-color-secondary: color-mix(in srgb, var(--uc-browser-color) 35%, transparent) !important;
+        --newtab-element-hover-color:  rgba(200,200,210,0.6) !important;
+        --uc-panel-backgrounds: color-mix(in srgb, var(--uc-browser-color) 60%, transparent);
+        --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
+        --mode-color: var(--uc-text);
+    }
+}  
+
+body {
+    --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+.section-title-container { visibility: hidden !important; }
+
+    
+/* website shortcuts ----------------------------------------------------------- */ 
+    
+/* site shortcuts style */  
+.top-site-outer .tile {
+    border-radius: var(--uc-rounded-border) !important;
+    background: var(--newtab-background-color-secondary) !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0) !important;
+    color: var(--mode-color) !important;
+    font-size: 32px !important;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.top-site-outer .tile .icon-wrapper {
+    border-radius: var(--uc-less-rounded-border) !important;
+}
+.top-site-outer .tile .icon-wrapper::before {
+    opacity: 0.7 !important;
+}
+.top-site-icon{background-color: transparent !important;}
+@media -moz-pref("ultima.xstyle.newtab.rounded") {.top-site-icon{background-color: var(--mode-color) !important;}}
+    
+/* force consistent size */    
+.top-site-outer .default-icon {
+    width: 101% !important;
+    height: 101% !important;
+    background-size: 75% !important;
+}
+
+/* show site title on hover */ 
+.outer-wrapper  .top-site-inner:hover .title,
+.outer-wrapper  .top-site-inner:hover .icon-pin-small {
+    opacity: 1 !important;
+}      
+.outer-wrapper  .top-site-inner .title,
+.outer-wrapper  .top-site-inner .icon-pin-small {
+    opacity: 0 !important;
+}
+    
+/* context menu */  
+.top-site-outer .context-menu-button {transform: scale(1.3);}
+.top-site-outer .context-menu-button:hover {transform: scale(1.7);}
+.top-site-outer .context-menu-button {
+    background-color: transparent !important;
+    border-radius: 50% !important;
+    inset-inline-end: -2px !important;
+    top: 0px !important;
+    transition: opacity 200ms;
+    border-radius: 80px !important;
+    fill: var(--mode-color) !important;
+}
+.top-site-outer .context-menu-button:is(:hover, :focus) {
+    background-color: color-mix(in srgb, var(--contrast-color), transparent) !important;
+    transition: opacity 200ms;
+    fill: var(--mode-color) !important;
+}
+    
+/* fine tuning */
+.top-site-outer .title {
+    font-weight: bold !important;
+    text-transform: capitalize !important;
+}
+@media -moz-pref("ultima.xstyle.newtab.labels") {
+    .top-site-outer .title span {
+        background: var(--newtab-background-color-secondary) !important;
+        filter: saturate(100%) !important;
+        backdrop-filter: blur(33px);
+        border-radius:18px !important;
+    }
+}
+.top-site-outer:hover .tile, .card-outer:hover .card { 
+    background-color: transparent !important;
+    transform: scale(1.15);
+}
+.top-site-outer:is(:focus-within) .tile, .card-outer:is(.active,:focus-within) .card{
+    background-color: transparent !important;
+    transform: scale(1.3);
+    box-shadow: none !important;
+}
+.top-site-outer:is(:focus-within) .title, .card-outer:is(.active,:focus-within) .card {
+    text-decoration: underline !important;
+    opacity:1 !important;
+}
+
+.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    background: transparent !important;
+}
+    
+    
+/* search bar & logo ----------------------------------------------------------- */
+
+.logo {display: none !important;}
+    
+/* spacing */  
+.search-wrapper .search-handoff-button, .search-wrapper input {
+    padding-inline-start: 0px !important;
+    padding-inline-end: 0px !important;
+}    
+.search-wrapper .logo-and-wordmark .wordmark {
+    width: 66vw !important;
+    fill: var(--mode-color) !important;
+}
+.logo-and-wordmark .wordmark {
+    width: 66vw !important;
+    fill: var(--mode-color) !important;
+}    
+.search-wrapper .logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }    
+.logo-and-wordmark .wordmark { margin-inline-start: 0 !important; }  
+    
+/* default style */    
+@media -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+    .search-inner-wrapper {
+        display: flex !important;
+        margin-top: 16px !important;
+        outline: none !important;
+        filter: saturate(140%) !important;
+        background-color: rgba(50, 50, 50, 0.1) !important;
+        border-radius: 18px !important;
+        box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+        backdrop-filter: blur(33px);
+        background-blend-mode: overlay;
+        height: auto !important;
+    }
+}       
+@supports -moz-bool-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"){
+.search-inner-wrapper:not(:focus){
+    background: var(--newtab-pinnedsites-background) !important;
+    backdrop-filter: blur(33px) !important;
+    filter: saturate(100%) !important;
+}}
+.search-inner-wrapper:not(:focus) input, .search-wrapper:not(:active) input:focus{
+    background-color: transparent !important;
+    backdrop-filter: blur(33px) !important;
+    filter: saturate(100%) !important;
+    border-radius: 34px !important;
+}
+.search-handoff-button{
+    border-color: transparent !important;
+    border-radius: 34px !important;
+    box-shadow: none !important;
+}
+.search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
+    outline: 1px solid var(--button-active-bgcolor) !important;
+    outline-offset: -1px !important;
+    border: transparent !important;
+    margin-left: 1px !important;
+    z-index: 1 !important;
+}
+.search-wrapper .search-button:focus, .search-wrapper .search-button:hover {
+    fill: var(--mode-color) !important;
+}
+.search-wrapper .search-inner-wrapper:active input,
+.search-wrapper input:focus {
+    box-shadow: none !important;
+}
+.search-handoff-button .fake-textbox { text-align: center !important;}
+.search-wrapper .search-handoff-button { filter: grayscale(100%); }
+
+browser[primary="true"][tabDialogShowing="true"],
+#main-window[window-modal-open="true"] > body > #browser{
+    filter: blur(10px)
+}
+
+@media (height > 700px) {
+body:not(.inline-onboarding) .fixed-search .search-wrapper {
+    background-color: rgba(50, 50, 50, 0.1)  !important;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+    backdrop-filter: blur(33px);
+    border-color: transparent !important;
+    min-height: 195px !important;
+}}
+
+    
+/* widgets --------------------------------------------------------------------- */ 
+
+.icon.icon-settings {opacity: 85% !important; color:var(--mod-color) !important}
+.personalize-button { /*! padding: 8px !important; */ border-radius:100% !important;}
+.personalize-button:hover {
+    background-color: transparent !important;
+    transform: scale(1.3);
+    cursor: pointer;
+}  
+.weatherCard {
+    border-radius: var(--uc-fixed-rounding) !important;
+    background: var(--newtab-background-color-secondary) !important;
+
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0) !important;
+    color: var(--mode-color) !important;
+}
+.weatherButtonContextMenuWrapper::after {
+    opacity:0 !important;
+}
+:root{--newtab-weather-background-color:var(--newtab-background-color-secondary) !important;}
+    
+    
+/* context menu ---------------------------------------------------------------- */ 
+
+/*default style*/    
+.context-menu {
+    background-color: var(--uc-panel-backgrounds)  !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
+    padding: 0.4rem 0.1em;
+    margin:1% 1% 0% 0% !important;
+    position: relative;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    display: flex;
+    line-height: 26px;
+}
+.context-menu > ul > li > button:is(:focus, :hover) {
+    border-radius: 5px !important;
+    background: var(--newtab-element-hover-color) !important;
+    color: var(--uc-accent-color-1) !important;
+}
+.weatherButtonContextMenu .context-menu {z-index: 1000 !important;} /*doesnt work its populated*/
+.weather .weatherSponsorText {display:none !important;}
+    
+/* spacing */    
+.context-menu > ul {
+    margin: 5px !important;
+    padding: 2px !important;
+}
+.context-menu > ul > li > a, .context-menu > ul > li > button {
+    line-height: 26px !important;
+    padding: 2px 5px !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
+    font-weight: normal !important;
+    color: var(--mode-color) !important;
+}  
+    
+/* consistent line heights */
+.context-menu > ul > li.separator {
+    display:flex !important;
+    border-bottom: none !important;
+    margin: 0px 0 !important;
+    font-size: flex !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1122px) and (max-width: 1506px) {
+.top-sites-list :nth-child(8n) .context-menu {
+    font-size: unset !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+}}
+
+    
+/* customize menu -------------------------------------------------------------- */ 
+ 
+.customize-menu.customize-animate-enter-done,
+.customize-menu.customize-animate-enter-active,
+.customize-menu.customize-animate-exit-active,
+.customize-menu.customize-animate-exit-done { 
+    box-shadow: 0 0px 15px rgb(0 0 0 / 35%) !important;
+}
+.customize-menu {
+    background-color: var(--newtab-background-color-secondary)  !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
+    position: relative;
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    margin: 10px 10px 10px 0px !important;
+    height: auto !important;
+    font-weight: normal !important;
+    box-shadow: unset !important;
+}
+.customize-menu .close-button {
+    border-radius: 8px !important;
+    background-color: transparent !important;
+}    
+.customize-menu .close-button:hover {
+    background-color: var(--newtab-element-hover-color) !important;
+}
+.customize-menu .close-button-wrapper {
+    background-color: transparent !important;
+}
+    
+/* home sections --------------------------------------------------------------- */ 
+
+.home-section .divider { border-top: unset !important; }
+
+.toggle-button, .selector {
+    cursor: pointer !important;
+}
+
+.home-section .section .selector {
+    border: none !important;
+    box-shadow: 3px 10px 15px rgb(0 0 0 / 20%) !important;
+    background: url("icons/down.svg") right no-repeat !important;
+    background-origin: content-box !important;
+}
+
+.home-section .section .selector {
+    background-color: var(--newtab-background-color-secondary) !important;
+    border-radius: 10px !important;
+}
+
+    
+/* latest activity ------------------------------------------------------------- */ 
+
+.card-outer .card {
+    filter: saturate(105%) !important;
+    border-radius: var(--uc-evenless-rounded-border) !important;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+    backdrop-filter: blur(33px);
+    height: auto !important;
+}
+.compact-cards .card-outer .card-context {
+    background-color: transparent !important;
+    border-radius: 18px;
+    clip-path: inset(-1px -1px 4px);
+    height: 32px;
+    width: 32px;
+    padding: 8px;
+    top: 108px !important;
+    inset-inline-end: 3px !important;
+    inset-inline-start: auto;
+}
+.ds-highlights .section .section-list .card-outer .card-host-name {
+    text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
+    color: var(--mode-color) !important;
+}
+.card-outer:not(.placeholder) .card-title {
+    text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
+}
+.card-outer:is(:hover, :focus, :active, :focus-within, .active):not(.placeholder) .card-title, 
+.card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
+    --newtab-primary-action-background: blue !important;
+    color: var(--mode-color) !important;
+    text-shadow: 1px -1px 2px color-mix(in srgb, var(--contrast-color) 60%, transparent) !important;
+    text-decoration: underline !important;
+}
+.compact-cards .card-outer .card-context>.card-context-icon {
+    fill: var(--mode-color) !important;
+    opacity: 0.7 !important;
+}
+
+
+.card-outer .context-menu-button, .card-outer .context-menu-button:active, .card-outer .context-menu-button:focus{
+    margin-top: -5px !important;
+    margin-right: -5px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    transition-delay: 0ms !important;
+    background-image: url("icons/more.svg") !important;
+}
+
+.card-outer .context-menu-button { box-shadow: unset !important; }
+
+    
+/* recommended section --------------------------------------------------------- */ 
+
+.ds-card .meta {
+    filter: saturate(140%) !important;
+    background-color: var(--newtab-background-color-secondary)  !important;
+    backdrop-filter: blur(33px);
+    height: auto !important;
+}
+
+.ds-onboarding-container:not(.placeholder), .ds-card-grid .ds-card:not(.placeholder) {
+    border-radius: 18px !important;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+    background-color: transparent !important;
+}
+.ds-onboarding-container:not(.placeholder) .img-wrapper .img img,
+.ds-onboarding-container:not(.placeholder) .img-wrapper .img .placeholder-image,
+.ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img img,
+.ds-card-grid .ds-card:not(.placeholder) .img-wrapper .img .placeholder-image {
+    border-radius: 16px 16px 0 0 !important;
+}
+
+.ds-card .context-menu-button, .ds-signup .context-menu-button {
+    background-color: transparent !important;
+    fill: var(--mode-color) !important;
+    margin-top:-10px !important;
+    transform: scale(1.2) !important;
+    }
+.ds-card .context-menu-button:hover, .ds-signup .context-menu-button:hover {
+    transform: scale(1.7) !important;
+}
+
+ 
+/* awesome bar ----------------------------------------------------------------- */ 
+
+@media not -moz-pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar") {
+
+    :root{
+        --newtab-border-color:rgba(120,120,120,0.1) !important;
+        --newtab-text-secondary-color: var(--mode-color) !important;
+    }
+    /* hide website shortcuts when focused on awesome bar */
+    @media -moz-pref("browser.newtabpage.activity-stream.showSearch") {
+    .top-site-outer {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+     body:has(#searchSuggestionTable[hidden]) .top-site-outer {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    } 
+    }
+    /* style awesome bar */
+    .search-wrapper .search-handoff-button, .search-wrapper input {
+        background: var(--newtab-background-color-secondary) !important;
+        width: 100% !important;
+        margin-left: 0% !important;
+        text-align: center !important;
+    }
+    #newtab-search-text[keepfocus="true"]{
+        background-color:transparent !important;
+        appearance:none !important;
+    }
+    #searchSubmit {
+        border-radius: 100% !important;
+    }
+    #searchSuggestionTable {
+        background-color: var(--newtab-background-color-secondary) !important;
+        border-radius: 18px !important;
+        padding: 0.6rem !important;
+        position: fixed;
+        top:55px !important;
+        backdrop-filter: blur(150px) !important;
+        background-blend-mode: overlay !important;
+        z-index:999 !important;
+        *:not(.contentSearchSuggestionTable .contentSearchSettingsButton) {border: 0 transparent solid !important;}
+    } 
+
+    #searchSuggestionTable .contentSearchSuggestionRow:hover {
+        background-color: transparent !important;
+        cursor:pointer !important;
+    }
+    #searchSuggestionTable .contentSearchSuggestionEntry {
+        background-color:transparent !important;
+        &:hover{background-color: var(--newtab-element-hover-color) !important;}
+    }
+    #searchSuggestionTable .contentSearchSuggestionEntry {
+        padding: 8px 0 8px 0 !important;
+    }
+    #searchSuggestionTable td:hover {
+        background-color:transparent !important;
+        border-radius:10px !important;
+    }  
+    /*default search header*/
+    .contentSearchSuggestionTable .contentSearchHeader {
+        padding: 12px 0 12px 0 !important;
+        border-radius:18px !important;
+        margin-top:10px !important;
+        &:hover{cursor:pointer;text-decoration: underline;}
+    }
+    /*search with search engine suggestions container*/
+    .contentSearchSuggestionTable .contentSearchOneOffsTable {
+        border-top: solid 10px transparent !important;
+        background-color: transparent !important;
+    } 
+    /*search engine buttons*/
+    .contentSearchSuggestionTable .contentSearchOneOffItem {
+        border-radius:18px !important;
+        &:hover{cursor: pointer;}
+    }
+    /*search settings button*/
+    .contentSearchSuggestionTable .contentSearchSettingsButton {
+        border-radius:10px !important;
+        background-color: transparent !important;
+        padding-bottom: 25px !important;
+        &:hover{text-decoration: underline;cursor:pointer; background-color: var(--newtab-element-hover-color) !important;}
+    }
+}
+
+
+/* new tab rounded tweaks ------------------------------------------------------ */
+    
+@media -moz-pref("ultima.xstyle.newtab.rounded") {
+    .wallpaper-input {
+        border-radius: var(--uc-fixed-rounding) !important;
+    }
+    .search-inner-wrapper {    
+        border-radius: 50px !important;
+    }    
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+} /*fin*/

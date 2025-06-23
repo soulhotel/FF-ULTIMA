@@ -1,0 +1,41 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Handle Configurations for Nightly, Autoconfig, ...
+Wiki:              Todo
+
+Nightly Configurations
+Autoconfig Configurations
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Nightly Configurations (quick patches specific to nightly) ----------------------------------------------- */
+
+@media -moz-pref("ultima.enable.nightly.config") {
+
+
+    
+} /*end nightly*/
+
+
+/* Autoconfig Configurations -------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.enable.js.config") {
+
+#navigator-toolbox[movingtab] > #nav-bar {
+  pointer-events: auto !important;
+}
+    
+} /*end js*/
+
+@media not -moz-pref("ultima.enable.js.config") {
+    
+#navigator-toolbox[movingtab] > #nav-bar {
+  pointer-events: auto !important;
+}
+    
+} /*end js*/
+
+  
+
