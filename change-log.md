@@ -32,7 +32,7 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
 - `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
-- `new • 🟢 •` Setting `user.theme.transparent` supports Transparent/Blurry/Mica Windows. Learn more here(createwiki)
+- `new • 🟢 •` Setting `user.theme.transparent` supports Transparent/Blurry/Mica Windows. Learn more [here](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 - `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
 - `qol • 🟡 •` Theme size reduced by 7mb
 - `qol • 🟡 •` Total File(s) number reduced by 10
