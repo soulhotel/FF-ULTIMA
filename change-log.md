@@ -34,6 +34,7 @@
 - `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed.
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
 - `new • 🟢 •` Setting `user.theme.transparent` supports Transparent/Blurry/Mica Windows. Learn more here(createwiki).
+- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements.
 - `qol • 🟡 •` All `user.theme` preferences renamed.
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`.
 - `qol • 🟡 •` Creating Color Schemes just became a lot easier. Learn more here(updatewiki).
