@@ -31,17 +31,18 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
-- `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed.
+- `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
-- `new • 🟢 •` Setting `user.theme.transparent` supports Transparent/Blurry/Mica Windows. Learn more here(createwiki).
-- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements.
-- `qol • 🟡 •` All `user.theme` preferences renamed.
-- `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`.
-- `qol • 🟡 •` Creating Color Schemes just became a lot easier. Learn more here(updatewiki).
-- `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors.
-- `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it.
+- `new • 🟢 •` Setting `user.theme.transparent` supports Transparent/Blurry/Mica Windows. Learn more here(createwiki)
+- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements
+- `qol • 🟡 •` Theme size reduced by 7MiB
+- `qol • 🟡 •` All `user.theme` preferences renamed
+- `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
+- `qol • 🟡 •` Creating Color Schemes just became a lot easier. Learn more here(updatewiki)
+- `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
+- `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
 - `qol • 🟡 •` Ublock Origin extension panel now automatically adjust to color scheme e1ddb8c
-- `qol • 🟡 •` Setting `ultima.xstyle.sidebar.theming` deleted. It is now handled automatically via color schemes.
+- `qol • 🟡 •` Setting `ultima.xstyle.sidebar.theming` deleted. It is now handled automatically via color schemes
 - `qol • 🟡 •` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
 - `fyi • ℹ️ •` Delete Settings: ultima.xstyle.sidebar.theming | user.theme.adaptive | user.theme.dark. | user.theme.light.
 <!--
