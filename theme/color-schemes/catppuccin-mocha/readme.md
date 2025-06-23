@@ -1,7 +1,7 @@
 ```
 FF ULTIMA
 Catppuccin  Mocha Edition
-By @Draff
+By Draff @ItsLogic
 ```
 
 To use this color scheme:
