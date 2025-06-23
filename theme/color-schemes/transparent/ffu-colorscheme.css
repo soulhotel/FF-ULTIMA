@@ -289,9 +289,10 @@ Custom Icons
         border-radius:9px !important;
     }
     & #tabbrowser-tabs[orient="vertical"] {backdrop-filter: blur(25px);}
-    & #sidebar-main[sidebar-launcher-expanded] {
-        background: var(--uc-blur-layer) !important;
-    } 
+    &[sidebar-expand-on-hover=""] #sidebar-main[sidebar-launcher-expanded] {
+            background: var(--uc-blur-layer) !important;
+        }
+    }
     & #tabbrowser-tabs[orient="vertical"][overflow]::after {
       content: none !important;
     }
