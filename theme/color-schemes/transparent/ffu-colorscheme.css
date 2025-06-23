@@ -159,6 +159,7 @@ Custom Icons
     --panel-banner-item-hover-bgcolor: var(--uc-button-selected) !important;
     --short-notification-background: var(--uc-accent-color-2) !important;
     --panel-border-color: var(--uc-panel-border) !important;
+    --panel-separator-color: var(--uc-layered-background) !important;
     --organizer-toolbar-background: var(--uc-accent-color-4) !important;
     --organizer-pane-background: var(--uc-accent-color-4) !important;
     --organizer-content-background: var(--uc-accent-color-4) !important;
