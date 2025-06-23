@@ -1,12 +1,12 @@
-### <ins> FF Ultima Version 2.8 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.8/ffultima2.8.zip)**
+### <ins> FF Ultima Version 2.9 Release
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.9/ffultima2.9.zip)**
 - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- 2.8 could possibly wait a month or two for release. As long as there are no major Firefox changes coming up.
+- Version skip
 - This is a big *quality of life* update. With a full restructure of source files, based on naming scheme & categoric organization. It improves stability & readibility. Also has some major improvements for Color Scheme handling.
 - User.js (recommended) not required.
 - Firefox 138+ required.
@@ -34,8 +34,9 @@
 - `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
 - `new • 🟢 •` Setting `user.theme.transparent` supports Transparent/Blurry/Mica Windows. Learn more here(createwiki)
-- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements
-- `qol • 🟡 •` Theme size reduced by 7MiB
+- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
+- `qol • 🟡 •` Theme size reduced by 7mb
+- `qol • 🟡 •` Total File(s) number reduced by 10
 - `qol • 🟡 •` All `user.theme` preferences renamed
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
 - `qol • 🟡 •` Creating Color Schemes just became a lot easier. Learn more here(updatewiki)
