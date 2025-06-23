@@ -23,7 +23,7 @@ Custom Icons
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       #2A2A37);
+    --uc-tab-selected:       #2A2A37;
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    #363646;
     --uc-button-red:         #f54e4e;
