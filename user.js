@@ -133,6 +133,7 @@ user_pref("widget.windows.mica", true);
 user_pref("widget.windows.mica.popups", 1);
 user_pref("widget.windows.mica.toplevel-backdrop", 2);
 user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
+user_pref("browser.tabs.allow_transparent_browser", true);
 
 /* extra required */
 user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
