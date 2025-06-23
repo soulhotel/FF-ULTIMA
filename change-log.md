@@ -33,7 +33,7 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
 - `new • 🟢 •` Setting `user.theme.transparent` supports Mica or Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 - `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
-- `qol • 🟡 •` Theme size reduced by 14mb
+- `qol • 🟡 •` Theme size reduced by 7mb
 - `qol • 🟡 •` Total File(s) number reduced by 10
 - `qol • 🟡 •` There are now a total of 16 color schemes.
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
