@@ -109,13 +109,13 @@ Custom Icons
     --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
     --urlbarView-highlight-background: var(--uc-button-selected) !important;
     --urlbarView-hover-background: var(--uc-button-selected) !important;
+    --urlbar-box-focus-bgcolor: var(--uc-button-selected) !important;
     --urlbar-box-hover-bgcolor: var(--uc-button-selected) !important;
     --urlbar-box-hover-text-color: var(--uc-text) !important;
-    --urlbar-icon-border-radius: var(--uc-all-border-radius);
+    --urlbar-icon-border-radius: var(--uc-button-border-radius);
     --arrowpanel-menuitem-border-radius: var(--uc-all-border-radius);
     --arrowpanel-border-radius: var(--uc-all-border-radius);
-    --toolbarbutton-border-radius: var(--uc-all-border-radius);
-    --urlbar-icon-border-radius: var(--uc-all-border-radius);
+    --toolbarbutton-border-radius: var(--uc-button-border-radius);
     --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
     --menuitem-border-radius: var(--uc-button-border-radius) !important;
     --button-border-radius: var(--uc-button-border-radius) !important;
