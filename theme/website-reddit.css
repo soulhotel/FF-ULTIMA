@@ -12,7 +12,9 @@ File Desc:         userContent theming Reddit
         :root:not(.theme-light) .theme-beta, :root:not(.theme-light).theme-beta, * {
             /*--main body background--*/
             --color-neutral-background: #090913 !important;
-            --color-neutral-background: #090913 !important;
+            --color-neutral-background: var(--uc-layered-background) !important;
+            @media -moz-pref("user.theme.0.default") {--color-neutral-background: #090913 !important;}
+            @media -moz-pref("user.theme.kanagawa-wave") {--color-neutral-background: #090913 !important;}
             /*--global 🟠 orange--*/
             --color-global-orangered: #5268bb !important;
             --color-brand-background: #5268bb !important;
@@ -81,6 +83,7 @@ File Desc:         userContent theming Reddit
             /*--main body background--*/
             --color-neutral-background: rgb(35,45,75) !important;
             --color-neutral-background-hover: red !important;
+            @media -moz-pref("user.theme.gruvbox") {--color-neutral-background: rgb(40, 40, 45) !important;}
             /*--global 🟠 orange--*/
             --color-global-orangered: #5268bb !important;
             --color-brand-background: #5268bb !important;
