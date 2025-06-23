@@ -132,6 +132,7 @@ user_pref("ultima.enable.js.config", false);
 user_pref("widget.windows.mica", true);
 user_pref("widget.windows.mica.popups", 1);
 user_pref("widget.windows.mica.toplevel-backdrop", 2);
+user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
 
 /* extra required */
 user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
