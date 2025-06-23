@@ -35,6 +35,7 @@ Custom Icons
 @media not -moz-pref("user.theme.scarlet") {
 
 @media (prefers-color-scheme: dark) { :root {
+    --uc-placeholder-this-element-needs-blur: rgba(75, 75, 95,0.5);
     color-scheme: dark !important;
     --uc-browser-color:      transparent;
     --uc-text:               rgb(255, 255, 255);
@@ -45,14 +46,14 @@ Custom Icons
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       rgba(35, 35, 42,0.5);
+    --uc-tab-selected:       rgba(35, 35, 42,0.3);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --uc-button-selected:    rgba(25, 25, 35, 0.5);
+    --uc-button-selected:    rgba(35, 35, 42,0.4);
     --uc-button-red:         #f54e4e;
-    --uc-context-menu:       var(--uc-layered-background);
-    --uc-panel-background:   var(--uc-layered-background);
+    --uc-context-menu:       var(--uc-placeholder-this-element-needs-blur);
+    --uc-panel-background:   var(--uc-placeholder-this-element-needs-blur);
     --uc-panel-border:       rgba(25, 25, 25, 0.5);
-    --uc-panel-border-2:    rgba(45, 45, 45, 0.5);
+    --uc-panel-border-2:     rgba(1, 1, 1, 0.3);
     --uc-accent-color-1:     #EDF783;
     --uc-accent-color-2:     rgb(90, 121, 156);
     --uc-accent-color-3:     white;
@@ -66,30 +67,31 @@ Custom Icons
 }}
 
 @media (prefers-color-scheme: light) { :root {
+    --uc-placeholder-this-element-needs-blur: rgba(75, 75, 95,0.5)
     color-scheme: light !important;
     --uc-browser-color:      transparent;
     --uc-text:               rgb(45, 45, 45);
-    --uc-layered-background: rgba(244, 244, 255,0.5);
+    --uc-layered-background: rgba(35, 35, 42,0.2);
     --uc-navbar-background:  var(--toolbar-bgcolor);
     --uc-urlbar-background:  var(--uc-layered-background);
     --uc-findbar-background: var(--uc-layered-background);
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       rgba(35, 35, 42,0.6);
+    --uc-tab-selected:       rgba(35, 35, 42,0.5);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --uc-button-selected:    rgb(220, 220, 255);
+    --uc-button-selected:    rgba(35, 35, 42,0.4);
     --uc-button-red:         #f54e4e;
     --uc-context-menu:       white;
     --uc-panel-background:   white;
-    --uc-panel-border:       rgba(125, 125, 125, 0.4);
-    --uc-panel-border-2:    rgba(125, 125, 125, 0.3);
-    --uc-accent-color-1: rgb(108, 152, 255);
-    --uc-accent-color-2: rgba(144,144,200,0.8);
-    --uc-accent-color-3: black;
-    --uc-accent-color-4: rgba(37, 59, 111, 0.05);
-    --uc-accent-color-5: rgb(108, 152, 255);
-    --uc-accent-color-6: rgb(203, 203, 204);
+    --uc-panel-border:       rgba(25, 25, 25, 0.5);
+    --uc-panel-border-2:     rgba(1, 1, 1, 0.3);
+    --uc-accent-color-1:     rgb(108, 152, 255);
+    --uc-accent-color-2:     rgba(144,144,200,0.8);
+    --uc-accent-color-3:     black;
+    --uc-accent-color-4:     rgba(37, 59, 111, 0.05);
+    --uc-accent-color-5:     rgb(108, 152, 255);
+    --uc-accent-color-6:     rgb(203, 203, 204);
     --uc-transparent:        rgba(0,0,0,0);
     --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.5);
     --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
@@ -133,10 +135,11 @@ Custom Icons
     --urlbarView-hover-background: var(--uc-button-selected) !important;
     --urlbar-box-hover-bgcolor: var(--uc-button-selected) !important;
     --urlbar-box-hover-text-color: var(--uc-text) !important;
-    --urlbar-icon-border-radius: var(--uc-button-border-radius) !important;
-    --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --urlbar-icon-border-radius: var(--uc-all-border-radius);
+    --arrowpanel-menuitem-border-radius: var(--uc-all-border-radius);
     --arrowpanel-border-radius: var(--uc-all-border-radius);
-    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --toolbarbutton-border-radius: var(--uc-all-border-radius);
+    --urlbar-icon-border-radius: var(--uc-all-border-radius);
     --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
     --menuitem-border-radius: var(--uc-button-border-radius) !important;
     --button-border-radius: var(--uc-button-border-radius) !important;
@@ -255,6 +258,13 @@ Custom Icons
         color: var(--uc-accent-color-5) !important;
     }
 }
+:root {
+  --sidebar-box-border-color: none !important;
+  --sidebar-box-border-width: 0 !important;
+  --sidebar-box-border: none !important;
+  --sidebar-box-background: var(--uc-layered-background) !important;
+  --sidebar-box-color: none !important;
+}
 /*sidebar check boxes*/
 @layer input-common { #input {
     accent-color: var(--uc-accent-color-5) !important;
@@ -264,9 +274,12 @@ Custom Icons
     
 #main-window:not([lwtheme]) {
     /* vert tabs background*/
-    #sidebar-main {
-        background:var(--uc-tabsbar-background) !important;
+    & #sidebar-main {
+        background: var(--uc-tabsbar-background) !important;
     }
+    & #sidebar-main[sidebar-launcher-expanded] {
+        background: var(--uc-placeholder-this-element-needs-blur) !important;
+    }    
     /* tabs container background */
     & #tabbrowser-tabs {
         background: transparent !important;
