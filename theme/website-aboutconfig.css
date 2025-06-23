@@ -150,12 +150,7 @@ body::after {
     #toolbar::after {
         content: "\ ultima.xstyle.sidebar.theming is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
         display: block;
-    } 
-}
-@media -moz-pref("ultima.xstyle.sidebar.theming") {
-    #toolbar::after {
-        content: "\ ultima.xstyle.sidebar.theming is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
-        display: block;
+        background-image: url(icons/oldsettings.gif);
     } 
 }
 @media -moz-pref("user.theme.dark.a"), -moz-pref("user.theme.light.a"), -moz-pref("user.theme.light.gruvbox"), -moz-pref("user.theme.dark.gruvbox"),
