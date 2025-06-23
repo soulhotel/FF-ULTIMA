@@ -20,14 +20,13 @@
 
 >
 
-- Returning Users: The settings below have been renamed... Updating is fine without deleting these, but to avoid confusion... You should remove them from your list of options. Here's how:
+- Returning Users: To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you if a setting is old/deleted/renamed. And the theme will work as usually.
 
-<img src="https://github.com/user-attachments/assets/68f4b89d-c5bd-401c-b0b4-8a372b1b5e9c" width="60%" /> <img src="https://github.com/user-attachments/assets/5dfaa05b-d838-4f5b-9883-148708ba714a" width="38%" />
+https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
+
+<img src="https://github.com/user-attachments/assets/5dfaa05b-d838-4f5b-9883-148708ba714a" width="50%" />
 
 </details>
-
-
-
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
