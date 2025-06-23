@@ -172,4 +172,23 @@ progress bar container width (set inline) needs to be overwritten to fit mini-pl
 */
 
 
+@media -moz-pref("user.theme.transparent") {
+    html[dark] {
+        background-color: transparent !important;
+    }
+    :root { 
+        --yt-spec-base-background: transparent !important;
+        --yt-spec-base-background: transparent !important;
+    }
+   .ytSearchboxComponentInputBoxDark {
+       background-color: var(--uc-layered-background) !important;
+       backdrop-filter: blur(17px);
+    }
+    .ytSearchboxComponentSuggestionsContainer {
+        background-color: rgb(60,60,69,1) !important;
+    }
+    #background.ytd-masthead {
+      background: rgba(1,1,1,0.1) !important;
+      backdrop-filter: blur(5px);
+    }
 }
