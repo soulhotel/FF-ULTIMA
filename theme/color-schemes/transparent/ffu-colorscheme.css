@@ -35,11 +35,11 @@ Custom Icons
 @media not -moz-pref("user.theme.scarlet") {
 
 @media (prefers-color-scheme: dark) { :root {
-    --uc-placeholder-this-element-needs-blur: rgba(75, 75, 95,0.5);
     color-scheme: dark !important;
     --uc-browser-color:      transparent;
     --uc-text:               rgb(255, 255, 255);
     --uc-layered-background: rgba(35, 35, 42,0.2);
+    --uc-blur-layer:         rgba(35, 35, 42,0.1);
     --uc-navbar-background:  var(--toolbar-bgcolor);
     --uc-urlbar-background:  var(--uc-layered-background);
     --uc-findbar-background: var(--uc-layered-background);
@@ -50,10 +50,10 @@ Custom Icons
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    rgba(35, 35, 42,0.4);
     --uc-button-red:         #f54e4e;
-    --uc-context-menu:       var(--uc-placeholder-this-element-needs-blur);
-    --uc-panel-background:   var(--uc-placeholder-this-element-needs-blur);
-    --uc-panel-border:       rgba(25, 25, 25, 0.5);
-    --uc-panel-border-2:     rgba(1, 1, 1, 0.3);
+    --uc-context-menu:       var(--uc-layered-background);
+    --uc-panel-background:   var(--uc-layered-background);
+    --uc-panel-border:       rgba(25, 25, 25, 0.2);
+    --uc-panel-border-2:     rgba(1, 1, 1, 0.2);
     --uc-accent-color-1:     #EDF783;
     --uc-accent-color-2:     rgb(90, 121, 156);
     --uc-accent-color-3:     white;
@@ -192,13 +192,21 @@ Custom Icons
 /* URL Bar --------------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    & #urlbar[open] {
-        box-shadow: var(--uc-box-shadow) !important;
+    & #urlbar-background {backdrop-filter: blur(220px);}
+    & #urlbar:not([open]) {
+        & #urlbar-background, & #searchbar {
+            background-color: var(--uc-urlbar-background) !important;
+            border-radius: var(--uc-button-border-radius) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
     }
     & #urlbar-background, & #searchbar,
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
-        background-color: var(--uc-urlbar-background) !important;
+        background-color: var(--uc-blur-layer) !important;
         border-radius: var(--uc-button-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & #urlbar[open] {
         box-shadow: var(--uc-box-shadow) !important;
     }
     & #urlbar[open] > #urlbar-background {
@@ -277,10 +285,16 @@ Custom Icons
     /* vert tabs background*/
     & #sidebar-main {
         background: var(--uc-tabsbar-background) !important;
+        backdrop-filter: blur(17px);
+        border-radius:9px !important;
     }
+    & #tabbrowser-tabs[orient="vertical"] {backdrop-filter: blur(25px);}
     & #sidebar-main[sidebar-launcher-expanded] {
-        background: var(--uc-placeholder-this-element-needs-blur) !important;
-    }    
+        background: var(--uc-blur-layer) !important;
+    } 
+    & #tabbrowser-tabs[orient="vertical"][overflow]::after {
+      content: none !important;
+    }
     /* tabs container background */
     & #tabbrowser-tabs {
         background: transparent !important;
@@ -325,7 +339,9 @@ Custom Icons
         background-color: var(--uc-tabsbar-background) !important;
         color: var(--uc-text) !important;
         width: 225px !important;
-        border: 1px solid var(--uc-panel-border) !important;
+        border: 0px solid var(--uc-panel-border) !important;
+        backdrop-filter: blur(17px);
+        appearance: menupopup !important;
     }
 }
 
@@ -404,6 +420,14 @@ Custom Icons
     & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
 }   
 
+.dialogBox {
+    backdrop-filter: blur(30px) !important;
+    box-shadow: var(--uc-box-shadow) !important;
+}
+#window-modal-dialog::backdrop {
+    background: none !important;
+}    
+    
 /* Context Menu ---------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
@@ -468,6 +492,312 @@ Custom Icons
     }
 }
 
+.urlbarView,
+#browser:not(.browser-toolbox-background),
+#urlbar-results,
+#urlbar,
+browser#sidebar,
+menupopup,
+tooltip,
+window#webextpanels-window,
+slot[part="content"] {
+  background-color: transparent !important;
+  appearance: menupopup !important;
+  --panel-shadow-margin: 0px !important;
+}    
+
+.dialogFrame,
+#statuspanel-label {
+  backdrop-filter: blur(20px) brightness(90%) saturate(112%) !important;
+  background-color: transparent !important;
+}    
+/* external windows */
+/* make about dialog background transparent */
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml")
+{
+  #aboutDialog,
+  #aboutDialogContainer {
+    background: transparent !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    #clientBox,
+    #bottomBox {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+    }
+  }
+  #rightBox {
+    -moz-context-properties: fill !important;
+  }
+
+  @media (prefers-color-scheme: light) {
+    .text-link {
+      color: color-mix(in srgb, AccentColor 80%, black) !important;
+    }
+
+    .text-link:hover {
+      color: color-mix(in srgb, AccentColor 65%, black) !important;
+    }
+
+    .text-link:hover:active {
+      color: color-mix(in srgb, AccentColor 50%, black) !important;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-link {
+      color: color-mix(in srgb, AccentColor 80%, white) !important;
+    }
+
+    .text-link:hover {
+      color: color-mix(in srgb, AccentColor 65%, white) !important;
+    }
+
+    .text-link:hover:active {
+      color: color-mix(in srgb, AccentColor 50%, white) !important;
+    }
+  }
+}
+
+/* make abuse-report-frame dialog background transparent */
+@-moz-document url("chrome://mozapps/content/extensions/abuse-report-frame.html")
+{
+  ul.abuse-report-reasons > li > label {
+    grid-template-columns: unset !important;
+    grid-template-rows: unset !important;
+    width: unset !important;
+    line-height: unset !important;
+  }
+
+  html.dialog-window {
+    background-color: var(--in-content-page-background) !important;
+  }
+
+  .abuse-report-buttons {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* make alert dialog background transparent */
+@-moz-document url("chrome://global/content/alerts/alert.xhtml")
+{
+  #alertNotification {
+    background: transparent !important;
+    padding-top: 8px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-bottom: 12px !important;
+  }
+  #alertBox {
+    padding: 8px !important;
+    background-clip: padding-box !important;
+    background-image: none !important;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.32) !important;
+  }
+}
+
+/* make createProfileWizard dialog background transparent */
+@-moz-document url("chrome://mozapps/content/profile/createProfileWizard.xhtml")
+{
+  .wizard-header {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    height: 40px !important;
+    vertical-align: middle;
+  }
+  .wizard-header-label {
+    margin: 5.75px 12px 0px 12px !important;
+  }
+  .wizard-buttons-separator {
+    display: none !important;
+  }
+  .wizard-next-deck {
+    margin-left: 10px !important;
+  }
+}
+
+/* make commonDialog background transparent */
+@-moz-document url("chrome://global/content/commonDialog.xhtml")
+{
+  window,
+  #commonDialogWindow {
+    background: transparent !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    window[title="Incoming Connection"] #commonDialog[windowtype="prompt:confirmEx"] {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+    }
+    #commonDialog {
+      background-color: var(--in-content-page-background);
+    }
+  }
+  #checkbox {
+    margin-left: 23px !important;
+  }
+  #infoIcon {
+    -moz-context-properties: fill !important;
+    fill: var(--uwp-global-front) !important;
+  }
+  button[dlgtype="extra1"][label="Disable"] {
+    display: none;
+  }
+}
+
+/* make datepicker dialog use accent color */
+@-moz-document url("chrome://global/content/datepicker.xhtml")
+{
+  body {
+    background: transparent;
+    --selected-fill-color: AccentColor !important;
+  }
+  .spinner {
+    scrollbar-width: thin !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    /*     {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+      background-repeat: repeat !important;
+    } */
+  }
+}
+
+/* make exceptionDialog background transparent */
+@-moz-document url("chrome://pippki/content/exceptionDialog.xhtml")
+{
+  #exceptiondialog {
+    background-color: black !important;
+  }
+  .dialog-content-box {
+    color: white !important;
+  }
+  caption {
+    background-color: transparent !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+  vbox > image {
+    display: none !important;
+  }
+  #locationGroupBox {
+    margin-top: 5px !important;
+  }
+}
+
+/* make library & download window background transparent */
+@-moz-document url("chrome://browser/content/places/places.xhtml")
+{
+  #placesList,
+  #detailsPane,
+  #placesPopupset,
+  #placesToolbox,
+  #placesToolbar,
+  #downloadsListBox,
+  #placeContent,
+  #placesContentTags,
+  #placesContentTitle,
+  #placesContentUrl,
+  #places {
+    background-color: transparent !important;
+    border: 0.5px !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    #placesToolbar,
+    #placesList,
+    #contentView {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+    }
+  }
+  #infoBox {
+    border-top: 1px solid var(--arrowpanel-border-color-mica) !important;
+  }
+  #placesView > splitter {
+    border-inline-end: 1px solid var(--arrowpanel-border-color-mica) !important;
+  }
+  #infoBox {
+    border-top: 1px solid var(--arrowpanel-border-color-mica) !important;
+  }
+}
+
+@-moz-document url("chrome://browser/content/pageinfo/pageInfo.xhtml")
+{
+  #main-window {
+    background: transparent !important;
+  }
+  /* Change Header Size */
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    #topBar,
+    #mainDeck {
+      color: lightgray !important;
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+      border: none !important;
+    }
+  }
+  #permHostBox > label {
+    margin-top: 7px !important;
+  }
+  #permList {
+    border: none !important;
+    -moz-appearance: none !important;
+  }
+  #feedListbox {
+    border: none !important;
+    -moz-appearance: none !important;
+  }
+  #feedListbox > richlistitem {
+    padding-inline-start: 0px !important;
+    padding-inline-end: 0px !important;
+  }
+  #feedListbox richlistitem:not([selected="true"]) {
+    border-bottom: 0px !important;
+  }
+  .text-link {
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+  }
+  .permission {
+    border: none !important;
+  }
+  .permission:hover {
+    background-color: #191919 !important;
+    color: white !important;
+  }
+  .permission:hover:active {
+    background-color: #333333 !important;
+  }
+  caption {
+    background-color: transparent !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+  #imagecontainerbox {
+    background-color: black !important;
+    border: none !important;
+  }
+  #viewGroup > radio {
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+    padding-top: 9.5px !important;
+    padding-bottom: 9.5px !important;
+  }
+  #viewGroup > radio[selected="true"] {
+    background-color: transparent !important;
+    border-bottom: 3px solid AccentColor;
+    padding-bottom: 6.5px !important;
+  }
+  #viewGroup > radio > .radio-label-box {
+    outline: none !important;
+    color: var(--arrowpanel-color);
+  }
+  #viewGroup > radio:hover {
+    background-color: rgb(60, 60, 60) !important;
+    color: white !important;
+  }
+}    
+    
 }}}}}}}
 
 
