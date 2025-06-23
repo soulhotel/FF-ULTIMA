@@ -8,7 +8,7 @@ To use this color scheme:
 - Navigate to `about:config` page.
 - Search for `user.theme`.
 - Turn on `user.theme.transparent`
-- Make sure this is the only user.theme selected.
+- Make sure this is the only user.theme selected. Learn how to set up Mica or blur [here](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming)
 - Enjoy.
 
 Preview:
