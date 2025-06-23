@@ -51,12 +51,19 @@
 `wip • ℹ️ •` 
 -->
 
-> Setting `user.theme.transparent` & ublock automatic theming
-
-<img src="https://github.com/user-attachments/assets/161e4fb5-610a-42dc-9b61-dc16f554e32f" height="250px" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" height="250px" />
-
-
 > FF Ultima *Kanagawa Wave* Edition by @pitchaya-s
 
 ![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
+
+> Setting `user.theme.transparent` (this screenshot is default appearance, not including mica or blur) & ublock automatic theming 
+
+<img src="https://github.com/user-attachments/assets/161e4fb5-610a-42dc-9b61-dc16f554e32f" height="250px" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" height="250px" />
+
+> New Tab Page blend into browser colors much more fluidly
+
+![Vid_20250622_212746](https://github.com/user-attachments/assets/19db13e5-b785-4018-a947-dd50ce30148f)
+
+> Setting `user.theme.compact` improvements
+
+![Vid_20250622_214445](https://github.com/user-attachments/assets/0457c8ac-16c3-4e87-a4a3-03a845b5dd3a)
 
