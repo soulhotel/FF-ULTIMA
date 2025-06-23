@@ -56,9 +56,9 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 ![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
 
-> Setting `user.theme.transparent` (this screenshot is default appearance, not including mica or blur) & ublock automatic theming 
+> Setting `user.theme.transparent` & ublock automatic theming 
 
-<img src="https://github.com/user-attachments/assets/161e4fb5-610a-42dc-9b61-dc16f554e32f" height="250px" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" height="250px" />
+<img src="https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575" height="335px" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" height="335px" />
 
 > New Tab Page blend into browser colors much more fluidly
 
