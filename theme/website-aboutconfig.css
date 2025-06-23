@@ -65,6 +65,7 @@ body::after {
     color: var(--in-content-text-color);
     background: var(--background-color-box);
     box-shadow: 0px 6px 6px 6px rgba(15, 15, 15, 0.6);
+    @media (prefers-color-scheme: light) {box-shadow: 1px 5px 6px 6px rgba(15, 15, 15, 0.3);}
 }
 /* depreciated setting inform */
 #toolbar::after {
@@ -89,6 +90,7 @@ body::after {
     background-size: contain;
     background-color: var(--background-color-box);
     box-shadow: 0px 6px 6px 6px rgba(15, 15, 15, 0.6);
+    @media (prefers-color-scheme: light) {box-shadow: 1px 5px 6px 6px rgba(15, 15, 15, 0.3);}
 }
 @media -moz-pref("ultima.tabs.vertical.hide.in.screencorner") {
     @media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
