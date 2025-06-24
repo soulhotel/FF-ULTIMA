@@ -36,6 +36,7 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 - `qol • 🟡 •` Theme size reduced by 7mb
 - `qol • 🟡 •` Total File(s) number reduced by 10
 - `qol • 🟡 •` There are now a total of 16 color schemes.
+- `qol • 🟡 •` YT theming can be turned off with `user.theme.xtension.YT`
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
 - `qol • 🟡 •` Creating Color Schemes just became a lot easier. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme).
 - `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
