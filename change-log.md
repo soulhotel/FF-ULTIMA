@@ -1,13 +1,12 @@
-### <ins> FF Ultima Version 2.9 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/2.9/ffultima2.9.zip)**
+### <ins> FF Ultima Version 3.0 Release
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.0/ffultima3.0.zip)**
 - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- Version skip
-- This is a big *quality of life* update. With a full restructure of source files, based on naming scheme & categoric organization. It improves stability & readibility. Also has some major improvements for Color Scheme handling.
+- This is a big *quality of life* update focused on stability. With a full restructure of source files, based on categoric organization. And a less = more approach. Using less code while keeping the same look & functionality. Organized code = more readability. Also some major improvements for Color Scheme handling.
 - Firefox 138+ required.
 - User.js required.
 <!--
@@ -19,7 +18,7 @@
 <details><summary><ins>Before You Update (CLICK ME)</summary>
 
 >
-- Returning Users: **User.js Required**. To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you when old/deleted/renamed settings are detected. And the theme will work as usually.
+- Returning Users: **User.js Required**. To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you when an old/deleted/renamed setting is detected.
 
 https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
@@ -34,11 +33,11 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 - `new • 🟢 •` Setting `user.theme.transparent` supports Mica or Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 - `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
 - `qol • 🟡 •` Theme size reduced by 7mb
-- `qol • 🟡 •` Total File(s) number reduced by 10
+- `qol • 🟡 •` Total number of File(s) reduced by 10
 - `qol • 🟡 •` There are now a total of 16 color schemes.
 - `qol • 🟡 •` YT theming can be turned off with `user.theme.xtension.YT`
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
-- `qol • 🟡 •` Creating Color Schemes just became a lot easier. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme).
+- `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme)
 - `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
 - `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
 - `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
@@ -59,11 +58,7 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 > Setting `user.theme.transparent` & ublock automatic theming 
 
-<img src="https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575" height="335px" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" height="335px" />
-
-> New Tab Page blend into browser colors much more fluidly
-
-![Vid_20250622_212746](https://github.com/user-attachments/assets/19db13e5-b785-4018-a947-dd50ce30148f)
+<img src="https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575" width="80%" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" width="19.2%" />
 
 > Setting `user.theme.compact` improvements
 
