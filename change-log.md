@@ -56,9 +56,10 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 ![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
 
-> Setting `user.theme.transparent` & ublock automatic theming 
+> Setting `user.theme.transparent`. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 
-<img src="https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575" width="80%" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" width="19.2%" />
+![transparentt](https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575)
+![Screenshot_20250624_050538](https://github.com/user-attachments/assets/3be6c64b-338a-4c65-a183-3a0ac16896b5)
 
 > Setting `user.theme.compact` improvements
 
