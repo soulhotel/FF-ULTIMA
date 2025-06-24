@@ -31,7 +31,7 @@ Custom Icons
     --uc-panel-background:   var(--uc-layered-background);
     --uc-panel-border:       rgba(25, 25, 25, 0.5);
     --uc-panel-border-2:    rgba(45, 45, 45, 0.5);
-    --uc-accent-color-1:     #EDF783;
+    --uc-accent-color-1:     #f3faaa;
     --uc-accent-color-2:     rgb(90, 121, 156);
     --uc-accent-color-3:     white;
     --uc-accent-color-4:     rgba(28, 27, 34, 0.5);
@@ -267,7 +267,7 @@ Custom Icons
     & .tab-background[multiselected] { @media (prefers-color-scheme: light)
         outline-color: var(--uc-accent-color-1) !important;
         outline-offset: none !important;
-    } 
+    }
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
         color: var(--uc-accent-color-1) !important;
@@ -278,6 +278,11 @@ Custom Icons
     }
     & #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
         box-shadow: var(--uc-box-shadow) !important;
+    }
+    & #vertical-pinned-tabs-splitter {
+        border-top: 1px var(--uc-accent-color-2) dashed !important;
+        min-height: 3px !important;
+        &:hover{background: var(--uc-accent-color-2) !important;}
     }
     /*tabs - all other tabs */
     & .tab-label-container:not([selected=""],[pinned]) {
@@ -435,7 +440,3 @@ Custom Icons
         list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important;
     }
 }
-
-
-
-
