@@ -105,7 +105,7 @@ user_pref("ultima.xstyle.private", false); /*private browser home page*/
 /* extra theming */
 user_pref("ultima.theme.icons", true);
 user_pref("user.theme.xtension.ublock", true);
-user_pref("user.theme.xtension.YT", true);
+user_pref("user.theme.xtension.YT", false);
 user_pref("ultima.theme.menubar", true);
 user_pref("ultima.theme.color.swap", false);
 
