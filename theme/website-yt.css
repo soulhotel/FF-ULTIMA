@@ -12,10 +12,13 @@ Transparent color scheme
 
 /* all themes except Transparent -------------------------------------------------------*/
 @media not -moz-pref("user.theme.transparent") {  
-    :root {
+    :root { @media (prefers-color-scheme: dark) {
         --uc-seamless-bg: var(--uc-browser-window) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important; 
-    }
+    }}
+     :root { @media (prefers-color-scheme: light) {
+        --uc-seamless-bg: var(--yt-spec-base-background) !important;
+    }}
     /*page color*/
     html, html[dark], body, ytd-app {
         background-color: var(--uc-seamless-bg) !important;
@@ -49,6 +52,7 @@ Transparent color scheme
     /*search results popup*/
     .ytSearchboxComponentSuggestionsContainer {
         background-color: rgba(0,0,0,0.5) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0.1) !important;}
         backdrop-filter: blur(35px);
     }
     /*notifications popup*/
@@ -57,6 +61,7 @@ Transparent color scheme
     }
     .style-scope.ytd-popup-container {
         background-color: rgba(0,0,0,0.2) !important;
+        @media (prefers-color-scheme: light) {background-color: transparent !important;}
         border-radius: 10px !important;
         backdrop-filter: blur(35px);
     }
@@ -64,6 +69,7 @@ Transparent color scheme
     .ytp-popup {background-color: var(--uc-seamless-bg) !important;}
     .ytp-popup.ytp-contextmenu { 
         background-color: var(--uc-seamless-bg) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0) !important;}
         border-radius: 10px !important;
         backdrop-filter: blur(33px); 
     }
@@ -72,10 +78,15 @@ Transparent color scheme
         border-radius: 10px !important; /* nogo for tables */
         clip-path: xywh(0 0 100% 100% round 0.5em) !important;
         background-color: rgba(40,40,50,0.5) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(0,0,0,0.3) !important;}
     }
     .ytp-panel-menu {
         background-color: rgba(0,0,0,0.5) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0.3) !important;}
         backdrop-filter: blur(33px);    
+    }
+    .ytp-popup.ytp-settings-menu {
+        @media (prefers-color-scheme: light) {background-color: rgba(0,0,0,0.3) !important;}
     }
     /*thumbnails*/
     .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
@@ -87,6 +98,8 @@ Transparent color scheme
     }
 } /* end theme */    
    
+    
+    
 /* transparent -------------------------------------------------------------------------*/
 @media -moz-pref("user.theme.transparent") {  
     :root {
@@ -165,3 +178,4 @@ Transparent color scheme
      
     
 }} /* end YT */
+    
