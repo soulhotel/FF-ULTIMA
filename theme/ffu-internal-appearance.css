@@ -726,6 +726,20 @@ span.button-background.labelled label {
     justify-content: center !important;
     margin-left: -10px !important;
 }
+/*6/24/2025 new splitters yay.*/
+#sidebar-tools-and-extensions-splitter {
+    border-top: 1px var(--uc-accent-color-2) dashed !important;
+    min-height: 3px !important;
+    opacity:0.2;
+    &:hover{background: var(--uc-accent-color-2) !important;}
+}
+& #vertical-pinned-tabs-splitter {
+    border-top: 1px var(--uc-accent-color-2) dashed !important;
+    min-height: 3px !important;
+    opacity:0.2;
+    &:hover{background: var(--uc-accent-color-2) !important;}
+}
+
 
 /* Popups/Menus --------------------------------------------------------------------------------------------- */
 /* default */
