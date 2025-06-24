@@ -6,7 +6,7 @@
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- This is a big *quality of life* update focused on stability. With a full restructure of source files, based on categoric organization. And a less = more approach. Using less code while keeping the same look & functionality. Organized code = more readability. Also some major improvements for Color Scheme handling.
+- This is a big *quality of life* update focused on stability. With a full restructure of source files, and a less = more approach. Using less code but keeping the same look & functionality. Organizing code categorically to improve readability. Also some major improvements for Color Scheme handling.
 - Firefox 138+ required.
 - User.js required.
 <!--
