@@ -226,6 +226,11 @@ Custom Icons
     & .tab-label-container[pinned] {
         color: var(--uc-accent-color-6) !important;
     }
+    & #vertical-pinned-tabs-splitter {
+        border-top: 1px var(--uc-accent-color-2) dashed !important;
+        min-height: 3px !important;
+        &:hover{background: var(--uc-accent-color-2) !important;}
+    }
     /*tabs - all other tabs */
     & .tab-label-container:not([selected=""],[pinned]) {
         color: var(--uc-text) !important;
