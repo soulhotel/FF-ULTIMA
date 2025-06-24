@@ -8,7 +8,6 @@ To use this color scheme:
 - Navigate to `about:config` page.
 - Search for `user.theme`.
 - Turn on `user.theme.kanagawa-wave`
-- Enjoy.
 
 Preview:
 
