@@ -196,6 +196,9 @@ Custom Icons
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
     }
+    & #identity-icon-box:not(:hover):not([open]) {
+        background-color: transparent !important;
+    }
 }
 
 /* Browser Content adjustments ------------------------------------*/
