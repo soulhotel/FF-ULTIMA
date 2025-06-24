@@ -12,11 +12,11 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* color schemes */
-user_pref("user.theme.0.default", true); /*default color scheme*/
+user_pref("user.theme.0.default", true);
 user_pref("user.theme.transparent", false);
 user_pref("user.theme.catppuccin", false);
 user_pref("user.theme.catppuccin-frappe", false);
-user_pref("user.theme.catppuccin-mocha", false); /*by Draff*/
+user_pref("user.theme.catppuccin-mocha", false);
 user_pref("user.theme.gruvbox", false);
 user_pref("user.theme.kanagawa-wave", false);
 user_pref("user.theme.midnight", false);
