@@ -11,20 +11,21 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@import url(theme/all-global-positioning.css);
-@import url(theme/all-color-schemes.css);
+@import url(theme/ffu-global-positioning.css);
+@import url(theme/ffu-internal-appearance.css);
+@import url(theme/ffu-private-browsing.css);
 
-@import url(theme/function-sidebar-autohide.css);
-@import url(theme/function-privatemode.css);
-@import url(theme/theme-urlbar.css);
-@import url(theme/function-extensions-menu.css);
+@import url(theme/color-schemes/apply-cs.css); /*color schemes*/
 
-@import url(theme/theme-xstyle.css);
-@import url(theme/theme-tab-styles.css);
-@import url(theme/theme-context-menu.css);
-@import url(theme/theme-statuspanel.css);
-@import url(theme/theme-findbar.css);
-@import url(theme/theme-PIP.css);
-@import url(theme/theme-tab-audio-indicator.css);
-@import url(theme/theme-windowcontrols.css); 
-@import url(theme/all-global-configurations.css);
+@import url(theme/settings-context-menus.css);
+@import url(theme/settings-extensions-panel.css);
+
+@import url(theme/settings-urlbar.css);
+@import url(theme/settings-navbar.css);
+@import url(theme/settings-navbar-windowcontrols.css);
+
+@import url(theme/settings-sidebar-sidebery.css);
+
+@import url(theme/settings-TABS.css);
+
+@import url(theme/ffu-special-configs.css);

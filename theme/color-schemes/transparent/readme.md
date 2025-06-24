@@ -1,0 +1,17 @@
+```
+FF ULTIMA
+Transparent Color Scheme
+A Transparent Adaptive Color Scheme, adapted to support Mica & Blur
+```
+
+To use this color scheme:
+- Navigate to `about:config` page.
+- Search for `user.theme`.
+- Turn on `user.theme.transparent`
+- Make sure this is the only user.theme selected.
+- Enjoy.
+
+Preview:
+![preview](./preview.png)
+
+Color schemes are easy to create: Learn how with the [Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) Wiki.

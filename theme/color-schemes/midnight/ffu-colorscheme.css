@@ -1,0 +1,269 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Midnight Color Scheme
+
+All of these Variables - Control the color everywhere
+Detailed customization - Overwriting existing variables
+Applying variables further to create the Theme
+Custom Icons
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media (prefers-color-scheme: dark) { :root {
+    color-scheme: dark !important;
+    --uc-browser-color:      rgb(1 1 1);
+    --uc-text:               rgb(230, 230, 230);
+    --uc-layered-background: rgb(1 1 1);
+    --uc-navbar-background:  var(--toolbar-bgcolor);
+    --uc-urlbar-background:  rgb(3 3 3);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background:     transparent;
+    --uc-tab-selected:       rgba(35, 35, 42,0.7);
+    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-button-selected:    rgba(35, 35, 42,1);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       var(--uc-layered-background);
+    --uc-panel-background:   var(--uc-layered-background);
+    --uc-panel-border:       rgb(25, 25, 25);
+    --uc-panel-border-2:     rgb(25, 25, 25);
+    --uc-accent-color-1:     rgb(198, 170, 232);
+    --uc-accent-color-2:     rgb(230, 230, 230); 
+    --uc-accent-color-3:     rgb(215, 218, 224); 
+    --uc-accent-color-4:     rgba(7, 7, 7,0.6);
+    --uc-accent-color-5:     rgb(255, 254, 222);
+    --uc-accent-color-6:     white;
+    --uc-accent-color-7:     rgb(44, 55, 80); 
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow:         0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
+    --uc-box-shadow:         0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
+    --uc-button-border-radius: 10px;
+    --uc-tab-border-radius: 8px;
+}}
+
+@media (prefers-color-scheme: light) { :root {
+    color-scheme: dark !important;
+    --uc-browser-color:      rgb(1 1 1);
+    --uc-text:               rgb(230, 230, 230);
+    --uc-layered-background: rgb(1 1 1);
+    --uc-navbar-background:  var(--toolbar-bgcolor);
+    --uc-urlbar-background:  rgb(3 3 3);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background:     transparent;
+    --uc-tab-selected:       rgba(35, 35, 42,0.4);
+    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-button-selected:    rgba(35, 35, 42,0.8);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       var(--uc-layered-background);
+    --uc-panel-background:   var(--uc-layered-background);
+    --uc-panel-border:       rgb(25, 25, 25);
+    --uc-panel-border-2:     rgb(25, 25, 25);
+    --uc-accent-color-1:     rgb(198, 170, 232);
+    --uc-accent-color-2:     rgb(230, 230, 230); 
+    --uc-accent-color-3:     rgb(215, 218, 224); 
+    --uc-accent-color-4:     rgba(7, 7, 7,0.6);
+    --uc-accent-color-5:     rgb(255, 254, 222);
+    --uc-accent-color-6:     white;
+    --uc-accent-color-7:     rgb(44, 55, 80); 
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow: 0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
+    --uc-box-shadow: 0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
+    --uc-button-border-radius: 10px;
+    --uc-tab-border-radius: 8px;
+}}
+
+
+/* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
+
+#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+    --inactive-titlebar-opacity: 1 !important;
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
+    --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
+    --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --toolbox-non-lwt-bgcolor-inactive: ActiveCaption !important;
+    --toolbox-non-lwt-textcolor-inactive: CaptionText !important;
+    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
+    --tab-selected-textcolor: var(--uc-text) !important;
+    --tab-hover-background-color: var(--uc-tab-selected) !important;
+    --tab-loading-fill: var(--uc-accent-color-1) !important;
+    --button-background-color-ghost-hover: var(--uc-button-selected) !important;
+    --button-background-color: var(--uc-button-selected) !important;
+    --button-background-color-hover: var(--uc-button-selected) !important;
+    --button-background-color-active: var(--uc-button-selected) !important;
+    --button-hover-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-hover-background: var(--uc-button-selected) !important;
+    --button-active-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-active-background: var(--uc-button-selected) !important;
+    --button-primary-bgcolor: var(--uc-accent-color-1) !important;
+    --button-primary-hover-bgcolor: var(--uc-accent-color-1) !important;
+    --buttons-destructive-hover-bgcolor: #9d1c1c;  /*red*/
+    --buttons-destructive-active-bgcolor: var(--uc-button-red); /*red*/
+    --toolbarbutton-icon-fill: var(--uc-text) !important; /*toolbar button color*/
+    --toolbar-field-background-color: var(--uc-accent-color-4) !important;
+    --toolbar-field-border-color: var(--uc-accent-color-3) !important;
+    --toolbar-field-focus-border-color: var(--uc-accent-color-3) !important;
+    --urlbarView-result-button-selected-color: var(--uc-text) !important;
+    --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
+    --urlbarView-highlight-background: var(--uc-button-selected) !important;
+    --urlbarView-hover-background: var(--uc-button-selected) !important;
+    --urlbar-box-hover-bgcolor: var(--uc-button-selected) !important;
+    --urlbar-box-hover-text-color: var(--uc-text) !important;
+    --urlbar-icon-border-radius: var(--uc-button-border-radius) !important;
+    --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --arrowpanel-border-radius: var(--uc-all-border-radius);
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --button-border-radius: var(--uc-button-border-radius) !important;
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --toolbar-field-color: var(--uc-text) !important;
+    --toolbar-field-focus-color: var(--uc-text) !important;
+    --toolbar-color: var(--uc-text) !important;
+    --toolbar-field-color: var(--uc-text) !important;
+    --toolbar-field-focus-color: var(--uc-text) !important;
+    --sidebar-text-color: var(--uc-text) !important;
+    --arrowpanel-background: var(--uc-panel-background) !important;
+    --arrowpanel-border-color: var(---uc-panel-border-ii) !important;
+    --arrowpanel-color: var(--uc-text) !important;
+    --newtab-background-color: var(--uc-tabsbar-background) !important;
+    --panel-background: var(--uc-panel-background) !important;
+    --panel-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --panel-banner-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --short-notification-background: var(--uc-accent-color-2) !important;
+    --panel-border-color: var(--uc-panel-border) !important;
+    --organizer-toolbar-background: var(--uc-accent-color-4) !important;
+    --organizer-pane-background: var(--uc-accent-color-4) !important;
+    --organizer-content-background: var(--uc-accent-color-4) !important;
+    --organizer-hover-background: var(--uc-accent-color-4) !important;
+    --organizer-selected-background: var(--uc-button-selected) !important;
+    --organizer-focus-selected-color: var(--uc-button-selected) !important;
+    --organizer-outline-color: rgb(0,221,255) !important;
+    --organizer-toolbar-field-background: var(--uc-accent-color-4) !important;
+    --organizer-toolbar-field-background-focused: var(--uc-accent-color-1) !important;
+    --content-select-background-image: none !important;
+} 
+
+
+/* Applying variables  further to create the Theme --------------------------------*/
+
+/* If a section is empty, that means the style is defaulting to chrome/theme/ffu-internal-appearance.css */
+
+/* Main window adjustments ----------------------------------------*/
+
+
+/* URL Bar --------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    & .urlbarView-row:hover {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-text) !important;
+    }
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-1) 10%, transparent)  !important;
+    }
+}
+
+/* Browser Content adjustments ------------------------------------*/
+    
+
+/* Find bar -------------------------------------------------------*/
+
+
+/* Sidebars -------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {  
+    #sidebar {
+        background:var(--uc-sidebar-background) !important;
+    }
+    /*sidebar links*/
+    .sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
+    .customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+        color: var(--uc-accent-color-1) !important;
+    }
+}
+/*sidebar check boxes*/
+@layer input-common { #input {
+    accent-color: var(--uc-accent-color-2) !important;
+}}
+
+/* Tabs -----------------------------------------------------------*/
+    
+#main-window:not([lwtheme]) {
+    & .tab-background[multiselected] {
+        outline-color: var(--uc-accent-color-0) !important;
+        outline-offset: -1px !important;
+    }
+    /* tabs - pinned tabs */
+    & .tab-label-container[pinned] {
+        color: var(--uc-accent-color-1) !important;
+    }
+}
+
+/* Button Adjustments ---------------------------------------------*/
+
+    
+/* Popups/Menus ---------------------------------------------------*/
+
+
+/* Context Menu ---------------------------------------------------*/
+
+
+/* Custom Icons ---------------------------------------------------*/
+
+
+/* Custom Animated Background -------------------------------------*/
+
+@media -moz-pref("user.theme.midnight.animated.background") {
+    /* navbar partial background */
+    #main-window:not([lwtheme]) #nav-bar {
+        transition: var(--ext-theme-background-transition) !important;
+        background-image: url(../walls/midnight-ui.gif) !important;
+        background-repeat: no-repeat, no-repeat !important;
+        background-position: 115% 100% !important;
+    }
+    /* verttabs partial background */   
+    #main-window:not([lwtheme]) #sidebar-main::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-image: url(../walls/midnight-ui.gif) !important;
+        background-repeat: repeat-y !important;
+        background-position: 0 0 !important;
+        background-size: 75px 200px !important; /* From your previous setup */
+        opacity: 0.4 !important; /* Set desired opacity (0.0 to 1.0) */
+        z-index: -1 !important; /* Ensure it stays behind content */
+    }
+    #main-window:not([lwtheme]) #sidebar-main {transition: var(--ext-theme-background-transition) !important;}
+}
+
+/* findbar partial background */
+#main-window:not([lwtheme]) findbar {
+    color: var(--toolbar-color) !important;
+    color-scheme: var(--toolbar-color-scheme) !important;
+    background-image: url(pic/midnight-ui.gif) !important;
+    border-top: 0px !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-position: 100% 100% !important;
+} 
+
+/* navbar extended background */
+/*
+#main-window:not([lwtheme]) #navigator-toolbox,
+#main-window:not([lwtheme]) #nav-bar {
+    transition: var(--ext-theme-background-transition) !important;
+    background-image: url(pic/midnight-ui.gif) !important;
+    background-repeat: repeat, no-repeat !important;
+    background-position: 115% 100% !important;
+}
+*/ 
+

@@ -1,0 +1,177 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Automatically apply color scheme colors to extensions
+
+Ublock Origin - applying colors to extension
+Sidebery - applying colors to extension
+Another - applying colors to extension
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Ublock Origin - applying colors to extension ---------------------------------------- */
+
+@-moz-document regexp("moz-extension://.*/popup-fenix.html") {
+@media -moz-pref("user.theme.xtension.ublock") {
+    :root {
+        --surface-1: var(--uc-layered-background) !important;
+        --popup-toolbar-surface: color-mix(in srgb, black 10%, var(--surface-1))  !important;
+        --popup-toolbar-surface-hover: color-mix(in srgb, black 40%, var(--surface-1)) !important;
+        --popup-power-ink: var(--uc-accent-color-5) !important;
+    }
+    .toolRibbon .tool:hover {
+        color: var(--uc-accent-i) !important;
+        fill: var(--uc-accent-i) !important;
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+}}
+
+
+/* Sidebery - applying colors to extension --------------------------------------------- */
+
+@-moz-document regexp("moz-extension://.*/sidebar/sidebar.html") {
+@media -moz-pref("user.theme.xtension.sidebery") {
+
+    @media (prefers-color-scheme: dark) { #root.root {
+        --frame-bg: var(--uc-layered-background) !important;
+        --toolbar-bg: var(--uc-layered-background) !important;
+        --frame-fg: var(--uc-text) !important;
+        --toolbar-fg: var(--uc-text) !important;
+    }}
+    @media (prefers-color-scheme: light) { #root.root {
+        --frame-bg: var(--uc-layered-background) !important;
+        --toolbar-bg: var(--uc-layered-background) !important;
+        --frame-fg: var(--uc-text) !important;
+        --toolbar-fg: var(--uc-text) !important;
+    }}
+    /* Global (to Sidebery) Styles ---------------------------------*/
+    #root.root {
+        --general-margin: 2px !important;
+        --general-border-radius: var(--uc-button-border-radius) !important;
+    }
+    /* Header Panel ------------------------------------------------*/
+    #root.root {
+        --toolbar-scrollbar-color: var(--uc-accent-i) !important;
+        --frame-el-overlay-selected-bg: var(--uc-button-selected) !important;
+        --frame-el-overlay-selected-border: var(--uc-accent-color-1) !important;
+        --frame-el-overlay-hover-bg: var(--uc-button-selected) !important;
+        --frame-scrollbar-color: var(--uc-accent-i) !important;
+        --toolbar-el-overlay-selected-bg: var(--uc-button-selected) !important;
+        --toolbar-el-overlay-hover-bg: var(--uc-button-selected) !important;
+        --toolbar-el-overlay-active-bg: var(--uc-button-selected) !important;
+        --toolbar-el-overlay-active-border: var(--uc-accent-color-1) !important;
+        --nav-btn-fg: var(--uc-text) !important;
+        --nav-btn-accent: color-mix(in srgb, var(--uc-accent-color-5) 40%, black 60%) !important;
+        --nav-btn-active-shadow: var(--uc-box-shadow) !important;
+    }
+    .NavigationBar .nav-item .audio { display: none !important; }
+    @media (max-width: 50px) { .BottomBar{padding-left:1px !important;}.static-btns{padding-left:3px !important;} }
+    /* Pinned Tabs -----------------------------------------------*/
+    #root.root {--tabs-pinned-width: 24vw !important; --tabs-pinned-height: 40px !important;}
+    @media (max-width: 250px) {
+        #root.root {--tabs-pinned-width: 23.5vw !important; --tabs-pinned-height: 40px !important;}
+    }
+    @media (max-width: 165px) {
+        #root.root {--tabs-pinned-width: 23vw !important; --tabs-pinned-height: 40px !important;}
+    }
+    @media (max-width: 125px) {
+        #root.root {--tabs-pinned-width: 22vw !important; --tabs-pinned-height: 40px !important;}
+    }
+    @media (max-width: 84px) {
+        #root.root {--tabs-pinned-width: 20.5vw !important; --tabs-pinned-height: 19px !important;}
+        .PinnedTabsBar .tab-wrapper .fav {transform: scale(0.6) !important;} /* even smaller */
+    }
+    @media (max-width: 42px) {
+        #root.root {--tabs-pinned-width: 15px !important; --tabs-pinned-height: 19px !important;}
+        .PinnedTabsBar[data-audible] svg.-loud, .PinnedTabsBar[data-muted] svg.-mute {display: none !important;} /* even smaller than smaller */
+    }
+    /* Tabs ----------------------------------------------------*/
+    #root.root {
+        --tabs-normal-fg: var(--uc-accent-color-2) !important;
+        --tabs-normal-bg: transparent;
+        --tabs-activated-bg: var(--uc-button-selected) !important;
+        --tabs-activated-fg: var(--uc-accent-color-5) !important;
+        --tabs-border-radius: var(--uc-button-border-radius) !important;
+        --tabs-activated-shadow: var(--uc-box-shadow) !important;
+        --tabs-progress-bg: var(--uc-accent-color-5) !important;
+        --tabs-height: 35px !important;
+
+        --tabs-discarded-favicon-opacity: 0.05 !important;
+        --tabs-discarded-title-opacity: 0.15 !important;
+        --tabs-indent: 30px !important; /* OR 20 */
+        --tabs-audio-btn-width: 30px !important;
+        --ntb-border-radius: var(--uc-button-border-radius) !important;
+    }
+    .Tab[data-pin="false"] .fav {margin-left: 9px !important;}
+    /* Fix Tabs Tree --------------------------------------------*/
+    @media screen and (max-width: 42px) {
+        #root {
+            --tabs-indent: unset !important;
+        }
+        .ScrollBox > .scroll-container {
+            overflow: hidden !important;
+        }
+        .Tab .body::after {
+            display: none !important;
+        }
+        .Tab .audio {
+            left: 10px !important;
+            transform: scale(0.8) !important;
+            transform: translateY(6px) translateX(-15px) !important;
+            z-index: 99 !important;
+        }
+        .Tab[data-audible] svg.-loud,
+        .Tab[data-muted] svg.-mute {
+            transform: translateY(0px) translateX(0px) !important;
+        }
+    }
+    /* Bookmarks ------------------------------------------------*/
+    #root.root {
+        --bookmarks-indent: 0px !important;
+    }
+    /* Popups ---------------------------------------------------*/
+    #root.root {
+        --ctx-menu-bg: var(--uc-context-menu) !important;
+        --ctx-menu-fg: var(--uc-text) !important;
+
+        --ctx-menu-padding: 5px !important;
+        --ctx-menu-border-radius: 8px !important;
+        --ctx-menu-text-opt-inner-gap: 5px !important;
+
+        --ctx-menu-separator: var(--uc-layered-background) !important;
+        --ctx-menu-shadow: 0 0 0 2px var(--uc-accent-color-1), 0 1px 16px 0 rgba(0,0,0,0.5) !important;
+
+        --popup-bg: var(--uc-context-menu) !important;
+        --popup-fg: var(--uc-text) !important;
+        --popup-scrollbar-color: var(--uc-accent-color-1)
+
+        --notification-bg: var(--uc-context-menu) !important;
+        --notification-fg: var(--uc-text) !important;
+
+        --btn-border-radius: var(--uc-button-border-radius) !important;
+        --scroll-color:  color-mix(in srgb, var(--uc-accent-color-1) 40%, transparent 60%) !important;
+    }
+    @media -moz-pref("user.theme.dark.a"), @media -moz-pref("user.theme.dark.midnight") {
+        #root.root {
+                --ctx-menu-shadow: 0 0 0 1px rgb(56, 60, 64), 0 1px 16px 0 rgba(0,0,0,0.282) !important;
+            }
+    }
+    @media -moz-pref("user.theme.light.a"), @media -moz-pref("user.theme.light.gruvbox") {
+        #root.root {
+                --ctx-menu-shadow: 0 0 0 1px var(--uc-accent-color-1), 0 1px 16px 0 rgba(100,100,100,0.282) !important;
+            }
+    }
+
+}}
+
+
+/* Another - applying colors to extension ---------------------------------------------- */
+/*
+@-moz-document regexp("moz-extension://") {
+@media -moz-pref("user.theme.9.extension") {
+
+
+
+}}
+*/

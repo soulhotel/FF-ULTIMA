@@ -1,0 +1,266 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Gruvbox Color Scheme
+
+All of these Variables - Control the color everywhere
+Detailed customization - Overwriting existing variables
+Applying variables further to create the Theme
+Custom Icons
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media (prefers-color-scheme: dark) { :root {
+    color-scheme: dark !important;
+    --uc-browser-color:      rgb(47, 47, 47);
+    --uc-text:               rgb(237, 221, 170);
+    --uc-layered-background: rgb(40, 40, 45);
+    --uc-navbar-background:  var(--toolbar-bgcolor);
+    --uc-urlbar-background:  rgba(40, 40, 45);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background:     transparent;
+    --uc-tab-selected:       rgb(62, 55, 55);
+    --uc-tab-selected-text:  var(--uc-accent-color-4);
+    --uc-button-selected:    rgb(72, 65, 65);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       var(--uc-layered-background);
+    --uc-panel-background:   rgb(37, 37, 39);
+    --uc-panel-border:       rgba(27, 25, 35, 1);
+    --uc-panel-border-2:     rgba(70, 70, 80, 0.2);
+    --uc-accent-color-1:     rgb(237, 221, 170);
+    --uc-accent-color-2:     rgb(237, 221, 170);
+    --uc-accent-color-3:     rgb(237, 221, 170);
+    --uc-accent-color-4:     rgb(228, 127, 45);
+    --uc-accent-color-5:     rgb(214, 58, 62);
+    --uc-accent-color-6:     rgb(228, 127, 45);
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow:         0.15rem 0.4rem 0.2rem -0.1rem rgba(0,0,0,0.3);
+    --uc-box-shadow-panel:   0.15rem 0.4rem 0.2rem -0.1rem rgba(25,25,25,0.4);
+    --uc-button-border-radius: 10px;
+    --uc-tab-border-radius: 8px;
+}}
+
+@media (prefers-color-scheme: light) { :root {
+    color-scheme: light !important;
+    --uc-browser-color:      rgb(232, 227, 225);
+    --uc-text:               rgb(168, 91, 81);
+    --uc-layered-background: rgb(230, 224, 224);
+    --uc-navbar-background:  var(--toolbar-bgcolor);
+    --uc-urlbar-background:  var(--uc-layered-background);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background:     transparent;
+    --uc-tab-selected:       rgba(221, 147, 112,0.2);
+    --uc-tab-selected-text:  var(--uc-accent-color-3);
+    --uc-button-selected:    rgba(114, 155, 170,0.2);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       rgb(230, 225, 225);
+    --uc-panel-background:   rgb(230, 225, 225);
+    --uc-panel-border:       rgb(230, 225, 225);
+    --uc-panel-border-2:     rgba(66, 40, 40, 0.5);
+    --uc-accent-color-1:     rgb(72, 136, 141);
+    --uc-accent-color-2:     pink;
+    --uc-accent-color-3:     rgb(89, 53, 34);
+    --uc-accent-color-4:     rgb(220, 220, 220);
+    --uc-accent-color-5:     rgb(206, 95, 20);
+    --uc-accent-color-6:     rgb(206, 95, 20);
+    --uc-accent-color-7:     rgb(243, 182, 221);
+    --uc-accent-color-8:     rgb(55, 55, 105);
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.7);
+    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.3);
+    --uc-button-border-radius: 10px;
+}}
+
+
+/* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
+
+#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+    --inactive-titlebar-opacity: 1 !important;
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
+    --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
+    --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --toolbox-non-lwt-bgcolor-inactive: ActiveCaption !important;
+    --toolbox-non-lwt-textcolor-inactive: CaptionText !important;
+    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
+    --tab-selected-textcolor: var(--uc-tab-selected-text) !important;
+    --tab-hover-background-color: var(--uc-tab-selected) !important;
+    --tab-loading-fill: var(--uc-accent-color-1) !important;
+    --button-background-color-ghost-hover: var(--uc-button-selected) !important;
+    --button-background-color: var(--uc-button-selected) !important;
+    --button-background-color-hover: var(--uc-button-selected) !important;
+    --button-background-color-active: var(--uc-button-selected) !important;
+    --button-hover-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-hover-background: var(--uc-button-selected) !important;
+    --button-active-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-active-background: var(--uc-button-selected) !important;
+    --button-primary-bgcolor: var(--uc-accent-color-1) !important;
+    --button-primary-hover-bgcolor: var(--uc-accent-color-1) !important;
+    --buttons-destructive-hover-bgcolor: #9d1c1c;  /*red*/
+    --buttons-destructive-active-bgcolor: var(--uc-button-red); /*red*/
+    --toolbarbutton-icon-fill: var(--uc-text) !important; /*toolbar button color*/
+    --toolbar-field-background-color: var(--uc-accent-color-4) !important;
+    --toolbar-field-border-color: var(--uc-accent-color-3) !important;
+    --toolbar-field-focus-border-color: var(--uc-accent-color-4) !important;
+    --urlbarView-result-button-selected-color: var(--uc-text) !important;
+    --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
+    --urlbarView-highlight-background: var(--uc-button-selected) !important;
+    --urlbarView-hover-background: var(--uc-button-selected) !important;
+    --urlbar-box-hover-bgcolor: var(--uc-button-selected) !important;
+    --urlbar-box-hover-text-color: var(--uc-text) !important;
+    --urlbar-icon-border-radius: var(--uc-button-border-radius) !important;
+    --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --arrowpanel-border-radius: var(--uc-all-border-radius);
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --button-border-radius: var(--uc-button-border-radius) !important;
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --toolbar-field-color: var(--uc-text) !important;
+    --toolbar-field-focus-color: var(--uc-text) !important;
+    --toolbar-color: var(--uc-text) !important;
+    --toolbar-field-color: var(--uc-text) !important;
+    --toolbar-field-focus-color: var(--uc-text) !important;
+    --sidebar-text-color: var(--uc-text) !important;
+    --arrowpanel-background: var(--uc-panel-background) !important;
+    --arrowpanel-border-color: var(---uc-panel-border-ii) !important;
+    --arrowpanel-color: var(--uc-text) !important;
+    --newtab-background-color: var(--uc-tabsbar-background) !important;
+    --panel-background: var(--uc-panel-background) !important;
+    --panel-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --panel-banner-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --short-notification-background: var(--uc-accent-color-2) !important;
+    --panel-border-color: var(--uc-panel-border) !important;
+    --organizer-toolbar-background: var(--uc-accent-color-4) !important;
+    --organizer-pane-background: var(--uc-accent-color-4) !important;
+    --organizer-content-background: var(--uc-accent-color-4) !important;
+    --organizer-hover-background: var(--uc-accent-color-4) !important;
+    --organizer-selected-background: var(--uc-button-selected) !important;
+    --organizer-focus-selected-color: var(--uc-button-selected) !important;
+    --organizer-outline-color: rgb(0,221,255) !important;
+    --organizer-toolbar-field-background: var(--uc-accent-color-4) !important;
+    --organizer-toolbar-field-background-focused: var(--uc-accent-color-1) !important;
+    --content-select-background-image: none !important;
+} 
+
+
+/* Applying variables  further to create the Theme --------------------------------*/
+
+/* If a section is empty, that means the style is defaulting to chrome/theme/ffu-internal-appearance.css */
+
+/* Main window adjustments ----------------------------------------*/
+    
+
+/* URL Bar --------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    & #urlbar-zoom-button {
+        background-color: var(--uc-button-selected) !important;
+    }
+    & .urlbarView-row { &[selected] {
+        color: var(--uc-text) !important;
+    }}
+    & .urlbarView-row:hover {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-4) !important;
+    }
+    & .urlbarView-row:hover { @media (prefers-color-scheme: light) {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-3) !important;
+    }}
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
+    }
+}
+
+/* Browser Content adjustments ------------------------------------*/
+    
+
+/* Find bar -------------------------------------------------------*/
+
+
+/* Sidebars -------------------------------------------------------*/
+
+/*sidebar check boxes*/
+@layer input-common { #input {
+    accent-color: var(--uc-accent-color-5) !important;
+}}
+.sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
+.customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+    color: var(--uc-accent-color-1) !important;
+}
+/* Tabs -----------------------------------------------------------*/
+    
+#main-window:not([lwtheme]) {
+    /* tabs - selected tabs */
+    & .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    & .tab-background[multiselected] {
+        outline-color: var(--uc-accent-color-1) !important;
+        outline-offset: 0px !important;
+    } 
+    & .tab-background[multiselected] { @media (prefers-color-scheme: light) {
+        outline-color: var(--uc-accent-color-2) !important;
+        outline-offset: none !important;
+    }}
+    /* tabs - pinned tabs */
+    & .tab-label-container[pinned] {
+        color: var(--uc-accent-color-8) !important;
+    }
+    & .tabbrowser-tab[pinned=""] .tab-background,
+    & .tabbrowser-tab[pinned="true"] .tab-background {
+        background-color: var(--uc-button-selected) !important;
+    }
+}
+
+/* Button Adjustments ---------------------------------------------*/
+
+#main-window:not([lwtheme]) {  
+    & .toolbarbutton-text {
+        color: var(--uc-accent-color-3);
+    }
+    & #nav-bar .toolbarbutton-1,
+    &  #nav-bar .toolbarbutton-text {
+        color: var(--uc-accent-color-1) !important;
+    }
+}
+    
+/* Popups/Menus ---------------------------------------------------*/
+
+
+/* Context Menu ---------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    menupopup, panel {
+        color-scheme: light dark;
+        --panel-background: var(--uc-context-menu) !important;
+        --panel-border-radius: var(--uc-button-border-radius) !important;
+        --panel-border-color: var(--uc-panel-border-2) !important;
+        --panel-color: var(--uc-text) !important;
+    }
+    menupopup {--panel-shadow:none !important;}
+    menuitem:hover {
+        background-color: var(--uc-button-selected) !important;
+        --panel-color: var(--uc-accent-color-3) !important;
+        color: var(--uc-accent-color-3) !important;
+        border-radius: 6px !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-3) !important;
+    }
+}
+
+/* Custom Icons ---------------------------------------------------*/
+
+
+
+

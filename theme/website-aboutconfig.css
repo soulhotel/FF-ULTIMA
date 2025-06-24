@@ -12,67 +12,16 @@ warning messages
 @-moz-document url("about:config") {
 @media -moz-pref("ultima.xstyle.highlight.aboutconfig") {
 
-/* color management ------------------------------------------------------------------------------*/
-    
-:root {
-    /* apply dark mode colors */
-    @media (prefers-color-scheme: dark) {
-        @media -moz-pref("user.theme.dark.a") {
-            --ut-background: rgb(40, 39, 48);
-            --uc-accent-i: rgb(121, 161, 195);
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-        @media -moz-pref("user.theme.dark.catppuccin") {
-            --ut-background: rgb(38, 36, 50);
-            --uc-accent-i: rgb(198, 170, 232);
-            --in-content-page-background: var(--ut-background) !important;
-        }
-        @media -moz-pref("user.theme.dark.catppuccin-frappe") {
-            --ut-background: rgb(41, 44, 60);
-            --uc-accent-i: rgb(244, 184, 228);
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-        @media -moz-pref("user.theme.dark.catppuccin-mocha") {
-            --ut-background: rgb(24, 24, 37);
-            --uc-accent-i: rgb(203, 166, 247);
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-        @media -moz-pref("user.theme.dark.gruvbox") {
-            --ut-background: rgb(40, 40, 45);
-            --uc-accent-i: rgb(237, 221, 170);
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-        @media -moz-pref("user.theme.dark.midnight") {
-            --ut-background: rgb(0, 0, 0);
-            --uc-accent-i: rgb(75,75,95);
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-    }
-    /* apply light mode colors */
-    @media (prefers-color-scheme: light) {
-        @media -moz-pref("user.theme.light.a") {
-            --ut-background: rgb(250, 250, 250);
-            --uc-accent-i: rgba(144,144,200,0.8);
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-        @media -moz-pref("user.theme.light.gruvbox") {
-            --ut-background: rgb(215, 215, 215);
-            --uc-accent-i: pink;
-            --in-content-page-background: var(--ut-background) !important;
-            --in-content-box-border-color: var(--uc-accent-i) !important;
-        }
-    }
+/* style ------------------------------------------------------------------------------*/
+:root {  
+    --in-content-page-background: var(--uc-browser-color) !important;
+    --in-content-box-border-color: var(--uc-accent-color-2) !important;
+}
+input, #prefs {
+    border-radius: 8px !important;
 }
 
-    
 /* if you see this text --------------------------------------------------------------------------*/
-
 body::before {
     content:
         "\✅ If you see this text, congratulations! FF Ultima is properly setup. \A 📝 To change theme settings, Type: ultima \A 📝 To change color schemes, Type: user.theme \A 🇺 Need help? Visit the FF Ultima Wiki https://github.com/soulhotel/FF-ULTIMA/wiki \A";
@@ -81,47 +30,67 @@ body::before {
     margin: 10px 10px 0px 10px;
     padding:12px 32px;
     border: var(--prefs-table-border);
-    border-radius: 5px;
+    border-radius: 8px;
     white-space: pre-line;
     line-height: 1.5;
     font-size: var(--font-size-root);
     color: var(--in-content-text-color);
     background: var(--background-color-box);
 }
-
-input, #prefs {
-    border-radius: 8px !important;
-}
-
+/* if you see this - setting is on */
 #prefs .has-user-value:has(span[data-l10n-args='{"value":"true"}']) th[scope="row"]::before {
     content: "🟢 ";
     position:absolute;
     left:18px;
 }
 
-
 /* warning messages ------------------------------------------------------------------------------*/
-
-    
+/* conflicting setting warn */
 body::after {
     position: fixed;
     display: none;
     z-index: 100;
-    top: 0.8%;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 205px;
+    right: 110px;
     height: 115px;
+    max-height:13vh;
     width: 25vw;
     min-width: 200px;
     padding: 22px 32px;
-    border: 2px solid rgb(255,150,50);
+    border: 1px solid rgb(255,150,50);
     border-radius: 8px;
     white-space: pre-line;
     line-height: 1.6;
     font-size: 1.2em;
     color: var(--in-content-text-color);
     background: var(--background-color-box);
-    box-shadow: 0px 8px 15px 10px rgba(35, 25, 15, 1);
+    box-shadow: 0px 6px 6px 6px rgba(15, 15, 15, 0.6);
+    @media (prefers-color-scheme: light) {box-shadow: 1px 5px 6px 6px rgba(15, 15, 15, 0.3);}
+}
+/* depreciated setting inform */
+#toolbar::after {
+    position: fixed;
+    display: none;
+    z-index: 100;
+    top: 400px;
+    right: 110px;
+    height: 500px;
+    width: 25vw;
+    min-width: 200px;
+    padding: 22px 32px;
+    border: 1px solid rgb(50,150,255);
+    border-radius: 8px;
+    white-space: pre-line;
+    line-height: 1;
+    font-size: 1.1em;
+    color: var(--in-content-text-color);
+    background-image: url(icons/aboutconfig.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: var(--background-color-box);
+    box-shadow: 0px 6px 6px 6px rgba(15, 15, 15, 0.6);
+    @media (prefers-color-scheme: light) {box-shadow: 1px 5px 6px 6px rgba(15, 15, 15, 0.3);}
 }
 @media -moz-pref("ultima.tabs.vertical.hide.in.screencorner") {
     @media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
@@ -179,5 +148,34 @@ body::after {
         }
     }
 }
+@media -moz-pref("ultima.xstyle.sidebar.theming") {
+    #toolbar::after {
+        content: "\ ultima.xstyle.sidebar.theming is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
+        display: block;
+        background-image: url(icons/oldsettings.gif);
+    } 
+}
+@media -moz-pref("ultima.theme.sidebar") {
+    #toolbar::after {
+        content: "\ user.theme.sidebar renamed to user.theme.xtension.sidebar. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A The replacement is already enabled via user.js.";
+        display: block;
+        background-image: url(icons/oldsettings.gif);
+    } 
+}
+@media -moz-pref("user.theme.dark.a"), -moz-pref("user.theme.light.a"), -moz-pref("user.theme.light.gruvbox"), -moz-pref("user.theme.dark.gruvbox"),
+-moz-pref("user.theme.dark.catppuccin"), -moz-pref("user.theme.dark.catppuccin-frappe"), -moz-pref("user.theme.dark.catppuccin-mocha"), -moz-pref("user.theme.dark.midnight"), -moz-pref("user.theme.dark.scarlet") {
+    #toolbar::after {
+        content: "\ All user.theme settings have been renamed! \A \A To avoid confusion, delete them from your options list. Here's how:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the settings are removed.";
+        display: block;
+    } 
+}
+@media -moz-pref("user.theme.adaptive") {
+    #toolbar::after {
+        content: "\ user.theme.adaptive is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
+        display: block;
+    } 
+}
 
+
+    
 }} /* end aboutconfig page */

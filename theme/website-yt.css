@@ -1,175 +1,185 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         userContent file for theming YT, FF Ultima Subtle Blur theme
+File Desc:        Theming YT through color schemes and subtle blur (user.theme.xtension.YT)
+
+All color schemes
+Transparent color scheme
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@-moz-document domain("youtube.com") {
+@-moz-document domain("youtube.com") { @media -moz-pref("user.theme.xtension.YT") {  
 
-/* variables -----------------------------------------------------------*/ 
-@media (prefers-color-scheme: dark) { :root{
-  --generic-background: rgba(20,20,20,0.5);   
-}} 
-@media (prefers-color-scheme: light) { :root{
-  --generic-background: rgba(255,255,255,0.3);   
-}}    
-  
-/* side bar ------------------------------------------------------------*/
-#contentContainer, #guide-content.ytd-app {
-  background-color: var(--generic-background) !important;
-  filter: saturate(140%) !important;
-  backdrop-filter: blur(33px);
-}
-
-/* Notification Popup --------------------------------------------------*/  
-.style-scope.ytd-popup-container {
-  background-color: var(--generic-background) !important;
-  filter: saturate(70%) !important;
-  backdrop-filter: blur(33px);
-  border-radius: 10px !important;
-}
-.ytd-multi-page-menu-renderer {
-  background-color: var(--generic-background) !important;
-  filter: saturate(110%) !important;
-  backdrop-filter: blur(33px);
-}
-
-/* search results popup ------------------------------------------------*/  
-html[dark] .sbsb_a {
-  background: var(--yt-spec-raised-background);
-  background-color: var(--generic-background) !important;
-  filter: saturate(140%) !important;
-  backdrop-filter: blur(33px);
-  border-radius: 10px !important;
-}
-
-/* video player --------------------------------------------------------*/
-
-/*context menu*/
-.ytp-popup.ytp-contextmenu { 
-    border-radius: 10px !important;
-    background-color: var(--generic-background) !important;
-    filter: saturate(100%) !important;
-    backdrop-filter: blur(33px);
-    border-radius: 10px !important;
-}
-.ytp-panel-menu {
-    padding: 8px !important;
-}
-.ytp-menuitem:hover {
-    border-radius: 10px !important; /* nogo for tables */
-    clip-path: xywh(0 0 100% 100% round 0.5em) !important;
-}
-
-  
-  
-/* side bar ------------------------------------------------------------*/
-/* side bar ------------------------------------------------------------*/
-/* side bar ------------------------------------------------------------*/
-/* side bar ------------------------------------------------------------*/
-/* side bar ------------------------------------------------------------*/
-/* side bar ------------------------------------------------------------*/
-  
-  
-/* Youtube logo red to blue */
-/*
-.yt-spec-icon-shape path[fill="#FF0000"] {
-    fill: #4291d7 !important;
-}
-*/
-
-/*SEEKBAR COLOR*/
-/*
-.ytp-swatch-background-color { 
-    background-color: #fffd80 !important; 
-}
-*/
-
-/*--notifications badge color now yellow--*/
-
-/*
-.yt-spec-icon-badge-shape--type-notification .yt-spec-icon-badge-shape__badge {
-    background-color: #fffd80 !important;
-    color: #2b2b2b !important;
-}
-*/
-.yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
-    border: 0px solid rgba(0,0,0,0.8) !important;
-}
-
-/*--live video indicator under thumbnails color--*/
-
-.badge-style-type-live-now-alternate.ytd-badge-supported-renderer {
-    background: rgba(92, 198, 223, 0.9) !important;
-    color: var(--yt-spec-static-brand-white) !important;
-}
-
-/* theater mode adjustments*/
-/*remove black bars*/
-/*
-ytd-watch-flexy[full-bleed-player] #full-bleed-container:not(:hover) {
-  background: none !important;
-}
-ytd-watch-flexy[fullscreen] #full-bleed-container:not(:hover) {
-  background: #000 !important;
-}
-*/
-/* border radios*/
-/*
-ytd-watch-flexy[full-bleed-player] .video-stream.html5-main-video:not(:hover) {
-  border-radius: 10px !important;
-}
-
-ytd-watch-flexy[fullscreen] .video-stream.html5-main-video {
-  border-radius: 0px !important;
-}
-*/
-
-/* Iridium extension - adjustments */
-
-/*
-Extensions height width are 225/400
-I'm using 366/650 for visibility
-*/
-
-html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) #movie_player {
-    top: unset !important;
-    left: unset !important;
-    bottom: 10px !important;
-    right: 10px !important;
-    width: 400px !important; /*400px 650px*/
-    height: 225px !important; /*225px 366px*/
-    z-index: 9998 !important;
-}
-/*
-these are being overwritten inline by yt,
-important tags fix it but they may need to be
-applied and de-applied for when the mini player is triggered
-*/
-
-html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) .video-stream.html5-main-video {
-    top: unset !important;
-    left: unset !important;
-    bottom: 10px !important;
-    right: 10px !important;
-    width: 400px !important; /*400px*/
-    height: auto !important; /*225px*/
-    position: fixed !important;
-    z-index: 9999 !important;
-}
-/*
-height and width should technically match #movie_player
-important tags to applied only when the mini player is triggered
-position `fixed` (inside of the movie player) instead of `absolute`
-*/
-
-html[always-visible-player]:not(:has(ytd-watch-flexy[fullscreen])) .ytp-chrome-bottom {
-    width: 97% !important;
-}
-/*
-progress bar container width (set inline) needs to be overwritten to fit mini-player size.
-*/
-
-
-}
+/* all themes except Transparent -------------------------------------------------------*/
+@media not -moz-pref("user.theme.transparent") {  
+    :root { @media (prefers-color-scheme: dark) {
+        --uc-seamless-bg: var(--uc-browser-window) !important;
+        --yt-spec-base-background: var(--uc-layered-background) !important;
+        @media -moz-pref("user.theme.0.default") {
+            --uc-seamless-bg: rgba(1,1,1,0.4) !important;
+            --yt-spec-base-background: rgba(1,1,1,0.5) !important;
+        }
+    }}
+    :root { @media (prefers-color-scheme: light) {
+        --uc-seamless-bg: var(--yt-spec-base-background) !important;
+    }}
+    /*page color*/
+    html, html[dark], body, ytd-app {
+        background-color: var(--uc-seamless-bg) !important;
+    }
+    /*sidebar*/
+    #background.ytd-masthead {
+        background: var(--uc-seamless-bg) !important;
+        filter: saturate(140%) !important;
+        backdrop-filter: blur(33px);
+    }
+    #contentContainer {
+        background: var(--uc-seamless-bg) !important;
+        backdrop-filter: blur(33px);
+    }
+    /* header*/
+    #background.ytd-masthead {
+        background: var(--uc-seamless-bg) !important;
+        backdrop-filter: blur(50px);
+    }
+    #header {
+        background: transparent !important;
+        backdrop-filter: blur(50px);    
+    }
+    /*search bar*/
+    .ytSearchboxComponentInputBoxDark, html[dark] .sbsb_a,
+    .ytSearchboxComponentSearchButton {
+        background-color: var(--uc-layered-background) !important;
+        border-color: rgba(0,0,0,0.1) !important;
+        backdrop-filter: blur(17px);
+    }
+    /*search results popup*/
+    .ytSearchboxComponentSuggestionsContainer {
+        background-color: rgba(0,0,0,0.5) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0.1) !important;}
+        backdrop-filter: blur(35px);
+    }
+    /*notifications popup*/
+    .ytd-multi-page-menu-renderer {
+        background-color: var(--uc-seamless-bg) !important;
+    }
+    .style-scope.ytd-popup-container {
+        background-color: rgba(0,0,0,0.2) !important;
+        @media (prefers-color-scheme: light) {background-color: transparent !important;}
+        border-radius: 10px !important;
+        backdrop-filter: blur(35px);
+    }
+    /*video player context menu*/
+    .ytp-popup {background-color: var(--uc-seamless-bg) !important;}
+    .ytp-popup.ytp-contextmenu { 
+        background-color: var(--uc-seamless-bg) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0) !important;}
+        border-radius: 10px !important;
+        backdrop-filter: blur(33px); 
+    }
+    .ytp-panel-menu {padding: 8px !important;}
+    .ytp-menuitem:hover {
+        border-radius: 10px !important; /* nogo for tables */
+        clip-path: xywh(0 0 100% 100% round 0.5em) !important;
+        background-color: rgba(40,40,50,0.5) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(0,0,0,0.3) !important;}
+    }
+    .ytp-panel-menu {
+        background-color: rgba(0,0,0,0.5) !important;
+        @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0.3) !important;}
+        backdrop-filter: blur(33px);    
+    }
+    .ytp-popup.ytp-settings-menu {
+        @media (prefers-color-scheme: light) {background-color: rgba(0,0,0,0.3) !important;}
+    }
+    /*thumbnails*/
+    .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
+        border: 0px solid rgba(0,0,0,0.8) !important;
+    }
+    .badge-style-type-live-now-alternate.ytd-badge-supported-renderer {
+        background: rgba(92, 198, 223, 0.9) !important;
+        color: var(--yt-spec-static-brand-white) !important;
+    }
+} /* end theme */    
+   
+    
+    
+/* transparent -------------------------------------------------------------------------*/
+@media -moz-pref("user.theme.transparent") {  
+    :root {
+        --uc-seamless-bg: var(--uc-browser-window) !important;
+        --yt-spec-base-background: var(--uc-layered-background) !important; 
+    }
+    /*page color*/
+    html, html[dark], body, ytd-app {
+        background-color: var(--uc-seamless-bg) !important;
+    }
+    /*sidebar*/
+    #background.ytd-masthead {
+        background: var(--uc-seamless-bg) !important;
+        filter: saturate(140%) !important;
+        backdrop-filter: blur(33px);
+    }
+    #contentContainer {
+        background: var(--uc-seamless-bg) !important;
+        backdrop-filter: blur(33px);
+    }
+    /* header*/
+    #background.ytd-masthead {
+        background: var(--uc-seamless-bg) !important;
+        backdrop-filter: blur(50px);
+    }
+    #header {
+        background: var(--uc-seamless-bg) !important;
+        backdrop-filter: blur(50px);    
+    }
+    /*search bar*/
+    .ytSearchboxComponentInputBoxDark, html[dark] .sbsb_a {
+        background-color: var(--uc-seamless-bg) !important;
+        border-color: rgba(0,0,0,0.1) !important;
+        backdrop-filter: blur(17px);
+    }
+    /*search results popup*/
+    .ytSearchboxComponentSuggestionsContainer {
+        background-color: rgba(0,0,0,0.5) !important;
+        backdrop-filter: blur(35px);
+    }
+    /*notifications popup*/
+    .ytd-multi-page-menu-renderer {
+        background-color: var(--uc-seamless-bg) !important;
+    }
+    .style-scope.ytd-popup-container {
+        background-color: rgba(0,0,0,0.2) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(35px);
+    }
+    /*video player context menu*/
+    .ytp-popup {background-color: var(--uc-seamless-bg) !important;}
+    .ytp-popup.ytp-contextmenu { 
+        background-color: var(--uc-seamless-bg) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(33px); 
+    }
+    .ytp-panel-menu {padding: 8px !important;}
+    .ytp-menuitem:hover {
+        border-radius: 10px !important; /* nogo for tables */
+        clip-path: xywh(0 0 100% 100% round 0.5em) !important;
+        background-color: rgba(40,40,50,0.5) !important;
+    }
+    .ytp-panel-menu {
+        background-color: rgba(0,0,0,0.5) !important;
+        backdrop-filter: blur(33px);    
+    }
+    /*thumbnails*/
+    .yt-spec-icon-badge-shape--style-overlay .yt-spec-icon-badge-shape__badge {
+        border: 0px solid rgba(0,0,0,0.8) !important;
+    }
+    .badge-style-type-live-now-alternate.ytd-badge-supported-renderer {
+        background: rgba(92, 198, 223, 0.9) !important;
+        color: var(--yt-spec-static-brand-white) !important;
+    }
+} /* end theme */
+     
+    
+}} /* end YT */
+    

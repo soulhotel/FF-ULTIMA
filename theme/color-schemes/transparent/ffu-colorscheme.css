@@ -1,0 +1,805 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Transparent Color Scheme
+
+All of these Variables - Control the color everywhere
+Detailed customization - Overwriting existing variables
+Applying variables to create the Theme
+Custom Icons
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Default Color Scheme - Full Moon (Dark Mode) & Dusky (Light Mode)
+
+All of these Variables - Control the color everywhere
+Detailed customization - Overwriting existing variables
+Applying variables further to create the Theme
+Custom Icons
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media not -moz-pref("user.theme.0.default") {
+@media not -moz-pref("user.theme.catppuccin") {
+@media not -moz-pref("user.theme.catppuccin-frappe") {
+@media not -moz-pref("user.theme.catppuccin-mocha") {
+@media not -moz-pref("user.theme.gruvbox") {
+@media not -moz-pref("user.theme.kanagawa-wave") {
+@media not -moz-pref("user.theme.midnight") {
+@media not -moz-pref("user.theme.scarlet") {
+
+@media (prefers-color-scheme: dark) { :root {
+    color-scheme: dark !important;
+    --uc-browser-color:      transparent;
+    --uc-text:               rgb(255, 255, 255);
+    --uc-layered-background: rgba(35, 35, 42,0.2);
+    --uc-blur-layer:         rgba(35, 35, 42,0.1);
+    --uc-navbar-background:  var(--toolbar-bgcolor);
+    --uc-urlbar-background:  var(--uc-layered-background);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background:     transparent;
+    --uc-tab-selected:       rgba(35, 35, 42,0.3);
+    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-button-selected:    rgba(35, 35, 42,0.4);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       var(--uc-layered-background);
+    --uc-panel-background:   var(--uc-layered-background);
+    --uc-panel-border:       rgba(25, 25, 25, 0.2);
+    --uc-panel-border-2:     rgba(1, 1, 1, 0.2);
+    --uc-accent-color-1:     #EDF783;
+    --uc-accent-color-2:     rgb(90, 121, 156);
+    --uc-accent-color-3:     white;
+    --uc-accent-color-4:     rgba(28, 27, 34, 0.5);
+    --uc-accent-color-5:     rgb(121, 161, 195);
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow:         0.15rem 0.3rem 0.2rem -0.1rem rgba(0,0,0,0.4);
+    --uc-box-shadow-panel:   0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+    --uc-button-border-radius: 10px;
+    --uc-tab-border-radius: 8px;
+}}
+
+@media (prefers-color-scheme: light) { :root {
+    --uc-placeholder-this-element-needs-blur: rgba(75, 75, 95,0.5)
+    color-scheme: light !important;
+    --uc-browser-color:      transparent;
+    --uc-text:               rgb(45, 45, 45);
+    --uc-layered-background: rgba(35, 35, 42,0.2);
+    --uc-navbar-background:  var(--toolbar-bgcolor);
+    --uc-urlbar-background:  var(--uc-layered-background);
+    --uc-findbar-background: var(--uc-layered-background);
+    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-tabsbar-background: var(--uc-browser-color);
+    --uc-tab-background:     transparent;
+    --uc-tab-selected:       rgba(35, 35, 42,0.5);
+    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-button-selected:    rgba(35, 35, 42,0.4);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       white;
+    --uc-panel-background:   white;
+    --uc-panel-border:       rgba(25, 25, 25, 0.5);
+    --uc-panel-border-2:     rgba(1, 1, 1, 0.3);
+    --uc-accent-color-1:     rgb(108, 152, 255);
+    --uc-accent-color-2:     rgba(144,144,200,0.8);
+    --uc-accent-color-3:     black;
+    --uc-accent-color-4:     rgba(37, 59, 111, 0.05);
+    --uc-accent-color-5:     rgb(108, 152, 255);
+    --uc-accent-color-6:     rgb(203, 203, 204);
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.5);
+    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
+    --uc-button-border-radius: 10px;
+}}
+
+
+/* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
+
+#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+    --inactive-titlebar-opacity: 1 !important;
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
+    --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
+    --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --toolbox-non-lwt-bgcolor-inactive: ActiveCaption !important;
+    --toolbox-non-lwt-textcolor-inactive: CaptionText !important;
+    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
+    --tab-selected-textcolor: var(--uc-text) !important;
+    --tab-hover-background-color: var(--uc-tab-selected) !important;
+    --tab-loading-fill: var(--uc-accent-color-1) !important;
+    --button-background-color-ghost-hover: var(--uc-button-selected) !important;
+    --button-background-color: var(--uc-button-selected) !important;
+    --button-background-color-hover: var(--uc-button-selected) !important;
+    --button-background-color-active: var(--uc-button-selected) !important;
+    --button-hover-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-hover-background: var(--uc-button-selected) !important;
+    --button-active-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-active-background: var(--uc-button-selected) !important;
+    --button-primary-bgcolor: var(--uc-accent-color-1) !important;
+    --button-primary-hover-bgcolor: var(--uc-accent-color-1) !important;
+    --buttons-destructive-hover-bgcolor: #9d1c1c;  /*red*/
+    --buttons-destructive-active-bgcolor: var(--uc-button-red); /*red*/
+    --toolbarbutton-icon-fill: var(--uc-text) !important; /*toolbar button color*/
+    --toolbar-field-background-color: var(--uc-accent-color-4) !important;
+    --toolbar-field-border-color: var(--uc-accent-color-3) !important;
+    --toolbar-field-focus-border-color: var(--uc-accent-color-3) !important;
+    --urlbarView-result-button-selected-color: var(--uc-text) !important;
+    --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
+    --urlbarView-highlight-background: var(--uc-button-selected) !important;
+    --urlbarView-hover-background: var(--uc-button-selected) !important;
+    --urlbar-box-hover-bgcolor: var(--uc-button-selected) !important;
+    --urlbar-box-hover-text-color: var(--uc-text) !important;
+    --urlbar-icon-border-radius: var(--uc-all-border-radius);
+    --arrowpanel-menuitem-border-radius: var(--uc-all-border-radius);
+    --arrowpanel-border-radius: var(--uc-all-border-radius);
+    --toolbarbutton-border-radius: var(--uc-all-border-radius);
+    --urlbar-icon-border-radius: var(--uc-all-border-radius);
+    --arrowpanel-menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --menuitem-border-radius: var(--uc-button-border-radius) !important;
+    --button-border-radius: var(--uc-button-border-radius) !important;
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --toolbar-field-color: var(--uc-text) !important;
+    --toolbar-field-focus-color: var(--uc-text) !important;
+    --toolbar-color: var(--uc-text) !important;
+    --toolbar-field-color: var(--uc-text) !important;
+    --toolbar-field-focus-color: var(--uc-text) !important;
+    --sidebar-text-color: var(--uc-text) !important;
+    --arrowpanel-background: var(--uc-panel-background) !important;
+    --arrowpanel-border-color: var(---uc-panel-border-ii) !important;
+    --arrowpanel-color: var(--uc-text) !important;
+    --newtab-background-color: var(--uc-tabsbar-background) !important;
+    --panel-background: var(--uc-panel-background) !important;
+    --panel-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --panel-banner-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --short-notification-background: var(--uc-accent-color-2) !important;
+    --panel-border-color: var(--uc-panel-border) !important;
+    --panel-separator-color: var(--uc-layered-background) !important;
+    --organizer-toolbar-background: var(--uc-accent-color-4) !important;
+    --organizer-pane-background: var(--uc-accent-color-4) !important;
+    --organizer-content-background: var(--uc-accent-color-4) !important;
+    --organizer-hover-background: var(--uc-accent-color-4) !important;
+    --organizer-selected-background: var(--uc-button-selected) !important;
+    --organizer-focus-selected-color: var(--uc-button-selected) !important;
+    --organizer-outline-color: rgb(0,221,255) !important;
+    --organizer-toolbar-field-background: var(--uc-accent-color-4) !important;
+    --organizer-toolbar-field-background-focused: var(--uc-accent-color-1) !important;
+    --content-select-background-image: none !important;
+} 
+
+
+/* Applying variables  further to create the Theme --------------------------------*/
+
+/* If a section is empty, that means the style is defaulting to chrome/theme/ffu-internal-appearance.css */
+
+/* Main window adjustments ----------------------------------------*/
+    
+#main-window:not([lwtheme]) {  
+    /* main browser window background color */
+    background-color: var(--uc-browser-color) !important;
+    & body {background: var(--uc-browser-color) !important;}
+    /* keep consistency with the navigation assets (including the tabs container) */
+    & #navigator-toolbox {
+        background-color: var(--uc-navbar-background) !important;
+    }    
+}
+
+/* URL Bar --------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    & #urlbar-background {backdrop-filter: blur(220px);}
+    & #urlbar:not([open]) {
+        & #urlbar-background, & #searchbar {
+            background-color: var(--uc-urlbar-background) !important;
+            border-radius: var(--uc-button-border-radius) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    & #urlbar-background, & #searchbar,
+    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+        background-color: var(--uc-blur-layer) !important;
+        border-radius: var(--uc-button-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & #urlbar[open] {
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & #urlbar[open] > #urlbar-background {
+        border-color: var(--uc-accent-color-3) !important;
+    }
+    & #urlbar[breakout][breakout-extend] {
+        background-color: transparent !important;
+        border-radius: var(--uc-button-border-radius);
+    }
+    & #urlbar-zoom-button {
+        background-color: var(--uc-button-selected) !important;
+    }
+    & .urlbarView-row { &[selected] {
+        color: var(--uc-text) !important;
+    }}
+    & .urlbarView-row:hover {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-text) !important;
+    }
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
+    }
+}
+
+/* Browser Content adjustments ------------------------------------*/
+    
+#main-window:not([lwtheme]) {  
+    /* content window */
+    & #appcontent, & #browser, & #tabbrowser-tabbox, 
+    & #tabbrowser-tabpanels, & .browserSidebarContainer { 
+        background: var(--toolbar-bgcolor) !important; 
+    }
+    & .browserStack { background: var(--uc-transparent) !important; }
+}
+
+/* Find bar -------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    & .findbar-textbox {
+        background-color: var(--uc-findbar-background) !important;
+        color: var(--uc-text) !important;
+        box-shadow: var(--uc-box-shadow);
+    }
+    & .findbar-textbox:focus {
+        background-color: var(--uc-findbar-background) !important;
+    }
+}
+
+/* Sidebars -------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {  
+    #sidebar {
+        background:var(--uc-sidebar-background) !important;
+    }
+    /*sidebar links*/
+    .sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
+    .customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+        color: var(--uc-accent-color-5) !important;
+    }
+}
+:root {
+  --sidebar-box-border-color: none !important;
+  --sidebar-box-border-width: 0 !important;
+  --sidebar-box-border: none !important;
+  --sidebar-box-background: var(--uc-layered-background) !important;
+  --sidebar-box-color: none !important;
+}
+/*sidebar check boxes*/
+@layer input-common { #input {
+    accent-color: var(--uc-accent-color-5) !important;
+}}
+
+/* Tabs -----------------------------------------------------------*/
+    
+#main-window:not([lwtheme]) {
+    /* vert tabs background*/
+    & #sidebar-main {
+        background: var(--uc-tabsbar-background) !important;
+        backdrop-filter: blur(17px);
+        border-radius:9px !important;
+    }
+    & #tabbrowser-tabs[orient="vertical"] {backdrop-filter: blur(25px);}
+    &[sidebar-expand-on-hover=""] #sidebar-main[sidebar-launcher-expanded] {
+            background: var(--uc-blur-layer) !important;
+        }
+    }
+    & #tabbrowser-tabs[orient="vertical"][overflow]::after {
+      content: none !important;
+    }
+    /* tabs container background */
+    & #tabbrowser-tabs {
+        background: transparent !important;
+    }
+    /* tabs - selected tabs */
+    & .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    & .tab-background[selected] {
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & .tab-background[multiselected] {
+        outline-color: var(--uc-text) !important;
+        outline-offset: 1px !important;
+    } 
+    & .tab-background[multiselected] { @media (prefers-color-scheme: light)
+        outline-color: var(--uc-accent-color-1) !important;
+        outline-offset: none !important;
+    } 
+    /* tabs - pinned tabs */
+    & .tab-label-container[pinned] {
+        color: var(--uc-accent-color-1) !important;
+    }
+    & .tabbrowser-tab[pinned=""] .tab-background,
+    & .tabbrowser-tab[pinned="true"] .tab-background {
+        background-color: var(--tab-selected-bgcolor) !important;
+    }
+    & #vertical-tabs .tabbrowser-tab[pinned] .tab-background {
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /*tabs - all other tabs */
+    & .tab-label-container:not([selected=""],[pinned]) {
+        color: var(--uc-text) !important;
+    }
+    & .tab-background {
+        .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    /* tabs preview container */
+    & .tab-preview-container {
+        background-color: var(--uc-tabsbar-background) !important;
+        color: var(--uc-text) !important;
+        width: 225px !important;
+        border: 0px solid var(--uc-panel-border) !important;
+        backdrop-filter: blur(17px);
+        appearance: menupopup !important;
+    }
+}
+
+/* Button Adjustments ---------------------------------------------*/
+
+#main-window:not([lwtheme]) {  
+    & .toolbarbutton-text {
+        color: var(--toolbarbutton-icon-fill);
+    }
+    & #nav-bar .toolbarbutton-1,
+    &  #nav-bar .toolbarbutton-text {
+        color: var(--uc-accent-color-2) !important;
+    }
+    & .toolbarbutton-icon:hover,
+    & .toolbarbutton-icon[open],
+    & #TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon {
+        background-color: var(--uc-button-selected) !important;
+    }        
+    /* bookmark button in URL bar */
+    & #star-button[starred] {
+        fill-opacity: 1 !important;
+        fill: var(--uc-accent-color-1) !important;
+    }
+    /* title bar buttons - min, max, close */
+    & .titlebar-button {
+        border-radius: var(--uc-button-border-radius);
+    }
+    & .titlebar-button:hover {
+        background-color: var(--uc-button-selected) !important;
+    }
+    @media (-moz-platform: windows) {
+        .titlebar-close:hover {
+            background-color: var(--uc-button-red) !important;
+        }
+    }
+}
+    
+/* Popups/Menus ---------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    /* session notify */
+    :root[dialogroot] {
+        --in-content-page-background: var(--uc-panel-background) !important;
+        color: var(--uc-text)  !important;
+    }
+    /* other panels / extensions panel */
+    & .panel-subview-body {
+        background: var(--uc-panel-background) !important;
+    }
+    /* other panels / extensions panel */
+    & panelview,
+    & #unified-extensions-view {
+        background: var(--uc-panel-background) !important;
+    }
+    & #unified-extensions-view #unified-extensions-area {
+        background: var(--uc-panel-background) !important;
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+    /* drop down menus */
+    & #ContentSelectDropdown > menupopup[customoptionstyling="true"]::part(arrowscrollbox) {
+        --panel-color: black !important;
+    }
+    & #ContentSelectDropdownPopup .menupopup-arrowscrollbox::part(content) {
+        --panel-color: black !important;
+    }
+    & #ContentSelectDropdownPopup menupopup,
+    & #ContentSelectDropdownPopup panel {
+        --panel-color: black !important;
+    }        
+    /* bookmark toolbar adjustment */
+    & #PersonalToolbar {background: var(--uc-transparent) !important;}        
+    /* customize toolbar page */
+    & #customization-container {background-color: var(--uc-browser-color) !important;}
+    /* menu popups */
+    & .panel-subview-body {background: var(--uc-panel-background) !important;}
+    & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
+}   
+
+.dialogBox {
+    backdrop-filter: blur(30px) !important;
+    box-shadow: var(--uc-box-shadow) !important;
+}
+#window-modal-dialog::backdrop {
+    background: none !important;
+}    
+    
+/* Context Menu ---------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    menupopup, panel {
+        color-scheme: light dark;
+        --panel-background: var(--uc-context-menu) !important;
+        --panel-border-radius: var(--uc-button-border-radius) !important;
+        --panel-border-color: var(--uc-panel-border-2) !important;
+        --panel-color: var(--uc-text) !important;
+    }
+    menupopup {--panel-shadow:none !important;}
+    menuitem:hover {
+        background-color: var(--uc-button-selected) !important;
+        --panel-color: red !important;
+        border-radius: 6px !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-5) !important;
+    }
+}
+
+/* Custom Icons ---------------------------------------------------*/
+
+@media -moz-pref("ultima.theme.icons") {
+    /* extension menu */
+    #main-window:not([lwtheme]) #unified-extensions-button {
+        list-style-image: url("../../icons/extensions.svg") !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+    }
+    #main-window[lwtheme] #unified-extensions-button {
+        list-style-image: url("../../icons/extensions.svg") !important;
+    }
+    /* bookmarks folder icon */
+    .bookmark-item[container=true] {
+        list-style-image: url("../../icons/bm.svg") !important;
+    }
+    /* ublock on */
+    #ublock0_raymondhill_net-BAP image{
+        list-style-image: url("../../icons/ublock.svg") !important;
+    }
+    /* ublock off */
+    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {
+        list-style-image: url("../../icons/ublock.svg") !important;
+        fill: var(--uc-button-red) !important;
+    }
+    #forward-button image {
+        list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
+    #back-button image {
+        list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
+    /* overflow icon changed to a "more" icon */
+    #nav-bar-overflow-button {
+        list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+    }
+    #alltabs-button {
+        list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important;
+    }
+}
+
+.urlbarView,
+#browser:not(.browser-toolbox-background),
+#urlbar-results,
+#urlbar,
+browser#sidebar,
+menupopup,
+tooltip,
+window#webextpanels-window,
+slot[part="content"] {
+  background-color: transparent !important;
+  appearance: menupopup !important;
+  --panel-shadow-margin: 0px !important;
+}    
+
+.dialogFrame,
+#statuspanel-label {
+  backdrop-filter: blur(20px) brightness(90%) saturate(112%) !important;
+  background-color: transparent !important;
+}    
+/* external windows */
+/* make about dialog background transparent */
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml")
+{
+  #aboutDialog,
+  #aboutDialogContainer {
+    background: transparent !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    #clientBox,
+    #bottomBox {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+    }
+  }
+  #rightBox {
+    -moz-context-properties: fill !important;
+  }
+
+  @media (prefers-color-scheme: light) {
+    .text-link {
+      color: color-mix(in srgb, AccentColor 80%, black) !important;
+    }
+
+    .text-link:hover {
+      color: color-mix(in srgb, AccentColor 65%, black) !important;
+    }
+
+    .text-link:hover:active {
+      color: color-mix(in srgb, AccentColor 50%, black) !important;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-link {
+      color: color-mix(in srgb, AccentColor 80%, white) !important;
+    }
+
+    .text-link:hover {
+      color: color-mix(in srgb, AccentColor 65%, white) !important;
+    }
+
+    .text-link:hover:active {
+      color: color-mix(in srgb, AccentColor 50%, white) !important;
+    }
+  }
+}
+
+/* make abuse-report-frame dialog background transparent */
+@-moz-document url("chrome://mozapps/content/extensions/abuse-report-frame.html")
+{
+  ul.abuse-report-reasons > li > label {
+    grid-template-columns: unset !important;
+    grid-template-rows: unset !important;
+    width: unset !important;
+    line-height: unset !important;
+  }
+
+  html.dialog-window {
+    background-color: var(--in-content-page-background) !important;
+  }
+
+  .abuse-report-buttons {
+    margin-bottom: 10px !important;
+  }
+}
+
+/* make alert dialog background transparent */
+@-moz-document url("chrome://global/content/alerts/alert.xhtml")
+{
+  #alertNotification {
+    background: transparent !important;
+    padding-top: 8px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-bottom: 12px !important;
+  }
+  #alertBox {
+    padding: 8px !important;
+    background-clip: padding-box !important;
+    background-image: none !important;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.32) !important;
+  }
+}
+
+/* make createProfileWizard dialog background transparent */
+@-moz-document url("chrome://mozapps/content/profile/createProfileWizard.xhtml")
+{
+  .wizard-header {
+    background-color: transparent !important;
+    border-bottom: none !important;
+    height: 40px !important;
+    vertical-align: middle;
+  }
+  .wizard-header-label {
+    margin: 5.75px 12px 0px 12px !important;
+  }
+  .wizard-buttons-separator {
+    display: none !important;
+  }
+  .wizard-next-deck {
+    margin-left: 10px !important;
+  }
+}
+
+/* make commonDialog background transparent */
+@-moz-document url("chrome://global/content/commonDialog.xhtml")
+{
+  window,
+  #commonDialogWindow {
+    background: transparent !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    window[title="Incoming Connection"] #commonDialog[windowtype="prompt:confirmEx"] {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+    }
+    #commonDialog {
+      background-color: var(--in-content-page-background);
+    }
+  }
+  #checkbox {
+    margin-left: 23px !important;
+  }
+  #infoIcon {
+    -moz-context-properties: fill !important;
+    fill: var(--uwp-global-front) !important;
+  }
+  button[dlgtype="extra1"][label="Disable"] {
+    display: none;
+  }
+}
+
+/* make datepicker dialog use accent color */
+@-moz-document url("chrome://global/content/datepicker.xhtml")
+{
+  body {
+    background: transparent;
+    --selected-fill-color: AccentColor !important;
+  }
+  .spinner {
+    scrollbar-width: thin !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    /*     {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+      background-repeat: repeat !important;
+    } */
+  }
+}
+
+/* make exceptionDialog background transparent */
+@-moz-document url("chrome://pippki/content/exceptionDialog.xhtml")
+{
+  #exceptiondialog {
+    background-color: black !important;
+  }
+  .dialog-content-box {
+    color: white !important;
+  }
+  caption {
+    background-color: transparent !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+  vbox > image {
+    display: none !important;
+  }
+  #locationGroupBox {
+    margin-top: 5px !important;
+  }
+}
+
+/* make library & download window background transparent */
+@-moz-document url("chrome://browser/content/places/places.xhtml")
+{
+  #placesList,
+  #detailsPane,
+  #placesPopupset,
+  #placesToolbox,
+  #placesToolbar,
+  #downloadsListBox,
+  #placeContent,
+  #placesContentTags,
+  #placesContentTitle,
+  #placesContentUrl,
+  #places {
+    background-color: transparent !important;
+    border: 0.5px !important;
+  }
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    #placesToolbar,
+    #placesList,
+    #contentView {
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+    }
+  }
+  #infoBox {
+    border-top: 1px solid var(--arrowpanel-border-color-mica) !important;
+  }
+  #placesView > splitter {
+    border-inline-end: 1px solid var(--arrowpanel-border-color-mica) !important;
+  }
+  #infoBox {
+    border-top: 1px solid var(--arrowpanel-border-color-mica) !important;
+  }
+}
+
+@-moz-document url("chrome://browser/content/pageinfo/pageInfo.xhtml")
+{
+  #main-window {
+    background: transparent !important;
+  }
+  /* Change Header Size */
+  @media -moz-pref("widget.windows.mica.toplevel-backdrop", 2) {
+    #topBar,
+    #mainDeck {
+      color: lightgray !important;
+      background-color: var(--arrowpanel-background-mica) !important;
+      background-image: var(--acrylic-noise) !important;
+      border: none !important;
+    }
+  }
+  #permHostBox > label {
+    margin-top: 7px !important;
+  }
+  #permList {
+    border: none !important;
+    -moz-appearance: none !important;
+  }
+  #feedListbox {
+    border: none !important;
+    -moz-appearance: none !important;
+  }
+  #feedListbox > richlistitem {
+    padding-inline-start: 0px !important;
+    padding-inline-end: 0px !important;
+  }
+  #feedListbox richlistitem:not([selected="true"]) {
+    border-bottom: 0px !important;
+  }
+  .text-link {
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+  }
+  .permission {
+    border: none !important;
+  }
+  .permission:hover {
+    background-color: #191919 !important;
+    color: white !important;
+  }
+  .permission:hover:active {
+    background-color: #333333 !important;
+  }
+  caption {
+    background-color: transparent !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+  }
+  #imagecontainerbox {
+    background-color: black !important;
+    border: none !important;
+  }
+  #viewGroup > radio {
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+    padding-top: 9.5px !important;
+    padding-bottom: 9.5px !important;
+  }
+  #viewGroup > radio[selected="true"] {
+    background-color: transparent !important;
+    border-bottom: 3px solid AccentColor;
+    padding-bottom: 6.5px !important;
+  }
+  #viewGroup > radio > .radio-label-box {
+    outline: none !important;
+    color: var(--arrowpanel-color);
+  }
+  #viewGroup > radio:hover {
+    background-color: rgb(60, 60, 60) !important;
+    color: white !important;
+  }
+}    
+    
+}}}}}}}
+
+
+

@@ -32,30 +32,30 @@ new tab rounded tweaks
     --newtab-button-static-hover-background: transparent !important;
     --button-background-color-ghost-hover: transparent !important;  
 }
-
 @media -moz-pref("ultima.xstyle.newtab.rounded") {
     :root {
         --uc-rounded-border: 100%;
         --uc-less-rounded-border: 100%;
         --uc-evenless-rounded-border: 12px;
     }
-}        
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --newtab-background-color-secondary: transparent !important;
-        --newtab-element-hover-color:  rgba(240,240,250,0.6) !important;
-        --uc-panel-backgrounds: rgba(20,20,20,0.5);
-        --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 5%, rgba(14,14,14,0.8)) !important;
-        --mode-color: white;
+        --newtab-background-color-secondary: color-mix(in srgb, var(--uc-browser-color) 5%, transparent) !important;
+        --newtab-element-hover-color:  rgba(265,265,265,0.2) !important;
+        --uc-panel-backgrounds: color-mix(in srgb, var(--uc-browser-color) 40%, transparent);
+        --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
+        --mode-color: var(--uc-text);
     }
 }  
 @media (prefers-color-scheme: light) { 
     :root{
-        --newtab-background-color-secondary: rgba(220,220,230,0.1) !important;
-        --newtab-element-hover-color:  rgba(20,20,45,0.6) !important;
-        --uc-panel-backgrounds: rgba(240,240,240,1);
-        --newtab-element-secondary-hover-color: color-mix(in srgb, currentColor 35%, transparent) !important;
-        --mode-color: rgb(17,17,17);
+        --newtab-background-color-secondary: color-mix(in srgb, var(--uc-browser-color) 35%, transparent) !important;
+        --newtab-element-hover-color:  rgba(200,200,210,0.6) !important;
+        --uc-panel-backgrounds: color-mix(in srgb, var(--uc-browser-color) 60%, transparent);
+        --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
+        --mode-color: var(--uc-text);
     }
 }  
 
@@ -250,7 +250,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 .personalize-button { /*! padding: 8px !important; */ border-radius:100% !important;}
 .personalize-button:hover {
     background-color: transparent !important;
-    transform: scale(1.5);
+    transform: scale(1.3);
     cursor: pointer;
 }  
 .weatherCard {
@@ -286,7 +286,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 .context-menu > ul > li > button:is(:focus, :hover) {
     border-radius: 5px !important;
     background: var(--newtab-element-hover-color) !important;
-    color: var(--uc-panel-backgrounds) !important;
+    color: var(--uc-accent-color-1) !important;
 }
 .weatherButtonContextMenu .context-menu {z-index: 1000 !important;} /*doesnt work its populated*/
 .weather .weatherSponsorText {display:none !important;}
@@ -499,6 +499,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
         backdrop-filter: blur(150px) !important;
         background-blend-mode: overlay !important;
         z-index:999 !important;
+        *:not(.contentSearchSuggestionTable .contentSearchSettingsButton) {border: 0 transparent solid !important;}
     } 
 
     #searchSuggestionTable .contentSearchSuggestionRow:hover {
@@ -520,6 +521,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     .contentSearchSuggestionTable .contentSearchHeader {
         padding: 12px 0 12px 0 !important;
         border-radius:18px !important;
+        margin-top:10px !important;
         &:hover{cursor:pointer;text-decoration: underline;}
     }
     /*search with search engine suggestions container*/
@@ -530,13 +532,14 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     /*search engine buttons*/
     .contentSearchSuggestionTable .contentSearchOneOffItem {
         border-radius:18px !important;
-        &:hover{transform:scale(1.1) !important; cursor:pointer;}
+        &:hover{cursor: pointer;}
     }
     /*search settings button*/
     .contentSearchSuggestionTable .contentSearchSettingsButton {
         border-radius:10px !important;
         background-color: transparent !important;
-        &:hover{transform:scale(1.2) !important;text-decoration: underline;cursor:pointer;}
+        padding-bottom: 25px !important;
+        &:hover{text-decoration: underline;cursor:pointer; background-color: var(--newtab-element-hover-color) !important;}
     }
 }
 

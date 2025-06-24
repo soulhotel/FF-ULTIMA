@@ -28,7 +28,6 @@ File Desc:         userContent - Private window home page declutter
         /*wallpaper for dark mode*/
         @media (prefers-color-scheme: dark) {
             body{
-                background-image: url("pic/private.jpg") !important;
                 background-position: center !important;
                 background-repeat: no-repeat !important;
                 background-size: cover !important;
@@ -37,7 +36,6 @@ File Desc:         userContent - Private window home page declutter
         /*wallpaper for light mode*/
         @media (prefers-color-scheme: light) {
             body{
-                background-image: url("pic/private.jpg") !important;
                 background-position: center !important;
                 background-repeat: no-repeat !important;
             background-size: cover !important;

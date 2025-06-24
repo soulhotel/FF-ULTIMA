@@ -1,0 +1,107 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         This enables Color Schemes in FF Ultima
+Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme
+
+ * There are 3 list here:
+    * Browser.
+    * Websites/Extensions.
+    * Wallpapers.
+
+ * Add your own theme by adding it's name into the lists.
+ * You can name your color scheme anything you want, even your own username
+ * I suggest using find/replace (ctrl+f) on "YourName"
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@import url('default/ffu-colorscheme.css')            -moz-pref("user.theme.0.default");
+@import url('transparent/ffu-colorscheme.css')        -moz-pref("user.theme.transparent");
+@import url('catppuccin/ffu-colorscheme.css')         -moz-pref("user.theme.catppuccin");
+@import url('catppuccin-frappe/ffu-colorscheme.css')  -moz-pref("user.theme.catppuccin-frappe");
+@import url('catppuccin-mocha/ffu-colorscheme.css')   -moz-pref("user.theme.catppuccin-mocha");
+@import url('gruvbox/ffu-colorscheme.css')            -moz-pref("user.theme.gruvbox");
+@import url('kanagawa-wave/ffu-colorscheme.css')      -moz-pref("user.theme.kanagawa-wave");
+@import url('midnight/ffu-colorscheme.css')           -moz-pref("user.theme.midnight");
+@import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
+@import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
+
+
+/* Add your Theme (Above) for the Browser ------------------------------------------------------------------------ */
+
+
+@-moz-document url-prefix("http://"), url-prefix("https://"), url-prefix("file://"), regexp("moz-extension://.*") {
+
+@import url('default/ffu-colorscheme.css')            -moz-pref("user.theme.0.default");
+@import url('transparent/ffu-colorscheme.css')        -moz-pref("user.theme.transparent");
+@import url('catppuccin/ffu-colorscheme.css')         -moz-pref("user.theme.catppuccin");
+@import url('catppuccin-frappe/ffu-colorscheme.css')  -moz-pref("user.theme.catppuccin-frappe");
+@import url('catppuccin-mocha/ffu-colorscheme.css')   -moz-pref("user.theme.catppuccin-mocha");
+@import url('gruvbox/ffu-colorscheme.css')            -moz-pref("user.theme.gruvbox");
+@import url('kanagawa-wave/ffu-colorscheme.css')      -moz-pref("user.theme.kanagawa-wave");
+@import url('midnight/ffu-colorscheme.css')           -moz-pref("user.theme.midnight");
+@import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
+@import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
+
+/* Adding your Theme (Above) makes the colors available to websites & extensions -------------------------------- */
+
+}
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {
+@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+
+
+@media -moz-pref("user.theme.0.default") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/fullmoon.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/dusky.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.transparent") { body {
+  @media (prefers-color-scheme: dark) {background-image:/* url("walls/transparent.jpg")*/ !important;}
+  @media (prefers-color-scheme: light) {background-image:/* url("walls/transparent.jpg")*/ !important;}
+}}
+
+@media -moz-pref("user.theme.catppuccin") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.catppuccin-frappe") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin-frappe.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin-frappe.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.catppuccin-mocha") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin-mocha.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin-frappe2.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.gruvbox") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/gruvbox.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/gruvbox-l.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.kanagawa-wave") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/kanagawa-wave.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/kanagawa-wave.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.midnight") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/midnight.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/old.midnight.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.scarlet") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/scarlet.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/scarlet.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.yourName") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/YourWallpaper.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/YourWallpaper.jpg") !important;}
+}}
+
+/* Adding your Theme (Above) and a wallpaper for it, you can reuse existing wallpapers too ---------------------- */
+
+}} /*end*/

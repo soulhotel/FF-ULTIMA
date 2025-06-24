@@ -1,0 +1,125 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme
+
+ * This file also handles the wallpaper override setting "user.theme.wallpaper"
+ * To add your own wallpaper to the list use the template below
+ * You can also reuse any wallpaper from the pics folder
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {
+@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+
+/*------------------------------- OVERRIDE WALLPAPERS FEATURE ----------------------------------*/
+
+@media -moz-pref("user.theme.wallpaper.catppuccin"){body{background-image: url("walls/catppuccin.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin-frappe"){body{background-image: url("walls/catppuccin-frappe.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin-frappe2"){body{background-image: url("walls/catppuccin-frappe2.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.catppuccin-mocha"){body{background-image: url("walls/catppuccin-mocha.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.dusky"){body{background-image: url("walls/dusky.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.fullmoon"){body{background-image: url("walls/fullmoon.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.midnight"){body{background-image: url("walls/midnight.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.midnight2"){body{background-image: url("walls/old.midnight.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.green"){body{background-image: url("walls/green.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.gruvbox"){body{background-image: url("walls/gruvbox.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.gruvbox.light"){body{background-image: url("walls/gruvbox-l.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.gruvbox.flowers"){body{background-image: url("walls/gruvbox-3.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.seasonal"){body{background-image: url("walls/seasonal.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.kanagawa-wave"){body{background-image: url("walls/kanagawa-wave.jpg") !important;}}
+
+}} /*fin*/
+
+/*--------------------------- NEW TAB WALLPAPER MENU (EXPERIMENTAL) ---------------------------*/
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) {
+
+.wallpaper-input.dark-color, .wallpaper-input.light-color {background-image: url("walls/walldisplay.jpg") !important;}
+  
+#dark-sky {background-image: url("walls/fullmoon.jpg") !important;}
+#dark-mountain {background-image: url("walls/catppuccin-frappe.jpg") !important;}
+#dark-panda {background-image: url("walls/midnight.jpg") !important;}
+#light-panda {background-image: url("walls/dusky.jpg") !important;}
+#light-fox-anniversary {background-image: url("walls/gruvbox-2.jpg") !important;}
+#dark-fox-anniversary {background-image: url("walls/old.dusky.jpg") !important;}
+#light-landscape {background-image: url("walls/catppuccin-frappe2.jpg") !important;}
+#light-mountain {background-image: url("walls/gruvbox.jpg") !important;}
+#dark-beach {background-image: url("walls/gruvbox.jpg") !important;}
+#light-sky {background-image: url("walls/kanagawa-wave.jpg") !important;}
+#light-beach {background-image: url("walls/green.jpg") !important;}
+#dark-landscape {background-image: url("walls/seasonal.jpg") !important;}
+
+:root:has(#dark-sky[aria-checked="true"]) body {background-image: url("walls/fullmoon.jpg") !important;}
+:root:has(#dark-mountain[aria-checked="true"]) body {background-image: url("walls/catppuccin-frappe.jpg") !important;}
+:root:has(#dark-panda[aria-checked="true"]) body {background-image: url("walls/midnight.jpg") !important;}
+:root:has(#light-panda[aria-checked="true"]) body {background-image: url("walls/dusky.jpg") !important;}
+:root:has(#light-fox-anniversary[aria-checked="true"]) body {background-image: url("walls/gruvbox-2.jpg") !important;}
+:root:has(#dark-fox-anniversary[aria-checked="true"]) body {background-image: url("walls/old.dusky.jpg") !important;}
+:root:has(#light-landscape[aria-checked="true"]) body {background-image: url("walls/catppuccin-frappe2.jpg") !important;}
+:root:has(#light-mountain[aria-checked="true"]) body {background-image: url("walls/gruvbox.jpg") !important;}
+:root:has(#dark-beach[aria-checked="true"]) body {background-image: url("walls/gruvbox.jpg") !important;}
+:root:has(#light-sky[aria-checked="true"]) body {background-image: url("walls/kanagawa-wave.jpg") !important;}
+:root:has(#light-beach[aria-checked="true"]) body {background-image: url("walls/green.jpg") !important;}
+:root:has(#dark-landscape[aria-checked="true"]) body {background-image: url("walls/seasonal.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/e94b1e49-c518-40d6-98e3-dffab6cc370d.avif");'])
+  body:not([style*="--"]){background-image: url("walls/fullmoon.jpg") !important;}
+  
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/af6073d2-cbb2-4e28-b642-3327d14808b2.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/catppuccin-mocha.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/6b8eb3cf-f232-4c7b-a179-afd174555134.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/midnight.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/dfd3762e-f77d-4b6e-ac75-32eb2549ef40.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/dusky.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/a5a041de-9275-4eb5-8f21-a0171c82d388.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/gruvbox-2.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/d8b71c77-9985-41d2-b98e-51bebc60e595.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/old.dusky.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/d9289c5b-8c78-4b27-b5d8-afe7285ce7d1.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/gruvbox.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/5344443f-f427-4029-bc6b-68bc22f83355.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/gruvbox-3.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/966b18ad-3733-41c4-92f6-c89cdf1381d0.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/gruvbox.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/45ecab20-ffb9-47b4-94ff-07a5f8b9f53f.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/catppuccin.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/56a7f3ae-70cc-45f2-82ec-1d39acdd3b8d.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/green.jpg") !important;}
+
+:root:has(#photographs[style='background-image: url("https://firefox-settings-attachments.cdn.mozilla.net/main-workspace/newtab-wallpapers-v2/10e23599-85bc-4660-ae06-7a67befbbcf9.avif");']) 
+  body:not([style*="--"]){background-image: url("walls/seasonal.jpg") !important;}
+
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+#dark-sky {order: 1 !important;}
+#dark-mountain {order: 2 !important;}
+#dark-panda {order: 3 !important;}
+#light-panda {order: 4 !important;}
+#light-fox-anniversary {order: 5 !important;} 
+#dark-fox-anniversary {order: 6 !important;}  
+#light-landscape {order: 7 !important;}
+#light-mountain {order: 8 !important;}
+#dark-beach {order: 9 !important;}
+#light-sky {order: 10 !important;}
+#light-beach {order: 11 !important;}
+#dark-landscape {order: 12 !important;}
+
+.wallpaper-attribution { display: none !important; }
+
+.wallpaper-list fieldset {
+  background-color: rgb(15, 15, 15) !important;
+  border-radius: 12px !important;
+}
+  
+} /*the end*/

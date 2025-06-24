@@ -1,0 +1,17 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Private Browsing Modifications
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* private browsing indicator */
+
+:root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
+    list-style-image: url("chrome://global/skin/icons/indicator-private-browsing.svg") !important;
+}
+
+.private-browsing-indicator,
+.private-browsing-indicator-with-label {
+    display: none !important;
+}
