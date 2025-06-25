@@ -29,21 +29,24 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
 - `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
+- `fix • 🔴 •` Reductions in modifying the sidebar splitters has fixed several positioning flaws
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
 - `new • 🟢 •` Setting `user.theme.transparent` supports Mica or Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 - `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
 - `qol • 🟡 •` Theme size reduced by 7mb
 - `qol • 🟡 •` Total number of File(s) reduced by 10
 - `qol • 🟡 •` There are now a total of 16 color schemes.
-- `qol • 🟡 •` YT theming can be turned off with `user.theme.xtension.YT`
+- `qol • 🟡 •` By default, the sidebars box-shadow is removed @calciferchang
+- `qol • 🟡 •` Youtube theming can be turned off with `user.theme.xtension.YT`
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
 - `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme)
 - `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
 - `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
 - `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
-- `qol • 🟡 •` Ublock Origin extension panel now automatically adjust to color scheme e1ddb8c
 - `qol • 🟡 •` Setting `ultima.xstyle.sidebar.theming` deleted. It is now handled automatically via color schemes
+- `qol • 🟡 •` Ublock Origin extension panel color now automatically follows colorscheme `user.theme.xtension.YT` e1ddb8c
 - `qol • 🟡 •` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
+
 <!--
 `fyi • ℹ️ •` 
 `fix • 🔴 •` 
