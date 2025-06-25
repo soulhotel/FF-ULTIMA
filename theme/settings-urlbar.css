@@ -9,9 +9,12 @@ File Desc:         Alternative Styles for the URL Bar
 
 @media -moz-pref("ultima.urlbar.transparent") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
-        & #urlbar-background, & #searchbar {
-            background-color: transparent !important;
-            box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(0,0,0,0);
+        & #urlbar:not([open]) {
+            & #urlbar-background, & #searchbar {
+                background-color: transparent !important;
+                border-radius: var(--uc-button-border-radius) !important;
+                box-shadow: none !important;
+            }
         }
     }
 }
