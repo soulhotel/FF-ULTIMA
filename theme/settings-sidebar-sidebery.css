@@ -8,13 +8,13 @@ note: sidebery -  refers to only sidebery (not other sidebars) (not vertical tab
 
 sidebar hide new header
 sidebar Seperator
-
 sidebery expand on in-active windows
-
+sidebar splitter visibility
 autohide sidebery
 adjustment for Sidebery only setups
 autohide all sidebars
 adjustments for disabled vertical tab bar
+adjustments for accessible splitter
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -76,6 +76,54 @@ adjustments for disabled vertical tab bar
     }
 }
 
+
+/* sidebar splitter visibility ---------------------------------------------------------------------- */
+
+/* since ffu 3.0 & the removal of previous handling of sidebar splitters,
+the default resizeable bars are just way too small & hard to trigger on hover...
+but the removal of previous handling (which made them thicker through 2.5px padding) introduced issues...
+browser content shifting to the side by 2.5px. sidebars shifting to the side when hovering screen edge...
+due to the new handling (visual changes) the splitter will behave like default behavior, and with autohide...
+it will remained fixed to the left or right of the sidebar (except for vertical tabs - default behavior).....
+with a visual indicator to slightly improve accessibility.
+*/
+
+:root:has(#sidebar-box[checked]) {
+    :has(#sidebar-box:not([sidebar-positionend])) {
+        #sidebar-splitter {
+            position: fixed; left:5px; height:85vh !important;
+        }
+        :has(#sidebar-splitter:hover) #sidebar-box::after {
+            content:"";
+            position: fixed; display: flex;  z-index: 99999;
+            top: 45vh; right: 10px;
+            height: 36px; width: 36px;
+            background: url("icons/splitter.gif") center center no-repeat;
+            background-size: contain;
+            background-color: var(--uc-accent-color-2);
+            border-radius:100%;
+            transition: opacity ease-in-out 1s, background-color ease 1s;
+        }
+    }
+    :has(#sidebar-box[sidebar-positionend]) {
+        #sidebar-splitter {
+            position: fixed; right:5px; height:85vh !important;
+        }
+        :has(#sidebar-splitter:hover) #sidebar-box::after {
+            content:"";
+            position: fixed; display: flex;  z-index: 99999;
+            top: 45vh; left: 10px;
+            height: 36px; width: 36px;
+            background: url("icons/splitter-r.gif") center center no-repeat;
+            background-size: contain;
+            background-color: var(--uc-accent-color-2);
+            border-radius:100%;
+            transition: opacity ease-in-out 1s, background-color ease 1s;
+        }
+    }
+}
+
+
 /* autohide sidebery ---------------------------------------------------------------------------------*/
 
 @media -moz-pref("ultima.sidebery.autohide") {
@@ -83,7 +131,7 @@ adjustments for disabled vertical tab bar
 
 /* this method allows the sidebar-splitter (resizeable bar) to be used to resize the expanded sidebar width */
 
-    :root {--browser-content-margin-4-sb-autohide:36px;}
+    :root {--browser-content-margin-4-sb-autohide:40px;}
 
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) {
         --uc-sidebar-collapsed-width: 38px;
@@ -146,7 +194,7 @@ adjustments for disabled vertical tab bar
         /*right side*/
         &[sidebar-positionend]{
             left:unset !important;
-            right:7px !important;
+            right:0px !important;
 
         }
     }
@@ -192,6 +240,12 @@ adjustments for disabled vertical tab bar
         }
     }
 
+    :root:has(#sidebar-main[sidebar-launcher-expanded=""]) {
+       & #tabbrowser-tabbox {
+            --browser-content-margin-4-sb-autohide:0px !important;
+        }
+    }        
+    
 }
 }
 }
@@ -204,7 +258,7 @@ adjustments for disabled vertical tab bar
 
 /* this method allows the sidebar-splitter (resizeable bar) to be used to resize the expanded sidebar width */
 
-    :root {--browser-content-margin-4-sb-autohide:36px;}
+    :root {--browser-content-margin-4-sb-autohide:40px;}
 
     #sidebar-box:not(:hover) {
         --uc-sidebar-collapsed-width: 38px;
@@ -215,7 +269,7 @@ adjustments for disabled vertical tab bar
         transition: max-width 0.2s linear 0ms !important;
     }
     #sidebar-box:not(:hover) * {
-        opacity:0.5;
+        opacity:1;
     }
     #main-window:has(#sidebar-splitter:hover) #sidebar-box:hover,
     #main-window:has(#sidebar-splitter:hover) #sidebar-box:not(:hover) {
@@ -313,6 +367,56 @@ adjustments for disabled vertical tab bar
         }
     }
 
+    :root:has(#sidebar-main[sidebar-launcher-expanded=""]) {
+       & #tabbrowser-tabbox {
+            --browser-content-margin-4-sb-autohide:0px !important;
+        }
+    }        
+    
 }
 }
 }
+
+/* adjustments for accessible splitter ---------------------------------------------------------*/
+
+@media -moz-pref("ultima.tabs.vertical.hide") {
+@media -moz-pref("ultima.sidebar.autohide"), -moz-pref("ultima.sidebery.autohide")  {
+    
+    :root:has(#sidebar-box[checked]) {
+        :has(#sidebar-box:not([sidebar-positionend])) {
+            #sidebar-splitter {
+                position: fixed; left:5px; height:85vh !important;
+            }
+            :has(#sidebar-splitter:hover) #sidebar-box::after {
+                content:"";
+                position: fixed; display: flex;  z-index: 99999;
+                top: 45vh; left: 10px;
+                height: 36px; width: 36px;
+                background: url("icons/splitter.gif") center center no-repeat;
+                background-size: contain;
+                pointer-events: none;
+                background-color: var(--uc-accent-color-2);
+                border-radius:100%;
+                transition: opacity ease-in-out 1s, background-color ease 1s;
+            }
+        }
+        :has(#sidebar-box[sidebar-positionend]) {
+            #sidebar-splitter {
+                position: fixed; right:5px; height:85vh !important;
+            }
+            :has(#sidebar-splitter:hover) #sidebar-box::after {
+                content:"";
+                position: fixed; display: flex;  z-index: 99999;
+                top: 45vh; right: 10px;
+                height: 36px; width: 36px;
+                background: url("icons/splitter-r.gif") center center no-repeat;
+                background-size: contain;
+                pointer-events: none;
+                background-color: var(--uc-accent-color-2);
+                border-radius:100%;
+                transition: opacity ease-in-out 1s, background-color ease 1s;
+            }
+        }
+    }
+
+}}   

@@ -139,6 +139,7 @@ Border Hunter
     --toolbar-field-border-color: var(--uc-accent-color-3) !important;
     --toolbar-field-focus-border-color: var(--uc-accent-color-3) !important;
     --urlbar-box-bgcolor: var(--uc-layered-background) !important;
+    --urlbar-box-focus-bgcolor: var(--uc-button-selected) !important;
     --urlbarView-result-button-selected-color: var(--uc-text) !important;
     --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
     --urlbarView-highlight-background: var(--uc-button-selected) !important;
@@ -488,10 +489,19 @@ findbar {
         & #sidebar-main {top: calc(var(--uc-topbars-combined-height) - 0px) !important;}
     }
 }
+#search-box[data-l10n-id="places-bookmarks-search"] {
+    padding-left:7px !important;
+}
 /*sidebar check boxes*/
 @layer input-common { #input {
     accent-color: var(--uc-accent-color-5) !important;
 }}
+/*entry borders*/
+moz-checkbox, .extension-item {
+  &:not(:last-of-type) {
+    border-bottom: 0.5px solid color-mix(in srgb, var(--panel-separator-color) 20%, transparent) !important;
+  }
+}
 /* visibility pointers */
 button[title="Close"] .button-background,
 button[title="Close sidebar"] .button-background {
@@ -510,23 +520,23 @@ button[title="Close sidebar"] .button-background {
     height:2.5em !important;
     appearance: none !important;
     border-radius: 10px !important;
-    background-color: rgba(110,110,110,0.1) !important;
+    background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     box-shadow: var(--uc-box-shadow-panel);
 }
 /*text list*/
 .sidebar-placesTree {
     appearance: none;
-    background-color: rgba(150,150,150,0.05) !important;
-    color: var(--uc-accent-color-1) !important;
-    border: 0.5px solid color-mix(in srgb, currentColor 24%, transparent) !important;
+    background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
+    color: var(--uc-accent-color-2) !important;
     border-radius: var(--border-radius-medium) !important;
-    box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0.6) !important;
-    margin: 2% 2% 133px 2% !important;
-    padding-left:12px !important
+    box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
+    margin: 2% 2% 30vh 2% !important;
+    padding-top:12px !important;
 }
 /* remove bad borders */
 #sidebar { @media -moz-pref("sidebar.revamp") { & {
-    box-shadow: 1px 2px 6px 0 light-dark(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)) !important;
+    box-shadow: none !important;
+    /*box-shadow: 1px 2px 6px 0 light-dark(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.4)) !important;*/
     border: 0px solid var(--sidebar-border-color) !important;
     outline: none !important;
 }}}
@@ -988,6 +998,6 @@ lets see how many more borders we can hunt down.
 /* 4/17/2025 firefox 137-138+ */
 @media -moz-pref("sidebar.visibility", "expand-on-hover") {
     #sidebar-box {
-        --sidebar-border-color: light-dark(rgba(207, 207, 216,0), rgba(82, 82, 94,0)) !important;
+        --sidebar-border-color: none !important;
     }
 }
