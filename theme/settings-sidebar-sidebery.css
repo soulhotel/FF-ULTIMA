@@ -227,13 +227,13 @@ with a visual indicator to slightly improve accessibility.
         right:1px !important;
         }
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
     }
     /*compact spacing adjust*/
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
         & #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
             height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
@@ -357,13 +357,13 @@ with a visual indicator to slightly improve accessibility.
         right:1px !important;
         }
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
     }
     /*compact spacing adjust*/
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
     }
 
