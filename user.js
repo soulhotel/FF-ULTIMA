@@ -57,9 +57,9 @@ user_pref("ultima.sidebar.seperator", false);
 user_pref("ultima.sidebar.hide.header", true);
 
 /* sidebery */
-user_pref("user.theme.xtension.sidebery", true);
 user_pref("ultima.sidebery.autohide", true);
 user_pref("ultima.sidebery.expandon.inactive.windows", false);
+user_pref("user.theme.xtension.sidebery", true);
 
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);
