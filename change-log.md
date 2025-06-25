@@ -28,19 +28,19 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 ### <ins> Change Log:
 - #308 #310 #311 #315 #317
-- `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
-- `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
+- `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems.
+- `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover is no more
 - `fix • 🔴 •` Reductions in modifying the sidebar splitters has fixed several positioning flaws
-- `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
-- `new • 🟢 •` Setting `user.theme.transparent` supports Mica or Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
+- `new • 🟢 •` New Color Scheme [Kanagawa Wave](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/kanagawa-wave) by **@pitchaya-s**! #313
+- `new • 🟢 •` Introducing Transparency support for Mica/Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 - `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
 - `qol • 🟡 •` Theme size reduced by 7mb
 - `qol • 🟡 •` Total number of File(s) reduced by 10
-- `qol • 🟡 •` There are now a total of 16 color schemes.
+- `qol • 🟡 •` There are now a total of 16 color schemes
 - `qol • 🟡 •` By default, the sidebars box-shadow is removed @calciferchang
 - `qol • 🟡 •` Youtube theming can be turned off with `user.theme.xtension.YT`
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
-- `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme)
+- `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme).
 - `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
 - `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
 - `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
@@ -72,3 +72,6 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 ![Vid_20250624_235601-ezgif com-optimize](https://github.com/user-attachments/assets/b2edb724-efc2-4409-ac26-49fb3119c8aa)
 
+> Mac OS Current State
+
+![Image](https://github.com/user-attachments/assets/0a84886f-c471-4ce9-9bf5-9ce31073625f)
