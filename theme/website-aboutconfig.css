@@ -155,6 +155,13 @@ body::after {
         background-image: url(icons/oldsettings.gif);
     } 
 }
+@media -moz-pref("ultima.theme.sidebar"), -moz-pref("ultima.xstyle.sidebar.theming") {
+    #toolbar::after {
+        content: "\ (user.theme.sidebar) or (ultima.xstyle.sidebar.theming) are automatic now. \A \A You can delete the old setting. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A The replacement is already enabled via user.js.";
+        display: block;
+        background-image: url(icons/oldsettings.gif);
+    } 
+}
 @media -moz-pref("user.theme.dark.a"), -moz-pref("user.theme.light.a"), -moz-pref("user.theme.light.gruvbox"), -moz-pref("user.theme.dark.gruvbox"),
 -moz-pref("user.theme.dark.catppuccin"), -moz-pref("user.theme.dark.catppuccin-frappe"), -moz-pref("user.theme.dark.catppuccin-mocha"), -moz-pref("user.theme.dark.midnight"), -moz-pref("user.theme.dark.scarlet") {
     #toolbar::after {
@@ -167,7 +174,7 @@ body::after {
         content: "\ user.theme.adaptive is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
         display: block;
     } 
-}    
+}
 
 
     
