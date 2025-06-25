@@ -27,6 +27,7 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 </details>
 
 ### <ins> Change Log:
+- #308 #310 #311 #315 #317
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
 - `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
 - `fix • 🔴 •` Reductions in modifying the sidebar splitters has fixed several positioning flaws
