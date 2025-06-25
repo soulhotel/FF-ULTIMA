@@ -8,6 +8,7 @@ File Desc:         userContent theming Reddit
 /* dark mode */
 
 @-moz-document domain("reddit.com"), domain("new.reddit.com"), url-prefix("https://www.reddit.com/"), url-prefix("https://new.reddit.com/") {
+@media -moz-pref("user.theme.xtension.reddit") {
     @media (prefers-color-scheme: dark) {
         :root:not(.theme-light) .theme-beta, :root:not(.theme-light).theme-beta, * {
             /*--main body background--*/
@@ -105,4 +106,5 @@ File Desc:         userContent theming Reddit
         }
     }
 
+}
 } /*--<--end reddit--*/
