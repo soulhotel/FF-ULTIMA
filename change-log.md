@@ -6,7 +6,7 @@
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- This is a big *quality of life* update focused on stability. With a full restructure of source files, based on categoric organization. And a less = more approach. Using less code while keeping the same look & functionality. Organized code = more readability. Also some major improvements for Color Scheme handling.
+- This is a big *quality of life* update focused on stability. With a full restructure of source files, and a less = more approach. Using less code but keeping the same look & functionality. Organizing code categorically to improve readability. Also some major improvements for Color Scheme handling.
 - Firefox 138+ required.
 - User.js required.
 <!--
@@ -43,10 +43,9 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 - `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
 - `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
 - `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
+- `qol • 🟡 •` Ublock Origin extension panel now automatically adjust to color scheme e1ddb8c
 - `qol • 🟡 •` Setting `ultima.xstyle.sidebar.theming` deleted. It is now handled automatically via color schemes
-- `qol • 🟡 •` Ublock Origin extension panel color now automatically follows colorscheme `user.theme.xtension.YT` e1ddb8c
 - `qol • 🟡 •` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
-
 <!--
 `fyi • ℹ️ •` 
 `fix • 🔴 •` 
@@ -59,11 +58,11 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 ![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
 
-> Setting `user.theme.transparent` & ublock automatic theming 
+> Setting `user.theme.transparent`. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 
-<img src="https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575" width="80%" /> <img src="https://github.com/user-attachments/assets/c51b8cdd-d519-4233-8429-c20d98726131" width="19.2%" />
+![transparentt](https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575)
+![Screenshot_20250624_050538](https://github.com/user-attachments/assets/3be6c64b-338a-4c65-a183-3a0ac16896b5)
 
 > Setting `user.theme.compact` improvements
 
 ![Vid_20250622_214445](https://github.com/user-attachments/assets/0457c8ac-16c3-4e87-a4a3-03a845b5dd3a)
-
