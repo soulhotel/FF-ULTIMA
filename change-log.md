@@ -66,4 +66,3 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 > Setting `user.theme.compact` improvements
 
 ![Vid_20250622_214445](https://github.com/user-attachments/assets/0457c8ac-16c3-4e87-a4a3-03a845b5dd3a)
-
