@@ -66,3 +66,8 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 > Setting `user.theme.compact` improvements
 
 ![Vid_20250622_214445](https://github.com/user-attachments/assets/0457c8ac-16c3-4e87-a4a3-03a845b5dd3a)
+
+> Preview of the new sidebar splitter handling & `Scarlet` Color Scheme
+
+![Vid_20250624_235601-ezgif com-optimize](https://github.com/user-attachments/assets/b2edb724-efc2-4409-ac26-49fb3119c8aa)
+
