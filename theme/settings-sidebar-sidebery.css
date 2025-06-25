@@ -189,7 +189,7 @@ with a visual indicator to slightly improve accessibility.
         top:calc(var(--uc-topbars-combined-height) - 1px) !important;
         height:calc(100vh - var(--uc-topbars-combined-height) - 5px) !important;
         /*left side*/
-        left:1px !important;
+        left:0px !important;
         right:unset !important;
         /*right side*/
         &[sidebar-positionend]{
