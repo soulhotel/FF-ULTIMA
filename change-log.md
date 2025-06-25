@@ -10,9 +10,9 @@
 - Firefox 138+ required.
 - User.js required.
 <!--
-- User.js required.
+- User.js required. 
 - User.js not required.
-- User.js (recommended) not required.
+- User.js (recommended) not required. 
 -->
 
 <details><summary><ins>Before You Update (CLICK ME)</summary>
@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
 ### <ins> Change Log:
 - #308 #310 #311 #315 #317
-- `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems.
+- `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
 - `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover is no more
 - `fix • 🔴 •` Reductions in modifying the sidebar splitters has fixed several positioning flaws
 - `new • 🟢 •` New Color Scheme [Kanagawa Wave](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/kanagawa-wave) by **@pitchaya-s**! #313
