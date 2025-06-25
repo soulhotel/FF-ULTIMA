@@ -385,7 +385,8 @@ with a visual indicator to slightly improve accessibility.
     :root:has(#sidebar-box[checked]) {
         :has(#sidebar-box:not([sidebar-positionend])) {
             #sidebar-splitter {
-                position: fixed; left:3px; height:85vh !important;
+                position: fixed; left: 3px; height: 85vh !important;
+                @media (-moz-platform:macos) {left: 5px;}
             }
             :has(#sidebar-splitter:hover) #sidebar-box::after {
                 content:"";
@@ -402,7 +403,8 @@ with a visual indicator to slightly improve accessibility.
         }
         :has(#sidebar-box[sidebar-positionend]) {
             #sidebar-splitter {
-                position: fixed; right:3px; height:85vh !important;
+                position: fixed; right: 3px; height: 85vh !important;
+                @media (-moz-platform:macos) {right: 5px;}
             }
             :has(#sidebar-splitter:hover) #sidebar-box::after {
                 content:"";
