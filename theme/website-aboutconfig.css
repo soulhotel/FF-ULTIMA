@@ -160,12 +160,14 @@ body::after {
     #toolbar::after {
         content: "\ All user.theme settings have been renamed! \A \A To avoid confusion, delete them from your options list. Here's how:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the settings are removed.";
         display: block;
+        background-image: url(icons/aboutconfig.gif);
     } 
 }
 @media -moz-pref("user.theme.adaptive") {
     #toolbar::after {
         content: "\ user.theme.adaptive is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
         display: block;
+        background-image: url(icons/aboutconfig.gif);
     } 
 }
 
