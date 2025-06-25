@@ -18,7 +18,7 @@
 <details><summary><ins>Before You Update (CLICK ME)</summary>
 
 >
-- Returning Users: **User.js Required**. To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you when an old/deleted/renamed setting is detected.
+- Returning Users: **User.js is Required** for this update. To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you when an old/deleted/renamed setting is detected.
 
 https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 
