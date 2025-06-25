@@ -36,8 +36,8 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 - `qol • 🟡 •` Theme size reduced by 7mb
 - `qol • 🟡 •` Total number of File(s) reduced by 10
 - `qol • 🟡 •` There are now a total of 16 color schemes.
-- `qol • 🟡 •` By default, the sidebars box-shadow is removed.
-- `qol • 🟡 •` YT theming can be turned off with `user.theme.xtension.YT`
+- `qol • 🟡 •` By default, the sidebars box-shadow is removed @calciferchang
+- `qol • 🟡 •` Youtube theming can be turned off with `user.theme.xtension.YT`
 - `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
 - `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme)
 - `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
