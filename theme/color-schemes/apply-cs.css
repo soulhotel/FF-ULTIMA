@@ -31,7 +31,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 /* Add your Theme (Above) for the Browser ------------------------------------------------------------------------ */
 
 
-@-moz-document url-prefix("http://"), url-prefix("https://"), url-prefix("file://"), regexp("moz-extension://.*") {
+@-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing), url-prefix("file://"), regexp("moz-extension://.*") {
 
 @import url('default/ffu-colorscheme.css')            -moz-pref("user.theme.0.default");
 @import url('transparent/ffu-colorscheme.css')        -moz-pref("user.theme.transparent");
@@ -48,7 +48,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 
 }
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {
+@-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing) {
 @media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
 
 
@@ -105,3 +105,79 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 /* Adding your Theme (Above) and a wallpaper for it, you can reuse existing wallpapers too ---------------------- */
 
 }} /*end*/
+
+
+
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+/* Ignore below -------------------------------------------------------------------------------------------------- */
+
+
+/* BELOW is an accessibility feature that corrects websites with no backgroundcolor set,
+usually these sites default to using the browsers content DOM background, if it has a background set,
+the adjustments below should never be visible. */
+
+
+@-moz-document url-prefix("http://"), url-prefix("https://") {
+    @media (prefers-color-scheme: dark) {
+        :root {
+            background-color: color-mix(in srgb, white 95%, var(--uc-browser-color)) !important;
+        }
+        :root:has(
+            html[style*="light"],
+            html[style*="white"],
+            body[style*="light"],
+            body[style*="white"],
+            body[style*="background: white"],
+            body[style*="background-color: white"]
+        ) {
+            background-color: color-mix(in srgb, white 95%, var(--uc-browser-color)) !important;
+        }
+    }
+        :root:has(
+            html[style*="dark"],
+            html[style*="dark"],
+            body[style*="dark"],
+            body[style*="dark"],
+            body[style*="background: black"],
+            body[style*="background-color: black"],
+            body[style*="background-color: dark"]
+        ) {
+            background-color: color-mix(in srgb, black 99%, var(--uc-browser-color)) !important;
+        }
+    }
+    @media (prefers-color-scheme: light) {
+        :root {
+            background-color: color-mix(in srgb, white 99%, var(--uc-browser-color)) !important;
+        }
+        :root:has(
+            html[style*="dark"],
+            body[style*="dark"],
+            body[style*="background: black"],
+            body[style*="background-color: black"],
+            body[style*="background-color: dark"]
+        ) {
+            background-color: color-mix(in srgb, black 99%, var(--uc-browser-color)) !important;
+        }
+    }
+    :root:has(
+        html[style*="light"],
+        html[style*="white"],
+        body[style*="light"],
+        body[style*="white"],
+        body[style*="background: white"],
+        body[style*="background-color: white"]
+    ) {
+        background-color: color-mix(in srgb, white 99%, var(--uc-browser-color)) !important;
+    }
+}
