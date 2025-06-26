@@ -13,7 +13,7 @@ Transparent color scheme
 /* all themes except Transparent -------------------------------------------------------*/
 @media not -moz-pref("user.theme.transparent") {  
     :root { @media (prefers-color-scheme: dark) {
-        --uc-seamless-bg: var(--uc-browser-window) !important;
+        --uc-seamless-bg: var(--uc-browser-color) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important;
         @media -moz-pref("user.theme.0.default") {
             --uc-seamless-bg: rgba(1,1,1,0.4) !important;
