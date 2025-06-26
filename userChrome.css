@@ -39,3 +39,10 @@ https://searchfox.org/mozilla-central/source/browser/themes/shared/tabbrowser/co
 @media (-moz-content-prefers-color-scheme: dark) {
     :root {--tabpanel-background-color: #2b2a33 !important;}
 }
+
+/*
+transparency
+#tabbrowser-tabs[orient="vertical"][overflow]::after {
+  content: none !important;
+}
+*/

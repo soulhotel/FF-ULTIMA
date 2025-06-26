@@ -101,6 +101,7 @@ Custom Icons
 
 #main-window:not([lwtheme]) {
     --toolbar-bgcolor: var(--uc-browser-color) !important;
+    --tabpanel-background-color: var(--uc-browser-color) !important;
     --inactive-titlebar-opacity: 1 !important;
     --toolbar-bgcolor: var(--uc-browser-color) !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
