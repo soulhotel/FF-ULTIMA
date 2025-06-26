@@ -120,7 +120,7 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 
 /* new default indentation */
 #tabbrowser-tabs[orient="vertical"][expanded] {
-    & tab-group > :is(.tab-group-label-container, .tabbrowser-tab), 
+    & tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
     &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],
     [movingtab-ungroup]) .tabbrowser-tab:is(:active, [multiselected]) {
         margin-inline-start: -1px !important;
@@ -238,7 +238,7 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 /* tab groups backgrounds --------------------------------------------------------------------------------------- */
 
 /* hide default line so that it can be optionally selected/combined with other background options via background.3 */
-.tab-group-line {opacity:0 !important;} 
+.tab-group-line {opacity:0 !important;}
 
 /* background adjustments */
 tab-group .tabbrowser-tab {
@@ -250,7 +250,7 @@ tab-group .tabbrowser-tab {
         width: 20px !important;
         height: 100% !important;
         margin: 0 !important;
-        opacity:  0.0; 
+        opacity:  0.0;
     }
     & :hover .tab-context-line {
         transition: width 0.3s ease 0.1s !important;
@@ -260,32 +260,16 @@ tab-group .tabbrowser-tab {
 
 /* Background Style 1, color mixed background */
 @media -moz-pref("ultima.tabs.tabgroups.background.1") {
-    tab-group[style*="blue"] .tabbrowser-tab {
-        background: color-mix(in lab, blue 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="purple"] .tabbrowser-tab {
-        background: color-mix(in lab, purple 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="cyan"] .tabbrowser-tab {
-        background: color-mix(in lab, cyan 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="orange"] .tabbrowser-tab {
-        background: color-mix(in lab, orange 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="yellow"] .tabbrowser-tab {
-        background: color-mix(in lab, yellow 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="pink"] .tabbrowser-tab {
-        background: color-mix(in lab, pink 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="green"] .tabbrowser-tab {
-        background: color-mix(in lab, green 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="red"] .tabbrowser-tab {
-        background: color-mix(in lab, red 20%, var(--uc-ultima-window) 50%) !important;
-    }
+    tab-group[style*="blue"] .tabbrowser-tab,
+    tab-group[style*="purple"] .tabbrowser-tab,
+    tab-group[style*="cyan"] .tabbrowser-tab,
+    tab-group[style*="orange"] .tabbrowser-tab,
+    tab-group[style*="yellow"] .tabbrowser-tab,
+    tab-group[style*="pink"] .tabbrowser-tab,
+    tab-group[style*="green"] .tabbrowser-tab,
+    tab-group[style*="red"] .tabbrowser-tab,
     tab-group[style*="gray"] .tabbrowser-tab {
-        background: color-mix(in lab, gray 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, var(--tab-group-color-invert) 40%, transparent) !important;
     }
     @media -moz-pref("sidebar.verticalTabs") {
         tab-group { #tabbrowser-tabs & { &:not([collapsed])::before {
@@ -428,10 +412,10 @@ tab-group .tabbrowser-tab {
             display:none !important;
         }
         & .tab-background {
-            background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-ultima-window) 40%) !important;
+            background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-browser-color) 40%) !important;
         }
         & .tab-text[selected] {
-            color: var(--uc-ultima-window) !important;
+            color: var(--uc-browser-color) !important;
         }
     }
 }
