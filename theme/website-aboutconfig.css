@@ -170,7 +170,21 @@ body::after {
         background-image: url(icons/aboutconfig.gif);
     } 
 }
-
-
+@media -moz-pref("user.theme.transparent") {
+    @media not -moz-pref("browser.tabs.allow_transparent_browser") {
+        body::after {
+            content: "\ Both of these settings should be on-off \A \A  user.theme.transparent \A browser.tabs.allow_transparent_browser \A ";
+            display: block;
+        }
+    }
+}
+@media -moz-pref("browser.tabs.allow_transparent_browser") {
+    @media not -moz-pref("user.theme.transparent") {
+        body::after {
+            content: "\ Both of these settings should be on-off \A \A  user.theme.transparent \A browser.tabs.allow_transparent_browser \A ";
+            display: block;
+        }
+    }
+}
     
 }} /* end aboutconfig page */
