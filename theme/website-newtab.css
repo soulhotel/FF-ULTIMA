@@ -39,6 +39,7 @@ new tab rounded tweaks
         --uc-evenless-rounded-border: 12px;
     }
 }
+@media -moz-pref("user.theme.transparent") {:root{--newtab-background-color:var(--uc-browser-color) !important;}}
 
 @media (prefers-color-scheme: dark) {
     :root {
