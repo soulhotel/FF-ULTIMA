@@ -72,7 +72,8 @@ bookmarks detachable/float
 /* bookmarks centered ------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.bookmarks.centered") { #PlacesToolbarItems {
-    justify-content: center !important;
+    /* center when window width is above 1000px */
+    @media only screen and (min-width: 1000px) {justify-content: center !important;}
 }}
 #personal-toolbar-empty {
     width: 5px !important;
