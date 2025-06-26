@@ -29,3 +29,13 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/settings-TABS.css);
 
 @import url(theme/ffu-special-configs.css);
+
+/* these are defaults set by firefox source content-area.css Line 7-13
+https://searchfox.org/mozilla-central/source/browser/themes/shared/tabbrowser/content-area.css#7-13 */
+
+@media (-moz-content-prefers-color-scheme: light) {
+    :root {--tabpanel-background-color: #f9f9fb !important;}
+}
+@media (-moz-content-prefers-color-scheme: dark) {
+    :root {--tabpanel-background-color: #2b2a33 !important;}
+}

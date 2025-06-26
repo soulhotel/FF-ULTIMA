@@ -71,9 +71,8 @@ Border Hunter
 
 /* All of these Variables - Control the color of ADD ON Themes. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
-:root[lwtheme] {
+#main-window[lwtheme] {
     --uc-browser-color:      var(--toolbar-bgcolor);
-    /*--uc-browser-color: var(--lwt-accent-color) !important;*/
     --uc-text:               var(--lwt-text-color);
     --uc-layered-background: color-mix(in srgb, var(--lwt-accent-color) 95%, #1c1c1c);
     --uc-navbar-background:  var(--toolbar-bgcolor);
@@ -110,14 +109,10 @@ Border Hunter
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {
+#main-window:not([lwtheme]) {
     --inactive-titlebar-opacity: 1 !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
-    --toolbox-non-lwt-bgcolor-inactive: ActiveCaption !important;
     --toolbox-non-lwt-textcolor-inactive: CaptionText !important;
-    --toolbar-bgcolor: ActiveCaption !important;
-    --toolbox-bgcolor-inactive: ActiveCaption !important;
-    --toolbox-textcolor-inactive: ActiveCaptionText !important;
     --tab-selected-bgcolor: var(--uc-tab-selected) !important;
     --tab-selected-textcolor: var(--uc-text) !important;
     --tab-hover-background-color: var(--uc-tab-selected) !important;
@@ -186,25 +181,46 @@ Border Hunter
 
 /* Applying all variables - Setting the default Appearance -------------------------------------------------------------------------------------------- */
 
-/* Color Swap ----------------------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.theme.color.swap") {
-    #main-window[lwtheme] {
-        --lwt-accent-color: var(--tabpanel-background-color) !important;
-    }
-}
-
 /* Main window adjustments ---------------------------------------------------------------------------------- */
-#main-window:not([lwtheme]) {
-    /* main browser window background color */
-    background-color: var(--uc-browser-color) !important;
-    & body {background: var(--uc-browser-color) !important;}
-    /* keep consistency with the navigation assets (including the tabs container) */
+#main-window:not([lwtheme]) { 
     & #navigator-toolbox {
         background-color: var(--uc-navbar-background) !important;
         &:-moz-window-inactive {
             background-color: var(--uc-navbar-background) !important;
             color: var(--uc-text) !important;
         }
+    }
+}
+/* default */
+#main-window:not([lwtheme]) {
+    & #browser { /*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
+        background: var(--uc-browser-color) !important;
+    }
+    & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
+        border-radius: var(--uc-all-border-radius) !important;  
+    }
+    & #tabbrowser-tabpanels browser[type] {
+        margin-top:4px !important;
+        outline: 10px solid var(--uc-browser-color) !important;
+    }
+    @media -moz-pref("ultima.spacing.compact") {
+        & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
+    }
+}
+/* add on */
+#main-window[lwtheme] {
+    & #browser {/*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
+        background: var(--lwt-accent-color) !important;
+    }
+    & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
+        border-radius: var(--uc-all-border-radius) !important;   
+    }
+    & #tabbrowser-tabpanels browser[type] {
+        margin-top:4px !important;
+        outline: 4px solid var(--lwt-accent-color) !important;
+    }
+    @media -moz-pref("ultima.spacing.compact") {
+        & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
     }
 }
 
@@ -371,35 +387,6 @@ spacer[part="overflow-start-indicator"] {
 }
 
 /* Browser Content adjustments -------------------------------------------------------------------------------*/
-/* trap overlaying browser content within the outline */
-#main-window {
-    & #tabbrowser-tabpanels browser[type] {
-        outline: 2px solid var(--uc-browser-color) !important;
-    }
-}
-/* default */
-#main-window:not([lwtheme]) {
-    & #appcontent, & #browser, & #tabbrowser-tabbox,
-    & #tabbrowser-tabpanels, & .browserSidebarContainer {
-        background: var(--toolbar-bgcolor) !important;
-    }
-    & .browserStack { background: var(--uc-transparent) !important; }
-}
-/* add on */
-#main-window[lwtheme] {
-    /* content window */
-    & #appcontent, & #browser, & #tabbrowser-tabbox,
-    & #tabbrowser-tabpanels, & .browserSidebarContainer, & .browserStack {
-        background: var(--lwt-accent-color) !important;
-    }
-    & #tabbrowser-tabpanels browser[type] {
-        margin-top:4px !important;
-        outline: 4px solid var(--lwt-accent-color) !important;
-    }
-    @media -moz-pref("ultima.spacing.compact") {
-        & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
-    }
-}
 /* visibility - middle click autoscroller overlay */
 .autoscroller {
     --panel-border-radius: 100% !important;

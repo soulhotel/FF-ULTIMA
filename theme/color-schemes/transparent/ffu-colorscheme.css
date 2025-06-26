@@ -35,7 +35,6 @@ Custom Icons
 @media not -moz-pref("user.theme.scarlet") {
 
 @media (prefers-color-scheme: dark) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      transparent;
     --uc-text:               rgb(255, 255, 255);
     --uc-layered-background: rgba(35, 35, 42,0.2);
@@ -68,7 +67,6 @@ Custom Icons
 
 @media (prefers-color-scheme: light) { :root {
     --uc-placeholder-this-element-needs-blur: rgba(75, 75, 95,0.5)
-    color-scheme: light !important;
     --uc-browser-color:      transparent;
     --uc-text:               rgb(45, 45, 45);
     --uc-layered-background: rgba(35, 35, 42,0.2);
@@ -101,7 +99,8 @@ Custom Icons
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+#main-window:not([lwtheme]) {
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
     --inactive-titlebar-opacity: 1 !important;
     --toolbar-bgcolor: var(--uc-browser-color) !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
@@ -186,7 +185,20 @@ Custom Icons
     /* keep consistency with the navigation assets (including the tabs container) */
     & #navigator-toolbox {
         background-color: var(--uc-navbar-background) !important;
-    }    
+    }
+    & #browser { /*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
+        background: var(--uc-browser-color) !important;
+    }
+    & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
+        border-radius: var(--uc-all-border-radius) !important;  
+    }
+    & #tabbrowser-tabpanels browser[type] {
+        margin-top:4px !important;
+        outline: 10px solid transparent !important;
+    }
+    @media -moz-pref("ultima.spacing.compact") {
+        & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
+    }
 }
 
 /* URL Bar --------------------------------------------------------*/
@@ -230,18 +242,7 @@ Custom Icons
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
     }
 }
-
-/* Browser Content adjustments ------------------------------------*/
     
-#main-window:not([lwtheme]) {  
-    /* content window */
-    & #appcontent, & #browser, & #tabbrowser-tabbox, 
-    & #tabbrowser-tabpanels, & .browserSidebarContainer { 
-        background: var(--toolbar-bgcolor) !important; 
-    }
-    & .browserStack { background: var(--uc-transparent) !important; }
-}
-
 /* Find bar -------------------------------------------------------*/
 
 #main-window:not([lwtheme]) {

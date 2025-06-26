@@ -106,6 +106,7 @@ user_pref("ultima.xstyle.private", false); /*private browser home page*/
 user_pref("ultima.theme.icons", true);
 user_pref("user.theme.xtension.ublock", true);
 user_pref("user.theme.xtension.YT", false);
+user_pref("user.theme.xtension.reddit", false);
 user_pref("ultima.theme.menubar", true);
 user_pref("ultima.theme.color.swap", false);
 
@@ -135,12 +136,9 @@ user_pref("widget.windows.mica.extra", true);
 user_pref("widget.windows.mica.popups", 2);
 user_pref("widget.windows.mica.toplevel-backdrop", 2);
 user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
-user_pref("browser.tabs.allow_transparent_browser", true);
+user_pref("browser.tabs.allow_transparent_browser", false); /* user must toggle */
 
 /* extra required */
-user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
-user_pref("browser.theme.content-theme", 0);
-user_pref("browser.theme.toolbar-theme", 0);
 user_pref("ultima.xstyle.highlight.aboutconfig", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
