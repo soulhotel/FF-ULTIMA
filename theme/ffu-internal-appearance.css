@@ -650,7 +650,7 @@ button[title="Close sidebar"] .button-background {
 }
 #main-window[lwtheme] {
     & #sidebar-main {
-        background: var(--uc-browser-window) !important;
+        background: var(--uc-browser-color) !important;
     }
 }
 /* visual clarity */
