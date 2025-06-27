@@ -29,24 +29,15 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 ### <ins> Change Log:
 - #308 #310 #311 #315 #317
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
-- `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover is no more
-- `fix • 🔴 •` Reductions in modifying the sidebar splitters has fixed several positioning flaws
-- `new • 🟢 •` New Color Scheme [Kanagawa Wave](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/kanagawa-wave) by **@pitchaya-s**! #313
-- `new • 🟢 •` Introducing Transparency support for Mica/Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
-- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
-- `qol • 🟡 •` Theme size reduced by 7mb
-- `qol • 🟡 •` Total number of File(s) reduced by 10
-- `qol • 🟡 •` There are now a total of 16 color schemes
-- `qol • 🟡 •` By default, the sidebars box-shadow is removed @calciferchang
-- `qol • 🟡 •` Youtube theming can be turned off with `user.theme.xtension.YT`
-- `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
-- `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme).
-- `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
-- `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
-- `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
-- `qol • 🟡 •` Ublock Origin extension panel now automatically adjust to color scheme e1ddb8c
-- `qol • 🟡 •` Setting `ultima.xstyle.sidebar.theming` deleted. It is now handled automatically via color schemes
-- `qol • 🟡 •` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
+- `fix • 🔴 •` As of Firefox 141-142 window controls (in Windows) are no longer toolbarbutton-icons, they are now appended via ::before elements that inherit the default style. However, the original toolbar-icons are still in the browser source, they just default to display:none now. I reverted this change and applied display:none to the new ::before elements when using custom controls window controls. So custom window controls for Windows are restored. 7baa6e5
+- `fix • 🔴 •` Fixed in 3.0 quick patch, Websites that appear altered, have been fixed via the browsers default content handling
+- `fix • 🔴 •` About:config will now notify you about setting `user.theme.transparent`
+- `fix • 🔴 •` Find bar visibility adjustment 92cba3d
+- `fix • 🔴 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
+- `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
+- `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
+- `qol • 🟡 •` Tab groups background colors adjustments
+- `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
 <!--
 `fyi • ℹ️ •` 
 `fix • 🔴 •` 
@@ -64,14 +55,4 @@ https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
 ![transparentt](https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575)
 ![Screenshot_20250624_050538](https://github.com/user-attachments/assets/3be6c64b-338a-4c65-a183-3a0ac16896b5)
 
-> Setting `user.theme.compact` improvements
-
-![Vid_20250622_214445](https://github.com/user-attachments/assets/0457c8ac-16c3-4e87-a4a3-03a845b5dd3a)
-
-> Preview of the new sidebar splitter handling & `Scarlet` Color Scheme
-
-![Vid_20250624_235601-ezgif com-optimize](https://github.com/user-attachments/assets/b2edb724-efc2-4409-ac26-49fb3119c8aa)
-
-> Mac OS Current State
-
-![Image](https://github.com/user-attachments/assets/0a84886f-c471-4ce9-9bf5-9ce31073625f)
+> FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
