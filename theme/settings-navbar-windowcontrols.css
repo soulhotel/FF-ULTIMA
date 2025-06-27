@@ -1,7 +1,7 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         Theme window controls for all OS's 
+File Desc:         Theme window controls for all OS's
 
 custom window controls themes
 custom window controls activation
@@ -13,25 +13,34 @@ fine adjustments for specific themes
 
 /* custom window controls themes -----------------------------------------------*/
 
+/*
+   as of Firefox 141-142 window controls in WINDOWS OS are no longer toolbarbutton-icons,
+   they are now appended via ::before elements that inherit the default style, which sucks.
+   However, the original toolbar-icons are still in the source, they just default to display:none now
+   For now, I'll just revert this change and apply display none to the new ::before elements when using custom controls
+   But is not guaranteed to work in a possible future where mozilla decides to fully remove the old toolbar-icons
+   Line 63-68
+*/
+
 /* carl traffic lights*/
 @media -moz-pref("ultima.navbar.windowcontrols.carl") {
-    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/carl-min.png") !important;}
-    .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/carl-max.png") !important;}
-    .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/carl-max.png") !important;}
-    .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/carl-close.png") !important;}
+    .titlebar-min > .toolbarbutton-icon {background-image: url("icons/carl-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("icons/carl-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("icons/carl-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("icons/carl-close.png") !important;}
 }
 
 /* standard traffic lights */
 @media -moz-pref("ultima.navbar.windowcontrols.trafficlights") {
-    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/traffic-min.png") !important;}
-    .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/traffic-max.png") !important;}
-    .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/traffic-max.png") !important;}
-    .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/traffic-close.png") !important;}
+    .titlebar-min > .toolbarbutton-icon {background-image: url("icons/traffic-min.png") !important;}
+    .titlebar-max > .toolbarbutton-icon {background-image: url("icons/traffic-max.png") !important;}
+    .titlebar-restore > .toolbarbutton-icon {background-image: url("icons/traffic-max.png") !important;}
+    .titlebar-close > .toolbarbutton-icon {background-image: url("icons/traffic-close.png") !important;}
 }
 
 /* whiteout traffic lights */
 @media -moz-pref("ultima.navbar.windowcontrols.whiteout") {
-    .titlebar-min > .toolbarbutton-icon {background-image: url("./icons/whiteout-minmaxrestore.png") !important;}
+    .titlebar-min > .toolbarbutton-icon {background-image: url("icons/whiteout-minmaxrestore.png") !important;}
     .titlebar-max > .toolbarbutton-icon {background-image: url("./icons/whiteout-minmaxrestore.png") !important;}
     .titlebar-restore > .toolbarbutton-icon {background-image: url("./icons/whiteout-minmaxrestore.png") !important;}
     .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/whiteout-close.png") !important;}
@@ -51,8 +60,14 @@ fine adjustments for specific themes
 -moz-pref("ultima.navbar.windowcontrols.trafficlights"),
 -moz-pref("ultima.navbar.windowcontrols.whiteout"),
 -moz-pref("ultima.navbar.windowcontrols.fluent") {
-    
-    /* readjust appearance, size, & borders */ 
+
+    @media (-moz-platform: windows) {
+        /* revert to old titlebar buttons */
+        .titlebar-button { & > .toolbarbutton-icon { display: inline-flex !important; } }
+        /* discard new titlebar buttons */
+        .titlebar-button { &::before { display: none !important; } }
+    }
+    /* readjust appearance, size, & borders */
     .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
          & > .toolbarbutton-icon {
              -moz-default-appearance: none !important;
@@ -64,16 +79,14 @@ fine adjustments for specific themes
              border-radius: 10px !important;
         }
     }
-  
     /* replace the icons */
     .titlebar-min {list-style-image:url("") !important;}
     .titlebar-max {list-style-image:url("") !important;}
     .titlebar-restore {list-style-image:url("") !important;}
-    .titlebar-close {list-style-image:url("") !important;} 
-  
+    .titlebar-close {list-style-image:url("") !important;}
     /* or remove the icons */
-    .titlebar-button {list-style-image:none !important;}    
-    
+    .titlebar-button {list-style-image:none !important;}
+
 }
 
 /* fine adjustments for specific themes ----------------------------------------*/
@@ -86,5 +99,5 @@ fine adjustments for specific themes
             width: 22px !important;
             height: 22px !important;
             margin-inline:4px !important;
-        }    
+        }
 }
