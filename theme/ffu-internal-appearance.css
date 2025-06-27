@@ -238,6 +238,7 @@ toolbar { &:-moz-window-inactive {background-color: var(--toolbar-bgcolor) !impo
         color: var(--toolbarbutton-icon-fill) !important;
         stroke: var(--toolbarbutton-icon-fill) !important;
         fill: var(--toolbarbutton-icon-fill) !important;
+        transition: background-color ease 0.2s;
         &:hover {
             fill: var(--toolbarbutton-icon-fill) !important;
         }

@@ -11,16 +11,15 @@ fine adjustments for specific themes
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* custom window controls themes -----------------------------------------------*/
-
-/*
-   as of Firefox 141-142 window controls in WINDOWS OS are no longer toolbarbutton-icons,
-   they are now appended via ::before elements that inherit the default style, which sucks.
+/* as of Firefox 141-142 window controls in WINDOWS OS are no longer toolbarbutton-icons,
+   they are now appended via ::before elements, which sucks.
    However, the original toolbar-icons are still in the source, they just default to display:none now
    For now, I'll just revert this change and apply display none to the new ::before elements when using custom controls
    But is not guaranteed to work in a possible future where mozilla decides to fully remove the old toolbar-icons
-   Line 63-68
+   Line 63-70
 */
+
+/* custom window controls themes -----------------------------------------------*/
 
 /* carl traffic lights*/
 @media -moz-pref("ultima.navbar.windowcontrols.carl") {
@@ -54,6 +53,45 @@ fine adjustments for specific themes
     .titlebar-close > .toolbarbutton-icon {background-image: url("./icons/fluent-close.png") !important;}
 }
 
+/* replace the icons */
+.titlebar-min {list-style-image:url("") !important;}
+.titlebar-max {list-style-image:url("") !important;}
+.titlebar-restore {list-style-image:url("") !important;}
+.titlebar-close {list-style-image:url("") !important;}
+/* or remove the icons */
+.titlebar-button {list-style-image:none !important;}
+
+
+/* custom hover behavior -------------------------------------------------------*/
+
+/* default = no modification */
+@media -moz-pref("ultima.navbar.windowcontrols.fluent") {
+
+}
+/* shrink on hover */
+@media -moz-pref("ultima.navbar.windowcontrols.carl"),
+-moz-pref("ultima.navbar.windowcontrols.trafficlights"),
+-moz-pref("ultima.navbar.windowcontrols.whiteout") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        .titlebar-button:hover, .titlebar-button .toolbarbutton-icon:hover {
+            background-color: transparent !important;
+            transform:scale(0.9); opacity:0.5;
+        }
+    }
+}
+/* os specifics */
+@media (-moz-platform: linux) {
+    @media -moz-pref("ultima.navbar.windowcontrols.fluent") {
+        #main-window[lwtheme], #main-window:not([lwtheme]) {
+            .titlebar-button:hover, .titlebar-button .toolbarbutton-icon:hover {
+                background-color: transparent !important;
+                transform:scale(0.9); opacity:0.5;
+            }
+        }
+    }
+}
+
+
 /* custom window controls activation -------------------------------------------*/
 
 @media -moz-pref("ultima.navbar.windowcontrols.carl"),
@@ -61,31 +99,52 @@ fine adjustments for specific themes
 -moz-pref("ultima.navbar.windowcontrols.whiteout"),
 -moz-pref("ultima.navbar.windowcontrols.fluent") {
 
+    /* I'll also seperate custom controls by OS type for future proofing */
+    /* restore windows tbb */
     @media (-moz-platform: windows) {
         /* revert to old titlebar buttons */
         .titlebar-button { & > .toolbarbutton-icon { display: inline-flex !important; } }
         /* discard new titlebar buttons */
         .titlebar-button { &::before { display: none !important; } }
     }
-    /* readjust appearance, size, & borders */
-    .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
-         & > .toolbarbutton-icon {
-             -moz-default-appearance: none !important;
-             background-size: 16px 16px !important;
-             background-repeat: no-repeat !important;
-             background-position: center !important;
-             width: 20px !important;
-             height: 20px !important;
-             border-radius: 10px !important;
+
+    /* windows custom ttb */
+    @media (-moz-platform: windows) {
+        /* readjust appearance, size, & borders */
+        .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+             & > .toolbarbutton-icon {
+                 -moz-default-appearance: none !important;
+                 background-size: 20px 20px !important;
+                 background-repeat: no-repeat !important;
+                 background-position: center !important;
+                 width: 12px !important;
+                 height: 12px !important;
+                 border-radius: 10px !important;
+                 margin-top:-1px !important;
+            }
         }
     }
-    /* replace the icons */
-    .titlebar-min {list-style-image:url("") !important;}
-    .titlebar-max {list-style-image:url("") !important;}
-    .titlebar-restore {list-style-image:url("") !important;}
-    .titlebar-close {list-style-image:url("") !important;}
-    /* or remove the icons */
-    .titlebar-button {list-style-image:none !important;}
+    /* linux custom ttb */
+    @media (-moz-platform: linux) {
+        /* readjust appearance, size, & borders */
+        .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+             & > .toolbarbutton-icon {
+                 -moz-default-appearance: none !important;
+                 background-size: 16px 16px !important;
+                 background-repeat: no-repeat !important;
+                 background-position: center !important;
+                 width: 20px !important;
+                 height: 20px !important;
+                 border-radius: 10px !important;
+            }
+        }
+    }
+     /* mac custom ttb? */
+    @media (-moz-platform: mac) {
+        /* readjust appearance, size, & borders */
+        .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+        }
+    }
 
 }
 
@@ -93,11 +152,14 @@ fine adjustments for specific themes
 
 /*fluent*/
 @media -moz-pref("ultima.navbar.windowcontrols.fluent") {
-    .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
-         & > .toolbarbutton-icon {
-            background-size: 20px 20px !important;
-            width: 22px !important;
-            height: 22px !important;
-            margin-inline:4px !important;
+    @media (-moz-platform: linux) {
+        .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
+             & > .toolbarbutton-icon {
+                background-size: 20px 20px !important;
+                width: 22px !important;
+                height: 22px !important;
+                margin-inline:4px !important;
+            }
         }
+    }
 }
