@@ -6,6 +6,7 @@ File Desc:         Nav Bar & Top Bar Settings
 nav bar autohide
 nav bar hide buttons
 bookmarks centered
+bookmarks scrollable
 bookmarks fade out
 bookmarks autohide
 bookmarks detachable/float
@@ -78,6 +79,28 @@ bookmarks detachable/float
 #personal-toolbar-empty {
     width: 5px !important;
 }
+
+/* bookmarks scrollable ----------------------------------------------------------------------------- */
+/*
+When the Browser Window reaches a smaller enough width, or amount of Bookmarks overlap the browser width, overlapping bookmark items are:
+    1. set as hidden.
+    2. duplicated into the overflow menu.
+This style is a simple to implement and easily maintained by:
+    1. enabling scrolling on the toolbar
+    2. restoring visibility of hidden bookmarks.
+*/
+@media -moz-pref("ultima.navbar.bookmarks.scrollable")
+    #PlacesToolbarItems {
+        overflow: auto !important;
+    }
+    .bookmark-item {
+        visibility: initial !important
+    }
+    #PlacesToolbar #PlacesChevron {
+        visibility: collapse !important;
+    }
+}
+
 /* bookmarks fade out ------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.bookmarks.fadeout") {
