@@ -22,10 +22,10 @@
 - `fix • 🔴 •` About:config will now notify you about setting `user.theme.transparent`
 - `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
 - `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
+- `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` lets you scroll the bookmarks toolbar 58efa73 credit to @dreadbalaur for the inspiration
 - `qol • 🟡 •` Tab groups background colors adjustments
 - `fix • 🟡 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
 - `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
-
 <!--
 `fyi • ℹ️ •` 
 `fix • 🔴 •` 
@@ -37,6 +37,10 @@
 > FF Ultima *Kanagawa Wave* Edition by @pitchaya-s
 
 ![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
+
+> Scrollable bookmarks toolbar
+
+https://github.com/user-attachments/assets/db034047-987b-4851-b118-f7b4ec2a29eb
 
 > Setting `user.theme.transparent`. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 
