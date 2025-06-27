@@ -194,7 +194,7 @@ Custom Icons
         border-radius: var(--uc-all-border-radius) !important;  
     }
     & #tabbrowser-tabpanels browser[type] {
-        margin-top:4px !important;
+        margin-top:2px !important;
         outline: 10px solid transparent !important;
     }
     @media -moz-pref("ultima.spacing.compact") {

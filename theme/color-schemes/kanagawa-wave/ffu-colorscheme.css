@@ -258,7 +258,8 @@ Custom Icons
     }
     @media (-moz-platform: windows) {
         .titlebar-close:hover {
-            background-color: var(--uc-accent-color-6) !important;
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-button-red) !important;
         }
     }
 }

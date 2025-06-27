@@ -25,7 +25,7 @@ Custom Icons
     --uc-tab-selected:       rgb(38, 36, 50);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    rgba(67, 62, 83);
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         color-mix(in srgb, #f54e4e 50%, var(--uc-accent-color-1));
     --uc-context-menu:       var(--uc-layered-background);
     --uc-panel-background:   var(--uc-layered-background);
     --uc-panel-border:       rgba(255, 25, 25, 0.5);

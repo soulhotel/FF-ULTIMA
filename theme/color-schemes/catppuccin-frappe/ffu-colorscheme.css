@@ -25,7 +25,7 @@ Custom Icons
     --uc-tab-selected:       var(--uc-urlbar-background);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    rgb(30, 30, 46);
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         color-mix(in srgb, #f54e4e 70%, var(--uc-accent-color-1));
     --uc-context-menu:       var(--uc-panel-background);
     --uc-panel-background:   rgb(48, 52, 70);
     --uc-panel-border:       rgba(27, 25, 35, 1);
@@ -228,11 +228,6 @@ Custom Icons
 #main-window:not([lwtheme]) {  
     & #nav-bar .toolbarbutton-1 {
         color: var(--uc-accent-color-1) !important;
-    }    
-    @media (-moz-platform: windows) {
-        .titlebar-close:hover {
-            background-color: var(--uc-button-6) !important;
-        }
     }
 }
     

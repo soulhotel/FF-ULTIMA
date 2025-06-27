@@ -202,7 +202,7 @@ Border Hunter
         outline: 10px solid var(--uc-browser-color) !important;
     }
     & #tabbrowser-tabpanels browser[type] {
-        margin-top:4px !important;
+        margin-top:2px !important;
         outline: 10px solid var(--uc-browser-color) !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
@@ -233,9 +233,15 @@ toolbar { &:-moz-window-inactive {background-color: var(--toolbar-bgcolor) !impo
 :root:where([tabsintitlebar]){--toolbox-non-lwt-textcolor-inactive:var(--toolbox-non-lwt-textcolor);}
 /* color */
 #main-window:not([lwtheme]), #main-window[lwtheme] {
-    .titlebar-button {stroke: var(--toolbarbutton-icon-fill) !important;}
-    .titlebar-button .toolbarbutton-icon {stroke: red !important; color: var(--toolbarbutton-icon-fill) !important;}
-    .titlebar-button:hover {fill: var(--toolbarbutton-icon-fill) !important;}
+    .titlebar-button,
+    .titlebar-button .toolbarbutton-icon {
+        color: var(--toolbarbutton-icon-fill) !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+        &:hover {
+            fill: var(--toolbarbutton-icon-fill) !important;
+        }
+    }
 }
 
 /* Nav bar -------------------------------------------------------------------------------------------------- */

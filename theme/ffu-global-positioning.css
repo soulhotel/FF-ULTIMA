@@ -356,8 +356,9 @@ even when fullscreen mode, we track
 /* windows */
 @media (-moz-platform: windows) {
     #tabbrowser-tabbox, .browserContainer, .browserStack, #tabbrowser-tabbox, #tabbrowser-tabpanels {z-index: 1 !important;}
-    .titlebar-button {padding: 8px 11px !important; margin: 5px 0 3px 0 !important;}
-    .titlebar-buttonbox {margin-right: 1px !important;}
+    .titlebar-button {padding: 8px 11px !important; margin: 5px 2px 3px 2px !important;}
+    .titlebar-close {margin-top: 6px !important;}
+    .titlebar-buttonbox {margin-right: 5px !important;}
 }
 /* linux - kde spacing */
 @media (-moz-platform: linux), (-moz-os-version: linux) {

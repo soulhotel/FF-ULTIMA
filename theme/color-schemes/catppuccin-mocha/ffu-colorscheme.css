@@ -25,7 +25,7 @@ Custom Icons
     --uc-tab-selected:       rgb(17 17 27);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    rgb(17 17 27);
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         color-mix(in srgb, #f54e4e 30%, var(--uc-accent-color-2));
     --uc-context-menu:       rgb(39, 40, 58);
     --uc-panel-background:   var(--uc-layered-background);
     --uc-panel-border:       rgba(27, 25, 35, 1);
@@ -212,11 +212,6 @@ Custom Icons
     & #nav-bar .toolbarbutton-1,
     &  #nav-bar .toolbarbutton-text {
         color: var(--uc-accent-color-2) !important;
-    }
-    @media (-moz-platform: windows) {
-        .titlebar-close:hover {
-            background-color: var(--uc-button-6) !important;
-        }
     }
 }
     
