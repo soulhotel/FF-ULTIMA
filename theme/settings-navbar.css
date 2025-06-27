@@ -91,7 +91,7 @@ This style is a simple to implement and easily maintained by:
 */
 @media -moz-pref("ultima.navbar.bookmarks.scrollable") {
     #PlacesToolbarItems {
-        overflow: auto !important;
+        overflow-x: auto !important;
     }
     .bookmark-item {
         visibility: initial !important
