@@ -6,25 +6,14 @@
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- This is a big *quality of life* update focused on stability. With a full restructure of source files, and a less = more approach. Using less code but keeping the same look & functionality. Organizing code categorically to improve readability. Also some major improvements for Color Scheme handling.
+- This is a tiny *quality of life* update focused on stability & fine tuning the theme.
+- User.js (recommended) required.
 - Firefox 138+ required.
-- User.js required.
 <!--
 - User.js required. 
 - User.js not required.
 - User.js (recommended) not required. 
 -->
-
-<details><summary><ins>Before You Update (CLICK ME)</summary>
-
->
-- Returning Users: **User.js is Required** for this update. To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you when an old/deleted/renamed setting is detected.
-
-https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
-
-<img src="https://github.com/user-attachments/assets/5dfaa05b-d838-4f5b-9883-148708ba714a" width="50%" />
-
-</details>
 
 ### <ins> Change Log:
 - #308 #310 #311 #315 #317
