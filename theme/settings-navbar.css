@@ -89,7 +89,7 @@ This style is a simple to implement and easily maintained by:
     1. enabling scrolling on the toolbar
     2. restoring visibility of hidden bookmarks.
 */
-@media -moz-pref("ultima.navbar.bookmarks.scrollable")
+@media -moz-pref("ultima.navbar.bookmarks.scrollable") {
     #PlacesToolbarItems {
         overflow: auto !important;
     }
