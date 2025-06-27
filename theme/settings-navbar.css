@@ -127,7 +127,7 @@ bookmarks detachable/float
                 :root {--uc-bookbar-height:0px !important;}
                 #main-window, #main-window:not([lwtheme]) {
                     & #PersonalToolbar {
-                        background:var(--uc-ultima-window) !important;
+                        background:var(--uc-browser-color) !important;
                         border-radius: calc(var(--uc-button-border) + 8px) !important;
                         box-shadow: var(--uc-box-shadow) !important;
                         padding:0 !important;
