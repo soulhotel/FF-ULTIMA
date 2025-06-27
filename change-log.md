@@ -7,7 +7,7 @@
   
 ### <ins> Version Notes
 - This is a tiny *quality of life* update focused on stability & fine tuning the theme.
-- User.js (recommended) required.
+- User.js (recommended) not required.
 - Firefox 138+ required.
 <!--
 - User.js required. 
