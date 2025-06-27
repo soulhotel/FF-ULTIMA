@@ -200,9 +200,7 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
             &[aria-expanded="true"] {
                 margin-top: 2px !important;
             }
-            &:hover {
-                transform:scale(1.05);
-            }
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
         }
         #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
             color: transparent !important;
@@ -228,10 +226,86 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
             &[aria-expanded="true"] {
                 margin-top: 30px !important;
             }
-            &:hover {
-                transform:scale(1.05);
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+        }
+    }
+}
+/* Label Style 3, Label becomes an arrow indicator */
+@media -moz-pref("ultima.tabs.tabgroups.label.3") {
+    :root:has(#tabbrowser-tabs[orient="vertical"]) {
+        /*defaults*/
+        .tab-group-label-container, .tab-group-label {
+            max-height:15px !important; height:15px !important; min-height:15px !important;
+            min-width:18px !important; max-width:95% !important;
+        }
+        /* visibility */
+        .tab-group-label {
+            border-radius:17px !important;
+            line-height:0.9 !important;
+            z-index:5 !important;
+            margin-top: -2px !important;
+            &[aria-expanded="true"] {margin-top: 2px !important;}
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+        }
+         /*appearance*/
+        .tab-group-label {
+            outline: none !important;
+            color: var(--tab-group-color-invert) !important;
+            background-color:transparent !important;
+            background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+            background-repeat: no-repeat;
+            background-position: left 5.5px top 1px;
+            -moz-context-properties: fill; fill: var(--tab-group-color-invert);
+            align-self:unset !important;
+        }
+        /*collapsed*/
+        tab-group[collapsed] .tab-group-label {
+            background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
+        }
+        #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
+            color: transparent !important;
+            margin-left:14px !important;
+        }
+        .tab-group-label {
+            #tabbrowser-tabs[orient="vertical"][expanded] & {
+                padding: 0px 12px !important;
             }
         }
+    }
+    :root:has(#tabbrowser-tabs[orient="horizontal"]) {
+        /*defaults*/
+        .tab-group-label-container, .tab-group-label {
+            max-height:13px !important; height:13px !important; min-height:13px !important;
+            min-width:55px !important; max-width:200px !important;
+        }
+        /* visibility */
+        .tab-group-label {
+            border-radius:17px !important;
+            margin-top: 30px !important;
+            line-height:0.8 !important;
+            z-index:5 !important;
+            margin-inline:0 !important;
+            &[aria-expanded="true"] {margin-top: 30px !important;}
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+        }
+        /*appearance*/
+        .tab-group-label {
+            outline: none !important;
+            padding-left:15px !important;
+            color: var(--tab-group-color-invert) !important;
+            background-color:transparent !important;
+            background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+            background-repeat: no-repeat;
+            background-position: left -2px top -1px;
+            -moz-context-properties: fill; fill: var(--tab-group-color-invert);
+        }
+        /*collapsed*/
+        tab-group[collapsed] .tab-group-label {
+            background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+        }
+
+
+
     }
 }
 
@@ -316,33 +390,19 @@ tab-group .tabbrowser-tab {
 /* Background Style 4, dashed border container */
 @media -moz-pref("ultima.tabs.tabgroups.background.4") {
     #main-window:has(#tabbrowser-tabs[orient="vertical"]) {
-        tab-group tab {border-inline: 2px var(--tab-group-color) dashed !important;}
         tab-group tab:first-of-type {
-            border-top-left-radius: 11px !important;
-            border-top-right-radius: 11px !important;
-            border-top: 2px var(--tab-group-color) dashed !important;
+            border-top: 3px var(--tab-group-color) dashed !important;
         }
         tab-group tab:last-of-type {
-            border-bottom-left-radius: 11px !important;
-            border-bottom-right-radius: 11px !important;
-            border-bottom: 2px var(--tab-group-color) dashed !important;
-        }
-        &:has(#sidebar-box[checked]) #vertical-tabs {
-            margin-left:-1px !important;
-            margin-right:-1px !important;
+            border-bottom: 3px var(--tab-group-color) dashed !important;
         }
     }
     #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
-        tab-group tab {border-block: 2px var(--tab-group-color) dashed !important;}
         tab-group tab:first-of-type {
-            border-top-left-radius: 5px !important;
-            border-bottom-left-radius: 5px !important;
-            border-left: 2px var(--tab-group-color) dashed !important;
+            border-left: 3px var(--tab-group-color) dashed !important;
         }
         tab-group tab:last-of-type {
-            border-top-right-radius: 5px !important;
-            border-bottom-right-radius: 5px !important;
-            border-right: 2px var(--tab-group-color) dashed !important;
+            border-right: 3px var(--tab-group-color) dashed !important;
         }
     }
 }
