@@ -99,6 +99,9 @@ This style is a simple to implement and easily maintained by:
     #PlacesToolbar #PlacesChevron {
         visibility: collapse !important;
     }
+    #PlacesToolbarItems {
+        scrollbar-width: thin !important;
+    }
 }
 
 /* bookmarks fade out ------------------------------------------------------------------------------- */
