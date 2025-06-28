@@ -16,6 +16,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 */
 
 @import url(theme/website-aboutconfig.css); /*        styling for aboutconfig */
+@import url(theme/website-aboutaddons.css); /*        styling for aboutaddons */
 @import url(theme/website-styles.css); /*       styling for multiple websites */
 @import url(theme/website-newtab.css); /*                        new tab page */
 @import url(theme/website-reddit.css); /*                              reddit */
