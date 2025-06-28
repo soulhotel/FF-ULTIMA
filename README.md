@@ -37,10 +37,10 @@
 
 ## Installation
 
-#### If this is your first time, you should click the two options below 🚨
+> #### *First time? You should click on these two options below...* 🚨
 
 <details>
-<summary>Finding your Profile Folder (where the theme files go)</summary>
+<summary>Finding your Profile Folder (where theme files go)</summary>
 
 ###### 🛈 Two ways to find your Profile Folder. Choose one: 🛈
 1. Go to the about:support page/url.
@@ -71,7 +71,7 @@
 <img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
 </details>
 
-#### Choose *one* of these installation methods and follow each step ⬇️
+> #### *Choose *one* of these installation methods and follow each step...* ⬇️
 
 <details><summary>The Easy Way</summary>
 
@@ -126,9 +126,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 </details>
 
 
-#### Here's everything you should do *after* you install FF Ultima.. ✅
+> #### *Here's what you should do *after* you've installed FF Ultima...* ✅
 
-<details><summary>Post Installation (finding the settings & visiting the wiki)</summary>
+<details><summary>Post Installation (settings & wiki)</summary>
 
 >
 - Go to the `about:config` page. You should see:
