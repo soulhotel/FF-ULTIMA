@@ -22,14 +22,14 @@
 - `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
 - `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
 - `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` lets you scroll the bookmarks toolbar credit to @dreadbalaur for the inspiration 58efa73
-- `new • 🟢 •` Setting `ultima.navbar.bookmarks.compact` shrinks the height of the bookmarks toolbar, when floating, the bookmarks shrink both height & width instead.
+- `new • 🟢 •` Setting `ultima.navbar.bookmarks.compact` shrinks the height of the bookmarks toolbar, when floating, the bookmarks shrink both height & width instead a8d8174.
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.fading` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.autohide` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.compact` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.left` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.smaller` is no more
-- `qol • 🟡 •` Positioning and autohiding of the "floating bookmarks bar" now works with the existing `ultima.navbar.bookmarks.autohide` & `ultima.navbar.bookmarks.centered` settings. This allows for consistent positioning and less settings clogging up your about:config page.
-- `qol • 🟡 •` Tab groups background colors adjustments
+- `qol • 🟡 •` Positioning and autohiding of the "floating bookmarks bar" now works with the existing `ultima.navbar.bookmarks.autohide` & `ultima.navbar.bookmarks.centered` settings. This allows for consistent positioning and less settings clogging up your about:config page a8d8174.
+- `qol • 🟡 •` Tab groups background colors adjustments 
 - `fix • 🟡 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
 - `qol • 🟡 •` Window controls (on windows) spacing & sizing adjustments 7baa6e5
 - `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
