@@ -1,5 +1,5 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
- 
+
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Nav Bar & Top Bar Settings, Bookmark Settings are split between floating and non floating styles
 
@@ -91,6 +91,9 @@ bookmarks autohide
     #PlacesToolbarItems {
         scrollbar-width: thin !important;
     }
+    #PersonalToolbar:not(:has(#PlacesToolbarItems)) {
+        overflow-x: auto !important;
+    }
 }
 
 /* bookmarks float ---------------------------------------------------------------------------------- */
@@ -162,7 +165,7 @@ bookmarks autohide
         &#main-window:not([inFullscreen="true"]) {
             /* hide --uc-bookbar-height:1px !important;*/
             --uc-bookbar-height:0px !important;
-            /* visibility */   
+            /* visibility */
             #PlacesToolbarItems {
                 /* default */
                 overflow:visible !important;
