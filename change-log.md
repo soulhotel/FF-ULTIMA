@@ -17,14 +17,21 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
-- `fix • 🔴 •` As of Firefox 141-142 window controls (in Windows) are no longer toolbarbutton-icons, they are now appended via ::before elements that inherit the default style. However, the original toolbar-icons are still in the browser source, they just default to display:none now. I reverted this change and applied display:none to the new ::before elements when using custom controls window controls. So custom window controls for Windows are restored. 7baa6e5
 - `fix • 🔴 •` Find bar visibility adjustment 92cba3d
 - `fix • 🔴 •` About:config will now notify you about setting `user.theme.transparent`
 - `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
 - `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
-- `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` lets you scroll the bookmarks toolbar 58efa73 credit to @dreadbalaur for the inspiration
+- `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` lets you scroll the bookmarks toolbar credit to @dreadbalaur for the inspiration 58efa73
+- `new • 🟢 •` Setting `ultima.navbar.bookmarks.compact` shrinks the height of the bookmarks toolbar, when floating, the bookmarks shrink both height & width instead.
+- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.fading` is no more
+- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.autohide` is no more
+- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.compact` is no more
+- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.left` is no more
+- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.smaller` is no more
+- `qol • 🟡 •` Positioning and autohiding of the "floating bookmarks bar" now works with the existing `ultima.navbar.bookmarks.autohide` & `ultima.navbar.bookmarks.centered` settings. This allows for consistent positioning and less settings clogging up your about:config page.
 - `qol • 🟡 •` Tab groups background colors adjustments
 - `fix • 🟡 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
+- `qol • 🟡 •` Window controls (on windows) spacing & sizing adjustments 7baa6e5
 - `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
 <!--
 `fyi • ℹ️ •` 
