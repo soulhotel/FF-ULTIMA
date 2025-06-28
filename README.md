@@ -37,7 +37,7 @@
 
 ## Installation
 
-###### Do not skip the installation instructions! 🚨
+#### If this is your first time, you should click the two options below 🚨
 
 <details>
 <summary>Finding your Profile Folder (where the theme files go)</summary>
@@ -71,7 +71,7 @@
 <img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
 </details>
 
-###### Choose *one* of the installation methods below. ⬇️
+#### Choose *one* of these installation methods and follow each step ⬇️
 
 <details><summary>The Easy Way</summary>
 
@@ -126,19 +126,22 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 </details>
 
 
-###### What to do *after* installing FF Ultima.. ✅
+#### Here's everything you should do *after* you install FF Ultima.. ✅
+
 <details><summary>Post Installation (finding the settings & visiting the wiki)</summary>
 
 >
-- Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
+- Go to the `about:config` page. You should see:
+    - ![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
+    - Search for `ultima` to see & change all of your settings.
+    - Search for `user.theme` to see & change color schemes.
 
-![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
-- Visit [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) to learn more about what is possible:
+- Visit [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) to learn more about what's possible:
     - Frequently asked questions
-    - All theme settings (full overview)
+    - **All** theme settings (full overview)
     - How to install, [uninstall](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Uninstall-the-Theme), [update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme)
-    - Sidebery configuration (optional)
-    - Videos, documentation, and a whole lot more..
+    - Sidebery configurations (optional)
+    - Videos, documentation, and more
 </details>
 
 ## Enjoy
