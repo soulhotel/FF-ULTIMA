@@ -37,13 +37,13 @@ tab containers
 }
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.tabs.pinnedtabs.style.1") {
+@media -moz-pref("ultima.tabs.pinnedtabs.style.1") or -moz-pref("ultima.tabs.always.show.pinned") {
+    #pinned-tabs-container[orient="vertical"],
     #vertical-pinned-tabs-container {
         height: fit-content !important;
         min-height: fit-content !important;
         max-height: fit-content !important;
     }
-    #vertical-pinned-tabs-splitter {display:none !important;}
 }
 
 /* new tab button ----------------------------------------------------------------------------------------------- */

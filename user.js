@@ -68,7 +68,7 @@ user_pref("ultima.tabs.disable.update.dot", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.newtabbutton.ontop.1", false);
 user_pref("ultima.tabs.newtabbutton.ontop.2", false);
-user_pref("ultima.tabs.pinnedtabs.style.1", true);
+user_pref("ultima.tabs.always.show.pinned", true);
 user_pref("ultima.tabs.vertical.hide", false);
 user_pref("ultima.tabs.vertical.hide.in.screencorner", false);
 user_pref("ultima.tabs.vertical.hide.in.screenedge", true);
