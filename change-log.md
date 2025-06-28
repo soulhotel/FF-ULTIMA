@@ -22,6 +22,7 @@
 - `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
 - `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
 - `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` lets you scroll the bookmarks toolbar credit to @dreadbalaur for the inspiration 58efa73
+- `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` works when using only buttons on the bookmarks bar.
 - `new • 🟢 •` Setting `ultima.navbar.bookmarks.compact` shrinks the height of the bookmarks toolbar, when floating, the bookmarks shrink both height & width instead a8d8174.
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.fading` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.autohide` is no more
