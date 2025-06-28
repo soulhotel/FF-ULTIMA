@@ -34,7 +34,7 @@
 - `fix • 🟡 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
 - `qol • 🟡 •` Window controls (on windows) spacing & sizing adjustments 7baa6e5
 - `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
-- `qol • 🟡 •` Setting `ultima.tabs.pinnedtabs.style.1` renamed to `ultima.tabs.always.show.pinned` for clarity. `pinnedtabs.style.1` will still work for now, but it will soon be removed in favor of the new name.
+- `qol • 🟡 •` Setting `ultima.tabs.pinnedtabs.style.1` renamed to `ultima.tabs.always.show.pinned` for clarity. `pinnedtabs.style.1` will still work for now, but it will soon be removed in favor of the new name 84f48fe
 <!--
 `fyi • ℹ️ •` 
 `fix • 🔴 •` 
