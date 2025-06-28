@@ -74,30 +74,34 @@ Border Hunter
 #main-window[lwtheme] {
     --uc-browser-color:      var(--toolbar-bgcolor);
     --uc-text:               var(--lwt-text-color);
-    --uc-layered-background: color-mix(in srgb, var(--lwt-accent-color) 95%, #1c1c1c);
+    --uc-layered-background: color-mix(in srgb, var(--toolbar-bgcolor) 80%, black);
     --uc-navbar-background:  var(--toolbar-bgcolor);
-    --uc-urlbar-background:  var(--lwt-accent-color);
+    --uc-urlbar-background:  color-mix(in srgb, var(--lwt-accent-color) 80%, black);
     --uc-findbar-background: var(--uc-layered-background);
-    --uc-sidebar-background: var(--uc-layered-background);
+    --uc-sidebar-background: color-mix(in srgb, var(--lwt-accent-color) 80%, black);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
     --uc-tab-selected:       var(--uc-layered-background);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --uc-button-selected:    var(--uc-layered-background);
+    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
+    --tab-selected-outline-color: var(--toolbar-field-focus-background-color) !important;
+    --uc-button-selected:    var(--button-background-color-ghost-hover);
     --uc-button-red:         #f54e4e;
-    --uc-context-menu:       var(--uc-layered-background);
-    --uc-panel-background:   var(--uc-layered-background);
+    --uc-context-menu:       color-mix(in srgb, var(--lwt-accent-color) 80%, black);
+    --uc-panel-background:   color-mix(in srgb, var(--lwt-accent-color) 80%, black);
     --uc-panel-border:       rgba(25, 25, 25, 0.5);
     --uc-panel-border-ii:    rgba(45, 45, 45, 0.5);
     --uc-accent-color-1:     AccentColor;
     --uc-accent-color-2:     AccentColor;
     --uc-accent-color-3:     AccentColor;
     --uc-accent-color-4:     var(--color-accent-primary-hover);
-    --uc-accent-color-5:     AccentColor;
+    --uc-accent-color-5:     var(--lwt-text-color);
     --uc-transparent:        rgba(0,0,0,0);
     --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
     --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
-    --uc-button-border-radius: 10px;
+    --uc-button-border-radius: 10px !important;
+    --button-border-radius: var(--uc-button-border-radius) !important;
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
     --panel-item-hover-bgcolor: var(--uc-layered-background) !important;
 }
 
@@ -215,16 +219,17 @@ Border Hunter
         background: var(--lwt-accent-color) !important;
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
-        border-radius: var(--uc-all-border-radius) !important;   
+        border-radius: var(--uc-all-border-radius) !important;
     }
     & #tabbrowser-tabpanels browser[type] {
         margin-top:4px !important;
-        outline: 4px solid var(--lwt-accent-color) !important;
+        outline: 10px solid var(--lwt-accent-color) !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
     }
 }
+
 
 /* Title bar ------------------------------------------------------------------------------------------------ */
 /* in-active window correction */
@@ -591,17 +596,21 @@ button[title="Close sidebar"] .button-background {
 }
 /* add on */
 #main-window[lwtheme] {
-    --tab-selected-bgcolor: var(--lwt-accent-color) !important;
     & #tabbrowser-tabs {
         background: transparent !important;
         --tab-loading-fill: var(--uc-accent-color-1) !important;
+        --tab-selected-background: red !important;
     }
-    & .tab-label-container[selected] {
-        color: var(--uc-accent-color-1) !important;
+    & .tab-background[selected] {
+        background-color: var(--uc-layered-background) !important;
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
-        background-color: var(--lwt-accent-color) !important;
+        background-color: var(--uc-layered-background) !important;
+    }
+    /*tabs - all other tabs */
+    & .tab-label-container:not([selected=""],[pinned]) {
+        color: var(--arrowpanel-border-color) !important;
     }
     & #TabsToolbar-customization-target {
         background: transparent !important;
@@ -650,7 +659,7 @@ button[title="Close sidebar"] .button-background {
 }
 #main-window[lwtheme] {
     & #sidebar-main {
-        background: var(--uc-browser-window) !important;
+        background: var(--lwt-accent-color) !important;
     }
 }
 /* visual clarity */
@@ -790,7 +799,6 @@ span.button-background.labelled label {
 }
 /* add on */
 #main-window[lwtheme] {
-    --uc-button-selected: var(--panel-item-hover-bgcolor) !important;
     /* extra styling - customize toolbar page */
     & #customization-container {background-color: var(--lwt-accent-color) !important;}
     & #unified-extensions-button {fill: var(--lwt-text-color) !important;}
@@ -824,13 +832,13 @@ span.button-background.labelled label {
 #main-window[lwtheme] {
     menupopup, panel {
         color-scheme: light dark;
-        --panel-color: color-mix(in srgb, var(--toolbar-color) 35%, var(--tab-loading-fill)) !important;
+        --panel-color: color-mix(in srgb, var(--lwt-text-color) 45%, var(--lwt-accent-color)) !important;
         --panel-shadow: none !important;
     }
 }
 /* Button Adjustments --------------------------------------------------------------------------------------- */
 
-#main-window:not([lwtheme]) {
+#main-window:not([lwtheme]), #main-window[lwtheme] {
     & .toolbarbutton-text {
         color: var(--toolbarbutton-icon-fill);
     }
@@ -842,6 +850,7 @@ span.button-background.labelled label {
     & .toolbarbutton-icon[open],
     & #TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon {
         background-color: var(--uc-button-selected) !important;
+        border-radius: var(--uc-button-border-radius) !important;
     }
     /* bookmark button in URL bar */
     & #star-button[starred] {
@@ -859,6 +868,18 @@ span.button-background.labelled label {
         .titlebar-close:hover {
             background-color: var(--uc-button-red) !important;
         }
+    }
+    .toolbarbutton-1 {
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+}
+.button-background {
+    border-radius: var(--uc-button-border-radius) !important;
+}
+#main-window[lwtheme] {
+    & #star-button[starred] {
+        fill-opacity: 1 !important;
+        fill: var(--toolbar-color) !important;
     }
 }
 
