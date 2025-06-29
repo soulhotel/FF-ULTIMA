@@ -11,27 +11,29 @@ File Desc:         userContent theming Reddit
 @media -moz-pref("user.theme.xtension.reddit") {
     @media (prefers-color-scheme: dark) {
         :root:not(.theme-light) .theme-beta, :root:not(.theme-light).theme-beta, * {
-            /*--main body background--*/
+            /* main body background */
             --color-neutral-background: #090913 !important;
             --color-neutral-background: var(--uc-layered-background) !important;
-            @media -moz-pref("user.theme.0.default") {--color-neutral-background: #090913 !important;}
-            @media -moz-pref("user.theme.kanagawa-wave") {--color-neutral-background: #090913 !important;}
-            /*--global 🟠 orange--*/
+            /* global 🟠 orange */
             --color-global-orangered: #5268bb !important;
             --color-brand-background: #5268bb !important;
             --color-global-brand-orangered: #5268bb !important;
-            /*--secondary background. search bars, sidebars--*/
+            /* secondary background. search bars, sidebars */
             --color-secondary-background: #26334417 !important;
             --color-neutral-background-weak: #1d1d2f !important;
             --color-neutral-background-medium: #1d1d2f !important;
             --color-neutral-background-strong: #1d1d2f !important;
-            /*--hover elements--*/
+            /* hover elements */
             --color-secondary-background-hover: #37445e !important;
             --color-neutral-background-hover: #37445e4d !important;
-            /*--selected elements--*/
+            /* selected elements */
             --color-neutral-background-selected: #37445e4d !important;
-            /*--notis--*/
+            /* theme specific */
+            @media -moz-pref("user.theme.0.default") {--color-neutral-background: #090913 !important;}
+            @media -moz-pref("user.theme.transparent") {--color-neutral-background-weak: var(--uc-layered-background) !important;}
+            @media -moz-pref("user.theme.kanagawa-wave") {--color-neutral-background: #090913 !important;}
         }
+        /* notify */
         .unread-notification {background-color: rgba(237, 36, 36, 0.1) !important;}
         /* side panel padding */
         .pt-md {padding-top: 2rem !important;}
