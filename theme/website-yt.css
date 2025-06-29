@@ -46,6 +46,13 @@ Transparent color scheme
         background: transparent !important;
         backdrop-filter: blur(50px);    
     }
+    #frosted-glass.with-chipbar.ytd-app {
+      height: 58px !important;
+    }
+    ytd-feed-filter-chip-bar-renderer {
+        --ytd-rich-grid-chips-bar-top: 0px !important;
+        top: 0 !important;
+    }
     /*search bar*/
     .ytSearchboxComponentInputBoxDark, html[dark] .sbsb_a,
     .ytSearchboxComponentSearchButton {
@@ -132,6 +139,14 @@ Transparent color scheme
     #header {
         background: var(--uc-seamless-bg) !important;
         backdrop-filter: blur(50px);    
+    }
+    #frosted-glass.with-chipbar.ytd-app {
+      background: var(--uc-seamless-bg) !important;
+      height: 58px !important;
+    }
+    ytd-feed-filter-chip-bar-renderer {
+        --ytd-rich-grid-chips-bar-top: 0px !important;
+        top: 0 !important;
     }
     /*search bar*/
     .ytSearchboxComponentInputBoxDark, html[dark] .sbsb_a {
