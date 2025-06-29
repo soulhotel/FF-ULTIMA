@@ -77,30 +77,34 @@ File Desc:         Alternative Styles for the URL Bar
 
 @media -moz-pref("ultima.urlbar.float") {
     #urlbar {
+        /* baseline transition */
         transition: transform 0.3s ease-in-out !important;
         &[open] {
+            /* appearance adjustments */
             --urlbarView-separator-color: transparent !important;
             padding-top:3px !important;
             & #urlbar-background {
                 box-shadow: var(--uc-box-shadow) !important;
             }
         }
+        /* when extended = scale */
         &[breakout-extend] {
-            transform: translateY(20vh) scale(1.3);
-            max-width:30vw !important; margin-left:5vw !important; /* control position */
+            transform: translateY(20vh) scale(1.1);
+            
         }
-        /*situational*/
+        /*situational = scale */
         &:hover:not([open]) {
             transition: transform 0.3s ease-in-out 5s !important;
-            transform: translateY(20vh) scale(1.3) !important;
+            transform: translateY(20vh) scale(1.2) !important;
         }
     }
-    /*situational*/
+    /*situational = scale */
     :root:has(#urlbar-searchmode-switcher[open]) {
         & #urlbar  {
             padding-bottom:0px !important;
             transition: transform 0.3s ease-in-out 5s !important;
-            transform: translateY(20vh) scale(1.3) !important;
+            transform: translateY(20vh) scale(1.2) !important;
         }
     }
 }
+
