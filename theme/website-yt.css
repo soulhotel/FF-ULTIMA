@@ -154,6 +154,13 @@ Transparent color scheme
         border-color: rgba(0,0,0,0.1) !important;
         backdrop-filter: blur(17px);
     }
+    .ytSearchboxComponentSearchButton:not(:hover) {
+      border: 0.5px solid rgba(0,0,0,0.1) !important;
+      background: transparent !important;
+    }
+    .ytSearchboxComponentSearchButton:hover {
+      border: 0.5px solid gray !important;
+    }
     /*search results popup*/
     .ytSearchboxComponentSuggestionsContainer {
         background-color: rgba(0,0,0,0.5) !important;
