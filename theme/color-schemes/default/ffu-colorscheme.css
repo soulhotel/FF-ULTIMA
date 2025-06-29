@@ -404,6 +404,10 @@ Custom Icons
 /* Custom Icons ---------------------------------------------------*/
 
 @media -moz-pref("ultima.theme.icons") {
+    /* new tab icon */
+    #main-window .tab-icon-image[src="chrome://branding/content/icon32.png"]{
+    content: url("../../icons/ultimafox.png");
+    }
     /* extension menu */
     #main-window:not([lwtheme]) #unified-extensions-button {
         list-style-image: url("../../icons/extensions.svg") !important;
