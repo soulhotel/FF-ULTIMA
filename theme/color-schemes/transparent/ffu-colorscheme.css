@@ -50,7 +50,7 @@ Custom Icons
     --uc-button-selected:    rgba(35, 35, 42,0.4);
     --uc-button-red:         #f54e4e;
     --uc-context-menu:       var(--uc-layered-background);
-    --uc-panel-background:   var(--uc-layered-background);
+    --uc-panel-background:   rgba(35, 35, 43,0.8);
     --uc-panel-border:       rgba(25, 25, 25, 0.2);
     --uc-panel-border-2:     rgba(1, 1, 1, 0.2);
     --uc-accent-color-1:     #EDF783;
@@ -287,12 +287,12 @@ Custom Icons
     /* vert tabs background*/
     & #sidebar-main {
         background: var(--uc-tabsbar-background) !important;
-        backdrop-filter: blur(17px);
+        backdrop-filter: blur(5px);
         border-radius:9px !important;
     }
     & #tabbrowser-tabs[orient="vertical"] {backdrop-filter: blur(25px);}
     &[sidebar-expand-on-hover=""] #sidebar-main[sidebar-launcher-expanded] {
-            background: var(--uc-blur-layer) !important;
+            background: rgba(35, 35, 39,0.5) !important;
         }
     }
     & #tabbrowser-tabs[orient="vertical"][overflow]::after {
