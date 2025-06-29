@@ -29,16 +29,18 @@
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.compact` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.left` is no more
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.smaller` is no more
-- `qol • 🟡 •` Positioning and autohiding of the "floating bookmarks bar" now works with the existing `ultima.navbar.bookmarks.autohide` & `ultima.navbar.bookmarks.centered` settings. This allows for consistent positioning and less settings clogging up your about:config page a8d8174.
+- `qol • 🟡 •` Positioning and autohiding of the "floating bookmarks bar" now works with the existing `ultima.navbar.bookmarks.autohide` & `ultima.navbar.bookmarks.centered` settings. This allows for consistent positioning and less settings clogging up your about:config page a8d8174 #328
 - `qol • 🟡 •` Tab groups background colors adjustments 
 - `fix • 🟡 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
 - `qol • 🟡 •` Window controls (on windows) spacing & sizing adjustments 7baa6e5
 - `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
 - `qol • 🟡 •` Setting `ultima.tabs.pinnedtabs.style.1` renamed to `ultima.tabs.always.show.pinned` for clarity. `pinnedtabs.style.1` will still work for now, but it will soon be removed in favor of the new name 84f48fe
 - `qol • 🟡 •` Transparent color scheme adjustments
-- `qol • 🟡 •` YT styling, transparent adjustments
+- `qol • 🟡 •` YT styling, transparent adjustments 
+- `qol • 🟡 •` Floating urlbar adjustments #329 83d9f80
+- `qol • 🟡 •` Incorporate compact addon manager #326
 <!--
-`fyi • ℹ️ •` 
+`fyi • ℹ️ •`
 `fix • 🔴 •` 
 `new • 🟢 •` 
 `qol • 🟡 •` 
