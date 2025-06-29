@@ -90,7 +90,7 @@ File Desc:         Alternative Styles for the URL Bar
         /* when extended = scale */
         &[breakout-extend] {
             transform: translateY(20vh) scale(1.1);
-            
+            @media (min-width: 1925px) { max-width:33vw !important; margin-left:6vw !important;}        
         }
         /*situational = scale */
         &:hover:not([open]) {
