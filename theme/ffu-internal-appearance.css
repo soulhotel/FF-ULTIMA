@@ -1045,3 +1045,23 @@ lets see how many more borders we can hunt down.
         --sidebar-border-color: none !important;
     }
 }
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+/* mockup foundation for color swapping add on colors */
+
+@media -moz-pref("user.theme.xtension.swap.addon.colors") {
+#main-window[lwtheme] {
+    --toolbox-textcolor-inactive: var(--toolbar-color) !important;
+    --toolbox-textcolor:var(--toolbar-color) !important;
+    --toolbarbutton-icon-fill:  var(--toolbar-color) !important;/*
+    --toolbar-field-color: var(--lwt-text-color) !important;
+    --toolbar-field-color: var(--toolbar-color) !important;*/
+    --uc-accent-color-1: var(--tab-loading-fill) !important;
+    --uc-accent-color-2: var(--lwt-text-color) !important;
+    --arrowpanel-border-color: var(--toolbar-color) !important;
+    --urlbar-box-hover-bgcolor: var(--button-background-color-ghost-hover) !important;
+
+}
+}
