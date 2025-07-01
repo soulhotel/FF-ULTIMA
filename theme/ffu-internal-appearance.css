@@ -419,6 +419,18 @@ spacer[part="overflow-start-indicator"] {
 menupopup menuseparator {
    opacity:0.2 !important;
 }
+/* Leave Page Dialog */
+/* leave page is always the default option - highlighted in blue, being the default option & blue is a design flaw
+   a flaw that can lead to loss of work/progress/or unsaved data in a website, so, change to red */
+button[label="Leave page"] {
+  background-color: #ff5757 !important;
+  color: var(--uc-text) !important;
+}
+button[label="Stay on page"] {
+  background-color: var(--uc-accent-color-2) !important;
+  color: var(--uc-text) !important;
+}
+
 
 /* Find bar ------------------------------------------------------------------------------------------------- */
 /* default */
