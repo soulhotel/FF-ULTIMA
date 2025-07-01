@@ -371,7 +371,7 @@ spacer[part="overflow-start-indicator"] {
 #page-action-buttons,
 #tracking-protection-icon-container {
     margin-top: 0px !important;
-    margin-bottom: 1px !important;
+    margin-bottom: 0px !important;
 }
 #urlbar[open] {
     box-shadow: var(--uc-box-shadow) !important;
