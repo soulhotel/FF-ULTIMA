@@ -121,7 +121,7 @@ bookmarks autohide
                 }
             }*/
             left: 245px !important;
-            width: 600px !important; height: 40px !important;
+            width: 800px !important; height: 40px !important;
             @media -moz-pref("ultima.navbar.bookmarks.float.right") {
                 left: unset !important; transform: translateX(0) !important;
                 right: 17px !important;

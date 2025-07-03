@@ -105,12 +105,6 @@ Border Hunter
     --panel-item-hover-bgcolor: var(--uc-layered-background) !important;
 }
 
-@media (prefers-color-scheme: light) { :root {
-    --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.5);
-    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.3);
-}}
-
-
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
 #main-window:not([lwtheme]) {
@@ -289,6 +283,9 @@ toolbar { &:-moz-window-inactive {background-color: var(--toolbar-bgcolor) !impo
 }
 /* bookmarks import button */
 #import-button {display: none !important;}
+/* bookmarks submenu */
+#editBookmarkPanel { min-width: 25vw !important; }
+#editBMPanel_folderTree { min-height: 35vh !important; }
 /* spacers */
 spacer[part="overflow-end-indicator"],
 spacer[part="overflow-start-indicator"] {
@@ -404,7 +401,8 @@ spacer[part="overflow-start-indicator"] {
 /* visibility - middle click autoscroller overlay */
 .autoscroller {
     --panel-border-radius: 100% !important;
-    --panel-background: rgba(166,166,170,0.8) no-repeat center var(--autoscroll-background-image) !important;
+    --autoscroll-background-image: url("chrome://global/skin/icons/autoscroll-vertical.svg") !important;
+    --panel-background: rgba(249, 249, 250, 0.6) no-repeat center var(--autoscroll-background-image) !important;
 }
 /* scrollbar */
 *:not(#sidebar-main) {
@@ -419,18 +417,6 @@ spacer[part="overflow-start-indicator"] {
 menupopup menuseparator {
    opacity:0.2 !important;
 }
-/* Leave Page Dialog */
-/* leave page is always the default option - highlighted in blue, being the default option & blue is a design flaw
-   a flaw that can lead to loss of work/progress/or unsaved data in a website, so, change to red */
-button[label="Leave page"] {
-  background-color: #ff5757 !important;
-  color: var(--uc-text) !important;
-}
-button[label="Stay on page"] {
-  background-color: var(--uc-accent-color-2) !important;
-  color: var(--uc-text) !important;
-}
-
 
 /* Find bar ------------------------------------------------------------------------------------------------- */
 /* default */
@@ -822,7 +808,7 @@ span.button-background.labelled label {
 /* Context Menu --------------------------------------------------------------------------------------------- */
 
 #main-window:not([lwtheme]), #main-window[lwtheme] {
-    menupopup, panel {
+    menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
         --panel-background: var(--uc-context-menu) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;
@@ -842,7 +828,7 @@ span.button-background.labelled label {
     }
 }
 #main-window[lwtheme] {
-    menupopup, panel {
+    menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
         --panel-color: color-mix(in srgb, var(--lwt-text-color) 45%, var(--lwt-accent-color)) !important;
         --panel-shadow: none !important;
@@ -887,6 +873,17 @@ span.button-background.labelled label {
 }
 .button-background {
     border-radius: var(--uc-button-border-radius) !important;
+}
+/* Leave Page Dialog */
+/* leave page is always the default option - highlighted in blue, being the default option & blue is a design flaw
+   a flaw that can lead to loss of work/progress/or unsaved data in a website, so, change to red */
+button[label="Leave page"] {
+  background-color: #ff5757 !important;
+  color: var(--uc-text) !important;
+}
+button[label="Stay on page"] {
+  background-color: var(--uc-accent-color-2) !important;
+  color: var(--uc-text) !important;
 }
 #main-window[lwtheme] {
     & #star-button[starred] {
@@ -1052,16 +1049,15 @@ lets see how many more borders we can hunt down.
 /* mockup foundation for color swapping add on colors */
 
 @media -moz-pref("user.theme.xtension.swap.addon.colors") {
-#main-window[lwtheme] {
-    --toolbox-textcolor-inactive: var(--toolbar-color) !important;
-    --toolbox-textcolor:var(--toolbar-color) !important;
-    --toolbarbutton-icon-fill:  var(--toolbar-color) !important;/*
-    --toolbar-field-color: var(--lwt-text-color) !important;
-    --toolbar-field-color: var(--toolbar-color) !important;*/
-    --uc-accent-color-1: var(--tab-loading-fill) !important;
-    --uc-accent-color-2: var(--lwt-text-color) !important;
-    --arrowpanel-border-color: var(--toolbar-color) !important;
-    --urlbar-box-hover-bgcolor: var(--button-background-color-ghost-hover) !important;
-
-}
+    #main-window[lwtheme] {
+        --toolbox-textcolor-inactive: var(--toolbar-color) !important;
+        --toolbox-textcolor:var(--toolbar-color) !important;
+        --toolbarbutton-icon-fill:  var(--toolbar-color) !important;/*
+        --toolbar-field-color: var(--lwt-text-color) !important;
+        --toolbar-field-color: var(--toolbar-color) !important;*/
+        --uc-accent-color-1: var(--tab-loading-fill) !important;
+        --uc-accent-color-2: var(--lwt-text-color) !important;
+        --arrowpanel-border-color: var(--toolbar-color) !important;
+        --urlbar-box-hover-bgcolor: var(--button-background-color-ghost-hover) !important;
+    }
 }

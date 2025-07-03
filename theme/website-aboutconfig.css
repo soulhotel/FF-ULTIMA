@@ -186,5 +186,52 @@ body::after {
         }
     }
 }
-    
+
+@media -moz-pref("ultima.navbar.bookmarks.fading") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  ultima.navbar.bookmarks.fading \A please delete this setting.. \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.autohide") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  ultima.navbar.bookmarks.float.autohide \A bookmarks.autohide handles this now. please delete the old setting.. \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.left") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  ultima.navbar.bookmarks.float.left \A please delete the old setting.. \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.compact") or -moz-pref("ultima.navbar.bookmarks.float.smaller") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  ultima.navbar.bookmarks.float.compact \A ultima.navbar.bookmarks.float.smaller \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.compact") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  ultima.navbar.bookmarks.float.compact \A ultima.navbar.bookmarks.compact will handle this. please delete the old setting.. \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.tabs.pinnedtabs.style.1") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  'ultima.tabs.pinnedtabs.style.1' is now handled by 'ultima.tabs.always.show.pinned' .. please delete the old setting.. \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.theme.color.swap") {
+    body::after {
+        content: "\ Outdated Setting detected! \A \A  'ultima.theme.color.swap' is now handled by 'user.theme.xtension.swap.addon.colors' .. please delete the old setting.. \A ";
+        display: block;
+    }
+}
+
+
+
 }} /* end aboutconfig page */

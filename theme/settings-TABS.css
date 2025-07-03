@@ -91,6 +91,44 @@ tab containers
     }
 }
 
+/* tabs close button on icon ------------------------------------------------------------------------------------ */
+@media -moz-pref("ultima.tabs.closetabbutton.on.icon") {
+/* should limit this to only expand on hover or expanded sidebar */
+/* close tab button overlays tab icon */
+    /* tab icon adjustment */
+    .tabbrowser-tab {
+        & .tab-content {
+            pointer-events: none !important;
+            &:hover .tab-icon-image, &:hover .tab-icon-image {
+                opacity: 0 !important;
+            }
+        }
+        & .tab-icon-image:not([busy]) {
+            display: block !important;
+        }
+    }
+    /* close button overlay */
+    .tabbrowser-tab {
+        /* overlay icon */
+        & .tab-close-button {
+            position: fixed !important;
+            left:15px !important;
+            width: unset !important;
+            pointer-events: auto;
+            opacity: 0 !important;
+            /* only show on hover */
+            &:hover {
+                opacity: 1 !important;
+            }
+        }
+        /* except for pinned tabs */
+        &[pinned] .tab-close-button {
+            display: none !important;
+        }
+    }
+}
+
+
 /* tab groups adjustments --------------------------------------------------------------------------------------- */
 
 /*force collapsing, cursor*/

@@ -23,10 +23,8 @@ Autoconfig Configurations
 
 @media -moz-pref("ultima.enable.js.config") {
 
-#navigator-toolbox[movingtab] > #nav-bar {
-  pointer-events: auto !important;
-}
-    
+
+
 } /*end js*/
 
 @media not -moz-pref("ultima.enable.js.config") {
@@ -34,8 +32,46 @@ Autoconfig Configurations
 #navigator-toolbox[movingtab] > #nav-bar {
   pointer-events: auto !important;
 }
+
+/* these are defaults set by firefox source content-area.css Line 7-13
+https://searchfox.org/mozilla-central/source/browser/themes/shared/tabbrowser/content-area.css#7-13 */
+
+@media (-moz-content-prefers-color-scheme: light) {
+    :root {--tabpanel-background-color: #f9f9fb !important;}
+}
+@media (-moz-content-prefers-color-scheme: dark) {
+    :root {--tabpanel-background-color: #2b2a33 !important;}
+}
+
+/*
+transparency
+#tabbrowser-tabs[orient="vertical"][overflow]::after {
+  content: none !important;
+}
+*/
+
+/* window title in menu bar */
+
+:root:not([sizemode="fullscreen"]):has(#toolbar-menubar:not([inactive="true"])) > head {
+    display: block;
+    position: fixed; top: 12px; right: 140px;
+    width: calc(100vw - 285px);
+    text-align: center;
+    pointer-events: none;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    z-index: 1;
+    & title {
+        display: contents;
+        max-width: 50vw;
+        white-space: nowrap;
+    }
+    & * {
+        display: none;
+    }
+}
     
-} /*end js*/
+} /*end non js*/
 
   
 

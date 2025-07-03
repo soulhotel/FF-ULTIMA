@@ -16,7 +16,7 @@ Transparent color scheme
         --uc-seamless-bg: var(--uc-browser-color) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important;
         @media -moz-pref("user.theme.0.default") {
-            --uc-seamless-bg: rgba(1,1,1,0.4) !important;
+            --uc-seamless-bg: rgba(1,1,1,0.75) !important;
             --yt-spec-base-background: rgba(1,1,1,0.5) !important;
         }
     }}
@@ -68,6 +68,7 @@ Transparent color scheme
     }
     /*notifications popup*/
     .ytd-multi-page-menu-renderer {
+        @media -moz-pref("user.theme.0.default") {--uc-seamless-bg: rgba(1,1,1,0.1) !important;}
         background-color: var(--uc-seamless-bg) !important;
     }
     .style-scope.ytd-popup-container {
@@ -77,7 +78,10 @@ Transparent color scheme
         backdrop-filter: blur(35px);
     }
     /*video player context menu*/
-    .ytp-popup {background-color: var(--uc-seamless-bg) !important;}
+    .ytp-popup {
+        @media -moz-pref("user.theme.0.default") {--uc-seamless-bg: rgba(1,1,1,0.1) !important;}
+        background-color: var(--uc-seamless-bg) !important;
+    }
     .ytp-popup.ytp-contextmenu { 
         background-color: var(--uc-seamless-bg) !important;
         @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0) !important;}
@@ -114,7 +118,7 @@ Transparent color scheme
 /* transparent -------------------------------------------------------------------------*/
 @media -moz-pref("user.theme.transparent") {  
     :root {
-        --uc-seamless-bg: var(--uc-browser-window) !important;
+        --uc-seamless-bg: var(--uc-browser-color) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important; 
     }
     /*page color*/
@@ -204,4 +208,3 @@ Transparent color scheme
      
     
 }} /* end YT */
-    

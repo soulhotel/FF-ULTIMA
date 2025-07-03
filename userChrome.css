@@ -30,36 +30,3 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 @import url(theme/ffu-special-configs.css);
 
-/* these are defaults set by firefox source content-area.css Line 7-13
-https://searchfox.org/mozilla-central/source/browser/themes/shared/tabbrowser/content-area.css#7-13 */
-
-@media (-moz-content-prefers-color-scheme: light) {
-    :root {--tabpanel-background-color: #f9f9fb !important;}
-}
-@media (-moz-content-prefers-color-scheme: dark) {
-    :root {--tabpanel-background-color: #2b2a33 !important;}
-}
-
-/*
-transparency
-#tabbrowser-tabs[orient="vertical"][overflow]::after {
-  content: none !important;
-}
-*/
-
-/* ---------------------------------------------------------------------------------------------------------- */
-/* 3.1 mockup foundation for color swapping add on colors */
-
-
-#main-window[lwtheme] {
-    --toolbox-textcolor-inactive: var(--toolbar-color) !important;
-    --toolbox-textcolor:var(--toolbar-color) !important;
-    --toolbarbutton-icon-fill:  var(--toolbar-color) !important;/*
-    --toolbar-field-color: var(--lwt-text-color) !important;
-    --toolbar-field-color: var(--toolbar-color) !important;*/
-    --uc-accent-color-1: var(--tab-loading-fill) !important;
-    --uc-accent-color-2: var(--lwt-text-color) !important;
-    --arrowpanel-border-color: var(--toolbar-color) !important;
-    --urlbar-box-hover-bgcolor: var(--button-background-color-ghost-hover) !important;
-
-}

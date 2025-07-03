@@ -26,15 +26,12 @@ user_pref("user.theme.scarlet", false);
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.hidebuttons", true);
-user_pref("ultima.navbar.bookmarks.centered", true);
 user_pref("ultima.navbar.bookmarks.autohide", false);
-user_pref("ultima.navbar.bookmarks.fading", false);
+user_pref("ultima.navbar.bookmarks.compact", false);
+user_pref("ultima.navbar.bookmarks.centered", true);
+user_pref("ultima.navbar.bookmarks.scrollable", true);
 user_pref("ultima.navbar.bookmarks.float", false);
-user_pref("ultima.navbar.bookmarks.float.autohide", false);
-user_pref("ultima.navbar.bookmarks.float.compact", false);
-user_pref("ultima.navbar.bookmarks.float.left", false);
 user_pref("ultima.navbar.bookmarks.float.right", false);
-user_pref("ultima.navbar.bookmarks.float.smaller", false);
 user_pref("ultima.navbar.windowcontrols.carl", false);
 user_pref("ultima.navbar.windowcontrols.trafficlights", false);
 user_pref("ultima.navbar.windowcontrols.whiteout", false);
@@ -102,6 +99,7 @@ user_pref("ultima.tabs.tabContainer.2", false);
 user_pref("ultima.tabs.tabContainer.3", true);
 user_pref("ultima.xstyle.newtab.rounded", false); /*new tab page*/
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
+user_pref("ultima.spacing.compact.addonmanager", true); /*add on manager*/
 
 /* extra theming */
 user_pref("ultima.theme.icons", true);
