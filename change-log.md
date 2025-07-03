@@ -18,7 +18,6 @@
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
 - `fix • 🔴 •` Find bar visibility adjustment 92cba3d
-- `fix • 🔴 •` About:config will now notify you about setting `user.theme.transparent`
 - `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
 - `fix • 🔴 •` Setting `user.theme.xtension.swap.addon.colors` replaces `ultima.theme.color.swap` to handle swapping of color variables for certain addon themes #330 @rabbit-time
 - `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
@@ -53,13 +52,12 @@
 
 ![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
 
-> Scrollable bookmarks toolbar
+> Bookmarks toolbar settings & combinations
 
-https://github.com/user-attachments/assets/db034047-987b-4851-b118-f7b4ec2a29eb
+![Image](https://github.com/user-attachments/assets/f50d37fb-a2ad-4522-aad2-fa22852ee9cb)
 
-> Floatable bookmarks toolbar different layouts
+![Image](https://github.com/user-attachments/assets/8caa9c6d-af6c-4b11-bfdf-a732dda55642)
 
-...
-
+![Image](https://github.com/user-attachments/assets/a498711b-ac46-4fc4-a768-020674241f12)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
