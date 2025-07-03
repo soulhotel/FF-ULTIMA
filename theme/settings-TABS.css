@@ -60,7 +60,8 @@ tab containers
     #tabbrowser-arrowscrollbox-periphery {order: -1 !important;}
     #vertical-tabs-newtab-button {order: -1 !important;}
     #vertical-tabs-newtab-button {order: -1 !important;}
-    #vertical-pinned-tabs-container {order: -2 !important;}
+    #pinned-tabs-container {order: -2 !important;}
+    #vertical-pinned-tabs-splitter {order: -2 !important;}
 }
 
 /* disable tab update dot --------------------------------------------------------------------------------------- */
