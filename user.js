@@ -108,6 +108,7 @@ user_pref("user.theme.xtension.YT", false);
 user_pref("user.theme.xtension.reddit", false);
 user_pref("ultima.theme.menubar", true);
 user_pref("ultima.theme.color.swap", false);
+user_pref("user.theme.xtension.swap.addon.colors", true);
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);
