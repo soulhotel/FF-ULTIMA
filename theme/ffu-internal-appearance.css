@@ -84,7 +84,7 @@ Border Hunter
     --uc-tab-selected:       var(--uc-layered-background);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --tab-selected-bgcolor: var(--uc-tab-selected) !important;
-    --tab-selected-outline-color: var(--toolbar-field-focus-background-color) !important;
+    --tab-selected-outline-color: color-mix(in srgb, var(--toolbar-field-focus-background-color) 90%, white) !important;
     --uc-button-selected:    var(--button-background-color-ghost-hover);
     --uc-button-red:         #f54e4e;
     --uc-context-menu:       color-mix(in srgb, var(--lwt-accent-color) 80%, black);
