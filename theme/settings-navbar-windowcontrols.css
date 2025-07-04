@@ -54,13 +54,16 @@ fine adjustments for specific themes
 }
 
 /* replace the icons */
+/*
 .titlebar-min {list-style-image:url("") !important;}
 .titlebar-max {list-style-image:url("") !important;}
 .titlebar-restore {list-style-image:url("") !important;}
 .titlebar-close {list-style-image:url("") !important;}
+*/
 /* or remove the icons */
+/*
 .titlebar-button {list-style-image:none !important;}
-
+*/
 
 /* custom hover behavior -------------------------------------------------------*/
 
