@@ -101,13 +101,14 @@ fine adjustments for specific themes
 
     /* I'll also seperate custom controls by OS type for future proofing */
     /* restore windows tbb */
+    @media -moz-pref("ultima.enable.nightly.config") {
     @media (-moz-platform: windows) {
         /* revert to old titlebar buttons */
         .titlebar-button { & > .toolbarbutton-icon { display: inline-flex !important; } }
         /* discard new titlebar buttons */
         .titlebar-button { &::before { display: none !important; } }
     }
-
+    }
     /* windows custom ttb */
     @media (-moz-platform: windows) {
         /* readjust appearance, size, & borders */
