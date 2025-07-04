@@ -61,4 +61,10 @@
 
 ![Image](https://github.com/user-attachments/assets/a498711b-ac46-4fc4-a768-020674241f12)
 
+> Tab Groups label 3 & background 4
+
+<img src="https://github.com/user-attachments/assets/2ee59d1c-33ff-4b0e-9eb5-06658c22a5b4" width=40%> <img src="https://github.com/user-attachments/assets/63ecece7-17a4-40e5-9ec6-91bbd2f8a7f5" width=40%>
+
+![Image](https://github.com/user-attachments/assets/a5e55f4d-32cf-4073-bcb9-de96f5f7cf30)
+
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
