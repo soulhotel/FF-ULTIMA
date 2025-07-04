@@ -389,7 +389,7 @@ spacer[part="overflow-start-indicator"] {
     @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
         #urlbar-searchmode-switcher {
             margin-top: 0px !important;
-            margin-bottom: 1px !important;
+            margin-bottom: 0px !important;
         }
         #urlbar[open] #urlbar-searchmode-switcher {
             background-color: transparent !important;
