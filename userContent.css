@@ -23,7 +23,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/website-yt.css); /*                                 youtube */
 @import url(theme/website-private.css); /*               private new tab page */
 
-@import url(theme/color-schemes/apply-cs.css);           /* import color scheme colors */
+@import url(theme/color-schemes/apply-cs.css);            /* import color scheme colors */
 @import url(theme/color-schemes/apply-cs-extensions.css); /* apply colors to extensions */
 @import url(theme/color-schemes/apply-cs-wallpapers.css); /* apply colors to wallpapers */
 
