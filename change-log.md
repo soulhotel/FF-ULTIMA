@@ -40,6 +40,7 @@
 - `qol • 🟡 •` Transparent color scheme adjustments
 - `qol • 🟡 •` YT styling, transparent adjustments 
 - `qol • 🟡 •` Floating urlbar adjustments #329 83d9f80
+- `qol • 🟡 •` Autoscroller icon restoration
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
