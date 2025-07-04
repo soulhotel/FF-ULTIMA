@@ -30,7 +30,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 @import url(theme/ffu-special-configs.css);
 
-/* xtra theme settings / to be organized / naming scheme could use some work  */
+/* #333 xtra theme settings / to be organized / naming scheme could use some work  */
 
 @media -moz-pref("user.theme.xtras.tab.outline.color.black") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
