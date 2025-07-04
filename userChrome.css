@@ -30,3 +30,40 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 @import url(theme/ffu-special-configs.css);
 
+/* xtra theme settings / to be organized / naming scheme could use some work  */
+
+@media -moz-pref("user.theme.xtras.tab.outline.color.black") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: black !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.blue") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: blue !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.gold") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: gold !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.green") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: green !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.lightblue") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: lightblue !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.pink") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: pink !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.purple") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: purple !important;
+    }
+}
