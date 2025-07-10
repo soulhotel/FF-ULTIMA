@@ -52,6 +52,7 @@ user_pref("ultima.urlbar.float", false);
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebar.seperator", false);
 user_pref("ultima.sidebar.hide.header", true);
+user_pref("ultima.sidebar.revamped.hide.when.horizontal", false);
 
 /* sidebery */
 user_pref("ultima.sidebery.autohide", true);

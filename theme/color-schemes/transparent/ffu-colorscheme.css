@@ -47,10 +47,10 @@ Custom Icons
     --uc-tab-background:     transparent;
     --uc-tab-selected:       rgba(35, 35, 42,0.3);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --uc-button-selected:    rgba(35, 35, 42,0.4);
+    --uc-button-selected:    rgba(45, 45, 59,0.7);
     --uc-button-red:         #f54e4e;
     --uc-context-menu:       var(--uc-layered-background);
-    --uc-panel-background:   rgba(35, 35, 43,0.8);
+    --uc-panel-background:   rgba(35, 35, 46,0.8);
     --uc-panel-border:       rgba(25, 25, 25, 0.2);
     --uc-panel-border-2:     rgba(1, 1, 1, 0.2);
     --uc-accent-color-1:     #EDF783;
@@ -205,7 +205,7 @@ Custom Icons
 /* URL Bar --------------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    & #urlbar-background {backdrop-filter: blur(220px);}
+    & #urlbar-background {backdrop-filter: blur(50px);}
     & #urlbar:not([open]) {
         & #urlbar-background, & #searchbar {
             background-color: var(--uc-urlbar-background) !important;
@@ -215,9 +215,15 @@ Custom Icons
     }
     & #urlbar-background, & #searchbar,
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
-        background-color: var(--uc-blur-layer) !important;
+        background-color: color-mix(in srgb, var(--uc-blur-layer) 80%, black) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
+    }
+    & .urlbarView {
+      backdrop-filter: blur(100px) !important;
+      border-radius: 8px !important;
+      background:transparent !important;
+      margin-bottom:6px;
     }
     & #urlbar[open] {
         box-shadow: var(--uc-box-shadow) !important;
@@ -477,6 +483,7 @@ Custom Icons
     /* ublock on */
     #ublock0_raymondhill_net-BAP image{
         list-style-image: url("../../icons/ublock.svg") !important;
+        fill: var(--uc-accent-color-2) !important;
     }
     /* ublock off */
     #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {

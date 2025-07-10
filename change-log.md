@@ -1,5 +1,5 @@
-### <ins> FF Ultima Version 3.1 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.1/ffultima3.1.zip)**
+### <ins> FF Ultima Version 3.2 Release
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.2/ffultima3.2.zip)**
 - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
@@ -17,30 +17,8 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
-- `fix • 🔴 •` Find bar visibility adjustment 92cba3d
-- `fix • 🔴 •` Setting `ultima.tabs.tabgroups.background.4` no longer increases width of vertical tabs, no more shift 23f0311
-- `fix • 🔴 •` Setting `user.theme.xtension.swap.addon.colors` replaces `ultima.theme.color.swap` to handle swapping of color variables for certain addon themes #330 @rabbit-time
-- `new • 🟢 •` Setting `ultima.tabs.tabgroups.label.3` is now the new default tab groups style 23f0311
-- `new • 🟢 •` Setting `ultima.spacing.compact.addonmanager` for a compact grid style add on manager page #326
-- `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` lets you scroll the bookmarks toolbar credit to @dreadbalaur for the inspiration 58efa73
-- `new • 🟢 •` Setting `ultima.navbar.bookmarks.scrollable` works when using only buttons on the bookmarks bar e0d5e30
-- `new • 🟢 •` Setting `ultima.navbar.bookmarks.compact` shrinks the height of the bookmarks toolbar, when floating, the bookmarks shrink both height & width instead a8d8174.
-- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.fading` is no more
-- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.autohide` is no more
-- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.compact` is no more
-- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.left` is no more
-- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.float.smaller` is no more
-- `qol • 🟡 •` Positioning and autohiding of the "floating bookmarks bar" now works with the existing `ultima.navbar.bookmarks.autohide` & `ultima.navbar.bookmarks.centered` settings. This allows for consistent positioning and less settings clogging up your about:config page a8d8174 #328
-- `qol • 🟡 •` Tab groups background colors adjustments
-- `qol • 🟡 •` Leave Page dialog now highlights the "Leave Page" button in red, instead of the default firefox blue
-- `fix • 🟡 •` Setting `ultima.navbar.bookmarks.centered` adjust when Window width is smaller 5283649
-- `qol • 🟡 •` Window controls (on windows) spacing & sizing adjustments 7baa6e5
-- `qol • 🟡 •` Window controls spacing (in Windows) & consistent colors when window is active/inactive/colorscheme 0422b64
-- `qol • 🟡 •` Setting `ultima.tabs.pinnedtabs.style.1` renamed to `ultima.tabs.always.show.pinned` for clarity. `pinnedtabs.style.1` will still work for now, but it will soon be removed in favor of the new name 84f48fe
-- `qol • 🟡 •` Transparent color scheme adjustments
-- `qol • 🟡 •` YT styling, transparent adjustments 
-- `qol • 🟡 •` Floating urlbar adjustments #329 83d9f80
-- `qol • 🟡 •` Autoscroller icon restoration
+- `new • 🟢 •` Setting `ultima.sidebar.revamped.hide.when.horizontal` to hide or keep the revamped sidebar visible even when using Horizontal Tabs
+- `qol • 🟡 •` Transparent Color Scheme url bar too transparent adjustment, button hover adjustment, menu panel adjustments #336
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
