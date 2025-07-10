@@ -19,6 +19,7 @@
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
 - `new • 🟢 •` Setting `ultima.sidebar.revamped.hide.when.horizontal` to hide or keep the revamped sidebar visible even when using Horizontal Tabs
 - `qol • 🟡 •` Transparent Color Scheme url bar too transparent adjustment, button hover adjustment, menu panel adjustments #336
+- `qol • 🟡 •` The Adaptive Tab Color [Wiki has been updated](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) with extra configuration testing, by @flick36 #336
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
