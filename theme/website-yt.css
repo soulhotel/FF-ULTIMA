@@ -27,6 +27,12 @@ Transparent color scheme
     html, html[dark], body, ytd-app {
         background-color: var(--uc-seamless-bg) !important;
     }
+    /*ambientmode filter*/
+    #cinematics-container canvas {
+        opacity: 0.2 !important;
+        backdrop-filter: blur(5px) !important;
+         mask-image: radial-gradient(circle, var(--uc-browser-color) 10%, rgba(0,0,0,0) 40%);        
+    }
     /*sidebar*/
     #background.ytd-masthead {
         background: var(--uc-seamless-bg) !important;
