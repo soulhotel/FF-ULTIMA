@@ -30,7 +30,7 @@ Transparent color scheme
         background-color: var(--uc-seamless-bg) !important;
     }
     /*ambientmode filter*/
-    #cinematics-container canvas {
+    #cinematics-container canvas, #shorts-cinematic-container {
         opacity: 0.2 !important;
         backdrop-filter: blur(5px) !important;
          mask-image: radial-gradient(circle, var(--uc-browser-color) 10%, rgba(0,0,0,0) 40%);        
