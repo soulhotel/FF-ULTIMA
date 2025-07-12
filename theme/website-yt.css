@@ -15,9 +15,11 @@ Transparent color scheme
     :root { @media (prefers-color-scheme: dark) {
         --uc-seamless-bg: var(--uc-browser-color) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important;
+        --yt-frosted-glass-desktop: color-mix(in srgb, var(--uc-browser-color) 50%, transparent) !important;
         @media -moz-pref("user.theme.0.default") {
             --uc-seamless-bg: rgba(1,1,1,0.75) !important;
             --yt-spec-base-background: rgba(1,1,1,0.5) !important;
+            --yt-frosted-glass-desktop: color-mix(in srgb, inherit, transparent) !important;
         }
     }}
     :root { @media (prefers-color-scheme: light) {
