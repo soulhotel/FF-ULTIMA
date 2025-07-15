@@ -467,18 +467,18 @@ tab-group .tabbrowser-tab {
 @media -moz-pref("ultima.tabs.tabgroups.background.4") {
     #main-window:has(#tabbrowser-tabs[orient="vertical"]) {
         tab-group tab:first-of-type {
-            border-top: 3px var(--tab-group-color) dashed !important;
+            border-top: 1px var(--tab-group-color) dashed !important;
         }
         tab-group tab:last-of-type {
-            border-bottom: 3px var(--tab-group-color) dashed !important;
+            border-bottom: 1px var(--tab-group-color) dashed !important;
         }
     }
     #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
         tab-group tab:first-of-type {
-            border-left: 3px var(--tab-group-color) dashed !important;
+            border-left: 2px var(--tab-group-color) dashed !important;
         }
         tab-group tab:last-of-type {
-            border-right: 3px var(--tab-group-color) dashed !important;
+            border-right: 2px var(--tab-group-color) dashed !important;
         }
     }
 }
