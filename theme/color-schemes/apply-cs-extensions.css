@@ -88,7 +88,7 @@ Another - applying colors to extension
     }
     /* Tabs ----------------------------------------------------*/
     #root.root {
-        --tabs-normal-fg: var(--uc-accent-color-2) !important;
+        --tabs-normal-fg: var(--uc-text) !important;
         --tabs-normal-bg: transparent;
         --tabs-activated-bg: var(--uc-button-selected) !important;
         --tabs-activated-fg: var(--uc-accent-color-5) !important;
