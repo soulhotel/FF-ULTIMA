@@ -23,55 +23,53 @@ Custom Icons
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
     --uc-tab-selected:       #2A2A37;
-    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-tab-selected-text:  var(--uc-text);
     --uc-button-selected:    #363646;
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         #C34043;
     --uc-context-menu:       #2A2A37;
-    --uc-panel-background:   var(--uc-layered-background);
+    --uc-panel-background:   #2A2A37;
     --uc-panel-border:       #1F1F2800;
     --uc-panel-border-2:     #1F1F2800;
-    --uc-accent-color-1:     #DCD7BA; /*yel*/
-    --uc-accent-color-2:     #727169; /*toolbar icons*/
-    --uc-accent-color-3:     #658594; /*idk*/
+    --uc-accent-color-1:     #DCD7BA; /*toolbar icons*/
+    --uc-accent-color-2:     var(--uc-text); /*sidebery tabs*/
+    --uc-accent-color-3:     #658594; /*url*/
     --uc-accent-color-4:     #1F1F28; /*organizer toolbar*/
-    --uc-accent-color-5:     #658594;  /*url bar*/
-    --uc-accent-color-6:     #E82424; /*red*/
-    --uc-accent-color-7:     rgb(44, 55, 80); /*unuse*/
+    --uc-accent-color-5:     var(--uc-tab-selected-text);  /*sidebery active tab*/
+    --uc-accent-color-6:     var(--uc-text); /*pinned tab*/
     --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow:         0.1rem 0.4rem 0.4rem -0.1rem rgba(25,25,25,0);
-    --uc-box-shadow-panel:   0.1rem 0.3rem 0.4rem -0.1rem rgba(25,25,25,0);
-    --uc-button-border-radius: 10px;
+    --uc-box-shadow:         0 0.2rem 0.4rem -0.1rem #16161D00;
+    --uc-box-shadow-panel:   0 0.2rem 0.4rem -0.1rem #16161D00;
+    --uc-button-border-radius: 8px;
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    --uc-browser-color:      #d1d0c9;
-    --uc-text:               #1F1F28;
-    --uc-layered-background: rgb(242, 242, 248);
+    --uc-browser-color:      #F2ECBC;
+    --uc-text:               #545464;
+    --uc-layered-background: #F2ECBC;
     --uc-navbar-background:  var(--toolbar-bgcolor);
     --uc-urlbar-background:  #a8a79e;
     --uc-findbar-background: var(--uc-layered-background);
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       #b8b6b2;
-    --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --uc-button-selected:    rgba(121, 121, 181,0.5);
-    --uc-button-red:         #f54e4e;
-    --uc-context-menu:       #c2c0b8;
-    --uc-panel-background:   #c2c0b8;
+    --uc-tab-selected:       #e4d794;
+    --uc-tab-selected-text:  var(--uc-text);    
+    --uc-button-selected:    #d5cea3;
+    --uc-button-red:         #C34043;
+    --uc-context-menu:       #F2ECBC;
+    --uc-panel-background:   #F2ECBC;
     --uc-panel-border:       #1F1F2800;
     --uc-panel-border-2:     #1F1F2800;
-    --uc-accent-color-1:     #5e5d54;
-    --uc-accent-color-2:     #1F1F28;
-    --uc-accent-color-3:     black;
-    --uc-accent-color-4:     #1F1F28;
-    --uc-accent-color-5:     #f1c40f;
-    --uc-accent-color-6:     #727169;
-    --uc-accent-color-7:     #656999;
+    --uc-accent-color-1:     #545464;
+    --uc-accent-color-2:     var(--uc-text);
+    --uc-accent-color-3:     #658594;
+    --uc-accent-color-4:     #F2ECBC;
+    --uc-accent-color-5:     var(--uc-tab-selected-text);
+    --uc-accent-color-6:     var(--uc-text);
     --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow: 0.1rem 0.3rem 0.2rem -0.1rem rgba(75,75,75,0.3);
-    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
-    --uc-button-border-radius: 10px;
+    --uc-box-shadow:         0 0 0.2rem 0 #1F1F2800;
+    --uc-box-shadow-panel:   0 0 0.2rem 0 #1F1F2800;
+    --uc-button-border-radius: 8px;
 }}
 
 
@@ -104,7 +102,7 @@ Custom Icons
     --toolbarbutton-icon-fill: var(--uc-accent-color-1) !important; /*toolbar button color*/
     --toolbar-field-background-color: var(--uc-accent-color-4) !important;
     --toolbar-field-border-color: var(--uc-accent-color-3) !important;
-    --toolbar-field-focus-border-color: var(--uc-accent-color-5) !important;
+    --toolbar-field-focus-border-color: var(--uc-accent-color-3) !important;
     --urlbarView-result-button-selected-color: var(--uc-text) !important;
     --urlbarView-result-button-selected-background-color: var(--uc-button-selected) !important;
     --urlbarView-highlight-background: var(--uc-button-selected) !important;
@@ -177,15 +175,12 @@ Custom Icons
     & .urlbarView-row:hover {
         color: var(--uc-accent-color-1) !important;
     }
-    & .urlbarView-row:hover { @media (prefers-color-scheme: light) {
-        color: var(--uc-accent-color-5) !important;
-    }}
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
-        outline-color: color-mix(in srgb, var(--uc-accent-color-5) 85%, transparent)  !important;
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 85%, transparent)  !important;
         outline-offset: -1px !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background { @media (prefers-color-scheme: light) {
-        outline-color: color-mix(in srgb, var(--uc-accent-color-5) 15%, transparent)  !important;
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 15%, transparent)  !important;
         outline-offset: none !important;
     }}
     & .urlbarView-url {
@@ -198,6 +193,13 @@ Custom Icons
 
 /* Sidebars -------------------------------------------------------*/
 
+.sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
+.customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+    color: var(--uc-accent-color-3) !important;
+}
+@layer input-common { #input {
+    accent-color: var(--uc-accent-color-3) !important;
+}}
 
 /* Tabs -----------------------------------------------------------*/
     
@@ -206,17 +208,10 @@ Custom Icons
     & .tab-label-container[selected] {
         color: var(--uc-tab-selected-text) !important;
     }
-    & .tab-label-container[selected] { @media (prefers-color-scheme: light) {
-        color: var(--uc-accent-color-7) !important;
-    }}
     & .tab-background[multiselected] {
         outline-color: var(--uc-accent-color-3) !important;
         outline-offset: 1px !important;
     } 
-    & .tab-background[multiselected] { @media (prefers-color-scheme: light) {
-        outline-color: var(--uc-accent-color-5) !important;
-        outline-offset: -1px !important;
-    }}
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
         color: var(--uc-accent-color-6) !important;
@@ -267,20 +262,28 @@ Custom Icons
 /* Popups/Menus ---------------------------------------------------*/
 /* Context Menu ---------------------------------------------------*/
 
-menuitem,
-menu {
-    color: var(--uc-text) !important;
-    border: none !important;
+#main-window:not([lwtheme]), #main-window[lwtheme] {
+    menupopup, panel:not(.autoscroller) {
+        --panel-color: var(--uc-text) !important;
+    }
+    menuitem:hover {
+        color: var(--uc-accent-color-1) !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        color: var(--uc-accent-color-1) !important;
+    }
 }
-
-
-menupopup {
-    --menupopup-border: none !important;
-    --menupopup-shadow: none !important;
-}
-.menupopup-arrowscrollbox {
-    border: var(--menupopup-border, 1px solid var(--panel-border-color)) !important;
-    box-shadow: var(--menupopup-shadow, 0 0 4px hsla(0,0%,0%,.2)) !important;
+#contentAreaContextMenu {
+    --panel-color: var(--uc-text) !important;
+    menuitem:hover {
+        color: var(--uc-accent-color-1) !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-1) !important;
+    }
 }
 
 /* Custom Icons ---------------------------------------------------*/
