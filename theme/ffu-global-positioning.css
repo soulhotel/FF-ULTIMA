@@ -76,7 +76,6 @@ Vertical Tabs Hidden in Private
     --uc-vertical-expanded-width:250px;
     /*individual tabs*/
     --tab-min-height: 35px;
-    /*! --tab-min-width: initial !important; */ /* mark for removal */
     --tab-overflow-pinned-tabs-width: initial !important; /*dont touch*/
     --inline-tab-padding: 10px;
     --tab-block-margin: 2px;
@@ -316,7 +315,6 @@ even when fullscreen mode, we track
             margin-top: -11px !important;
         }
         &[orient="vertical"] .tabbrowser-tab {
-            /*.tab-background {margin-block: 0px !important;} mark for removal */
             padding-block: 2px 2px !important;
         }
     }
