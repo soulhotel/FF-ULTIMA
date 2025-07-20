@@ -804,6 +804,11 @@ span.button-background.labelled label {
     /* extra styling - customize toolbar page */
     & #menubar-items {background: transparent !important; color: var(--toolbar-field-color) !important;}
 }
+/* session notify */
+:root[dialogroot] {
+    --in-content-page-background: var(--uc-panel-background) !important;
+    color: var(--uc-text)  !important;
+}
 
 /* Context Menu --------------------------------------------------------------------------------------------- */
 

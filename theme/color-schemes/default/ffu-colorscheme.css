@@ -376,7 +376,11 @@ Custom Icons
     /* menu popups */
     & .panel-subview-body {background: var(--uc-panel-background) !important;}
     & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
-}   
+} 
+:root[dialogroot] {
+    --in-content-page-background: var(--uc-panel-background) !important;
+    color: var(--uc-text)  !important;
+}  
 
 /* Context Menu ---------------------------------------------------*/
 
