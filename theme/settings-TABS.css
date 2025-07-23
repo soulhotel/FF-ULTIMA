@@ -165,6 +165,34 @@ tab containers
         --tab-selected-outline-color: purple !important;
     }
 }
+@media -moz-pref("user.theme.xtras.tab.outline.color.gradient") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        @keyframes filter{from{ filter: hue-rotate(0deg) } to { filter: hue-rotate(360deg) }}
+        .tabbrowser-tab[selected] > .tab-stack::before{
+            grid-area: 1/1;
+            content: "";
+            display: inherit;
+            margin-inline:10px;
+            margin-bottom:-2px;
+            border-radius:5px;
+            z-index: 2;
+            background-image: conic-gradient(
+                hsl(0 100% 70%),
+                hsl(60 100% 45%) 70deg,
+                hsl(120 100% 55%) 105deg,
+                hsl(160 100% 60%) 160deg,
+                hsl(200 100% 60%) 200deg,
+                hsl(240 100% 65%) 255deg,
+                hsl(300 100% 60%) 290deg,
+                hsl(360 100% 70%) 360deg);
+            mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8cmVjdCB4PSIwIiB5PSIwIiByeD0iNCIgc3Ryb2tlPSJyZWQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIi8+DQo8L3N2Zz4");
+            background-size: cover;
+            background-position: center;
+            animation: filter steps(30) 2s infinite;
+        }
+    }
+}
+
 
 /* tab groups adjustments --------------------------------------------------------------------------------------- */
 
