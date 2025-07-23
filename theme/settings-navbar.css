@@ -16,7 +16,7 @@ bookmarks autohide
 /* nav bar autohide --------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.autohide") {
-    #main-window:is([sizemode="normal"],[sizemode="maximized"]) {
+    #main-window:is([sizemode="normal"],[sizemode="maximized"]):not(:has(.bookmark-item[open]))  {
         #sidebar-main {--uc-topbars-combined-height: 2px !important;}
         @media -moz-pref("sidebar.verticalTabs") {
             #nav-bar {padding-left:42px !important;}
@@ -161,7 +161,7 @@ bookmarks autohide
 /* bookmarks autohide ------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.bookmarks.autohide") { @media not -moz-pref("ultima.navbar.bookmarks.float") {
-    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)) {
+    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)):not(:has(.bookmark-item[open])) {
         &#main-window:not([inFullscreen="true"]) {
             /* hide --uc-bookbar-height:1px !important;*/
             --uc-bookbar-height:0px !important;
