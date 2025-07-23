@@ -26,6 +26,7 @@
 - `qol • 🟡 •` yt theming header inconsistencies with certain color schemes #340
 - `qol • 🟡 •` yt theming shorts cinematic container adjustment #340
 - `qol • 🟡 •` Tab groups background #4 outline reduced by 2px
+- `qol • 🟡 •` correction for carl themed window controls @ShKev03 #341
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
