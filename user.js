@@ -98,7 +98,8 @@ user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.tabs.tabContainer.1", false);
 user_pref("ultima.tabs.tabContainer.2", false);
 user_pref("ultima.tabs.tabContainer.3", true);
-user_pref("ultima.xstyle.newtab.rounded", false); /*new tab page*/
+user_pref("user.theme.xtension.newtab.rounded", false); /*new tab page*/
+user_pref("user.theme.xtension.newtab.compact", true);
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
 user_pref("ultima.spacing.compact.addonmanager", true); /*add on manager*/
 
