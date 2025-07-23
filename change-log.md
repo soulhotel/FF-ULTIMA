@@ -18,9 +18,9 @@
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
 - `fix • 🔴 •` `navbar.autohide` and `bookmark.autohide` now respect when a bookmark dropdown/folder is active/open #335 d05a47c
+- `fix • 🔴 •` Url bar can be too transparent in `user.theme.transparent` #336
 - `new • 🟢 •` Setting `ultima.sidebar.revamped.hide.when.horizontal` can keep or hide the revamped sidebar even when using Horizontal Tabs #338
 - `new • 🟢 •` You can now override individual custom icons with (multiple) `user.theme.xtension...icon` settings
-- `fix • 🔴 •` Url bar can be too transparent in `user.theme.transparent` #336
 - `qol • 🟡 •` button hover adjustment, menu panel adjustments in `user.theme.transparent` #336
 - `qol • 🟡 •` The Adaptive Tab Color [Wiki has been updated](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) with extra configuration testing, by @flick36 #336
 - `qol • 🟡 •` yt theming header inconsistencies with certain color schemes #340

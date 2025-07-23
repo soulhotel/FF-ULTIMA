@@ -546,6 +546,35 @@ box-shadow: none !important;}}
     }
 }
 
+:root:not([inDOMFullscreen="true"]) {
+    :has(#sidebar-main:not([sidebar-positionend=""])) {
+        :has(#sidebar-launcher-splitter:hover) #sidebar-main::after {
+            content:"";
+            position: fixed; display: flex;  z-index: 99999;
+            top: 45vh; right: 12px;
+            height: 28px; width: 28px;
+            background: url("icons/splitter.gif") center center no-repeat;
+            background-size: contain;
+            background-color: var(--uc-accent-color-2);
+            border-radius:100%;
+            transition: opacity ease-in-out 1s, background-color ease 1s;
+        }
+    }
+    :has(#sidebar-main[sidebar-positionend=""]) {
+        :has(#sidebar-launcher-splitter:hover) #sidebar-main::after {
+            content:"";
+            position: fixed; display: flex; z-index: 99999;
+            top: 45vh; left: 12px;
+            height: 28px; width: 28px;
+            background: url("icons/splitter-r.gif") center center no-repeat;
+            background-size: contain;
+            background-color: var(--uc-accent-color-2);
+            border-radius:100%;
+            transition: opacity ease-in-out 1s, background-color ease 1s;
+        }
+    }
+}
+
 /* Other Sidebar Appearance ---------------------------------------------------------------*/
 /* custom sizes */
 #sidebar-box {

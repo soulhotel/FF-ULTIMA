@@ -116,6 +116,10 @@ user_pref("user.theme.xtras.tab.outline.color.green", false);
 user_pref("user.theme.xtras.tab.outline.color.pink", false);
 user_pref("user.theme.xtras.tab.outline.color.purple", false);
 user_pref("user.theme.xtras.tab.outline.color.red", false);
+/*user_pref("user.theme.xtension.extensions.icon.default", false);
+user_pref("user.theme.xtension.bookmarks.icon.default", false);
+user_pref("user.theme.xtension.ublock.icon.default", false);*/
+
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);

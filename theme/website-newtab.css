@@ -556,12 +556,21 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     }    
 }    
     
-    
-    
-    
-    
-    
-    
-    
-    
+/* grid adjustment over 1700px ------------------------------------------------- */
+   
+/*got this idea from https://www.reddit.com/r/FirefoxCSS/comments/1m6u88z/comment/n4n9d70/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button */
+
+@media (min-width: 1700px) {
+  .top-sites-list {
+    grid-template-columns: repeat(12, 1fr) !important;
+  }
+}    
+
+
+
+
+
+
+
+
 } /*fin*/
