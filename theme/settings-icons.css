@@ -33,7 +33,6 @@ themed icons can be overridden with either default icons or other icon sets
     }
     /* ublock off */
     #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {
-        list-style-image: url("../../icons/ublock.svg") !important;
-        fill: var(--uc-button-red) !important;
+        list-style-image: var(--webextension-toolbar-image, inherit) !important;
     }
 }
