@@ -112,6 +112,7 @@ user_pref("user.theme.xtension.reddit", false);
 user_pref("user.theme.xtension.swap.addon.colors", true);
 user_pref("user.theme.xtras.tab.outline.color.black", false);
 user_pref("user.theme.xtras.tab.outline.color.white", false);
+user_pref("user.theme.xtras.tab.outline.color.gradient", true);
 /*user_pref("user.theme.xtras.tab.outline.color.lightblue", false);
 user_pref("user.theme.xtras.tab.outline.color.green", false);
 user_pref("user.theme.xtras.tab.outline.color.pink", false);

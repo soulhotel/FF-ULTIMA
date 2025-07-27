@@ -106,7 +106,7 @@ Another - applying colors to extension
     .Tab[data-pin="false"] .fav {margin-left: 9px !important;}
     /* Fix Tabs Tree --------------------------------------------*/
     @media screen and (max-width: 42px) {
-        #root {
+        #root.root {
             --tabs-indent: unset !important;
         }
         .ScrollBox > .scroll-container {
