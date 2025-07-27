@@ -39,8 +39,8 @@
 
 ![newtabgridspacing-ezgif com-optimize](https://github.com/user-attachments/assets/f5e95548-3a08-48d5-a943-b26f442be15a)
 
-> History and Bookmark sidebars, consistent styling adjustments
+> History Sidebar themed for theme consistency
 
-<img width="459" height="489" alt="image" src="https://github.com/user-attachments/assets/087da9c0-9a6c-4bd4-960a-e2b1eff1549a" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/087da9c0-9a6c-4bd4-960a-e2b1eff1549a" />
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
