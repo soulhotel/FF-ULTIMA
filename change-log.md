@@ -31,16 +31,13 @@
 `wip • ℹ️ •` 
 -->
 
-> preview of gradient outline & spacing for tab group label 4 now mimics the spacing of a tab
+> Gradient outline & spacing for tab group label 4 | History Sidebar themed for theme consistency
 
-![groups and outlines 3](https://github.com/user-attachments/assets/dbb5a88f-096d-424a-963d-c8a091737d02)
+<img width="49%" alt="image" src="https://github.com/user-attachments/assets/dbb5a88f-096d-424a-963d-c8a091737d02" />
+<img width="40%" alt="image" src="https://github.com/user-attachments/assets/087da9c0-9a6c-4bd4-960a-e2b1eff1549a" />
 
 > new tab page shortcuts take up more of the screen past 1700px
 
 ![newtabgridspacing-ezgif com-optimize](https://github.com/user-attachments/assets/f5e95548-3a08-48d5-a943-b26f442be15a)
-
-> History Sidebar themed for theme consistency
-
-<img width="40%" alt="image" src="https://github.com/user-attachments/assets/087da9c0-9a6c-4bd4-960a-e2b1eff1549a" />
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
