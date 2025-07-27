@@ -561,7 +561,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 @media -moz-pref("user.theme.xtension.newtab.compact") {
     /*got this idea from https://www.reddit.com/r/FirefoxCSS/comments/1m6u88z/comment/n4n9d70/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button */
     @media (min-width: 1700px) {
-    .top-sites-list {
+    .top-sites-list:has(.top-site-outer:nth-of-type(9)) {
         grid-template-columns: repeat(12, 1fr) !important;
     }
     }    

@@ -167,14 +167,13 @@ tab containers
 }
 @media -moz-pref("user.theme.xtras.tab.outline.color.gradient") {
     @keyframes filter{from{ filter: hue-rotate(0deg) } to { filter: hue-rotate(360deg) }}
-    .tabbrowser-tab[selected] > .tab-stack::before{
+    .tabbrowser-tab[selected] > .tab-stack::after{
         grid-area: 1/1;
         content: "";
         display: inherit;
-        margin-inline: 10px;
-        margin-bottom: -2px;
-        border-radius: 3px;
-        z-index: 2;
+        margin:-1px 11px;
+        border-radius:3px;
+        z-index: 0;
         background-image: conic-gradient(
             hsl(0 100% 70%),
             hsl(60 100% 45%) 70deg,
@@ -188,6 +187,9 @@ tab containers
         background-size: cover;
         background-position: center;
         animation: filter steps(30) 2s infinite;
+    }
+    .tab-content {
+        z-index: 1 !important;
     }
 }
 

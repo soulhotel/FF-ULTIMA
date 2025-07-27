@@ -262,8 +262,9 @@ Custom Icons
         box-shadow: var(--uc-box-shadow) !important;
     }
     & .tab-background[multiselected] {
-        outline-color: var(--uc-text) !important;
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 60%, transparent)  !important;
         outline-offset: 1px !important;
+        outline-width:1px !important;
     } 
     & .tab-background[multiselected] { @media (prefers-color-scheme: light)
         outline-color: var(--uc-accent-color-1) !important;
