@@ -20,8 +20,8 @@
 - `fix • 🔴 •` sidebery tab indentation when collapsed, correction #347 8b37f1f
 - `new • 🟢 •` New infinite gradient tab outline color `user.theme.xtras.tab.outline.color.gradient`
 - `qol • 🟡 •` Setting `user.theme.xtension.newtab.compact` had a small adjustment to expand griding properly based on number of shortcuts (on 1700px browser width)
-- `qol • 🟡 •` 
-- `qol • 🟡 •` 
+- `qol • 🟡 •` History Sidebar themed for consistency
+- `qol • 🟡 •` Window Control restoration (for Windows) moved out of nightly.config
 - `qol • 🟡 •` 
 <!--
 `fyi • ℹ️ •`
