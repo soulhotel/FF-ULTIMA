@@ -211,7 +211,6 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
     }
 }
-
 /* new default label spacing */
 @media not -moz-pref("ultima.tabs.tabgroups.label.1"),
 @media not -moz-pref("ultima.tabs.tabgroups.label.2"),
@@ -220,7 +219,6 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         margin-left:15px !important;
     }
 }
-
 /* new default indentation */
 #tabbrowser-tabs[orient="vertical"][expanded] {
     & tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
@@ -229,7 +227,6 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         margin-inline-start: -1px !important;
     }
 }
-
 /* horizontal version border */
 #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
     tab-group .tabbrowser-tab:first-of-type {
@@ -239,14 +236,12 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         border-radius: 0px 8px 8px 0px !important;
     }
 }
-
 /* group line adjust */
 .tab-group-label-container {
     #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after {
         opacity:0 !important;
     }
 }
-
 /* fix tab group padding resizes when expand on hover */
 .tab-group-label {
     #tabbrowser-tabs[orient="vertical"][expanded] & {
@@ -258,6 +253,16 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
             padding-block: 2px !important;
         }
     }
+}
+/* 7/27/2025 new tab group overflow counter? */
+.tab-group-overflow-count-container, .tab-group-overflow-count-container::after, .tab-group-overflow-count {
+    background-color: transparent !important;
+}
+.tab-group-overflow-count {
+    margin-left:10px !important;
+}
+#sidebar-main[sidebar-launcher-expanded] .tab-group-overflow-count {
+    margin-left:-1px !important;
 }
 
 /* tab groups labels -------------------------------------------------------------------------------------------- */
