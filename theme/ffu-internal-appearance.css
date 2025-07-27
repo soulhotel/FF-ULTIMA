@@ -462,7 +462,7 @@ menupopup menuseparator {
 /* default */
 #main-window:not([lwtheme]), #main-window[lwtheme] {
     #sidebar {
-        background:var(--uc-sidebar-background) !important;
+        background: var(--uc-sidebar-background) !important;
     }
     /*sidebar links*/
     .sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
@@ -490,7 +490,12 @@ menupopup menuseparator {
     }
 }
 #search-box[data-l10n-id="places-bookmarks-search"] {
-    padding-left:7px !important;
+    padding-left:7px !important; 
+}
+#input[placeholder="Search bookmarks"],
+#input[placeholder="Search history"]{
+    background: transparent !important;
+    border: none !important;
 }
 /*sidebar check boxes*/
 @layer input-common { #input {
@@ -516,22 +521,30 @@ button[title="Close sidebar"] .button-background {
 }
 /* search boxes */
 #sidebar-search-container #search-box, & #sidebar-search-container #viewButton,
-#bookmarksPanel #sidebar-search-container #search-box {
+#bookmarksPanel #sidebar-search-container #search-box,
+moz-input-search[placeholder="Search history"] {
     height:2.5em !important;
     appearance: none !important;
     border-radius: 10px !important;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     box-shadow: var(--uc-box-shadow-panel);
 }
-/*text list*/
+/* tree view */
 .sidebar-placesTree {
     appearance: none;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     color: var(--uc-accent-color-2) !important;
     border-radius: var(--border-radius-medium) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
-    margin: 2% 2% 30vh 2% !important;
+    margin: 2% 2% 20vh 2% !important;
     padding-top:12px !important;
+}
+moz-card[data-l10n-id*="sidebar-history-date"] {
+    appearance: none;
+    background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
+    color: var(--uc-accent-color-2) !important;
+    box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
+    border: none !important;
 }
 /* remove bad borders */
 #sidebar { @media -moz-pref("sidebar.revamp") { & {
