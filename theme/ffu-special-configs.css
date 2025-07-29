@@ -71,7 +71,10 @@ Autoconfig Configurations
     #inputs, .extensions {
         --sidebar-box-border: var(--sidebar-box-border-width) solid color-mix(in srgb, var(--sidebar-box-border-color) 10%, transparent) !important;
     }
-
+    moz-card {
+        background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
+    }
+    
 } /*end non js*/
 
   
