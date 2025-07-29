@@ -6,9 +6,9 @@
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- Another *quality of life* centered update. Focusing primarily on reported issues & current/future firefox version changes.
+- Smoll *quality of life* update centered around reported issues & maintenance.
+- User.js (recommended) not required. 
 - Firefox 138+ required.
-- User.js not required.
 <!--
 - User.js required. 
 - User.js not required.
@@ -17,13 +17,14 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
-- `fix • 🔴 •` sidebery tab indentation when collapsed, correction #347 8b37f1f
+- `fix • 🔴 •` Sidebery tab indentation when collapsed, fixed #347 8b37f1f
 - `new • 🟢 •` New infinite gradient tab outline color `user.theme.xtras.tab.outline.color.gradient`
-- `new • 🟢 •` Setting `ultima.tabs.closetabbutton.on.icon` hovering a tabs icon will present the close tab button
+- `new • 🟢 •` Setting `ultima.tabs.closetabbutton.on.icon` presents the "close tab" button when you hover over a tabs icon
 - `qol • 🟡 •` Setting `user.theme.xtension.newtab.compact` had a small adjustment to expand griding properly based on number of shortcuts (on 1700px browser width)
 - `qol • 🟡 •` History Sidebar themed for consistency
+- `qol • 🟡 •` Bookmarks Sidebar adjusted for consistency
+- `qol • 🟡 •` Settings Sidebar, finally took care of those grey borders
 - `qol • 🟡 •` Window Control restoration (for Windows) moved out of nightly.config
-- `qol • 🟡 •` 
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
@@ -40,5 +41,9 @@
 > new tab page shortcuts take up more of the screen past 1700px
 
 ![newtabgridspacing-ezgif com-optimize](https://github.com/user-attachments/assets/f5e95548-3a08-48d5-a943-b26f442be15a)
+
+> Setting `ultima.tabs.closetabbutton.on.icon`
+
+![Vid_20250728_233140](https://github.com/user-attachments/assets/f3a19f47-a16a-4ee8-b909-7429d7f1a296)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
