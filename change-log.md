@@ -33,16 +33,16 @@
 `wip • ℹ️ •` 
 -->
 
-> Gradient outline & spacing for tab group label 4 | History Sidebar themed for theme consistency
+> Gradient outline (setting) | Tab group label 4 spacing | Consistent theming for Sidebar pages
 
 <img width="49%" alt="image" src="https://github.com/user-attachments/assets/dbb5a88f-096d-424a-963d-c8a091737d02" />
 <img width="40%" alt="image" src="https://github.com/user-attachments/assets/087da9c0-9a6c-4bd4-960a-e2b1eff1549a" />
 
-> new tab page shortcuts take up more of the screen past 1700px
+> After 1700px, new tab page shortcuts take up more spacing (user.theme.xtension.newtab.compact) (could use some work)
 
 ![newtabgridspacing-ezgif com-optimize](https://github.com/user-attachments/assets/f5e95548-3a08-48d5-a943-b26f442be15a)
 
-> Setting `ultima.tabs.closetabbutton.on.icon`
+> Setting `ultima.tabs.closetabbutton.on.icon`, only applies to expanded/expandOnHover
 
 ![Vid_20250728_233140](https://github.com/user-attachments/assets/f3a19f47-a16a-4ee8-b909-7429d7f1a296)
 
