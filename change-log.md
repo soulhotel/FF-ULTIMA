@@ -19,6 +19,7 @@
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
 - `fix • 🔴 •` sidebery tab indentation when collapsed, correction #347 8b37f1f
 - `new • 🟢 •` New infinite gradient tab outline color `user.theme.xtras.tab.outline.color.gradient`
+- `new • 🟢 •` Setting `ultima.tabs.closetabbutton.on.icon` hovering a tabs icon will present the close tab button
 - `qol • 🟡 •` Setting `user.theme.xtension.newtab.compact` had a small adjustment to expand griding properly based on number of shortcuts (on 1700px browser width)
 - `qol • 🟡 •` History Sidebar themed for consistency
 - `qol • 🟡 •` Window Control restoration (for Windows) moved out of nightly.config
