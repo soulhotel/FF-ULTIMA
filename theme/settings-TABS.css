@@ -29,7 +29,7 @@ tab containers
 
 /* multiline tabs ----------------------------------------------------------------------------------------------- */
 /* wip - unsure how stable this is, time will tell */
-@media -moz-pref("ultima.tabs.vertical.multiline.labels") {
+@media -moz-pref("ultima.tabs.multiline.labels") {
     #sidebar-main .tab-label {
       white-space: wrap !important;
       word-wrap: break-word;
