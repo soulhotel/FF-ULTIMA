@@ -46,7 +46,7 @@
 
 ![Vid_20250728_233140](https://github.com/user-attachments/assets/f3a19f47-a16a-4ee8-b909-7429d7f1a296)
 
-> Setting `ultima.tabs.vertical.multiline.labels`, wip, very experimental
+> Setting `ultima.tabs.multiline.labels`, wip, very experimental
 
 <img width="331" height="244" alt="image" src="https://github.com/user-attachments/assets/c1e09736-18e8-4921-8dd5-0ab8630fb987" />
 
