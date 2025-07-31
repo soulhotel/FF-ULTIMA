@@ -135,6 +135,11 @@ tab containers
         --tab-selected-outline-color: black !important;
     }
 }
+@media -moz-pref("user.theme.xtras.tab.outline.color.white") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: white !important;
+    }
+}
 @media -moz-pref("user.theme.xtras.tab.outline.color.blue") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: blue !important;
