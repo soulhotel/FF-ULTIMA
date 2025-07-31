@@ -4,6 +4,7 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         All Tab related settings
 
 compact tabs
+multiline tabs (vertical)
 tabs below the url bar (horizontal)
 pinned tabs
 new tab button
@@ -24,6 +25,16 @@ tab containers
     .tab-background {
           margin-block: -0.4px !important;
       }
+}
+
+/* multiline tabs ----------------------------------------------------------------------------------------------- */
+/* wip - unsure how stable this is, time will tell */
+@media -moz-pref("ultima.tabs.vertical.multiline.labels") {
+    #sidebar-main .tab-label {
+      white-space: wrap !important;
+      word-wrap: break-word;
+      max-height: 120px !important;
+    }
 }
 
 /* tabs below the url bar --------------------------------------------------------------------------------------- */
