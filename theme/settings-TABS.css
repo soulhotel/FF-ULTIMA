@@ -4,14 +4,16 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         All Tab related settings
 
 compact tabs
-multiline tabs (vertical)
 tabs below the url bar (horizontal)
 pinned tabs
 new tab button
 disable tab update dot
 disable "all tabs" button
 vertical tab action buttons
-highlight aboutconfig tab
+multiline tabs
+tabs close button on icon
+tabs reversed content order
+tab outline colors
 tab groups adjustments
 tab groups labels
 tab groups backgrounds
@@ -25,16 +27,6 @@ tab containers
     .tab-background {
           margin-block: -0.4px !important;
       }
-}
-
-/* multiline tabs ----------------------------------------------------------------------------------------------- */
-/* wip - unsure how stable this is, time will tell */
-@media -moz-pref("ultima.tabs.multiline.labels") {
-    #sidebar-main .tab-label {
-      white-space: wrap !important;
-      word-wrap: break-word;
-      max-height: 120px !important;
-    }
 }
 
 /* tabs below the url bar --------------------------------------------------------------------------------------- */
@@ -102,39 +94,89 @@ tab containers
     }
 }
 
+/* multiline tabs ----------------------------------------------------------------------------------------------- */
+/* wip - unsure how stable this is, time will tell */
+@media -moz-pref("ultima.tabs.multiline.labels") {
+    #sidebar-main .tab-label {
+      white-space: wrap !important;
+      word-wrap: break-word;
+      max-height: 120px !important;
+    }
+}
+
 /* tabs close button on icon ------------------------------------------------------------------------------------ */
 @media -moz-pref("ultima.tabs.closetabbutton.on.icon") {
-/* should limit this to only expand on hover or expanded sidebar */
-/* close tab button overlays tab icon */
-    /* tab icon adjustment */
-    .tabbrowser-tab {
-        & .tab-content {
-            pointer-events: none !important;
-            &:hover .tab-icon-image, &:hover .tab-icon-image {
-                opacity: 0 !important;
+    #tabbrowser-tabs[orient="vertical"][expanded] :not(#pinned-tabs-container) {
+        .tab-close-button {
+            order: -1 !important;
+        }
+        /* selected tab */
+        .tabbrowser-tab[selected] {
+            .tab-close-button {
+                margin-left: -3px !important;
+            }
+            .tab-icon-stack {
+                margin-left: 8px !important;
             }
         }
-        & .tab-icon-image:not([busy]) {
-            display: block !important;
+        /* unselected tabs */
+        .tabbrowser-tab:not([selected]):hover {
+            .tab-close-button {
+                margin-inline: -3px 3px !important;
+            }
+            .tab-icon-stack {
+                display: none !important;
+            }
         }
     }
-    /* close button overlay */
-    .tabbrowser-tab {
-        /* overlay icon */
-        & .tab-close-button {
-            position: fixed !important;
-            left:15px !important;
-            width: unset !important;
-            pointer-events: auto;
-            opacity: 0 !important;
-            /* only show on hover */
-            &:hover {
-                opacity: 1 !important;
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tab-close-button {
+            order: -1 !important;
+        }
+        /* selected tab */
+        .tabbrowser-tab[selected] {
+            .tab-icon-stack {
+                margin-left: 3px !important;
             }
         }
-        /* except for pinned tabs */
-        &[pinned] .tab-close-button {
-            display: none !important;
+        /* unselected tabs */
+        .tabbrowser-tab:not([selected]):not(:hover) {
+            .tab-close-button {
+                display: none !important;
+            }
+        }
+        .tabbrowser-tab:not([selected]):hover {
+            .tab-close-button {
+                margin-inline: -3px 3px !important;
+            }
+            .tab-icon-stack {
+                display: none !important;
+            }
+            .tab-close-button {
+                display: flex !important;
+            }
+        }
+    }
+}
+
+/* tabs reversed content order ---------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.reverse.content.order") {
+    @media not -moz-pref("ultima.tabs.closetabbutton.on.icon") {
+        #tabbrowser-tabs[orient="vertical"] {
+            .tab-content {
+                flex-direction: row-reverse !important;
+            }
+        }
+        #tabbrowser-tabs[orient="horizontal"] {
+            .tab-content {
+                flex-direction: row-reverse !important;
+            }
+            .tab-close-button {
+                margin-right: 8px !important;
+            }/*
+            .tab-label-container {
+                margin-left: 8px !important;
+            }*/
         }
     }
 }
