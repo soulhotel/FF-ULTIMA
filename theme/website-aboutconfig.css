@@ -148,6 +148,14 @@ body::after {
         }
     }
 }
+@media -moz-pref("ultima.tabs.reverse.content.order") {
+    @media -moz-pref("ultima.tabs.closetabbutton.on.icon") {
+        body::after {
+            content: "\ Only use one of these settings! \A \A  ultima.tabs.reverse.content.order \A ultima.tabs.closetabbutton.on.icon \A ";
+            display: block;
+        }
+    }
+}
 @media -moz-pref("ultima.xstyle.sidebar.theming") {
     #toolbar::after {
         content: "\ ultima.xstyle.sidebar.theming is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
