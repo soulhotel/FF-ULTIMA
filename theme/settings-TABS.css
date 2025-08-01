@@ -229,7 +229,6 @@ tab containers
         grid-area: 1/1;
         content: "";
         display: inherit;
-        margin:-1px 11px;
         border-radius:3px;
         z-index: 0;
         background-image: conic-gradient(
@@ -248,6 +247,9 @@ tab containers
     }
     .tab-content {
         z-index: 1 !important;
+    }
+    #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected]:not([pinned]) > .tab-stack::after {
+        margin:-1px 11px;
     }
 }
 
