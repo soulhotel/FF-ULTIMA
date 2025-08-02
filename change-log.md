@@ -33,13 +33,9 @@
 
 ![bookmarks autohide](https://github.com/user-attachments/assets/17d6f337-e952-48cc-82a4-a1c0dee15918)
 
-> ...
+> Setting `ultima.tabs.multiline.labels` (experimental) + reverse tab content order (stable)
 
-...
-
-> Setting `ultima.tabs.multiline.labels`, wip, very experimental
-
-<img width="331" height="244" alt="image" src="https://github.com/user-attachments/assets/c1e09736-18e8-4921-8dd5-0ab8630fb987" />
-
+<img width="27%" src="https://github.com/user-attachments/assets/c1e09736-18e8-4921-8dd5-0ab8630fb987" />
+<img width="49%" src="https://github.com/user-attachments/assets/366ba7f4-70fb-411c-8e6f-ece761241d72" />
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
