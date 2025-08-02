@@ -18,8 +18,9 @@
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
 - `fix • 🔴 •` ...
-- `new • 🟢 •` ...
+- `new • 🟢 •` Setting `ultima.tabs.reverse.content.order` & `ultima.tabs.closetabbutton.on.icon` can switch around the position of content inside of an individual tab.
 - `qol • 🟡 •` Bookmark Autohide now has a light linear transition/animation.
+- `qol • 🟡 •` Setting `ultima.tabs.multiline.labels` adjustments
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
@@ -30,7 +31,7 @@
 
 > bookmark.autohide transition update
 
-...
+![bookmarks autohide](https://github.com/user-attachments/assets/17d6f337-e952-48cc-82a4-a1c0dee15918)
 
 > ...
 
