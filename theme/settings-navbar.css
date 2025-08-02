@@ -169,8 +169,8 @@ bookmarks autohide
         &#main-window:not([inFullscreen="true"]) {
             /* hide --uc-bookbar-height:1px !important;*/
             --uc-bookbar-height:0px !important;
-            #navigator-toolbox {transition: max-height, height, 0.9s ease !important;}
-            #PersonalToolbar {transition: max-height, height, 0.3s ease;}
+            #navigator-toolbox {transition: max-height, height, 0.9s ease 1.5s !important;}
+            #PersonalToolbar {transition: max-height, height, 0.3s ease 1.5s;}
 
             /* visibility */
             #PlacesToolbarItems {
