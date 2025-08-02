@@ -26,7 +26,7 @@ user_pref("user.theme.scarlet", false);
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.hidebuttons", true);
-user_pref("ultima.navbar.bookmarks.autohide", false);
+user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);
 user_pref("ultima.navbar.bookmarks.centered", true);
 user_pref("ultima.navbar.bookmarks.scrollable", true);
