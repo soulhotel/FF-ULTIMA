@@ -150,4 +150,6 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 
 <!-- sponsors --><!-- sponsors -->
 
+![Alt](https://repobeats.axiom.co/api/embed/8f99668e7cb15df9e7d49c74f9b6626d32b35dbb.svg "Repobeats analytics image")
+
 
