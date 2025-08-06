@@ -526,6 +526,7 @@ box-shadow: none !important;}}
     margin-bottom: 55px !important;    /*controls height*/
     border-radius: 10px !important;
     opacity: 0 !important;
+    width: 1px !important; /* 8/5/2025 splitters have a weirdly large width now */
     &:hover {
         opacity: 0.5 !important;
     }
@@ -539,6 +540,7 @@ box-shadow: none !important;}}
             margin-bottom: 55px !important;    /*controls height*/
             border-radius: 10px !important;
             opacity: 0;
+            width: 1px !important; /* 8/5/2025 splitters have a weirdly large width now */
             &:hover {
                 opacity: 0.5 !important;
             }
