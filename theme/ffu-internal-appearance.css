@@ -307,21 +307,21 @@ spacer[part="overflow-start-indicator"] {
     & #urlbar[open] {
         box-shadow: var(--uc-box-shadow) !important;
     }
-    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background, & #searchbar:focus-within {
         background-color: var(--uc-urlbar-background) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
         margin-top: 3px !important;
         border-radius: 10px !important;
     }
-    & #urlbar-background, & #searchbar {
+    & .urlbar-background, & #searchbar {
         background-color: var(--uc-urlbar-background) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
         border-radius: 10px !important;
         border: 0 !important;
     }
-    & #urlbar[open] > #urlbar-background {
+    & #urlbar[open] > .urlbar-background {
         border-color: var(--uc-accent-color-3) !important;
     }
     & #urlbar[breakout][breakout-extend] {
@@ -339,13 +339,13 @@ spacer[part="overflow-start-indicator"] {
         background-color: var(--uc-button-selected) !important;
         color: var(--uc-text) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
     }
 }
 /* add on */
 #main-window[lwtheme] {
-    & #urlbar[open] > #urlbar-background {
+    & #urlbar[open] > .urlbar-background {
         border-color: color-mix(in srgb, var(--lwt-accent-color) 15%, rgba(0,0,0,0.4)) !important;
     }
 }
@@ -374,7 +374,7 @@ spacer[part="overflow-start-indicator"] {
     box-shadow: var(--uc-box-shadow) !important;
     --urlbarView-separator-color: transparent !important;
 }
-#urlbar[focused]:not([suppress-focus-border]) > #urlbar-background, #searchbar:focus-within {
+#urlbar[focused]:not([suppress-focus-border]) > .urlbar-background, #searchbar:focus-within {
     outline-offset: 0px !important; outline-width: 2px !important;
     outline-color: color-mix(in srgb, var(--toolbar-field-focus-border-color) 80%, transparent) !important;
 }

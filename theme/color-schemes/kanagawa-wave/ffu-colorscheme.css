@@ -153,20 +153,20 @@ Custom Icons
 
 #main-window:not([lwtheme]) {
     & #urlbar:not([open]) {
-        & #urlbar-background, & #searchbar {
+        & .urlbar-background, & #searchbar {
             background-color: transparent !important;
             border-radius: var(--uc-button-border-radius) !important;
             box-shadow: none !important;
         }
     }
-    & #urlbar-background, & #searchbar,
-    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+    & .urlbar-background, & #searchbar,
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background, & #searchbar:focus-within {
         background-color: var(--uc-context-menu) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: 0.1rem 0.4rem 0.9rem -0.1rem rgba(25,25,25,0.9) !important;
     }
-    & #urlbar-background, & #searchbar,
-    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within { @media (prefers-color-scheme: light) {
+    & .urlbar-background, & #searchbar,
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background, & #searchbar:focus-within { @media (prefers-color-scheme: light) {
         box-shadow: var(--uc-box-shadow) !important;
     }}
     & .urlbarView-row { &[selected] {
@@ -175,11 +175,11 @@ Custom Icons
     & .urlbarView-row:hover {
         color: var(--uc-accent-color-1) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 85%, transparent)  !important;
         outline-offset: -1px !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background { @media (prefers-color-scheme: light) {
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background { @media (prefers-color-scheme: light) {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 15%, transparent)  !important;
         outline-offset: none !important;
     }}

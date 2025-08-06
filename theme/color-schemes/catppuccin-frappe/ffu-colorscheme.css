@@ -157,13 +157,13 @@ Custom Icons
     & #urlbar[open] {
         box-shadow: var(--uc-box-shadow) !important;
     }
-    & #urlbar-background, & #searchbar,
-    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+    & .urlbar-background, & #searchbar,
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background, & #searchbar:focus-within {
         background-color: var(--uc-urlbar-background) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
     }
-    & #urlbar[open] > #urlbar-background {
+    & #urlbar[open] > .urlbar-background {
         border-color: var(--uc-accent-color-3) !important;
     }
     & #urlbar[breakout][breakout-extend] {
@@ -179,7 +179,7 @@ Custom Icons
     & .urlbarView-row:hover {
         color: var(--uc-accent-color-1) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-1) 35%, transparent)  !important;
     }
 }

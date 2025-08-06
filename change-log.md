@@ -17,7 +17,7 @@
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
-- `fix • 🔴 •` ...
+- `fix • 🔴 •` Adjusted for firefoxs classification of urlbar elements
 - `new • 🟢 •` Setting `ultima.tabs.reverse.content.order` & `ultima.tabs.closetabbutton.on.icon` can switch around the position of content inside of an individual tab.
 - `qol • 🟡 •` Bookmark Autohide now has a light linear transition/animation.
 - `qol • 🟡 •` Setting `ultima.tabs.multiline.labels` adjustments

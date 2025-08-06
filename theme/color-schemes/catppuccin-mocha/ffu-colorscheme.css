@@ -161,7 +161,7 @@ Custom Icons
     & .urlbarView-row:hover {
         color: var(--uc-accent-color-1) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-5) 85%, transparent)  !important;
         outline-offset: -1px !important;
     }
