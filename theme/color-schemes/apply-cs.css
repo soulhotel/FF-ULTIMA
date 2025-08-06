@@ -25,6 +25,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('kanagawa-wave/ffu-colorscheme.css')      -moz-pref("user.theme.kanagawa-wave");
 @import url('midnight/ffu-colorscheme.css')           -moz-pref("user.theme.midnight");
 @import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
+@import url('fluent/ffu-colorscheme.css')             -moz-pref("user.theme.fluent");
+@import url('fluent/ffu-colorscheme.thinkpad.css')    -moz-pref("user.theme.fluent.thinkpad");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
 
@@ -42,6 +44,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('kanagawa-wave/ffu-colorscheme.css')      -moz-pref("user.theme.kanagawa-wave");
 @import url('midnight/ffu-colorscheme.css')           -moz-pref("user.theme.midnight");
 @import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
+@import url('fluent/ffu-colorscheme.css')             -moz-pref("user.theme.fluent");
+@import url('fluent/ffu-colorscheme.thinkpad.css')    -moz-pref("user.theme.fluent.thinkpad");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
 
@@ -95,6 +99,16 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media -moz-pref("user.theme.scarlet") { body {
   @media (prefers-color-scheme: dark) {background-image: url("walls/scarlet.jpg") !important;}
   @media (prefers-color-scheme: light) {background-image: url("walls/scarlet.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.fluent") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/FluentMonochrome-d.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/FluentMonochrome-l.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.fluent.thinkpad") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/FluentMonochrome-d.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/FluentMonochrome-l.jpg") !important;}
 }}
 
 @media -moz-pref("user.theme.yourName") { body {
