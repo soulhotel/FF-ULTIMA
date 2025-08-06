@@ -13,7 +13,6 @@ Custom Icons
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
 @media (prefers-color-scheme: dark) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      rgb(77, 41, 48);
     --uc-text:               #7db0a5;
     --uc-layered-background: rgb(69, 34, 41);
@@ -46,7 +45,6 @@ Custom Icons
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    color-scheme: light !important;
     --uc-browser-color:      rgb(180, 191, 187);
     --uc-text:               rgb(82, 57, 57);
     --uc-layered-background: rgb(191, 187, 187);
@@ -80,9 +78,9 @@ Custom Icons
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {    
-    --inactive-titlebar-opacity: 1 !important;
+#main-window:not([lwtheme]) {   
     --toolbar-bgcolor: var(--uc-browser-color) !important;
+    --inactive-titlebar-opacity: 1 !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
     --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
@@ -200,9 +198,6 @@ Custom Icons
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 20%, transparent)  !important;
     }
 }
-
-/* Browser Content adjustments ------------------------------------*/
-
 
 /* Find bar -------------------------------------------------------*/
 

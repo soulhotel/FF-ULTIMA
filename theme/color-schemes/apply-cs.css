@@ -31,7 +31,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 /* Add your Theme (Above) for the Browser ------------------------------------------------------------------------ */
 
 
-@-moz-document url-prefix("http://"), url-prefix("https://"), url-prefix("file://"), regexp("moz-extension://.*") {
+@-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing), url-prefix("file://"), regexp("moz-extension://.*") {
 
 @import url('default/ffu-colorscheme.css')            -moz-pref("user.theme.0.default");
 @import url('transparent/ffu-colorscheme.css')        -moz-pref("user.theme.transparent");
@@ -44,11 +44,11 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
-/* Adding your Theme (Above) makes the colors available to websites & extensions -------------------------------- */
 
+/* Adding your Theme (Above) makes the colors available to websites & extensions -------------------------------- */
 }
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {
+@-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing) {
 @media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
 
 
@@ -102,6 +102,9 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
   @media (prefers-color-scheme: light) {background-image: url("walls/YourWallpaper.jpg") !important;}
 }}
 
-/* Adding your Theme (Above) and a wallpaper for it, you can reuse existing wallpapers too ---------------------- */
 
+/* Adding your Theme (Above) and a wallpaper for it, you can reuse existing wallpapers too ---------------------- */
 }} /*end*/
+
+
+}

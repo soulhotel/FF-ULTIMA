@@ -13,7 +13,6 @@ Custom Icons
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
 @media (prefers-color-scheme: dark) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      rgb(47, 47, 47);
     --uc-text:               rgb(237, 221, 170);
     --uc-layered-background: rgb(40, 40, 45);
@@ -26,7 +25,7 @@ Custom Icons
     --uc-tab-selected:       rgb(62, 55, 55);
     --uc-tab-selected-text:  var(--uc-accent-color-4);
     --uc-button-selected:    rgb(72, 65, 65);
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         color-mix(in srgb, #f54e4e 40%, var(--uc-accent-color-4));
     --uc-context-menu:       var(--uc-layered-background);
     --uc-panel-background:   rgb(37, 37, 39);
     --uc-panel-border:       rgba(27, 25, 35, 1);
@@ -45,7 +44,6 @@ Custom Icons
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    color-scheme: light !important;
     --uc-browser-color:      rgb(232, 227, 225);
     --uc-text:               rgb(168, 91, 81);
     --uc-layered-background: rgb(230, 224, 224);
@@ -80,7 +78,8 @@ Custom Icons
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+#main-window:not([lwtheme]) {
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
     --inactive-titlebar-opacity: 1 !important;
     --toolbar-bgcolor: var(--uc-browser-color) !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
@@ -179,9 +178,6 @@ Custom Icons
     }
 }
 
-/* Browser Content adjustments ------------------------------------*/
-    
-
 /* Find bar -------------------------------------------------------*/
 
 
@@ -238,7 +234,7 @@ Custom Icons
 /* Context Menu ---------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    menupopup, panel {
+    menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
         --panel-background: var(--uc-context-menu) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;

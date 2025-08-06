@@ -1,73 +1,41 @@
-### <ins> FF Ultima Version 3.0 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.0/ffultima3.0.zip)**
+### <ins> FF Ultima Version 3.4 Release
+- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.4/ffultima3.4.zip)**
 - **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
   
 ### <ins> Version Notes
-- This is a big *quality of life* update focused on stability. With a full restructure of source files, and a less = more approach. Using less code but keeping the same look & functionality. Organizing code categorically to improve readability. Also some major improvements for Color Scheme handling.
+- Smoll *quality of life* update centered around reported issues & maintenance.
+- User.js (recommended) not required. 
 - Firefox 138+ required.
-- User.js required.
 <!--
-- User.js required.
+- User.js required. 
 - User.js not required.
-- User.js (recommended) not required.
+- User.js (recommended) not required. 
 -->
 
-<details><summary><ins>Before You Update (CLICK ME)</summary>
-
->
-- Returning Users: **User.js Required**. To help avoid confusion if a setting is deleted or changed. The about:config page now notifies you when an old/deleted/renamed setting is detected.
-
-https://github.com/user-attachments/assets/e0dfb849-cf89-4818-b196-118757e85c4a
-
-<img src="https://github.com/user-attachments/assets/5dfaa05b-d838-4f5b-9883-148708ba714a" width="50%" />
-
-</details>
-
 ### <ins> Change Log:
-- `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/git-userChrome) install & updates for all Operating Systems.
-- `fix • 🔴 •` Tabs shifting 1 pixel when expanding-on-hover now fixed
-- `fix • 🔴 •` Reductions in modifying the sidebar splitters has fixed several positioning flaws
-- `new • 🟢 •` New Color Scheme [Kanagawa Wave]() by **@pitchaya-s**! #313
-- `new • 🟢 •` Setting `user.theme.transparent` supports Mica or Blurred Windows for all OS's. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
-- `qol • 🟡 •` Setting `ultima.spacing.compact` improvements (see below)
-- `qol • 🟡 •` Theme size reduced by 7mb
-- `qol • 🟡 •` Total number of File(s) reduced by 10
-- `qol • 🟡 •` There are now a total of 16 color schemes.
-- `qol • 🟡 •` By default, the sidebars box-shadow is removed @calciferchang
-- `qol • 🟡 •` Youtube theming can be turned off with `user.theme.xtension.YT`
-- `qol • 🟡 •` Every color scheme now has a dark/light version per `user.theme`
-- `qol • 🟡 •` You can create a Color Scheme in 10 minutes. Learn how in the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme)
-- `qol • 🟡 •` New Tab Page can automatically adjust colors based on color scheme
-- `qol • 🟡 •` Turning off all color schemes now adapts to using default firefox colors
-- `fyi • 🟡 •` Setting `user.theme.adaptive` deleted. [Adaptive Tab Color](https://github.com/soulhotel/FF-ULTIMA/wiki/Adaptive-Tab-Color-Configuration) now works without it
-- `qol • 🟡 •` Ublock Origin extension panel now automatically adjust to color scheme e1ddb8c
-- `qol • 🟡 •` Setting `ultima.xstyle.sidebar.theming` deleted. It is now handled automatically via color schemes
-- `qol • 🟡 •` Floating Url Bar optimization, max width & positioning adjustment for smaller windows to bigger (Ultrawide) windows d288238
+- `fyi • ℹ️ •` "The Hard Way" installation method fully [automates](https://github.com/soulhotel/FF-ULTIMA?tab=readme-ov-file#installation) install & updates for all Operating Systems
+- `fix • 🔴 •` ...
+- `new • 🟢 •` Setting `ultima.tabs.reverse.content.order` & `ultima.tabs.closetabbutton.on.icon` can switch around the position of content inside of an individual tab.
+- `qol • 🟡 •` Bookmark Autohide now has a light linear transition/animation.
+- `qol • 🟡 •` Setting `ultima.tabs.multiline.labels` adjustments
 <!--
-`fyi • ℹ️ •` 
+`fyi • ℹ️ •`
 `fix • 🔴 •` 
 `new • 🟢 •` 
 `qol • 🟡 •` 
 `wip • ℹ️ •` 
 -->
 
-> FF Ultima *Kanagawa Wave* Edition by @pitchaya-s
+> bookmark.autohide transition update
 
-![image](https://github.com/user-attachments/assets/748ab6bb-b2c9-421e-abf7-4a05415eb198)
+![bookmarks autohide](https://github.com/user-attachments/assets/17d6f337-e952-48cc-82a4-a1c0dee15918)
 
-> Setting `user.theme.transparent`. See the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
+> Setting `ultima.tabs.multiline.labels` (experimental) + reverse tab content order (stable)
 
-![transparentt](https://github.com/user-attachments/assets/f78d6606-e194-4b48-a395-145874789575)
-![Screenshot_20250624_050538](https://github.com/user-attachments/assets/3be6c64b-338a-4c65-a183-3a0ac16896b5)
+<img width="27%" src="https://github.com/user-attachments/assets/c1e09736-18e8-4921-8dd5-0ab8630fb987" />
+<img width="49%" src="https://github.com/user-attachments/assets/366ba7f4-70fb-411c-8e6f-ece761241d72" />
 
-> Setting `user.theme.compact` improvements
-
-![Vid_20250622_214445](https://github.com/user-attachments/assets/0457c8ac-16c3-4e87-a4a3-03a845b5dd3a)
-
-> Preview of the new sidebar splitter handling & `Scarlet` Color Scheme
-
-![Vid_20250624_235601-ezgif com-optimize](https://github.com/user-attachments/assets/b2edb724-efc2-4409-ac26-49fb3119c8aa)
-
+> FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.

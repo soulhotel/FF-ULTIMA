@@ -13,7 +13,6 @@ Custom Icons
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
 @media (prefers-color-scheme: dark) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      rgb(43, 42, 51);
     --uc-text:               white;
     --uc-layered-background: rgb(35, 35, 42);
@@ -30,7 +29,7 @@ Custom Icons
     --uc-context-menu:       var(--uc-layered-background);
     --uc-panel-background:   var(--uc-layered-background);
     --uc-panel-border:       rgba(25, 25, 25, 0.5);
-    --uc-panel-border-2:    rgba(45, 45, 45, 0.5);
+    --uc-panel-border-2:     rgba(45, 45, 45, 0.5);
     --uc-accent-color-1:     #f3faaa;
     --uc-accent-color-2:     rgb(90, 121, 156);
     --uc-accent-color-3:     white;
@@ -44,7 +43,6 @@ Custom Icons
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    color-scheme: light !important;
     --uc-browser-color:      rgb(250, 250, 255);
     --uc-text:               rgb(45, 45, 45);
     --uc-layered-background: rgb(242, 242, 248);
@@ -77,15 +75,16 @@ Custom Icons
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+#main-window:not([lwtheme]) {
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
     --inactive-titlebar-opacity: 1 !important;
     --toolbar-bgcolor: var(--uc-browser-color) !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
     --uc-tabs-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
     --uc-sb-lwt: color-mix(in srgb, var(--lwt-accent-color) 75%, #000);
+    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
     --toolbox-non-lwt-bgcolor-inactive: ActiveCaption !important;
     --toolbox-non-lwt-textcolor-inactive: CaptionText !important;
-    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
     --tab-selected-textcolor: var(--uc-text) !important;
     --tab-hover-background-color: var(--uc-tab-selected) !important;
     --tab-loading-fill: var(--uc-accent-color-1) !important;
@@ -162,6 +161,19 @@ Custom Icons
     & #navigator-toolbox {
         background-color: var(--uc-navbar-background) !important;
     }    
+    & #browser { /*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
+        background: var(--uc-browser-color) !important;
+    }
+    & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
+        border-radius: var(--uc-all-border-radius) !important;  
+    }
+    & #tabbrowser-tabpanels browser[type] {
+        margin-top:2px !important;
+        outline: 7px solid var(--uc-browser-color) !important;
+    }
+    @media -moz-pref("ultima.spacing.compact") {
+        & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
+    }
 }
 
 /* URL Bar --------------------------------------------------------*/
@@ -199,17 +211,6 @@ Custom Icons
     & #identity-icon-box:not(:hover):not([open]) {
         background-color: transparent !important;
     }
-}
-
-/* Browser Content adjustments ------------------------------------*/
-    
-#main-window:not([lwtheme]) {  
-    /* content window */
-    & #appcontent, & #browser, & #tabbrowser-tabbox, 
-    & #tabbrowser-tabpanels, & .browserSidebarContainer { 
-        background: var(--toolbar-bgcolor) !important; 
-    }
-    & .browserStack { background: var(--uc-transparent) !important; }
 }
 
 /* Find bar -------------------------------------------------------*/
@@ -261,8 +262,9 @@ Custom Icons
         box-shadow: var(--uc-box-shadow) !important;
     }
     & .tab-background[multiselected] {
-        outline-color: var(--uc-text) !important;
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 60%, transparent)  !important;
         outline-offset: 1px !important;
+        outline-width:1px !important;
     } 
     & .tab-background[multiselected] { @media (prefers-color-scheme: light)
         outline-color: var(--uc-accent-color-1) !important;
@@ -375,12 +377,16 @@ Custom Icons
     /* menu popups */
     & .panel-subview-body {background: var(--uc-panel-background) !important;}
     & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
-}   
+} 
+:root[dialogroot] {
+    --in-content-page-background: var(--uc-panel-background) !important;
+    color: var(--uc-text)  !important;
+}  
 
 /* Context Menu ---------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    menupopup, panel {
+    menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
         --panel-background: var(--uc-context-menu) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;
@@ -403,6 +409,10 @@ Custom Icons
 /* Custom Icons ---------------------------------------------------*/
 
 @media -moz-pref("ultima.theme.icons") {
+    /* new tab icon */
+    #main-window .tab-icon-image[src="chrome://branding/content/icon32.png"]{
+    content: url("../../icons/ultimafox.png");
+    }
     /* extension menu */
     #main-window:not([lwtheme]) #unified-extensions-button {
         list-style-image: url("../../icons/extensions.svg") !important;
@@ -418,6 +428,7 @@ Custom Icons
     /* ublock on */
     #ublock0_raymondhill_net-BAP image{
         list-style-image: url("../../icons/ublock.svg") !important;
+        fill: var(--uc-accent-color-2) !important;
     }
     /* ublock off */
     #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {

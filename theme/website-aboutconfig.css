@@ -60,7 +60,7 @@ body::after {
     border: 1px solid rgb(255,150,50);
     border-radius: 8px;
     white-space: pre-line;
-    line-height: 1.6;
+    line-height: 1.3;
     font-size: 1.2em;
     color: var(--in-content-text-color);
     background: var(--background-color-box);
@@ -148,6 +148,14 @@ body::after {
         }
     }
 }
+@media -moz-pref("ultima.tabs.reverse.content.order") {
+    @media -moz-pref("ultima.tabs.closetabbutton.on.icon") {
+        body::after {
+            content: "\ Only use one of these settings! \A \A  ultima.tabs.reverse.content.order \A ultima.tabs.closetabbutton.on.icon \A ";
+            display: block;
+        }
+    }
+}
 @media -moz-pref("ultima.xstyle.sidebar.theming") {
     #toolbar::after {
         content: "\ ultima.xstyle.sidebar.theming is now handled automatically. \A \A You can delete it. Here's an example of deleting old settings:\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A This message will dissappear once the setting is removed.";
@@ -170,7 +178,62 @@ body::after {
         background-image: url(icons/aboutconfig.gif);
     } 
 }
+@media -moz-pref("user.theme.transparent") {
+    @media not -moz-pref("browser.tabs.allow_transparent_browser") {
+        body::after {
+            content: "\ Both of these settings should be on or off \A \A  user.theme.transparent \A browser.tabs.allow_transparent_browser \A ";
+            display: block;
+        }
+    }
+}
+@media -moz-pref("browser.tabs.allow_transparent_browser") {
+    @media not -moz-pref("user.theme.transparent") {
+        body::after {
+            content: "\ Both of these settings should be on or off \A \A  user.theme.transparent \A browser.tabs.allow_transparent_browser \A ";
+            display: block;
+        }
+    }
+}
+
+@media -moz-pref("ultima.navbar.bookmarks.fading") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  ultima.navbar.bookmarks.fading is no more... please delete the old setting \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.autohide") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.navbar.bookmarks.float.autohide` is now handled via `ultima.navbar.bookmarks.autohide`... please delete the old setting \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.left") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.navbar.bookmarks.float.left` is no more... please delete the old setting \A ";
+        display: block;
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.float.compact") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.navbar.bookmarks.float.compact` is now handled by `ultima.navbar.bookmarks.compact`... please delete the old setting \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.tabs.pinnedtabs.style.1") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.tabs.pinnedtabs.style.1` is now handled by `ultima.tabs.always.show.pinned`... please delete the old setting \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.theme.color.swap") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.theme.color.swap` is now handled by `user.theme.xtension.swap.addon.colors`... please delete the old setting \A ";
+        display: block;
+    }
+}
 
 
-    
+
 }} /* end aboutconfig page */

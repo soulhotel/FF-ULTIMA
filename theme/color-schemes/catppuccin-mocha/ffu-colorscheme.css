@@ -13,7 +13,6 @@ Custom Icons
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
 @media (prefers-color-scheme: dark) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      rgb(30, 30, 46);
     --uc-text:               rgb(205, 214, 244);
     --uc-layered-background: rgb(24, 24, 37);
@@ -26,7 +25,7 @@ Custom Icons
     --uc-tab-selected:       rgb(17 17 27);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    rgb(17 17 27);
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         color-mix(in srgb, #f54e4e 30%, var(--uc-accent-color-2));
     --uc-context-menu:       rgb(39, 40, 58);
     --uc-panel-background:   var(--uc-layered-background);
     --uc-panel-border:       rgba(27, 25, 35, 1);
@@ -45,7 +44,6 @@ Custom Icons
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    color-scheme: light !important;
     --uc-browser-color:      rgb(161, 158, 176);
     --uc-text:               rgb(35, 35, 35);
     --uc-layered-background: rgb(172, 168, 191);
@@ -79,7 +77,8 @@ Custom Icons
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+#main-window:not([lwtheme]) {
+    --toolbar-bgcolor: var(--uc-browser-color) !important;
     --inactive-titlebar-opacity: 1 !important;
     --toolbar-bgcolor: var(--uc-browser-color) !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
@@ -168,9 +167,6 @@ Custom Icons
     }
 }
 
-/* Browser Content adjustments ------------------------------------*/
-    
-
 /* Find bar -------------------------------------------------------*/
 
 
@@ -216,11 +212,6 @@ Custom Icons
     & #nav-bar .toolbarbutton-1,
     &  #nav-bar .toolbarbutton-text {
         color: var(--uc-accent-color-2) !important;
-    }
-    @media (-moz-platform: windows) {
-        .titlebar-close:hover {
-            background-color: var(--uc-button-6) !important;
-        }
     }
 }
     

@@ -2,7 +2,7 @@
 
 # FF ULTIMA...
 
-###### . . . A theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
+###### . . . The theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
 
 ![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue)
@@ -37,10 +37,10 @@
 
 ## Installation
 
-###### Do not skip the installation instructions! 🚨
+> #### *First time? You should click on these two options below...* 🚨
 
 <details>
-<summary>Finding your Profile Folder (where the theme files go)</summary>
+<summary>Finding your Profile Folder (where theme files go)</summary>
 
 ###### 🛈 Two ways to find your Profile Folder. Choose one: 🛈
 1. Go to the about:support page/url.
@@ -71,7 +71,7 @@
 <img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
 </details>
 
-###### Choose *one* of the installation methods below. ⬇️
+> #### *Choose *one* of these installation methods and follow each step...* ⬇️
 
 <details><summary>The Easy Way</summary>
 
@@ -126,25 +126,30 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 </details>
 
 
-###### What to do *after* installing FF Ultima.. ✅
-<details><summary>Post Installation (finding the settings & visiting the wiki)</summary>
+> #### *Here's what you should do *after* you've installed FF Ultima...* ✅
+
+<details><summary>Post Installation (settings & wiki)</summary>
 
 >
-- Go to `about:config` and search for `ultima` to see all of your settings. You should also see:
+- Go to the `about:config` page. You should see:
+    - ![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
+    - Search for `ultima` to see & change all of your settings.
+    - Search for `user.theme` to see & change color schemes.
 
-![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e)
-- Visit [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) to learn more about what is possible:
+- Visit [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) to learn more about what's possible:
     - Frequently asked questions
-    - All theme settings (full overview)
+    - **All** theme settings (full overview)
     - How to install, [uninstall](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Uninstall-the-Theme), [update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme)
-    - Sidebery configuration (optional)
-    - Videos, documentation, and a whole lot more..
+    - Sidebery configurations (optional)
+    - Videos, documentation, and more
 </details>
 
 ## Enjoy
 
 *And a special Thank You, for sponsoring this project*
 
-<!-- sponsors --><a href="https://github.com/s0flY"><img src="https:&#x2F;&#x2F;github.com&#x2F;s0flY.png" width="60px" alt="User avatar: " /></a><a href="https://github.com/Rhodkee"><img src="https:&#x2F;&#x2F;github.com&#x2F;Rhodkee.png" width="60px" alt="User avatar: Rachel " /></a><!-- sponsors -->
+<!-- sponsors --><!-- sponsors -->
+
+![Alt](https://repobeats.axiom.co/api/embed/8f99668e7cb15df9e7d49c74f9b6626d32b35dbb.svg "Repobeats analytics image")
 
 

@@ -189,7 +189,7 @@ with a visual indicator to slightly improve accessibility.
         top:calc(var(--uc-topbars-combined-height) - 1px) !important;
         height:calc(100vh - var(--uc-topbars-combined-height) - 5px) !important;
         /*left side*/
-        left:1px !important;
+        left:0px !important;
         right:unset !important;
         /*right side*/
         &[sidebar-positionend]{
@@ -227,20 +227,20 @@ with a visual indicator to slightly improve accessibility.
         right:1px !important;
         }
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
     }
     /*compact spacing adjust*/
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
         & #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
             height:calc(100vh - var(--uc-topbars-combined-height) + 2px) !important;
         }
     }
 
-    :root:has(#sidebar-main[sidebar-launcher-expanded=""]) {
+    #main-window:not([sidebar-expand-on-hover=""]) {
        & #tabbrowser-tabbox {
             --browser-content-margin-4-sb-autohide:0px !important;
         }
@@ -357,13 +357,13 @@ with a visual indicator to slightly improve accessibility.
         right:1px !important;
         }
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
     }
     /*compact spacing adjust*/
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabbox {
-            --browser-content-margin-4-sb-autohide:33px !important;
+            --browser-content-margin-4-sb-autohide:38px !important;
         }
     }
 
@@ -385,7 +385,8 @@ with a visual indicator to slightly improve accessibility.
     :root:has(#sidebar-box[checked]) {
         :has(#sidebar-box:not([sidebar-positionend])) {
             #sidebar-splitter {
-                position: fixed; left:5px; height:85vh !important;
+                position: fixed; left: 3px; height: 85vh !important;
+                @media (-moz-platform:macos) {left: 5px;}
             }
             :has(#sidebar-splitter:hover) #sidebar-box::after {
                 content:"";
@@ -402,7 +403,8 @@ with a visual indicator to slightly improve accessibility.
         }
         :has(#sidebar-box[sidebar-positionend]) {
             #sidebar-splitter {
-                position: fixed; right:5px; height:85vh !important;
+                position: fixed; right: 3px; height: 85vh !important;
+                @media (-moz-platform:macos) {right: 5px;}
             }
             :has(#sidebar-splitter:hover) #sidebar-box::after {
                 content:"";

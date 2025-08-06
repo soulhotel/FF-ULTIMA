@@ -16,13 +16,14 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 */
 
 @import url(theme/website-aboutconfig.css); /*        styling for aboutconfig */
+@import url(theme/website-aboutaddons.css); /*        styling for aboutaddons */
 @import url(theme/website-styles.css); /*       styling for multiple websites */
 @import url(theme/website-newtab.css); /*                        new tab page */
 @import url(theme/website-reddit.css); /*                              reddit */
 @import url(theme/website-yt.css); /*                                 youtube */
 @import url(theme/website-private.css); /*               private new tab page */
 
-@import url(theme/color-schemes/apply-cs.css);           /* import color scheme colors */
+@import url(theme/color-schemes/apply-cs.css);            /* import color scheme colors */
 @import url(theme/color-schemes/apply-cs-extensions.css); /* apply colors to extensions */
 @import url(theme/color-schemes/apply-cs-wallpapers.css); /* apply colors to wallpapers */
 

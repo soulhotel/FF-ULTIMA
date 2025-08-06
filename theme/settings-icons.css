@@ -1,0 +1,38 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Setting to override ultima.theme.icons
+
+With ultima.theme.icons custom icons are setup via the colorscheme files,
+every color scheme can have different icons if it chooses to, but with this file...
+themed icons can be overridden with either default icons or other icon sets
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* extension icon default 🧩 */
+@media -moz-pref("user.theme.xtension.extensions.icon.default") {
+    #main-window:not([lwtheme]) #unified-extensions-button {
+        list-style-image: url("chrome://mozapps/skin/extensions/extension.svg") !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+    }
+    #main-window[lwtheme] #unified-extensions-button {
+        list-style-image: url("chrome://mozapps/skin/extensions/extension.svg") !important;
+    }
+}
+/* bookmark icon default 🖿 */
+@media -moz-pref("user.theme.xtension.bookmarks.icon.default") {
+    .bookmark-item[container=true] {
+        list-style-image: url("chrome://global/skin/icons/folder.svg") !important;
+    }
+}
+/* ublock icon default 🛡️ */
+@media -moz-pref("user.theme.xtension.ublock.icon.default") {
+    /* ublock on */
+    #ublock0_raymondhill_net-BAP image{
+        list-style-image: var(--webextension-toolbar-image, inherit) !important;
+    }
+    /* ublock off */
+    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {
+        list-style-image: var(--webextension-toolbar-image, inherit) !important;
+    }
+}

@@ -13,11 +13,13 @@ Transparent color scheme
 /* all themes except Transparent -------------------------------------------------------*/
 @media not -moz-pref("user.theme.transparent") {  
     :root { @media (prefers-color-scheme: dark) {
-        --uc-seamless-bg: var(--uc-browser-window) !important;
+        --uc-seamless-bg: var(--uc-browser-color) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important;
+        --yt-frosted-glass-desktop: color-mix(in srgb, var(--uc-browser-color) 50%, transparent) !important;
         @media -moz-pref("user.theme.0.default") {
-            --uc-seamless-bg: rgba(1,1,1,0.4) !important;
+            --uc-seamless-bg: rgba(1,1,1,0.75) !important;
             --yt-spec-base-background: rgba(1,1,1,0.5) !important;
+            --yt-frosted-glass-desktop: color-mix(in srgb, inherit, transparent) !important;
         }
     }}
     :root { @media (prefers-color-scheme: light) {
@@ -26,6 +28,12 @@ Transparent color scheme
     /*page color*/
     html, html[dark], body, ytd-app {
         background-color: var(--uc-seamless-bg) !important;
+    }
+    /*ambientmode filter*/
+    #cinematics-container canvas, #shorts-cinematic-container {
+        opacity: 0.2 !important;
+        backdrop-filter: blur(5px) !important;
+         mask-image: radial-gradient(circle, var(--uc-browser-color) 10%, rgba(0,0,0,0) 40%);        
     }
     /*sidebar*/
     #background.ytd-masthead {
@@ -46,6 +54,13 @@ Transparent color scheme
         background: transparent !important;
         backdrop-filter: blur(50px);    
     }
+    #frosted-glass.with-chipbar.ytd-app {
+      height: 58px !important;
+    }
+    ytd-feed-filter-chip-bar-renderer {
+        --ytd-rich-grid-chips-bar-top: 0px !important;
+        top: 0 !important;
+    }
     /*search bar*/
     .ytSearchboxComponentInputBoxDark, html[dark] .sbsb_a,
     .ytSearchboxComponentSearchButton {
@@ -61,6 +76,7 @@ Transparent color scheme
     }
     /*notifications popup*/
     .ytd-multi-page-menu-renderer {
+        @media -moz-pref("user.theme.0.default") {--uc-seamless-bg: rgba(1,1,1,0.1) !important;}
         background-color: var(--uc-seamless-bg) !important;
     }
     .style-scope.ytd-popup-container {
@@ -70,7 +86,10 @@ Transparent color scheme
         backdrop-filter: blur(35px);
     }
     /*video player context menu*/
-    .ytp-popup {background-color: var(--uc-seamless-bg) !important;}
+    .ytp-popup {
+        @media -moz-pref("user.theme.0.default") {--uc-seamless-bg: rgba(1,1,1,0.1) !important;}
+        background-color: var(--uc-seamless-bg) !important;
+    }
     .ytp-popup.ytp-contextmenu { 
         background-color: var(--uc-seamless-bg) !important;
         @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0) !important;}
@@ -107,7 +126,7 @@ Transparent color scheme
 /* transparent -------------------------------------------------------------------------*/
 @media -moz-pref("user.theme.transparent") {  
     :root {
-        --uc-seamless-bg: var(--uc-browser-window) !important;
+        --uc-seamless-bg: var(--uc-browser-color) !important;
         --yt-spec-base-background: var(--uc-layered-background) !important; 
     }
     /*page color*/
@@ -133,11 +152,26 @@ Transparent color scheme
         background: var(--uc-seamless-bg) !important;
         backdrop-filter: blur(50px);    
     }
+    #frosted-glass.with-chipbar.ytd-app {
+      background: var(--uc-seamless-bg) !important;
+      height: 58px !important;
+    }
+    ytd-feed-filter-chip-bar-renderer {
+        --ytd-rich-grid-chips-bar-top: 0px !important;
+        top: 0 !important;
+    }
     /*search bar*/
     .ytSearchboxComponentInputBoxDark, html[dark] .sbsb_a {
         background-color: var(--uc-seamless-bg) !important;
         border-color: rgba(0,0,0,0.1) !important;
         backdrop-filter: blur(17px);
+    }
+    .ytSearchboxComponentSearchButton:not(:hover) {
+      border: 0.5px solid rgba(0,0,0,0.1) !important;
+      background: transparent !important;
+    }
+    .ytSearchboxComponentSearchButton:hover {
+      border: 0.5px solid gray !important;
     }
     /*search results popup*/
     .ytSearchboxComponentSuggestionsContainer {
@@ -182,4 +216,3 @@ Transparent color scheme
      
     
 }} /* end YT */
-    

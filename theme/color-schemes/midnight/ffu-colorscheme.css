@@ -13,7 +13,6 @@ Custom Icons
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
 @media (prefers-color-scheme: dark) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      rgb(1 1 1);
     --uc-text:               rgb(230, 230, 230);
     --uc-layered-background: rgb(1 1 1);
@@ -26,7 +25,7 @@ Custom Icons
     --uc-tab-selected:       rgba(35, 35, 42,0.7);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
     --uc-button-selected:    rgba(35, 35, 42,1);
-    --uc-button-red:         #f54e4e;
+    --uc-button-red:         color-mix(in srgb, #f54e4e 30%, var(--uc-accent-color-5));
     --uc-context-menu:       var(--uc-layered-background);
     --uc-panel-background:   var(--uc-layered-background);
     --uc-panel-border:       rgb(25, 25, 25);
@@ -46,7 +45,6 @@ Custom Icons
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    color-scheme: dark !important;
     --uc-browser-color:      rgb(1 1 1);
     --uc-text:               rgb(230, 230, 230);
     --uc-layered-background: rgb(1 1 1);
@@ -81,7 +79,7 @@ Custom Icons
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
 
-#main-window:not([lwtheme]), :root:not([lwtheme]) {    
+#main-window:not([lwtheme]) {    
     --inactive-titlebar-opacity: 1 !important;
     --toolbar-bgcolor: var(--uc-browser-color) !important;
     --lwt-accent-color-inactive: var(--lwt-accent-color) !important;
@@ -169,9 +167,6 @@ Custom Icons
         outline-color: color-mix(in srgb, var(--uc-accent-color-1) 10%, transparent)  !important;
     }
 }
-
-/* Browser Content adjustments ------------------------------------*/
-    
 
 /* Find bar -------------------------------------------------------*/
 

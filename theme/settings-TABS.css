@@ -10,7 +10,10 @@ new tab button
 disable tab update dot
 disable "all tabs" button
 vertical tab action buttons
-highlight aboutconfig tab
+multiline tabs
+tabs close button on icon
+tabs reversed content order
+tab outline colors
 tab groups adjustments
 tab groups labels
 tab groups backgrounds
@@ -37,13 +40,12 @@ tab containers
 }
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.tabs.pinnedtabs.style.1") {
-    #vertical-pinned-tabs-container {
+@media -moz-pref("ultima.tabs.always.show.pinned") {
+    #pinned-tabs-container[orient="vertical"],#vertical-pinned-tabs-container {
         height: fit-content !important;
         min-height: fit-content !important;
         max-height: fit-content !important;
     }
-    #vertical-pinned-tabs-splitter {display:none !important;}
 }
 
 /* new tab button ----------------------------------------------------------------------------------------------- */
@@ -60,7 +62,8 @@ tab containers
     #tabbrowser-arrowscrollbox-periphery {order: -1 !important;}
     #vertical-tabs-newtab-button {order: -1 !important;}
     #vertical-tabs-newtab-button {order: -1 !important;}
-    #vertical-pinned-tabs-container {order: -2 !important;}
+    #pinned-tabs-container {order: -2 !important;}
+    #vertical-pinned-tabs-splitter {order: -2 !important;}
 }
 
 /* disable tab update dot --------------------------------------------------------------------------------------- */
@@ -91,6 +94,166 @@ tab containers
     }
 }
 
+/* multiline tabs ----------------------------------------------------------------------------------------------- */
+/* wip - unsure how stable this is, time will tell */
+@media -moz-pref("ultima.tabs.multiline.labels") {
+    #sidebar-main .tab-label {
+      white-space: wrap !important;
+      word-wrap: break-word;
+      max-height: 120px !important;
+    }
+}
+
+/* tabs close button on icon ------------------------------------------------------------------------------------ */
+@media -moz-pref("ultima.tabs.closetabbutton.on.icon") {
+    #tabbrowser-tabs[orient="vertical"][expanded] :not(#pinned-tabs-container) {
+        .tab-close-button {
+            order: -1 !important;
+        }
+        /* selected tab */
+        .tabbrowser-tab[selected] {
+            .tab-close-button {
+                margin-left: -3px !important;
+            }
+            .tab-icon-stack {
+                margin-left: 8px !important;
+            }
+        }
+        /* unselected tabs */
+        .tabbrowser-tab:not([selected]):hover {
+            .tab-close-button {
+                margin-inline: -3px 3px !important;
+            }
+            .tab-icon-stack {
+                display: none !important;
+            }
+        }
+    }
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tab-close-button {
+            order: -1 !important;
+        }
+        /* selected tab */
+        .tabbrowser-tab[selected] {
+            .tab-icon-stack {
+                margin-left: 3px !important;
+            }
+        }
+        /* unselected tabs */
+        .tabbrowser-tab:not([selected]):not(:hover) {
+            .tab-close-button {
+                display: none !important;
+            }
+        }
+        .tabbrowser-tab:not([selected]):hover {
+            .tab-close-button {
+                margin-inline: -3px 3px !important;
+            }
+            .tab-icon-stack {
+                display: none !important;
+            }
+            .tab-close-button {
+                display: flex !important;
+            }
+        }
+    }
+}
+
+/* tabs reversed content order ---------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.reverse.content.order") {
+    @media not -moz-pref("ultima.tabs.closetabbutton.on.icon") {
+        #tabbrowser-tabs[orient="vertical"] {
+            .tab-content {
+                flex-direction: row-reverse !important;
+            }
+        }
+        #tabbrowser-tabs[orient="horizontal"] {
+            .tab-content {
+                flex-direction: row-reverse !important;
+            }
+            .tab-close-button {
+                margin-right: 8px !important;
+            }/*
+            .tab-label-container {
+                margin-left: 8px !important;
+            }*/
+        }
+    }
+}
+
+/* tab outline colors ------------------------------------------------------------------------------------------- */
+
+@media -moz-pref("user.theme.xtras.tab.outline.color.black") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: black !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.white") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: white !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.blue") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: blue !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.gold") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: gold !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.green") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: green !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.lightblue") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: lightblue !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.pink") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: pink !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.purple") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: purple !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color.gradient") {
+    @keyframes filter{from{ filter: hue-rotate(0deg) } to { filter: hue-rotate(360deg) }}
+    .tabbrowser-tab[selected] > .tab-stack::after{
+        grid-area: 1/1;
+        content: "";
+        display: inherit;
+        border-radius:3px;
+        z-index: 0;
+        background-image: conic-gradient(
+            hsl(0 100% 70%),
+            hsl(60 100% 45%) 70deg,
+            hsl(120 100% 55%) 105deg,
+            hsl(160 100% 60%) 160deg,
+            hsl(200 100% 60%) 200deg,
+            hsl(240 100% 65%) 255deg,
+            hsl(300 100% 60%) 290deg,
+            hsl(360 100% 70%) 360deg);
+        mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8cmVjdCB4PSIwIiB5PSIwIiByeD0iNCIgc3Ryb2tlPSJyZWQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIi8+DQo8L3N2Zz4");
+        background-size: cover;
+        background-position: center;
+        animation: filter steps(30) 2s infinite;
+    }
+    .tab-content {
+        z-index: 1 !important;
+    }
+    #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected]:not([pinned]) > .tab-stack::after {
+        margin:-1px 11px;
+    }
+}
+
+
 /* tab groups adjustments --------------------------------------------------------------------------------------- */
 
 /*force collapsing, cursor*/
@@ -108,7 +271,6 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         outline: 1px solid light-dark(var(--tab-group-color), rgba(0,0,0,0.3)) !important;
     }
 }
-
 /* new default label spacing */
 @media not -moz-pref("ultima.tabs.tabgroups.label.1"),
 @media not -moz-pref("ultima.tabs.tabgroups.label.2"),
@@ -117,16 +279,14 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         margin-left:15px !important;
     }
 }
-
 /* new default indentation */
 #tabbrowser-tabs[orient="vertical"][expanded] {
-    & tab-group > :is(.tab-group-label-container, .tabbrowser-tab), 
+    & tab-group > :is(.tab-group-label-container, .tabbrowser-tab),
     &[movingtab][movingtab-addToGroup]:not([movingtab-createGroup],
     [movingtab-ungroup]) .tabbrowser-tab:is(:active, [multiselected]) {
         margin-inline-start: -1px !important;
     }
 }
-
 /* horizontal version border */
 #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
     tab-group .tabbrowser-tab:first-of-type {
@@ -136,14 +296,12 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         border-radius: 0px 8px 8px 0px !important;
     }
 }
-
 /* group line adjust */
 .tab-group-label-container {
     #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after {
         opacity:0 !important;
     }
 }
-
 /* fix tab group padding resizes when expand on hover */
 .tab-group-label {
     #tabbrowser-tabs[orient="vertical"][expanded] & {
@@ -155,6 +313,16 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
             padding-block: 2px !important;
         }
     }
+}
+/* 7/27/2025 new tab group overflow counter? */
+.tab-group-overflow-count-container, .tab-group-overflow-count-container::after, .tab-group-overflow-count {
+    background-color: transparent !important;
+}
+.tab-group-overflow-count {
+    margin-left:10px !important;
+}
+#sidebar-main[sidebar-launcher-expanded] .tab-group-overflow-count {
+    margin-left:-1px !important;
 }
 
 /* tab groups labels -------------------------------------------------------------------------------------------- */
@@ -200,9 +368,7 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
             &[aria-expanded="true"] {
                 margin-top: 2px !important;
             }
-            &:hover {
-                transform:scale(1.05);
-            }
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
         }
         #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
             color: transparent !important;
@@ -228,17 +394,93 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
             &[aria-expanded="true"] {
                 margin-top: 30px !important;
             }
-            &:hover {
-                transform:scale(1.05);
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+        }
+    }
+}
+/* Label Style 3, Label becomes an arrow indicator */
+@media -moz-pref("ultima.tabs.tabgroups.label.3") {
+    :root:has(#tabbrowser-tabs[orient="vertical"]) {
+        /*defaults*/
+        .tab-group-label-container, .tab-group-label {
+            max-height:15px !important; height:15px !important; min-height:15px !important;
+            min-width:18px !important; max-width:95% !important;
+        }
+        /* visibility */
+        .tab-group-label {
+            border-radius:17px !important;
+            line-height:0.9 !important;
+            z-index:5 !important;
+            margin-top: -2px !important;
+            &[aria-expanded="true"] {margin-top: 2px !important;}
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+        }
+         /*appearance*/
+        .tab-group-label {
+            outline: none !important;
+            color: var(--tab-group-color-invert) !important;
+            background-color:transparent !important;
+            background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+            background-repeat: no-repeat;
+            background-position: left 5.5px top 1px;
+            -moz-context-properties: fill; fill: var(--tab-group-color-invert);
+            align-self:unset !important;
+        }
+        /*collapsed*/
+        tab-group[collapsed] .tab-group-label {
+            background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
+        }
+        #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
+            color: transparent !important;
+            margin-left:14px !important;
+        }
+        .tab-group-label {
+            #tabbrowser-tabs[orient="vertical"][expanded] & {
+                padding: 0px 12px !important;
             }
         }
+    }
+    :root:has(#tabbrowser-tabs[orient="horizontal"]) {
+        /*defaults*/
+        .tab-group-label-container, .tab-group-label {
+            max-height:13px !important; height:13px !important; min-height:13px !important;
+            min-width:55px !important; max-width:200px !important;
+        }
+        /* visibility */
+        .tab-group-label {
+            border-radius:17px !important;
+            margin-top: 30px !important;
+            line-height:0.8 !important;
+            z-index:5 !important;
+            margin-inline:0 !important;
+            &[aria-expanded="true"] {margin-top: 30px !important;}
+            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+        }
+        /*appearance*/
+        .tab-group-label {
+            outline: none !important;
+            padding-left:15px !important;
+            color: var(--tab-group-color-invert) !important;
+            background-color:transparent !important;
+            background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+            background-repeat: no-repeat;
+            background-position: left -2px top -1px;
+            -moz-context-properties: fill; fill: var(--tab-group-color-invert);
+        }
+        /*collapsed*/
+        tab-group[collapsed] .tab-group-label {
+            background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+        }
+
+
+
     }
 }
 
 /* tab groups backgrounds --------------------------------------------------------------------------------------- */
 
 /* hide default line so that it can be optionally selected/combined with other background options via background.3 */
-.tab-group-line {opacity:0 !important;} 
+.tab-group-line {opacity:0 !important;}
 
 /* background adjustments */
 tab-group .tabbrowser-tab {
@@ -250,7 +492,7 @@ tab-group .tabbrowser-tab {
         width: 20px !important;
         height: 100% !important;
         margin: 0 !important;
-        opacity:  0.0; 
+        opacity:  0.0;
     }
     & :hover .tab-context-line {
         transition: width 0.3s ease 0.1s !important;
@@ -260,32 +502,16 @@ tab-group .tabbrowser-tab {
 
 /* Background Style 1, color mixed background */
 @media -moz-pref("ultima.tabs.tabgroups.background.1") {
-    tab-group[style*="blue"] .tabbrowser-tab {
-        background: color-mix(in lab, blue 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="purple"] .tabbrowser-tab {
-        background: color-mix(in lab, purple 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="cyan"] .tabbrowser-tab {
-        background: color-mix(in lab, cyan 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="orange"] .tabbrowser-tab {
-        background: color-mix(in lab, orange 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="yellow"] .tabbrowser-tab {
-        background: color-mix(in lab, yellow 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="pink"] .tabbrowser-tab {
-        background: color-mix(in lab, pink 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="green"] .tabbrowser-tab {
-        background: color-mix(in lab, green 20%, var(--uc-ultima-window) 50%) !important;
-    }
-    tab-group[style*="red"] .tabbrowser-tab {
-        background: color-mix(in lab, red 20%, var(--uc-ultima-window) 50%) !important;
-    }
+    tab-group[style*="blue"] .tabbrowser-tab,
+    tab-group[style*="purple"] .tabbrowser-tab,
+    tab-group[style*="cyan"] .tabbrowser-tab,
+    tab-group[style*="orange"] .tabbrowser-tab,
+    tab-group[style*="yellow"] .tabbrowser-tab,
+    tab-group[style*="pink"] .tabbrowser-tab,
+    tab-group[style*="green"] .tabbrowser-tab,
+    tab-group[style*="red"] .tabbrowser-tab,
     tab-group[style*="gray"] .tabbrowser-tab {
-        background: color-mix(in lab, gray 20%, var(--uc-ultima-window) 50%) !important;
+        background: color-mix(in lab, var(--tab-group-color-invert) 40%, transparent) !important;
     }
     @media -moz-pref("sidebar.verticalTabs") {
         tab-group { #tabbrowser-tabs & { &:not([collapsed])::before {
@@ -332,32 +558,18 @@ tab-group .tabbrowser-tab {
 /* Background Style 4, dashed border container */
 @media -moz-pref("ultima.tabs.tabgroups.background.4") {
     #main-window:has(#tabbrowser-tabs[orient="vertical"]) {
-        tab-group tab {border-inline: 2px var(--tab-group-color) dashed !important;}
         tab-group tab:first-of-type {
-            border-top-left-radius: 11px !important;
-            border-top-right-radius: 11px !important;
-            border-top: 2px var(--tab-group-color) dashed !important;
+            border-top: 1px var(--tab-group-color) dashed !important;
         }
         tab-group tab:last-of-type {
-            border-bottom-left-radius: 11px !important;
-            border-bottom-right-radius: 11px !important;
-            border-bottom: 2px var(--tab-group-color) dashed !important;
-        }
-        &:has(#sidebar-box[checked]) #vertical-tabs {
-            margin-left:-1px !important;
-            margin-right:-1px !important;
+            border-bottom: 1px var(--tab-group-color) dashed !important;
         }
     }
     #main-window:has(#tabbrowser-tabs[orient="horizontal"]) {
-        tab-group tab {border-block: 2px var(--tab-group-color) dashed !important;}
         tab-group tab:first-of-type {
-            border-top-left-radius: 5px !important;
-            border-bottom-left-radius: 5px !important;
             border-left: 2px var(--tab-group-color) dashed !important;
         }
         tab-group tab:last-of-type {
-            border-top-right-radius: 5px !important;
-            border-bottom-right-radius: 5px !important;
             border-right: 2px var(--tab-group-color) dashed !important;
         }
     }
@@ -428,10 +640,10 @@ tab-group .tabbrowser-tab {
             display:none !important;
         }
         & .tab-background {
-            background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-ultima-window) 40%) !important;
+            background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-browser-color) 40%) !important;
         }
         & .tab-text[selected] {
-            color: var(--uc-ultima-window) !important;
+            color: var(--uc-browser-color) !important;
         }
     }
 }

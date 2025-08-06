@@ -26,15 +26,12 @@ user_pref("user.theme.scarlet", false);
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.hidebuttons", true);
+user_pref("ultima.navbar.bookmarks.autohide", true);
+user_pref("ultima.navbar.bookmarks.compact", false);
 user_pref("ultima.navbar.bookmarks.centered", true);
-user_pref("ultima.navbar.bookmarks.autohide", false);
-user_pref("ultima.navbar.bookmarks.fading", false);
+user_pref("ultima.navbar.bookmarks.scrollable", true);
 user_pref("ultima.navbar.bookmarks.float", false);
-user_pref("ultima.navbar.bookmarks.float.autohide", false);
-user_pref("ultima.navbar.bookmarks.float.compact", false);
-user_pref("ultima.navbar.bookmarks.float.left", false);
 user_pref("ultima.navbar.bookmarks.float.right", false);
-user_pref("ultima.navbar.bookmarks.float.smaller", false);
 user_pref("ultima.navbar.windowcontrols.carl", false);
 user_pref("ultima.navbar.windowcontrols.trafficlights", false);
 user_pref("ultima.navbar.windowcontrols.whiteout", false);
@@ -55,11 +52,12 @@ user_pref("ultima.urlbar.float", false);
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebar.seperator", false);
 user_pref("ultima.sidebar.hide.header", true);
+user_pref("ultima.sidebar.revamped.hide.when.horizontal", false);
 
 /* sidebery */
-user_pref("user.theme.xtension.sidebery", true);
 user_pref("ultima.sidebery.autohide", true);
 user_pref("ultima.sidebery.expandon.inactive.windows", false);
+user_pref("user.theme.xtension.sidebery", true);
 
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);
@@ -68,14 +66,17 @@ user_pref("ultima.tabs.disable.update.dot", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.newtabbutton.ontop.1", false);
 user_pref("ultima.tabs.newtabbutton.ontop.2", false);
-user_pref("ultima.tabs.pinnedtabs.style.1", true);
+user_pref("ultima.tabs.multiline.labels", false);
+user_pref("ultima.tabs.closetabbutton.on.icon", false);
+user_pref("ultima.tabs.always.show.pinned", true);
 user_pref("ultima.tabs.vertical.hide", false);
 user_pref("ultima.tabs.vertical.hide.in.screencorner", false);
 user_pref("ultima.tabs.vertical.hide.in.screenedge", true);
 user_pref("ultima.tabs.vertical.hide.the.bottom.buttons", false);
 user_pref("ultima.tabs.vertical.hide.the.bottom.buttons.off.hover", false);
 user_pref("ultima.tabs.tabgroups.label.1", false);
-user_pref("ultima.tabs.tabgroups.label.2", true);
+user_pref("ultima.tabs.tabgroups.label.2", false);
+user_pref("ultima.tabs.tabgroups.label.3", true);
 user_pref("ultima.tabs.tabgroups.label.tthornton", false);
 user_pref("ultima.tabs.tabgroups.background.1", false);
 user_pref("ultima.tabs.tabgroups.background.2", true);
@@ -99,15 +100,31 @@ user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.tabs.tabContainer.1", false);
 user_pref("ultima.tabs.tabContainer.2", false);
 user_pref("ultima.tabs.tabContainer.3", true);
-user_pref("ultima.xstyle.newtab.rounded", false); /*new tab page*/
+user_pref("user.theme.xtension.newtab.rounded", false); /*new tab page*/
+user_pref("user.theme.xtension.newtab.compact", true);
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
+user_pref("ultima.spacing.compact.addonmanager", true); /*add on manager*/
 
 /* extra theming */
 user_pref("ultima.theme.icons", true);
 user_pref("user.theme.xtension.ublock", true);
 user_pref("user.theme.xtension.YT", false);
-user_pref("ultima.theme.menubar", true);
-user_pref("ultima.theme.color.swap", false);
+user_pref("user.theme.xtension.reddit", false);
+/*user_pref("ultima.theme.menubar", true); mark for removal */
+user_pref("user.theme.xtension.swap.addon.colors", true);
+user_pref("user.theme.xtras.tab.outline.color.black", false);
+user_pref("user.theme.xtras.tab.outline.color.white", false);
+user_pref("user.theme.xtras.tab.outline.color.gradient", true);
+/*user_pref("user.theme.xtras.tab.outline.color.lightblue", false);
+user_pref("user.theme.xtras.tab.outline.color.green", false);
+user_pref("user.theme.xtras.tab.outline.color.pink", false);
+user_pref("user.theme.xtras.tab.outline.color.purple", false);
+user_pref("user.theme.xtras.tab.outline.color.red", false);
+user_pref("user.theme.xtras.tab.outline.color.gold", false);*/
+/*user_pref("user.theme.xtension.extensions.icon.default", false);
+user_pref("user.theme.xtension.bookmarks.icon.default", false);
+user_pref("user.theme.xtension.ublock.icon.default", false);*/
+
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);
@@ -135,12 +152,9 @@ user_pref("widget.windows.mica.extra", true);
 user_pref("widget.windows.mica.popups", 2);
 user_pref("widget.windows.mica.toplevel-backdrop", 2);
 user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
-user_pref("browser.tabs.allow_transparent_browser", true);
+user_pref("browser.tabs.allow_transparent_browser", false); /* user must toggle */
 
 /* extra required */
-user_pref("extensions.activeThemeID", "default-theme@mozilla.org");
-user_pref("browser.theme.content-theme", 0);
-user_pref("browser.theme.toolbar-theme", 0);
 user_pref("ultima.xstyle.highlight.aboutconfig", true);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);

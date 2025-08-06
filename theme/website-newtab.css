@@ -39,6 +39,7 @@ new tab rounded tweaks
         --uc-evenless-rounded-border: 12px;
     }
 }
+@media -moz-pref("user.theme.transparent") {:root{--newtab-background-color:var(--uc-browser-color) !important;}}
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -546,7 +547,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
 
 /* new tab rounded tweaks ------------------------------------------------------ */
     
-@media -moz-pref("ultima.xstyle.newtab.rounded") {
+@media -moz-pref("user.theme.xtension.newtab.rounded") {
     .wallpaper-input {
         border-radius: var(--uc-fixed-rounding) !important;
     }
@@ -555,12 +556,25 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     }    
 }    
     
-    
-    
-    
-    
-    
-    
-    
-    
+/* grid adjustment over 1700px ------------------------------------------------- */
+   
+@media -moz-pref("user.theme.xtension.newtab.compact") {
+    /*got this idea from https://www.reddit.com/r/FirefoxCSS/comments/1m6u88z/comment/n4n9d70/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button */
+    @media (min-width: 1700px) {
+    .top-sites-list:has(.top-site-outer:nth-of-type(9)) {
+        grid-template-columns: repeat(12, 1fr) !important;
+    }
+    }    
+    /* and further reductions in spacing */      
+    .top-site-outer {
+        margin-block-end: 1px !important;
+    }      
+    .top-site-outer .top-site-inner > a {
+        padding: 1px 1px 1px !important;
+    }   
+}
+
+
+
+
 } /*fin*/
