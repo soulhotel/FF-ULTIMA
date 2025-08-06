@@ -602,14 +602,14 @@ tab-group .tabbrowser-tab {
             display: flex !important;
             margin-inline-start: 0px !important;
             background: var(--identity-icon-color) !important;
-            margin-bottom: -1px !important;
+            margin-bottom: -2px !important;
             transition: width 0.4s ease 0s, opacity 0.7s ease 0.3s !important;
         }
         & :hover .tab-group-line {
             width: 100% !important;
             @media -moz-pref("ultima.tabs.tabgroups.background.3") {width:calc(100% - 6px) !important;}
             opacity: 0 !important;
-            margin-bottom: -1px !important;
+            margin-bottom: -4px !important;
             transition: width 0.4s ease 0.1s, opacity 0.7s ease 0.3s !important;
         }
     }
