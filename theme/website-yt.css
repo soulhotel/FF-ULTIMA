@@ -103,7 +103,7 @@ Transparent color scheme
         background-color: rgba(40,40,50,0.5) !important;
         @media (prefers-color-scheme: light) {background-color: rgba(0,0,0,0.3) !important;}
     }
-    .ytp-panel-menu {
+    .ytp-panel-menu, .ytp-panel-header {
         background-color: rgba(0,0,0,0.5) !important;
         @media (prefers-color-scheme: light) {background-color: rgba(100,100,100,0.3) !important;}
         backdrop-filter: blur(33px);    
