@@ -97,12 +97,12 @@
 
 ###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
-bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.sh)
+bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/scripts/gituserChrome.sh)
 ```
 
 ###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.ps1')"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/git-userChrome/main/scripts/gituserChrome.ps1')"
 ```
 
 ###### MAC ([COPY LINUX](https://github.com/soulhotel/git-userChrome))
