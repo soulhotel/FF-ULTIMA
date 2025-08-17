@@ -195,9 +195,9 @@ Border Hunter
         background: var(--uc-browser-color) !important;
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
-        border-top-left-radius: var(--uc-all-border-radius) !important;
-        border-bottom-left-radius: var(--uc-all-border-radius) !important;
+        border-radius: var(--uc-all-border-radius) !important;
         outline: 10px solid var(--uc-browser-color) !important;
+        outline-offset: -10px !important;
     }
     & #tabbrowser-tabpanels browser[type] {
         margin-top:2px !important;
@@ -214,6 +214,8 @@ Border Hunter
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
         border-radius: var(--uc-all-border-radius) !important;
+        outline: 10px solid var(--uc-browser-color) !important;
+        outline-offset: -10px !important;
     }
     & #tabbrowser-tabpanels browser[type] {
         margin-top:4px !important;
