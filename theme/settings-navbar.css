@@ -18,7 +18,7 @@ bookmarks autohide
 @media -moz-pref("ultima.navbar.autohide") {
     #main-window:is([sizemode="normal"],[sizemode="maximized"])  {
         @media not -moz-pref("ultima.spacing.compact") {
-            #browser {margin-top:1px;}
+            #browser {margin-top:3px;}
         }
         @media -moz-pref("sidebar.verticalTabs") {
         /*  #nav-bar {padding-left:42px !important;} */
@@ -32,7 +32,7 @@ bookmarks autohide
         #navigator-toolbox {
             position: absolute !important;
             top: 0; left: 0; right: 0;
-            transition: top 0.3s ease 0.5ms !important;
+            transition: top 0.2s ease 0.5ms !important;
             /* autohide */
             &:not(:hover) {
                 top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2));
