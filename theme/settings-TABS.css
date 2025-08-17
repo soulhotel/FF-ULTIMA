@@ -13,6 +13,7 @@ vertical tab action buttons
 multiline tabs
 tabs close button on icon
 tabs reversed content order
+tab/page progress bar
 tab outline colors
 tab groups adjustments
 tab groups labels
@@ -177,6 +178,39 @@ tab containers
             .tab-label-container {
                 margin-left: 8px !important;
             }*/
+        }
+    }
+}
+
+/* tab/page progress bar ---------------------------------------------------------------------------------------- */
+/* immitation page loading strip - this is not a progression bar */
+@media -moz-pref("ultima.tabs.not.a.progress.bar") {
+    :root:has(.tabbrowser-tab[selected][busy]) {
+        #tabbrowser-tabbox::after {
+            width: calc(100% - 25px);
+            transition: width 0.6s linear 0.3s;
+            border: 1px solid rgba(100,100,100,0.3);
+            border-left-width:10px; /* if page loads too fast, this produces a soft dot under the statuspanel */
+        }
+    }
+    #tabbrowser-tabbox::after {
+        content:"";
+        z-index:2;
+        width: 0;
+        height:5px;
+        display:flex;
+        position:fixed;
+        bottom:5px; /* bottom positioning is "out of the way", for when a website implements there own page loading indicator and header content */
+        left:5px;
+        border: none;
+        border-radius:30px;
+        background: linear-gradient(0.25turn, var(--uc-accent-color-2), #ebf8e1, var(--uc-accent-color-2));
+        box-shadow: var(--uc-box-shadow);
+        transition: width 0.2s linear;
+    }
+    :root {
+        :has(findbar:focus-within), :has(findbar:focus), :has(findbar:focus-visible), :has(findbar:hover) {
+            #tabbrowser-tabbox::after {bottom:45px;}
         }
     }
 }
