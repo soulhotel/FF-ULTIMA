@@ -66,6 +66,7 @@ user_pref("ultima.spacing.compact.tabs", true);
 user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.tabs.disable.update.dot", true);
 user_pref("ultima.tabs.belowURLbar", true);
+user_pref("ultima.tabs.not.a.progress.bar", true);
 user_pref("ultima.tabs.newtabbutton.ontop.1", false);
 user_pref("ultima.tabs.newtabbutton.ontop.2", false);
 user_pref("ultima.tabs.multiline.labels", false);
@@ -189,3 +190,4 @@ user_pref("general.smoothScroll.msdPhysics.enabled", true);
 /* extra privacy */
 user_pref("browser.send_pings", false); 
 user_pref("extensions.pocket.enabled", false);
+
