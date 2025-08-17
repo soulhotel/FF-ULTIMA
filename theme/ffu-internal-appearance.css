@@ -191,7 +191,7 @@ Border Hunter
 }
 /* default */
 #main-window:not([lwtheme]) {
-    & #browser { /*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
+    & #browser, & body { /*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
         background: var(--uc-browser-color) !important;
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
@@ -209,7 +209,7 @@ Border Hunter
 }
 /* add on */
 #main-window[lwtheme] {
-    & #browser {/*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
+    & #browser, & body {/*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
         background: var(--lwt-accent-color) !important;
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
