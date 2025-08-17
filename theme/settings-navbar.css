@@ -16,40 +16,52 @@ bookmarks autohide
 /* nav bar autohide --------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.autohide") {
-    #main-window:is([sizemode="normal"],[sizemode="maximized"]):not(:has(.bookmark-item[open]))  {
-        #sidebar-main {--uc-topbars-combined-height: 2px !important;}
+    #main-window:is([sizemode="normal"],[sizemode="maximized"])  {
+        @media not -moz-pref("ultima.spacing.compact") {
+            #browser {margin-top:1px;}
+        }
         @media -moz-pref("sidebar.verticalTabs") {
-            #nav-bar {padding-left:42px !important;}
+        /*  #nav-bar {padding-left:42px !important;} */
             #PersonalToolbar {padding-left: 54px !important;}
-            #toolbar-menubar {padding-left: 54px !important;}
+        /*  #toolbar-menubar {padding-left: 54px !important;} */
         }
-        #navigator-toolbox:not(:hover) {
-            --uc-topbars-combined-height: 2px !important;
-            transform-origin: top !important;
-            transform: rotateX(82deg) !important;
-            @media (-moz-platform: windows) {transform: rotateX(75deg) !important;}
-            transition: height 0.3s ease !important;
-        }
-        #navigator-toolbox:not(:hover) #urlbar:not(:hover):not([breakout-extend]) {
-            transform-origin: top !important;
-            transform: rotateX(92deg) !important;
-            transition: transform 0.3s ease !important;
-            opacity:0;
-        }
-        #urlbar[breakout] {
-            & > .urlbar-input-container {
-                height: 100% !important;
+        
+        /* alright, lets try this again */
+        
+        /* absolute positioning */
+        #navigator-toolbox {
+            position: absolute !important;
+            top: 0; left: 0; right: 0;
+            transition: top 0.3s ease 0.5ms !important;
+            /* autohide */
+            &:not(:hover) {
+                top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2));
+                transition: top 0.3s ease 0.5s !important;
             }
+            /* we will append two hover zones */
+            /* a hot zone in the middle, for easy entry */
+            &::after {
+                content:"";background:none;position:absolute;text-align:center;
+                left:30%;right:30%;top:var(--uc-topbars-combined-height);
+                border-radius:10px;
+                height:20px;
+            }
+            /* a full width zone that doesn't get in the way of sidebars */
+            &::before {
+                content:"";background:none;position:absolute;
+                left:0%;right:0%;top:var(--uc-topbars-combined-height);
+                height:12px;
+            }
+        }   
+        /* exceptions for menu interactions */
+        &:has(#placesContext:hover),  &:has(#appMenu-popup:hover), &:has(#downloads-button-autohide-panel:hover),
+        &:has(#appMenu-notification-popup:hover), &:has(#unified-extensions-panel:hover),
+        &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover),
+        &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover)
+        {
+            #navigator-toolbox {top:0 !important;}
         }
-        #navigator-toolbox:not(:hover) { #toolbar-menubar, #TabsToolbar, #PersonalToolbar {
-            opacity: 0 !important;
-        }}
-        #navigator-toolbox:not(:hover) { .titlebar-buttonbox-container, #PanelUI-button, #nav-bar-customization-target *:not(#urlbar-container *) {
-            opacity:0 !important;
-        }}
-        :root:not([sessionrestored]) #navigator-toolbox {
-            transform:none !important;
-        }
+        #urlbar[breakout-extend="true"] {top:0 !important;}
     }
 }
 
@@ -160,7 +172,7 @@ bookmarks autohide
 
 /* bookmarks autohide ------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.navbar.bookmarks.autohide") { @media not -moz-pref("ultima.navbar.bookmarks.float") {
+@media -moz-pref("ultima.navbar.bookmarks.autohide") { @media not -moz-pref("ultima.navbar.bookmarks.float") {  @media not -moz-pref("ultima.navbar.autohide") {
     :root:has(#navigator-toolbox:hover) {
         #navigator-toolbox {transition: max-height, height, 0.5s ease !important;}
         #PersonalToolbar {transition: max-height, height, 0.1s ease;}
@@ -186,7 +198,7 @@ bookmarks autohide
             }
         }
     }
-}}
+}}}
 @media -moz-pref("ultima.navbar.bookmarks.autohide") { @media -moz-pref("ultima.navbar.bookmarks.float") {
     #main-window, #main-window:not([lwtheme]) {
         /* initial setup */
