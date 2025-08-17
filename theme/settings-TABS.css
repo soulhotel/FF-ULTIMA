@@ -13,7 +13,6 @@ vertical tab action buttons
 multiline tabs
 tabs close button on icon
 tabs reversed content order
-tab/page progress bar
 tab outline colors
 tab groups adjustments
 tab groups labels
@@ -97,7 +96,6 @@ tab containers
 
 /* multiline tabs ----------------------------------------------------------------------------------------------- */
 /* wip - unsure how stable this is, time will tell */
-/* 1 week later - this is such a good feature, it obviously causes tabs to move around when expanding on hover since the tab must expand in height now, but seeing full tab labels is so convenient */
 @media -moz-pref("ultima.tabs.multiline.labels") {
     #sidebar-main .tab-label {
       white-space: wrap !important;
@@ -183,39 +181,6 @@ tab containers
     }
 }
 
-/* tab/page progress bar ---------------------------------------------------------------------------------------- */
-/* immitation page loading strip - this is not a progression bar */
-@media -moz-pref("ultima.tabs.not.a.progress.bar") {
-    :root:has(.tabbrowser-tab[selected][busy]) {
-        #tabbrowser-tabbox::after {
-            width: calc(100% - 25px);
-            transition: width 0.6s linear 0.3s;
-            border: 1px solid rgba(100,100,100,0.3);
-            border-left-width:10px; /* if page loads too fast, this produces a soft dot under the statuspanel */
-        }
-    }
-    #tabbrowser-tabbox::after {
-        content:"";
-        z-index:2;
-        width: 0;
-        height:5px;
-        display:flex;
-        position:fixed;
-        bottom:5px; /* bottom positioning is "out of the way", for when a website implements there own page loading indicator and header content */
-        left:5px;
-        border: none;
-        border-radius:30px;
-        background: linear-gradient(0.25turn, var(--uc-accent-color-2), #ebf8e1, var(--uc-accent-color-2));
-        box-shadow: var(--uc-box-shadow);
-        transition: width 0.2s linear;
-    }
-    :root {
-        :has(findbar:focus-within), :has(findbar:focus), :has(findbar:focus-visible), :has(findbar:hover) {
-            #tabbrowser-tabbox::after {bottom:45px;}
-        }
-    }
-}
-
 /* tab outline colors ------------------------------------------------------------------------------------------- */
 
 @media -moz-pref("user.theme.xtras.tab.outline.color.black") {
@@ -288,7 +253,10 @@ tab containers
     }
     @media (-moz-platform: windows) {
         #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected]:not([pinned]) > .tab-stack::after {
-            margin: -1px 9px 0px 9px;
+            margin: -1px 10px -1px 11px;
+        }
+        #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected][pinned] > .tab-stack::after {
+            margin: 0px 5px 0px 5px;
         }
     }
 }
@@ -642,14 +610,14 @@ tab-group .tabbrowser-tab {
             display: flex !important;
             margin-inline-start: 0px !important;
             background: var(--identity-icon-color) !important;
-            margin-bottom: -1px !important;
+            margin-bottom: -2px !important;
             transition: width 0.4s ease 0s, opacity 0.7s ease 0.3s !important;
         }
         & :hover .tab-group-line {
             width: 100% !important;
             @media -moz-pref("ultima.tabs.tabgroups.background.3") {width:calc(100% - 6px) !important;}
             opacity: 0 !important;
-            margin-bottom: -1px !important;
+            margin-bottom: -4px !important;
             transition: width 0.4s ease 0.1s, opacity 0.7s ease 0.3s !important;
         }
     }
