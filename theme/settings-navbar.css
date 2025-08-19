@@ -65,6 +65,52 @@ bookmarks autohide
     }
 }
 
+@media -moz-pref("ultima.navbar.autohide","float") {
+    #main-window:is([sizemode="normal"],[sizemode="maximized"])  {
+        @media not -moz-pref("ultima.spacing.compact") {
+            #browser {margin-top:3px;}
+        }
+        #navigator-toolbox {
+            position: absolute !important;
+            top: 14px; left: 20%; right: 20%;
+            border-radius: 18px !important;
+            box-shadow: var(--uc-box-shadow) !important;
+            transition: top 0.2s ease 0.5ms !important;
+            z-index: 99999999999 !important;
+            height: calc(var(--uc-topbars-combined-height) + 10px) !important;
+            padding: 4px !important;
+            & #nav-bar {
+                border-radius: 18px !important;
+            }
+            /* autohide */
+            &:not(:hover) {
+                top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 10px);
+                transition: top 0.3s ease 0.5s !important;
+            }
+            /* we will append two hover zones */
+            /* a hot zone in the middle, for easy entry */
+            &::after {
+                content:"";background:none;position:absolute;text-align:center;
+                left:0;right:0;top:var(--uc-topbars-combined-height); height:30px;
+            }
+            /* a full width zone that doesn't get in the way of sidebars */
+            &::before {
+                content:"";background:none;position:absolute;
+                left:0%;right:0%;top:-10px; height:10px;
+            }
+        }   
+        /* exceptions for menu interactions */
+        &:has(#placesContext:hover),  &:has(#appMenu-popup:hover), &:has(#downloads-button-autohide-panel:hover),
+        &:has(#appMenu-notification-popup:hover), &:has(#unified-extensions-panel:hover),
+        &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover),
+        &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover)
+        {
+            #navigator-toolbox {top: 14px !important;}
+        }
+        #urlbar[breakout-extend="true"] {top: 14px !important;}
+    }
+}
+
 /* nav bar hide buttons (off hover)  ---------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.hidebuttons") {
