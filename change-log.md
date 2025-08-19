@@ -20,7 +20,9 @@ Firefox 143+ required
 - `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome), a tool for automating install & management of userchrome themes.
 - `fix • 🔴 •` Setting `navbar.autohide` now respects, the customize toolbar page, and stops autohiding
 - `new • 🟢 •` New [Fluent](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/color-schemes/fluent/readme.md) Color Schemes, created by @dreadbalaur
-- `new • 🟢 •` Setting `navbar.autohide` can now be set to `hide` for normal autohiding or `float` 9cc61ad
+- `new • 🟢 •` Setting `navbar.autohide` can now be set to `hide` for normal autohiding, or `float` 9cc61ad
+- `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius
+- `qol • 🟡 •` Setting `urlbar.float` has some adjustment for +1920 resolutions 6050fe3
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 

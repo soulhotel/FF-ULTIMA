@@ -184,7 +184,7 @@ Custom Icons
     & #urlbar-container * {
         --uc-button-border-radius: 16px !important;
     }
-    & .urlbar-background, & .searchmode-switcher {
+    & .urlbar-background, & .searchmode-switcher, & #identity-icon-box {
         border-radius: var(--uc-button-border-radius) !important;
     }
     & #urlbar[open] {
