@@ -16,7 +16,7 @@ bookmarks autohide
 /* nav bar autohide --------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.autohide") {
-    #main-window:is([sizemode="normal"],[sizemode="maximized"])  {
+    #main-window:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
         @media not -moz-pref("ultima.spacing.compact") {
             #browser {margin-top:3px;}
         }
@@ -66,7 +66,7 @@ bookmarks autohide
 }
 
 @media -moz-pref("ultima.navbar.autohide","float") {
-    #main-window:is([sizemode="normal"],[sizemode="maximized"])  {
+    #main-window:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
         @media not -moz-pref("ultima.spacing.compact") {
             #browser {margin-top:3px;}
         }
@@ -96,7 +96,7 @@ bookmarks autohide
             /* a full width zone that doesn't get in the way of sidebars */
             &::before {
                 content:"";background:none;position:absolute;
-                left:0%;right:0%;top:-10px; height:10px;
+                left:0%;right:0%;top:-15px; height:18px;
             }
         }   
         /* exceptions for menu interactions */
