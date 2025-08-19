@@ -18,9 +18,9 @@ Firefox 143+ required
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome), a tool for automating install & management of userchrome themes.
+- `fix • 🔴 •` Setting `navbar.autohide` now respects, the customize toolbar page, and stops autohiding
 - `new • 🟢 •` New [Fluent](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/color-schemes/fluent/readme.md) Color Schemes, created by @dreadbalaur
 - `new • 🟢 •` Setting `navbar.autohide` can now be set to `hide` for normal autohiding or `float` 9cc61ad
-
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
