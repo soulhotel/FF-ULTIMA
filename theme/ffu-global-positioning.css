@@ -397,6 +397,16 @@ even when fullscreen mode, we track
     }
 }
 
+/* infobar, need to figure out a proper way to link hidden state to visibility settings */
+.infobar {
+    width: fit-content !important;
+    left: 40px !important;
+    box-shadow: var(--uc-box-shadow) !important;
+    background-color: var(--uc-browser-color) !important;
+    border-radius: 8px !important;
+}
+/* .infobar:not([hidden]) */
+
 /* Menu bar -----------------------------------------------------------------------------*/
 
 #toolbar-menubar {
