@@ -19,9 +19,12 @@ File Desc:         Alternative Styles for the URL Bar
     }
 }
 
-@media -moz-pref("ultima.urlbar.suggestions") {
+@media -moz-pref("ultima.urlbar.hide.searchsuggestions") {
     #urlbar .search-one-offs:not([hidden]) {
-        display:none !important;
+        display: none !important;
+    }
+    #urlbar-searchmode-switcher {
+        display: none !important;
     }
 }
 
@@ -36,7 +39,7 @@ File Desc:         Alternative Styles for the URL Bar
     }
 }
 
-@media -moz-pref("ultima.urlbar.hidebuttons") {
+@media -moz-pref("ultima.urlbar.hide.buttons") {
     #urlbar #identity-box,
     #urlbar #page-action-buttons,
     #urlbar #tracking-protection-icon-container {
