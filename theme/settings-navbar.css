@@ -114,16 +114,18 @@ bookmarks autohide
 /* nav bar hide buttons (off hover)  ---------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.hidebuttons") {
-    #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
-        opacity:0 !important;
-        transition:opacity ease 2s;
-    }
-    :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
-    :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
-    :root:has(#downloadsPanel[panelopen="true"]) #downloads-button,
-    #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"],
-    #nav-bar:not(:focus-within):not(:hover) #urlbar-searchmode-switcher[open] {
-        opacity: 1 !important;
+    @media not -moz-pref("ultima.navbar.autohide","float") {
+        #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
+            opacity:0 !important;
+            transition:opacity ease 2s;
+        }
+        :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
+        :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
+        :root:has(#downloadsPanel[panelopen="true"]) #downloads-button,
+        #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"],
+        #nav-bar:not(:focus-within):not(:hover) #urlbar-searchmode-switcher[open] {
+            opacity: 1 !important;
+        }
     }
 }
 
