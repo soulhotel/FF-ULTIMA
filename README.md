@@ -4,11 +4,19 @@
 
 ###### . . . The theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
 
-![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)
+
+<!--![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue)
 ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) 
 ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
-[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=for-the-badge&label=Sponsors%20💖&color=f19ef7)](https://github.com/sponsors/soulhotel)
+[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=for-the-badge&label=Sponsors%20💖&color=f19ef7)](https://github.com/sponsors/soulhotel)-->
+
+![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=flat-square)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=flat-square&color=blue)
+![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=flat-square) 
+![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=flat-square&color=blue)
+[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=flat-square&label=Sponsors%20💖&color=f19ef7)](https://github.com/sponsors/soulhotel)
+
 
 <!-- ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802) -->
 ![ffultima-editions-2.0](https://github.com/user-attachments/assets/dc1882e6-6543-41bd-aff7-ded2b96ffb97)
@@ -37,12 +45,12 @@
 
 ## Installation
 
-> #### *First time? You should click on these two options below...* 🚨
+> #### *First time? You should click on these two options below...*
 
 <details>
-<summary>Finding your Profile Folder (where theme files go)</summary>
+<summary>Finding your Profile Folder</summary>
 
-###### 🛈 Two ways to find your Profile Folder. Choose one: 🛈
+###### 🛈 Two ways to find your Profile Folder. Choose one. 🛈
 1. Go to the about:support page/url.
 2. Open directory
 3. This takes you to your profile folder, typically named "default.release"
@@ -61,17 +69,16 @@
 <details>
 <summary>Initial Setup</summary>
 
-###### 🛈 This is mostly for first time Installation: 🛈
+###### 🛈 This is mostly for first time Installation 🛈
 
 - [x] If your Profile Folder does not have a `chrome` folder, create one.
 - [x] If your Profile Folder already has a `chrome` folder, empty it.
-- [x] The theme will automatically enable userChrome stylesheets via user.js.
 - [x] Please have Firefox's System-Theme enabled. You can change this later.
 
 <img src="https://github.com/user-attachments/assets/c65972cf-88bf-41da-87d1-5d5a780230ba" width="650" />
 </details>
 
-> #### *Choose *one* of these installation methods and follow each step...* ⬇️
+> #### *Choose *one* of these installation methods and follow each step...*
 
 <details><summary>The Easy Way</summary>
 
@@ -79,8 +86,8 @@
 
 1. Download the latest version on the [release page](https://github.com/soulhotel/FF-CSS-ULTIMA/releases/latest).
 2. Copy everything in the ffultima.zip into your `chrome` folder.
-3. For first time installation, you need to apply the `user.js` to firefox to access the theme settings.
-4. In the chrome folder, youll see the `user.js`, move it <ins>out the chrome folder and into the Profile Folder<ins>.
+3. For first time installation, you need to apply the `user.js` to firefox to access theme settings.
+4. So in the chrome folder, youll see the `user.js`. Move it <ins>out the chrome folder and into the Profile Folder<ins>.
 5. Restart Firefox.
 6. <ins>**Wait** for Firefox to open</ins>, then delete the `user.js` file.
 </details>
@@ -92,17 +99,17 @@
 - This automated tool requires no download. It runs by fetching [gituserChrome](https://github.com/soulhotel/git-userChrome)
 - Locates all profile folders and allows you to specify which one to install FF Ultima to
 - It renames any present chrome/ folder to chrome.old/, then uses git to install the theme to a new chrome/ folder
-- It also handles moving user.js, specifying which firefox to restart, and user.js removal
+- It also handles moving the user.js, restarting specific firefoxs, and user.js removal
 - To Install FF Ultima - copy/paste the command for your operating system
 
 ###### LINUX ([BASH SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
-bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.sh)
+bash <(curl -s https://raw.githubusercontent.com/soulhotel/git-userChrome/main/scripts/gituserChrome.sh)
 ```
 
 ###### WINDOWS ([POWERSHELL SCRIPT](https://github.com/soulhotel/git-userChrome)):
 ```
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/git-userChrome/main/gituserChrome.ps1')"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.githubusercontent.com/soulhotel/git-userChrome/main/scripts/gituserChrome.ps1')"
 ```
 
 ###### MAC ([COPY LINUX](https://github.com/soulhotel/git-userChrome))
@@ -121,12 +128,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 ```
 >
 
-> More on [gituserChrome](https://github.com/soulhotel/git-userChrome): When inspecting the source, the tool is pretty simple, but suprisingly it isn't the standard when sharing userChrome themes.. It's set up so that it can download any userChrome theme (not just FF Ultima) with just 1 command (example: `curl gituserChrome randomTheme.git`). And factors in scenarios where you want to target a specific Profile Folder, specific Firefox install, handling clean firefox restarts across any OS and user.js cases and clean ups. I'd love to see it used by more theme creators and obviously since it's just a simple script (1 for windows, 1 for linux/mac) it can be used locally & can be changed by anyone that wants to expand on it.
+> More on [gituserChrome](https://github.com/soulhotel/git-userChrome): An automation tool for "gitting" and managing userChrome themes.
 
 </details>
 
 
-> #### *Here's what you should do *after* you've installed FF Ultima...* ✅
+> #### *Here's what you should do *after* you've installed FF Ultima...*
 
 <details><summary>Post Installation (settings & wiki)</summary>
 
@@ -150,6 +157,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 
 <!-- sponsors --><!-- sponsors -->
 
+<div align="center">
+
 ![Alt](https://repobeats.axiom.co/api/embed/8f99668e7cb15df9e7d49c74f9b6626d32b35dbb.svg "Repobeats analytics image")
+
+</div>
 
 
