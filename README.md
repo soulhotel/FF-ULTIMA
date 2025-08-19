@@ -15,7 +15,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=flat-square&color=blue)
 ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=flat-square) 
 ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=flat-square&color=blue)
-[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=flat-square&label=Sponsors%20💖&color=f19ef7)](https://github.com/sponsors/soulhotel)
+[![Sponsors 💖](https://img.shields.io/github/sponsors/soulhotel?style=flat-square&label=sponsors&color=f19ef7)](https://github.com/sponsors/soulhotel)
 
 
 <!-- ![ffultima-editions](https://github.com/user-attachments/assets/061d124e-d846-4da1-8466-03e2341e0802) -->
@@ -128,7 +128,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 ```
 >
 
-> More on [gituserChrome](https://github.com/soulhotel/git-userChrome): An automation tool for "gitting" and managing userChrome themes.
+> gituserChrome is an automation tool for "gitting" and managing userChrome themes. Available as a script and/or Application; See [homepage](https://github.com/soulhotel/git-userChrome) for more info.
 
 </details>
 
