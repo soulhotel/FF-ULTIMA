@@ -37,7 +37,14 @@ Firefox 143+ required
 
 > Fluent Color Scheme by @dreadbalaur 
 
-<img width="1864" height="1050" alt="fluent" src="https://github.com/user-attachments/assets/6c704a1c-3792-4e9f-b2ef-cc12dbf24f41" />
+<img width="100%" alt="fluent" src="https://github.com/user-attachments/assets/6c704a1c-3792-4e9f-b2ef-cc12dbf24f41" />
+
+> Setting `navbar.float`
+
+<img width="100%" alt="fluent" src="https://github.com/user-attachments/assets/be397407-ecc0-43f5-bfbe-821777605f13" />
+
+>
+
 
 > Downloaded any userChrome theme in about 1-2 clicks, with gituserChrome
 
