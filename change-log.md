@@ -1,9 +1,9 @@
 ### <ins> FF Ultima Version 3.7 Release
-- **[Click Me ⬇️ Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.7/ffultima3.7.zip)**
-- **[Click Me ⬇️ Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)**
+- **⬇️ [Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.7/ffultima3.7.zip)** direct link.
+- **⬇️ [Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)** direct link.
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki).
 - ⚙️ [Change settings](https://github.com/soulhotel/FF-ULTIMA/wiki/Settings), tab size, autohiding, spacing, and more.
-- ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the Theme to a new version.
+- ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the theme to a new version.
   
 ### <ins> Version Notes
 - This update ... If you are using firefox nightly ► Please download the theme from the [upstream branch](https://github.com/soulhotel/FF-ULTIMA/tree/firefox-upstream) or at least make sure to grab this updated file from the upstream branch; chrome/theme/[ffu-internal-appearance.css](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/ffu-internal-appearance.css). The changes in nightly require it.
@@ -22,6 +22,7 @@ Firefox 143+ required
 - `new • 🟢 •` New [Fluent](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/color-schemes/fluent/readme.md) Color Schemes, created by @dreadbalaur
 - `new • 🟢 •` Setting `navbar.autohide` can now be set to `hide` for normal autohiding, or `float` 9cc61ad
 - `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius
+- `qol • 🟡 •` Setting `navbar.autohide` now has a slight box shadow on reveal for visual clarity
 - `qol • 🟡 •` Setting `urlbar.float` has some adjustment for +1920 resolutions 6050fe3
 <!--
 `fyi • ℹ️ •`
