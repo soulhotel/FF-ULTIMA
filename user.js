@@ -27,6 +27,7 @@ user_pref("user.theme.fluent.thinkpad", false);
 
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
+user_pref("ultima.navbar.float", false);
 user_pref("ultima.navbar.hidebuttons", true);
 user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);

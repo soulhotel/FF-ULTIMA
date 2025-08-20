@@ -6,7 +6,7 @@
 - ⚙️ [How to Update](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Update-the-Theme) the theme to a new version.
   
 ### <ins> Version Notes
-- This update ... If you are using firefox nightly ► Please download the theme from the [upstream branch](https://github.com/soulhotel/FF-ULTIMA/tree/firefox-upstream) or at least make sure to grab this updated file from the upstream branch; chrome/theme/[ffu-internal-appearance.css](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/ffu-internal-appearance.css). The changes in nightly require it.
+- This update focuses on qol improvements to existing settings and preparation for Firefox 143.
 - User.js (recommended) not required. 
 - Firefox 138+ required.
 <!--
@@ -17,15 +17,15 @@ Firefox 143+ required
 -->
 
 ### <ins> Change Log:
-- `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome), a tool for automating install & management of userchrome themes.
+- `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome), a tool for automating install & management of userchrome themes
 - `fix • 🔴 •` Setting `navbar.autohide` now respects, the customize toolbar page, and stops autohiding
 - `new • 🟢 •` New [Fluent](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/color-schemes/fluent/readme.md) Color Schemes, created by @dreadbalaur
-- `new • 🟢 •` Setting `ultima.navbar.float` for a floating navbar. Rewriting navbar.autohide made this easy to get done. Thank @ for that
+- `new • 🟢 •` Setting `ultima.navbar.float` for a floating navbar. Rewriting navbar.autohide made this easy to get done. Thank #355 @mrodyhin for that fa44b48
 - `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius
 - `qol • 🟡 •` Setting `navbar.autohide` now has a slight box shadow on reveal for visual clarity
 - `qol • 🟡 •` Setting `urlbar.float` has some adjustment for +1920 resolutions 6050fe3
-- `qol • 🟡 •` Setting `ultima.urlbar.suggestions` renamed to `ultima.urlbar.hide.searchsuggestions` it now also hides the new search "bonnet" switcher
-- `qol • 🟡 •` Setting `ultima.urlbar.hidebuttons` renamed to `ultima.urlbar.hide.buttons`
+- `qol • 🟡 •` Setting `ultima.urlbar.suggestions` renamed to `ultima.urlbar.hide.searchsuggestions` it now also hides the new search "bonnet" switcher fa44b48
+- `qol • 🟡 •` Setting `ultima.urlbar.hidebuttons` renamed to `ultima.urlbar.hide.buttons` fa44b48
 - `qol • 🟡 •` About:config notifications updated
 <!--
 `fyi • ℹ️ •`
