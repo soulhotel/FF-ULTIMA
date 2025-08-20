@@ -161,7 +161,8 @@ Custom Icons
     & .urlbarView-row:hover {
         color: var(--uc-accent-color-1) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-5) 85%, transparent)  !important;
         outline-offset: -1px !important;
     }
@@ -184,9 +185,11 @@ Custom Icons
         outline-color: var(--uc-accent-color-3) !important;
         outline-offset: 1px !important;
     } 
-    & .tab-background[multiselected] { @media (prefers-color-scheme: light)
-        outline-color: var(--uc-accent-color-1) !important;
-        outline-offset: none !important;
+    & .tab-background[multiselected] { 
+        @media (prefers-color-scheme: light) {
+            outline-color: var(--uc-accent-color-1) !important;
+            outline-offset: none !important;
+        }
     } 
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {

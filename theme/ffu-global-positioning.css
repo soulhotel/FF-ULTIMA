@@ -109,6 +109,7 @@ this allows us to track and work with them throughout the theme
 even when the toolbar is not visible, we track
 */
 :root:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important;}
+:root:has(#PersonalToolbar[collapsed=""]) {--uc-bookbar-height: 0px !important;}
 :root:has(#toolbar-menubar[inactive="true"]) {--uc-menubar-height: 0px !important;}
 :root { @media -moz-pref("sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}}
 @media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
@@ -536,6 +537,7 @@ box-shadow: none !important;}}
     margin-bottom: 55px !important;    /*controls height*/
     border-radius: 10px !important;
     opacity: 0 !important;
+    width: 1px !important;
     &:hover {
         opacity: 0.5 !important;
     }
@@ -549,6 +551,7 @@ box-shadow: none !important;}}
             margin-bottom: 55px !important;    /*controls height*/
             border-radius: 10px !important;
             opacity: 0;
+            width: 1px !important;
             &:hover {
                 opacity: 0.5 !important;
             }

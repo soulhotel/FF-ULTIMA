@@ -234,6 +234,27 @@ body::after {
     }
 }
 
+@media -moz-pref("ultima.urlbar.suggestions") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.urlbar.suggestions` renamed to `ultima.urlbar.hide.searchsuggestions`... please delete the old setting \A ";
+        display: block;
+    }
+}
 
+@media -moz-pref("ultima.urlbar.hidebuttons") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.urlbar.hidebuttons` renamed to `ultima.urlbar.hide.buttons`... please delete the old setting \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.navbar.float") {
+    @media -moz-pref("ultima.navbar.autohide") {
+        body::after {
+            content: "\ Only use one of these settings! \A \A  ultima.navbar.autohide \A ultima.navbar.float \A ";
+            display: block;
+        }
+    }
+}
 
 }} /* end aboutconfig page */

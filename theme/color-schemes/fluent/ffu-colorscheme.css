@@ -184,18 +184,21 @@ Custom Icons
     & #urlbar-container * {
         --uc-button-border-radius: 16px !important;
     }
-    & .urlbar-background, & .searchmode-switcher, & #identity-icon-box {
+    & .urlbar-background, & .searchmode-switcher, & #identity-icon-box, #urlbar-background {
         border-radius: var(--uc-button-border-radius) !important;
     }
     & #urlbar[open] {
         box-shadow: var(--uc-box-shadow) !important;
     }
-    & .urlbar-background, & #searchbar,
-    & #urlbar:is([focused="true"], & [open]) > .urlbar-background, & #searchbar:focus-within {
+    & .urlbar-background, & #searchbar, & #urlbar-background,
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background,
+    & #urlbar:is([focused="true"], & [open]) > #urlbar-background,
+    & #searchbar:focus-within {
         background-color: var(--uc-urlbar-background) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
     }
+    & #urlbar[open] > #urlbar-background,
     & #urlbar[open] > .urlbar-background {
         border-color: var(--uc-accent-color-3) !important;
     }
@@ -213,7 +216,8 @@ Custom Icons
         background-color: var(--uc-button-selected) !important;
         color: var(--uc-text) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background,
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
     }
     & #identity-icon-box:not(:hover):not([open]) {
@@ -278,9 +282,11 @@ Custom Icons
         outline-offset: 1px !important;
         outline-width:1px !important;
     } 
-    & .tab-background[multiselected] { @media (prefers-color-scheme: light)
-        outline-color: var(--uc-accent-color-1) !important;
-        outline-offset: none !important;
+    & .tab-background[multiselected] { 
+        @media (prefers-color-scheme: light) {
+            outline-color: var(--uc-accent-color-1) !important;
+            outline-offset: none !important;
+        }
     }
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
@@ -296,7 +302,7 @@ Custom Icons
     & #vertical-pinned-tabs-splitter {
         border-top: 1px var(--uc-accent-color-2) dashed !important;
         min-height: 3px !important;
-        &:hover{background: var(--uc-accent-color-2) !important;}
+        &:hover{background-color: var(--uc-accent-color-2) !important;}
     }
     /*tabs - all other tabs */
     & .tab-label-container:not([selected=""],[pinned]) {
@@ -422,8 +428,8 @@ Custom Icons
 
 @media -moz-pref("ultima.theme.icons") {
     /* new tab icon */
-    #main-window .tab-icon-image[src="chrome://branding/content/icon32.png"]{
-    content: url("../../icons/ultimafox.png");
+    #main-window #tabbrowser-tabs .tab-icon-image[src="chrome://branding/content/icon32.png"]{
+        content: url("../../icons/ultimafox.png");
     }
     /* extension menu */
     #main-window:not([lwtheme]) #unified-extensions-button {

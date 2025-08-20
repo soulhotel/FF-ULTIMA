@@ -153,20 +153,24 @@ Custom Icons
 
 #main-window:not([lwtheme]) {
     & #urlbar:not([open]) {
-        & #urlbar-background, & #searchbar {
+        & #urlbar-background, & #searchbar, & .urlbar-background {
             background-color: transparent !important;
             border-radius: var(--uc-button-border-radius) !important;
             box-shadow: none !important;
         }
     }
-    & #urlbar-background, & #searchbar,
-    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within {
+    & #urlbar-background, & #searchbar, & .urlbar-background
+    & #urlbar:is([focused="true"], & [open]) > #urlbar-background,
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background,
+    & #searchbar:focus-within {
         background-color: var(--uc-context-menu) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: 0.1rem 0.4rem 0.9rem -0.1rem rgba(25,25,25,0.9) !important;
     }
-    & #urlbar-background, & #searchbar,
-    & #urlbar:is([focused="true"], & [open]) > #urlbar-background, & #searchbar:focus-within { @media (prefers-color-scheme: light) {
+    & #urlbar-background, & #searchbar, & .urlbar-background,
+    & #urlbar:is([focused="true"], & [open]) > #urlbar-background,
+    & #urlbar:is([focused="true"], & [open]) > .urlbar-background,
+    & #searchbar:focus-within { @media (prefers-color-scheme: light) {
         box-shadow: var(--uc-box-shadow) !important;
     }}
     & .urlbarView-row { &[selected] {
@@ -175,11 +179,16 @@ Custom Icons
     & .urlbarView-row:hover {
         color: var(--uc-accent-color-1) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 85%, transparent)  !important;
         outline-offset: -1px !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background { @media (prefers-color-scheme: light) {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 15%, transparent)  !important;
+        outline-offset: none !important;
+    }}
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background { @media (prefers-color-scheme: light) {
         outline-color: color-mix(in srgb, var(--uc-accent-color-3) 15%, transparent)  !important;
         outline-offset: none !important;
     }}
@@ -219,7 +228,9 @@ Custom Icons
     & #vertical-pinned-tabs-splitter {
         border-top: 1px var(--uc-accent-color-2) dashed !important;
         min-height: 3px !important;
-        &:hover{background: var(--uc-accent-color-2) !important;}
+        &:hover {
+            background: var(--uc-accent-color-2) !important;
+        }
     }
     /*tabs - all other tabs */
     & .tab-label-container:not([selected=""],[pinned]) {
@@ -317,5 +328,6 @@ Custom Icons
     #back-button image {
         list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
         stroke: var(--uc-accent-color-3) !important;
+    }
 }
 

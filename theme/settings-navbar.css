@@ -226,7 +226,8 @@ bookmarks autohide
         #navigator-toolbox {transition: max-height, height, 0.5s ease !important;}
         #PersonalToolbar {transition: max-height, height, 0.1s ease;}
     }
-    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)):not(:has(.bookmark-item[open])) {
+    :root:has(#PersonalToolbar[collapsed="false"]):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)):not(:has(.bookmark-item[open])),
+    :root:has(#PersonalToolbar:not([collapsed])):not(:has(#navigator-toolbox:hover)):has(#placesContext:not(:hover)):not(:has(.bookmark-item[open])) {
         &#main-window:not([inFullscreen="true"]) {
             /* hide --uc-bookbar-height:1px !important;*/
             --uc-bookbar-height:0px !important;

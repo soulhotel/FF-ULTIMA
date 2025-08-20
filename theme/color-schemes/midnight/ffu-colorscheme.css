@@ -170,7 +170,8 @@ Custom Icons
         background-color: var(--uc-button-selected) !important;
         color: var(--uc-text) !important;
     }
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background {
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
         outline-color: color-mix(in srgb, var(--uc-accent-color-1) 10%, transparent)  !important;
     }
 }

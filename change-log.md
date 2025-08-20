@@ -20,10 +20,13 @@ Firefox 143+ required
 - `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome), a tool for automating install & management of userchrome themes.
 - `fix • 🔴 •` Setting `navbar.autohide` now respects, the customize toolbar page, and stops autohiding
 - `new • 🟢 •` New [Fluent](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/color-schemes/fluent/readme.md) Color Schemes, created by @dreadbalaur
-- `new • 🟢 •` Setting `navbar.autohide` can now be set to `hide` for normal autohiding, or `float` 9cc61ad
+- `new • 🟢 •` Setting `ultima.navbar.float` for a floating navbar. Rewriting navbar.autohide made this easy to get done. Thank @ for that
 - `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius
 - `qol • 🟡 •` Setting `navbar.autohide` now has a slight box shadow on reveal for visual clarity
 - `qol • 🟡 •` Setting `urlbar.float` has some adjustment for +1920 resolutions 6050fe3
+- `qol • 🟡 •` Setting `ultima.urlbar.suggestions` renamed to `ultima.urlbar.hide.searchsuggestions` it now also hides the new search "bonnet" switcher
+- `qol • 🟡 •` Setting `ultima.urlbar.hidebuttons` renamed to `ultima.urlbar.hide.buttons`
+- `qol • 🟡 •` About:config notifications updated
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 
@@ -32,14 +35,14 @@ Firefox 143+ required
 `wip • ℹ️ •` 
 -->
 
+> Fluent Color Scheme by @dreadbalaur 
+
+<img width="1864" height="1050" alt="fluent" src="https://github.com/user-attachments/assets/6c704a1c-3792-4e9f-b2ef-cc12dbf24f41" />
+
 > Downloaded any userChrome theme in about 1-2 clicks, with gituserChrome
 
 ###### better quality on [YT](https://youtu.be/NGP1tH_nOpk)
 
 https://github.com/user-attachments/assets/a7a8290f-e6eb-402e-b917-584f63742cf2
-
-> Fluent Color Scheme by @dreadbalaur 
-
-<img width="1864" height="1050" alt="fluent" src="https://github.com/user-attachments/assets/6c704a1c-3792-4e9f-b2ef-cc12dbf24f41" />
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
