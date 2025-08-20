@@ -31,6 +31,19 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 @import url(theme/ffu-special-configs.css);
 
+
+  /* from panelUI-share.css 1190 */
+/*
+.subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
+  appearance: none;
+  margin: var(--arrowpanel-menuitem-margin);
+  min-height: 24px;
+  padding: var(--arrowpanel-menuitem-padding);
+  border-radius: var(--arrowpanel-menuitem-border-radius);
+  background-color: transparent;
+  flex-shrink: 0;
+}*/
+
 @media -moz-pref("ultima.spacing.compact.menus") {
     .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
         --arrowpanel-menuitem-padding: 4px 8px;
