@@ -232,8 +232,8 @@ bookmarks autohide
         &#main-window:not([inFullscreen="true"]) {
             /* hide --uc-bookbar-height:1px !important;*/
             --uc-bookbar-height:0px !important;
-            #navigator-toolbox {transition: max-height, height, 0.9s ease 1.5s !important;}
-            #PersonalToolbar {transition: max-height, height, 0.3s ease 1.5s;}
+            #navigator-toolbox {transition: max-height, height, 0.9s ease 0.9s !important;}
+            #PersonalToolbar {transition: max-height, height, 0.3s ease 0.9s !important;}
 
             /* visibility */
             #PlacesToolbarItems {
@@ -280,7 +280,6 @@ bookmarks autohide
             margin-inline: 0 !important;
             &:hover {
                 cursor:pointer;
-                transform: scale(0.95);
             }
         }
     }

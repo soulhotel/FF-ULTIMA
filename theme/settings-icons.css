@@ -9,6 +9,17 @@ themed icons can be overridden with either default icons or other icon sets
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+/* extension icon default */
+@media -moz-pref("ultima.disable.contextmenu.icons") {
+    .menu-icon[src^="moz-extension://"] {
+      visibility: collapse;
+
+      menupopup[needsgutter] & {
+        visibility: hidden;
+      }
+    }
+}
+
 /* extension icon default 🧩 */
 @media -moz-pref("user.theme.xtension.extensions.icon.default") {
     #main-window:not([lwtheme]) #unified-extensions-button {
