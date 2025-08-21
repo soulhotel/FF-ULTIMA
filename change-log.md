@@ -22,7 +22,7 @@ Firefox 143+ required
 - `fix • 🔴 •` Setting `navbar.autohide` now respects, the customize toolbar page, and stops autohiding
 - `new • 🟢 •` New [Fluent](https://github.com/soulhotel/FF-ULTIMA/blob/firefox-upstream/theme/color-schemes/fluent/readme.md) Color Schemes, created by @dreadbalaur
 - `new • 🟢 •` Setting `ultima.navbar.float` for a floating navbar. Rewriting navbar.autohide made this easy to get done. Thank #355 @mrodyhin for that fa44b48
-- `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius
+- `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius, lighter font in sidebar, lighter shadows
 - `qol • 🟡 •` Setting `navbar.autohide` now has a slight box shadow on reveal for visual clarity
 - `qol • 🟡 •` Setting `urlbar.float` has some adjustment for +1920 resolutions 6050fe3
 - `qol • 🟡 •` Setting `ultima.urlbar.suggestions` renamed to `ultima.urlbar.hide.searchsuggestions` it now also hides the new search "bonnet" switcher fa44b48
