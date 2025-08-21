@@ -74,6 +74,7 @@ bookmarks autohide
         #navigator-toolbox {
             position: absolute !important;
             top: 14px; left: 20%; right: 20%;
+            @media (max-width: 1250px) {left: 1.5%; right: 1.5%;}
             border-radius: 18px !important;
             box-shadow: var(--uc-box-shadow) !important;
             transition: top 0.2s ease 0.5ms !important;

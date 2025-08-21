@@ -214,6 +214,9 @@ Custom Icons
     }}
     & .urlbarView-row:hover {
         background-color: var(--uc-button-selected) !important;
+        @media (prefers-color-scheme: light) {
+            background-color: var(--uc-tab-selected) !important;
+        }
         color: var(--uc-text) !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background,

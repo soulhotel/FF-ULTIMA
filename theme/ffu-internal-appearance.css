@@ -417,10 +417,10 @@ spacer[part="overflow-start-indicator"] {
     --panel-background: rgba(249, 249, 250, 0.6) no-repeat center var(--autoscroll-background-image) !important;
 }
 /* scrollbar */
-*:not(#sidebar-main) {
+/* *:not(#sidebar-main) {
     scrollbar-width:auto !important;
     scrollbar-color:rgba(70, 70, 80, 0.2) rgba(5,5,5, 0.0) !important;
-}
+} */
 /* devtools bottom view splitter visibility */
 .devtools-horizontal-splitter {
     opacity: 0 !important;
@@ -548,6 +548,7 @@ moz-input-search[placeholder="Search history"] {
     color: var(--uc-accent-color-2) !important;
     border-radius: var(--border-radius-medium) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
+    @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
     margin: 2% 2% 20vh 2% !important;
     padding-top:12px !important;
 }
@@ -556,6 +557,7 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     color: var(--uc-accent-color-2) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
+    @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
     border: none !important;
 }
 /* remove bad borders */

@@ -34,7 +34,7 @@ Custom Icons
     --uc-panel-border:       rgb(54, 54, 54);
     --uc-panel-border-2:     rgb(47, 47, 47);
     --uc-accent-color-1:     rgb(213, 80, 80);
-    --uc-accent-color-2:     rgb(196, 29, 29);
+    --uc-accent-color-2:     rgb(222, 104, 104);
     --uc-accent-color-3:     white;
     --uc-accent-color-4:     var(--uc-accent-color-1);
     --uc-accent-color-5:     var(--uc-accent-color-1);
@@ -215,6 +215,9 @@ Custom Icons
     }}
     & .urlbarView-row:hover {
         background-color: var(--uc-button-selected) !important;
+        @media (prefers-color-scheme: light) {
+            background-color: var(--uc-tab-selected) !important;
+        }
         color: var(--uc-text) !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
