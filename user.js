@@ -99,6 +99,7 @@ user_pref("browser.tabs.tabMinWidth", 0); /*dont touch*/
 /* alternate styles */
 user_pref("ultima.spacing.compact", false);
 user_pref("ultima.spacing.relaxed", false); /*wip*/
+user_pref("ultima.spacing.compact.menus", false);
 user_pref("ultima.spacing.compact.contextmenu", false);
 user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.tabs.tabContainer.1", false);
@@ -191,4 +192,5 @@ user_pref("general.smoothScroll.msdPhysics.enabled", true);
 /* extra privacy */
 user_pref("browser.send_pings", false); 
 user_pref("extensions.pocket.enabled", false);
+
 
