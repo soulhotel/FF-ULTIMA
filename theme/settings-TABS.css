@@ -55,9 +55,9 @@ tab containers
     #tabbrowser-tabs[orient="horizontal"] > #vertical-tabs-newtab-button,
     #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button {
         display: flex !important;
-        margin-top:10px !important;
+
     }
-    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {display: none !important;}
+    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}
 }
 @media -moz-pref("ultima.tabs.newtabbutton.ontop.2") {
     #tabbrowser-arrowscrollbox-periphery {order: -1 !important;}
