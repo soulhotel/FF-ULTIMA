@@ -293,7 +293,7 @@ tab containers
     }
     @media (-moz-platform: windows) {
         #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected]:not([pinned]) > .tab-stack::after {
-            margin: -1px 10px -1px 11px;
+            margin: -1px 9px -1px 11px;
         }
         #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected][pinned] > .tab-stack::after {
             margin: 0px 5px 0px 5px;
