@@ -18,12 +18,13 @@ Firefox 143+ required
 
 ### <ins> Change Log:
 - `fyi • ℹ️ •` Nightly users can continue using the release version
-- `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome), a tool for automating install & management of userchrome themes
+- `fyi • ℹ️ •` [gituserChrome](https://github.com/soulhotel/git-userChrome) can download or update ff ultima in one click
 - `fix • 🔴 •` Setting `navbar.autohide` now respects the customize toolbar page, and stops autohiding
-- `fix • 🔴 •` Setting `bookmarks.autohide` transition enforced, to prevent bookmarks randomly losing visibility
+- `fix • 🔴 •` Setting `bookmarks.autohide` transition enforced, to prevent bookmarks randomly losing visibility #360 095b014
+- `fix • 🔴 •` Vertical tabs error when used with `newtabbutton.on.top` #362
 - `new • 🟢 •` Setting `ultima.navbar.float` for a floating navbar. Rewriting navbar.autohide made this easy to get done. Thank #355 @mrodyhin for that fa44b48
-- `new • 🟢 •` Setting `ultima.disable.contextmenu.icons` to disable the extension icons in context menus
-- `new • 🟢 •` Setting `ultima.spacing.compact.menus` makes the menu and extensions panel more compact. Thank @dreadbulaur for that
+- `new • 🟢 •` Setting `ultima.disable.contextmenu.icons` to disable the extension icons in context menus 095b014
+- `new • 🟢 •` Setting `ultima.spacing.compact.menus` makes the menu and extensions panel more compact #358 @dreadbulaur
 - `qol • 🟡 •` Fluent color scheme, adjustments to identity box border radius, lighter font in sidebar, lighter shadows
 - `qol • 🟡 •` Setting `navbar.autohide` now has a slight box shadow on reveal for visual clarity
 - `qol • 🟡 •` Setting `urlbar.float` has some adjustment for +1920 resolutions 6050fe3
@@ -51,10 +52,11 @@ Firefox 143+ required
 
 ![Vid_20250822_014402](https://github.com/user-attachments/assets/6c4b40e1-bf76-4c28-84f3-f8d4260a6485)
 
-> Setting `ultima.disable.contextmenu.icons` to disable the extension icons in context menus
+> Setting `ultima.disable.contextmenu.icons` to disable the extension icons in context menus, and `ultima.spacing.compact.menus`
 
-<img width="238" height="455" alt="image" src="https://github.com/user-attachments/assets/2d9d366d-cc7c-4609-9519-9da766be01b4" />
-
+<img height="400px" alt="image" src="https://github.com/user-attachments/assets/2d9d366d-cc7c-4609-9519-9da766be01b4" />
+<img height="400px" alt="Image" src="https://github.com/user-attachments/assets/0a2466b9-9588-470a-8f0c-4ddb05ccbf44" />
+<img height="4w00px" alt="Image" src="https://github.com/user-attachments/assets/6de48734-db2b-4bc6-a6af-33bd3cf1ed0e" />
 
 > Downloaded any userChrome theme in about 1-2 clicks, with gituserChrome
 
