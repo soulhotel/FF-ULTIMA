@@ -42,7 +42,7 @@ Custom Icons
     --uc-box-shadow:         0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
     --uc-box-shadow-panel:   0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
     --uc-button-border-radius: 10px;
-    --uc-tab-border-radius: 6px;
+    --uc-tab-border-radius:  6px;
 }}
 
 @media (prefers-color-scheme: light) { :root {
@@ -62,16 +62,16 @@ Custom Icons
     --uc-context-menu:       rgb(255, 255, 255);
     --uc-panel-background:   rgb(255, 255, 255);
     --uc-panel-border:       rgba(125, 125, 125, 0.4);
-    --uc-panel-border-2:    rgba(125, 125, 125, 0.3);
-    --uc-accent-color-1: rgb(196, 29, 29);
-    --uc-accent-color-2: rgb(196, 31, 31);
-    --uc-accent-color-3: black;
-    --uc-accent-color-4: var(--uc-accent-color-1);
-    --uc-accent-color-5: var(--uc-accent-color-1);
-    --uc-accent-color-6: var(--uc-accent-color-1);
+    --uc-panel-border-2:     rgba(125, 125, 125, 0.3);
+    --uc-accent-color-1:     rgb(196, 29, 29);
+    --uc-accent-color-2:     rgb(196, 31, 31);
+    --uc-accent-color-3:     black;
+    --uc-accent-color-4:     var(--uc-accent-color-1);
+    --uc-accent-color-5:     var(--uc-accent-color-1);
+    --uc-accent-color-6:     var(--uc-accent-color-1);
     --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
-    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
+    --uc-box-shadow:         0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
+    --uc-box-shadow-panel:   0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
     --uc-button-border-radius: 10px;
 }}
 
