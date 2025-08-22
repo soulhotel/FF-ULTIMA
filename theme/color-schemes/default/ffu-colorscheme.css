@@ -246,7 +246,9 @@ Custom Icons
 @layer input-common { #input {
     accent-color: var(--uc-accent-color-5) !important;
 }}
-
+:root {
+    --sidebar-box-background: var(--uc-browser-color) !important;
+}
 /* Tabs -----------------------------------------------------------*/
     
 #main-window:not([lwtheme]) {
