@@ -119,7 +119,7 @@ bookmarks autohide
     @media not -moz-pref("ultima.navbar.float") {
         #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
             opacity:0 !important;
-            transition:opacity ease 2s;
+            transition:opacity ease 2s 1s;
         }
         :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
         :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
@@ -182,9 +182,10 @@ bookmarks autohide
                         left: 5px !important; top: 1px !important; z-index:999999 !important;
                     }
                 }*/
-                left: 245px !important;
+/*                 left: 245px !important; */
+                left: 55px !important;
                 width: 800px !important; height: 40px !important;
-                @media -moz-pref("ultima.navbar.bookmarks.float.right") {
+                @media -moz-pref("ultima.navbar.bookmarks.position","right") {
                     left: unset !important; transform: translateX(0) !important;
                     right: 17px !important;
                 }
@@ -194,6 +195,8 @@ bookmarks autohide
     }
 }
 /* bookmarks centered ------------------------------------------------------------------------------- */
+
+/* can be simplified if using the new bool approach */
 
 @media -moz-pref("ultima.navbar.bookmarks.position","center") { @media not -moz-pref("ultima.navbar.bookmarks.float") {
     #main-window, #main-window:not([lwtheme]) {
