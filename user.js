@@ -118,19 +118,7 @@ user_pref("user.theme.xtension.YT", false);
 user_pref("user.theme.xtension.reddit", false);
 /*user_pref("ultima.theme.menubar", true); mark for removal */
 user_pref("user.theme.xtension.swap.addon.colors", true);
-user_pref("user.theme.xtras.tab.outline.color.black", false);
-user_pref("user.theme.xtras.tab.outline.color.white", false);
-user_pref("user.theme.xtras.tab.outline.color.gradient", true);
-/*user_pref("user.theme.xtras.tab.outline.color.lightblue", false);
-user_pref("user.theme.xtras.tab.outline.color.green", false);
-user_pref("user.theme.xtras.tab.outline.color.pink", false);
-user_pref("user.theme.xtras.tab.outline.color.purple", false);
-user_pref("user.theme.xtras.tab.outline.color.red", false);
-user_pref("user.theme.xtras.tab.outline.color.gold", false);*/
-/*user_pref("user.theme.xtension.extensions.icon.default", false);
-user_pref("user.theme.xtension.bookmarks.icon.default", false);
-user_pref("user.theme.xtension.ublock.icon.default", false);*/
-
+user_pref("user.theme.xtras.tab.outline.color", "gradient");
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);
