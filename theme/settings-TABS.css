@@ -217,47 +217,47 @@ tab containers
 
 /* tab outline colors ------------------------------------------------------------------------------------------- */
 
-@media -moz-pref("user.theme.xtras.tab.outline.color.black") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","black") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: black !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.white") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","white") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: white !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.blue") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","blue") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: blue !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.gold") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","gold") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: gold !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.green") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","green") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: green !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.lightblue") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","lightblue") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: lightblue !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.pink") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","pink") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: pink !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.purple") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","purple") {
     #main-window[lwtheme], #main-window:not([lwtheme]) {
         --tab-selected-outline-color: purple !important;
     }
 }
-@media -moz-pref("user.theme.xtras.tab.outline.color.gradient") {
+@media -moz-pref("user.theme.xtras.tab.outline.color","gradient") {
     @keyframes filter{from{ filter: hue-rotate(0deg) } to { filter: hue-rotate(360deg) }}
     .tabbrowser-tab[selected] > .tab-stack::after{
         grid-area: 1/1;

@@ -280,7 +280,10 @@ Custom Icons
     }
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
-        color: var(--uc-accent-color-1) !important;
+        color: var(--uc-accent-color-6) !important;
+        &[selected] {
+            color: var(--uc-tab-selected-text) !important;
+        }
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
