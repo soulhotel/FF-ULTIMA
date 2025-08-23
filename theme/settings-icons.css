@@ -12,6 +12,13 @@ themed icons can be overridden with either default icons or other icon sets
 /* extension icon default */
 @media -moz-pref("ultima.disable.contextmenu.icons") {
     #contentAreaContextMenu {
+        .menu-icon[src*="moz-extension://"] {
+            visibility: collapse !important;
+        }
+    }
+}
+@media -moz-pref("ultima.disable.contextmenu.icons.all") {
+    #contentAreaContextMenu {
         .menu-icon {
             visibility: collapse !important;
         }
