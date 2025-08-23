@@ -53,6 +53,7 @@ body::after {
     top: 180px;
     right: 110px;
     height: 115px;
+    min-height:90px;
     max-height:13vh;
     width: 25vw;
     min-width: 200px;
@@ -61,7 +62,8 @@ body::after {
     border-radius: 8px;
     white-space: pre-line;
     line-height: 1.3;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    text-align: center;
     color: var(--in-content-text-color);
     background: var(--background-color-box);
     box-shadow: 0px 6px 6px 6px rgba(15, 15, 15, 0.6);
@@ -252,6 +254,47 @@ body::after {
     @media -moz-pref("ultima.navbar.autohide") {
         body::after {
             content: "\ Only use one of these settings! \A \A  ultima.navbar.autohide \A ultima.navbar.float \A ";
+            display: block;
+        }
+    }
+}
+
+@media -moz-pref("ultima.navbar.float") {
+    @media -moz-pref("ultima.navbar.bookmarks.float") {
+        body::after {
+            content: "\ These settings dont mix well! \A \A  ultima.navbar.float \A ultima.navbar.bookmarks.float \A ";
+            display: block;
+        }
+    }
+}
+
+
+@media -moz-pref("ultima.navbar.bookmarks.centered") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `navbar.bookmarks.centered` is no more. Try typing `center` into bookmarks.position \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.navbar.bookmarks.centered") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `navbar.bookmarks.float.right` is no more. Try typing `right` into bookmarks.position \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.navbar.bookmarks.centered") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.navbar.bookmarks.centered` is handled by bookmarks.position now. Please delete the old setting \A ";
+        display: block;
+    }
+}
+
+
+@media -moz-pref("ultima.navbar.float") {
+    @media -moz-pref("ultima.navbar.bookmarks.float") {
+        body::after {
+            content: "\ These settings dont mix well! \A \A  ultima.navbar.float \A ultima.navbar.bookmarks.float \A ";
             display: block;
         }
     }

@@ -20,11 +20,11 @@ bookmarks autohide
         @media not -moz-pref("ultima.spacing.compact") {
             #browser {margin-top:3px;}
         }
-        @media -moz-pref("sidebar.verticalTabs") {
-        /*  #nav-bar {padding-left:42px !important;} */
+/*         @media -moz-pref("sidebar.verticalTabs") {
+         #nav-bar {padding-left:42px !important;}
             #PersonalToolbar {padding-left: 54px !important;}
-        /*  #toolbar-menubar {padding-left: 54px !important;} */
-        }
+         #toolbar-menubar {padding-left: 54px !important;}
+        } */
         
         /* alright, lets try this again */
         
@@ -198,30 +198,47 @@ bookmarks autohide
 
 /* can be simplified if using the new bool approach */
 
-@media -moz-pref("ultima.navbar.bookmarks.position","center") { @media not -moz-pref("ultima.navbar.bookmarks.float") {
-    #main-window, #main-window:not([lwtheme]) {
-        #PlacesToolbarItems {
-            @media only screen and (min-width: 1000px) {justify-content: center !important;}
+@media -moz-pref("ultima.navbar.bookmarks.position","center") { 
+    @media not -moz-pref("ultima.navbar.bookmarks.float") { 
+        @media not -moz-pref("ultima.navbar.float") {
+            #main-window, #main-window:not([lwtheme]) {
+                #PlacesToolbarItems {
+                    @media only screen and (min-width: 1000px) {justify-content: center !important;}
+                }
+            }
         }
     }
-}}
-@media -moz-pref("ultima.navbar.bookmarks.position","center") { @media not -moz-pref("ultima.navbar.bookmarks.float") { @media not -moz-pref("ultima.navbar.bookmarks.position","right") {
-    #main-window, #main-window:not([lwtheme]) {
-        #PlacesToolbarItems {
-            @media only screen and (min-width: 1000px) {justify-content: center !important;}
+}
+@media -moz-pref("ultima.navbar.bookmarks.position","center") { 
+    @media not -moz-pref("ultima.navbar.bookmarks.float") { 
+        @media not -moz-pref("ultima.navbar.bookmarks.position","right") { 
+            @media not -moz-pref("ultima.navbar.float") {
+                #main-window, #main-window:not([lwtheme]) {
+                    #PlacesToolbarItems {
+                        @media only screen and (min-width: 1000px) {justify-content: center !important;}
+                    }
+                }
+            }
         }
     }
-}}}
-@media -moz-pref("ultima.navbar.bookmarks.position","center") { @media -moz-pref("ultima.navbar.bookmarks.float") { @media not -moz-pref("ultima.navbar.bookmarks.position","right") {
-     #main-window, #main-window:not([lwtheme]) {
-        #PersonalToolbar {
-            left:50vw !important; transform: translateX(-50%);
+}
+@media -moz-pref("ultima.navbar.bookmarks.position","center") { 
+    @media -moz-pref("ultima.navbar.bookmarks.float") { 
+        @media not -moz-pref("ultima.navbar.bookmarks.position","right") { 
+            @media not -moz-pref("ultima.navbar.float") {
+                 #main-window, #main-window:not([lwtheme]) {
+                    #PersonalToolbar {
+                        left:50vw !important; transform: translateX(-50%);
+                    }
+                }
+            }
         }
     }
-}}}
+}
 #personal-toolbar-empty {
     width: 5px !important;
 }
+
 
 /* bookmarks autohide ------------------------------------------------------------------------------- */
 
@@ -273,6 +290,8 @@ bookmarks autohide
         }
     }
 }}
+
+
 
 /* bookmarks compact -------------------------------------------------------------------------------- */
 
