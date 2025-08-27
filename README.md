@@ -1,18 +1,23 @@
-# <p align="center"> FF ULTIMA... Companions! </p>
+# <p align="center"> Additional projects associated with FF Ultima </p>
 
-###### <p align="center">. . . Experimental Companions Branch.</p>
+###### <p align="center">. . . This branch is mostly for display / documentation.</p>
 
-<div align="center">
+### <ins> 0. Repository</ins>
 
-![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) <!-- ![GitHub Release Date](https://img.shields.io/github/release-date/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue) --> ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/soulhotel/ff-ultima/total?style=for-the-badge&color=blue) ![GitHub Repo stars](https://img.shields.io/github/stars/soulhotel/FF-CSS-ULTIMA?style=for-the-badge) ![GitHub contributors](https://img.shields.io/github/contributors/soulhotel/FF-ULTIMA?style=for-the-badge&color=blue)
+https://api.github.com/repos/soulhotel/FF-ULTIMA
 
-</div>
 
-### <ins> 1. FF Ultima - Companion
 
-[FF Add-On Store](https://addons.mozilla.org/en-US/firefox/addon/ff-ultima-companion/)
+### <ins> 1. userChrome Companion</ins>
 
-> Obsolete extension - pref API'S are not accessible/limited for Firefox.
+> A userchrome extension that makes it easier to set,manage, and share (presets) different userchrome styles.
+
+https://github.com/user-attachments/assets/3aeadb12-dd2a-403b-a31f-0cb5784489ba
+
+
+### <ins> 1. FF Ultima - Companion</ins>
+
+> Obsolete [extension](https://addons.mozilla.org/en-US/firefox/addon/ff-ultima-companion/) - pref API'S are not accessible/limited for Firefox.
 
 
 https://github.com/user-attachments/assets/bbd96ce1-3589-4f58-98d0-c50c7f9b1a3c
@@ -20,28 +25,7 @@ https://github.com/user-attachments/assets/bbd96ce1-3589-4f58-98d0-c50c7f9b1a3c
 https://github.com/user-attachments/assets/67a1a0a0-3d93-4e2e-a0ad-aaae76d14bef
 
 
-### <ins> 0. API & Size (01.05.2025)
 
-https://api.github.com/repos/soulhotel/FF-ULTIMA
-```
-cloc output (v1.8.5 - 07.25.2024)
--------------------------------------------------------------------------------
-Language                     files          blank        comment           code
--------------------------------------------------------------------------------
-CSS
-Markdown
-SVG
-JavaScript
-JSON
--------------------------------------------------------------------------------
-SUM:
--------------------------------------------------------------------------------
-
-```
-
-### <ins> 0. API & Size (07.25.2024)
-
-https://api.github.com/repos/soulhotel/FF-ULTIMA
 ```
 cloc output (v1.8.5 - 07.25.2024)
 -------------------------------------------------------------------------------
