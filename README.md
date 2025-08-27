@@ -1,21 +1,28 @@
 # <p align="center"> Additional projects associated with FF Ultima </p>
 
-###### <p align="center">. . . This branch is mostly for display / documentation.</p>
-
-### <ins> 0. Repository</ins>
-
-https://api.github.com/repos/soulhotel/FF-ULTIMA
+###### <p align="center">https://api.github.com/repos/soulhotel/FF-ULTIMA</p>
 
 
 
-### <ins> 1. userChrome Companion</ins>
+### <ins>git userChrome</ins>
 
-> A userchrome extension that makes it easier to set,manage, and share (presets) different userchrome styles.
+> An automation tool for installing userChrome Themes
+
+![test](./assets/gituserchrome/preview.gif)
+
+<!-- ![preview](https://github.com/user-attachments/assets/f582b3d6-1e43-45d2-aa3b-b452e26c4990) -->
+
+
+
+### <ins>userChrome Companion</ins>
+
+> A userchrome extension that makes it easier to set, manage, and share (presets) different userchrome styles.
 
 https://github.com/user-attachments/assets/3aeadb12-dd2a-403b-a31f-0cb5784489ba
 
 
-### <ins> 1. FF Ultima - Companion</ins>
+
+### <ins>FF Ultima - Companion</ins>
 
 > Obsolete [extension](https://addons.mozilla.org/en-US/firefox/addon/ff-ultima-companion/) - pref API'S are not accessible/limited for Firefox.
 
