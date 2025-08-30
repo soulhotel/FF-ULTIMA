@@ -631,8 +631,9 @@ tab-group .tabbrowser-tab {
 .toolbarbutton-badge-stack, .toolbarbutton-text {
     transition: background-color 0.6s ease !important;
 }
-.tab-context-line, .tabbrowser-tab {
+.tab-context-line/*, .tabbrowser-tab*/ {
     transition: background-color 2s ease 0.5s !important;
+    /* 8/30/2025 .tabbrowser-tab:not([pinned]) {transition: min-width 100ms ease-out, max-width 100ms ease-out;}*/
 }
 .tab-group-line {
     transition: opacity 0.8s ease 0.2s !important;
