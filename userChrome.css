@@ -47,4 +47,5 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @media -moz-pref("ultima.spacing.compact.menus") {
     .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
         --arrowpanel-menuitem-padding: 4px 8px;
+    }
 }

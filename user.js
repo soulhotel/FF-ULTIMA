@@ -34,6 +34,7 @@ user_pref("ultima.navbar.bookmarks.compact", false);
 user_pref("ultima.navbar.bookmarks.position", "center");
 user_pref("ultima.navbar.bookmarks.scrollable", true);
 user_pref("ultima.navbar.bookmarks.float", false);
+user_pref("ultima.navbar.bookmarks.hide.icons", false);
 user_pref("ultima.navbar.windowcontrols.carl", false);
 user_pref("ultima.navbar.windowcontrols.trafficlights", false);
 user_pref("ultima.navbar.windowcontrols.whiteout", false);
@@ -49,6 +50,7 @@ user_pref("ultima.urlbar.centered", true);
 user_pref("ultima.urlbar.hide.buttons", false);
 user_pref("ultima.urlbar.transparent", false);
 user_pref("ultima.urlbar.float", false);
+user_pref("ultima.urlbar.drags.window", false);
 
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);

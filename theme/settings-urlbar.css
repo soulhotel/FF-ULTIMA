@@ -113,3 +113,15 @@ File Desc:         Alternative Styles for the URL Bar
     }
 }
 
+@media -moz-pref("ultima.urlbar.drags.window") {
+    #urlbar-container, .urlbar-input-box, .urlbar-input {
+      -moz-window-dragging: drag;
+      cursor: default;
+    }
+    .urlbar-input-container > box,
+    #page-action-buttons, #urlbar-container:focus-within,
+    #urlbar-container:focus-within :is(#urlbar-container, .urlbar-input-box, .urlbar-input) {
+      -moz-window-dragging: no-drag;
+      cursor: auto;
+    }
+}
