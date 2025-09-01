@@ -77,7 +77,7 @@ bookmarks autohide
             @media (max-width: 1250px) {left: 1.5%; right: 1.5%;}
             border-radius: 18px !important;
             box-shadow: var(--uc-box-shadow) !important;
-            transition: top 0.2s ease 0.5ms !important;
+            transition: top 0.06s ease 0.5ms !important;
             z-index: 99999999999 !important;
             height: calc(var(--uc-topbars-combined-height) + 10px) !important;
             padding: 4px !important;
