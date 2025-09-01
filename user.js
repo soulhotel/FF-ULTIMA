@@ -3,10 +3,10 @@
 ┏┓┏┓  ┳┳┓ ┏┳┓┳┳┳┓┏┓
 ┣ ┣   ┃┃┃  ┃ ┃┃┃┃┣┫
 ┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
-                   
+
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki/Settings
-Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest                 
+Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest
 License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 2.0
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
@@ -118,6 +118,7 @@ user_pref("ultima.theme.icons", true);
 user_pref("user.theme.xtension.ublock", true);
 user_pref("user.theme.xtension.YT", false);
 user_pref("user.theme.xtension.reddit", false);
+user_pref("ultima.scrollbar.thin", false);
 /*user_pref("ultima.theme.menubar", true); mark for removal */
 user_pref("user.theme.xtension.swap.addon.colors", true);
 user_pref("user.theme.xtras.tab.outline.color", "gradient");
@@ -181,7 +182,5 @@ user_pref("general.smoothScroll", true);
 user_pref("general.smoothScroll.msdPhysics.enabled", true);
 
 /* extra privacy */
-user_pref("browser.send_pings", false); 
+user_pref("browser.send_pings", false);
 user_pref("extensions.pocket.enabled", false);
-
-
