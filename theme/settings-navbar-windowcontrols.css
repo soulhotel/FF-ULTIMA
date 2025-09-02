@@ -113,6 +113,9 @@ fine adjustments for specific themes
     /* windows custom ttb */
     @media (-moz-platform: windows) {
         /* readjust appearance, size, & borders */
+        .titlebar-buttonbox-container {
+            margin-inline:-5px -2px;
+        }
         .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
              & > .toolbarbutton-icon {
                  -moz-default-appearance: none !important;
