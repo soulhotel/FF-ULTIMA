@@ -6,7 +6,7 @@ If you havent done so already, skim through the [wiki](https://github.com/soulho
 
 ## How to contribute
 
-FF Ultima is a pretty modular theme. Every feature is accounted for while built on top of a very solid foundation. With over 80+ settings and hundreds of combinations between them, it's important to protect the structural integrity of the theme. So here are a few guidelines that can help do just that.
+FF Ultima is a pretty modular theme. Every feature is accounted for while built on top of a very solid foundation. With over 80+ settings and a number of combinations between them, it's important to protect the structural integrity of the theme, so.. here are a few guidelines that can help do just that.
 
 > *Assuming that you already know the basics of forking and pulling*
 
@@ -17,13 +17,13 @@ FF Ultima is a pretty modular theme. Every feature is accounted for while built 
 5. Your request, if to an existing feature, should be placed accordingly to the features existing code block (determined by moz-pref sections in the related source file).
     - For example: a change to a tab related setting like `tabs.belowurlbar` would belong to `chrome/theme/settings-TABS.css` & a change to `urlbar.float` would belong to `chrome/theme/settings-urlbar.css`. In their relevant sections.
 6. Try to limit your changes to an existing directory.
-7. New settings should be given a simple & conventional name.
+7. New settings should be given a literal (straight-forward) name. Example: `urlbar.do.this`
 8. No AI generated code. For my sanity.
 
 ## Theme structure
 
-Theme structure is important and organized in such a way that finding specific categories, features, or subjects are easy.
-And user preferences try to follow the naming convention as well. They're seperated and indexed within the relevant files for easy finding (visually & with ctrl+f).
+The theme is organized in such a way that finding specific subjects, categories, or features are easy.
+And user preferences try to follow the naming convention based on their file placements as well. The settings are seperated and indexed within the relevant file for easy finding (visually & with ctrl+f).
 > *Below is a tree of the major source files. This structure should be easy to navigate, but feel free to open an issue if you see room for improvement.*
 
 ```
@@ -55,7 +55,7 @@ And user preferences try to follow the naming convention as well. They're sepera
 ├── userChrome.css
 ├── userContent.css
 └── user.js
-└── changelog.md (feel free to log your changes if you want to)
+└── changelog.md (feel free to document/credit your change here if you want to)
 ```
 
 ## Documentation
