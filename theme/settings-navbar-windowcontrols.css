@@ -114,7 +114,7 @@ fine adjustments for specific themes
     @media (-moz-platform: windows) {
         /* readjust appearance, size, & borders */
         .titlebar-buttonbox-container {
-            margin-inline:-5px -2px;
+            margin-inline:-2px -2px;
         }
         .titlebar-min, .titlebar-max, .titlebar-restore, .titlebar-close {
              & > .toolbarbutton-icon {
@@ -126,6 +126,7 @@ fine adjustments for specific themes
                  height: 12px !important;
                  border-radius: 10px !important;
                  margin-top:-1px !important;
+                 margin-left: -1px !important;
             }
         }
     }
