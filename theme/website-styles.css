@@ -16,6 +16,15 @@ bing declutter
     scrollbar-color: rgba(110, 110, 110, 0.3) rgba(255,255,255, 0) !important;
 }
 
+@media -moz-pref("ultima.scrollbar.thin") {
+    :root {
+        scrollbar-width: thin !important;
+    }
+    * {
+        scrollbar-width: thin !important;
+    }
+}
+
 /* PIP button */
 .pip-wrapper {transform: scale(0.6);}
 
@@ -36,6 +45,3 @@ bing declutter
     }
 
 }
-
-
-
