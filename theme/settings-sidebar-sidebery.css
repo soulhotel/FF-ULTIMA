@@ -131,22 +131,36 @@ with a visual indicator to slightly improve accessibility.
 
 /* this method allows the sidebar-splitter (resizeable bar) to be used to resize the expanded sidebar width */
 
-    :root {--browser-content-margin-4-sb-autohide:40px;}
-
+    #sidebar-box, #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+        will-change: max-width !important;
+    }    
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover {
+        /* animation when expanding (speed, delay) */
+        transition: max-width 0.2s linear 0s !important;
+    }
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) {
+        /* animation when collapsing (speed, delay) */
+        transition: max-width 0.2s linear 0s !important;
+    }
+    
+/* positioning, collapsed width, minimum & maximums */
+    
+    :root {
+        /* used to match content with sidebar in various "spacing" scenarios*/
+        --browser-content-margin-4-sb-autohide:40px;
+    }
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) {
+        /* collapsed width */
         --uc-sidebar-collapsed-width: 38px;
-        --uc-autohide-sidebar-delay: 0ms;
         position: relative;
-        min-width: 14em;
+        min-width: var(--uc-sidebar-collapsed-width);
         max-width: var(--uc-sidebar-collapsed-width) !important;
-        transition: max-width 0.2s linear 0ms !important;
     }
     #main-window:has(#sidebar-splitter:hover) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover,
     #main-window:has(#sidebar-splitter:hover) #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not(:hover) {
-        min-width: 14em;
+        min-width: var(--uc-sidebar-collapsed-width);
         max-width: 75vw !important;
     }
-
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend] {
         direction: rtl;
     }
@@ -159,20 +173,10 @@ with a visual indicator to slightly improve accessibility.
     #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][positionend]:-moz-locale-dir(rtl)>* {
         direction: rtl;
     }
-
-    #sidebar-box {
-        transition: max-width 0.4s linear 0ms !important;
-        min-width: var(--uc-sidebar-collapsed-width) !important;
-        will-change: max-width;
-    }
-    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:hover>#sidebar {
-        transition: max-width 115ms linear 0s !important;
-        max-width: var(--uc-sidebar-collapsed-width) !important;
-        transition-delay: 0ms !important;
-    }
     .sidebar-panel {
         background-color: transparent !important;
     }
+    
 }
 }
 
