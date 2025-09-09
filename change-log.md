@@ -22,12 +22,13 @@ Firefox 143+ required
 - `fix • 🔴 •` Horizontal tabs grow/shrink animation has been restored to original state 823b916 #366
 - `new • 🟢 •` Setting `ultima.scrollbar.thin` forces a more thin scrollbar, especially useful for Windows 10 users #368 @mrodyhin
 - `new • 🟢 •` Setting `ultima.disable.contextmenu.icons` to disable the extension icons in context menus 095b014
+- `new • 🟢 •` Setting `ultima.disable.contextmenu.icons.all` to even remove the back, forward, reload icons 095b014
 - `new • 🟢 •` Setting `ultima.urlbar.drags.window` lets you reposition the browser by dragging the url bar cae7765
 - `new • 🟢 •` Setting `ultima.navbar.bookmarks.hide.icons` hides bookmark toolbar icons for a clean look cae7765
-- `qol • 🟡 •` Setting `ultima.navbar.float` transition speed has been reduced (it reveals itself faster) bd1b34f
+- `qol • 🟡 •` Setting `ultima.navbar.float` transition speed has been reduced (it reveals itself faster) bd1b34f #367
+- `qol • 🟡 •` Setting `ultima.tabs.multiline.labels`, with positioning adjustments to close button on hover, this option is no longer experimental!
 - `qol • 🟡 •` Default Color Scheme (dark mode) pinned tabs adopt a faded out blue instead of chaotic yellow 225b69a
-- `qol • 🟡 •` About:config notifications updated
-- `qol • 🟡 •` Wiki updated
+- `qol • 🟡 •` Gradient outline color is no longer a default config
 <!--
 `fyi • ℹ️ •`
 `fix • 🔴 •` 

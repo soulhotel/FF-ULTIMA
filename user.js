@@ -56,7 +56,7 @@ user_pref("ultima.urlbar.drags.window", false);
 user_pref("ultima.sidebar.autohide", false);
 user_pref("ultima.sidebar.seperator", false);
 user_pref("ultima.sidebar.hide.header", true);
-user_pref("ultima.sidebar.revamped.hide.when.horizontal", false);
+user_pref("ultima.sidebar.revamped.hide.when.horizontal", true);
 
 /* sidebery */
 user_pref("ultima.sidebery.autohide", true);
@@ -121,7 +121,7 @@ user_pref("user.theme.xtension.reddit", false);
 user_pref("ultima.scrollbar.thin", false);
 /*user_pref("ultima.theme.menubar", true); mark for removal */
 user_pref("user.theme.xtension.swap.addon.colors", true);
-user_pref("user.theme.xtras.tab.outline.color", "gradient");
+user_pref("user.theme.xtras.tab.outline.color", "none");
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);
