@@ -28,6 +28,8 @@ Firefox 143+ required
 - `qol • 🟡 •` Setting `ultima.navbar.float` transition speed has been reduced (it reveals itself faster) bd1b34f #367
 - `qol • 🟡 •` Setting `ultima.tabs.multiline.labels`, with positioning adjustments to close button on hover, this option is no longer experimental!
 - `qol • 🟡 •` Default Color Scheme (dark mode) pinned tabs adopt a faded out blue instead of chaotic yellow 225b69a
+- `qol • 🟡 •` Instead of relying on "hover", nav bar autohide visibility becomes more persistent when accounting for menu panels that are "open" 9b77063
+- `qol • 🟡 •` tab group label 3 spacing is more consistent with regular tabs, and new highlight background (Firefox Nightly 144) removed 9b77063
 - `qol • 🟡 •` Gradient outline color is no longer a default config
 <!--
 `fyi • ℹ️ •`

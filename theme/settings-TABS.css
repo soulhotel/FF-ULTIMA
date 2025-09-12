@@ -392,6 +392,7 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 .tab-group-label-hover-highlight {
     background: none !important;
     box-shadow: none !important;
+    margin: 0 !important;
 }
 
 /* tab groups labels -------------------------------------------------------------------------------------------- */
@@ -501,7 +502,10 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         }
         #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
             color: transparent !important;
-            margin-left: 14px !important;
+            margin-left: 15px !important;
+        }
+        .tab-group-label {
+            margin-left: 16px !important;
         }
         .tab-group-label {
             text-align: left !important;
