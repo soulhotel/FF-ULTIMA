@@ -56,7 +56,7 @@ bookmarks autohide
         }   
         /* exceptions for menu interactions */
         &:has(#placesContext:hover),  &:has(#appMenu-popup[panelopen="true"]), &:has(#downloads-button-autohide-panel:hover),
-        &:has(#appMenu-notification-popup:hover), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
+        &:has(#appMenu-notification-popup[panelopen="true"]), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
         &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]),
         &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"])
         {
@@ -103,7 +103,7 @@ bookmarks autohide
         }   
         /* exceptions for menu interactions */
         &:has(#placesContext:hover),  &:has(#appMenu-popup[panelopen="true"]), &:has(#downloads-button-autohide-panel:hover),
-        &:has(#appMenu-notification-popup:hover), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
+        &:has(#appMenu-notification-popup[panelopen="true"]), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
         &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]),
         &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"])
         {

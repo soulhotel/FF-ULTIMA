@@ -387,6 +387,13 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
     margin-left:-1px !important;
 }
 
+/* 9/12/2025 new tab hover element creating extra backgrounds */
+
+.tab-group-label-hover-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
 /* tab groups labels -------------------------------------------------------------------------------------------- */
 
 /* Label Style T, Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy, always visible label */
@@ -465,28 +472,28 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
     :root:has(#tabbrowser-tabs[orient="vertical"]) {
         /*defaults*/
         .tab-group-label-container, .tab-group-label {
-            max-height:15px !important; height:15px !important; min-height:15px !important;
+            max-height:25px !important; height:25px !important; min-height:25px !important;
             min-width:18px !important; max-width:95% !important;
         }
         /* visibility */
         .tab-group-label {
-            border-radius:17px !important;
-            line-height:0.9 !important;
-            z-index:5 !important;
-            margin-top: -2px !important;
-            &[aria-expanded="true"] {margin-top: 2px !important;}
-            &:hover {transform:scale(1.05); transition: transform ease 0.4s;}
+            border-radius: 17px !important;
+            line-height: 0.9 !important;
+            z-index: 5 !important;
+            margin-top: 5px !important;
+            &[aria-expanded="true"] {margin-top: 10px !important;}
+            /*&:hover {transform:scale(1.01); transition: transform ease 0.4s;}*/
         }
          /*appearance*/
         .tab-group-label {
             outline: none !important;
             color: var(--tab-group-color-invert) !important;
-            background-color:transparent !important;
+            background-color: transparent !important;
             background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
             background-repeat: no-repeat;
             background-position: left 5.5px top 1px;
             -moz-context-properties: fill; fill: var(--tab-group-color-invert);
-            align-self:unset !important;
+            align-self: unset !important;
         }
         /*collapsed*/
         tab-group[collapsed] .tab-group-label {
@@ -494,11 +501,12 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
         }
         #sidebar-main:not([sidebar-launcher-expanded]) .tab-group-label {
             color: transparent !important;
-            margin-left:14px !important;
+            margin-left: 14px !important;
         }
         .tab-group-label {
+            text-align: left !important;
             #tabbrowser-tabs[orient="vertical"][expanded] & {
-                padding: 0px 12px !important;
+                padding: 0px 32px !important;
             }
         }
     }
