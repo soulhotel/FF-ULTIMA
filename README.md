@@ -26,11 +26,9 @@
 
 ## Features
 
-FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Systems supported</ins>.. but Users can use this theme in multiple layouts. `Tabs on top`, `under the Url bar`, `Vertical tabs`, `Sidebery`, `Hidden`, etc. And configure the theme in multiple ways; with [settings](https://ff-ultima.github.io/docs/category/settings) for spacing, autohiding, accessibility, colors, and so much more. FF Ultima fully supports usage with add-on themes and trys its best to support extensions like [Sidebery](https://ff-ultima.github.io/docs/settings/sidebery) and [Auto Tab Color](https://ff-ultima.github.io/docs/settings/adaptive-tab-color) automatically, so Users are not restricted in what they want to use and how they want to use it. Autoconfig is somewhat supported as well. But most importantly.. almost everything you see or don't see is an optional setting that can be turned on or off. Learn more about [what FF Ultima has to offer](https://ff-ultima.github.io/docs/getting-started#what-does-ff-ultima-have-to-offer) through the [FF Ultima Wiki](https://ff-ultima.github.io).
+FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Systems supported</ins>.. but Users can use this theme in multiple layouts. `Tabs on top`, `under the Url bar`, `Vertical tabs`, `Sidebery`, `Hidden`, etc. And configure the theme in multiple ways; with [settings](https://ff-ultima.github.io/docs/category/settings) for spacing, autohiding, accessibility, colors, and so much more. FF Ultima fully supports usage with add-on themes and trys its best to support extensions like [Sidebery](https://ff-ultima.github.io/docs/settings/sidebery) and [Auto Tab Color](https://ff-ultima.github.io/docs/settings/adaptive-tab-color) automatically, so Users are not restricted in what they want to use and how they want to use it. Autoconfig is somewhat supported as well. But most importantly.. almost everything you see or don't see is an optional setting that can be turned on or off. Learn more about [what FF Ultima has to offer](https://ff-ultima.github.io/docs/getting-started#what-does-ff-ultima-have-to-offer) through the [FF Ultima Wiki](https://ff-ultima.github.io/docs/getting-started).
 
 ## Getting Started
-
-You can find helpful documentation for <ins>everything</ins> theme related, in the [wiki](https://ff-ultima.github.io/docs/getting-started). And IF you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
 
 You can download the theme in multiple ways, choose one (video demonstrations included).
 
@@ -42,7 +40,9 @@ You can download the theme in multiple ways, choose one (video demonstrations in
 
 FF Ultima's (wiki) documentation has been moved to: https://ff-ultima.github.io/
 
-Compared to the built-in [github wiki](https://github.com/soulhotel/FF-ULTIMA/wiki), a dedicated website allows for a lot more organization, a lot more detail, higher quality video previews and demonstrations. And most importantly, greater search/indexing for help, settings, or configuration for the theme. While everything is already setup and ported over, the roadmap still includes porting all remaining video demonstrations into youtube embedded sources and a search/search-bar request from [Algora docsearch](https://docsearch.algolia.com/) to quickly search up topics. You can expect a lot more scale and functionality in the future, and if you ever want to contribute an idea or document something there, you can contribute docs by simply creating markdown file(s) here: https://github.com/ff-ultima/ff-ultima.github.io, [contributing]((https://github.com/ff-ultima/ff-ultima.github.io?tab=contributing-ov-file))
+You can find help docs for <ins>everything</ins> theme related, in there. And IF you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
+
+Compared to githubs [built-in wiki](https://github.com/soulhotel/FF-ULTIMA/wiki), a dedicated website gives a lot more room for organization, detail, and higher quality video demonstrations. Most importantly, greater search/indexing for help, settings, and theme configs. While everything is already setup and ported over, the roadmap still includes sourcing all the remaining video demos to youtube embedded and a search/search-bar request from [Algora docsearch](https://docsearch.algolia.com/). So expect a lot more scale and functionality in the future, and if you ever want to contribute an idea or document something there, you can contribute docs by simply creating markdown file(s) here: https://github.com/ff-ultima/ff-ultima.github.io
 
 
 
