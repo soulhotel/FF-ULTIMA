@@ -2,7 +2,9 @@
 
 Contributing to FF Ultima can range from creation of color-schemes, to feature request, to wiki documentation, to brainstorming solutions for problems in the issues forum. This guide will focus mostly on Pull Request for new features, changes, and fixes for existing issues.
 
-If you havent done so already, skim through the [wiki](https://github.com/soulhotel/FF-ULTIMA/wiki) or [settings wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/SETTINGS) in case your request might have already been addressed. For any other questions regarding contributing, feel free to open an [issue](https://github.com/soulhotel/FF-ULTIMA/issues).
+If you havent done so already, skim through the [wiki](https://ff-ultima.github.io/docs/getting-started#theme-settings) or [settings wiki](https://ff-ultima.github.io/docs/category/settings) in case your request might have already been addressed. For any other questions regarding contributing, feel free to open an [issue](https://github.com/soulhotel/FF-ULTIMA/issues).
+
+Looking to [Contribute to the Wiki? ->](https://github.com/ff-ultima/ff-ultima.github.io?tab=contributing-ov-file)
 
 ## How to contribute
 
@@ -13,12 +15,11 @@ FF Ultima is a pretty modular theme. Every feature is accounted for while built 
 1. Focus on one subject/feature per pull request.
 2. The amount of commits or changes do not matter so long as they do not conflict with other existing features.
 3. Follow the themes structure for placement of subject/feature
-4. Your request can most likely be segregated to one existing source file.
+4. Your request can most likely be implemented in an already existing source file.
 5. Your request, if to an existing feature, should be placed accordingly to the features existing code block (determined by moz-pref sections in the related source file).
     - For example: a change to a tab related setting like `tabs.belowurlbar` would belong to `chrome/theme/settings-TABS.css` & a change to `urlbar.float` would belong to `chrome/theme/settings-urlbar.css`. In their relevant sections.
-6. Try to limit your changes to an existing directory.
-7. New settings should be given a literal (straight-forward) name. Example: `urlbar.do.this`
-8. No AI generated code. For my sanity.
+6. New settings should be given a literal (straight-forward) name. Example: `urlbar.do.this`
+7. No AI generated code. For my sanity.
 
 ## Theme structure
 
@@ -60,6 +61,8 @@ And user preferences try to follow the naming convention based on their file pla
 
 ## Documentation
 
-A lot of the documentation is made up of comments, descriptions, images, gifs, and previews from the wiki, change logs, and issues as well. If you want Users to see something a specific way, feel free to make previews for the documentation and include them either in the change-log or when Submitting PR. There is no direct way to contribute to the Wiki right now, but feel free to open an [issue](https://github.com/soulhotel/FF-ULTIMA/issues) if you see room for improvement there.
+A lot of the FF Ultima documentation is pulled from comments and descriptions found in the theme's source files. And images/gifs/previews from the Wiki. If you want Users to see something a specific way, feel free to make comments, previews, or even new documentation when submitting PR. The Wiki is also open to contribution via https://github.com/ff-ultima/ff-ultima.github.io.
+
+Contributing to the wiki is as simple as creating a new markdown file [here](https://github.com/ff-ultima/ff-ultima.github.io/tree/main/docs), or editting the existing documents found in the docs/ folder. So if you ever see room for improvement, any and all request are welcome.
 
 # Thank you for reading!

@@ -104,15 +104,17 @@ tab containers
         max-height: 120px !important;
     }
     @media not -moz-pref("ultima.tabs.closetabbutton.on.icon") {
-        .tab-close-button {
-            position: fixed;
-            @media not -moz-pref("ultima.tabs.reverse.content.order") {
-                right: 18px;
+        #sidebar-main {
+            .tab-close-button {
+                position: fixed;
+                @media not -moz-pref("ultima.tabs.reverse.content.order") {
+                    right: 18px;
+                }
+                @media -moz-pref("ultima.tabs.reverse.content.order") {
+                    left: 18px;
+                }
             }
-            @media -moz-pref("ultima.tabs.reverse.content.order") {
-                left: 18px;
-            }
-        }   
+        }
     }
 }
 
