@@ -15,9 +15,7 @@ body:
       label: "My Checklist:"
       description: "![image](https://github.com/user-attachments/assets/7c3c1fb9-8080-4823-9994-23e6af91498e) <br> First time install? If you don't see this ↑ welcome message on your about:config page, follow the install guide [Steps 4-7](https://github.com/soulhotel/FF-ULTIMA/wiki/How-to-Install-the-Theme#installation)"
       options:
-        - label: "I've looked at the [FF Ultima Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki)."
-          required: true
-        - label: "I've seen the welcome message on about:config."
+        - label: "I've looked at the [FF Ultima Wiki](https://ff-ultima.github.io/docs/getting-started)."
           required: true
         - label: "🟠 My Browser is Firefox (Default)."
         - label: "🟣 My Browser is Firefox (Nightly)."
