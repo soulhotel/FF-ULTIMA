@@ -58,7 +58,8 @@ bookmarks autohide
         &:has(#placesContext:hover),  &:has(#appMenu-popup[panelopen="true"]), &:has(#downloads-button-autohide-panel:hover),
         &:has(#appMenu-notification-popup[panelopen="true"]), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
         &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]),
-        &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"])
+        &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
+        &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[panelopen="true"]), &:has(.browser-extension-panel[panelopen="true"]) /* how did i completely gloss over the fact that i should just target by similarities */
         {
             #navigator-toolbox {top:0 !important;}
         }
@@ -105,7 +106,8 @@ bookmarks autohide
         &:has(#placesContext:hover),  &:has(#appMenu-popup[panelopen="true"]), &:has(#downloads-button-autohide-panel:hover),
         &:has(#appMenu-notification-popup[panelopen="true"]), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
         &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]),
-        &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"])
+        &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
+        &:has(#full-page-translations-panel[panelopen="true"])
         {
             #navigator-toolbox {top: 14px !important;}
         }
