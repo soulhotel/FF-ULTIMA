@@ -102,11 +102,12 @@ tab containers
         white-space: wrap !important;
         word-wrap: break-word;
         max-height: 120px !important;
+        margin-right: 15px !important;
     }
     @media not -moz-pref("ultima.tabs.closetabbutton.on.icon") {
         #sidebar-main {
             .tab-close-button {
-                position: fixed;
+                position: absolute;
                 @media not -moz-pref("ultima.tabs.reverse.content.order") {
                     right: 18px;
                 }
