@@ -20,7 +20,7 @@ themed icons can be overridden with either default icons or other icon sets
 /* hide all context menu icons */
 @media -moz-pref("ultima.disable.contextmenu.icons.all") {
     #contentAreaContextMenu {
-        .menu-icon {
+        .menu-icon, #context-sep-navigation {
             visibility: collapse !important;
         }
     }
