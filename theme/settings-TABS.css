@@ -47,6 +47,9 @@ tab containers
         min-height: fit-content !important;
         max-height: fit-content !important;
     }
+    #pinned-tabs-container[orient="horizontal"] {
+        min-width: fit-content !important;
+    }
 }
 
 /* new tab button ----------------------------------------------------------------------------------------------- */
