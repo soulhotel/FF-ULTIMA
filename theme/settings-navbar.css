@@ -59,7 +59,11 @@ bookmarks autohide
         &:has(#appMenu-notification-popup[panelopen="true"]), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
         &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]),
         &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
-        &:has(#full-page-translations-panel[panelopen="true"])
+        &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"])
+        {
+            #navigator-toolbox {top:0 !important;}
+        }
+        &:has(#urlbar[focused=""])
         {
             #navigator-toolbox {top:0 !important;}
         }
@@ -67,7 +71,7 @@ bookmarks autohide
     }
 }
 
-@media -moz-pref("ultima.navbar.float") {
+@media -moz-pref("ultima.navbar.float"), -moz-pref("ultima.navbar.float.fullsize") {
     #main-window:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
         @media not -moz-pref("ultima.spacing.compact") {
             #browser {margin-top:3px;}
@@ -75,6 +79,7 @@ bookmarks autohide
         #navigator-toolbox {
             position: absolute !important;
             top: 14px; left: 20%; right: 20%;
+            @media -moz-pref("ultima.navbar.float.fullsize") {left: 12px; right: 12px;}
             @media (max-width: 1250px) {left: 1.5%; right: 1.5%;}
             border-radius: 18px !important;
             box-shadow: var(--uc-box-shadow) !important;
@@ -105,11 +110,15 @@ bookmarks autohide
         /* exceptions for menu interactions */
         &:has(#placesContext:hover),  &:has(#appMenu-popup[panelopen="true"]), &:has(#downloads-button-autohide-panel:hover),
         &:has(#appMenu-notification-popup[panelopen="true"]), &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
-        &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]),
+        &:has(#unified-extensions-context-menu:hover), &:has(#notification-popup:hover), &:has(.bookmark-item[open="true"]), &:has(#tabContextMenu:hover),
         &:has(#blockedPopupOptions:hover), &:has(#toolbar-context-menu:hover), &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
-        &:has(#full-page-translations-panel[panelopen="true"])
+        &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"])
         {
             #navigator-toolbox {top: 14px !important;}
+        }
+        &:has(#urlbar[focused=""])
+        {
+            #navigator-toolbox {top:0 !important;}
         }
         #urlbar[breakout-extend="true"] {top: 14px !important;}
     }
@@ -118,17 +127,19 @@ bookmarks autohide
 /* nav bar hide buttons (off hover)  ---------------------------------------------------------------- */
 
 @media -moz-pref("ultima.navbar.hidebuttons") {
-    @media not -moz-pref("ultima.navbar.float") {
-        #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
-            opacity:0 !important;
-            transition:opacity ease 2s 1s;
-        }
-        :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
-        :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
-        :root:has(#downloadsPanel[panelopen="true"]) #downloads-button,
-        #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"],
-        #nav-bar:not(:focus-within):not(:hover) #urlbar-searchmode-switcher[open] {
-            opacity: 1 !important;
+    @media not -moz-pref("ultima.navbar.float") { 
+        @media not -moz-pref("ultima.navbar.float.fullsize") {
+            #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
+                opacity:0 !important;
+                transition:opacity ease 2s 2s;
+            }
+            :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
+            :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
+            :root:has(#downloadsPanel[panelopen="true"]) #downloads-button,
+            #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"],
+            #nav-bar:not(:focus-within):not(:hover) #urlbar-searchmode-switcher[open] {
+                opacity: 1 !important;
+            }
         }
     }
 }
@@ -164,36 +175,38 @@ bookmarks autohide
 
 @media -moz-pref("ultima.navbar.bookmarks.float") {
     @media not -moz-pref("ultima.navbar.float") {
-        :root {--uc-bookbar-height:0px !important;}
-        #main-window, #main-window:not([lwtheme]) {
-            /* floating setup */
-            & #PersonalToolbar {
-                z-index: 1 !important;
-                background: var(--uc-browser-color) !important;
-                border-radius: calc(var(--uc-button-border) + 8px) !important;
-                box-shadow: var(--uc-box-shadow) !important;
-                padding:0 !important;
-                position:fixed !important;
-                top: calc(var(--uc-topbars-combined-height) + 5px) !important;
-                @media not -moz-pref("sidebar.VerticalTabs"){
-                    top: calc(var(--uc-topbars-combined-height) + 10px) !important;
-                }
-                /*
-                @media not -moz-pref("ultima.navbar.bookmarks.centered") {
-                    @media not -moz-pref("ultima.navbar.bookmarks.float.right") {
-                        left: 5px !important; top: 1px !important; z-index:999999 !important;
+        @media not -moz-pref("ultima.navbar.float.fullsize") {
+            :root {--uc-bookbar-height:0px !important;}
+            #main-window, #main-window:not([lwtheme]) {
+                /* floating setup */
+                & #PersonalToolbar {
+                    z-index: 1 !important;
+                    background: var(--uc-browser-color) !important;
+                    border-radius: calc(var(--uc-button-border) + 8px) !important;
+                    box-shadow: var(--uc-box-shadow) !important;
+                    padding:0 !important;
+                    position:fixed !important;
+                    top: calc(var(--uc-topbars-combined-height) + 5px) !important;
+                    @media not -moz-pref("sidebar.VerticalTabs"){
+                        top: calc(var(--uc-topbars-combined-height) + 10px) !important;
                     }
-                }*/
-/*                 left: 245px !important; */
-                left: 55px !important;
-                width: 800px !important; height: 40px !important;
-                @media -moz-pref("ultima.navbar.bookmarks.position","right") {
-                    left: unset !important; transform: translateX(0) !important;
-                    right: 17px !important;
+                    /*
+                    @media not -moz-pref("ultima.navbar.bookmarks.centered") {
+                        @media not -moz-pref("ultima.navbar.bookmarks.float.right") {
+                            left: 5px !important; top: 1px !important; z-index:999999 !important;
+                        }
+                    }*/
+    /*                 left: 245px !important; */
+                    left: 55px !important;
+                    width: 800px !important; height: 40px !important;
+                    @media -moz-pref("ultima.navbar.bookmarks.position","right") {
+                        left: unset !important; transform: translateX(0) !important;
+                        right: 17px !important;
+                    }
                 }
             }
+            #main-window[lwtheme] { & #PersonalToolbar{ background: var(--lwt-accent-color) !important;} }
         }
-        #main-window[lwtheme] { & #PersonalToolbar{ background: var(--lwt-accent-color) !important;} }
     }
 }
 /* bookmarks centered ------------------------------------------------------------------------------- */
@@ -203,18 +216,7 @@ bookmarks autohide
 @media -moz-pref("ultima.navbar.bookmarks.position","center") { 
     @media not -moz-pref("ultima.navbar.bookmarks.float") { 
         @media not -moz-pref("ultima.navbar.float") {
-            #main-window, #main-window:not([lwtheme]) {
-                #PlacesToolbarItems {
-                    @media only screen and (min-width: 1000px) {justify-content: center !important;}
-                }
-            }
-        }
-    }
-}
-@media -moz-pref("ultima.navbar.bookmarks.position","center") { 
-    @media not -moz-pref("ultima.navbar.bookmarks.float") { 
-        @media not -moz-pref("ultima.navbar.bookmarks.position","right") { 
-            @media not -moz-pref("ultima.navbar.float") {
+            @media not -moz-pref("ultima.navbar.float.fullsize") {
                 #main-window, #main-window:not([lwtheme]) {
                     #PlacesToolbarItems {
                         @media only screen and (min-width: 1000px) {justify-content: center !important;}
@@ -225,12 +227,29 @@ bookmarks autohide
     }
 }
 @media -moz-pref("ultima.navbar.bookmarks.position","center") { 
+    @media not -moz-pref("ultima.navbar.bookmarks.float") { 
+        @media not -moz-pref("ultima.navbar.bookmarks.position","right") { 
+            @media not -moz-pref("ultima.navbar.float") {
+                @media not -moz-pref("ultima.navbar.float.fullsize") {
+                    #main-window, #main-window:not([lwtheme]) {
+                        #PlacesToolbarItems {
+                            @media only screen and (min-width: 1000px) {justify-content: center !important;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media -moz-pref("ultima.navbar.bookmarks.position","center") { 
     @media -moz-pref("ultima.navbar.bookmarks.float") { 
         @media not -moz-pref("ultima.navbar.bookmarks.position","right") { 
             @media not -moz-pref("ultima.navbar.float") {
-                 #main-window, #main-window:not([lwtheme]) {
-                    #PersonalToolbar {
-                        left:50vw !important; transform: translateX(-50%);
+                @media not -moz-pref("ultima.navbar.float.fullsize") {
+                     #main-window, #main-window:not([lwtheme]) {
+                        #PersonalToolbar {
+                            left:50vw !important; transform: translateX(-50%);
+                        }
                     }
                 }
             }
@@ -319,8 +338,8 @@ bookmarks autohide
     }
 }}
 
-
 /* bookmarks hide icons ----------------------------------------------------------------------------- */
+
 
 @media -moz-pref("ultima.navbar.bookmarks.hide.icons") {
     .bookmark-item {

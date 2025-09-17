@@ -3,6 +3,17 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Alternative Styles for the URL Bar
 
+ultima.urlbar.transparent
+ultima.urlbar.hide.buttons.in.edge
+ultima.urlbar.hide.searchsuggestions
+ultima.urlbar.centered
+ultima.urlbar.hide.buttons
+ultima.urlbar.hide.buttons.in.edge
+ultima.urlbar.animate.open
+ultima.urlbar.animate.options
+ultima.urlbar.float
+ultima.urlbar.drags.window
+
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 /* urlbar settings --------------------------------------------------- */
@@ -51,6 +62,22 @@ File Desc:         Alternative Styles for the URL Bar
     #urlbar:hover #tracking-protection-icon-container {
         opacity: 1 !important;
         transition: opacity 100ms ease !important;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.hide.buttons.in.edge") {
+/* hides the action buttons within the url bar, until the select area is hovered */
+/* the spacing of the url input text is effected by this, so hiding these buttons to achieve more space will also result in the text jumping around a bit */
+    #identity-box, #page-action-buttons {
+        transition: max-width 0.5s ease, opacity 0.7s ease !important;
+        max-width:fit-content !important;
+        opacity: 1 !important;
+        overflow: hidden;
+        &:not(:hover) {
+            transition: max-width 1s ease, opacity 0.2s ease !important;
+            max-width: 16px !important;
+            opacity: 0 !important;
+        }
     }
 }
 
