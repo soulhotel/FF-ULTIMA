@@ -571,7 +571,10 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
     }      
     .top-site-outer .top-site-inner > a {
         padding: 1px 1px 1px !important;
-    }   
+    }
+    .top-site-outer {
+        width: 110px !important;
+    }  
 }
 
 
