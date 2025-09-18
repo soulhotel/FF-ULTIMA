@@ -38,9 +38,12 @@ You can download the theme in multiple ways, choose one (video tutorials include
 
 ## Documentation
 
-FF Ultima's (wiki) documentation has been moved to: https://ff-ultima.github.io. You can find help docs for <ins>everything</ins> theme related in there. And IF you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
+FF Ultima's (wiki) documentation has been moved to: https://ff-ultima.github.io. You can find detailed help docs for <ins>everything</ins> theme related in there. And if you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
 
-Compared to githubs [built-in wiki](https://github.com/soulhotel/FF-ULTIMA/wiki), the website gives a lot more room for organization, detail, higher quality video demos, and most importantly, greater search/indexing. And While everything is already setup and ported over, the roadmap still includes sourcing all the remaining video demos to youtube embedded and a search/search-bar request from [Algora docsearch](https://docsearch.algolia.com/). So expect a lot more scale and functionality in the future, and if you want to contribute to documentation, you can contribute docs by simply creating markdown file(s) here: https://github.com/ff-ultima/ff-ultima.github.io
+## Enjoy
+
+
+<!-- sponsors --><!-- sponsors -->
 
 
 
@@ -178,8 +181,5 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (irm 'https://raw.gi
 </details>
 
 
-## Enjoy
 
-
-<!-- sponsors --><!-- sponsors -->
 

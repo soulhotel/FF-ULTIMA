@@ -17,6 +17,14 @@ Sourced:           https://github.com/datguypiko/Firefox-Mod-Blur
         --firefoxcss-number-of-extensions-in-a-row: 4; /* icons per row */
     }
 
+
+    #unified-extensions-view #unified-extensions-manage-extensions {
+        text-align: center !important;
+        .toolbarbutton-text {
+            text-align: center !important;
+            font-size:0.8em;
+        }
+    }    
     #unified-extensions-view .panel-header,
     #unified-extensions-view .panel-header + toolbarseparator,
     #unified-extensions-view .panel-subview-body + toolbarseparator,
