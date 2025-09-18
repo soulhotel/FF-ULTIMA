@@ -63,7 +63,7 @@ bookmarks autohide
         {
             #navigator-toolbox {top:0 !important;}
         }
-        &:has(#urlbar[focused=""])
+        &:has(#urlbar[focused=""][breakout-extend="true"])
         {
             #navigator-toolbox {top:0 !important;}
         }
@@ -116,7 +116,7 @@ bookmarks autohide
         {
             #navigator-toolbox {top: 14px !important;}
         }
-        &:has(#urlbar[focused=""])
+        &:has(#urlbar[focused=""][breakout-extend="true"])
         {
             #navigator-toolbox {top:0 !important;}
         }
