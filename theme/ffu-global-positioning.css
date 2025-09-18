@@ -324,16 +324,19 @@ even when fullscreen mode, we track
 }
 /*full screen compacting*/
 #main-window[sizemode="fullscreen"] * {
-    /*rounded corners*/
-    --uc-content-border-radius: 0px;
-    --uc-tab-border-radius: 0px;
-    --uc-sidebar-border-radius: 0px;
-    /* margins */
-    --uc-content-margins: 0px !important;
-    --uc-tab-margins-left: 0px;
-    --uc-tab-margins-right: 0px;
-    --uc-sb-margins: 0px !important;
-    --uc-sb-margins-right: 0px !important;
+    @media not (-moz-os-version: macos), (-moz-platform: macos) {
+        /* 9/18/2025 - due to macs differences in fullscreen and maximized state, full screen compacting will be limited to not mac */
+        /*rounded corners*/
+        --uc-content-border-radius: 0px;
+        --uc-tab-border-radius: 0px;
+        --uc-sidebar-border-radius: 0px;
+        /* margins */
+        --uc-content-margins: 0px !important;
+        --uc-tab-margins-left: 0px;
+        --uc-tab-margins-right: 0px;
+        --uc-sb-margins: 0px !important;
+        --uc-sb-margins-right: 0px !important;
+    }
 }
 :root[uidensity="compact"]:not([customizing],[chromehidden~="menubar"]) {--uc-navbar-height: 38px;}
 

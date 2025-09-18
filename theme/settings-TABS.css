@@ -14,6 +14,7 @@ multiline tabs
 tabs close button on icon
 tabs reversed content order
 tab/page progress bar
+disable scrollbar
 tab outline colors
 tab groups adjustments
 tab groups labels
@@ -229,6 +230,19 @@ tab containers
         :has(findbar:focus-within), :has(findbar:focus), :has(findbar:focus-visible), :has(findbar:hover) {
             #tabbrowser-tabbox::after {bottom:45px;}
         }
+    }
+}
+
+/* disable scrollbar -------------------------------------------------------------------------------------------- */
+/* to basically hide the scrollbar within the vertical tabs container, behavior on this is iffy, so 0 opacity seemed like a viable solution for now */
+@media -moz-pref("ultima.tabs.disable.scrollbar") {
+    :root {
+      --vertical-tabs-scrollbar-color: transparent !important;
+    }
+    #vertical-tabs #tabbrowser-tabs #tabbrowser-arrowscrollbox {
+        border-bottom: 0px solid transparent !important;
+        scrollbar-width: 0 !important;
+        scrollbar-color: rgba(255, 270, 80, 0) rgba(255,225,5, 0) !important;
     }
 }
 
