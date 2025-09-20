@@ -944,6 +944,10 @@ button[label="Stay on page"] {
         fill: var(--toolbar-color) !important;
     }
 }
+button[part="dialog-button"] {
+    --button-background-color-primary: var(--uc-accent-color-1) !important;
+    --button-background-color-primary-hover: var(--uc-accent-color-2) !important;
+}
 
 /* Status Panel --------------------------------------------------------------------------------------------- */
 
