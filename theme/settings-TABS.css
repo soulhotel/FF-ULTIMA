@@ -64,11 +64,10 @@ tab containers
     #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}
 }
 @media -moz-pref("ultima.tabs.newtabbutton.ontop.2") {
-    #tabbrowser-arrowscrollbox-periphery {order: -1 !important;}
-    #vertical-tabs-newtab-button {order: -1 !important;}
-    #vertical-tabs-newtab-button {order: -1 !important;}
-    #pinned-tabs-container {order: -2 !important;}
+    #pinned-tabs-container {order: -3 !important;}
     #vertical-pinned-tabs-splitter {order: -2 !important;}
+    #vertical-tabs-newtab-button {order: -1 !important; display:flex !important;}
+    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}
 }
 
 /* disable tab update dot --------------------------------------------------------------------------------------- */
