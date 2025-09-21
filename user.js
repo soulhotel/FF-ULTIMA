@@ -28,6 +28,7 @@ user_pref("user.theme.fluent.thinkpad", false);
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.float", false);
+// user_pref("ultima.navbar.float.fullsize", false);
 user_pref("ultima.navbar.hidebuttons", true);
 user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);
@@ -86,6 +87,7 @@ user_pref("ultima.tabs.tabgroups.label.tthornton", false);
 user_pref("ultima.tabs.tabgroups.background.1", false);
 user_pref("ultima.tabs.tabgroups.background.2", true);
 user_pref("ultima.tabs.tabgroups.background.3", false);
+user_pref("ultima.tabs.disable.scrollbar", false);
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);
