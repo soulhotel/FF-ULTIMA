@@ -248,8 +248,13 @@ with a visual indicator to slightly improve accessibility.
        & #tabbrowser-tabbox {
             --browser-content-margin-4-sb-autohide:0px !important;
         }
-    }        
-    
+    }       
+}
+@media -moz-pref("ultima.navbar.float") {
+    #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] {
+        top: 5px !important;
+        height:calc(100vh - 11px) !important;
+    }
 }
 }
 }
