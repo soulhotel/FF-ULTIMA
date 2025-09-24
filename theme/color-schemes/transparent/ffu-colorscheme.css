@@ -188,6 +188,7 @@ Custom Icons
     /* keep consistency with the navigation assets (including the tabs container) */
     & #navigator-toolbox {
         background-color: var(--uc-navbar-background) !important;
+        backdrop-filter: blur(25px);
     }
     & #browser { /*BACKGROUNDCOLOR CAN BE SAFELY MODIFIED*/
         background: var(--uc-browser-color) !important;
@@ -201,6 +202,16 @@ Custom Icons
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
+    }
+}
+
+/* Nav bar -------------------------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.navbar.float"), -moz-pref("ultima.navbar.float.fullsize"), -moz-pref("ultima.navbar.autohide") {
+    #main-window:not([lwtheme]) {
+         & #navigator-toolbox {
+             background-color: color-mix(in srgb, var(--uc-layered-background) 60%, black) !important;
+        }
     }
 }
 
@@ -472,6 +483,16 @@ Custom Icons
     menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
         background-color: var(--uc-button-selected) !important;
         color: var(--uc-accent-color-5) !important;
+    }
+}
+
+/* Status Panel --------------------------------------------------------------------------------------------- */
+
+#statuspanel {
+    & #statuspanel-label {
+        background-color: color-mix(in srgb, var(--uc-blur-layer) 70%, black) !important;
+        backdrop-filter: blur(50px) !important;
+        color: var(--uc-text) !important;
     }
 }
 

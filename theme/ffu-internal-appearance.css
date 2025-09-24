@@ -767,7 +767,7 @@ span.button-background.labelled label {
 }
 .tools-and-extensions[orientation="horizontal"] {
     justify-content: center !important;
-    margin-left: -10px !important;
+    margin-inline: auto;
 }
 /*6/24/2025 new splitters yay.*/
 #sidebar-tools-and-extensions-splitter {
