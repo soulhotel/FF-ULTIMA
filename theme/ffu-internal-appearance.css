@@ -266,10 +266,10 @@ toolbar { &:-moz-window-inactive {background-color: var(--toolbar-bgcolor) !impo
 }
 /* visibility - notification badge on toolbar buttons */
 .toolbarbutton-badge {
-    box-shadow: 0 !important;
+    /* box-shadow: 0 !important;
     background-color: rgba(0,0,0,0.08) !important;
     color: var(--uc-text) !important;
-    text-shadow: dimgray 0.5px 0 15px!important;
+    text-shadow: dimgray 0.5px 0 15px!important; */
 }
 /* full screen button in the Menu (≡) */
 #appMenu-fullscreen-button2 > .toolbarbutton-icon {
