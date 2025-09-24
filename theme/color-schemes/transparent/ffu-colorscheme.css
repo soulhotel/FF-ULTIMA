@@ -490,9 +490,9 @@ Custom Icons
 
 #statuspanel {
     & #statuspanel-label {
-        background-color: color-mix(in srgb, var(--uc-blur-layer) 70%, black) !important;
+        background-color: color-mix(in srgb, var(--uc-blur-layer) 20%, black) !important;
         backdrop-filter: blur(50px) !important;
-        color: var(--uc-text) !important;
+        color: white !important;
     }
 }
 
