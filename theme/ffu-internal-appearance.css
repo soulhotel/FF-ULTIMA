@@ -71,38 +71,76 @@ Border Hunter
 
 /* All of these Variables - Control the color of ADD ON Themes. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
-#main-window[lwtheme] {
-    --uc-browser-color:      var(--toolbar-bgcolor);
-    --uc-text:               var(--lwt-text-color);
-    --uc-layered-background: color-mix(in srgb, var(--toolbar-bgcolor) 80%, black);
-    --uc-navbar-background:  var(--toolbar-bgcolor);
-    --uc-urlbar-background:  color-mix(in srgb, var(--lwt-accent-color) 80%, black);
-    --uc-findbar-background: var(--uc-layered-background);
-    --uc-sidebar-background: color-mix(in srgb, var(--lwt-accent-color) 80%, black);
-    --uc-tabsbar-background: var(--uc-browser-color);
-    --uc-tab-background:     transparent;
-    --uc-tab-selected:       var(--uc-layered-background);
-    --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --tab-selected-bgcolor: var(--uc-tab-selected) !important;
-    --tab-selected-outline-color: color-mix(in srgb, var(--toolbar-field-focus-background-color) 90%, white) !important;
-    --uc-button-selected:    var(--button-background-color-ghost-hover);
-    --uc-button-red:         #f54e4e;
-    --uc-context-menu:       color-mix(in srgb, var(--lwt-accent-color) 80%, black);
-    --uc-panel-background:   color-mix(in srgb, var(--lwt-accent-color) 80%, black);
-    --uc-panel-border:       rgba(25, 25, 25, 0.5);
-    --uc-panel-border-ii:    rgba(45, 45, 45, 0.5);
-    --uc-accent-color-1:     AccentColor;
-    --uc-accent-color-2:     AccentColor;
-    --uc-accent-color-3:     AccentColor;
-    --uc-accent-color-4:     var(--color-accent-primary-hover);
-    --uc-accent-color-5:     var(--lwt-text-color);
-    --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
-    --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
-    --uc-button-border-radius: 10px !important;
-    --button-border-radius: var(--uc-button-border-radius) !important;
-    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
-    --panel-item-hover-bgcolor: var(--uc-layered-background) !important;
+@media (prefers-color-scheme: dark) {
+    #main-window[lwtheme] {
+        --uc-browser-color:      var(--toolbar-bgcolor);
+        --uc-text:               var(--lwt-text-color);
+        --uc-layered-background: color-mix(in srgb, var(--toolbar-bgcolor) 80%, black);
+        --uc-navbar-background:  var(--toolbar-bgcolor);
+        --uc-urlbar-background:  color-mix(in srgb, var(--lwt-accent-color) 80%, black);
+        --uc-findbar-background: var(--uc-layered-background);
+        --uc-sidebar-background: color-mix(in srgb, var(--lwt-accent-color) 80%, black);
+        --uc-tabsbar-background: var(--uc-browser-color);
+        --uc-tab-background:     transparent;
+        --uc-tab-selected:       var(--uc-layered-background);
+        --uc-tab-selected-text:  var(--uc-accent-color-5);
+        --tab-selected-bgcolor: var(--uc-tab-selected) !important;
+        --tab-selected-outline-color: color-mix(in srgb, var(--toolbar-field-focus-background-color) 90%, white) !important;
+        --uc-button-selected:    var(--button-background-color-ghost-hover);
+        --uc-button-red:         #f54e4e;
+        --uc-context-menu:       color-mix(in srgb, var(--lwt-accent-color) 80%, black);
+        --uc-panel-background:   color-mix(in srgb, var(--lwt-accent-color) 80%, black);
+        --uc-panel-border:       rgba(25, 25, 25, 0.5);
+        --uc-panel-border-ii:    rgba(45, 45, 45, 0.5);
+        --uc-accent-color-1:     AccentColor;
+        --uc-accent-color-2:     AccentColor;
+        --uc-accent-color-3:     AccentColor;
+        --uc-accent-color-4:     var(--color-accent-primary-hover);
+        --uc-accent-color-5:     var(--lwt-text-color);
+        --uc-transparent:        rgba(0,0,0,0);
+        --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+        --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+        --uc-button-border-radius: 10px !important;
+        --button-border-radius: var(--uc-button-border-radius) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+        --panel-item-hover-bgcolor: var(--uc-layered-background) !important;
+    }
+}
+@media (prefers-color-scheme: light) {
+    #main-window[lwtheme] {
+        --uc-browser-color:      var(--toolbar-bgcolor);
+        --uc-text:               var(--lwt-text-color);
+        --uc-layered-background: color-mix(in srgb, var(--toolbar-bgcolor) 90%, black);
+        --uc-navbar-background:  var(--toolbar-bgcolor);
+        --uc-urlbar-background:  color-mix(in srgb, var(--lwt-accent-color) 80%, white);
+        --uc-findbar-background: var(--uc-layered-background);
+        --uc-sidebar-background: color-mix(in srgb, var(--lwt-accent-color) 80%, white);
+        --uc-tabsbar-background: var(--uc-browser-color);
+        --uc-tab-background:     transparent;
+        --uc-tab-selected:       var(--uc-layered-background);
+        --uc-tab-selected-text:  var(--uc-accent-color-5);
+        --tab-selected-bgcolor: var(--uc-tab-selected) !important;
+        --tab-selected-outline-color: transparent !important;
+        --uc-button-selected:    var(--button-background-color-ghost-hover);
+        --toolbarbutton-active-background: var(--button-background-color-ghost-hover) !important;
+        --uc-button-red:         #f54e4e;
+        --uc-context-menu:       color-mix(in srgb, var(--lwt-accent-color) 30%, white);
+        --uc-panel-background:   color-mix(in srgb, var(--lwt-accent-color) 30%, white);
+        --uc-panel-border:       rgba(25, 25, 25, 0.5);
+        --uc-panel-border-ii:    rgba(45, 45, 45, 0.5);
+        --uc-accent-color-1:     AccentColor;
+        --uc-accent-color-2:     var(--color-accent-primary);
+        --uc-accent-color-3:     AccentColor;
+        --uc-accent-color-4:     var(--color-accent-primary-hover);
+        --uc-accent-color-5:     var(--lwt-text-color);
+        --uc-transparent:        rgba(0,0,0,0);
+        --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+        --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+        --uc-button-border-radius: 10px !important;
+        --button-border-radius: var(--uc-button-border-radius) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+        --panel-item-hover-bgcolor: var(--uc-layered-background) !important;
+    }
 }
 
 /* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
@@ -266,7 +304,7 @@ toolbar { &:-moz-window-inactive {background-color: var(--toolbar-bgcolor) !impo
 }
 /* visibility - notification badge on toolbar buttons */
 .toolbarbutton-badge {
-    /* box-shadow: 0 !important;
+/*     box-shadow: 0 !important;
     background-color: rgba(0,0,0,0.08) !important;
     color: var(--uc-text) !important;
     text-shadow: dimgray 0.5px 0 15px!important; */
@@ -450,6 +488,13 @@ menupopup menuseparator {
     background-color: var(--uc-browser-color) !important;
     z-index:2;
 }
+@media (prefers-color-scheme: light) {
+    #main-window[lwtheme] {
+        findbar {
+            background: var(--lwt-accent-color) !important;
+        }
+    }
+}
 .findbar-container {
     height: 38px !important;
     padding-bottom: 4px !important;
@@ -545,7 +590,7 @@ moz-input-search[placeholder="Search history"] {
 .sidebar-placesTree {
     appearance: none;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
-    color: var(--uc-accent-color-2) !important;
+    color: var(--uc-accent-color-1) !important;
     border-radius: var(--border-radius-medium) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
     @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
@@ -555,7 +600,7 @@ moz-input-search[placeholder="Search history"] {
 moz-card[data-l10n-id*="sidebar-history-date"] {
     appearance: none;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
-    color: var(--uc-accent-color-2) !important;
+    color: var(--uc-accent-color-3) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
     @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
     border: none !important;
@@ -864,7 +909,7 @@ span.button-background.labelled label {
 #main-window[lwtheme] {
     menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
-        --panel-color: color-mix(in srgb, var(--lwt-text-color) 45%, var(--lwt-accent-color)) !important;
+        --panel-color: color-mix(in srgb, var(--lwt-text-color) 75%, var(--lwt-accent-color)) !important;
         --panel-shadow: none !important;
     }
 }
@@ -895,7 +940,7 @@ span.button-background.labelled label {
     }
     & #nav-bar .toolbarbutton-1,
     &  #nav-bar .toolbarbutton-text {
-        color: var(--uc-accent-color-2) !important;
+        color: var(--uc-accent-color-5) !important;
     }
     & .toolbarbutton-icon:hover,
     & .toolbarbutton-icon[open],
@@ -941,7 +986,7 @@ button[label="Stay on page"] {
 #main-window[lwtheme] {
     & #star-button[starred] {
         fill-opacity: 1 !important;
-        fill: var(--toolbar-color) !important;
+/*         fill: var(--toolbar-color) !important; */
     }
 }
 button[part="dialog-button"] {
@@ -1113,7 +1158,7 @@ lets see how many more borders we can hunt down.
         --toolbar-field-color: var(--lwt-text-color) !important;
         --toolbar-field-color: var(--toolbar-color) !important;*/
         --uc-accent-color-1: var(--tab-loading-fill) !important;
-        --uc-accent-color-2: var(--lwt-text-color) !important;
+        --uc-accent-color-2: var(--color-accent-primary) !important;
         --arrowpanel-border-color: var(--toolbar-color) !important;
         --urlbar-box-hover-bgcolor: var(--button-background-color-ghost-hover) !important;
     }

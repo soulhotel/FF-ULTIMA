@@ -49,3 +49,11 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
         --arrowpanel-menuitem-padding: 4px 8px;
     }
 }
+
+.tab-group-label-container, .tab-group-overflow-count-container {
+  #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after, #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group[hasactivetab] > &::after, #tabbrowser-tabs[orient="vertical"] tab-group[hasactivetab][hasmultipletabs] > &.tab-group-overflow-count-container::after {
+    content: "SELECTED" !important;
+    top: 6px !important;
+    left: 36px;
+  }
+}
