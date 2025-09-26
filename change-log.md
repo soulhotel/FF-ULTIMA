@@ -36,8 +36,14 @@
 
 https://github.com/user-attachments/assets/f088369a-d4d0-48dd-ac16-129398969d47
 
+> How Firefox's default Light theme looks now
+
+https://github.com/user-attachments/assets/321f4280-47c0-4e7f-af73-a1202ae289b3
+
 > Tab group counter
 
 <img width="376" height="130" alt="Screenshot_20250925_235006" src="https://github.com/user-attachments/assets/3defa851-9665-42d4-adea-a14e804720eb" />
+
+>
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
