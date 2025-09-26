@@ -57,3 +57,23 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
     left: 36px;
   }
 }
+
+@media -moz-pref("ultima.urlbar.scrollable") {
+    #urlbar-results{
+        max-height: 400px;
+        overflow-y: auto;
+        scrollbar-color: var(--urlbar-separator-color,currentColor) transparent;
+        scrollbar-width: thin
+    }
+    .urlbarView-no-wrap{
+        position: relative;
+    }
+}
+
+@media -moz-pref("ultima.tabs.horizontal.fullwidth") {
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tabbrowser-tab[fadein]:not([style^="max-width"]) {
+            max-width: 99.3vw !important;
+        }
+    }
+}

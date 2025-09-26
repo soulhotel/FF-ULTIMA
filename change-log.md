@@ -1,45 +1,43 @@
-### <ins> FF Ultima Version 3.8 Release
-- **⬇️ [Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.8/ffultima3.8.zip)** direct link.<!--- **⬇️ [Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)** direct link.-->
+### <ins> FF Ultima Version 3.9 Release
+- **⬇️ [Release Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/3.9/ffultima3.9.zip)** direct link.<!--- **⬇️ [Source Download](https://github.com/soulhotel/FF-ULTIMA/archive/refs/heads/main.zip)** direct link.-->
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://ff-ultima.github.io/docs/getting-started).
 - ⚙️ [Change settings](https://ff-ultima.github.io/docs/category/settings), tab size, autohiding, spacing, and more.
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
   
 ### <ins> Version Notes
-- This update focuses on qol improvements to existing settings and Firefox 143 adjustments. And the Wiki has been moved to it's own dedicated website. So better documentation, better searching and organization, more/better quality video demonstrations, more detail.
-- Release notes will now also link the wiki page for a specific topic if you want more detail on it.
+- ...
 - User.js (recommended) not required. 
 - Firefox ~~143+~~ 138+ required.
 <!--
-Firefox 143+ required
 - User.js required. 
 - User.js not required.
 - User.js (recommended) not required. 
 -->
 
 ### <ins> Change Log:
-- `fyi • ℹ️ •` Contributing [guidelines](https://github.com/soulhotel/ff-ultima?tab=contributing-ov-file) have been created #368
-- `fix • 🔴 •` Horizontal tabs grow/shrink animation has been restored to original state #366 823b916
-- `new • 🟢 •` Setting [`ultima.scrollbar.thin`](https://ff-ultima.github.io/docs/settings/all/content-area-settings#ultimascrollbarthin) forces a thinner scrollbar, very useful for Windows 10 users #368 @mrodyhin
-- `new • 🟢 •` Setting `ultima.disable.contextmenu.icons` to disable the extension icons in context menus #366 095b014
-- `new • 🟢 •` Setting `ultima.disable.contextmenu.icons.all` to even remove the back, forward, reload icons 095b014
-- `new • 🟢 •` Setting [`ultima.urlbar.drags.window`](https://ff-ultima.github.io/docs/settings/all/urlbar-settings#ultimaurlbardragswindow) lets you reposition the browser by dragging the url bar cae7765
-- `new • 🟢 •` Setting `ultima.navbar.bookmarks.hide.icons` hides bookmark toolbar icons for a clean look cae7765
-- `qol • 🟡 •` Setting [`ultima.navbar.float`](https://ff-ultima.github.io/docs/settings/all/topbar-settings#ultimanavbarfloat) transition speed has been reduced (it reveals itself faster) #367 bd1b34f
-- `qol • 🟡 •` Setting [`ultima.tabs.multiline.labels`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsmultilinelabels), after some adjustments to the close button on hover, this option is no longer experimental!
-- `qol • 🟡 •` Default Color Scheme (dark mode) pinned tabs adopt a faded out blue instead of chaotic yellow 225b69a
-- `qol • 🟡 •` Instead of relying on "hover", `navbar.autohide` & `navbar.float` visibility becomes more persistent when accounting for menu panels that are "open" 9b77063
-- `qol • 🟡 •` tab group label 3 spacing is more consistent with regular tabs, and new highlight background (Firefox Nightly 144) removed 9b77063 ([wiki](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabstabgroups))
+- `fix • 🔴 •` Sidebery autohide positioning correction when using autohide settings. Thank you #370 @PONYMODZ
+- `new • 🟢 •` Setting [`ultima.tabs.horizontal.fullwidth`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabshorizontalfullwidth) to make horizontal tabs take up all available width
+- `new • 🟢 •` Setting [`ultima.urlbar.scrollable`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabshorizontalfullwidth) let's you scroll through options within the urlbar
 - `qol • 🟡 •` Setting [`ultima.tabs.always.show.pinned`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsalwaysshowpinned) now also applies to horizontal tab layout 87adf51
-- `qol • 🟡 •` Gradient outline color is no longer a default config
+- `qol • 🟡 •` MacOS handles fullscreen/maximized state differently than other OS's, so full screen compacting will also acknowledge that difference for MacOS (3.8+) #375
+- `qol • 🟡 •` Tab group "counter" adjustment
+- `qol • 🟡 •` Transparent color scheme adjustments #379 8bd577b
+- `qol • 🟡 •` Toolbar button badges have been restored/unmodified to default colors #382 568e62f
+- `qol • 🟡 •` Add-on themes (when in light mode) see some improvement to menu contrast and accent color #383 e9ebb67
 <!--
-`fyi • ℹ️ •`
-`fix • 🔴 •` 
-`new • 🟢 •` 
-`qol • 🟡 •` 
-`wip • ℹ️ •` 
+- `fyi • ℹ️ •`
+- `fix • 🔴 •` 
+- `new • 🟢 •` 
+- `qol • 🟡 •` 
+- `wip • ℹ️ •` 
 -->
 
-![github-ezgif com-optimize](https://github.com/user-attachments/assets/2e15a262-931c-4dd8-a3d8-3b5ef2a0c6b5)
+> Setup: tabs.horizontal.fullwidth, tabs.belowURLbar, navbar.bookmarks.hide.icons, navbar.autohide
 
+https://github.com/user-attachments/assets/f088369a-d4d0-48dd-ac16-129398969d47
+
+> Tab group counter
+
+<img width="376" height="130" alt="Screenshot_20250925_235006" src="https://github.com/user-attachments/assets/3defa851-9665-42d4-adea-a14e804720eb" />
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
