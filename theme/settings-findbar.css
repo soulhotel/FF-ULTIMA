@@ -31,6 +31,10 @@ findbar on top
         border-radius: var(--toolbarbutton-border-radius) !important;
         border: solid 2px var(--uc-accent-color-2) !important;
         background-color: var(--uc-accent-color-2) !important;
+        @media (prefers-color-scheme: light) {
+            background-color: color-mix(in srgb,  var(--uc-accent-color-2) 30%, transparent) !important;
+            border: solid 2px color-mix(in srgb,  var(--uc-accent-color-2) 30%, transparent) !important;
+        }
         padding-right: 10px !important;
         padding-left: 10px !important;
         line-height: 1.7 !important;
