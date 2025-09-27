@@ -28,7 +28,7 @@ user_pref("user.theme.fluent.thinkpad", false);
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.float", false);
-// user_pref("ultima.navbar.float.fullsize", false);
+user_pref("ultima.navbar.float.fullsize", false);
 user_pref("ultima.navbar.hidebuttons", true);
 user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);
@@ -42,6 +42,8 @@ user_pref("ultima.navbar.windowcontrols.whiteout", false);
 user_pref("ultima.navbar.windowcontrols.fluent", false);
 user_pref("ultima.navbar.theme.extensionspanel", true);
 user_pref("ultima.disable.windowcontrols.button", false);
+user_pref("ultima.navbar.update.ready.label", true);
+user_pref("ultima.navbar.text.for.icons", false);
 
 /* url bar */
 user_pref("ultima.urlbar.animate.open", true);
@@ -52,6 +54,9 @@ user_pref("ultima.urlbar.hide.buttons", false);
 user_pref("ultima.urlbar.transparent", false);
 user_pref("ultima.urlbar.float", false);
 user_pref("ultima.urlbar.drags.window", false);
+user_pref("ultima.urlbar.scrollable", false);
+user_pref("ultima.urlbar.focus.blur", true);
+user_pref("ultima.urlbar.focus.text.aligns.left", false);
 
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);
@@ -63,6 +68,9 @@ user_pref("ultima.sidebar.revamped.hide.when.horizontal", true);
 user_pref("ultima.sidebery.autohide", true);
 user_pref("ultima.sidebery.expandon.inactive.windows", false);
 user_pref("user.theme.xtension.sidebery", true);
+
+/* findbar */
+user_pref("ultima.findbar.position.top", true);
 
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);
@@ -88,6 +96,8 @@ user_pref("ultima.tabs.tabgroups.background.1", false);
 user_pref("ultima.tabs.tabgroups.background.2", true);
 user_pref("ultima.tabs.tabgroups.background.3", false);
 user_pref("ultima.tabs.disable.scrollbar", false);
+user_pref("ultima.tabs.horizontal.fullwidth", false);
+user_pref("ultima.tab.focus.blur", false);
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);

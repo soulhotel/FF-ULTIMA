@@ -15,3 +15,36 @@ File Desc:         Private Browsing Modifications
 .private-browsing-indicator-with-label {
     display: none !important;
 }
+
+@media -moz-pref("ultima.privatebrowsing.gradient.border") {
+    #main-window[privatebrowsingmode="temporary"] #navigator-toolbox {
+      position: relative;
+      padding: 3px 0 0 0 !important;
+      overflow: hidden;
+    }
+
+    #main-window[privatebrowsingmode="temporary"] #navigator-toolbox::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%,
+        #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100% 
+      ) !important;
+      animation: gradientAnimation 5s linear infinite alternate !important;
+      z-index: -1;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+}

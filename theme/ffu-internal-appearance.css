@@ -590,7 +590,8 @@ moz-input-search[placeholder="Search history"] {
 .sidebar-placesTree {
     appearance: none;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
-    color: var(--uc-accent-color-1) !important;
+    color: var(--uc-accent-color-2) !important;
+    @media (prefers-color-scheme: light) {color: var(--uc-accent-color-1) !important;}
     border-radius: var(--border-radius-medium) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
     @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
@@ -600,7 +601,8 @@ moz-input-search[placeholder="Search history"] {
 moz-card[data-l10n-id*="sidebar-history-date"] {
     appearance: none;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
-    color: var(--uc-accent-color-3) !important;
+    color: var(--uc-accent-color-2) !important;
+    @media (prefers-color-scheme: light) {color: var(--uc-accent-color-1) !important;}
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
     @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
     border: none !important;
@@ -698,12 +700,18 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
     .tabbrowser-tab[pending] .tab-content {
         opacity: 0.1 !important;
     }
+    tab-group .tabbrowser-tab[pending] .tab-content {
+        opacity: 0.2 !important;
+    }
     .tab-icon-image[pending] {
         filter: grayscale(60%) !important;
     }
     @media (prefers-color-scheme: light) {
         .tabbrowser-tab[pending] .tab-content {
             opacity: 0.2 !important;
+        }
+        tab-group .tabbrowser-tab[pending] .tab-content {
+            opacity: 0.3 !important;
         }
     }
 }

@@ -13,6 +13,10 @@ ultima.urlbar.animate.open
 ultima.urlbar.animate.options
 ultima.urlbar.float
 ultima.urlbar.drags.window
+ultima.urlbar.scrollable
+ultima.urlbar.focus.blur
+ultima.urlbar.focus.blur.all
+ultima.urlbar.focus.align.left
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -150,5 +154,93 @@ ultima.urlbar.drags.window
     #urlbar-container:focus-within :is(#urlbar-container, .urlbar-input-box, .urlbar-input) {
       -moz-window-dragging: no-drag;
       cursor: auto;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.scrollable") {
+    #urlbar-results{
+        max-height: 400px;
+        overflow-y: auto;
+        scrollbar-color: var(--urlbar-separator-color,currentColor) transparent;
+        scrollbar-width: thin
+    }
+    .urlbarView-no-wrap{
+        position: relative;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.focus.blur") {
+    #tabbrowser-tabpanels::before {
+        content: "";
+        backdrop-filter: blur(25px);
+        background-color:rgba(1,1,1,0.1);
+
+        z-index: 999;
+        display: flex;
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+
+        border-radius: 10px;
+        margin: var(--uc-content-margins);
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.7s ease;
+    }
+    #main-window:has(#urlbar[breakout-extend="true"]) {
+        #tabbrowser-tabpanels::before {
+            opacity: 1;
+        }
+        browser[type] {
+            backdrop-filter: blur(25px);
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.focus.blur.all") {
+    /* Add the base state for the browser with transitions */
+    #browser {
+        filter: blur(0px);
+        position: relative;
+        transition: 
+            scale     100ms ease-in,
+            filter    300ms ease-out !important;
+        will-change: transform, filter;
+    }
+    /* Base state for the overlay */
+    #browser::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0);
+        pointer-events: none;
+        z-index: 999999;
+        transition: background-color 200ms ease-in-out;
+    }
+    /* Active state with blur and overlay */
+    :root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
+        &:has(#urlbar:is([breakout][breakout-extend], [breakout][usertyping][focused])) {
+            #browser {
+                filter: blur(6px);
+                pointer-events: none;
+                scale: 1.03 !important;
+                &::before {
+                    background: rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.focus.text.aligns.left") {
+    /* Center URL within the address bar */
+    .urlbar-input-box, #PlacesToolbarItems {
+      text-align: center !important;
+      justify-content: center !important;
+    }
+
+    /* Align text to the left when the urlbar or its input is focused */
+    #urlbar:focus-within .urlbar-input-box, #urlbar-input:focus {
+      text-align: left !important;
     }
 }

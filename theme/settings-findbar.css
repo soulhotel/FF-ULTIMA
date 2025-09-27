@@ -1,0 +1,46 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Alternative Styles for the Find Bar
+
+findbar on top
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* findbar on top ------------------------------------------------------------ */
+/*by he (https://github.com/he23251) */
+
+@media -moz-pref("ultima.findbar.position.top") {
+    /* Show searchbox at the top */
+    .browserContainer {
+        flex-direction: column-reverse;
+    }
+
+    /* Add top margin */
+    .browserContainer > findbar {
+        margin-top: 10px;
+    }
+
+    /* Limit the searchbox width */
+    .browserContainer > findbar .findbar-textbox {
+        max-width: 200px;
+    }
+
+    /* Improve searchbox visibility and look */
+    .found-matches {
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        border: solid 2px var(--uc-accent-color-2) !important;
+        background-color: var(--uc-accent-color-2) !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        line-height: 1.7 !important;
+        font-weight: 600 !important;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------------------- */
+

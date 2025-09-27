@@ -15,6 +15,8 @@ tabs close button on icon
 tabs reversed content order
 tab/page progress bar
 disable scrollbar
+horizontal tabs take full width
+tab focus blur
 tab outline colors
 tab groups adjustments
 tab groups labels
@@ -244,6 +246,41 @@ tab containers
         scrollbar-color: rgba(255, 270, 80, 0) rgba(255,225,5, 0) !important;
     }
 }
+
+/* horizontal tabs take full width ------------------------------------------------------------------------------ */
+
+@media -moz-pref("ultima.tabs.horizontal.fullwidth") {
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tabbrowser-tab[fadein]:not([style^="max-width"]) {
+            max-width: 99.3vw !important;
+        }
+    }
+}
+
+/* tab focus blur ----------------------------------------------------------------------------------------------- */
+/* focus/hover over a tab, blurs other tabs */
+
+@media -moz-pref("ultima.tab.focus.blur") {
+    
+    #main-window:has(.tabbrowser-tab:hover) {
+        .tabbrowser-tab .tab-stack {
+            transition: opacity 0.2s ease-out !important;
+            &:not(:hover) {
+                opacity: 0.2;
+                filter: blur(1px);
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
 
 /* tab outline colors ------------------------------------------------------------------------------------------- */
 

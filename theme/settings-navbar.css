@@ -9,6 +9,8 @@ bookmarks scrollable
 bookmarks float
 bookmarks centered
 bookmarks autohide
+update ready label
+navbar text for icons
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -340,13 +342,44 @@ bookmarks autohide
 
 /* bookmarks hide icons ----------------------------------------------------------------------------- */
 
-
 @media -moz-pref("ultima.navbar.bookmarks.hide.icons") {
     .bookmark-item {
         letter-spacing: 0.03rem !important;
         font-weight: 600 !important;
         & .toolbarbutton-icon {
             visibility: collapse !important;
+        }
+    }
+}
+
+/* update ready label ------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.navbar.update.ready.label") {
+    #PanelUI-menu-button[badge-status="update-restart"] .toolbarbutton-text {
+        display: flex !important;
+    }
+    #PanelUI-menu-button[badge-status="update-restart"] .toolbarbutton-text::before {
+        content:"update ready";
+        text-transform: uppercase;
+    }
+}
+
+/* navbar text for icons ---------------------------------------------------------------------------- */
+/* to replaces toolbar icons with their text labels */
+
+@media -moz-pref("ultima.navbar.text.for.icons") {
+    #nav-bar toolbaritem[class="toolbarbutton-1"], #nav-bar toolbarbutton {
+        &:not(#nav-bar-overflow-button, #zoom-in-button, #zoom-out-button, .titlebar-buttonbox-container *, #urlbar *) {
+            .toolbarbutton-icon, .toolbarbutton-badge, image {
+                display: none !important;
+            }
+            .toolbarbutton-badge-stack {
+                padding: 0 !important;
+            }
+            .toolbarbutton-text {
+                display: flex;
+                text-transform: uppercase;
+            }
         }
     }
 }
