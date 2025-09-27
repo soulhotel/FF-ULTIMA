@@ -253,6 +253,7 @@ Border Hunter
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
         border-radius: var(--uc-all-border-radius) !important;
         outline: 10px solid var(--uc-browser-color) !important;
+        @media (prefers-color-scheme: light) {outline: 10px solid var(--lwt-accent-color) !important;}
         outline-offset: -10px !important;
     }
     & #tabbrowser-tabpanels browser[type] {
