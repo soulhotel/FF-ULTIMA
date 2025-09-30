@@ -13,8 +13,8 @@ License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICE
 \////////////////////////////////////////////////////////////////////////////////////////*/
 ```
 
-The .autoconfig/ folder sources userchromejs/autoconfig setup files from https://github.com/AlexVallat/firefox-scripts?tab=readme-ov-file, these files include 1 minor modification that allows users to organize their custom scripts at `chrome/scripts/`.
+The `.autoconfig/` folder sources userchromejs/autoconfig setup files from https://github.com/AlexVallat/firefox-scripts, these files include 1 minor modification that allows users to organize their custom scripts in `chrome/scripts/`.
 
 You can setup autoconfig by simply moving these foundational files out of `.autoconfig/` and into `chrome` and the `firefox directory`. See the wiki documentation for more detail and customization.
 
-https://github.com/soulhotel/FF-ULTIMA/wiki/Autoconfig-Configuration
+https://ff-ultima.github.io/docs/settings/userchrome-and-autoconfig/setup
