@@ -5,8 +5,8 @@
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
   
 ### <ins> Version Notes
-- This update has many new features, a very good fix for sidebery users, and qol updates to the theme
-- User.js (recommended) not required. 
+- This update brings some pretty cool new features with the help of some first time contributors seen below, a very good fix for sidebery users, and some other qol updates to the theme. You can find specific previews for each setting by clicking on it's wiki link below.
+- User.js (recommended) not required.
 - Firefox ~~143+~~ 138+ required.
 <!--
 - User.js required. 
@@ -41,6 +41,18 @@
 - `wip • ℹ️ •` 
 -->
 
+>
+
+---
+
+> ultima.navbar.text.for.icons
+
+<img width="1655" height="54" alt="navbartextforicons" src="https://github.com/user-attachments/assets/2906f7a1-46bf-4a7e-a2d6-dfd75398d9fe" />
+
+> ultima.findbar.position.top
+
+![findbarontop](https://github.com/user-attachments/assets/afdf6bbe-996a-4b32-be76-27858bdc09e6)
+
 > Setup: tabs.horizontal.fullwidth, tabs.belowURLbar, navbar.bookmarks.hide.icons, navbar.autohide
 
 https://github.com/user-attachments/assets/f088369a-d4d0-48dd-ac16-129398969d47
@@ -48,10 +60,6 @@ https://github.com/user-attachments/assets/f088369a-d4d0-48dd-ac16-129398969d47
 > How Firefox's default Light theme looks now
 
 https://github.com/user-attachments/assets/321f4280-47c0-4e7f-af73-a1202ae289b3
-
-> Tab group counter
-
-<img width="376" height="130" alt="Screenshot_20250925_235006" src="https://github.com/user-attachments/assets/3defa851-9665-42d4-adea-a14e804720eb" />
 
 >
 
