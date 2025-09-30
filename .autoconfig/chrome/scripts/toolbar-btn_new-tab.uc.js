@@ -9,14 +9,10 @@
 // Custom New Tab Button Script
 //
 // left-click on custom new tab button: opens a new tab
-// middle-click on custom new tab button: closes the current tab
-//
-// Additional Close Tab Button
-// left-click on custom close tab button: closes the current tab
+// middle-click/right-click on custom new tab button: closes the current tab
 
 UC.CustomNewTabButton = {
     init: function () {
-        // Style for the button icon
         this.STYLE = Services.io.newURI("data:text/css;charset=utf-8," + encodeURIComponent(`
             @-moz-document url('${_uc.BROWSERCHROME}') {
                 #custom-newtab-button .toolbarbutton-icon {
@@ -26,10 +22,7 @@ UC.CustomNewTabButton = {
             }
         `));
         _uc.sss.loadAndRegisterSheet(this.STYLE, _uc.sss.USER_SHEET);
-
         const { CustomizableUI } = window;
-
-        // Create the New Tab button
         CustomizableUI.createWidget({
             id: 'custom-newtab-button',
             type: 'custom',
@@ -41,33 +34,27 @@ UC.CustomNewTabButton = {
                     label: 'New Tab',
                     tooltiptext: 'Left: New Tab | Middle/Right: Close Tab',
                 });
-
                 // Left click → new tab, Middle click → close tab
                 node.addEventListener('click', function (event) {
                     let win = event.target.ownerGlobal;
-                    if (event.button === 0) { // Left click - new tab
+                    if (event.button === 0) {
                         const broadcaster = win.document.getElementById('cmd_newNavigatorTab');
                         if (broadcaster) {
                             broadcaster.doCommand();
                         }
-                    } else if (event.button === 1) { // Middle click - close tab
+                    } else if (event.button === 1) {
                         win.gBrowser.removeCurrentTab();
                     }
                 });
-
-                // Right click → close tab
                 node.addEventListener('contextmenu', function (event) {
                     event.preventDefault();
                     let win = event.target.ownerGlobal;
                     win.gBrowser.removeCurrentTab();
                 });
-
                 return node;
             }
         });
     },
-
-    // Cleanup function
     destroy: function () {
         let win = Services.wm.getMostRecentBrowserWindow();
         win.CustomizableUI.destroyWidget('custom-newtab-button');
