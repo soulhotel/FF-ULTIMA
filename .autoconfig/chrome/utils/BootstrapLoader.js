@@ -4,10 +4,13 @@
 
 'use strict';
 
+const Services = globalThis.Services;
+
 ChromeUtils.defineESModuleGetters(this, {
   Blocklist: 'resource://gre/modules/Blocklist.sys.mjs',
   ConsoleAPI: 'resource://gre/modules/Console.sys.mjs',
   InstallRDF: 'chrome://userchromejs/content/RDFManifestConverter.sys.mjs',
+  ChromeManifest: 'chrome://userchromejs/content/ChromeManifest.sys.mjs',
 });
 
 Services.obs.addObserver(doc => {
@@ -18,7 +21,7 @@ Services.obs.addObserver(doc => {
     win.customElements.get('addon-card').prototype.handleEvent = function (e) {
       if (e.type === 'click' &&
           e.target.getAttribute('action') === 'preferences' &&
-          this.addon.__AddonInternal__.optionsType == 1/*AddonManager.OPTIONS_TYPE_DIALOG*/) {
+          this.addon.__AddonInternal__.optionsType == 1/*AddonManager.OPTIONS_TYPE_DIALOG*/ && !!this.addon.optionsURL) {
         var windows = Services.wm.getEnumerator(null);
         while (windows.hasMoreElements()) {
           var win2 = windows.getNext();
@@ -39,31 +42,40 @@ Services.obs.addObserver(doc => {
     let update_orig = win.customElements.get('addon-options').prototype.update;
     win.customElements.get('addon-options').prototype.update = function (card, addon) {
       update_orig.apply(this, arguments);
-      if (addon.__AddonInternal__.optionsType == 1/*AddonManager.OPTIONS_TYPE_DIALOG*/)
+      if (addon.__AddonInternal__?.optionsType == 1/*AddonManager.OPTIONS_TYPE_DIALOG*/ && !!addon.optionsURL)
         this.querySelector('panel-item[data-l10n-id="preferences-addon-button"]').hidden = false;
     }
   }
 }, 'chrome-document-loaded');
 
-const { AddonManager } = ChromeUtils.importESModule('resource://gre/modules/AddonManager.sys.mjs');
-const { XPIDatabase, AddonInternal } = ChromeUtils.importESModule('resource://gre/modules/addons/XPIDatabase.sys.mjs');
-const { XPIExports } = ChromeUtils.importESModule('resource://gre/modules/addons/XPIExports.sys.mjs');
-
-var orig_verifyBundleSignedState = XPIExports.verifyBundleSignedState;
-XPIExports.verifyBundleSignedState = async (aBundle, aAddon) => {
-  if(!aAddon.isWebExtension && aAddon.type === "extension") return { signedState: undefined, signedTypes: [] };
-  return orig_verifyBundleSignedState(aBundle, aAddon);
-}
+const {AddonManager} = ChromeUtils.importESModule('resource://gre/modules/AddonManager.sys.mjs');
+const {XPIDatabase, AddonInternal} = ChromeUtils.importESModule('resource://gre/modules/addons/XPIDatabase.sys.mjs');
+const {XPIExports} = ChromeUtils.importESModule('resource://gre/modules/addons/XPIExports.sys.mjs')
 
 XPIDatabase.isDisabledLegacy = () => false;
 
+var orig_verifyBundleSignedState = XPIExports.verifyBundleSignedState;
+XPIExports.verifyBundleSignedState = async (aBundle, aAddon) => {
+  if(!aAddon.isWebExtension && aAddon.type === 'extension' || aAddon.id.includes('_N_SIGN_'))
+    return { signedState: undefined, signedTypes: [] };
+  return orig_verifyBundleSignedState(aBundle, aAddon);
+}
+
 ChromeUtils.defineLazyGetter(this, 'BOOTSTRAP_REASONS', () => {
-  const { XPIProvider } = ChromeUtils.importESModule('resource://gre/modules/addons/XPIProvider.sys.mjs');
+  const {XPIProvider} = ChromeUtils.importESModule('resource://gre/modules/addons/XPIProvider.sys.mjs');
   return XPIProvider.BOOTSTRAP_REASONS;
 });
 
-const { Log } = ChromeUtils.importESModule('resource://gre/modules/Log.sys.mjs');
-var logger = Log.repository.getLogger('addons.bootstrap');
+ChromeUtils.defineLazyGetter(this, "logger", () => {
+  let { ConsoleAPI } = ChromeUtils.importESModule(
+    "resource://gre/modules/Console.sys.mjs"
+  );
+  let consoleOptions = {
+     maxLogLevel: "all",
+     prefix: "BootstrapLoader",
+  };
+  return new ConsoleAPI(consoleOptions);
+});
 
 /**
  * Valid IDs fit this pattern.
@@ -369,6 +381,81 @@ var BootstrapLoader = {
     let startup = findMethod('startup');
     let shutdown = findMethod('shutdown');
 
+    /**
+     * Reads content from a jar: URI
+     *
+     * @param {nsIURI} jarURI - The jar: URI to read from
+     * @returns {Promise<string>} The content of the file inside the JAR
+     */
+    async function readFromJarURI(jarURI) {
+      return new Promise((resolve, reject) => {
+        try {
+          const channel = Services.io.newChannelFromURI(
+            jarURI,
+            null,
+            Services.scriptSecurityManager.getSystemPrincipal(),
+            null,
+            Ci.nsILoadInfo.SEC_ALLOW_CROSS_ORIGIN_SEC_CONTEXT_IS_NULL,
+            Ci.nsIContentPolicy.TYPE_OTHER
+          );
+
+          const inputStream = channel.open();
+          const scriptableStream = Cc[
+            '@mozilla.org/scriptableinputstream;1'
+          ].createInstance(Ci.nsIScriptableInputStream);
+          scriptableStream.init(inputStream);
+
+          let data = '';
+          let available = 0;
+          while ((available = scriptableStream.available()) > 0) {
+            data += scriptableStream.read(available);
+          }
+
+          scriptableStream.close();
+          inputStream.close();
+          resolve(data);
+        } catch (e) {
+          reject(e);
+        }
+      });
+    }
+
+    // Register a chrome manifest temporarily and return a function which un-does
+    // the registrarion when no longer needed.
+    function createManifestTemporarily(manifestText) {
+      let tempDir = Services.dirsvc.get('ProfD', Ci.nsIFile)
+      tempDir.append('browser-extension-data');
+      tempDir.append(addon.id);
+      tempDir.append('manifests');
+      if (tempDir.exists()) {
+        // Clean any leftover temp.manifest
+        tempDir.remove(true);
+      }
+      tempDir.append('temp.manifest.' + Date.now());
+
+      let foStream = Cc[
+        '@mozilla.org/network/file-output-stream;1'
+      ].createInstance(Ci.nsIFileOutputStream);
+      foStream.init(tempDir, 0x02 | 0x08 | 0x20, 0o664, 0); // write, create, truncate
+      foStream.write(manifestText, manifestText.length);
+      foStream.close();
+
+      Components.manager
+        .QueryInterface(Ci.nsIComponentRegistrar)
+        .autoRegister(tempDir);
+
+      Cc['@mozilla.org/uriloader/external-helper-app-service;1']
+        .getService(Ci.nsPIExternalAppLauncher)
+        .deleteTemporaryFileOnExit(tempDir);
+
+      return function () {
+        tempDir.fileSize = 0; // truncate the manifest
+        Cc['@mozilla.org/chrome/chrome-registry;1']
+          .getService(Ci.nsIXULChromeRegistry)
+          .checkForNewChrome();
+      };
+    }
+
     return {
       install(...args) {
         install(...args);
@@ -382,10 +469,23 @@ var BootstrapLoader = {
         Services.obs.notifyObservers(null, 'startupcache-invalidate');
       },
 
-      startup(...args) {
+      async startup(...args) {
         if (addon.type == 'extension') {
           logger.debug(`Registering manifest for ${file.path}\n`);
-          Components.manager.addBootstrappedManifestLocation(file);
+          const manifestURI = getURIForResourceInFile(file, 'chrome.manifest');
+          let manifestData = await readFromJarURI(manifestURI);
+          let chromeManifest = new ChromeManifest(() => {
+            return manifestData;
+          }, {
+            application: Services.appinfo.ID,
+            appversion: Services.appinfo.version,
+            platformversion: Services.appinfo.platformVersion,
+            os: Services.appinfo.OS,
+            osversion: Services.sysinfo.getProperty('version'),
+            abi: Services.appinfo.XPCOMABI
+          });
+          await chromeManifest.parse()
+          this._clearManifest = createManifestTemporarily(chromeManifest.toString(getURIForResourceInFile(file, '').spec));
         }
         return startup(...args);
       },
@@ -398,7 +498,8 @@ var BootstrapLoader = {
         } finally {
           if (reason != BOOTSTRAP_REASONS.APP_SHUTDOWN) {
             logger.debug(`Removing manifest for ${file.path}\n`);
-            Components.manager.removeBootstrappedManifestLocation(file);
+            this._clearManifest();
+            this._clearManifest = null;
           }
         }
       },

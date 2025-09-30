@@ -6,15 +6,15 @@
 ┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
                    
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki
+Wiki:              https://ff-ultima.github.io/docs/getting-started
 Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest                 
 License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 ```
 
-The .optional/ folder temporarily host autoconfig files.
+The .autoconfig/ folder sources userchromejs/autoconfig setup files from https://github.com/AlexVallat/firefox-scripts?tab=readme-ov-file, these files include 1 minor modification that allows users to organize their custom scripts at `chrome/scripts/`.
 
-AC Integration while optional should be as simple as moving these foundational files into the source (chrome) folder.
+You can setup autoconfig by simply moving these foundational files out of `.autoconfig/` and into `chrome` and the `firefox directory`. See the wiki documentation for more detail and customization.
 
 https://github.com/soulhotel/FF-ULTIMA/wiki/Autoconfig-Configuration
