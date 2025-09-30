@@ -16,16 +16,16 @@
 
 ### <ins> Change Log:
 - `fix • 🔴 •` Sidebery autohide positioning correction when using autohide settings. Thank you #370 @PONYMODZ
-- `new • 🟢 •` Setting [`ultima.findbar.position.top`](https://ff-ultima.github.io/docs/settings/all/tab-settings#findbarpositiontop) positions the find bar on top of browser content #383 by @he23251
-- `new • 🟢 •` Setting [`ultima.urlbar.scrollable`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabshorizontalfullwidth) let's you scroll through options within the urlbar
-- `new • 🟢 •` Setting [`ultima.urlbar.focus.blur`](https://ff-ultima.github.io/docs/settings/all/tab-settings#urlbarfocusblur) blurs browser content when the urlbar is in focus
-- `new • 🟢 •` Setting [`ultima.urlbar.focus.blur.all`](https://ff-ultima.github.io/docs/settings/all/tab-settings#urlbarfocusblur) blurs everything except for the urlbar, when the urlbar is in focus #383 by @he23251
+- `new • 🟢 •` Setting [`ultima.findbar.position.top`](https://ff-ultima.github.io/docs/settings/all/content-area-settings#findbarpositiontop) positions the find bar on top of browser content #383 by @he23251
+- `new • 🟢 •` Setting [`ultima.urlbar.scrollable`](https://ff-ultima.github.io/docs/settings/all/urlbar-settings#ultimatabshorizontalfullwidth) let's you scroll through options within the urlbar
+- `new • 🟢 •` Setting [`ultima.urlbar.focus.blur`](https://ff-ultima.github.io/docs/settings/all/urlbar-settings#urlbarfocusblur) blurs browser content when the urlbar is in focus
+- `new • 🟢 •` Setting [`ultima.urlbar.focus.blur.all`](https://ff-ultima.github.io/docs/settings/all/urlbar-settings#urlbarfocusblurall) blurs everything except for the urlbar, when the urlbar is in focus #383 by @he23251
 - `new • 🟢 •` Setting [`ultima.urlbar.focus.text.aligns.left`](https://ff-ultima.github.io/docs/settings/all/tab-settings#urlbarfocustextalignsleft) aligns urlbar text left when focused (even when text is centered) #383 by @he23251
-- `new • 🟢 •` Setting [`ultima.navbar.text.for.icons`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimanavbartextforicons) replaces navbar icons for text labels
-- `new • 🟢 •` Setting [`ultima.navbar.update.ready.label`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimanavbarupdatereadylabel) when a Firefox update is available, present an update text label
+- `new • 🟢 •` Setting [`ultima.navbar.text.for.icons`](https://ff-ultima.github.io/docs/settings/all/topbar-settings#ultimanavbartextforicons) replaces navbar icons for text labels
+- `new • 🟢 •` Setting [`ultima.navbar.update.ready.label`](https://ff-ultima.github.io/docs/settings/all/topbar-settings#ultimanavbarupdatereadylabel) when a Firefox update is available, present an update text label
 - `new • 🟢 •` Setting [`ultima.tab.focus.blur`](https://ff-ultima.github.io/docs/settings/all/tab-settings#tabfocusblur) when focus/hover over a tab, other tabs become blurred
 - `new • 🟢 •` Setting [`ultima.tabs.horizontal.fullwidth`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabshorizontalfullwidth) to make horizontal tabs take up all available width
-- `new • 🟢 •` Setting [`ultima.privatebrowsing.gradient.border`](https://ff-ultima.github.io/docs/settings/all/tab-settings#privatebrowsinggradientborder) adds an animated border to private browser windows, making it very obvious which windows are private and which are not #383 by @he23251
+- `new • 🟢 •` Setting [`ultima.privatebrowsing.gradient.border`](https://ff-ultima.github.io/docs/settings/all/other-settings#privatebrowsinggradientborder) adds an animated border to private browser windows, making it very obvious which windows are private and which are not #383 by @he23251
 - `qol • 🟡 •` Setting [`ultima.tabs.always.show.pinned`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsalwaysshowpinned) now also applies to horizontal tab layout 87adf51
 - `qol • 🟡 •` MacOS handles fullscreen/maximized state differently than other OS's, so full screen compacting will also acknowledge that difference for MacOS (3.8+) #375
 - `qol • 🟡 •` Tab group "counter" adjustment

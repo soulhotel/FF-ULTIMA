@@ -260,7 +260,7 @@ tab containers
 /* tab focus blur ----------------------------------------------------------------------------------------------- */
 /* focus/hover over a tab, blurs other tabs */
 
-@media -moz-pref("ultima.tab.focus.blur") {
+@media -moz-pref("ultima.tabs.focus.blur") {
     
     #main-window:has(.tabbrowser-tab:hover) {
         .tabbrowser-tab .tab-stack {

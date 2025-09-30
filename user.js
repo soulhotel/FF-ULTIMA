@@ -56,6 +56,7 @@ user_pref("ultima.urlbar.float", false);
 user_pref("ultima.urlbar.drags.window", false);
 user_pref("ultima.urlbar.scrollable", false);
 user_pref("ultima.urlbar.focus.blur", true);
+user_pref("ultima.urlbar.focus.blur.all", false);
 user_pref("ultima.urlbar.focus.text.aligns.left", false);
 
 /* sidebar */
@@ -97,7 +98,7 @@ user_pref("ultima.tabs.tabgroups.background.2", true);
 user_pref("ultima.tabs.tabgroups.background.3", false);
 user_pref("ultima.tabs.disable.scrollbar", false);
 user_pref("ultima.tabs.horizontal.fullwidth", false);
-user_pref("ultima.tab.focus.blur", false);
+user_pref("ultima.tabs.focus.blur", false);
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);
