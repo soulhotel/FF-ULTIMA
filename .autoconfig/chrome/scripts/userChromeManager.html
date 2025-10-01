@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>about:userchromejs</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' data:; img-src data:;">
+  <style>
+    @media (prefers-color-scheme: light) {
+        :root{--bg: #f7f7f7; --fg: #111; --content-bg: #fff; --accent: #fdefd6;}
+    }
+    @media (prefers-color-scheme: dark) {
+        :root{--bg: rgb(43, 42, 51); --fg: white; --content-bg: rgb(35, 35, 42); --accent: rgb(86, 112, 137);}
+    }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; background: var(--bg); color: var(--fg); }
+    .content { max-width: 980px; margin: 28px auto; padding: 28px; background: var(--content-bg); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+    h1 { font-size: 20px; margin: 0 0 12px 0; }
+    .controls { margin: 12px 0 18px 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .switch { display: flex; align-items: center; gap: 8px; }
+    .scripts { margin-top: 8px; }
+    .script-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px; border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .script-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .script-title { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 420px; }
+    .script-meta { font-size: 12px; color: #555; }
+    .toolbar { display: flex; gap: 8px; }
+    button {
+      font-size: 13px;
+      padding: 6px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: linear-gradient(#fff, #f5f5f5);
+      color: #333;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    button:hover { background: linear-gradient(#f5f5f5, #e5e5e5); }
+    button.small {padding: 4px 6px; font-size: 12px; color: #333;}
+    button.danger {border-color: rgba(200,0,0,0.3);color: #b00;}
+    button.danger:hover { background: linear-gradient(#fff, #ffe5e5); }
+    .badge { font-size: 12px; padding: 2px 6px; border-radius: 999px; background: rgba(0,0,0,0.1); color: color-mix(in srgb, var(--fg) 70%, transparent); }
+    .footer { margin-top: 16px; display: flex; gap: 10px; align-items: center; }
+    .search { width: 320px; padding: 6px 8px; border: 1px solid rgba(0,0,0,0.06); border-radius: 18px; background: var(--accent); color: inherit; }
+    .empty { padding: 30px; color: color-mix(in srgb, var(--fg) 70%, transparent); text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="content" id="uc-manager-root">
+    <h1>userChromeJS Manager</h1>
+    <div class="controls">
+      <label class="switch"><input type="checkbox" id="uc-enabled"> <span id="uc-enabled-label">userChromeJS enabled</span></label>
+      <input id="uc-search" class="search" placeholder="Filter scripts by name..." />
+      <div style="flex:1"></div>
+      <div class="toolbar">
+        <button id="uc-open-chrome">Open chrome directory</button>
+        <button id="uc-restart">Restart Firefox</button>
+      </div>
+    </div>
+    <div class="scripts" id="uc-scripts-list">
+      <div class="empty">Loading scripts…</div>
+    </div>
+    <div class="footer">
+      <span class="badge" id="uc-count">0 scripts</span>
+      <div style="flex:1"></div>
+      <small style="color:#666">Tip: use the buttons next to each script to manage them (Edit/Reload/Uninstall/Home)</small>
+    </div>
+  </div>
+  <script>
+    const Ci = Components.interfaces;
+    const Cc = Components.classes;
+    const Cu = Components.utils;
+    const Services = window.Services;
+    // Assuming xPref is global (set by userchrome.js) or use Services.prefs
+    const xPref = window.xPref || {
+      get: (pref, def) => {
+        try {
+          if (pref === _uc.PREF_SCRIPTSDISABLED) {
+            return Services.prefs.getStringPref(pref, def || '');
+          }
+          return Services.prefs.getBoolPref(pref, def);
+        } catch (e) {
+          console.error("Error getting pref:", pref, e);
+          return def;
+        }
+      },
+      set: (pref, value) => {
+        try {
+          if (pref === _uc.PREF_SCRIPTSDISABLED) {
+            Services.prefs.setStringPref(pref, value);
+          } else {
+            Services.prefs.setBoolPref(pref, value);
+          }
+        } catch (e) {
+          console.error("Error setting pref:", pref, e);
+        }
+      }
+    };
+
+    const UC = window.UC || {};
+    UC.ManagerPage = {
+      toggleScript: function (script) {
+        console.log(`Toggling script: ${script.filename}, current isEnabled: ${script.isEnabled}`);
+        if (script.isEnabled) {
+          xPref.set(_uc.PREF_SCRIPTSDISABLED, script.filename + ',' + xPref.get(_uc.PREF_SCRIPTSDISABLED));
+          script.isEnabled = false;
+          console.log(`Disabled ${script.filename}, scriptsDisabled: ${xPref.get(_uc.PREF_SCRIPTSDISABLED)}`);
+        } else {
+          xPref.set(_uc.PREF_SCRIPTSDISABLED, xPref.get(_uc.PREF_SCRIPTSDISABLED).replace(new RegExp('^' + script.filename + ',|,' + script.filename), ''));
+          script.isEnabled = true;
+          console.log(`Enabled ${script.filename}, scriptsDisabled: ${xPref.get(_uc.PREF_SCRIPTSDISABLED)}`);
+        } // ........
+        if (xPref.get(_uc.PREF_ENABLED) && script.isEnabled && !_uc.everLoaded.includes(script.id)) {
+          console.log(`Loading script: ${script.filename}`);
+          script = _uc.getScriptData(script.file);
+          Services.obs.notifyObservers(null, 'startupcache-invalidate');
+          _uc.windows((doc, win, loc) => {
+            if (win._uc && script.regex.test(loc.href)) {
+              _uc.loadScript(script, win);
+            }
+          }, false);
+        } else if (script.isRunning && !!script.shutdown) {
+          console.log(`Shutting down script: ${script.filename}`);
+          _uc.windows((doc, win, loc) => {
+            if (script.regex.test(loc.href)) {
+              try {
+                let sandbox = new Cu.Sandbox(win, { sandboxPrototype: win });
+                Cu.evalInSandbox(`(function(script, win){${script.shutdown}})`, sandbox)(script, win);
+              } catch (ex) {
+                Cu.reportError(ex);
+              }
+              if (script.onlyonce) return true;
+            }
+          }, false);
+          script.isRunning = false;
+        }
+        console.log(`Post-toggle: ${script.filename}, isEnabled: ${script.isEnabled}, isRunning: ${script.isRunning}`);
+      },
+      launchEditor: function (script) {
+        let editor = xPref.get('view_source.editor.path');
+        let useSystemDefault = xPref.get('userChromeJS.openWithSystemDefault');
+        if (!editor && !useSystemDefault) {
+          let obj = { value: 'C:\\WINDOWS\\system32\\notepad.exe' };
+          if (Services.prompt.prompt(null, 'userChromeJS', 'Editor not defined. Paste the full path of your text editor or click cancel to use system default.', obj, null, { value: 0 })) {
+            editor = obj.value;
+            xPref.set('view_source.editor.path', editor);
+          } else {
+            useSystemDefault = xPref.set('userChromeJS.openWithSystemDefault', true);
+          }
+        }
+        if (useSystemDefault) {
+          script.file.launch();
+        } else {
+          let editorArgs = [];
+          let args = Services.prefs.getCharPref('view_source.editor.args', '');
+          if (args) {
+            const argumentRE = /"([^"]+)"|(\S+)/g;
+            while (argumentRE.test(args)) {
+              editorArgs.push(RegExp.$1 || RegExp.$2);
+            }
+          }
+          editorArgs.push(script.file.path);
+          try {
+            let appfile = Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsIFile);
+            appfile.initWithPath(editor);
+            let process = Cc['@mozilla.org/process/util;1'].createInstance(Ci.nsIProcess);
+            process.init(appfile);
+            process.run(false, editorArgs, editorArgs.length);
+          } catch (e) {
+            Services.prompt.alert(null, 'userChromeJS', 'Can\'t open the editor. Set editor path in about:config under view_source.editor.path.');
+          }
+        }
+      },
+      uninstall: function (script) {
+        if (!Services.prompt.confirm(null, 'userChromeJS', 'Do you want to uninstall this script? The file will be deleted.')) {
+          return;
+        }
+        if (script.isRunning && !!script.shutdown) {
+          _uc.windows((doc, win, loc) => {
+            if (script.regex.test(loc.href)) {
+              try {
+                let sandbox = new Cu.Sandbox(win, { sandboxPrototype: win });
+                Cu.evalInSandbox(`(function(script, win){${script.shutdown}})`, sandbox)(script, win);
+              } catch (ex) {
+                Cu.reportError(ex);
+              }
+              if (script.onlyonce) return true;
+            }
+          }, false);
+          script.isRunning = false;
+        }
+        script.file.remove(false);
+        xPref.set(_uc.PREF_SCRIPTSDISABLED, xPref.get(_uc.PREF_SCRIPTSDISABLED).replace(new RegExp('^' + script.filename + ',|,' + script.filename), ''));
+        populateScripts();
+      }
+    };
+    window.UC = UC;
+
+    function openChromeDirectory() {
+      try {
+        let chromeDir = Services.dirsvc.get("UChrm", Ci.nsIFile);
+        console.log("Attempting to open chrome directory:", chromeDir.path);
+        chromeDir.launch();
+      } catch (e) {
+        console.error("Error opening chrome directory:", e);
+      }
+    }
+
+    function restartFirefox() {
+      try {
+        console.log("Attempting to restart Firefox...");
+        Services.appinfo.invalidateCachesOnRestart();
+        let cancelQuit = Cc['@mozilla.org/supports-PRBool;1'].createInstance(Ci.nsISupportsPRBool);
+        Services.obs.notifyObservers(cancelQuit, 'quit-application-requested', 'restart');
+        if (cancelQuit.data) {
+          console.log("Restart cancelled");
+          return;
+        }
+        if (Services.appinfo.inSafeMode) {
+          Services.startup.restartInSafeMode(Ci.nsIAppStartup.eAttemptQuit);
+        } else {
+          Services.startup.quit(Ci.nsIAppStartup.eAttemptQuit | Ci.nsIAppStartup.eRestart);
+        }
+      } catch (e) {
+        console.error("Error restarting Firefox:", e);
+      }
+    }
+
+    function populateScripts() {
+      console.log("Populating scripts...");
+      const scriptList = document.getElementById("uc-scripts-list");
+      const enabledCheckbox = document.getElementById("uc-enabled");
+      const enabledLabel = document.getElementById("uc-enabled-label");
+      const searchInput = document.getElementById("uc-search");
+      const countBadge = document.getElementById("uc-count");
+      while (scriptList.firstChild) {
+        scriptList.firstChild.remove();
+      }
+      if (!window._uc || !window._uc.scripts) {
+        console.error("_uc.scripts is not available");
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = "No scripts found. Ensure userChrome.js framework is installed.";
+        scriptList.appendChild(empty);
+        countBadge.textContent = "0 scripts";
+        return;
+      }
+
+      const isEnabled = xPref.get(_uc.PREF_ENABLED, true);
+      console.log("_uc.PREF_ENABLED value:", isEnabled);
+      enabledCheckbox.checked = isEnabled;
+      enabledLabel.textContent = isEnabled ? "userChromeJS enabled" : "userChromeJS disabled";
+      enabledCheckbox.addEventListener("change", () => {
+        try {
+          xPref.set(_uc.PREF_ENABLED, enabledCheckbox.checked);
+          enabledLabel.textContent = enabledCheckbox.checked ? "userChromeJS enabled" : "userChromeJS disabled";
+          populateScripts(); // Refresh to update script states
+        } catch (e) {
+          console.error("Error setting pref:", e);
+        }
+      });
+
+      const scripts = Object.values(window._uc.scripts)
+        .filter(script => script.filename !== window._uc.ALWAYSEXECUTE)
+        .sort((a, b) => (a.name || a.filename).localeCompare(b.name || b.filename));
+      console.log("Scripts found:", scripts);
+
+      countBadge.textContent = `${scripts.length} scripts`;
+
+      const filter = searchInput.value.toLowerCase();
+      const filteredScripts = filter ? scripts.filter(s => (s.name || s.filename).toLowerCase().includes(filter)) : scripts;
+
+      if (filteredScripts.length === 0) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = filter ? "No scripts match your search." : "No userChrome scripts found in chrome directory.";
+        scriptList.appendChild(empty);
+        return;
+      }
+
+      filteredScripts.forEach(script => {
+        const row = document.createElement("div");
+        row.className = "script-row";
+
+        const left = document.createElement("div");
+        left.className = "script-left";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = `script-checkbox-${script.filename}`;
+        checkbox.checked = script.isEnabled;
+        checkbox.addEventListener("change", () => {
+          try {
+            UC.ManagerPage.toggleScript(script);
+            checkbox.checked = script.isEnabled;
+          } catch (e) {
+            console.error("Error toggling script:", e);
+          }
+        });
+        left.appendChild(checkbox);
+
+        const title = document.createElement("span");
+        title.className = "script-title";
+        title.textContent = script.name || script.filename;
+        title.title = script.name || script.filename;
+        left.appendChild(title);
+
+        if (script.description) {
+          const meta = document.createElement("span");
+          meta.className = "script-meta";
+          meta.textContent = script.description;
+          left.appendChild(meta);
+        }
+
+        row.appendChild(left);
+
+        const toolbar = document.createElement("div");
+        toolbar.className = "toolbar";
+
+        const editButton = document.createElement("button");
+        editButton.className = "small";
+        editButton.textContent = "Edit";
+        editButton.addEventListener("click", () => {
+          try {
+            UC.ManagerPage.launchEditor(script);
+          } catch (e) {
+            console.error("Error launching editor:", e);
+          }
+        });
+        toolbar.appendChild(editButton);
+
+        const reloadButton = document.createElement("button");
+        reloadButton.className = "small";
+        reloadButton.textContent = "Reload";
+        reloadButton.addEventListener("click", () => {
+          try {
+            UC.ManagerPage.toggleScript(script);
+            UC.ManagerPage.toggleScript(script);
+          } catch (e) {
+            console.error("Error reloading script:", e);
+          }
+        });
+        toolbar.appendChild(reloadButton);
+
+        const uninstallButton = document.createElement("button");
+        uninstallButton.className = "small danger";
+        uninstallButton.textContent = "Uninstall";
+        uninstallButton.addEventListener("click", () => {
+          try {
+            UC.ManagerPage.uninstall(script);
+          } catch (e) {
+            console.error("Error uninstalling script:", e);
+          }
+        });
+        toolbar.appendChild(uninstallButton);
+
+        const homepage = script.homepageURL || script.downloadURL || script.updateURL || script.reviewURL;
+        if (homepage) {
+          const homepageButton = document.createElement("button");
+          homepageButton.className = "small";
+          homepageButton.textContent = "Home";
+          homepageButton.addEventListener("click", () => {
+            try {
+              const win = Services.wm.getMostRecentBrowserWindow();
+              win.gBrowser.addTab(homepage, { triggeringPrincipal: Services.scriptSecurityManager.createNullPrincipal({}) });
+            } catch (e) {
+              console.error("Error opening homepage:", e);
+            }
+          });
+          toolbar.appendChild(homepageButton);
+        }
+
+        row.appendChild(toolbar);
+        scriptList.appendChild(row);
+      });
+
+      searchInput.addEventListener("input", () => populateScripts());
+      document.getElementById("uc-open-chrome").addEventListener("click", openChromeDirectory);
+      document.getElementById("uc-restart").addEventListener("click", restartFirefox);
+    }
+
+    window.addEventListener("load", () => {
+      console.log("Page loaded");
+      console.log("Services available:", !!Services && !!Services.dirsvc);
+      console.log("Components available:", !!Components && !!Components.interfaces && !!Components.classes && !!Components.utils);
+      console.log("xPref available:", !!xPref);
+      console.log("UC.ManagerPage available:", !!UC.ManagerPage);
+      console.log("_uc.scripts available:", !!window._uc && !!window._uc.scripts);
+      console.log("_uc.PREF_ENABLED:", window._uc ? _uc.PREF_ENABLED : "undefined");
+      console.log("_uc.getSandbox available:", !!window._uc && !!window._uc.getSandbox);
+      populateScripts();
+    });
+  </script>
+</body>
+</html>

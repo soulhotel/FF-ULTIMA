@@ -21,8 +21,13 @@ UC.CustomNewTabButton = {
                 }
             }
         `));
+
         _uc.sss.loadAndRegisterSheet(this.STYLE, _uc.sss.USER_SHEET);
         const { CustomizableUI } = window;
+        if (CustomizableUI.getWidget('custom-newtab-button')?.provider) {
+            console.log('Widget custom-newtab-button already exists, skipping creation.');
+            return;
+        }
         CustomizableUI.createWidget({
             id: 'custom-newtab-button',
             type: 'custom',
