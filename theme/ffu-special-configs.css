@@ -4,20 +4,10 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Handle Configurations for Nightly, Autoconfig, ...
 Wiki:              Todo
 
-Nightly Configurations
 Autoconfig Configurations
+Nightly Configurations
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-/* Nightly Configurations (quick patches specific to nightly) ----------------------------------------------- */
-
-@media -moz-pref("ultima.enable.nightly.config") {
-
-
-    
-}
-
 
 /* Autoconfig Configurations -------------------------------------------------------------------------------- */
 
@@ -39,8 +29,62 @@ Autoconfig Configurations
         transition-delay: 0s;
     }
 
+    /* Sidebar button states */
+    #bmf-btn-sidebar.sb-collapsible .toolbarbutton-icon {
+        fill: var(--uc-accent-color-2) !important;
+    }
+
+
+    /* URL bar toggle button states */
+    #bmf-btn-urlhide.state-default {
+    fill: var(--toolbar-color) !important;
+    opacity: var(--toolbarbutton-disabled-opacity);
+    }
+    #bmf-btn-urlhide.state-simplified {
+    fill: var(--uc-accent-color-2) !important;
+    opacity: 1;
+    }
+    #bmf-btn-urlhide.state-private {
+    fill: #d51f1f !important;
+    opacity: 1;
+    }
+    /* Hide the urlbar input ONLY in the private state (button has .state-private) */
+    #urlbar-container.urlbar-domain-only:has(#bmf-btn-urlhide.state-private) #urlbar-input {
+    opacity: 0;
+    transition: opacity 0.3s ease-out 1s;
+    }
+    #urlbar-container.urlbar-domain-only:has(#bmf-btn-urlhide.state-private) .urlbar-input-container {
+    opacity: 0.3;
+    transition: opacity 0.3s ease-out 1s;
+    }
+    /* Reveal #urlbar and its children only when navbar is effectively expanded */
+    #navigator-toolbox.state-collapsed:hover #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) #userContext-label,
+    #navigator-toolbox.state-collapsed:hover #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) #urlbar,
+    #navigator-toolbox.state-collapsed:hover #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) #urlbar-input,
+    #navigator-toolbox.state-collapsed:hover #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) .urlbar-input-container,
+    #navigator-toolbox.state-collapsed:hover #urlbar-container #urlbar,
+    #navigator-toolbox.state-collapsed:hover #urlbar-container #urlbar-input,
+    #navigator-toolbox.state-collapsed:hover #urlbar-container .urlbar-input-container,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) #userContext-label,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) #urlbar,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) #urlbar-input,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container.urlbar-domain-only:has(#urlbar[focused]) .urlbar-input-container,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container:hover #urlbar,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container:hover #urlbar-input,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container:hover .urlbar-input-container {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+    }
+
 }
 
+/* Nightly Configurations (quick patches specific to nightly) ----------------------------------------------- */
+
+@media -moz-pref("ultima.enable.nightly.config") {
+
+
+    
+}
 
 /* Temporary solutions no config ----------------------------------------------------------------------------- */
 

@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name            userChrome Manager Page
 // @author          soulhotel
+// @description     Page to manage everything userchromejs
 // @include         main
 // @shutdown        UC.ManagerPage.destroy();
 // @onlyonce

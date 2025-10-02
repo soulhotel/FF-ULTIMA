@@ -1,0 +1,73 @@
+@media (prefers-color-scheme: dark) {
+  #bmf-container-picker {
+    background-color: color-mix(in hsl, hsl(0 0 10), transparent 10%) !important; /* This used to have slightly different values before backdrop blur stopped working */
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #bmf-container-picker {
+    background-color: color-mix(in hsl, hsl(0 0 10), transparent 10%) !important; /* This used to have slightly different values before backdrop blur stopped working */
+  }
+}
+
+#bmf-container-picker {
+  margin-top: 10px;
+  padding: 5px;
+/*  This no longer works for some reason  */
+/*   backdrop-filter: blur(25px) saturate(2) !important; */
+  border: 1px solid var(--button-hover-bgcolor) !important;
+  border-radius: var(--toolbarbutton-border-radius) !important;
+  z-index: 999999 !important;
+}
+
+#bmf-container-picker ul {
+  padding-inline-start: 0 !important;
+}
+
+#bmf-container-picker li {
+  color: var(--identity-tab-color);
+  /* background-color: var(--c-safe-bg-color); */
+  padding: 5px;
+  font-size: 1.05em;
+  border-left: solid 5px transparent;
+  /* border-right: solid 5px transparent; */
+  /* transition: border-right 0.2s ease-in, border-right 0.5s ease-out, border-left 0.2s ease-in, border-left 0.5s ease-out; */
+  transition: border-left 0.2s ease-in, border-left 0.5s ease-out;
+}
+
+#bmf-container-picker li:hover {
+  border-left: solid 5px var(--identity-tab-color, var(--button-hover-bgcolor));
+  /* border-right: solid 5px var(--identity-tab-color, var(--button-hover-bgcolor)); */
+  cursor: pointer;
+}
+
+#bmf-container-picker li:hover label {
+  cursor: pointer;
+}
+
+#bmf-container-picker hbox {
+  display: flex;
+  align-items: center;
+}
+
+#bmf-container-picker label {
+  margin-left: 14px;
+  margin-right: 10px;
+}
+
+#bmf-container-picker image {
+  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+
+  background-image: var(--identity-icon);
+  -moz-context-properties: fill;
+  fill: var(--identity-icon-color, var(--button-hover-bgcolor));
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.userContext-icon, .subviewbutton[usercontextid] > .toolbarbutton-icon, #userContext-indicator {
+  fill: var(--identity-icon-color, var(--button-hover-bgcolor)) !important;
+}

@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name            Custom New/Close Tab Button
 // @author          he23251
+// @description     Left click → new tab, Middle/Right click → close tab
 // @include         main
 // @shutdown        UC.CustomNewTabButton.destroy();
 // @onlyonce

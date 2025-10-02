@@ -42,7 +42,7 @@ user_pref("ultima.navbar.windowcontrols.whiteout", false);
 user_pref("ultima.navbar.windowcontrols.fluent", false);
 user_pref("ultima.navbar.theme.extensionspanel", true);
 user_pref("ultima.disable.windowcontrols.button", false);
-user_pref("ultima.navbar.update.ready.label", true);
+user_pref("ultima.navbar.update.ready.label", false);
 user_pref("ultima.navbar.text.for.icons", false);
 
 /* url bar */
