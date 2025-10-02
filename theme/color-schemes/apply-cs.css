@@ -27,6 +27,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
 @import url('fluent/ffu-colorscheme.css')             -moz-pref("user.theme.fluent");
 @import url('fluent/ffu-colorscheme.thinkpad.css')    -moz-pref("user.theme.fluent.thinkpad");
+@import url('catppuccin-mocha-variant/ffu-colorscheme.css') -moz-pref("user.theme.catppuccin-mocha-variant");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
 
@@ -46,6 +47,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('scarlet/ffu-colorscheme.css')            -moz-pref("user.theme.scarlet");
 @import url('fluent/ffu-colorscheme.css')             -moz-pref("user.theme.fluent");
 @import url('fluent/ffu-colorscheme.thinkpad.css')    -moz-pref("user.theme.fluent.thinkpad");
+@import url('catppuccin-mocha-variant/ffu-colorscheme.css') -moz-pref("user.theme.catppuccin-mocha-variant");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
 
@@ -109,6 +111,11 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media -moz-pref("user.theme.fluent.thinkpad") { body {
   @media (prefers-color-scheme: dark) {background-image: url("walls/FluentMonochrome-d.jpg") !important;}
   @media (prefers-color-scheme: light) {background-image: url("walls/FluentMonochrome-l.jpg") !important;}
+}}
+
+@media -moz-pref("user.theme.catppuccin-mocha-variant") { body {
+  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin-mocha.jpg") !important;}
+  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin-frappe2.jpg") !important;}
 }}
 
 @media -moz-pref("user.theme.yourName") { body {

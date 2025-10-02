@@ -1,0 +1,34 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Catppuccin Mocha Varient By @sneexy-boi
+
+This Color Scheme is a simple variation of another color-scheme
+Meaning it is built on top of the other, to make a different version of the original
+To see all customization done by this color scheme, refer to catppuccin-mocha
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@import url('../catppuccin-mocha/ffu-colorscheme.css');
+
+@media (prefers-color-scheme: dark) { :root {
+    --uc-text:               rgb(205, 214, 244) !important;
+    --uc-accent-color-1:     rgb(203, 166, 247) !important;
+    --uc-accent-color-2:     rgb(137, 180, 250) !important;
+    --uc-accent-color-3:     rgb(186, 194, 222) !important;
+    --uc-accent-color-4:     rgb(24, 24, 37) !important;
+    --uc-accent-color-5:     rgb(166, 227, 161) !important;
+    --uc-accent-color-6:     rgb(243, 139, 168) !important;
+    --uc-accent-color-7:     rgb(44, 55, 80) !important;
+}}
+
+@media (prefers-color-scheme: light) { :root {
+    --uc-text:               rgb(35, 35, 35) !important;
+    --uc-accent-color-1:     rgb(70, 63, 77) !important;
+    --uc-accent-color-2:     rgb(129, 118, 153) !important;
+    --uc-accent-color-3:     rgb(186, 194, 222) !important;
+    --uc-accent-color-4:     rgb(24, 24, 37) !important;
+    --uc-accent-color-5:     rgb(166, 227, 161) !important;
+    --uc-accent-color-6:     rgb(243, 139, 168) !important;
+    --uc-accent-color-7:     rgb(44, 55, 80) !important;
+}}
