@@ -44,6 +44,7 @@ user_pref("ultima.navbar.theme.extensionspanel", true);
 user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.navbar.update.ready.label", false);
 user_pref("ultima.navbar.text.for.icons", false);
+user_pref("ultima.navbar.bookmarks.tab.indicator", false);
 
 /* url bar */
 user_pref("ultima.urlbar.animate.open", true);
@@ -125,6 +126,7 @@ user_pref("user.theme.xtension.newtab.rounded", false); /*new tab page*/
 user_pref("user.theme.xtension.newtab.compact", true);
 user_pref("ultima.xstyle.private", false); /*private browser home page*/
 user_pref("ultima.spacing.compact.addonmanager", true); /*add on manager*/
+user_pref("ultima.privatebrowsing.gradient.border", false);
 
 /* extra theming */
 user_pref("ultima.theme.icons", true);
