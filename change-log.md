@@ -26,6 +26,7 @@
 - `new • 🟢 •` Setting [`ultima.tab.focus.blur`](https://ff-ultima.github.io/docs/settings/all/tab-settings#tabfocusblur) when focus/hover over a tab, other tabs become blurred
 - `new • 🟢 •` Setting [`ultima.tabs.horizontal.fullwidth`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabshorizontalfullwidth) to make horizontal tabs take up all available width
 - `new • 🟢 •` Setting [`ultima.privatebrowsing.gradient.border`](https://ff-ultima.github.io/docs/settings/all/other-settings#privatebrowsinggradientborder) adds an animated border to private browser windows, making it very obvious which windows are private and which are not #383 by @he23251
+- `new • 🟢 •` Setting [`ultima.navbar.bookmarks.tab.indicator`](https://ff-ultima.github.io/docs/settings/all/other-settings#ultimanavbarbookmarkstabindicator) adds an outline to browser content when the currently selected tab is bookmarked
 - `qol • 🟡 •` Setting [`ultima.tabs.always.show.pinned`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsalwaysshowpinned) now also applies to horizontal tab layout 87adf51
 - `qol • 🟡 •` MacOS handles fullscreen/maximized state differently than other OS's, so full screen compacting will also acknowledge that difference for MacOS (3.8+) #375
 - `qol • 🟡 •` Tab group "counter" adjustment

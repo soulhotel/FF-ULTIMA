@@ -11,6 +11,7 @@ bookmarks centered
 bookmarks autohide
 update ready label
 navbar text for icons
+bookmarked/selected tab indicator
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -380,6 +381,16 @@ navbar text for icons
                 display: flex;
                 text-transform: uppercase;
             }
+        }
+    }
+}
+
+/* bookmarked/selected tab indicator ---------------------------------------------------------------- */
+
+@media -moz-pref("ultima.navbar.bookmarks.tab.indicator") {
+    :root:has(#star-button[starred]) {
+        browser[type="content"] {
+            border: 1px var(--uc-accent-color-1) solid !important;
         }
     }
 }
