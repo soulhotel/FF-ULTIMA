@@ -54,13 +54,18 @@
 
 ![findbarontop](https://github.com/user-attachments/assets/afdf6bbe-996a-4b32-be76-27858bdc09e6)
 
-> Setup: tabs.horizontal.fullwidth, tabs.belowURLbar, navbar.bookmarks.hide.icons, navbar.autohide
+> ultima.navbar.bookmarks.tab.indicator
 
-https://github.com/user-attachments/assets/f088369a-d4d0-48dd-ac16-129398969d47
+![bookmarkedtabindicator](https://github.com/user-attachments/assets/ab599138-4f91-4b69-a950-98b94ba88a33)
 
 > How Firefox's default Light theme looks now
 
 https://github.com/user-attachments/assets/321f4280-47c0-4e7f-af73-a1202ae289b3
+
+> Setup: tabs.horizontal.fullwidth, tabs.belowURLbar, navbar.bookmarks.hide.icons, navbar.autohide
+
+https://github.com/user-attachments/assets/f088369a-d4d0-48dd-ac16-129398969d47
+
 
 >
 
