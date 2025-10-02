@@ -16,16 +16,30 @@ Autoconfig Configurations
 
 
     
-} /*end nightly*/
+}
 
 
 /* Autoconfig Configurations -------------------------------------------------------------------------------- */
 
 @media -moz-pref("ultima.enable.js.config") {
 
+    /* Animate the Container label */
+    #userContext-label {
+        max-width: 0 !important;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: max-width 400ms ease-in-out 1s;
+    }
+    /* Label animation gating (restored) */
+    #navigator-toolbox.state-collapsed:hover #urlbar-container #userContext-label,
+    #navigator-toolbox.state-collapsed.state-hovering #urlbar-container #userContext-label,
+    #navigator-toolbox.state-collapsed.state-force-expanded #urlbar-container #userContext-label,
+    #navigator-toolbox:not(.state-collapsed) #urlbar-container:hover #userContext-label {
+        max-width: 200px !important;
+        transition-delay: 0s;
+    }
 
-
-} /*end js*/
+}
 
 
 /* Temporary solutions no config ----------------------------------------------------------------------------- */
@@ -75,12 +89,11 @@ Autoconfig Configurations
         background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     }
     
-} /*end non js*/
+}
 
   
 
 /* //
-
 - discontinue window title in menu bar, unconsistent across OS's
 - need to test pointer events unforced on windows, hopefully this issue is finally corrected in firefox
 - follow progress on tab split viewing https://bugzilla.mozilla.org/show_bug.cgi?id=1980370 tab-split-view-wrapper, *[split-view-first], *[split-view-second]
