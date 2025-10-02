@@ -12,6 +12,7 @@ bookmarks autohide
 update ready label
 navbar text for icons
 bookmarked/selected tab indicator
+compact menu panels
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -390,7 +391,21 @@ bookmarked/selected tab indicator
 @media -moz-pref("ultima.navbar.bookmarks.tab.indicator") {
     :root:has(#star-button[starred]) {
         browser[type="content"] {
-            border: 1px var(--uc-accent-color-1) solid !important;
+            border: 2px var(--uc-accent-color-1) solid !important;
+            @media -moz-pref("ultima.spacing.compact") {
+                border-left-width: 5px !important;
+                /*should probably seperate border left and right for vertical tab layouts
+                but this layout seems to be heading into too many adjustments needed for different settings
+                maybe a different indicator style is needed*/
+            }
         }
+    }
+}
+
+/* compact menu panels ------------------------------------------------------------------------------ */
+
+@media -moz-pref("ultima.spacing.compact.menus") {
+    .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
+        --arrowpanel-menuitem-padding: 4px 8px;
     }
 }

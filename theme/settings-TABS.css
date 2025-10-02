@@ -451,6 +451,16 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
     margin: 0 !important;
 }
 
+/* 9/25?/2025 tab group counter adjustment to fix the unpleasant default spacing */
+
+.tab-group-label-container, .tab-group-overflow-count-container {
+  #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after, #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group[hasactivetab] > &::after, #tabbrowser-tabs[orient="vertical"] tab-group[hasactivetab][hasmultipletabs] > &.tab-group-overflow-count-container::after {
+    content: "SELECTED" !important;
+    top: 6px !important;
+    left: 36px;
+  }
+}
+
 /* tab groups labels -------------------------------------------------------------------------------------------- */
 
 /* Label Style T, Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy, always visible label */

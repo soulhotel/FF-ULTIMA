@@ -244,3 +244,17 @@ ultima.urlbar.focus.align.left
       text-align: left !important;
     }
 }
+
+@media -moz-pref("ultima.urlbar.extension.label.fullwidth") {
+    #urlbar:has(#identity-icon[tooltiptext*="extension"]) {
+        #identity-icon-box {
+            max-width: fit-content !important;
+            #identity-icon[tooltiptext*="extension"] {
+                visibility: collapse !important;
+            }
+        }
+        #urlbar-input {
+            font-size: 11px !important;
+        }
+    }
+}
