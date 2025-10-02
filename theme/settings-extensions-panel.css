@@ -2,21 +2,11 @@
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Transform the extension menu into a compact icon-only view
-Sourced:           https://github.com/datguypiko/Firefox-Mod-Blur
+Sourced:           https://github.com/datguypiko/Firefox-Mod-Blur (and modified)
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media -moz-pref("ultima.navbar.theme.extensionspanel") {
-
-    #unified-extensions-panel #unified-extensions-view {
-        width: 100% !important;
-    }
-
-    #unified-extensions-view {
-        --uei-icon-size: 22px; /* icon size */
-        --firefoxcss-number-of-extensions-in-a-row: 4; /* icons per row */
-    }
-
 
     #unified-extensions-view #unified-extensions-manage-extensions {
         text-align: center !important;
@@ -24,17 +14,24 @@ Sourced:           https://github.com/datguypiko/Firefox-Mod-Blur
             text-align: center !important;
             font-size:0.8em;
         }
-    }    
+    }
+    #unified-extensions-panel #unified-extensions-view {
+        width: 100% !important;
+    }
+    #unified-extensions-view {
+        --uei-icon-size: 22px; /* icon size */
+        --firefoxcss-number-of-extensions-in-a-row: 4; /* icons per row */
+    }
     #unified-extensions-view .panel-header,
     #unified-extensions-view .panel-header + toolbarseparator,
     #unified-extensions-view .panel-subview-body + toolbarseparator,
-    #unified-extensions-view #unified-extensions-manage-extensions,
+/*     #unified-extensions-view #unified-extensions-manage-extensions, */
     #unified-extensions-view .unified-extensions-item-menu-button.subviewbutton,
     #unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents {
-        display:none !important;
+        display: none !important;
     }
     #unified-extensions-view .panel-subview-body {
-        padding:4px !important;
+        padding: 4px !important;
     }
     #unified-extensions-view .unified-extensions-item .unified-extensions-item-icon,
     #unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack {
@@ -63,3 +60,5 @@ Sourced:           https://github.com/datguypiko/Firefox-Mod-Blur
     }
 
 }
+
+
