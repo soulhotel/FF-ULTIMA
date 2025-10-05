@@ -59,6 +59,7 @@ user_pref("ultima.urlbar.scrollable", false);
 user_pref("ultima.urlbar.focus.blur", true);
 user_pref("ultima.urlbar.focus.blur.all", false);
 user_pref("ultima.urlbar.focus.text.aligns.left", false);
+user_pref("ultima.urlbar.hide.buttons.in.edge", false);
 
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);
@@ -135,7 +136,6 @@ user_pref("user.theme.xtension.ublock", true);
 user_pref("user.theme.xtension.YT", false);
 user_pref("user.theme.xtension.reddit", false);
 user_pref("ultima.scrollbar.thin", false);
-/*user_pref("ultima.theme.menubar", true); mark for removal */
 user_pref("user.theme.xtension.swap.addon.colors", true);
 user_pref("user.theme.xtras.tab.outline.color", "none");
 

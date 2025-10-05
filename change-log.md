@@ -33,6 +33,7 @@
 - `qol • 🟡 •` Setting [`ultima.tabs.always.show.pinned`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsalwaysshowpinned) now also applies to horizontal tab layout 87adf51
 - `qol • 🟡 •` Tab group "counter" adjustment
 - `qol • 🟡 •` Transparent color scheme adjustments #379 8bd577b
+- `qol • 🟡 •` Tab group label 3 sees visibility improvement with light mode themes
 - `qol • 🟡 •` Unloaded tabs that are inside of tab groups now appear more opaque than before
 - `qol • 🟡 •` Toolbar button badges have been restored/unmodified to default colors #382 568e62f
 - `qol • 🟡 •` Add-on themes (when in light mode) see some improvement to menu contrast and accent color #383 e9ebb67

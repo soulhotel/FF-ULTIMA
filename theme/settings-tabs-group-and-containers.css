@@ -100,6 +100,16 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
   }
 }
 
+/* 10/5/2025 tab group labels when using Light Mode need more visibility */
+/* font weight approach */
+@media (prefers-color-scheme: light) {
+    .tab-group-label {
+        font-weight: 900 !important;
+        text-shadow: 1px 1px 1.3px rgba(45,45,45,0.7) !important;
+        font-size: 1.05em;
+    }
+}
+
 /* tab groups labels -------------------------------------------------------------------------------------------- */
 
 /* Label Style T, Contributed by @tthornton3-chwy https://github.com/tthornton3-chwy, always visible label */
