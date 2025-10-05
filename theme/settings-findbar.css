@@ -12,12 +12,8 @@ findbar on top
 
 @media -moz-pref("ultima.findbar.position.top") {
     /* Show searchbox at the top */
-    .browserContainer {
-        flex-direction: column-reverse;
-    }
-
-    /* Add top margin */
     .browserContainer > findbar {
+        order: -1;
         margin-top: 10px;
     }
 
