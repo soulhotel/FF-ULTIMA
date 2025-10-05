@@ -73,6 +73,7 @@ user_pref("user.theme.xtension.sidebery", true);
 
 /* findbar */
 user_pref("ultima.findbar.position.top", true);
+user_pref("ultima.findbar.disable.background.image", false);
 
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);

@@ -44,7 +44,20 @@ findbar on top
 
 /* --------------------------------------------------------------------------- */
 
+/* findbar on top ------------------------------------------------------------ */
+/* findbar on top ------------------------------------------------------------ */
 
+@media -moz-pref("ultima.findbar.disable.background.image") {
+    #main-window[lwtheme] {
+        & findbar {
+            background-color: var(--lwt-accent-color) !important;
+            background-image: none !important;
+        }
+        & .findbar-container {
+            background: transparent !important;
+        }
+    }
+}
 
 /* --------------------------------------------------------------------------- */
 
