@@ -1045,6 +1045,15 @@ button[part="dialog-button"] {
     --button-background-color-primary: var(--uc-accent-color-1) !important;
     --button-background-color-primary-hover: var(--uc-accent-color-2) !important;
 }
+#main-window[lwtheme] {
+    toolbar .toolbarbutton-1 {
+        &:not([disabled]) {
+            &:is(:hover:active, [open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+                background-color: color-mix( in srgb, var(--toolbarbutton-active-background) 40%, transparent) !important;
+            }
+        }
+    }
+}
 
 /* Status Panel --------------------------------------------------------------------------------------------- */
 
