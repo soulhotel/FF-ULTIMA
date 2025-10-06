@@ -247,7 +247,7 @@ Custom Icons
     accent-color: var(--uc-accent-color-5) !important;
 }}
 :root {
-    --sidebar-box-background: var(--uc-browser-color) !important;
+    --sidebar-box-background: rgba(140,140,150,0.1) !important;
 }
 /* Tabs -----------------------------------------------------------*/
     

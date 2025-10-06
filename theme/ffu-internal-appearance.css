@@ -260,6 +260,7 @@ Border Hunter
         margin-top:4px !important;
         outline: 10px solid var(--lwt-accent-color) !important;
         outline-offset: -1px !important;
+        margin-top: 2px !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
@@ -625,6 +626,19 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
 .sidebar-placesTreechildren::-moz-tree-row {
     height: 30px !important;
 }
+:root {
+    --sidebar-box-background: rgba(140,140,150,0.1) !important;
+}
+#sidebar-main {
+    --toolbarbutton-active-background: transparent !important;
+    /*
+    questionable to make this transparent yes, but,
+    the vertical tab bar always sits beside the sidebar-box
+    an additional indicator via the buttons background, while
+    the sidebar related to the button is already right there, open and active,
+    seems like visual clutter
+    */
+}
 
 /* Overall Tabs Appearance  --------------------------------------------------------------------------------- */
 /* default */
@@ -930,6 +944,8 @@ span.button-background.labelled label {
     & #PersonalToolbar {background-color: transparent !important;}
     /* extra styling - customize toolbar page */
     & #menubar-items {background: transparent !important; color: var(--toolbar-field-color) !important;}
+    /*..*/
+    --arrowpanel-menuitem-border-radius: 8px !important;
 }
 /* session notify */
 :root[dialogroot] {
