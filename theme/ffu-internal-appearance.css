@@ -259,6 +259,7 @@ Border Hunter
     & #tabbrowser-tabpanels browser[type] {
         margin-top:4px !important;
         outline: 10px solid var(--lwt-accent-color) !important;
+        outline-offset: -1px !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
