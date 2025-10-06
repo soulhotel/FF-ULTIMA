@@ -252,7 +252,7 @@ Border Hunter
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
         border-radius: var(--uc-all-border-radius) !important;
-        outline: 10px solid var(--uc-browser-color) !important;
+        outline: 10px solid var(--lwt-accent-color) !important;
         @media (prefers-color-scheme: light) {outline: 10px solid var(--lwt-accent-color) !important;}
         outline-offset: -10px !important;
     }
@@ -617,6 +617,13 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
         outline: none !important;
     }}
 }
+.sidebar-placesTreechildren::-moz-tree-row(hover){
+    background-image: linear-gradient(90deg,transparent,highlight);
+    border-radius: 8px;
+}
+.sidebar-placesTreechildren::-moz-tree-row {
+    height: 30px !important;
+}
 
 /* Overall Tabs Appearance  --------------------------------------------------------------------------------- */
 /* default */
@@ -840,7 +847,7 @@ span.button-background.labelled label {
 
 /* Popups/Menus --------------------------------------------------------------------------------------------- */
 /* default */
-#main-window:not([lwtheme]), #main-window[lwtheme] {
+#main-window:not([lwtheme]) {
     /* session notify */
     :root[dialogroot] {
         --in-content-page-background: var(--uc-panel-background) !important;
@@ -875,7 +882,43 @@ span.button-background.labelled label {
     /* customize toolbar page */
     & #customization-container {background-color: var(--uc-browser-color) !important;}
     /* menu popups */
-    & .panel-subview-body {background: var(--uc-panel-background) !important;}
+    & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
+}
+#main-window[lwtheme] {
+    /* session notify */
+    :root[dialogroot] {
+        --in-content-page-background: var(--uc-panel-background) !important;
+        color: var(--uc-text)  !important;
+    }
+    /* other panels / extensions panel */
+    & .panel-subview-body {
+        background: var(--lwt-accent-color) !important;
+    }
+    /* other panels / extensions panel */
+    & panelview,
+    & #unified-extensions-view {
+        background: var(--lwt-accent-color) !important;
+    }
+    & #unified-extensions-view #unified-extensions-area {
+        background: var(--lwt-accent-color) !important;
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+    /* drop down menus */
+    & #ContentSelectDropdown > menupopup[customoptionstyling="true"]::part(arrowscrollbox) {
+        --panel-color: black !important;
+    }
+    & #ContentSelectDropdownPopup .menupopup-arrowscrollbox::part(content) {
+        --panel-color: black !important;
+    }
+    & #ContentSelectDropdownPopup menupopup,
+    & #ContentSelectDropdownPopup panel {
+        --panel-color: black !important;
+    }
+    /* bookmark toolbar adjustment */
+    & #PersonalToolbar {background: var(--uc-transparent) !important;}
+    /* customize toolbar page */
+    & #customization-container {background-color: var(--uc-browser-color) !important;}
+    /* menu popups */
     & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
 }
 /* add on */
@@ -898,7 +941,7 @@ span.button-background.labelled label {
 #main-window:not([lwtheme]), #main-window[lwtheme] {
     menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
-        --panel-background: var(--uc-context-menu) !important;
+        --panel-background: var(--lwt-accent-color) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;
         --panel-border-color: var(--uc-panel-border-2) !important;
         --panel-color: var(--uc-text) !important;
