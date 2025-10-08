@@ -705,16 +705,16 @@ box-shadow: none !important;}}
             & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
                 & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
                     left:-45px !important;
-                    top:5vh !important;
-                    height:85vh !important;
+                    top:0vh !important;
+                    height:95vh !important;
                     filter: brightness(90%);
                 }
             }
             & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
                 #sidebar-main[sidebar-positionend=""]:not(:hover) {
                     right:-45px !important;
-                    top:5vh !important;
-                    height:85vh !important;
+                    top:0vh !important;
+                    height:95vh !important;
                     filter: brightness(90%);
                 }
             }
