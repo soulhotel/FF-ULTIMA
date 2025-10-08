@@ -274,7 +274,7 @@ Custom Icons
 /* Context Menu ---------------------------------------------------*/
 
 #main-window:not([lwtheme]), #main-window[lwtheme] {
-    menupopup, panel:not(.autoscroller) {
+    menupopup:not(#ContentSelectDropdownPopup), panel:not(.autoscroller) {
         --panel-color: var(--uc-text) !important;
     }
     menuitem:hover {

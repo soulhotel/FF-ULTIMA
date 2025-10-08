@@ -183,6 +183,7 @@ user_pref("widget.gtk.native-context-menus", false);
 /* extra recommended */
 user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
+user_pref("browser.tabs.groups.hoverPreview.enabled", true);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh", false);
 

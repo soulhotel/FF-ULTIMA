@@ -466,7 +466,7 @@ Custom Icons
 /* Context Menu ---------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    menupopup, panel {
+    menupopup:not(#ContentSelectDropdownPopup), panel {
         color-scheme: light dark;
         --panel-background: var(--uc-context-menu) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;

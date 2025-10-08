@@ -956,7 +956,7 @@ span.button-background.labelled label {
 /* Context Menu --------------------------------------------------------------------------------------------- */
 
 #main-window:not([lwtheme]), #main-window[lwtheme] {
-    menupopup, panel:not(.autoscroller) {
+    menupopup:not(#ContentSelectDropdownPopup), panel:not(.autoscroller) {
         color-scheme: light dark;
         --panel-background: var(--lwt-accent-color) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;
