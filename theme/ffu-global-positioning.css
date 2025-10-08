@@ -696,26 +696,20 @@ box-shadow: none !important;}}
         }
         @media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
             & #sidebar-main {
-                transition: left ease 0.5s;
+                transition: left 0.1s ease 0.3s;
                 z-index:1000 !important;
                 box-shadow: var(--uc-box-shadow) !important;
                 border-radius:10px !important;
                 opacity: 1 !important;
             }
-            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) {
+            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover))/*:has(.tab-group-editor-panel[panelopen="true"])*/ {
                 & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
-                    left:-45px !important;
-                    top:0vh !important;
-                    height:95vh !important;
-                    filter: brightness(90%);
+                    left:-46px !important;
+                    filter: brightness(95%);
                 }
-            }
-            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
-                #sidebar-main[sidebar-positionend=""]:not(:hover) {
-                    right:-45px !important;
-                    top:0vh !important;
-                    height:95vh !important;
-                    filter: brightness(90%);
+                & #sidebar-main[sidebar-positionend=""]:not(:hover) {
+                    right:-46px !important;
+                    filter: brightness(95%);
                 }
             }
         }
