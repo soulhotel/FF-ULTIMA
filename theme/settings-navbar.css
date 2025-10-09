@@ -135,13 +135,14 @@ compact menu panels
 @media -moz-pref("ultima.navbar.hidebuttons") {
     @media not -moz-pref("ultima.navbar.float") { 
         @media not -moz-pref("ultima.navbar.float.fullsize") {
-            #nav-bar:not(:focus-within):not(:hover) toolbarbutton:not(.titlebar-button) {
+            #nav-bar:not(:focus-within, :hover) toolbarbutton:not(.titlebar-button, #customizationui-widget-panel *) {
                 opacity:0 !important;
                 transition:opacity ease 2s 2s;
             }
             :root:has(#appMenu-popup[panelopen="true"]) #PanelUI-menu-button,
             :root:has(#unified-extensions-panel[panelopen="true"]) #unified-extensions-button,
             :root:has(#downloadsPanel[panelopen="true"]) #downloads-button,
+            :root:has(#customizationui-widget-panel[panelopen="true"]) #alltabs-button,
             #nav-bar:not(:focus-within):not(:hover) #downloads-button[progress="true"],
             #nav-bar:not(:focus-within):not(:hover) #urlbar-searchmode-switcher[open] {
                 opacity: 1 !important;

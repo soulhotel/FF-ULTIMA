@@ -684,8 +684,6 @@ box-shadow: none !important;}}
                     height:25vh !important;
                     filter: brightness(60%);
                 }
-            }
-            & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover)) { 
                 #sidebar-main[sidebar-positionend=""]:not(:hover) {
                     right:-45px !important;
                     top:65vh !important;
