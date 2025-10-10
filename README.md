@@ -30,7 +30,7 @@ FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Sy
 
 ## Getting Started
 
-You can download the theme in multiple ways, choose one (video tutorials included).
+You can install the theme with any of these option, choose one (video tutorials are included).
 
 1. Manually [Download the theme ->](https://ff-ultima.github.io/docs/how-to/how-to-install)
 2. Using [git and a terminal ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
@@ -38,7 +38,7 @@ You can download the theme in multiple ways, choose one (video tutorials include
 
 ## Documentation
 
-FF Ultima's (wiki) documentation has been moved to: https://ff-ultima.github.io. You can find detailed help docs for <ins>everything</ins> theme related in there. And if you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
+You can find detailed help docs for <ins>everything</ins> theme related in [here](https://ff-ultima.github.io). And if you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
 
 ## Enjoy
 

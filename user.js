@@ -102,7 +102,7 @@ user_pref("ultima.tabs.tabgroups.background.3", false);
 user_pref("ultima.tabs.disable.scrollbar", false);
 user_pref("ultima.tabs.horizontal.fullwidth", false);
 user_pref("ultima.tabs.focus.blur", false);
-user_pref("ultima.tabs.tabCounter", false);
+user_pref("ultima.tabs.tabCounter", true);
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);

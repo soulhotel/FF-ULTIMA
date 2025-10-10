@@ -375,7 +375,7 @@ tab counter
     #tabbrowser-arrowscrollbox-periphery::after {
         content: counter(tabcount) " Tabs Open";
         position: absolute;
-        bottom: -20px;
+        bottom: -22px;
         left: 20px;
         word-spacing: 0.2rem;
         font-style: italic;
@@ -393,12 +393,30 @@ tab counter
     /* adjustment for horizontal tabs */
     #tabbrowser-arrowscrollbox[orient="horizontal"] {
         #tabbrowser-arrowscrollbox-periphery {
-            padding-right:140px;
+            padding-right:118px;
         }
         #tabbrowser-arrowscrollbox-periphery::after {
             bottom: 10px;
             left: 22px;
             min-width: 140px;
         } 
+    }
+    /* adjustment for tabs overflow */
+    #tabbrowser-tabs[overflow=""] {
+        /* vertical */
+        #tabbrowser-arrowscrollbox[orient="vertical"] {
+            #tabbrowser-arrowscrollbox-periphery::after {
+                position: fixed;
+                z-index: 99999999999999999;
+                bottom: 72px;
+                left: 104px;
+            }             
+        }
+        /* horizontal */
+        #tabbrowser-arrowscrollbox[orient="horizontal"] {
+            #tabbrowser-arrowscrollbox-periphery::after {
+                /**/
+            }             
+        }  
     }
 }  
