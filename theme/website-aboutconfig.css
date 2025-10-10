@@ -300,4 +300,25 @@ body::after {
     }
 }
 
+@media -moz-pref("ultima.disable.contextmenu.icons") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.disable.contextmenu.icons` has been renamed to `ultima.contextmenu.no.icons`. Please delete the old setting \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.disable.contextmenu.icons.all") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.disable.contextmenu.icons.all` has been renamed to `ultima.contextmenu.no.navigation.icons`. Please delete old setting \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.navbar.hidebuttons") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.navbar.hidebuttons` has been renamed to `ultima.navbar.hide.buttons` \A ";
+        display: block;
+    }
+}
+
 }} /* end aboutconfig page */

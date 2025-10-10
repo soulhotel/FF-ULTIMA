@@ -8,17 +8,11 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 Wiki:              https://ff-ultima.github.io/docs/getting-started
 Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest                 
-License:           MPL 2.0 https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE
+License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 2.0
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 ```
 
-The `.autoconfig/` folder is completely optional, for users who want the extended support. You can use it to setup userchromejs based on a modified version of https://github.com/AlexVallat/firefox-scripts. With a collection of scripts tested in FF Ultima.
+This `.autoconfig/` folder is completely optional.
 
-The documentation has a detailed guide on getting started https://ff-ultima.github.io/docs/settings/userchrome-and-autoconfig/setup
-
-<!--
-add buttons into the vertical tabs button group should be [AREA_VERTICAL_TABSTRIP](https://github.com/mozilla/gecko-dev/blob/master/browser/components/customizableui/CustomizableUI.sys.mjs) but it's failing. Injecting the button into tools-and-extensions while copying the styling of the other tab strip buttons failing, it might have been due to the shadow-root, but i either couldnt identify it properly or just didn't know what I was doing.
-
-https://github.com/mozilla/gecko-dev/tree/master/browser/components/customizableui
--->
+For users who want the extended userchromejs usage, you can use this folder and the [setup documentation](https://ff-ultima.github.io/docs/settings/userchrome-and-autoconfig/setup) to get started. Included is a collection of scripts tested in FF Ultima.

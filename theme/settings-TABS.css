@@ -18,11 +18,7 @@ disable scrollbar
 horizontal tabs take full width
 tab focus blur
 tab outline colors
-tab groups adjustments
-tab groups labels
-tab groups backgrounds
-tab groups background transitions
-tab containers
+tab counter
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -363,3 +359,46 @@ tab containers
     }
 }
 
+/* tab counter -------------------------------------------------------------------------------------------------- */
+
+/* display the total # amount of tabs open in the current window, within the tab container */
+
+@media -moz-pref("ultima.tabs.tabCounter") {
+    /* get count */
+    #tabbrowser-tabs {
+        counter-reset: tabcount;
+        & .tabbrowser-tab {
+            counter-increment: tabcount;
+        }
+    }
+    /* visual indicator */
+    #tabbrowser-arrowscrollbox-periphery::after {
+        content: counter(tabcount) " Tabs Open";
+        position: absolute;
+        bottom: -20px;
+        left: 18px;
+        word-spacing: 0.2rem;
+        font-style: italic;
+    }
+    /* adjustment for collapsed vertical tabs */
+    #sidebar-main:not([sidebar-launcher-expanded=""]) {
+        #tabbrowser-arrowscrollbox[orient="vertical"] {
+            #tabbrowser-arrowscrollbox-periphery::after {
+                bottom: -36px;
+                left: 1px;
+                text-align: center;
+            }             
+        }
+    }
+    /* adjustment for horizontal tabs */
+    #tabbrowser-arrowscrollbox[orient="horizontal"] {
+        #tabbrowser-arrowscrollbox-periphery {
+            padding-right:140px;
+        }
+        #tabbrowser-arrowscrollbox-periphery::after {
+            bottom: 10px;
+            left: 22px;
+            min-width: 140px;
+        } 
+    }
+}  

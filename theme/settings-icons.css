@@ -9,23 +9,6 @@ themed icons can be overridden with either default icons or other icon sets
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* hide context menu icons (except for top navigation) */
-@media -moz-pref("ultima.disable.contextmenu.icons") {
-    #contentAreaContextMenu, #tabContextMenu {
-        .menu-icon:not(menugroup *) {
-            visibility: collapse !important;
-        }
-    }
-}
-/* hide all context menu icons */
-@media -moz-pref("ultima.disable.contextmenu.icons.all") {
-    #contentAreaContextMenu, #tabContextMenu {
-        .menu-icon, #context-sep-navigation {
-            visibility: collapse !important;
-        }
-    }
-}
-
 /* extension icon default 🧩 */
 @media -moz-pref("user.theme.xtension.extensions.icon.default") {
     #main-window:not([lwtheme]) #unified-extensions-button {

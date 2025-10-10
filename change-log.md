@@ -45,6 +45,19 @@
 - `qol • 🟡 •` 
 - `wip • ℹ️ •` 
 -->
+4.0+ (updates made after the 4.0 release)
+- `fix • 🔴 •` Fixed an issue where the all tabs (button) menu was affected by navbar.hide.buttons
+- `fix • 🔴 •` Dropdown menu's for websites now respect default appearances #392 fc16e2b
+- `renamed • 🔴 •` ultima.disable.contextmenu.icons -> `ultima.contextmenu.no.icons`
+- `renamed • 🔴 •` ultima.disable.contextmenu.icons.all -> `ultima.contextmenu.no.navigation.icons`
+- `renamed • 🔴 •` ultima.navbar.hidebuttons -> `ultima.navbar.hide.buttons`
+- `renamed • 🔴 •` ultima.spacing.compact.menus -> `ultima.spacing.compact.menupanel`
+- `removed • 🔴 •` Setting `ultima.disable.alltabs.button` is no more.. Since Firefox lets us remove this from the toolbar now
+- `new • 🟢 •` Setting `ultima.tabs.tabCounter` for a total number of tabs indicator in
+- `new • 🟢 •` Setting `ultima.content.toolbox.ontop` reverses the position of the content toolbox when docked bottom
+- `new • 🟢 •` Setting `ultima.navbar.bookmarks.focus.blur` blurs browser content when focused on bookmark folders
+- `qol • 🟡 •` Adaptive Tab Color support sees some improvement 3b2a859 2dea82e d20d045
+- `qol • 🟡 •` Setting `ultima.tabs.vertical.hide` transition sees some adjustment #393 1fc96b8
 
 ### <ins> Setup
 

@@ -13,6 +13,7 @@ update ready label
 navbar text for icons
 bookmarked/selected tab indicator
 compact menu panels
+blur content when viewing bookmarks panel
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -132,7 +133,7 @@ compact menu panels
 
 /* nav bar hide buttons (off hover)  ---------------------------------------------------------------- */
 
-@media -moz-pref("ultima.navbar.hidebuttons") {
+@media -moz-pref("ultima.navbar.hide.buttons") {
     @media not -moz-pref("ultima.navbar.float") { 
         @media not -moz-pref("ultima.navbar.float.fullsize") {
             #nav-bar:not(:focus-within, :hover) toolbarbutton:not(.titlebar-button, #customizationui-widget-panel *) {
@@ -408,8 +409,41 @@ compact menu panels
 
 /* compact menu panels ------------------------------------------------------------------------------ */
 
-@media -moz-pref("ultima.spacing.compact.menus") {
+@media -moz-pref("ultima.spacing.compact.menupanel") {
     .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
         --arrowpanel-menuitem-padding: 4px 8px;
+    }
+}
+
+/* blur content when viewing bookmarks panel -------------------------------------------------------- */
+
+/* Made in the same style as ultima.urlbar.focus.blur from chrome/theme/settings-urlbar.css,
+mostly to preserve and re-use the ::before element used by the original setting */
+
+@media -moz-pref("ultima.navbar.bookmarks.focus.blur") {
+    #tabbrowser-tabpanels::before {
+        content: "";
+        backdrop-filter: blur(25px);
+        background-color:rgba(1,1,1,0.1);
+
+        z-index: 999;
+        display: flex;
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+
+        border-radius: 10px;
+        margin: var(--uc-content-margins);
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s linear;
+    }
+    #main-window:has(.bookmark-item[open]) {
+        #tabbrowser-tabpanels::before {
+            opacity: 1;
+        }
+        browser[type] {
+            backdrop-filter: blur(25px);
+        }
     }
 }

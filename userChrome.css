@@ -5,7 +5,7 @@
 ┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
                    
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki
+Wiki:              https://ff-ultima.github.io/docs/getting-started
 Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest                 
 License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 2.0
 
@@ -32,3 +32,10 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/settings-tabs-group-and-containers.css);
 
 @import url(theme/ffu-special-configs.css);
+
+@media -moz-pref("ultima.content.toolbox.ontop") {
+    .browserContainer {
+        flex-direction: column-reverse;
+    }
+}
+/* inspect the tool box and theme it too */

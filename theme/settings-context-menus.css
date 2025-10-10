@@ -4,6 +4,7 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Context Menu Settings
 
 custom spacing
+icon visibility
 restore unload tab option
 remove excess options
 
@@ -23,6 +24,24 @@ remove excess options
     }
 }
 
+/* icon visibility ------------------------------------------------- */
+
+/* hide context menu icons (except for top navigation) */
+@media -moz-pref("ultima.contextmenu.no.icons") {
+    #contentAreaContextMenu, #tabContextMenu {
+        .menu-icon:not(menugroup *) {
+            visibility: collapse !important;
+        }
+    }
+}
+/* hide all context menu icons */
+@media -moz-pref("ultima.contextmenu.no.navigation.icons") {
+    #contentAreaContextMenu, #tabContextMenu {
+        .menu-icon, #context-sep-navigation {
+            visibility: collapse !important;
+        }
+    }
+}
 
 /* restore unload tab option --------------------------------------- */
 

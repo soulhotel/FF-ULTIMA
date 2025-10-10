@@ -45,6 +45,7 @@ user_pref("ultima.disable.windowcontrols.button", false);
 user_pref("ultima.navbar.update.ready.label", false);
 user_pref("ultima.navbar.text.for.icons", false);
 user_pref("ultima.navbar.bookmarks.tab.indicator", false);
+user_pref("ultima.navbar.bookmarks.focus.blur", false);
 
 /* url bar */
 user_pref("ultima.urlbar.animate.open", true);
@@ -78,7 +79,6 @@ user_pref("ultima.findbar.disable.background.image", false);
 
 /* tabs related settings */
 user_pref("ultima.spacing.compact.tabs", true);
-user_pref("ultima.disable.alltabs.button", true);
 user_pref("ultima.tabs.disable.update.dot", true);
 user_pref("ultima.tabs.belowURLbar", true);
 user_pref("ultima.tabs.not.a.progress.bar", true);
@@ -102,6 +102,7 @@ user_pref("ultima.tabs.tabgroups.background.3", false);
 user_pref("ultima.tabs.disable.scrollbar", false);
 user_pref("ultima.tabs.horizontal.fullwidth", false);
 user_pref("ultima.tabs.focus.blur", false);
+user_pref("ultima.tabs.tabCounter", false);
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);
