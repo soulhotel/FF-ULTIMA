@@ -202,20 +202,17 @@ ultima.urlbar.focus.align.left
     /* Add the base state for the browser with transitions */
     #browser {
         filter: blur(0px);
-        position: relative;
         transition: 
             scale     100ms ease-in,
             filter    300ms ease-out !important;
-        will-change: transform, filter;
     }
     /* Base state for the overlay */
     #browser::before {
         content: '';
         position: absolute;
-        inset: 0;
         background: rgba(0, 0, 0, 0);
         pointer-events: none;
-        z-index: 999999;
+        z-index: 999;
         transition: background-color 200ms ease-in-out;
     }
     /* Active state with blur and overlay */
