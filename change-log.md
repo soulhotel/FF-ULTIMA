@@ -48,6 +48,7 @@
 4.0+ (updates made after the 4.0 release)
 - `fix • 🔴 •` Fixed an issue where the all tabs (button) menu was affected by navbar.hide.buttons
 - `fix • 🔴 •` Dropdown menu's for websites now respect default appearances #392 fc16e2b
+- `fix • 🔴 •` Adjustments to `urlbar.focus.blur.all`
 - `renamed • 🔴 •` ultima.disable.contextmenu.icons -> `ultima.contextmenu.no.icons`
 - `renamed • 🔴 •` ultima.disable.contextmenu.icons.all -> `ultima.contextmenu.no.navigation.icons`
 - `renamed • 🔴 •` ultima.navbar.hidebuttons -> `ultima.navbar.hide.buttons`
