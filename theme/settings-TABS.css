@@ -376,7 +376,7 @@ tab counter
         content: counter(tabcount) " Tabs Open";
         position: absolute;
         bottom: -20px;
-        left: 18px;
+        left: 20px;
         word-spacing: 0.2rem;
         font-style: italic;
     }

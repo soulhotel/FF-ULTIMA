@@ -702,11 +702,11 @@ box-shadow: none !important;}}
             }
             & :has(#tabContextMenu:not(:hover)):has(#tab-group-editor:not(:hover))/*:has(.tab-group-editor-panel[panelopen="true"])*/ {
                 & #sidebar-main:not([sidebar-positionend=""]):not(:hover) {
-                    left:-46px !important;
+                    left:-45px !important;
                     filter: brightness(95%);
                 }
                 & #sidebar-main[sidebar-positionend=""]:not(:hover) {
-                    right:-46px !important;
+                    right:-45px !important;
                     filter: brightness(95%);
                 }
             }
