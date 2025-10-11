@@ -58,11 +58,13 @@ ultima.urlbar.focus.align.left
 @media -moz-pref("ultima.urlbar.hide.buttons") {
     #urlbar #identity-box,
     #urlbar #page-action-buttons,
+    #urlbar .urlbar-revert-button-container,
     #urlbar #tracking-protection-icon-container {
         opacity: 0 !important;
     }
     #urlbar:hover #identity-box,
     #urlbar:hover #page-action-buttons,
+    #urlbar:hover .urlbar-revert-button-container,
     #urlbar:hover #tracking-protection-icon-container {
         opacity: 1 !important;
         transition: opacity 100ms ease !important;
