@@ -371,16 +371,18 @@ tab counter
             counter-increment: tabcount;
         }
     }
-    /* visual indicator */
-    #tabbrowser-arrowscrollbox-periphery::after {
-        content: counter(tabcount) " Tabs Open";
-        position: absolute;
-        bottom: -22px;
-        left: 20px;
-        word-spacing: 0.2rem;
-        font-style: italic;
+    /* VERTICAL tabs visual indicator */
+    #tabbrowser-arrowscrollbox[orient="vertical"] {
+        #tabbrowser-arrowscrollbox-periphery::after {
+            content: counter(tabcount) " Tabs Open";
+            position: absolute;
+            bottom: -22px;
+            left: 20px;
+            word-spacing: 0.2rem;
+            font-style: italic;
+        }
     }
-    /* adjustment for collapsed vertical tabs */
+    /* adjustment for collapsed tabs */
     #sidebar-main:not([sidebar-launcher-expanded=""]) {
         #tabbrowser-arrowscrollbox[orient="vertical"] {
             #tabbrowser-arrowscrollbox-periphery::after {
@@ -390,20 +392,8 @@ tab counter
             }             
         }
     }
-    /* adjustment for horizontal tabs */
-    #tabbrowser-arrowscrollbox[orient="horizontal"] {
-        #tabbrowser-arrowscrollbox-periphery {
-            padding-right:118px;
-        }
-        #tabbrowser-arrowscrollbox-periphery::after {
-            bottom: 10px;
-            left: 22px;
-            min-width: 140px;
-        } 
-    }
     /* adjustment for tabs overflow */
     #tabbrowser-tabs[overflow=""] {
-        /* vertical */
         #tabbrowser-arrowscrollbox[orient="vertical"] {
             #tabbrowser-arrowscrollbox-periphery::after {
                 position: fixed;
@@ -411,12 +401,11 @@ tab counter
                 bottom: 72px;
                 left: 104px;
             }             
-        }
-        /* horizontal */
-        #tabbrowser-arrowscrollbox[orient="horizontal"] {
-            #tabbrowser-arrowscrollbox-periphery::after {
-                /**/
-            }             
-        }  
+        } 
     }
-}  
+    /* HORIZONTAL tabs visual indicator */
+    #tabbrowser-arrowscrollbox[orient="horizontal"]::after {
+        content: counter(tabcount) " Tabs Open";
+         margin: 12px 18px !important;
+    }
+}
