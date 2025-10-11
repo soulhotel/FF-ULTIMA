@@ -26,7 +26,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media -moz-pref("user.theme.wallpaper.gruvbox"){body{background-image: url("walls/gruvbox.jpg") !important;}}
 @media -moz-pref("user.theme.wallpaper.gruvbox.light"){body{background-image: url("walls/gruvbox-l.jpg") !important;}}
 @media -moz-pref("user.theme.wallpaper.gruvbox.flowers"){body{background-image: url("walls/gruvbox-3.jpg") !important;}}
-@media -moz-pref("user.theme.wallpaper.seasonal"){body{background-image: url("walls/seasonal.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.fluent.dark"){body{background-image: url("walls/FluentMonochrome-d.jpg") !important;}}
+@media -moz-pref("user.theme.wallpaper.fluent.light"){body{background-image: url("walls/FluentMonochrome-l.jpg") !important;}}
 @media -moz-pref("user.theme.wallpaper.kanagawa-wave"){body{background-image: url("walls/kanagawa-wave.jpg") !important;}}
 
 }} /*fin*/
