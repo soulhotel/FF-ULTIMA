@@ -32,7 +32,7 @@ FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Sy
 
 You can install the theme with any of these options, choose one (video tutorials are included).
 
-1. Manually [Download the theme ->](https://ff-ultima.github.io/docs/how-to/how-to-install)
+1. Manually [download the theme ->](https://ff-ultima.github.io/docs/how-to/how-to-install)
 2. Using [git and a terminal ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
 3. Or auto install with [gituserChrome ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
 
