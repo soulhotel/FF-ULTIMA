@@ -43,7 +43,7 @@ You can find detailed help docs for <ins>everything</ins> theme related in [here
 ## Enjoy
 
 
-<!-- sponsors --><!-- sponsors -->
+<!-- sponsors --><a href="https://github.com/AuRiMaS666"><img src="https:&#x2F;&#x2F;github.com&#x2F;AuRiMaS666.png" width="60px" alt="User avatar: " /></a><!-- sponsors -->
 
 
 
