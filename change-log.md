@@ -43,6 +43,8 @@ sidebar.seperator, navbar.autohide, navbar.bookmarks.focus.blur, tabs.multiline.
 
 ![4 1preview](https://github.com/user-attachments/assets/c66d95b2-76f5-4e0a-8479-bb39b393d5f8)
 
-### Wallpapers
+### <ins> Wallpaper
+
+![walls](https://github.com/user-attachments/assets/16fcccab-1934-4b2b-aa51-f8923ee7f254)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
