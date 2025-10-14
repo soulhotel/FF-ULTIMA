@@ -61,6 +61,7 @@ user_pref("ultima.urlbar.focus.blur", true);
 user_pref("ultima.urlbar.focus.blur.all", false);
 user_pref("ultima.urlbar.focus.text.aligns.left", false);
 user_pref("ultima.urlbar.hide.buttons.in.edge", false);
+user_pref("ultima.urlbar.hide.trackingprotection.icon", false);
 
 /* sidebar */
 user_pref("ultima.sidebar.autohide", false);

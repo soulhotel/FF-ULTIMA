@@ -54,78 +54,76 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 /* Adding your Theme (Above) makes the colors available to websites & extensions -------------------------------- */
 }
 
-@-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing) {
-@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled") {
+@-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing) { :root {
 
 
-@media -moz-pref("user.theme.0.default") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/fullmoon.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/dusky.jpg") !important;}
-}}
+@media -moz-pref("user.theme.0.default") {
+    @media (prefers-color-scheme: dark)  {--uc-wallpaper: url("walls/fullmoon.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/dusky.jpg");}
+}
 
-@media -moz-pref("user.theme.transparent") { body {
-  @media (prefers-color-scheme: dark) {background-image:/* url("walls/transparent.jpg")*/ !important;}
-  @media (prefers-color-scheme: light) {background-image:/* url("walls/transparent.jpg")*/ !important;}
-}}
+@media -moz-pref("user.theme.transparent") {
+    @media (prefers-color-scheme: dark) {{--uc-wallpaper: /* url("walls/transparent.jpg")*/;}}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: /* url("walls/transparent.jpg")*/;}
+}
 
-@media -moz-pref("user.theme.catppuccin") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin.jpg") !important;}
-}}
+@media -moz-pref("user.theme.catppuccin") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/catppuccin.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/catppuccin.jpg");}
+}
 
-@media -moz-pref("user.theme.catppuccin-frappe") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin-frappe.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin-frappe.jpg") !important;}
-}}
+@media -moz-pref("user.theme.catppuccin-frappe") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/catppuccin-frappe.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/catppuccin-frappe.jpg");}
+}
 
-@media -moz-pref("user.theme.catppuccin-mocha") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin-mocha.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin-frappe2.jpg") !important;}
-}}
+@media -moz-pref("user.theme.catppuccin-mocha") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/catppuccin-mocha.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/catppuccin-frappe2.jpg");}
+}
 
-@media -moz-pref("user.theme.gruvbox") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/gruvbox.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/gruvbox-l.jpg") !important;}
-}}
+@media -moz-pref("user.theme.gruvbox") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/gruvbox.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/gruvbox-l.jpg");}
+}
 
-@media -moz-pref("user.theme.kanagawa-wave") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/kanagawa-wave.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/kanagawa-wave.jpg") !important;}
-}}
+@media -moz-pref("user.theme.kanagawa-wave") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/kanagawa-wave.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/kanagawa-wave.jpg");}
+}
 
-@media -moz-pref("user.theme.midnight") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/midnight.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/old.midnight.jpg") !important;}
-}}
+@media -moz-pref("user.theme.midnight") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/midnight.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/old.midnight.jpg");}
+}
 
-@media -moz-pref("user.theme.scarlet") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/scarlet.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/scarlet.jpg") !important;}
-}}
+@media -moz-pref("user.theme.scarlet") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/scarlet.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/scarlet.jpg");}
+}
 
-@media -moz-pref("user.theme.fluent") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/FluentMonochrome-d.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/FluentMonochrome-l.jpg") !important;}
-}}
+@media -moz-pref("user.theme.fluent") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/FluentMonochrome-d.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/FluentMonochrome-l.jpg");}
+}
 
-@media -moz-pref("user.theme.fluent.thinkpad") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/FluentMonochrome-d.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/FluentMonochrome-l.jpg") !important;}
-}}
+@media -moz-pref("user.theme.fluent.thinkpad") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/FluentMonochrome-d.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/FluentMonochrome-l.jpg");}
+}
 
-@media -moz-pref("user.theme.catppuccin-mocha-variant") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/catppuccin-mocha.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/catppuccin-frappe2.jpg") !important;}
-}}
+@media -moz-pref("user.theme.catppuccin-mocha-variant") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/catppuccin-mocha.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/catppuccin-frappe2.jpg");}
+}
 
-@media -moz-pref("user.theme.yourName") { body {
-  @media (prefers-color-scheme: dark) {background-image: url("walls/YourWallpaper.jpg") !important;}
-  @media (prefers-color-scheme: light) {background-image: url("walls/YourWallpaper.jpg") !important;}
-}}
-
+@media -moz-pref("user.theme.yourName") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/YourWallpaper.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/YourWallpaper.jpg");}
+}
 
 /* Adding your Theme (Above) and a wallpaper for it, you can reuse existing wallpapers too ---------------------- */
 }} /*end*/
 
 
-}
+
