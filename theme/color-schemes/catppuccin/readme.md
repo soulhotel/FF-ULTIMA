@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+description: Catppuccin
+id: Catppuccin
+---
+
 ```
 FF ULTIMA
 Catppuccin Edition
@@ -10,6 +16,7 @@ To use this color scheme:
 - Turn on `user.theme.catppuccin`
 
 Preview:
-![preview](./preview.png)
+![preview](./p1.png)
+![preview](./p2.png)
 
-Color schemes are easy to create: Learn how with the [Color Scheme](https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Scheme) Wiki.
+Color schemes are easy to create: Learn how with the [Color Scheme](/docs/color-schemes/create-a-color-scheme) Wiki.
