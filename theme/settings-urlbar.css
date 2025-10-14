@@ -17,6 +17,7 @@ ultima.urlbar.scrollable
 ultima.urlbar.focus.blur
 ultima.urlbar.focus.blur.all
 ultima.urlbar.focus.align.left
+ultima.urlbar.hide.trackingprotection.icon
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -256,5 +257,12 @@ ultima.urlbar.focus.align.left
         #urlbar-input {
             font-size: 11px !important;
         }
+    }
+}
+
+/* Hide tracking protection icon */
+@media -moz-pref("ultima.urlbar.hide.trackingprotection.icon") {
+    #tracking-protection-icon-container {
+        display: none !important;
     }
 }

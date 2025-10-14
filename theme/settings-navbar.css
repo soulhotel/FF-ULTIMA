@@ -14,6 +14,7 @@ navbar text for icons
 bookmarked/selected tab indicator
 compact menu panels
 blur content when viewing bookmarks panel
+enable bookmark url editting (add bookmark menu)
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -446,4 +447,11 @@ mostly to preserve and re-use the ::before element used by the original setting 
             backdrop-filter: blur(25px);
         }
     }
+}
+
+/* enable bookmark url editting (add bookmark menu) ------------------------------------------------- */
+
+/* Enable option to edit bookmark URLs under Add Bookmark (blue star) menu */
+.editBMPanel_locationRow {
+    display: initial !important;
 }
