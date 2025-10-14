@@ -23,7 +23,6 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
     @media -moz-pref("user.theme.wallpaper.catppuccin"){--uc-wallpaper: url("walls/catppuccin.jpg") !important;}
     @media -moz-pref("user.theme.wallpaper.catppuccin-frappe"){--uc-wallpaper: url("walls/catppuccin-frappe.jpg") !important;}
-    @media -moz-pref("user.theme.wallpaper.catppuccin-frappe2"){--uc-wallpaper: url("walls/catppuccin-frappe3.jpg") !important;}
     @media -moz-pref("user.theme.wallpaper.catppuccin-mocha"){--uc-wallpaper: url("walls/catppuccin-mocha.jpg") !important;}
     @media -moz-pref("user.theme.wallpaper.dusky"){--uc-wallpaper: url("walls/dusky.jpg") !important;}
     @media -moz-pref("user.theme.wallpaper.fullmoon"){--uc-wallpaper: url("walls/fullmoon.jpg") !important;}

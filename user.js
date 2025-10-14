@@ -156,7 +156,7 @@ user_pref("user.theme.wallpaper.midnight", false);
 user_pref("user.theme.wallpaper.midnight2", false);
 user_pref("user.theme.wallpaper.fluent.dark", false);
 user_pref("user.theme.wallpaper.fluent.light", false);
-user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", false);
+user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.customWallpaper.enabled", true);
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
