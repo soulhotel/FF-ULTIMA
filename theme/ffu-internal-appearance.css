@@ -958,7 +958,6 @@ span.button-background.labelled label {
 #main-window:not([lwtheme]), #main-window[lwtheme] {
     menupopup:not(#ContentSelectDropdownPopup), panel:not(.autoscroller) {
         color-scheme: light dark;
-        --panel-background: var(--lwt-accent-color) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;
         --panel-border-color: var(--uc-panel-border-2) !important;
         --panel-color: var(--uc-text) !important;
@@ -978,6 +977,7 @@ span.button-background.labelled label {
 #main-window[lwtheme] {
     menupopup, panel:not(.autoscroller) {
         color-scheme: light dark;
+        --panel-background: var(--lwt-accent-color) !important;
         --panel-color: color-mix(in srgb, var(--lwt-text-color) 75%, var(--lwt-accent-color)) !important;
         --panel-shadow: none !important;
     }

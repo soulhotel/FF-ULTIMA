@@ -27,6 +27,8 @@
 - `qol • 🟡 •` Setting [`tabs.vertical.hide`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsverticalhide-hiding-the-vertical-tab-bar) (in screen-edge) transition sees some adjustment, including a more *standard* height #393 1fc96b8
 - `qol • 🟡 •` The [fluent](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/fluent) color-scheme wallpapers have been added to `user.theme.wallpaper` settings 033c3c4
 - `qol • 🟡 •` The urlbars search term toggle has been added to the `urlbar.hide.button` list #396 e514b6a
+- `qol • 🟡 •` Color Scheme wallpaper logic has been rewritten to respect the new tab page wallpaper menu, where `Reset to default` defaults to Color Scheme wallpapers
+- `qol • 🟡 •` Theme size reduction
 <!--
 - `fyi • ℹ️ •` 
 - `fix • 🔴 •` 
@@ -40,5 +42,7 @@
 sidebar.seperator, navbar.autohide, navbar.bookmarks.focus.blur, tabs.multiline.labels, tabs.tabCounter, urlbar.float, ultima.urlbar.focus.blur
 
 ![4 1preview](https://github.com/user-attachments/assets/c66d95b2-76f5-4e0a-8479-bb39b393d5f8)
+
+### Wallpapers
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
