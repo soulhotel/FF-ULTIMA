@@ -1,9 +1,3 @@
----
-sidebar_position: 3
-description: Catppuccin
-id: Catppuccin
----
-
 ```
 FF ULTIMA
 Catppuccin Edition
