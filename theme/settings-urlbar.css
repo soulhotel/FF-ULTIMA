@@ -235,7 +235,7 @@ ultima.urlbar.hide.trackingprotection.icon
 
 @media -moz-pref("ultima.urlbar.focus.text.aligns.left") {
     /* Center URL within the address bar */
-    .urlbar-input-box, #PlacesToolbarItems {
+    .urlbar-input-box {
       text-align: center !important;
       justify-content: center !important;
     }
