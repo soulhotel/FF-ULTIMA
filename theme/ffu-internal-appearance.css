@@ -972,6 +972,7 @@ span.button-background.labelled label {
     menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
         background-color: var(--uc-button-selected) !important;
         color: var(--uc-accent-color-5) !important;
+        border-radius: 7px !important;
     }
 }
 #main-window[lwtheme] {

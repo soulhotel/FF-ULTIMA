@@ -62,11 +62,11 @@ Custom Icons
     --uc-panel-border:       rgba(125, 125, 125, 0.4);
     --uc-panel-border-2:     rgba(125, 125, 125, 0.3);
     --uc-accent-color-1:     rgb(70, 63, 77);
-    --uc-accent-color-2:     rgb(129, 118, 153);
+    --uc-accent-color-2:     #fcfc88;
     --uc-accent-color-3:     rgb(186, 194, 222);
     --uc-accent-color-4:     rgb(24, 24, 37);
-    --uc-accent-color-5:     rgb(166, 227, 161);
-    --uc-accent-color-6:     rgb(243, 139, 168);
+    --uc-accent-color-5:     #19083d;
+    --uc-accent-color-6:     #5f3787;
     --uc-accent-color-7:     rgb(44, 55, 80);
     --uc-transparent:        rgba(0,0,0,0);
     --uc-box-shadow: 0.1rem 0.4rem 0.4rem -0.1rem rgba(75,75,75,0.3);
@@ -155,11 +155,17 @@ Custom Icons
 /* URL Bar ----------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    & .urlbarView-row { &[selected] {
-        color: var(--uc-text) !important;
-    }}
-    & .urlbarView-row:hover {
+    & .urlbar {
         color: var(--uc-accent-color-1) !important;
+    }
+    & .urlbarView-row { 
+        color: var(--uc-accent-color-1) !important;
+        &[selected] {
+            color: var(--uc-accent-color-5) !important;
+        }
+    }
+    & .urlbarView-row:hover {
+        color: var(--uc-accent-color-2) !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
     & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
@@ -223,6 +229,26 @@ Custom Icons
 
 /* Context Menu ---------------------------------------------------*/
 
+#main-window:not([lwtheme]) {
+    menupopup:not(#ContentSelectDropdownPopup), panel:not(.autoscroller) {
+        --panel-background: var(--uc-context-menu) !important;
+        --panel-border-radius: var(--uc-button-border-radius) !important;
+        --panel-border-color: var(--uc-panel-border-2) !important;
+        --panel-color: var(--uc-text) !important;
+        --panel-shadow: none !important;
+    }
+    menuitem:hover {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-5) !important;
+        border-radius: 7px !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-5) !important;
+        border-radius: 7px !important;
+    }
+}
 
 /* Custom Icons ---------------------------------------------------*/
 

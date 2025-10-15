@@ -42,13 +42,15 @@ tab counter
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
 @media -moz-pref("ultima.tabs.always.show.pinned") {
     #pinned-tabs-container[orient="vertical"],#vertical-pinned-tabs-container {
-        height: fit-content !important;
-        min-height: fit-content !important;
-        max-height: fit-content !important;
+        height: -moz-fit-content !important;
+        min-height: -moz-fit-content !important;
     }
     #pinned-tabs-container[orient="horizontal"] {
         min-width: fit-content !important;
     }
+}
+#pinned-tabs-container[orient="vertical"],#vertical-pinned-tabs-container {
+    margin-bottom: 6px !important;
 }
 
 /* new tab button ----------------------------------------------------------------------------------------------- */
