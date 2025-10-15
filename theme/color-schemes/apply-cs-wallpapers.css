@@ -10,7 +10,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {  :root {
 
 
 @media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
@@ -37,4 +37,4 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
     @media -moz-pref("user.theme.wallpaper.kanagawa-wave"){--uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;}
 }
 
-}
+}}
