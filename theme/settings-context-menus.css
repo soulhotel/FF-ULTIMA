@@ -52,19 +52,14 @@ remove excess options
 
 /* remove excess options ------------------------------------------- */
 
-#context-sep-screenshots,
 #context-sendimage,
 #context-sep-setbackground,
 #context-openlinkinusercontext-menu {
-display: none !important;}
-#context-pocket,
-#context-savelinktopocket,
-#tabContextMenu #context_duplicateTab,         
-#tabContextMenu #context_duplicateTabs,
+    display: none !important;
+}
 #tabContextMenu #context_bookmarkSelectedTabs,
 #context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"] {
     display: none !important;
 }
-
 
 
