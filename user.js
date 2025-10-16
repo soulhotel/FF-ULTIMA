@@ -115,14 +115,17 @@ user_pref("sidebar.revamp.round-content-area", false); /*handled by theme*/
 user_pref("sidebar.animation.expand-on-hover.duration-ms", 140);
 user_pref("browser.tabs.tabMinWidth", 0); /*dont touch*/
 
-/* alternate styles */
-user_pref("ultima.spacing.compact", false);
-user_pref("ultima.spacing.relaxed", false); /*wip*/
+/* context menus */
 user_pref("ultima.spacing.compact.menus", false);
 user_pref("ultima.spacing.compact.contextmenu", false);
 user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.contextmenu.no.icons", false);
 user_pref("ultima.contextmenu.no.navigation.icons", false);
+user_pref("ultima.contextmenu.reduce.options", false);
+
+/* alternate styles */
+user_pref("ultima.spacing.compact", false);
+user_pref("ultima.spacing.relaxed", false); /*wip*/
 user_pref("ultima.tabs.tabContainer.1", false);
 user_pref("ultima.tabs.tabContainer.2", false);
 user_pref("ultima.tabs.tabContainer.3", true);
