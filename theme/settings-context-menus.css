@@ -53,7 +53,6 @@ remove excess options
 /* remove excess options ------------------------------------------- */
 
 #context-sendimage,
-#context-sep-setbackground,
 #context-openlinkinusercontext-menu {
     display: none !important;
 }
