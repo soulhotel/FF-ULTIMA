@@ -859,6 +859,53 @@ span.button-background.labelled label {
     &:hover{background: var(--uc-accent-color-2) !important;}
 }
 
+/* Split View Tabs ------------------------------------------------------------------------------------------ */
+
+#tabbrowser-tabpanels {
+    &[splitview] {
+        /* match splitter style of sidebars */
+        & .split-view-splitter {
+            background-color: var(--uc-accent-color-2) !important;
+            border-radius: 10px !important;
+            margin-top: 3%;
+            height: 90%;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        /* outline should match primary accent of cs */
+        & .browserStack {
+            .deck-selected > .browserContainer > & {
+                outline: var(--focus-outline) !important;
+                /*outline: var(--uc-accent-color-2) !important;*/
+                /* changing the outline breaks it? */
+            }
+        }
+    }
+}
+/* match splitter style of sidebars */
+#tabbrowser-tabs .tab-split-view-container {
+    tab-split-view-wrapper:not([hasactivetab]) & {
+        & .tabbrowser-tab {
+            &:last-child {
+                tab-split-view-wrapper:not([hasactivetab]) & {
+                    border-inline-start: 1px solid var(--uc-accent-color-2) !important;
+                }
+            }
+        }
+    }
+}
+/* this margin mod below does nothing, but it represents how spacing needs to be adjusted for future reference */
+#main-window {
+    & #tabbrowser-tabpanels[splitview] browser[type] {
+        margin: calc(var(--uc-content-margins) / 2) !important;
+    }
+}
+/* extra padding when horizontal breaks spacing, undo it */
+#tabbrowser-tabs[orient="horizontal"] .tab-split-view-container {
+    padding: 0 !important;
+}
 
 /* Popups/Menus --------------------------------------------------------------------------------------------- */
 /* default */

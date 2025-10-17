@@ -19,6 +19,10 @@ horizontal tabs take full width
 tab focus blur
 tab outline colors
 tab counter
+split view content outline
+split view seperator line
+split view focus opacity
+split view focus shrink
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -411,5 +415,69 @@ tab counter
         content: counter(tabcount) " Tabs Open";
          margin: 12px 18px !important;
          color: color-mix(in srgb, var(--toolbarbutton-icon-fill) 25%, transparent);
+    }
+}
+
+/* split view modifications started 10/17/2025 via Nightly 146 */
+/* split view content outline ----------------------------------------------------------------------------------- */
+
+/* toggle the visibility of default splitview content outline */
+@media not -moz-pref("ultima.tabs.splitview.content.outline") {
+    #tabbrowser-tabpanels[splitview] {
+        & .browserStack {
+            .deck-selected > .browserContainer > & {
+                outline: none !important;
+            }
+        }
+    }
+}
+
+/* split view seperator line ------------------------------------------------------------------------------------ */
+
+/* toggle the visibility of the splitview tab seperator line */
+@media not -moz-pref("ultima.tabs.splitview.tab.seperator") {
+      #tabbrowser-tabs .tab-split-view-container {
+        tab-split-view-wrapper:not([hasactivetab]) & {
+            & .tabbrowser-tab {
+                &:last-child {
+                    tab-split-view-wrapper:not([hasactivetab]) & {
+                        border-inline-start: 0px solid var(--uc-accent-color-2) !important;
+                    }
+                }
+            }
+        }
+    }  
+}
+
+/* split view focus opacity ------------------------------------------------------------------------------------- */
+
+/* when using split tabs, the unfocused view becomes less opaque */
+@media -moz-pref("ultima.tabs.splitview.focus.opacity") {
+    #tabbrowser-tabpanels[splitview] {
+        & .browserStack {
+            .split-view-panel:not(.deck-selected) > .browserContainer > & {
+                filter: brightness(60%);
+                opacity:0.6;
+                transition: opacity 0.3s ease, filter 1s ease;
+            }
+        }
+    }
+}
+
+/* split view focus shrink -------------------------------------------------------------------------------------- */
+
+/* when using split tabs, the second view shrinks into a portrait size when not focused */
+@media -moz-pref("ultima.tabs.splitview.focus.shrink") {
+    .split-view-panel {
+        transition: width 0.2s linear, min-width 0.2s linear, max-width 0.2s linear !important;
+    }
+    #tabbrowser-tabpanels[splitview]:has(.split-view-panel[column="1"]:not(:hover)) {
+        & .split-view-panel[column="0"] {
+            min-width: 70% !important;
+
+        }
+        & .split-view-panel[column="1"] {
+            max-width: 30% !important;
+        }
     }
 }

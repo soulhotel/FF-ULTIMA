@@ -104,6 +104,10 @@ user_pref("ultima.tabs.disable.scrollbar", false);
 user_pref("ultima.tabs.horizontal.fullwidth", false);
 user_pref("ultima.tabs.focus.blur", false);
 user_pref("ultima.tabs.tabCounter", true);
+user_pref("ultima.tabs.splitview.tab.seperator", false);
+user_pref("ultima.tabs.splitview.content.outline", false);
+user_pref("ultima.tabs.splitview.focus.opacity", false);
+user_pref("ultima.tabs.splitview.focus.shrink", false);
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);
