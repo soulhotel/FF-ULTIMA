@@ -952,6 +952,9 @@ span.button-background.labelled label {
     --in-content-page-background: var(--uc-panel-background) !important;
     color: var(--uc-text)  !important;
 }
+#commonDialog {
+    background-color: var(--uc-panel-background) !important;
+}
 
 /* Context Menu --------------------------------------------------------------------------------------------- */
 

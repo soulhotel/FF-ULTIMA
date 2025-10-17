@@ -65,14 +65,23 @@ remove excess options
     #context-sep-screenshots,
     #context-sendimage,
     #context-sep-setbackground,
-    #context-openlinkinusercontext-menu {
-    display: none !important;}
-    #context-pocket,
-    #context-savelinktopocket,
+    #context-openlinkinusercontext-menu,
+    #context-viewsource,
+    
+    #toolbar-context-selectAllTabs,
+    #toolbar-context-bookmarkSelectedTab,
+    
+    #context_selectAllTabs,
+    #context_closeTabOptions,
+    
     #tabContextMenu #context_duplicateTab,         
     #tabContextMenu #context_duplicateTabs,
     #tabContextMenu #context_bookmarkSelectedTabs,
-    #context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"] {
+    #context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"]
+    {
         display: none !important;
     }
+    #context_undoCloseTab {order: -2;}
+    #context_unloadTab {order: -1;}
+    #context_pinTab {order: -3;}
 }
