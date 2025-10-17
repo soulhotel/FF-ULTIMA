@@ -5,6 +5,12 @@ File Desc:         Handle Configurations for Nightly, Autoconfig, ...
 Wiki:              Todo
 
 Autoconfig Configurations
+  - Animate the Container label
+  - Sidebar button
+  - URL bar toggle button
+  - urlbar input ONLY in the private
+  - Reveal #urlbar
+  - second sidebar compatibility
 Nightly Configurations
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
@@ -28,13 +34,10 @@ Nightly Configurations
         max-width: 200px !important;
         transition-delay: 0s;
     }
-
     /* Sidebar button states */
     #bmf-btn-sidebar.sb-collapsible .toolbarbutton-icon {
         fill: var(--uc-accent-color-2) !important;
     }
-
-
     /* URL bar toggle button states */
     #bmf-btn-urlhide.state-default {
     fill: var(--toolbar-color) !important;
@@ -74,6 +77,55 @@ Nightly Configurations
     #navigator-toolbox:not(.state-collapsed) #urlbar-container:hover .urlbar-input-container {
     opacity: 1;
     transition: opacity 0.1s ease-in;
+    }
+
+    /* second sidebar compatibility */
+    #sb2-wrapper {
+        & #sb2-box {
+            background-color: var(--toolbar-bgcolor) !important;
+            border-width: 1px !important;
+            z-index: 9 !important;
+        }
+        & #sb2-toolbar {
+            background-color:  var(--toolbar-bgcolor) !important;
+            margin-top: var(--space-xxsmall) !important;
+        }
+        & #sb2-main {
+            padding: var(--space-xxsmall) var(--sb2-main-padding) var(--space-small) var(--space-xxsmall) !important;
+        }
+        &:has(#sb2-box[pinned="true"]:not([hidden])) #sb2-main {
+            padding: var(--space-xxsmall) var(--sb2-main-padding) var(--space-small) var(--space-small) !important;
+        }
+        @media -moz-pref("ultima.spacing.compact") {
+            /**/
+        }
+    }
+    #main-window[lwtheme] {
+        & #sb2-box {
+            background-color: var(--toolbox-bgcolor) !important;
+        }
+        & #sb2-toolbar {
+            background-color:  var(--toolbox-bgcolor) !important;
+        }
+    }
+    #main-window[class="sb2-webpanels-window"] {
+        &[lwtheme], &:not([lwtheme]) {
+            #tabbrowser-tabpanels {
+                border-radius: 0 !important;
+                border: none !important;
+            }
+
+            #tabbrowser-tabpanels browser[type] {
+                margin: 0 !important;
+                border: 2px transparent solid !important;
+            }
+        }
+    }
+    #sb2-splitter {
+        margin: 10px 0 !important;
+    }
+    #sb2-after-splitter {
+        width: 1px !important;
     }
 
 }
