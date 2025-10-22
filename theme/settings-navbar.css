@@ -414,6 +414,10 @@ enable bookmark url editting (add bookmark menu)
     .subview-subheader, panelview .toolbarbutton-1, .subviewbutton, .widget-overflow-list .toolbarbutton-1 {
         --arrowpanel-menuitem-padding: 4px 8px;
     }
+    #tabgroup-preview-panel {
+        --panel-padding: 0 !important;
+        --menuitem-margin: 0 !important;
+    }
 }
 
 /* blur content when viewing bookmarks panel -------------------------------------------------------- */

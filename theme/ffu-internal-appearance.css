@@ -234,12 +234,11 @@ Border Hunter
     }
     & #tabbrowser-tabpanels { /*DO NOT EDIT THIS BACKGROUNDCOLOR*/
         border-radius: var(--uc-all-border-radius) !important;
-        outline: 10px solid var(--uc-browser-color) !important;
-        outline-offset: -10px !important;
+        background: transparent !important;
     }
     & #tabbrowser-tabpanels browser[type] {
         margin-top:2px !important;
-        outline: 10px solid var(--uc-browser-color) !important;
+        outline: 4px solid var(--uc-browser-color) !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}
@@ -848,6 +847,7 @@ span.button-background.labelled label {
 /*6/24/2025 new splitters yay.*/
 #sidebar-tools-and-extensions-splitter {
     border-top: 1px var(--uc-accent-color-2) dashed !important;
+    background: transparent !important;
     min-height: 3px !important;
     opacity:0.2;
     &:hover{background: var(--uc-accent-color-2) !important;}

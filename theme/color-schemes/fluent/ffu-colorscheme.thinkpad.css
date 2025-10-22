@@ -172,7 +172,7 @@ Custom Icons
     }
     & #tabbrowser-tabpanels browser[type] {
         margin-top:2px !important;
-        outline: 7px solid var(--uc-browser-color) !important;
+        outline: 4px solid var(--uc-browser-color) !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}

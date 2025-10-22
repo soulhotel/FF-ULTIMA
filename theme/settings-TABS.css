@@ -24,6 +24,7 @@ split view seperator line
 split view focus opacity
 split view focus shrink
 split view gradient tabs background
+hide vertical tab splitters off hover
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -499,5 +500,14 @@ split view gradient tabs background
                 background: linear-gradient(-80deg, rgba(238,119,82,0.7), rgba(131,60,126,0.7), rgba(35,250,213,0.7)) !important;
             }
         }
+    }
+}
+
+/* hide vertical tab splitters off hover ------------------------------------------------------------------------ */
+
+@media -moz-pref("ultima.tabs.hide.splitter") {
+#vertical-pinned-tabs-splitter, #sidebar-tools-and-extensions-splitter {
+    &:not(:hover) {
+        opacity: 0;
     }
 }

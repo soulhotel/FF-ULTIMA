@@ -198,7 +198,7 @@ Custom Icons
     }
     & #tabbrowser-tabpanels browser[type] {
         margin-top:2px !important;
-        outline: 10px solid transparent !important;
+        outline: 7px solid transparent !important;
     }
     @media -moz-pref("ultima.spacing.compact") {
         & #tabbrowser-tabpanels browser[type] {margin-top:0px !important;}

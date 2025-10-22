@@ -114,6 +114,7 @@ ultima.urlbar.hide.trackingprotection.icon
 }
 
 @media -moz-pref("ultima.urlbar.float") {
+@media not -moz-pref("ultima.urlbar.limit.popout") {
     #urlbar {
         /* baseline transition */
         transition: transform 0.3s ease-in-out !important;
@@ -146,6 +147,47 @@ ultima.urlbar.hide.trackingprotection.icon
             transform: translateY(20vh) scale(1.2) !important;
         }
     }
+}
+}
+
+@media -moz-pref("ultima.urlbar.float") {
+@media -moz-pref("ultima.urlbar.limit.popout") {
+    #urlbar[pageproxystate="valid"] {
+        height: 36px !important;
+    }
+    #urlbar[pageproxystate="invalid"] {
+        /* baseline transition */
+        transition: transform 0.3s ease-in-out !important;
+        &[open] {
+            /* appearance adjustments */
+            --urlbarView-separator-color: transparent !important;
+            padding-top:3px !important;
+            & #urlbar-background,
+            & .urlbar-background {
+                box-shadow: var(--uc-box-shadow) !important;
+            }
+        }
+        /* when extended = scale */
+        &[breakout-extend] {
+            transform: translateY(20vh) scale(1.1);
+            @media (min-width: 1925px) { max-width:37vw !important; margin-left:1vw !important;}
+            @media (min-width: 2500px) { max-width:33vw !important; margin-left:9vw !important;}
+        }
+        /*situational = scale */
+        &:hover:not([open]) {
+            transition: transform 0.3s ease-in-out 5s !important;
+            transform: translateY(20vh) scale(1.2) !important;
+        }
+    }
+    /*situational = scale */
+    :root:has(#urlbar-searchmode-switcher[open]) {
+        & #urlbar  {
+            padding-bottom:0px !important;
+            transition: transform 0.3s ease-in-out 5s !important;
+            transform: translateY(20vh) scale(1.2) !important;
+        }
+    }
+}
 }
 
 @media -moz-pref("ultima.urlbar.drags.window") {
