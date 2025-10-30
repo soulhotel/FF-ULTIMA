@@ -251,7 +251,7 @@ with a visual indicator to slightly improve accessibility.
 @media (-moz-pref("ultima.tabs.tabbar.autohide")) or (-moz-pref("ultima.tabs.tabbar.disabled")) {
 @media -moz-pref("ultima.sidebery.autohide")  {
     
-    :root:has(#sidebar-box[checked]) {
+    :root:has(#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][checked]) {
         :has(#sidebar-box:not([sidebar-positionend])) {
             #sidebar-splitter {
                 position: fixed; left: 3px; height: 85vh !important;
@@ -289,5 +289,18 @@ with a visual indicator to slightly improve accessibility.
             }
         }
     }
-
+    :root:has(#sidebar-box:not([sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])[checked]) {
+        :has(#sidebar-box:not([sidebar-positionend])) {
+            #sidebar-splitter {
+                position: fixed; left: 0px; height: 85vh !important;
+                @media (-moz-platform:macos) {left: 3px;}
+            }
+        }
+        :has(#sidebar-box[sidebar-positionend]) {
+            #sidebar-splitter {
+                position: fixed; right: 0px; height: 85vh !important;
+                @media (-moz-platform:macos) {right: 3px;}
+            }
+        }
+    }
 }}   

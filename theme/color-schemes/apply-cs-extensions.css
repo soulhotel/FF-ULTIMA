@@ -103,7 +103,14 @@ Another - applying colors to extension
         --tabs-audio-btn-width: 30px !important;
         --ntb-border-radius: var(--uc-button-border-radius) !important;
     }
-    .Tab[data-pin="false"] .fav {margin-left: 9px !important;}
+    /* center favicon when collapsed */
+    .Tab[data-pin="false"] .fav {margin-left: 10px !important;}
+    /* correct spacing of tab text label */
+    .Tab .t-box {margin: 0 10px 0 4px !important;}
+    /* hide tab text label when collapsed */ 
+    @media screen and (max-width: 50px) {
+        .Tab .t-box {opacity: 0 !important;}
+    }
     /* Fix Tabs Tree --------------------------------------------*/
     @media screen and (max-width: 42px) {
         #root.root {
