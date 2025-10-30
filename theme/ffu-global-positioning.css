@@ -651,7 +651,7 @@ box-shadow: none !important;}}
             }
             /* autohide */
             /* keep visibility when accessing menus too */
-            & :has(#tabContextMenu:not(:hover)):has(#toolbar-context-menu:not(:hover)):has(.tab-group-editor-panel:not([panelopen="true"])) {
+            & :has(#tabContextMenu:not(:hover))/*:has(#toolbar-context-menu:not(:hover))*/:has(.tab-group-editor-panel:not([panelopen="true"])) {
                 #sidebar-main {
                     &:not(:hover) {
                         width: 3px !important;
