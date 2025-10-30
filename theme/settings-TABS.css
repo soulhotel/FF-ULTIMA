@@ -89,18 +89,12 @@ hide vertical tab splitters off hover
 }
 
 /* vertical tab action buttons ---------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons") {
-    .tools-and-extensions.actions-list {
+@media -moz-pref("ultima.tabs.tabbar.hide.buttonstrip") {
+    .tools-and-extensions.actions-list:not(:hover) {
         & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
-    }
-    .tools-and-extensions.actions-list[orientation="horizontal"] {
-        max-width: 53px !important;
-        /*& moz-button[view="viewCustomizeSidebar"] {}*/
-    }
-}
-@media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons.off.hover") {
-    .tools-and-extensions.actions-list[orientation="vertical"] {
-        & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
+        & moz-button[view="viewCustomizeSidebar"] {
+            margin-top:5px;
+        }
     }
 }
 
