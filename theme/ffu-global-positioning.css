@@ -67,8 +67,8 @@ Vertical Tabs Hidden in Private
     /* margins */
     --uc-content-margins: 2px 5px 5px 0px;
     --uc-tab-margins: 3.5px 0 5px 0px;
-    --uc-sb-margins: 2px -5px 5px 3px;
-    --uc-sb-margins-right: 2px 3px 5px -5px;
+    --uc-sb-margins: 2px -5px 5px 0px;
+    --uc-sb-margins-right: 2px 0px 5px -5px;
     --uc-tab-padding: 2px;
     /*tabs*/
     --tab-min-width-pref: 55px !important;
@@ -159,7 +159,7 @@ even when fullscreen mode, we track
 @media -moz-pref("sidebar.verticalTabs") {
     /*  vt on left & sidebar closed */
     :root:has(#sidebar-main:not([sidebar-positionend=""])):has(#sidebar-box:not([checked="true"])) {
-        --uc-content-margins: 2px 5px 5px 5px;
+        --uc-content-margins: 2px 5px 5px 0px;
     }
     /*  vt on left & sidebar open */
     :root:has(#sidebar-main:not([sidebar-positionend=""])):has(#sidebar-box[checked="true"]) {
@@ -167,14 +167,14 @@ even when fullscreen mode, we track
     }
     /* vt on right & sidebar closed */
     :root:has(#sidebar-main[sidebar-positionend=""]):has(#sidebar-box:not([checked="true"])) {
-        --uc-content-margins: 2px 5px 5px 5px;
+        --uc-content-margins: 2px 0px 5px 5px;
     }
     /* vt on right & sidebar open */
     :root:has(#sidebar-main[sidebar-positionend=""]):has(#sidebar-box[checked="true"]) {
         --uc-content-margins: 2px 8px 5px 5px;
     }
     /* vt disabled & sidebar is: */
-    @media -moz-pref("ultima.tabs.tabbar.autohide") {  @media -moz-pref("ultima.tabs.tabbar.disabled") {
+    @media (-moz-pref("ultima.tabs.tabbar.autohide")) or (-moz-pref("ultima.tabs.tabbar.disabled")) {
         :root {
             --uc-sb-margins: 2px 2px 5px 3px !important;
             --uc-sb-margins-right: 2px 3px 5px 2px !important;
