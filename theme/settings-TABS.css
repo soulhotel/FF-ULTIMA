@@ -427,24 +427,31 @@ hide vertical tab splitters off hover
         }
     }
 }
+#tabbrowser-tabpanels {
+  &[splitview] {
+    & .browserStack {
+      outline: none !important;
+    }
+  }
+}
+
 
 /* split view seperator line ------------------------------------------------------------------------------------ */
 
 /* toggle the visibility of the splitview tab seperator line */
 @media not -moz-pref("ultima.tabs.splitview.tab.seperator") {
-      #tabbrowser-tabs .tab-split-view-container {
-        tab-split-view-wrapper:not([hasactivetab]) & {
+    #tabbrowser-tabs tab-split-view-wrapper {
+        &:not([hasactivetab]) {
             & .tabbrowser-tab {
                 border-block-end: 0px solid var(--uc-accent-color-2) !important;
                 &:last-child {
-                    tab-split-view-wrapper:not([hasactivetab]) & {
-                        border-inline-start: 0px solid var(--uc-accent-color-2) !important;
-                    }
+                    border-inline-start: 0px solid var(--uc-accent-color-2) !important;
                 }
             }
         }
     }
 }
+
 
 /* split view focus opacity ------------------------------------------------------------------------------------- */
 
@@ -487,7 +494,7 @@ hide vertical tab splitters off hover
 
 @media -moz-pref("ultima.tabs.splitview.gradient.background") {
     #tabbrowser-tabs {
-        .tab-split-view-container {
+        tab-split-view-wrapper {
             background: linear-gradient(-80deg, rgba(238,119,82,0.03), rgba(131,60,126,0.1), rgba(35,250,213,0.004)) !important;
             background-size: 100% !important;
             &:has(.tabbrowser-tab[selected]) {
