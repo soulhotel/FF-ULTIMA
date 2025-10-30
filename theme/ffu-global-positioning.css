@@ -243,6 +243,11 @@ even when fullscreen mode, we track
             --uc-content-margins: 0;
         }
     }
+    /* sidebar open */
+    :root {
+        --uc-sb-margins: 2px -5px 5px 5px !important;
+        --uc-sb-margins-right: 2px 5px 5px -5px !important;
+    }
     /*  sidebar open on left */
     :root:has(#sidebar-box[checked="true"]) {
         --uc-content-margins: 2px 5px 5px 8px;
