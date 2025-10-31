@@ -26,13 +26,6 @@
 - `qol • 🟡 •` There is now an empty `customChrome.css` import in userChrome.css, this can be used to store custom styles alongside the theme
 - `qol • 🟡 •` Some context menu items were previously hidden to declutter the menu's, this change has been reverted and limited to the `ultima.contextmenu.reduce.options` setting #405
 - Setting `ultima.tabs.tabbar.hide.buttonstrip` replaces both `ultima.tabs.vertical.hide.the.bottom.buttons` and `ultima.tabs.vertical.hide.the.bottom.buttons.off.hover` for a more simple execution
-<!--
-- `fyi • ℹ️ •` 
-- `fix • 🔴 •` 
-- `new • 🟢 •` 
-- `qol • 🟡 •` 
-- `wip • ℹ️ •` 
--->
 
 ### <ins> Update Preview
 
