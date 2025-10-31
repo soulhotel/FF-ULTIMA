@@ -37,7 +37,7 @@ pinned tabs transparent background
 }
 
 /* tabs below the url bar --------------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.tabs.belowURLbar") {
+@media (-moz-pref("ultima.tabs.belowURLbar")) or (-moz-pref("ultima.tabs.horizontal.under.navbar")) {
     #toolbar-menubar { order: 0 !important; }
     #navigator-toolbox #nav-bar { order: 1 !important; }
     #TabsToolbar { order: 2 !important; }
@@ -47,7 +47,7 @@ pinned tabs transparent background
 }
 
 /* pinned tabs -------------------------------------------------------------------------------------------------- */
-@media -moz-pref("ultima.tabs.always.show.pinned") {
+@media (-moz-pref("ultima.tabs.always.show.pinned")) or (-moz-pref("ultima.tabs.pinned.always.visible")) {
     #pinned-tabs-container[orient="vertical"],#vertical-pinned-tabs-container {
         height: -moz-fit-content !important;
         min-height: -moz-fit-content !important;
@@ -66,7 +66,9 @@ pinned tabs transparent background
     #tabbrowser-tabs[orient="horizontal"] > #vertical-tabs-newtab-button,
     #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button {
         display: flex !important;
-
+    }
+    #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button {
+        margin-top: 1px !important;
     }
     #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}
 }
@@ -74,7 +76,12 @@ pinned tabs transparent background
     #pinned-tabs-container {order: -3 !important;}
     #vertical-pinned-tabs-splitter {order: -2 !important;}
     #vertical-tabs-newtab-button {order: -1 !important; display:flex !important;}
-    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}
+    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}  
+}
+@media (-moz-pref("ultima.tabs.newtabbutton.ontop.1")) or (-moz-pref("ultima.tabs.newtabbutton.ontop.2")) {
+    #pinned-tabs-container[orient="vertical"],#vertical-pinned-tabs-container {
+        margin-bottom: 0px !important;
+    }    
 }
 
 /* disable tab update dot --------------------------------------------------------------------------------------- */
@@ -406,6 +413,20 @@ pinned tabs transparent background
                 left: 104px;
             }             
         } 
+    }
+    /* adjustment for new tab button on top - layout */
+    @media (-moz-pref("ultima.tabs.newtabbutton.ontop.1")) or (-moz-pref("ultima.tabs.newtabbutton.ontop.2")) {
+        #tabbrowser-tabs[overflow=""] {
+            #tabbrowser-arrowscrollbox[orient="vertical"] {
+                #tabbrowser-arrowscrollbox-periphery::after {
+                    content: counter(tabcount) " Tabs";
+                    position: fixed;
+                    z-index: 99999999999999999;
+                    bottom: 38px;
+                    left: 1px;
+                }             
+            } 
+        }
     }
     /* HORIZONTAL tabs visual indicator */
     #tabbrowser-arrowscrollbox[orient="horizontal"]::after {
