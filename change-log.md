@@ -21,11 +21,13 @@
 - `new • 🟢 •` Setting `ultima.tabs.tabbar.disabled` will completely disable the tabs bar.
 - Both of these settings above work for both vertical and horizontal tabs bars.And can be used reliably for both sidebery only users, or those that just want the tab bar hidden completely. See video below.
 - `new • 🟢 •` Split View is coming to Firefox in Version 146, along with it comes some (5) [new settings](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabssplitviewcontentoutline). See video below c4a4401 89593ba 1d008ca
-- `new • 🟢 •` Setting `ultima.tabs.hide.splitter` hides the resizable bar (splitter) after pinned tabs and before the tabs button strip (when not hovered)
+- `new • 🟢 •` Setting `ultima.tabs.hide.splitter` hides the resizable bar (splitter) that seperates pinned tabs and the tab button strip (when not hovered)
+- `new • 🟢 •` Setting `ultima.navbar.autohide.ignore.urlbar` when triggering the url bar, the navbar will stay hidden #407
 - `qol • 🟡 •` [Second Sidebar](https://github.com/aminought/firefox-second-sidebar) has some optimizations to work alongside the theme #397
 - `qol • 🟡 •` There is now an empty `customChrome.css` import in userChrome.css, this can be used to store custom styles alongside the theme
 - `qol • 🟡 •` Some context menu items were previously hidden to declutter the menu's, this change has been reverted and limited to the `ultima.contextmenu.reduce.options` setting #405
 - Setting `ultima.tabs.tabbar.hide.buttonstrip` replaces both `ultima.tabs.vertical.hide.the.bottom.buttons` and `ultima.tabs.vertical.hide.the.bottom.buttons.off.hover` for a more simple execution
+- - `qol • 🟡 •` Nav bar download button indicator now adopts color scheme accent color when showing progress
 
 ### <ins> Update Preview
 

@@ -280,7 +280,7 @@ Custom Icons
     }
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
-        color: var(--uc-accent-color-6) !important;
+        color: var(--uc-accent-color-2) !important;
         &[selected] {
             color: var(--uc-tab-selected-text) !important;
         }

@@ -25,6 +25,7 @@ split view focus opacity
 split view focus shrink
 split view gradient tabs background
 hide vertical tab splitters off hover
+pinned tabs transparent background
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -507,8 +508,20 @@ hide vertical tab splitters off hover
 /* hide vertical tab splitters off hover ------------------------------------------------------------------------ */
 
 @media -moz-pref("ultima.tabs.hide.splitter") {
-#vertical-pinned-tabs-splitter, #sidebar-tools-and-extensions-splitter {
-    &:not(:hover) {
-        opacity: 0;
+    #vertical-pinned-tabs-splitter, #sidebar-tools-and-extensions-splitter {
+        &:not(:hover) {
+            opacity: 0;
+        }
+    }
+}
+
+/* pinned tabs transparent background --------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.tabs.pinned.transparent.background") {
+    #main-window {
+        & #vertical-tabs #pinned-tabs-container .tabbrowser-tab[pinned]:not([selected],[multiselected]):not(:hover) .tab-background {
+            box-shadow: none !important;
+            background-color: transparent !important;
+        }
     }
 }

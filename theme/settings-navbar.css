@@ -70,11 +70,13 @@ enable bookmark url editting (add bookmark menu)
         {
             #navigator-toolbox {top:0 !important;}
         }
-        &:has(#urlbar[focused=""][breakout-extend="true"])
-        {
-            #navigator-toolbox {top:0 !important;}
+        @media not -moz-pref("ultima.navbar.autohide.ignore.urlbar") {
+            &:has(#urlbar[focused=""][breakout-extend="true"])
+            {
+                #navigator-toolbox {top:0 !important;}
+            }
+            #urlbar[breakout-extend="true"] {top:0 !important;}
         }
-        #urlbar[breakout-extend="true"] {top:0 !important;}
     }
 }
 
@@ -124,11 +126,13 @@ enable bookmark url editting (add bookmark menu)
         {
             #navigator-toolbox {top: 14px !important;}
         }
-        &:has(#urlbar[focused=""][breakout-extend="true"])
-        {
-            #navigator-toolbox {top:0 !important;}
+        @media not -moz-pref("ultima.navbar.autohide.ignore.urlbar") {
+            &:has(#urlbar[focused=""][breakout-extend="true"])
+            {
+                #navigator-toolbox {top:0 !important;}
+            }
+            #urlbar[breakout-extend="true"] {top: 14px !important;}
         }
-        #urlbar[breakout-extend="true"] {top: 14px !important;}
     }
 }
 

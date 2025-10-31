@@ -88,6 +88,7 @@ user_pref("ultima.tabs.newtabbutton.ontop.2", false);
 user_pref("ultima.tabs.multiline.labels", false);
 user_pref("ultima.tabs.closetabbutton.on.icon", false);
 user_pref("ultima.tabs.always.show.pinned", false);
+user_pref("ultima.tabs.pinned.transparent.background", true);
 user_pref("ultima.tabs.tabbar.autohide", false);
 user_pref("ultima.tabs.tabbar.disabled", false);
 user_pref("ultima.tabs.tabbar.hide.buttonstrip", false);

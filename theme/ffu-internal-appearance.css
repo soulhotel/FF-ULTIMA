@@ -1122,6 +1122,9 @@ button[part="dialog-button"] {
         }
     }
 }
+#downloads-button image:not(#downloads-indicator-icon) {
+    fill: var(--uc-accent-color-2) !important;
+}
 
 /* Status Panel --------------------------------------------------------------------------------------------- */
 
