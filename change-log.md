@@ -5,7 +5,7 @@
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
   
 ### <ins> Version Notes
-- This is a small maintenance update, mostly focused on quick patches and qol changes made after 4.0.
+- This is mostly a fix and qol update. Big changes have been made to hiding the tab bar for both Sidebery and native vertical tab Users. Nightly Users can also see optimizations to the new Split View feature available in Firefox 146+
 - User.js (recommended) not required.
 - Firefox 138+ required.
 <!--
@@ -15,20 +15,17 @@
 -->
 
 ### <ins> Change Log
-- `fix • 🔴 •` Fixed an issue where the all tabs button menu was affected by navbar.hide.buttons #394 a4d342b
-- `fix • 🔴 •` Dropdown menu's for websites now respect default appearances #392 fc16e2b
-- `fix • 🔴 •` Setting [`urlbar.focus.blur.all`](https://ff-ultima.github.io/docs/settings/all/urlbar-settings#ultimaurlbarfocusblur) corrections #390 d36d022
-- `fix • 🔴 •` Some (4) settings have been renamed for organization, if you are actively using these settings you'll be notified of the change and updated name, on the about:config page decc546
-- `new • 🟢 •` Setting [`ultima.tabs.tabCounter`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabstabcounter) for a *total number of tabs* indicator decc546
-- `new • 🟢 •` Setting [`ultima.content.toolbox.ontop`](https://ff-ultima.github.io/docs/settings/all/content-area-settings#ultimacontenttoolboxontop) reverses the position of the content toolbox when docked bottom
-- `new • 🟢 •` Setting [`ultima.navbar.bookmarks.focus.blur`](https://ff-ultima.github.io/docs/settings/all/topbar-settings#ultimanavbarbookmarksfocusblur) blurs browser content when viewing bookmark toolbar folders
-- `qol • 🟡 •` Setting `disable.alltabs.button` is no more.. Since Firefox lets us remove this from the toolbar now
-- `qol • 🟡 •` Adaptive Tab Color support sees some improvement 3b2a859 2dea82e d20d045
-- `qol • 🟡 •` Setting [`tabs.vertical.hide`](https://ff-ultima.github.io/docs/settings/all/tab-settings#ultimatabsverticalhide-hiding-the-vertical-tab-bar) (in screen-edge) transition sees some adjustment, including a more *standard* height #393 1fc96b8
-- `qol • 🟡 •` The [fluent](https://github.com/soulhotel/FF-ULTIMA/tree/main/theme/color-schemes/fluent) color-scheme wallpapers have been added to `user.theme.wallpaper` settings 033c3c4
-- `qol • 🟡 •` The urlbars search term toggle has been added to the `urlbar.hide.button` list #396 e514b6a
-- `qol • 🟡 •` Color Scheme wallpaper logic has been rewritten to respect the new tab page wallpaper menu, where `Reset to default` defaults to Color Scheme wallpapers
-- `qol • 🟡 •` Theme size reduction
+- `fix • 🔴 •` Sidebery tab text labels, spacing and visibility when collapsed b56ec63
+- `fix • 🔴 •` Setting `ultima.tabs.vertical.hide` and `hide.in.screenedge/screencorner` settings are no more.. The core logic has been rewritten and improved to no longer rely on expandonHover.
+- `new • 🟢 •` Setting `ultima.tabs.tabbar.autohide` now handles autohiding the tabs bar.
+- `new • 🟢 •` Setting `ultima.tabs.tabbar.disabled` will completely disable the tabs bar.
+- Both of these settings above work for both vertical and horizontal tabs bars.And can be used reliably for both sidebery only users, or those that just want the tab bar hidden completely. See video below.
+- `new • 🟢 •` Split View is coming to Firefox in Version 146, along with it comes some (5) new settings. See video below or wiki c4a4401 89593ba 1d008ca
+- `new • 🟢 •` Setting `ultima.tabs.hide.splitter` hides the resizable bar (splitter) after pinned tabs and before the tabs button strip (when not hovered)
+- `qol • 🟡 •` [Second Sidebar](https://github.com/aminought/firefox-second-sidebar) has some optimizations to work alongside the theme #397
+- `qol • 🟡 •` There is now an empty `customChrome.css` import in userChrome.css, this can be used to store custom styles alongside the theme
+- `qol • 🟡 •` Some context menu items were previously hidden to declutter the menu's, this change has been reverted and limited to the `ultima.contextmenu.reduce.options` setting #405
+- Setting `ultima.tabs.tabbar.hide.buttonstrip` replaces both `ultima.tabs.vertical.hide.the.bottom.buttons` and `ultima.tabs.vertical.hide.the.bottom.buttons.off.hover` for a more simple execution
 <!--
 - `fyi • ℹ️ •` 
 - `fix • 🔴 •` 
@@ -40,10 +37,6 @@
 ### <ins> Setup
 
 sidebar.seperator, navbar.autohide, navbar.bookmarks.focus.blur, tabs.multiline.labels, tabs.tabCounter, urlbar.float, ultima.urlbar.focus.blur
-
-![4 1preview](https://github.com/user-attachments/assets/c66d95b2-76f5-4e0a-8479-bb39b393d5f8)
-
-### <ins> Wallpaper
 
 ![walls](https://github.com/user-attachments/assets/16fcccab-1934-4b2b-aa51-f8923ee7f254)
 

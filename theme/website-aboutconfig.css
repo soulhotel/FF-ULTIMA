@@ -321,4 +321,47 @@ body::after {
     }
 }
 
+@media -moz-pref("ultima.tabs.vertical.hide") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.tabs.vertical.hide` has been renamed to `ultima.tabs.tabbar.disabled` \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.tabs.vertical.hide.in.screencorner") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.tabs.vertical.hide.in.screencorner` is no more. Try `ultima.tabs.tabbar.autohide` instead \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.tabs.vertical.hide.in.screenedge") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.tabs.vertical.hide.in.screenedge` is no more. Try `ultima.tabs.tabbar.autohide` instead \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.tabs.vertical.hide.the.bottom.buttons` is no more. Try `ultima.tabs.tabbar.hide.buttonstrip` instead  \A ";
+        display: block;
+    }
+}
+
+
+@media -moz-pref("ultima.tabs.vertical.hide.the.bottom.buttons.off.hover") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.tabs.vertical.hide.the.bottom.buttons.off.hover` is no more. Try `ultima.tabs.tabbar.hide.buttonstrip` instead  \A ";
+        display: block;
+    }
+}
+
+@media -moz-pref("ultima.sidebar.autohide") {
+    body::after {
+        content: "\ Old setting detected ! \A \A  `ultima.sidebar.autohide` is no more because there werent many usecases for it \A ";
+        display: block;
+    }
+}
+
 }} /* end aboutconfig page */
