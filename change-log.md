@@ -5,7 +5,7 @@
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
   
 ### <ins> Version Notes
-- This update focuses on qol changes. A couple of new & requested qol settings. And a big improvement to Native Tab Bar autohiding. Both Sidebery and Native vertical tab users can make the most of the new tab bar autohiding method. And Nightly Users (Firefox 146+) will be the first to see the new Split View feature with 5 new settings for split tabs.
+- This update focuses on qol changes. A couple of newly requested qol settings. And a big improvement to Native Tab Bar autohiding. Both Sidebery and Native vertical tab users can make the most of the new tab bar autohiding method. And Nightly Users (Firefox 146+) will be the first to see the new Split View feature with 5 new settings for split tabs.
 - User.js (recommended) not required.
 - Firefox 138+ required.
 <!--
@@ -19,13 +19,13 @@
 - `fix • 🔴 •` Sideberys tab text-labels see improved spacing and visibility when collapsed b56ec63
 - `new • 🟢 •` Setting [`ultima.tabs.tabbar.autohide`](http://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbardisabled--ultimatabstabbarautohide) now handles autohiding the tabs bar
 - `new • 🟢 •` Setting [`ultima.tabs.tabbar.disabled`](http://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbardisabled--ultimatabstabbarautohide) will completely disable the tabs bar
-- `new • 🟢 •` Split View is coming to Firefox in Version 146, along with it comes some (5) [new settings](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabssplitviewcontentoutline). See video below c4a4401 89593ba 1d008ca
+- `new • 🟢 •` A couple of (5) [split view settings](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabssplitviewcontentoutline) were added to the theme. See video below c4a4401 89593ba 1d008ca
 - `new • 🟢 •` The new tab page [wallpaper switcher](https://ff-ultima.github.io/docs/settings/wallpaper-settings) now features a Color Scheme wallpaper section
-- `new • 🟢 •` Setting [`ultima.tabs.hide.splitter`](http://ff-ultima.github.io/docs/settings/tab-settings#ultimatabshidesplitter) hides the resizable bar (splitter) that seperates pinned tabs and the tab button strip (when not hovered) #406 34f6932
-- `new • 🟢 •` Setting [`ultima.navbar.autohide.ignore.urlbar`](http://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarautohideignoreurlbar) keeps the navbar hidden, when triggering the url bar #407 283461e
+- `new • 🟢 •` Setting [`ultima.tabs.hide.splitter`](http://ff-ultima.github.io/docs/settings/tab-settings#ultimatabshidesplitter) hides the tabs bar resizable bar (splitter) (when not hovered) #406 34f6932
+- `new • 🟢 •` Setting [`ultima.navbar.autohide.ignore.urlbar`](http://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarautohideignoreurlbar) keeps the nav hidden when triggering the url bar #407 283461e
 - `new • 🟢 •` Setting [`ultima.tabs.pinned.transparent.background`](http://ff-ultima.github.io/docs/settings/tab-settings#ultimatabspinnedtransparentbackground) removes the background color from pinned tabs
 - `qol • 🟡 •` [Second Sidebar](https://github.com/aminought/firefox-second-sidebar) has some optimizations to work alongside FF Ultima #397
-- `qol • 🟡 •` There is now an empty `customChrome.css` import in userChrome.css, this can be used to store custom styles alongside the theme
+- `qol • 🟡 •` There is now an empty `customChrome.css` import in userChrome.css, it can be used to store personal CSS
 - `qol • 🟡 •` Some context menu items were previously hidden to declutter the menu's, this change has been reverted and limited to the `ultima.contextmenu.reduce.options` setting #405
 - `qol • 🟡 •` Setting [`ultima.tabs.tabbar.hide.buttonstrip`](http://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbarhidebuttonstrip) replaces both `ultima.tabs.vertical.hide.the.bottom.buttons` and `ultima.tabs.vertical.hide.the.bottom.buttons.off.hover` for a more simple execution
 - `qol • 🟡 •` Nav bar download button indicator now adopts color scheme accent color when showing progress
