@@ -597,7 +597,7 @@ moz-input-search[placeholder="Search history"] {
     border-radius: var(--border-radius-medium) !important;
     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
     @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
-    margin: 2% 2% 20vh 2% !important;
+    margin: 2% !important;
     padding-top:12px !important;
 }
 moz-card[data-l10n-id*="sidebar-history-date"] {
@@ -618,12 +618,14 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
         outline: none !important;
     }}
 }
-.sidebar-placesTreechildren::-moz-tree-row(hover){
-    background-image: linear-gradient(90deg,transparent,highlight);
-    border-radius: 8px;
-}
 .sidebar-placesTreechildren::-moz-tree-row {
-    height: 30px !important;
+    height: 35px !important;
+    background-image: transparent !important;
+    border-radius: 10px !important;
+}
+.sidebar-placesTreechildren::-moz-tree-row(selected),
+.sidebar-placesTreechildren::-moz-tree-row(hover) {
+    background-color: var(--uc-button-selected) !important;
 }
 :root {
     --sidebar-box-background: rgba(140,140,150,0.1) !important;
@@ -946,6 +948,9 @@ span.button-background.labelled label {
     /* menu popups */
     & .menupopup-arrowscrollbox {background-color: var(--uc-panel-background) !important;}
 }
+#bookmarkproperties {
+  background-color: var(--uc-browser-color) !important;
+}
 #main-window[lwtheme] {
     /* session notify */
     :root[dialogroot] {
@@ -1033,7 +1038,7 @@ span.button-background.labelled label {
         --panel-shadow: none !important;
     }
 }
-#contentAreaContextMenu {
+#contentAreaContextMenu, #placesContext, #placesContext_open_newcontainertab_popup {
         --panel-background: var(--uc-context-menu) !important;
         --panel-border-radius: var(--uc-button-border-radius) !important;
         --panel-border-color: var(--uc-panel-border-2) !important;
@@ -1050,6 +1055,21 @@ span.button-background.labelled label {
             background-color: var(--uc-button-selected) !important;
             color: var(--uc-accent-color-5) !important;
         }
+}
+/* 11/4/2025 observe these elements for change */
+#editBookmarkPanelContent {
+    input {
+        background-color: var(--uc-button-selected) !important;
+        border: none !important;
+    }
+}
+#editBookmarkPanel {
+    .panel-header {
+        background-color: var(--uc-panel-background);
+    }
+    #editBookmarkHeaderSeparator {
+        display: none !important;
+    }
 }
 
 /* Button Adjustments --------------------------------------------------------------------------------------- */

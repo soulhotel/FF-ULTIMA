@@ -24,7 +24,7 @@ input, #prefs {
 /* if you see this text --------------------------------------------------------------------------*/
 body::before {
     content:
-        "\✅ If you see this text, congratulations! FF Ultima is properly setup. \A 📝 To change theme settings, Type: ultima \A 📝 To change color schemes, Type: user.theme \A 🇺 Need help? Visit the FF Ultima Wiki https://github.com/soulhotel/FF-ULTIMA/wiki \A";
+        "\✅ If you see this text, congratulations! FF Ultima is properly setup. \A 📝 To change theme settings, Type: ultima \A 📝 To change color schemes, Type: user.theme \A 🇺 Need help? Visit the FF Ultima Wiki: https://ff-ultima.github.io/ \A";
     display: block;
     z-index:-1 !important;
     margin: 10px 10px 0px 10px;
