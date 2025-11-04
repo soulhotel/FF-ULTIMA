@@ -32,10 +32,3 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/ffu-special-configs.css);
 
 @import url(customChrome.css);
-
-/* content section needs a home */
-@media -moz-pref("ultima.content.toolbox.ontop") {
-    .browserContainer {
-        flex-direction: column-reverse;
-    }
-}

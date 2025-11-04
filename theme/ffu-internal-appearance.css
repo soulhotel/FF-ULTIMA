@@ -1315,3 +1315,14 @@ lets see how many more borders we can hunt down.
         --urlbar-box-hover-bgcolor: var(--button-background-color-ghost-hover) !important;
     }
 }
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+/* this setting doesn't really have a home yet.. it is the only setting labeled and directly targetted to browser content */
+
+@media -moz-pref("ultima.content.toolbox.ontop") {
+    .browserContainer {
+        flex-direction: column-reverse;
+    }
+}
