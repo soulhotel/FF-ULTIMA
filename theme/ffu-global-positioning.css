@@ -643,7 +643,9 @@ box-shadow: none !important;}}
                 position: absolute !important;
                 top:0; bottom: 0;
                 z-index:1000 !important;
-                border-radius:10px !important;
+                @media not -moz-pref("ultima.spacing.compact") {
+                    border-radius: 10px !important;
+                }
                 opacity: 1 !important;
                 &[sidebar-positionend=""] {
                     right:0;

@@ -621,11 +621,10 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
 .sidebar-placesTreechildren::-moz-tree-row {
     height: 35px !important;
     background-image: transparent !important;
-    border-radius: 10px !important;
+    border-radius: 2px !important;
 }
 .sidebar-placesTreechildren::-moz-tree-row(selected),
 .sidebar-placesTreechildren::-moz-tree-row(hover) {
-    background-color: var(--uc-button-selected) !important;
 }
 :root {
     --sidebar-box-background: rgba(140,140,150,0.1) !important;
@@ -1004,8 +1003,34 @@ span.button-background.labelled label {
     --in-content-page-background: var(--uc-panel-background) !important;
     color: var(--uc-text)  !important;
 }
-#commonDialog {
+#commonDialog, #bookmarkpropertiesdialog {
     background-color: var(--uc-panel-background) !important;
+}
+ #editBMPanel_folderTree, #editBMPanel_tagsSelector {
+    background-color: var(--uc-panel-background) !important;
+    border: 2px dashed var(--uc-button-selected) !important;
+}
+@media (prefers-color-scheme: dark) and (not (forced-colors)) {
+  :root[dialogroot] {
+    --background-color-canvas: var(--uc-panel-background) !important;
+  }
+}
+#editBMPanel_tagsSelectorExpander, #editBMPanel_foldersExpander {
+    background-color: var(--uc-button-selected) !important;
+    outline: none !important; border: none !important;
+}
+button[part="dialog-button"] {
+    --button-background-color-primary: var(--uc-accent-color-1) !important;
+    --button-background-color-primary-hover: var(--uc-accent-color-2) !important;
+    &[dlgtype="cancel"]:not(:hover) {
+        background-color: var(--uc-button-selected) !important;
+    }
+}
+#editBookmarkPanelDoneButton {
+    background-color: var(--uc-accent-color-1) !important;
+    &:hover {
+        background-color: var(--uc-accent-color-2) !important;
+    }
 }
 
 /* Context Menu --------------------------------------------------------------------------------------------- */
@@ -1128,10 +1153,6 @@ button[label="Stay on page"] {
         fill-opacity: 1 !important;
 /*         fill: var(--toolbar-color) !important; */
     }
-}
-button[part="dialog-button"] {
-    --button-background-color-primary: var(--uc-accent-color-1) !important;
-    --button-background-color-primary-hover: var(--uc-accent-color-2) !important;
 }
 #main-window[lwtheme] {
     toolbar .toolbarbutton-1 {
