@@ -716,7 +716,7 @@ box-shadow: none !important;}}
 
 @media -moz-pref("ultima.tabs.tabbar.disabled") {
     /* disable the tab bar completely */
-    #sidebar-main,
+    #main-window:not([sidebar-expand-on-hover=""]) #sidebar-main,
     #tabbrowser-tabs[orient="horizontal"] { 
         display: none !important;
     }

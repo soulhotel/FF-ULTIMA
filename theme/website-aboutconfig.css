@@ -364,4 +364,13 @@ body::after {
     }
 }
 
+@media -moz-pref("ultima.tabs.tabbar.disabled") {
+    @media -moz-pref("sidebar.visibility", "expand-on-hover") {
+        body::after {
+            content: "\ When using tabbar.disabled, You should turn off expandonHover (Sidebar Settings) for the Vertical Tab Bar";
+            display: block;
+        }
+    }
+}
+
 }} /* end aboutconfig page */
