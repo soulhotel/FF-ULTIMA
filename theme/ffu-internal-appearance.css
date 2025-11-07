@@ -1086,6 +1086,7 @@ button[part="dialog-button"] {
     input {
         background-color: var(--uc-button-selected) !important;
         border: none !important;
+        --focus-outline: 2px var(--uc-accent-color-3) solid !important;
     }
 }
 #editBookmarkPanel {

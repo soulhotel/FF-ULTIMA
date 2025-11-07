@@ -672,7 +672,7 @@ box-shadow: none !important;}}
             } of course this doesnt work though */
             /* splitter unfortunately interferes with spacing */
             #sidebar-launcher-splitter {
-                display: none;
+                display: none !important;
             }
             /* micro adjustments to content spacing */
             & :has(#sidebar-box:not([checked="true"])) {
