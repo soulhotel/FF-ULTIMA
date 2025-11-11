@@ -474,6 +474,11 @@ box-shadow: none !important;}}
         @media -moz-pref("ultima.spacing.compact") {margin-left:-5px !important;}
     }
 }
+#main-window[inDOMFullscreen="true"][inFullscreen="true"] {
+    & #tabbrowser-tabpanels browser[type] {
+        border-radius: 0 !important;
+    }    
+}
 
 /* Horizontal tabs --------------------------------------------------------------------- */
 

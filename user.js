@@ -33,7 +33,7 @@ user_pref("ultima.navbar.hide.buttons", true);
 user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);
 user_pref("ultima.navbar.bookmarks.position", "center");
-user_pref("ultima.navbar.bookmarks.scrollable", true);
+user_pref("ultima.navbar.bookmarks.scrollable", false);
 user_pref("ultima.navbar.bookmarks.float", false);
 user_pref("ultima.navbar.bookmarks.hide.icons", false);
 user_pref("ultima.navbar.windowcontrols.carl", false);

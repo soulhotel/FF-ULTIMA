@@ -21,43 +21,77 @@ enable bookmark url editting (add bookmark menu)
 
 /* nav bar autohide --------------------------------------------------------------------------------- */
 
+/* :root {
+    @media not -moz-pref("ultima.navbar.position","bottom") {
+        --uc-navbar-autohidden-pos-top: 0;
+        --uc-navbar-autohidden-pos-bottom: unset;
+        --uc-navbar-autohidden-transition: top 0.2s ease 0.5ms;
+        --uc-navbar-autohidden-transition-nh: top 0.3s ease 0.5s;
+        --uc-navbar-autohidden-urlbar-pos: 0;
+        --uc-navbar-autohidden-urlbar-pos-2: 14px;        
+    }
+    @media -moz-pref("ultima.navbar.position","bottom") {
+        --uc-navbar-autohidden-pos-top: unset;
+        --uc-navbar-autohidden-pos-bottom: 0;
+        --uc-navbar-autohidden-transition: top 0.2s ease 0.5ms;
+        --uc-navbar-autohidden-transition-nh: top 0.3s ease 0.5s;
+        --uc-navbar-autohidden-urlbar-pos: 0;
+        --uc-navbar-autohidden-urlbar-pos-2: 14px;        
+    }
+} */
+
 @media -moz-pref("ultima.navbar.autohide") {
     #main-window:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
-        @media not -moz-pref("ultima.spacing.compact") {
-            #browser {margin-top:3px;}
-        }
-/*         @media -moz-pref("sidebar.verticalTabs") {
-         #nav-bar {padding-left:42px !important;}
-            #PersonalToolbar {padding-left: 54px !important;}
-         #toolbar-menubar {padding-left: 54px !important;}
-        } */
-        
-        /* alright, lets try this again */
-        
+        /* quick adjustment for compact */
+        @media not -moz-pref("ultima.spacing.compact") {#browser {margin-top:3px;}}
         /* absolute positioning */
         #navigator-toolbox {
             position: absolute !important;
-            top: 0; left: 0; right: 0;
-            transition: top 0.2s ease 0.5ms !important;
             box-shadow: var(--uc-box-shadow) !important;
+            left: 0;right: 0;
+            @media not -moz-pref("ultima.navbar.position","bottom") {
+                top: 0; bottom: unset;
+                transition: top 0.2s ease 0.5ms !important;
+            }
+            @media -moz-pref("ultima.navbar.position","bottom") {
+                top: unset; bottom: 0;
+                transition: bottom 0.2s ease 0.5ms !important;
+            }
             /* autohide */
             &:not(:hover) {
-                top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 3px);
-                transition: top 0.3s ease 0.5s !important;
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 3px);
+                    transition: top 0.3s ease 0.5s !important;
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    bottom: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 3px);
+                    transition: bottom 0.3s ease 0.5s !important;
+                }
             }
             /* we will append two hover zones */
             /* a hot zone in the middle, for easy entry */
             &::after {
-                content:"";background:none;position:absolute;text-align:center;
-                left:30%;right:20%;top:var(--uc-topbars-combined-height);
-                border-radius:10px;
-                height:20px;
+                content:""; background:none; position:absolute;
+                height:20px; border-radius:10px; text-align:center;
+                left: 30%;right: 20%;
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    top: var(--uc-topbars-combined-height);
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    bottom: var(--uc-topbars-combined-height);
+                }
             }
             /* a full width zone that doesn't get in the way of sidebars */
             &::before {
-                content:"";background:none;position:absolute;
-                left:0%;right:0%;top:var(--uc-topbars-combined-height);
+                content:""; background:none; position:absolute;
+                left:0%;right:0%;
                 height:12px;
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    top:var(--uc-topbars-combined-height);
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    bottom:var(--uc-topbars-combined-height);
+                }
             }
         }   
         /* exceptions for menu interactions */
@@ -66,54 +100,88 @@ enable bookmark url editting (add bookmark menu)
         &:has(#unified-extensions-context-menu:hover),          &:has(#notification-popup:hover),                   &:has(.bookmark-item[open="true"]),
         &:has(#blockedPopupOptions:hover),                      &:has(#toolbar-context-menu:hover),                 &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
         &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"]),      &:has(#editBookmarkPanel[panelopen="true"]),
-        &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open])
+        &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open]),
+        &:has(#pageActionPanel[panelopen="true"])
         {
-            #navigator-toolbox {top:0 !important;}
+            #navigator-toolbox {
+                @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
+                @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
+            }
         }
         @media not -moz-pref("ultima.navbar.autohide.ignore.urlbar") {
-            &:has(#urlbar[focused=""][breakout-extend="true"])
-            {
-                #navigator-toolbox {top:0 !important;}
+            &:has(#urlbar[focused=""][breakout-extend="true"]) {
+                #navigator-toolbox {
+                    @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
+                    @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
+                }
             }
-            #urlbar[breakout-extend="true"] {top:0 !important;}
+            #urlbar[breakout-extend="true"] {
+                @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
+                @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
+            }
         }
     }
 }
 
 @media -moz-pref("ultima.navbar.float"), -moz-pref("ultima.navbar.float.fullsize") {
     #main-window:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
-        @media not -moz-pref("ultima.spacing.compact") {
-            #browser {margin-top:3px;}
-        }
+        /* quick adjustment for compact */
+        @media not -moz-pref("ultima.spacing.compact") {#browser {margin-top:3px;}}
+        /* absolute positioning */
         #navigator-toolbox {
             position: absolute !important;
-            top: 14px; left: 20%; right: 20%;
+            border-radius: 18px !important;
+            z-index: 99999999999 !important;
+            box-shadow: var(--uc-box-shadow) !important;
+            padding: 4px !important;
+            height: calc(var(--uc-topbars-combined-height) + 10px) !important;
             @media -moz-pref("ultima.navbar.float.fullsize") {left: 12px; right: 12px;}
             @media (max-width: 1250px) {left: 1.5%; right: 1.5%;}
-            border-radius: 18px !important;
-            box-shadow: var(--uc-box-shadow) !important;
-            transition: top 0.06s ease 0.5ms !important;
-            z-index: 99999999999 !important;
-            height: calc(var(--uc-topbars-combined-height) + 10px) !important;
-            padding: 4px !important;
+            left: 20%; right: 20%;
             & #nav-bar {
                 border-radius: 18px !important;
             }
+            @media not -moz-pref("ultima.navbar.position","bottom") {
+                top: 14px; bottom: unset;
+                transition: top 0.06s ease 0.5ms !important;
+            }
+            @media -moz-pref("ultima.navbar.position","bottom") {
+                top: unset; bottom: 14px;
+                transition: top 0.06s ease 0.5ms !important;
+            }
             /* autohide */
             &:not(:hover) {
-                top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 10px);
-                transition: top 0.3s ease 0.5s !important;
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    top: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 10px);
+                    transition: top 0.3s ease 0.5s !important;
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    bottom: calc(var(--uc-topbars-combined-height) - (var(--uc-topbars-combined-height) * 2) - 10px);
+                    transition: bottom 0.3s ease 0.5s !important;
+                }
             }
             /* we will append two hover zones */
             /* a hot zone in the middle, for easy entry */
             &::after {
-                content:"";background:none;position:absolute;text-align:center;
-                left:0;right:0;top:var(--uc-topbars-combined-height); height:30px;
+                content:""; background:none; position:absolute;
+                left:0 ;right:0; height:30px; text-align:center;
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    top: var(--uc-topbars-combined-height);
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    bottom: var(--uc-topbars-combined-height);
+                }
             }
             /* a full width zone that doesn't get in the way of sidebars */
             &::before {
                 content:"";background:none;position:absolute;
-                left:0%;right:0%;top:-15px; height:18px;
+                left:0%;right:0%;; height:18px;
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    top: -15px;
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    bottom: -15px;
+                }
             }
         }   
         /* exceptions for menu interactions */
@@ -122,16 +190,26 @@ enable bookmark url editting (add bookmark menu)
         &:has(#unified-extensions-context-menu:hover),          &:has(#notification-popup:hover),                   &:has(.bookmark-item[open="true"]), &:has(#tabContextMenu:hover),
         &:has(#blockedPopupOptions:hover),                      &:has(#toolbar-context-menu:hover),                 &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
         &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"]),      &:has(#editBookmarkPanel[panelopen="true"]),
-        &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open])
+        &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open]),
+        &:has(#pageActionPanel[panelopen="true"])
         {
-            #navigator-toolbox {top: 14px !important;}
+            #navigator-toolbox {
+                @media not -moz-pref("ultima.navbar.position","bottom") {top: 14px !important;}
+                @media -moz-pref("ultima.navbar.position","bottom") {bottom: 14px !important;}
+            }
         }
         @media not -moz-pref("ultima.navbar.autohide.ignore.urlbar") {
             &:has(#urlbar[focused=""][breakout-extend="true"])
             {
-                #navigator-toolbox {top:0 !important;}
+                #navigator-toolbox {
+                    @media not -moz-pref("ultima.navbar.position","bottom") {top: 0 !important;}
+                    @media -moz-pref("ultima.navbar.position","bottom") {bottom: 16px !important;}
+                }
             }
-            #urlbar[breakout-extend="true"] {top: 14px !important;}
+            #urlbar[breakout-extend="true"] {
+                @media not -moz-pref("ultima.navbar.position","bottom") {top: 14px !important;}
+                @media -moz-pref("ultima.navbar.position","bottom") {bottom: 14px !important;}
+            }
         }
     }
 }

@@ -33,6 +33,13 @@
 - `qol • 🟡 •` Bookmarks Sidebar adjustments to tree item styling, and removal of the bottom margin #412 bcfc7f3
 - `qol • 🟡 •` Adjustments to bookmarks panel theming in regards to recent Firefox update #412 bcfc7f3
 - `qol • 🟡 •` Sidebar Inner context menu consistent-to-theme-styling #412 bcfc7f3
+- 4.2+
+- `fix • 🔴 •` Rounded borders were not respecting some full screen video scenarios, fixed
+- `qol • 🟡 •` Include urlbar overflow menu panel (page actions) to navbar autohide exceptions list
+- `qol • 🟡 •` Setting `ultima.navbar.bookmarks.scrollable` no longer a default in user.js, users can opt-in after setup & discovery
+- `qol • 🟡 •` Adjustment to compact context menu setting, reduction in arrow size and padding
+- `wip • 🟢 •` Setting `ultima.navbar.position` can position the nav bar at the `top` or `bottom` of the browser when combined with navbar autohide or navbar float
+
 
 ### <ins> Update Preview
 

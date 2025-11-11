@@ -17,6 +17,17 @@ remove excess options
     menupopup, menuitem {
         --menuitem-padding: .15em .3em !important;
     }
+    menupopup {
+        & .menu-text {
+            width: fit-content !important;
+            padding: 1px !important;
+        }
+        & menu::after, & .menu-accel {
+            padding: 0px !important;
+            margin-inline: 0px !important;
+            transform: scale(0.6);
+        }
+    }
 }
 @media -moz-pref("ultima.spacing.relaxed.contextmenu") {
     menupopup, menuitem {
