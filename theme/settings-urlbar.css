@@ -129,12 +129,15 @@ ultima.urlbar.hide.trackingprotection.icon
         }
         /* when extended = scale */
         &[breakout-extend] {
-            @media not -moz-pref("ultima.navbar.position","bottom") {
-                transform: translateY(20vh) scale(1.1);
-            }
-            @media -moz-pref("ultima.navbar.position","bottom") {
-                transform: translateY(-40vh) scale(1.1);
-                height: 415px !important;
+            transform: translateY(20vh) scale(1.1) !important;
+            @media (-moz-pref("ultima.navbar.autohide")) or (-moz-pref("ultima.navbar.float")) or (-moz-pref("ultima.navbar.float.fullsize")) {
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    transform: translateY(20vh) scale(1.1) !important;
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    transform: translateY(-50vh) scale(1.1) !important;
+                    height: fit-content !important;
+                }
             }
             @media (min-width: 1925px) { max-width:37vw !important; margin-left:1vw !important;}
             @media (min-width: 2500px) { max-width:33vw !important; margin-left:9vw !important;}
@@ -142,11 +145,14 @@ ultima.urlbar.hide.trackingprotection.icon
         /*situational = scale */
         &:hover:not([open]) {
             transition: transform 0.3s ease-in-out 5s !important;
-            @media not -moz-pref("ultima.navbar.position","bottom") {
-                transform: translateY(20vh) scale(1.2) !important;
-            }
-            @media -moz-pref("ultima.navbar.position","bottom") {
-                transform: translateY(-40vh) scale(1.2) !important;
+            transform: translateY(20vh) scale(1.1) !important;
+            @media (-moz-pref("ultima.navbar.autohide")) or (-moz-pref("ultima.navbar.float")) or (-moz-pref("ultima.navbar.float.fullsize")) {
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    transform: translateY(20vh) scale(1.2) !important;
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    transform: translateY(-50vh) scale(1.2) !important;
+                }
             }
         }
     }
@@ -155,11 +161,13 @@ ultima.urlbar.hide.trackingprotection.icon
         & #urlbar  {
             padding-bottom:0px !important;
             transition: transform 0.3s ease-in-out 5s !important;
-            @media not -moz-pref("ultima.navbar.position","bottom") {
-                transform: translateY(20vh) scale(1.2) !important;
-            }
-            @media -moz-pref("ultima.navbar.position","bottom") {
-                transform: translateY(-40vh) scale(1.2) !important;
+             @media (-moz-pref("ultima.navbar.autohide")) or (-moz-pref("ultima.navbar.float")) or (-moz-pref("ultima.navbar.float.fullsize")) {
+                @media not -moz-pref("ultima.navbar.position","bottom") {
+                    transform: translateY(20vh) scale(1.2) !important;
+                }
+                @media -moz-pref("ultima.navbar.position","bottom") {
+                    transform: translateY(-50vh) scale(1.2) !important;
+                }
             }
         }
     }
