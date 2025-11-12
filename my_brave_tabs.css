@@ -1,0 +1,58 @@
+:root {
+    --brave-tab-hover-bg: light-dark(rgba(0, 0, 0, 0.06),
+            rgba(255, 255, 255, 0.1));
+    --brave-tab-selected-bg: light-dark(rgba(0, 0, 0, 0.08),
+            rgba(255, 255, 255, 0.12));
+}
+
+#main-window:not([lwtheme]) {
+    --uc-tab-selected: var(--brave-tab-selected-bg) !important;
+    --uc-box-shadow: none !important;
+}
+
+#main-window[tabsintitlebar] {
+    & .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected]) {
+        background-color: var(--brave-tab-hover-bg) !important;
+    }
+
+    & .tabbrowser-tab[orient="vertical"] {
+        height: 46px !important;
+        min-height: 46px !important;
+        margin-block: 3px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    & .tab-content {
+        padding-inline: 12px !important;
+    }
+
+    & #vertical-tabs-newtab-button {
+        background: transparent !important;
+        border-radius: 8px !important;
+        margin-block: 3px !important;
+    }
+
+    & #vertical-tabs-newtab-button:hover {
+        background-color: var(--brave-tab-hover-bg) !important;
+    }
+}
+
+/* new tab button */
+#sidebar-main {
+    & #tabs-newtab-button .toolbarbutton-text,
+    #vertical-tabs-newtab-button .toolbarbutton-text {
+        font-style: normal !important;
+    }
+}
+
+#main-window[tabsintitlebar] .tab-background[selected] {
+    height: 40px !important;
+    margin-block: auto !important;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --uc-browser-color: rgb(250, 250, 255) !important;
+    }
+}
