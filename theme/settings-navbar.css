@@ -199,15 +199,16 @@ enable bookmark url editting (add bookmark menu)
 /* tweak to allow urlbar to spring up with a bottom nav bar ------------------------------------------- */
 
 @media (-moz-pref("ultima.navbar.autohide")) or (-moz-pref("ultima.navbar.float")) or (-moz-pref("ultima.navbar.float.fullsize")) {
-    @media not -moz-pref("ultima.urlbar.float") {
-        #urlbar {
-            &[open] {
-                
-            }
-            &[breakout-extend] {
-                top: unset !important;
-                bottom: 24px !important; /* this does nothing, perhaps use margin */
-                margin-bottom: 36px !important;
+    @media -moz-pref("ultima.navbar.position","bottom") {
+        @media not -moz-pref("ultima.urlbar.float") {
+            #urlbar {
+                &[open] {
+                }
+                &[breakout-extend] {
+                    top: unset !important;
+                    bottom: 24px !important; /* this does nothing, perhaps use margin */
+                    margin-bottom: 36px !important;
+                }
             }
         }
     }

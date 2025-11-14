@@ -1041,6 +1041,7 @@ button[part="dialog-button"] {
         --panel-border-radius: var(--uc-button-border-radius) !important;
         --panel-border-color: var(--uc-panel-border-2) !important;
         --panel-color: var(--uc-text) !important;
+        --panel-shadow: none !important;
     }
     menupopup {--panel-shadow:none !important;}
     menuitem:hover {

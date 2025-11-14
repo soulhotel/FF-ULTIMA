@@ -35,6 +35,7 @@
 - `qol • 🟡 •` Sidebar Inner context menu consistent-to-theme-styling #412 bcfc7f3
 - 4.2+
 - `fix • 🔴 •` Rounded borders were not respecting some full screen video scenarios, fixed
+- `fix • 🔴 •` Unrelated to theme but, finally removed the black border outline that would appear on some menu panels
 - `qol • 🟡 •` Include urlbar overflow menu panel (page actions) to navbar autohide exceptions list
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.scrollable` no longer a default in user.js, users can opt-in after setup & discovery
 - `qol • 🟡 •` Adjustment to compact context menu setting, reduction in arrow size and padding
