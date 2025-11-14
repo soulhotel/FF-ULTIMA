@@ -4,6 +4,7 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Nav Bar & Top Bar Settings, Bookmark Settings are split between floating and non floating styles
 
 nav bar autohide
+tweak to allow urlbar to spring up with a bottom nav bar
 nav bar hide buttons
 bookmarks scrollable
 bookmarks float
@@ -20,25 +21,6 @@ enable bookmark url editting (add bookmark menu)
 
 
 /* nav bar autohide --------------------------------------------------------------------------------- */
-
-/* :root {
-    @media not -moz-pref("ultima.navbar.position","bottom") {
-        --uc-navbar-autohidden-pos-top: 0;
-        --uc-navbar-autohidden-pos-bottom: unset;
-        --uc-navbar-autohidden-transition: top 0.2s ease 0.5ms;
-        --uc-navbar-autohidden-transition-nh: top 0.3s ease 0.5s;
-        --uc-navbar-autohidden-urlbar-pos: 0;
-        --uc-navbar-autohidden-urlbar-pos-2: 14px;        
-    }
-    @media -moz-pref("ultima.navbar.position","bottom") {
-        --uc-navbar-autohidden-pos-top: unset;
-        --uc-navbar-autohidden-pos-bottom: 0;
-        --uc-navbar-autohidden-transition: top 0.2s ease 0.5ms;
-        --uc-navbar-autohidden-transition-nh: top 0.3s ease 0.5s;
-        --uc-navbar-autohidden-urlbar-pos: 0;
-        --uc-navbar-autohidden-urlbar-pos-2: 14px;        
-    }
-} */
 
 @media -moz-pref("ultima.navbar.autohide") {
     #main-window:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
@@ -135,9 +117,9 @@ enable bookmark url editting (add bookmark menu)
             box-shadow: var(--uc-box-shadow) !important;
             padding: 4px !important;
             height: calc(var(--uc-topbars-combined-height) + 10px) !important;
-            @media -moz-pref("ultima.navbar.float.fullsize") {left: 12px; right: 12px;}
-            @media (max-width: 1250px) {left: 1.5%; right: 1.5%;}
             left: 20%; right: 20%;
+            @media (max-width: 1250px) {left: 1.5%; right: 1.5%;}
+            @media -moz-pref("ultima.navbar.float.fullsize") {left: 12px; right: 12px;}
             & #nav-bar {
                 border-radius: 18px !important;
             }
@@ -209,6 +191,22 @@ enable bookmark url editting (add bookmark menu)
             #urlbar[breakout-extend="true"] {
                 @media not -moz-pref("ultima.navbar.position","bottom") {top: 14px !important;}
                 @media -moz-pref("ultima.navbar.position","bottom") {bottom: 14px !important;}
+            }
+        }
+    }
+}
+
+/* tweak to allow urlbar to spring up with a bottom nav bar ------------------------------------------- */
+
+@media (-moz-pref("ultima.navbar.autohide")) or (-moz-pref("ultima.navbar.float")) or (-moz-pref("ultima.navbar.float.fullsize")) {
+    @media not -moz-pref("ultima.urlbar.float") {
+        #urlbar {
+            &[open] {
+                
+            }
+            &[breakout-extend] {
+                top: unset !important;
+                bottom: 24px !important; /* this does nothing, perhaps use margin */
             }
         }
     }
