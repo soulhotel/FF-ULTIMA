@@ -127,6 +127,7 @@ user_pref("ultima.spacing.relaxed.contextmenu", false);
 user_pref("ultima.contextmenu.no.icons", false);
 user_pref("ultima.contextmenu.no.navigation.icons", false);
 user_pref("ultima.contextmenu.reduce.options", false);
+user_pref("ultima.contextmenu.hide.separators", false);
 
 /* alternate styles */
 user_pref("ultima.spacing.compact", false);

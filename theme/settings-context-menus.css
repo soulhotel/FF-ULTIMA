@@ -96,3 +96,20 @@ remove excess options
     #context_unloadTab {order: -1;}
     #context_pinTab {order: -3;} */
 }
+
+/* hide seperators ------------------------------------------------ */
+
+@media -moz-pref("ultima.contextmenu.hide.separators") {
+    #appMenu-popup {
+        toolbarseparator {display: none;}
+    }
+    #unified-extensions-view #unified-extensions-area {
+        border-bottom: none !important;
+    }
+    #contentAreaContextMenu,
+    #tabContextMenu,
+    #toolbar-context-menu,
+    #placesContext {
+        menuseparator { display: none; }
+    }
+}
