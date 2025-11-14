@@ -24,6 +24,7 @@ user_pref("user.theme.midnight.animated.background", false);
 user_pref("user.theme.scarlet", false);
 user_pref("user.theme.fluent", false);
 user_pref("user.theme.fluent.thinkpad", false);
+user_pref("user.theme.brave", false);
 
 /* nav bar */
 user_pref("ultima.navbar.autohide", false);

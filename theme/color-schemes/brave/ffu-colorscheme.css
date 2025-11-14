@@ -1,10 +1,7 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-File Desc:         Fluent Crimson by @dreadbalaur
-
-Designed based Microsoft's Fluent colours, with the aim of matching niivu's Fluent for Windows 10
-Red accent to match Thinkpad colours
+File Desc:         Brave Style Color Scheme by ...
 
 All of these Variables - Control the color everywhere
 Detailed customization - Overwriting existing variables
@@ -15,62 +12,71 @@ Custom Icons
 
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
+:root {
+    --brave-tab-hover-bg: light-dark(rgba(0, 0, 0, 0.06),
+            rgba(255, 255, 255, 0.1));
+    --brave-tab-selected-bg: light-dark(rgba(0, 0, 0, 0.08),
+            rgba(255, 255, 255, 0.12));
+}
+
 @media (prefers-color-scheme: dark) { :root {
-    --uc-browser-color:      rgb(40, 40, 40);
+    --uc-browser-color:      rgb(43, 42, 51);
     --uc-text:               white;
-    --uc-layered-background: rgb(30, 30, 30);
+    --uc-layered-background: rgb(35, 35, 42);
     --uc-navbar-background:  var(--toolbar-bgcolor);
     --uc-urlbar-background:  var(--uc-layered-background);
     --uc-findbar-background: var(--uc-layered-background);
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       rgb(60, 60, 60);
-    --uc-tab-selected-text:  var(--uc-accent-color-3);
-    --uc-button-selected:    rgb(53, 53, 53);
-    --uc-button-red:         rgb(229, 60, 60);
+    --uc-tab-selected:       light-dark(rgba(0, 0, 0, 0.08),
+                             rgba(255, 255, 255, 0.12));
+    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-button-selected:    rgba(25, 25, 30, 0.6);
+    --uc-button-red:         #f54e4e;
     --uc-context-menu:       var(--uc-layered-background);
     --uc-panel-background:   var(--uc-layered-background);
-    --uc-panel-border:       rgb(54, 54, 54);
-    --uc-panel-border-2:     rgb(47, 47, 47);
-    --uc-accent-color-1:     rgb(213, 80, 80);
-    --uc-accent-color-2:     rgb(222, 104, 104);
+    --uc-panel-border:       rgba(25, 25, 25, 0.5);
+    --uc-panel-border-2:     rgba(45, 45, 45, 0.5);
+    --uc-accent-color-1:     #f3faaa;
+    --uc-accent-color-2:     rgb(90, 121, 156);
     --uc-accent-color-3:     white;
-    --uc-accent-color-4:     var(--uc-accent-color-1);
-    --uc-accent-color-5:     var(--uc-accent-color-1);
+    --uc-accent-color-4:     rgba(28, 27, 34, 0.5);
+    --uc-accent-color-5:     rgb(121, 161, 195);
     --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow:         0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+    --uc-box-shadow:         none;
     --uc-box-shadow-panel:   0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
     --uc-button-border-radius: 10px;
-    --uc-tab-border-radius:  6px;
+    --uc-tab-border-radius: 8px;
 }}
 
 @media (prefers-color-scheme: light) { :root {
-    --uc-browser-color:      rgb(228, 228, 228);
+    --uc-browser-color:      rgb(250, 250, 255);
     --uc-text:               rgb(45, 45, 45);
-    --uc-layered-background: rgb(236, 236, 236);
+    --uc-layered-background: rgb(242, 242, 248);
     --uc-navbar-background:  var(--toolbar-bgcolor);
     --uc-urlbar-background:  var(--uc-layered-background);
     --uc-findbar-background: var(--uc-layered-background);
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       rgb(246, 246, 246);
-    --uc-tab-selected-text:  var(--uc-accent-color-3);
-    --uc-button-selected:    rgb(239, 239, 239);
-    --uc-button-red:         rgb(229, 60, 60);
-    --uc-context-menu:       rgb(255, 255, 255);
-    --uc-panel-background:   rgb(255, 255, 255);
+    --uc-tab-selected:       light-dark(rgba(0, 0, 0, 0.08),
+                             rgba(255, 255, 255, 0.12));
+    --uc-tab-selected-text:  var(--uc-accent-color-5);
+    --uc-button-selected:    rgb(220, 220, 255);
+    --uc-button-red:         #f54e4e;
+    --uc-context-menu:       white;
+    --uc-panel-background:   white;
     --uc-panel-border:       rgba(125, 125, 125, 0.4);
     --uc-panel-border-2:     rgba(125, 125, 125, 0.3);
-    --uc-accent-color-1:     rgb(196, 29, 29);
-    --uc-accent-color-2:     rgb(196, 31, 31);
+    --uc-accent-color-1:     rgb(108, 152, 255);
+    --uc-accent-color-2:     rgba(144,144,200,0.8);
     --uc-accent-color-3:     black;
-    --uc-accent-color-4:     var(--uc-accent-color-1);
-    --uc-accent-color-5:     var(--uc-accent-color-1);
-    --uc-accent-color-6:     var(--uc-accent-color-1);
+    --uc-accent-color-4:     rgba(37, 59, 111, 0.05);
+    --uc-accent-color-5:     rgb(108, 152, 255);
+    --uc-accent-color-6:     rgb(203, 203, 204);
     --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow:         0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
+    --uc-box-shadow:         none;
     --uc-box-shadow-panel:   0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
     --uc-button-border-radius: 10px;
 }}
@@ -182,6 +188,9 @@ Custom Icons
 /* URL Bar --------------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
+    & #urlbar[open] {
+        box-shadow: var(--uc-box-shadow) !important;
+    }
     & #urlbar-container * {
         --uc-button-border-radius: 16px !important;
     }
@@ -189,10 +198,7 @@ Custom Icons
     & #page-action-buttons .urlbar-page-action {
         border-radius: var(--uc-button-border-radius) !important;
     }
-    & #urlbar[open] {
-        box-shadow: var(--uc-box-shadow) !important;
-    }
-    & .urlbar-background, & #searchbar, & #urlbar-background,
+    & #urlbar-background, & #searchbar,
     & #urlbar:is([focused="true"], & [open]) > .urlbar-background,
     & #urlbar:is([focused="true"], & [open]) > #urlbar-background,
     & #searchbar:focus-within {
@@ -200,8 +206,8 @@ Custom Icons
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
     }
-    & #urlbar[open] > .urlbar-background,
-    & #urlbar[open] > #urlbar-background {
+    & #urlbar[open] > #urlbar-background,
+    & #urlbar[open] > .urlbar-background {
         border-color: var(--uc-accent-color-3) !important;
     }
     & #urlbar[breakout][breakout-extend] {
@@ -216,9 +222,6 @@ Custom Icons
     }}
     & .urlbarView-row:hover {
         background-color: var(--uc-button-selected) !important;
-        @media (prefers-color-scheme: light) {
-            background-color: var(--uc-tab-selected) !important;
-        }
         color: var(--uc-text) !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
@@ -259,7 +262,9 @@ Custom Icons
 @layer input-common { #input {
     accent-color: var(--uc-accent-color-5) !important;
 }}
-
+:root {
+    --sidebar-box-background: rgba(140,140,150,0.1) !important;
+}
 /* Tabs -----------------------------------------------------------*/
     
 #main-window:not([lwtheme]) {
@@ -271,11 +276,13 @@ Custom Icons
     & #tabbrowser-tabs {
         background: transparent !important;
     }
-    /* all tabs*/
-    & .tab-background {
-        border-radius: 8px !important;
+    /* tabs - unselected */
+    &[tabsintitlebar] {
+        .tab-background:not([selected]) {
+            background-color: var(--brave-tab-hover-bg) !important;
+        }
     }
-    /* tabs - selected tabs */
+    /* tabs - selected */
     & .tab-label-container[selected] {
         color: var(--uc-tab-selected-text) !important;
     }
@@ -283,7 +290,7 @@ Custom Icons
         box-shadow: var(--uc-box-shadow) !important;
     }
     & .tab-background[multiselected] {
-        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 60%, transparent)  !important;
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 30%, transparent)  !important;
         outline-offset: 1px !important;
         outline-width:1px !important;
     } 
@@ -295,7 +302,10 @@ Custom Icons
     }
     /* tabs - pinned tabs */
     & .tab-label-container[pinned] {
-        color: var(--uc-accent-color-1) !important;
+        color: var(--uc-accent-color-2) !important;
+        &[selected] {
+            color: var(--uc-tab-selected-text) !important;
+        }
     }
     & .tabbrowser-tab[pinned=""] .tab-background,
     & .tabbrowser-tab[pinned="true"] .tab-background {
@@ -324,6 +334,38 @@ Custom Icons
         color: var(--uc-text) !important;
         width: 225px !important;
         border: 1px solid var(--uc-panel-border) !important;
+    }
+    /* brave style */
+    &[tabsintitlebar] {
+        & .tabbrowser-tab[orient="vertical"] {
+            height: 46px !important;
+            min-height: 46px !important;
+            margin-block: 3px !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        & .tab-content {
+            padding-inline: 12px !important;
+        }
+
+        & #vertical-tabs-newtab-button {
+            background: transparent !important;
+            border-radius: 8px !important;
+            margin-block: 3px !important;
+        }
+
+        & #vertical-tabs-newtab-button:hover {
+            background-color: var(--brave-tab-hover-bg) !important;
+        }
+        & .tab-background[selected] {
+            height: 40px !important;
+            margin-block: auto !important;
+        }
+    }
+    & #tabs-newtab-button .toolbarbutton-text,
+    #vertical-tabs-newtab-button .toolbarbutton-text {
+        font-style: normal !important;
     }
 }
 
@@ -441,8 +483,14 @@ Custom Icons
         list-style-image: url("../../icons/extensions.svg") !important;
         fill: var(--toolbarbutton-icon-fill) !important;
     }
+    /* extensions button */
     #main-window[lwtheme] #unified-extensions-button {
         list-style-image: url("../../icons/extensions.svg") !important;
+    }
+    /* menu panel */
+    #PanelUI-menu-button {
+        list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+        transform: translateY(5%) translateX(-7%) rotate(90deg);
     }
     /* bookmarks folder icon */
     .bookmark-item[container=true] {

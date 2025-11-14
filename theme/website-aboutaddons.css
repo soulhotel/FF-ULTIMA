@@ -11,6 +11,7 @@ See the above repository for updates as well as full license text. */
 
     :root{ overflow-x: hidden } /* Remove this if it causes horizontal scrolling problems */
     addon-card .addon-name-link{ font-size: 0.9em }
+    .addon.card {min-height:85px;}
     @media (min-width:420px){
         #main{ max-width: unset !important; padding-right: 28px; }
         addon-list > section{
