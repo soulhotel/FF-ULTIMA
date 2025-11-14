@@ -207,6 +207,7 @@ enable bookmark url editting (add bookmark menu)
             &[breakout-extend] {
                 top: unset !important;
                 bottom: 24px !important; /* this does nothing, perhaps use margin */
+                margin-bottom: 36px !important;
             }
         }
     }
