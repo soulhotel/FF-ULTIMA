@@ -295,6 +295,10 @@ enable bookmark url editting (add bookmark menu)
                         right: 17px !important;
                     }
                 }
+                &:has(#tabbrowser-tabs[orient="horizontal"]) #PersonalToolbar {
+                    width: fit-content !important;
+                    max-width: calc(100vw - 34px) !important;
+                }
             }
             #main-window[lwtheme] { & #PersonalToolbar{ background: var(--lwt-accent-color) !important;} }
         }
