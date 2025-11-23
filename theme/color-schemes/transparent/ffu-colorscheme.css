@@ -52,14 +52,14 @@ Custom Icons
     --uc-context-menu:       var(--uc-layered-background);
     --uc-panel-background:   rgba(35, 35, 46,0.8);
     --uc-panel-border:       rgba(25, 25, 25, 0.2);
-    --uc-panel-border-2:     rgba(1, 1, 1, 0.2);
+    --uc-panel-border-2:     rgba(1, 1, 5, 0.05);
     --uc-accent-color-1:     #EDF783;
     --uc-accent-color-2:     rgb(90, 121, 156);
     --uc-accent-color-3:     white;
     --uc-accent-color-4:     rgba(28, 27, 34, 0.5);
     --uc-accent-color-5:     rgb(121, 161, 195);
     --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow:         0.15rem 0.3rem 0.2rem -0.1rem rgba(0,0,0,0.4);
+    --uc-box-shadow:         0.15rem 0.3rem 0.2rem -0.1rem rgba(0,0,0,0.3);
     --uc-box-shadow-panel:   0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
     --uc-button-border-radius: 10px;
     --uc-tab-border-radius: 8px;
@@ -236,9 +236,9 @@ Custom Icons
         box-shadow: var(--uc-box-shadow) !important;
     }
     & .urlbarView {
-      backdrop-filter: blur(100px) !important;
+      backdrop-filter: blur(1px) !important;
       border-radius: 8px !important;
-      background:transparent !important;
+      background: rgba(100,100,120,0.1) !important;
       margin-bottom:6px;
     }
     & #urlbar[open] {
@@ -260,6 +260,7 @@ Custom Icons
     }}
     & .urlbarView-row:hover {
         background-color: var(--uc-button-selected) !important;
+        background-color: color-mix(in srgb, var(--uc-tab-selected) 90%, rgb(1,1,10)) !important;
         color: var(--uc-text) !important;
     }
     & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
@@ -309,16 +310,22 @@ Custom Icons
     
 #main-window:not([lwtheme]) {
     /* vert tabs background*/
-    & #sidebar-main {
+    & #sidebar-main {                                                     /* vertical tab container */
         background: var(--uc-tabsbar-background) !important;
-        backdrop-filter: blur(5px);
-        border-radius:9px !important;
+        backdrop-filter: blur(15px);
+        border-radius:10px !important;
     }
-    & #tabbrowser-tabs[orient="vertical"] {
+    & #vertical-tabs {                                                     /* vertical tab inner container */
+        background: rgba(0,0,0,0.01);
+        backdrop-filter: blur(15px);
+        border-radius:12px !important;
+    }
+    & #tabbrowser-tabs[orient="vertical"] {                               /* vertical tab inner containers inner container */
         backdrop-filter: blur(25px);
     }
-    &[sidebar-expand-on-hover=""] #sidebar-main[sidebar-launcher-expanded] {
-        background: rgba(35, 35, 39,0.5) !important;
+     &[sidebar-expand-on-hover=""] #sidebar-main[sidebar-launcher-expanded] {   /* when using expand on hover, tab backgrounds darken*/
+         @media (prefers-color-scheme: dark)  { --tab-selected-bgcolor: rgba(35, 35, 49,0.6) !important; }
+         @media (prefers-color-scheme: light) { --tab-selected-bgcolor: rgba(35, 35, 46,0.7) !important; }
     }
     & #tabbrowser-tabs[orient="vertical"][overflow]::after {
       content: none !important;
@@ -377,6 +384,9 @@ Custom Icons
         border: 0px solid var(--uc-panel-border) !important;
         backdrop-filter: blur(17px);
         appearance: menupopup !important;
+    }
+    & #tabbrowser-tabs {
+        border-width: 0px !important;
     }
 }
 
@@ -538,6 +548,26 @@ Custom Icons
     }
 }
 
+    
+    
+    
+/* process of elimination - to remove default styles that interfere with transparency setups */
+    
+.browserContainer {
+  @media -moz-pref("sidebar.revamp") {
+      outline: 0px solid var(--chrome-content-separator-color) !important;
+      box-shadow: none !important;
+  }
+}
+:root, .browserContainer {
+    --content-area-shadow: none !important;
+    --chrome-content-separator-color: none !important;
+}
+    
+    
+    
+/* most of these can go */ 
+    
 .urlbarView,
 #browser:not(.browser-toolbox-background),
 #urlbar-results,

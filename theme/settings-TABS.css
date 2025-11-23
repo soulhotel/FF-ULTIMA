@@ -391,6 +391,7 @@ pinned tabs transparent background
             word-spacing: 0.2rem;
             font-style: italic;
             color: color-mix(in srgb, var(--toolbarbutton-icon-fill) 25%, transparent);
+            pointer-events: none;
         }
     }
     /* adjustment for collapsed tabs */
@@ -433,6 +434,7 @@ pinned tabs transparent background
         content: counter(tabcount) " Tabs Open";
          margin: 12px 18px !important;
          color: color-mix(in srgb, var(--toolbarbutton-icon-fill) 25%, transparent);
+         pointer-events: none;
     }
 }
 
