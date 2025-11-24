@@ -194,3 +194,11 @@ Nightly Configurations
 - need to test pointer events unforced on windows, hopefully this issue is finally corrected in firefox
 - follow progress on tab split viewing https://bugzilla.mozilla.org/show_bug.cgi?id=1980370 tab-split-view-wrapper, *[split-view-first], *[split-view-second]
 */
+
+
+/* nothing special about this. i need to hunt down the combination of selectors for where this outcome is necessary */
+@media not -moz-pref("ultima.spacing.compact") {
+    #main-window:has(#tabbrowser-tabs[orient="horizontal"]) #browser {
+        margin-left: 5px;
+    }
+}
