@@ -22,9 +22,9 @@ Custom Icons
     --uc-sidebar-background: var(--uc-layered-background);
     --uc-tabsbar-background: var(--uc-browser-color);
     --uc-tab-background:     transparent;
-    --uc-tab-selected:       rgb(17 17 27);
+    --uc-tab-selected:       rgb(15 19 26);
     --uc-tab-selected-text:  var(--uc-accent-color-5);
-    --uc-button-selected:    rgb(17 17 27);
+    --uc-button-selected:    rgb(15 19 26);
     --uc-button-red:         color-mix(in srgb, #F07178 30%, var(--uc-accent-color-2));
     --uc-context-menu:       rgb(15 19 26);
     --uc-panel-background:   var(--uc-layered-background);
