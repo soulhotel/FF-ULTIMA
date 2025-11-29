@@ -378,7 +378,7 @@ enable bookmark url editting (add bookmark menu)
                 opacity: 1 !important;
                 transition: opacity 0.3s ease-out;
                 /* display */
-                &:hover:not(:has([open])) {
+                &:hover {
                     opacity: 1 !important;
                     transition: opacity 0.2s ease-in;
                 }
