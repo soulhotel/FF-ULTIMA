@@ -22,7 +22,7 @@
 - `fix • 🔴 •` An issue where sidebar seperator did not apply to the new tabbar autohiding #427 102a39a
 - `fix • 🔴 •` Unrelated to theme but, finally removed the black border outline that would appear on some menu panels
 - `new • 🟢 •` Setting `ultima.navbar.position` can position the nav bar at the `top` or `bottom` of the browser when combined with navbar.autohide or navbar.float
-- `qol • 🟡 •` Bookmarks toolbar now remains visible when using bookmarks.autohide + bookmarks.float, and viewing a folder #428 f0e79c1
+- `qol • 🟡 •` Bookmarks toolbar now remains visible when using autohide, float, and viewing a folder #428 f0e79c1
 - `qol • 🟡 •` Setting `ultima.navbar.bookmarks.scrollable` no longer a default in user.js, users can opt-in after setup & discovery
 - `qol • 🟡 •` Restored `Open With` option via context menu's when `ultima.contextmenu.reduce.options` is off #431 fea3fb2
 - `qol • 🟡 •` When using horizontal tabs, `bookmarks.float` will adjust to the content (amount of bookmarks) within #428
