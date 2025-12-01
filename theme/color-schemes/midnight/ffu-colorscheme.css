@@ -39,7 +39,7 @@ Custom Icons
     --uc-accent-color-7:     rgb(44, 55, 80); 
     --uc-transparent:        rgba(0,0,0,0);
     --uc-box-shadow:         0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
-    --uc-box-shadow:         0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
+    --uc-box-shadow-panel:         0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
     --uc-button-border-radius: 10px;
     --uc-tab-border-radius: 8px;
 }}
@@ -71,7 +71,7 @@ Custom Icons
     --uc-accent-color-7:     rgb(44, 55, 80); 
     --uc-transparent:        rgba(0,0,0,0);
     --uc-box-shadow: 0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
-    --uc-box-shadow: 0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
+    --uc-box-shadow-panel: 0.1rem 0.3rem 0.1rem -0.1rem rgba(50,50,50,0.15);
     --uc-button-border-radius: 10px;
     --uc-tab-border-radius: 8px;
 }}
@@ -195,6 +195,10 @@ Custom Icons
 @layer input-common { #input {
     accent-color: var(--uc-accent-color-2) !important;
 }}
+
+treechildren::-moz-tree-row(selected) {
+    background-color: var(--uc-accent-color-1) !important;
+}
 
 /* Tabs -----------------------------------------------------------*/
     

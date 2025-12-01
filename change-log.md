@@ -28,6 +28,7 @@
 - `qol • 🟡 •` When using horizontal tabs, `bookmarks.float` will adjust to the content (amount of bookmarks) within #428
 - `qol • 🟡 •` Include urlbar overflow menu panel (page actions) to navbar autohide exceptions list
 - `qol • 🟡 •` Adjustment to `contextmenu.compact`, reduction in arrow size and padding
+- `qol • 🟡 •` Style adjustments to the bookmarks sidebar
 
 ### <ins> New Tab Page
 

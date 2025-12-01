@@ -69,7 +69,7 @@ Custom Icons
     --uc-accent-color-6:     rgb(156, 73, 76);
     --uc-transparent:        rgba(0,0,0,0);
     --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.3);
-    --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+    --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,0.3);
     --uc-button-border-radius: 10px;
 }}
 

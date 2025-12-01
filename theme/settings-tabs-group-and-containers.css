@@ -104,7 +104,7 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
 /* font weight approach */
 @media (prefers-color-scheme: light) {
     .tab-group-label {
-        font-weight: 900 !important;
+        /* font-weight: 900 !important; */
         text-shadow: 1px 1px 1.3px rgba(45,45,45,0.7) !important;
         font-size: 1.05em;
     }
