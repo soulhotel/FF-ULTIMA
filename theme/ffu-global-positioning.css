@@ -682,6 +682,9 @@ box-shadow: none !important;}}
                     &:hover {
                         box-shadow: var(--uc-box-shadow) !important;
                         transition: width ease 0.3s !important;
+                        @media -moz-pref("ultima.tabs.tabbar.autohide+compact") { 
+                            transition: width ease 0.15s !important;
+                        }
                     }
                 }
             }
@@ -756,3 +759,18 @@ box-shadow: none !important;}}
     } 
 }
 
+/* this is merely a draft of how the feature can look, needs more attention */
+@media -moz-pref("ultima.tabs.tabbar.autohide") {
+   @media -moz-pref("ultima.tabs.tabbar.autohide+compact") { 
+        #sidebar-main {
+            top: 10vh !important;
+            max-height: 80vh;
+            padding-top:5px !important;
+            &:hover {
+                outline: 1px rgba(100,100,100,0.1) solid;
+                margin-left: 4px;
+            }
+            
+        }
+    }
+}
