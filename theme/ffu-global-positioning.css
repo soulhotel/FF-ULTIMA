@@ -768,7 +768,7 @@ box-shadow: none !important;}}
             padding-top:5px !important;
             &:hover {
                 outline: 1px rgba(100,100,100,0.1) solid;
-                margin-left: 4px;
+                margin-inline: 4px;
             }
             
         }
