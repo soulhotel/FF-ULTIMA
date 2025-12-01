@@ -205,6 +205,7 @@ Custom Icons
         background-color: var(--uc-urlbar-background) !important;
         border-radius: var(--uc-button-border-radius) !important;
         box-shadow: var(--uc-box-shadow) !important;
+        margin-top: 2px;
     }
     & #urlbar[open] > #urlbar-background,
     & #urlbar[open] > .urlbar-background {

@@ -38,6 +38,18 @@ adjustments for accessible splitter
             margin-right:0px !important;
         }
     }
+    @media (-moz-pref("ultima.tabs.tabbar.autohide")) or (-moz-pref("ultima.tabs.tabbar.disabled")) {
+        @media -moz-pref("sidebar.verticalTabs") {
+            #main-window:not([sidebar-expand-on-hover=""]) {
+                #sidebar-main[sidebar-positionend=""] {
+                    left: 0 !important; right: unset !important;
+                }
+                #sidebar-main:not([sidebar-positionend=""]) {
+                    left: unset !important; right: 0 !important;
+                }
+            }
+        }
+    }
     #main-window:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) #tabbrowser-tabbox {
         margin-left:-5px !important;
         @media -moz-pref("ultima.spacing.compact") {

@@ -227,6 +227,20 @@ even when fullscreen mode, we track
         :root:has(#sidebar-box[checked="true"]):has(#sidebar-main[sidebar-positionend=""]) {
             --uc-content-margins: 2px 5px 5px -5px !important;
         }
+        @media (-moz-pref("ultima.tabs.tabbar.autohide")) or (-moz-pref("ultima.tabs.tabbar.disabled")) {
+            :root:has(#sidebar-box[checked="true"]):has(#sidebar-main:not([sidebar-positionend=""])) {
+                --uc-content-margins: 2px 0px 5px 9px !important;
+            }
+            :root:has(#sidebar-box[checked="true"]):has(#sidebar-main[sidebar-positionend=""]) {
+                --uc-content-margins: 2px 12px 5px -6px !important;
+            }
+            :root:has(#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][checked="true"]):has(#sidebar-main:not([sidebar-positionend=""])) {
+                --uc-content-margins: 2px 2px 5px 9px !important;
+            }
+            :root:has(#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"][checked="true"]):has(#sidebar-main[sidebar-positionend=""]) {
+                --uc-content-margins: 2px 9px 5px -3px !important;
+            }
+        }
     }
 }
 /* when vt off & hori tabs on */
@@ -653,7 +667,8 @@ box-shadow: none !important;}}
                 }
                 opacity: 1 !important;
                 &[sidebar-positionend=""] {
-                    right:0;
+                    @media not -moz-pref("ultima.sidebar.seperator") {left: 0;}
+                    @media -moz-pref("ultima.sidebar.seperator") {right:0;}
                 }
             }
             /* autohide */
