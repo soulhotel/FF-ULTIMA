@@ -587,17 +587,18 @@ moz-input-search[placeholder="Search history"] {
     border-radius: 10px !important;
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     box-shadow: var(--uc-box-shadow-panel);
+    margin-left: -5px;
 }
 /* tree view */
 .sidebar-placesTree {
     appearance: none;
-    background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
+    background-color: transparent !important;
     color: var(--uc-accent-color-2) !important;
     @media (prefers-color-scheme: light) {color: var(--uc-accent-color-1) !important;}
     border-radius: var(--border-radius-medium) !important;
-    box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
-    @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
-    margin: 2% !important;
+/*     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
+    @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;} */
+    margin-inline: 2% !important;
     padding-top:12px !important;
 }
 moz-card[data-l10n-id*="sidebar-history-date"] {
@@ -605,8 +606,8 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
     background-color: color-mix(in srgb, var(--uc-layered-background) 95%, black) !important;
     color: var(--uc-accent-color-2) !important;
     @media (prefers-color-scheme: light) {color: var(--uc-accent-color-1) !important;}
-    box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
-    @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;}
+/*     box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.5) !important;
+    @media (prefers-color-scheme: light) {box-shadow: 0.2rem 0.3rem 0.3rem 0.1rem rgba(25,25,25,0.15) !important;} */
     border: none !important;
 }
 /* remove bad borders */
@@ -621,10 +622,18 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
 .sidebar-placesTreechildren::-moz-tree-row {
     height: 35px !important;
     background-image: transparent !important;
-    border-radius: 2px !important;
+    border-radius: 10px !important;
 }
-.sidebar-placesTreechildren::-moz-tree-row(selected),
-.sidebar-placesTreechildren::-moz-tree-row(hover) {
+.sidebar-placesTreechildren::-moz-tree-row(focused) {
+    border-radius: 10px !important;
+}
+treechildren::-moz-tree-row(focus) {
+    border-radius: 10px !important;
+    outline: none !important;
+}
+treechildren::-moz-tree-row(selected) {
+    background-color: var(--uc-browser-color) !important;
+    border: 1px rgba(0,0,0,0.2) solid !important;
 }
 :root {
     --sidebar-box-background: rgba(140,140,150,0.1) !important;
