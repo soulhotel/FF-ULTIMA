@@ -21,7 +21,8 @@
 - `fix • 🔴 •` Enforced animation for bookmarks autohide when using bookmarks.float #428 2a74bca
 - `fix • 🔴 •` An issue where sidebar seperator did not apply to the new tabbar autohiding #427 102a39a
 - `fix • 🔴 •` Unrelated to theme but, finally removed the black border outline that would appear on some menu panels
-- `new • 🟢 •` Setting [`ultima.tabbar.autohide+compact`](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbarautohidecompact) + `ultima.tabbar.autohide` for a Zen Browser style vert tabbar #432 29e476c
+- `new • 🟢 •` New [`Brave Color Scheme`](https://ff-ultima.github.io/docs/color-schemes/brave) (brave browser-like), by @ann81c #422 #423
+- `new • 🟢 •` Setting [`ultima.tabbar.autohide+compact`](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbarautohidecompact) + `ultima.tabbar.autohide` for a Zen Browser style vert tabbar @shiyarou #432 29e476c
 - `new • 🟢 •` Setting [`ultima.navbar.position`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarposition) can position the nav bar at the `top` or `bottom` of the browser when combined with `navbar.autohide/navbar.float`
 - `qol • 🟡 •` Bookmarks toolbar now remains visible when using autohide, float, and viewing a folder #428 f0e79c1
 - `qol • 🟡 •` Setting [`ultima.navbar.bookmarks.scrollable`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarbookmarksscrollable) no longer a default in user.js, users can opt-in after setup & discovery
@@ -32,12 +33,16 @@
 - `qol • 🟡 •` Adjustment to `contextmenu.compact`, reduction in arrow size and padding
 - `qol • 🟡 •` Style adjustments to the bookmarks sidebar
 
+### <ins> Update Preview
+
+<img width="100%" alt="brave" src="https://github.com/user-attachments/assets/984be077-e46e-43d0-873b-73cb2bc76b14" />
+
+<img width="100%" alt="tabbarautohidecompact" src="https://github.com/user-attachments/assets/7a735502-0e64-46fe-bee5-2e692c8c9bf0" />
+
 ### <ins> New Tab Page
 
-Firefoxs New Tab Page is getting a pretty big update soon! Check it out below:
+This is NT Ultra, a New Tab Page replacement, currently in development/beta [here ->](https://nt-ultra.github.io/)
 
 https://github.com/user-attachments/assets/821317e2-2efe-41a7-8c47-55b6be031257
-
-Just kidding.. This is NT Ultra. Currently in development/beta [here ->](https://nt-ultra.github.io/)
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.
