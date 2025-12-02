@@ -673,7 +673,8 @@ box-shadow: none !important;}}
             }
             /* autohide */
             /* keep visibility when accessing menus too */
-            & :has(#tabContextMenu:not(:hover))/*:has(#toolbar-context-menu:not(:hover))*/:has(.tab-group-editor-panel:not([panelopen="true"])) {
+            & :has(#tabContextMenu:not(:hover)):has(.tab-group-editor-panel:not([panelopen="true"])):has(#new-tab-button-popup:not(:hover)):has(#tab-preview-panel:not([panelopen="true"])):has(#tabgroup-preview-panel:not([panelopen="true"]))
+            {
                 #sidebar-main {
                     &:not(:hover) {
                         width: 3px !important;
@@ -682,9 +683,6 @@ box-shadow: none !important;}}
                     &:hover {
                         box-shadow: var(--uc-box-shadow) !important;
                         transition: width ease 0.3s !important;
-                        @media -moz-pref("ultima.tabs.tabbar.autohide+compact") { 
-                            transition: width ease 0.15s !important;
-                        }
                     }
                 }
             }
@@ -759,18 +757,43 @@ box-shadow: none !important;}}
     } 
 }
 
-/* this is merely a draft of how the feature can look, needs more attention */
 @media -moz-pref("ultima.tabs.tabbar.autohide") {
-   @media -moz-pref("ultima.tabs.tabbar.autohide+compact") { 
-        #sidebar-main {
-            top: 10vh !important;
-            max-height: 80vh;
-            padding-top:5px !important;
-            &:hover {
-                outline: 1px rgba(100,100,100,0.1) solid;
-                margin-inline: 4px;
+    @media -moz-pref("ultima.tabs.tabbar.autohide+compact") { 
+        #main-window:not([sidebar-expand-on-hover=""]) {
+            /* override default height with compact height */
+            #sidebar-main {
+                top: 10vh !important;
+                max-height: 70vh;
+                padding-top:5px !important;
             }
-            
+            /* when inner menus arent being interacted with, allow transition */
+            & :has(#tabContextMenu:not(:hover)),
+            & :has(.tab-group-editor-panel:not([panelopen="true"])),
+            & :has(#new-tab-button-popup:not(:hover)),
+            & :has(#tab-preview-panel:not([panelopen="true"])),
+            & :has(#tabgroup-preview-panel:not([panelopen="true"]))
+            {
+                #sidebar-main {
+                    &:hover {
+                        outline: 1px rgba(100,100,100,0.1) solid;
+                        transition: width ease 0.15s, margin ease 0.3s 0.9s !important;
+/*                         @media not (-moz-platform: windows) { margin-inline: 3px; } */
+                    }
+                }
+            }
+            /* when inner menus arent being interacted with, keep extra styling */
+            & :has(#tabContextMenu:hover),
+            & :has(.tab-group-editor-panel[panelopen="true"]),
+            & :has(#new-tab-button-popup:hover),
+            & :has(#tab-preview-panel[panelopen="true"]),
+            & :has(#tabgroup-preview-panel[panelopen="true"])
+            {
+                 #sidebar-main {
+                     box-shadow: var(--uc-box-shadow) !important;
+                     outline: 1px rgba(100,100,100,0.1) solid;
+/*                      @media not (-moz-platform: windows) { margin-inline: 1px; } */
+                }
+            }
         }
     }
 }
