@@ -26,15 +26,15 @@
 
 ## Features
 
-FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Systems</ins> supported.. but you can use this theme in multiple layouts. `Tabs on top`, `under the Url bar`, `Vertical tabs`, `Sidebery`, `Hidden`, etc. And configure the theme in multiple ways; with [settings](https://ff-ultima.github.io/docs/category/settings) for spacing, autohiding, accessibility, colors, and more. FF Ultima fully supports use with add-on themes and trys to support extensions like [Sidebery](https://ff-ultima.github.io/docs/settings/sidebery) and [Auto Tab Color](https://ff-ultima.github.io/docs/settings/adaptive-tab-color) automatically, so Users are not restricted in what they want to use and how they want to use it. Autoconfig is somewhat supported as well. But most importantly.. almost everything you see or don't see is an optional setting that can be turned on or off. Learn more by [Getting Started](https://ff-ultima.github.io/docs/getting-started).
+FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Systems</ins> supported.. but you can use this theme in multiple layouts. `Tabs on top`, `under the Url bar`, `Vertical tabs`, `Sidebery`, `Hidden`, etc. And configure the theme in multiple ways; with [settings](https://ff-ultima.github.io/docs/category/theme-settings) for spacing, autohiding, accessibility, colors, and more. FF Ultima fully supports use with add-on themes and trys to support extensions like [Sidebery](https://ff-ultima.github.io/docs/settings/sidebery) and [Auto Tab Color](https://ff-ultima.github.io/docs/settings/adaptive-tab-color) automatically, so Users are not restricted in what they want to use and how they want to use it. Autoconfig is somewhat supported as well. But most importantly.. almost everything you see or don't see is an optional setting that can be turned on or off. Learn more by [Getting Started](https://ff-ultima.github.io/docs/getting-started).
 
 ## Getting Started
 
 You can install the theme with any one of these methods, choose one (video tutorials included).
 
 - Manually [download the theme ->](https://ff-ultima.github.io/docs/how-to/how-to-install)
-- Use [git and a terminal ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
-- Automate with [gituserChrome ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
+- Use [git and a terminal ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation#with-git-userchrome-one-line-install)
+- Automate with [gituserChrome ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation#with-git-userchrome-application)
 
 If you can't find what you're looking for in the Documentation, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
 
