@@ -5,7 +5,7 @@
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
   
 ### <ins> Version Notes
-- Hey! it's been a while.. This update is a small one. Mostly focused on qol improvements and minor bug fixes.
+- Hey! it's been a while.. This update is a small one. Mostly focused on qol improvements and bug fixes. Two new settings were also added to the theme, as well as a new Color Scheme.
 - Firefox 138+ required.
 - User.js not required.
 <!--
@@ -20,12 +20,12 @@
 - `fix • 🔴 •` Rounded borders were not respecting some full screen video scenarios, fixed
 - `fix • 🔴 •` Enforced animation for bookmarks autohide when using bookmarks.float #428 2a74bca
 - `fix • 🔴 •` An issue where sidebar seperator did not apply to the new tabbar autohiding #427 102a39a
-- `fix • 🔴 •` Unrelated to theme but, finally removed the black border outline that would appear on some menu panels
-- `new • 🟢 •` New [`Brave Color Scheme`](https://ff-ultima.github.io/docs/color-schemes/brave) (brave browser-like), by @ann81c #422 #423
-- `new • 🟢 •` Setting [`ultima.tabbar.autohide+compact`](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbarautohidecompact) + `ultima.tabbar.autohide` for a Zen Browser style vert tabbar @shiyarou #432 29e476c
+- `fix • 🔴 •` Unrelated to theme but, removed the black outline that would appear on some menu panels
+- `new • 🟢 •` New [`Brave Color Scheme`](https://ff-ultima.github.io/docs/color-schemes/brave) (brave browser-like theme) by @ann61c #422 #423
+- `new • 🟢 •` Setting [`ultima.tabbar.autohide+compact`](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbarautohidecompact) for a Zen Browser style vert tabbar @shiyarou #432 29e476c
 - `new • 🟢 •` Setting [`ultima.navbar.position`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarposition) can position the nav bar at the `top` or `bottom` of the browser when combined with `navbar.autohide/navbar.float`
 - `qol • 🟡 •` Bookmarks toolbar now remains visible when using autohide, float, and viewing a folder #428 f0e79c1
-- `qol • 🟡 •` Setting [`ultima.navbar.bookmarks.scrollable`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarbookmarksscrollable) no longer a default in user.js, users can opt-in after setup & discovery
+- `qol • 🟡 •` Setting [`ultima.navbar.bookmarks.scrollable`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarbookmarksscrollable) is no longer a default, users can opt-in after setup & discovery
 - `qol • 🟡 •` Restored `Open With` option via context menu's when [`ultima.contextmenu.reduce.options`](https://ff-ultima.github.io/docs/settings/context-menu-settings#de-clutter-the-context-menu) is off #431 fea3fb2
 - `qol • 🟡 •` When using horizontal tabs, [`bookmarks.float`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarbookmarksfloat) will adjust to the content (amount of bookmarks) within #428
 - `qol • 🟡 •` Tabbar autohiding now respects when preview labels & the tab container context menu are open 29e476c
@@ -35,13 +35,13 @@
 
 ### <ins> Update Preview
 
-<img width="100%" alt="brave" src="https://github.com/user-attachments/assets/984be077-e46e-43d0-873b-73cb2bc76b14" />
-
 <img width="100%" alt="tabbarautohidecompact" src="https://github.com/user-attachments/assets/7a735502-0e64-46fe-bee5-2e692c8c9bf0" />
+
+<img width="1600" height="912" alt="p2adsd" src="https://github.com/user-attachments/assets/f9fa2b18-617e-440f-86c6-64c70cec264d" />
 
 ### <ins> New Tab Page
 
-This is NT Ultra, a New Tab Page replacement, currently in development/beta [here ->](https://nt-ultra.github.io/)
+This is a New Tab Page replacement called NT Ultra, currently in development/beta [here ->](https://nt-ultra.github.io/)
 
 https://github.com/user-attachments/assets/821317e2-2efe-41a7-8c47-55b6be031257
 
