@@ -30,15 +30,13 @@ FF Ultima is a theme for everyone and anyone. Not only are <ins>all Operating Sy
 
 ## Getting Started
 
-You can install the theme with any of these options, choose one (video tutorials are included).
+You can install the theme with any one of these methods, choose one (video tutorials included).
 
-1. Manually [download the theme ->](https://ff-ultima.github.io/docs/how-to/how-to-install)
-2. Using [git and a terminal ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
-3. Or auto install with [gituserChrome ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
+- Manually [download the theme ->](https://ff-ultima.github.io/docs/how-to/how-to-install)
+- Use [git and a terminal ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
+- Automate with [gituserChrome ->](https://ff-ultima.github.io/docs/how-to/how-to-automate-installation)
 
-## Documentation
-
-You can find detailed help docs for <ins>everything</ins> theme related in [here](https://ff-ultima.github.io). And if you still can't find what you're looking for, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
+If you can't find what you're looking for in the Documentation, post an [issue](https://github.com/soulhotel/FF-ULTIMA/issues?q=is%3Aissue) here on Github.
 
 ## Enjoy
 
