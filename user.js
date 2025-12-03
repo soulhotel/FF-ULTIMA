@@ -31,6 +31,7 @@ user_pref("user.theme.ayu", false)
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.float", false);
 user_pref("ultima.navbar.float.fullsize", false);
+user_pref("ultima.navbar.position", "top");
 user_pref("ultima.navbar.hide.buttons", true);
 user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);
@@ -91,6 +92,7 @@ user_pref("ultima.tabs.multiline.labels", false);
 user_pref("ultima.tabs.closetabbutton.on.icon", false);
 user_pref("ultima.tabs.pinned.always.visible", false);
 user_pref("ultima.tabs.pinned.transparent.background", false);
+user_pref("ultima.tabs.tabbar.autohide+compact", false);
 user_pref("ultima.tabs.tabbar.autohide", false);
 user_pref("ultima.tabs.tabbar.disabled", false);
 user_pref("ultima.tabs.tabbar.hide.buttonstrip", false);
