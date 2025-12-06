@@ -35,9 +35,7 @@
 
 ### <ins> Update Preview
 
-<img width="100%" alt="tabbarautohidecompact" src="https://github.com/user-attachments/assets/7a735502-0e64-46fe-bee5-2e692c8c9bf0" />
-
-<img width="1600" height="912" alt="p2adsd" src="https://github.com/user-attachments/assets/f9fa2b18-617e-440f-86c6-64c70cec264d" />
+https://github.com/user-attachments/assets/071111d0-c345-4ec5-8042-969e84844382
 
 ### <ins> New Tab Page
 
