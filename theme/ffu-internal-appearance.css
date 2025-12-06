@@ -619,8 +619,15 @@ moz-card[data-l10n-id*="sidebar-history-date"] {
         outline: none !important;
     }}
 }
+@media -moz-pref("ultima.sidebar.compact.treeviews") {
+    sidebar-tab-row {
+      height:28px !important;
+    }
+}
+/* bookmarks focused styling */
 .sidebar-placesTreechildren::-moz-tree-row {
     height: 35px !important;
+    @media -moz-pref("ultima.sidebar.compact.treeviews") {height: 14px !important;}
     background-image: transparent !important;
     border-radius: 10px !important;
 }

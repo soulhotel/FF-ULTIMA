@@ -70,6 +70,7 @@ user_pref("ultima.urlbar.hide.trackingprotection.icon", false);
 user_pref("ultima.sidebar.seperator", false);
 user_pref("ultima.sidebar.hide.header", true);
 user_pref("ultima.sidebar.revamped.hide.when.horizontal", true);
+// user_pref("ultima.sidebar.compact.treeviews", false);
 
 /* sidebery */
 user_pref("ultima.sidebery.autohide", true);
