@@ -74,7 +74,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","red") {--uc-wallpaper: url("walls/gruvbox.jpg") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","orange") {--uc-wallpaper: url("walls/gruvbox-3.jpg") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","beige") {--uc-wallpaper: url("walls/gruvbox-l.jpg") !important;}
-@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-pink") {--uc-wallpaper: url("walls/midnight.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-pink") {--uc-wallpaper: url("walls/ayu.jpg") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-blue") {--uc-wallpaper: url("walls/midnight-ui.gif") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown") {--uc-wallpaper: url("walls/old.midnight.jpg") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple") {--uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;}
@@ -90,7 +90,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 #red {background-image: url("walls/gruvbox.jpg") !important;}
 #orange {background-image: url("walls/gruvbox-3.jpg") !important;}
 #beige {background-image: url("walls/gruvbox-l.jpg") !important;}
-#light-pink {background-image: url("walls/midnight.jpg") !important;}
+#light-pink {background-image: url("walls/ayu.jpg") !important;}
 #light-blue {background-image: url("walls/midnight-ui.gif") !important;}
 #brown {background-image: url("walls/old.midnight.jpg") !important;}
 #light-purple {background-image: url("walls/kanagawa-wave.jpg") !important;}
