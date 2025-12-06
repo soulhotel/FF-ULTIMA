@@ -5,7 +5,7 @@
 ┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
 
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-Wiki:              https://github.com/soulhotel/FF-ULTIMA/wiki/Settings
+Wiki:              https://ff-ultima.github.io/docs/getting-started
 Latest Version:    https://github.com/soulhotel/FF-ULTIMA/releases/latest
 License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 2.0
 
@@ -135,13 +135,13 @@ user_pref("ultima.contextmenu.hide.separators", false);
 
 /* alternate styles */
 user_pref("ultima.spacing.compact", false);
-user_pref("ultima.spacing.relaxed", false); /*wip*/
+user_pref("ultima.spacing.relaxed", false); 
 user_pref("ultima.tabs.tabContainer.1", false);
 user_pref("ultima.tabs.tabContainer.2", false);
 user_pref("ultima.tabs.tabContainer.3", true);
 user_pref("user.theme.xtension.newtab.rounded", false); /*new tab page*/
 user_pref("user.theme.xtension.newtab.compact", true);
-user_pref("ultima.xstyle.private", false); /*private browser home page*/
+user_pref("ultima.xstyle.private", false);              /*private browser home page*/
 user_pref("ultima.spacing.compact.addonmanager", true); /*add on manager*/
 user_pref("ultima.privatebrowsing.gradient.border", false);
 
@@ -169,7 +169,7 @@ user_pref("user.theme.wallpaper.midnight", false);
 user_pref("user.theme.wallpaper.midnight2", false);
 user_pref("user.theme.wallpaper.fluent.dark", false);
 user_pref("user.theme.wallpaper.fluent.light", false);
-user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true);
+user_pref("user.theme.wallpaper.ayu", false);
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.customWallpaper.enabled", true);
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
@@ -197,24 +197,17 @@ user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 user_pref("widget.gtk.native-context-menus", false);
 
 /* extra recommended */
-user_pref("browser.tabs.groups.enabled", true);
+// user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.tabs.splitView.enabled", true);
-user_pref("browser.tabs.hoverPreview.enabled", true);
-user_pref("browser.tabs.groups.hoverPreview.enabled", true);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh", false);
-
-/* extra accessibility */
+// user_pref("browser.tabs.hoverPreview.enabled", true);
+// user_pref("browser.tabs.groups.hoverPreview.enabled", true);
 user_pref("findbar.highlightAll", true);
 user_pref("browser.tabs.insertAfterCurrent", true);
 user_pref("browser.search.context.loadInBackground", true);
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
-user_pref("full-screen-api.transition-duration.enter", "0 0");
+// this animation is very inconsistent especially when compared cross-platform, better left minimal or off
+user_pref("full-screen-api.transition-duration.enter", "0 0"); 
 user_pref("full-screen-api.transition-duration.leave", "0 0");
 user_pref("full-screen-api.warning.timeout", 0);
 user_pref("general.smoothScroll", true);
 user_pref("general.smoothScroll.msdPhysics.enabled", true);
-
-/* extra privacy */
-user_pref("browser.send_pings", false);
-user_pref("extensions.pocket.enabled", false);

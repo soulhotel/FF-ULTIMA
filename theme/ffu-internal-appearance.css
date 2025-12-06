@@ -632,8 +632,14 @@ treechildren::-moz-tree-row(focus) {
     outline: none !important;
 }
 treechildren::-moz-tree-row(selected) {
-    background-color: var(--uc-browser-color) !important;
-    border: 1px rgba(0,0,0,0.2) solid !important;
+    background-color: color-mix(in srgb, var(--uc-browser-color) 99%, white) !important;
+    border: 1px rgba(50,50,50,0.2) solid !important;
+}
+treechildren::-moz-tree-cell-text(selected) {
+    color: var(--uc-text) !important;
+}
+/* treechildren::-moz-tree-cell-text(hover) {}
+treechildren::-moz-tree-cell-text(focused) {} */
 }
 :root {
     --sidebar-box-background: rgba(140,140,150,0.1) !important;
