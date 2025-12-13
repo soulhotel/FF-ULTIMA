@@ -99,7 +99,7 @@ Another - applying colors to extension
 
         --tabs-discarded-favicon-opacity: 0.05 !important;
         --tabs-discarded-title-opacity: 0.15 !important;
-        --tabs-indent: 30px !important; /* OR 20 */
+        @media not -moz-pref("ultima.sidebery.default.indent") {--tabs-indent: 30px !important;}
         --tabs-audio-btn-width: 30px !important;
         --ntb-border-radius: var(--uc-button-border-radius) !important;
     }
