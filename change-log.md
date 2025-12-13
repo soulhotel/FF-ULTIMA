@@ -32,6 +32,13 @@
 - `qol • 🟡 •` Include urlbar overflow menu panel (page actions) to navbar autohide exceptions list
 - `qol • 🟡 •` Adjustment to `contextmenu.compact`, reduction in arrow size and padding
 - `qol • 🟡 •` Style adjustments to the bookmarks sidebar
+- 4.3+
+- `fix • 🔴 •` enforce consistent colors for sidebar tree view icons/text/expansion arrow #434 4c02620
+- `fix • 🔴 •` queries for the url bars Tracking protection button (now #trust-container) #438 5591cdc
+- `fix • 🔴 •` Split tab - horizontal tabs, spacing correction #440 5591cdc
+- `new • 🟢 •` Setting `ultima.tabs.focus.unblur`, reduces the visibiliy of tabs unless they are hovered, selected, playing audio, or loading.
+- `new • 🟢 •` Setting `ultima.sidebar.compact.treeviews` compacts the tree view of the bookmarks/history sidebars ed9f73d
+- `qol • 🟡 •` Included the Ayu Color Scheme in wallpaper menu and override options #435 0cde2ff
 
 ### <ins> Update Preview
 

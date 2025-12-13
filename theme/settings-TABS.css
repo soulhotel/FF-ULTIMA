@@ -280,6 +280,21 @@ pinned tabs transparent background
     
 }
 
+/* all tabs are blurred unless hovered, selected, playing audio, or loading */
+@media -moz-pref("ultima.tabs.focus.unblur") {
+    .tabbrowser-tab:not(:hover,[selected],[busy],[soundplaying]) .tab-stack {
+        transition: opacity 0.2s ease-out !important;
+        opacity: 0.2;
+        filter: blur(3px);
+    }
+    tab-group:not([hasactivetab=""],:hover) .tab-group-label-container {
+        transition: opacity 0.2s ease-out !important;
+        opacity: 0.2;
+        filter: blur(3px);
+    }
+}
+
+
 /* tab outline colors ------------------------------------------------------------------------------------------- */
 
 @media -moz-pref("user.theme.xtras.tab.outline.color","black") {
