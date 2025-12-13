@@ -9,10 +9,11 @@
         :root{--bg: #f7f7f7; --fg: #111; --content-bg: #fff; --accent: #fdefd6;}
     }
     @media (prefers-color-scheme: dark) {
-        :root{--bg: rgb(43, 42, 51); --fg: white; --content-bg: rgb(35, 35, 42); --accent: rgb(86, 112, 137);}
+        :root{--bg: rgb(43, 42, 51); --fg: white; --content-bg: rgb(35, 35, 42); --accent: rgb(152, 171, 189);}
     }
     body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin: 0; background: var(--bg); color: var(--fg); }
-    .content { max-width: 980px; margin: 28px auto; padding: 28px; background: var(--content-bg); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+    .content { max-width: 980px; margin: 28px auto; padding: 16px; background: var(--content-bg); border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; box-shadow: 0 1px 0 rgba(0,0,0,0.03); }
+    .content-section {margin-bottom: 16px; padding: 16px; background: rgba(0,0,0,0.03); border-radius: 8px; outline:1px solid rgba(0,0,0,0.06);}
     h1 { font-size: 20px; margin: 0 0 12px 0; }
     .controls { margin: 12px 0 18px 0; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
     .switch { display: flex; align-items: center; gap: 8px; }
@@ -44,24 +45,49 @@
 </head>
 <body>
   <div class="content" id="uc-manager-root">
-    <h1>userChromeJS Manager</h1>
-    <div class="controls">
-      <label class="switch"><input type="checkbox" id="uc-enabled"> <span id="uc-enabled-label">userChromeJS enabled</span></label>
-      <input id="uc-search" class="search" placeholder="Filter scripts by name..." />
-      <div style="flex:1"></div>
-      <div class="toolbar">
-        <button id="uc-open-chrome">Open chrome directory</button>
-        <button id="uc-restart">Restart Firefox</button>
+
+    <div class="content-section" id="uc-manager">
+      <h1>userChromeJS Manager</h1>
+      <div class="controls">
+        <label class="switch"><input type="checkbox" id="uc-enabled"> <span id="uc-enabled-label">userChromeJS enabled</span></label>
+        <input id="uc-search" class="search" placeholder="Filter scripts by name..." />
+        <div style="flex:1"></div>
+        <div class="toolbar">
+          <button id="uc-open-chrome">Open chrome directory</button>
+          <button id="uc-restart">Restart Firefox</button>
+          <button id="uc-collapse">Collapse</button>
+        </div>
+      </div>
+      <div class="scripts" id="uc-scripts-list">
+        <div class="empty">Loading scripts…</div>
+      </div>
+      <div class="footer">
+        <span class="badge" id="uc-count">0 scripts</span>
+        <div style="flex:1"></div>
+        <small style="color:#666">Tip: use the buttons next to each script to manage them (Edit/Reload/Uninstall/Home)</small>
       </div>
     </div>
-    <div class="scripts" id="uc-scripts-list">
-      <div class="empty">Loading scripts…</div>
+
+    <div class="content-section" id="styles-manager">
+      <h1>userChrome CSS Manager</h1>
+      <div class="controls">
+        <label class="switch"><input type="checkbox" id="style-enabled"> <span id="styles-enabled-label">userChromeJS enabled</span></label>
+        <input id="styles-search" class="search" placeholder="Filter styles by name..." />
+        <div style="flex:1"></div>
+        <div class="toolbar">
+          <button id="styles-open-chrome">Open chrome directory</button>
+          <button id="styles-collapse">Collapse</button>
+        </div>
+      </div>
+      <div class="preferences" id="preference-list">
+        <div class="empty">Loading preferences…</div>
+      </div>
+      <div class="footer">
+        <span class="badge" id="uc-count">0 preferences</span>
+        <div style="flex:1"></div>
+      </div>
     </div>
-    <div class="footer">
-      <span class="badge" id="uc-count">0 scripts</span>
-      <div style="flex:1"></div>
-      <small style="color:#666">Tip: use the buttons next to each script to manage them (Edit/Reload/Uninstall/Home)</small>
-    </div>
+
   </div>
   <script>
     const Ci = Components.interfaces;

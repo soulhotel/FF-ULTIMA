@@ -60,13 +60,15 @@ ultima.urlbar.hide.trackingprotection.icon
     #urlbar #identity-box,
     #urlbar #page-action-buttons,
     #urlbar .urlbar-revert-button-container,
-    #urlbar #tracking-protection-icon-container {
+    #urlbar #tracking-protection-icon-container, /* deprecated for below */
+    #urlbar #trust-icon-container {
         opacity: 0 !important;
     }
     #urlbar:hover #identity-box,
     #urlbar:hover #page-action-buttons,
     #urlbar:hover .urlbar-revert-button-container,
-    #urlbar:hover #tracking-protection-icon-container {
+    #urlbar:hover #tracking-protection-icon-container, /* deprecated for below */
+    #urlbar:hover #trust-icon-container {
         opacity: 1 !important;
         transition: opacity 100ms ease !important;
     }
@@ -328,7 +330,8 @@ ultima.urlbar.hide.trackingprotection.icon
 
 /* Hide tracking protection icon */
 @media -moz-pref("ultima.urlbar.hide.trackingprotection.icon") {
-    #tracking-protection-icon-container {
+    #tracking-protection-icon-container, /* deprecated for below */
+    #trust-icon-container {
         display: none !important;
     }
 }

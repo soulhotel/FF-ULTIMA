@@ -496,6 +496,19 @@ box-shadow: none !important;}}
 
 /* Horizontal tabs --------------------------------------------------------------------- */
 
+/* micro positioning adjustments */
+#tabbrowser-tabs[orient="horizontal"] {
+    /* fix pinned tabs spacing */
+    .tab-icon-stack[pinned] {
+      margin-inline: 0px !important; /*previously 5*/
+    }
+    /* remove splitview tabs spacing */
+    tab-split-view-wrapper {
+      margin-block: 0 !important;
+      padding: 0 !important;
+    }  
+}
+
 /* hide vt sidebar when horizontal */
 @media -moz-pref("sidebar.revamp") { @media not -moz-pref("sidebar.verticalTabs") {
     @media -moz-pref("ultima.sidebar.revamped.hide.when.horizontal") {
@@ -505,12 +518,6 @@ box-shadow: none !important;}}
         :root:has(#sidebar-box[positionend]:not([hidden])) #sidebar-wrapper {margin-right: 5px !important;}
         :root:has(#sidebar-box:not([hidden])) #sidebar-wrapper {margin-left: 5px !important;}}
 }}
-
-#tabbrowser-tabs[orient="horizontal"] {
-    .tab-icon-stack[pinned] {
-      margin-inline: 0px !important; /*previously 5*/
-    }
-}
 
 @media -moz-pref("sidebar.verticalTabs") {
     :root:has(#sidebar-main:not([sidebar-positionend=""])) {

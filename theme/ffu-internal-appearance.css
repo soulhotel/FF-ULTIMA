@@ -405,6 +405,7 @@ spacer[part="overflow-start-indicator"] {
 #page-action-buttons,
 #urlbar-searchmode-switcher,
 #tracking-protection-icon-container,
+#trust-icon-container,
 #searchmode-switcher-popup-search-settings-button {
     cursor: pointer !important;
 }
@@ -416,7 +417,8 @@ spacer[part="overflow-start-indicator"] {
 /* spacing & other */
 #identity-box,
 #page-action-buttons,
-#tracking-protection-icon-container {
+#tracking-protection-icon-container,
+#trust-icon-container {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 }
