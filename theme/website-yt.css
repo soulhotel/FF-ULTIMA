@@ -214,5 +214,24 @@ Transparent color scheme
     }
 } /* end theme */
      
+/* extra */    
+    
+/* yt-early New To You chip */
+#chips {
+  display: flex !important;
+}
+
+#chips > yt-chip-cloud-chip-renderer:nth-last-child(1) {
+  order: 1 !important;
+  margin-right: 12px !important;
+}
+
+#chips > yt-chip-cloud-chip-renderer:not(:nth-last-child(1)) {
+  order: 2 !important;
+}
+
+#chips > yt-chip-cloud-chip-renderer:nth-child(1) {
+  order: 1 !important;
+}
     
 }} /* end YT */
