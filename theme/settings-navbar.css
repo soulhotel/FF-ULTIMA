@@ -97,9 +97,11 @@ enable bookmark url editting (add bookmark menu)
                     @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
                 }
             }
-            #urlbar[breakout-extend="true"] {
-                @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
-                @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
+            @media not -moz-pref("ultima.urlbar.float") {
+                #urlbar[breakout-extend="true"] {
+                    @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
+                    @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
+                }
             }
         }
     }
@@ -188,9 +190,11 @@ enable bookmark url editting (add bookmark menu)
                     @media -moz-pref("ultima.navbar.position","bottom") {bottom: 16px !important;}
                 }
             }
-            #urlbar[breakout-extend="true"] {
-                @media not -moz-pref("ultima.navbar.position","bottom") {top: 14px !important;}
-                @media -moz-pref("ultima.navbar.position","bottom") {bottom: 14px !important;}
+            @media not -moz-pref("ultima.urlbar.float") {
+                #urlbar[breakout-extend="true"] {
+                    @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
+                    @media -moz-pref("ultima.navbar.position","bottom") {bottom:0 !important;}
+                }
             }
         }
     }

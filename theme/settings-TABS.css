@@ -31,9 +31,9 @@ pinned tabs transparent background
 
 /* compact tabs ------------------------------------------------------------------------------------------------- */
 @media -moz-pref("ultima.spacing.compact.tabs") {
-    .tab-background {
-          margin-block: -0.4px !important;
-      }
+    .tabbrowser-tab:not([pinned]) .tab-background {
+        margin-block: -0.4px !important;
+    }
 }
 
 /* tabs below the url bar --------------------------------------------------------------------------------------- */

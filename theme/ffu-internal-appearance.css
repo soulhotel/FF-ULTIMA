@@ -546,9 +546,9 @@ menupopup menuseparator {
     & .sidebar-panel[lwt-sidebar] {
         background-color: var(--uc-transparent) !important;
     }
-    @media -moz-pref("ultima.spacing.compact") {
+    /* @media -moz-pref("ultima.spacing.compact") {
         & #sidebar-main {top: calc(var(--uc-topbars-combined-height) - 0px) !important;}
-    }
+    } https://github.com/soulhotel/FF-ULTIMA/issues/439 */
 }
 #search-box[data-l10n-id="places-bookmarks-search"] {
     padding-left:7px !important; 
