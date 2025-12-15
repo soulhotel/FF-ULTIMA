@@ -933,6 +933,21 @@ span.button-background.labelled label {
 #tabbrowser-tabs[orient="horizontal"] .tab-split-view-container {
     padding: 0 !important;
 }
+/* splitview content footer */
+#main-window:not([lwtheme]) {
+    split-view-footer {
+      background-color: var(--uc-browser-color) !important;
+      color: var(--uc-text) !important;
+      border-color: var(--uc-panel-border) !important;
+    }
+}
+#main-window[lwtheme] {
+    split-view-footer {
+      background-color: var(--toolbox-bgcolor) !important;
+      color: var(--uc-text) !important;
+      border-color: var(--uc-panel-border) !important;
+    }
+}
 
 /* Popups/Menus --------------------------------------------------------------------------------------------- */
 /* default */
