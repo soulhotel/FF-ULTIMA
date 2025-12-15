@@ -894,6 +894,8 @@ span.button-background.labelled label {
             border-radius: 10px !important;
             margin-top: 3%;
             height: 90%;
+            min-width:3px !important;
+            max-width: 3px !important;
             opacity: 0;
             &:hover {
                 opacity: 1;
@@ -922,11 +924,11 @@ span.button-background.labelled label {
     }
 }
 /* this margin mod below does nothing, but it represents how spacing needs to be adjusted for future reference */
-#main-window {
+/* #main-window {
     & #tabbrowser-tabpanels[splitview] browser[type] {
         margin: calc(var(--uc-content-margins) / 2) !important;
     }
-}
+} */
 /* extra padding when horizontal breaks spacing, undo it */
 #tabbrowser-tabs[orient="horizontal"] .tab-split-view-container {
     padding: 0 !important;
