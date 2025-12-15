@@ -39,6 +39,8 @@
 - `new • 🟢 •` Setting `ultima.tabs.focus.unblur`, reduces the visibiliy of tabs unless they are hovered, selected, playing audio, or loading.
 - `new • 🟢 •` Setting `ultima.sidebar.compact.treeviews` compacts the tree view of the bookmarks/history sidebars ed9f73d
 - `qol • 🟡 •` Included the Ayu Color Scheme in wallpaper menu and override options #435 0cde2ff
+- `qol • 🟡 •` Ayu Color Scheme adjustments to menu panel options on hover
+- `qol • 🟡 •` Extensions permission popup, downloads panel, backforward popup - added to navbar.autohide exclusion list
 
 ### <ins> Update Preview
 

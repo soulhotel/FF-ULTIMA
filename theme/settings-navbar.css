@@ -76,14 +76,15 @@ enable bookmark url editting (add bookmark menu)
                 }
             }
         }   
-        /* exceptions for menu interactions */
+        /* exceptions list for menu interactions (hover is used for the popups that dont have an open state attribute) */
         &:has(#placesContext:hover),                            &:has(#appMenu-popup[panelopen="true"]),            &:has(#downloads-button-autohide-panel:hover),
         &:has(#appMenu-notification-popup[panelopen="true"]),   &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
         &:has(#unified-extensions-context-menu:hover),          &:has(#notification-popup:hover),                   &:has(.bookmark-item[open="true"]),
         &:has(#blockedPopupOptions:hover),                      &:has(#toolbar-context-menu:hover),                 &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
         &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"]),      &:has(#editBookmarkPanel[panelopen="true"]),
         &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open]),
-        &:has(#pageActionPanel[panelopen="true"])
+        &:has(#pageActionPanel[panelopen="true"]),              &:has(#permission-popup[panelopen="true"]),         &:has(#downloadsPanel[panelopen="true"]),
+        &:has(#backForwardMenu:hover)
         {
             #navigator-toolbox {
                 @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
@@ -168,14 +169,15 @@ enable bookmark url editting (add bookmark menu)
                 }
             }
         }   
-        /* exceptions for menu interactions */
+        /* exceptions list for menu interactions (hover is used for the popups that dont have an open state attribute) */
         &:has(#placesContext:hover),                            &:has(#appMenu-popup[panelopen="true"]),            &:has(#downloads-button-autohide-panel:hover),
         &:has(#appMenu-notification-popup[panelopen="true"]),   &:has(#unified-extensions-panel[panelopen="true"]), &:has(#widget-overflow[panelopen="true"]),
-        &:has(#unified-extensions-context-menu:hover),          &:has(#notification-popup:hover),                   &:has(.bookmark-item[open="true"]), &:has(#tabContextMenu:hover),
+        &:has(#unified-extensions-context-menu:hover),          &:has(#notification-popup:hover),                   &:has(.bookmark-item[open="true"]),
         &:has(#blockedPopupOptions:hover),                      &:has(#toolbar-context-menu:hover),                 &:has(#backForwardMenu:hover), &:has(#customizationui-widget-panel[panelopen="true"]),
         &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"]),      &:has(#editBookmarkPanel[panelopen="true"]),
         &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open]),
-        &:has(#pageActionPanel[panelopen="true"])
+        &:has(#pageActionPanel[panelopen="true"]),              &:has(#permission-popup[panelopen="true"]),         &:has(#downloadsPanel[panelopen="true"]),
+        &:has(#backForwardMenu:hover)
         {
             #navigator-toolbox {
                 @media not -moz-pref("ultima.navbar.position","bottom") {top: 14px !important;}

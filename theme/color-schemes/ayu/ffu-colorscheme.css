@@ -92,7 +92,8 @@ Custom Icons
     --tab-loading-fill: var(--uc-accent-color-1) !important;
     --tab-selected-textcolor: var(--uc-text) !important;
     --tab-hover-background-color: var(--uc-tab-selected) !important;
-    --button-background-color-ghost-hover: var(--uc-button-selected) !important;
+    --button-text-color-ghost-hover: var(--uc-accent-color-5) !important;
+    --button-background-color-ghost-hover: color-mix(in srgb, var(--uc-button-selected) 98%, grey) !important;
     --button-background-color: var(--uc-button-selected) !important;
     --button-background-color-hover: var(--uc-button-selected) !important;
     --button-background-color-active: var(--uc-button-selected) !important;
@@ -219,6 +220,7 @@ Custom Icons
 #main-window:not([lwtheme]) {  
     & .toolbarbutton-text {
         color: var(--toolbarbutton-icon-fill);
+        &:hover {color: var(--uc-accent-color-5) !important;}
     }
     & #nav-bar .toolbarbutton-1,
     &  #nav-bar .toolbarbutton-text {
