@@ -30,6 +30,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('catppuccin-mocha-variant/ffu-colorscheme.css') -moz-pref("user.theme.catppuccin-mocha-variant");
 @import url('brave/ffu-colorscheme.css')              -moz-pref("user.theme.brave");
 @import url('ayu/ffu-colorscheme.css')                -moz-pref("user.theme.ayu");
+@import url('rose-pine/ffu-colorscheme.css')					-moz-pref("user.theme.rose-pine");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
 /* Add your Theme (Above) for the Browser ------------------------------------------------------------------------ */
@@ -51,6 +52,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @import url('catppuccin-mocha-variant/ffu-colorscheme.css') -moz-pref("user.theme.catppuccin-mocha-variant");
 @import url('brave/ffu-colorscheme.css')              -moz-pref("user.theme.brave");
 @import url('ayu/ffu-colorscheme.css')                -moz-pref("user.theme.ayu");
+@import url('rose-pine/ffu-colorscheme.css')          -moz-pref("user.theme.rose-pine");
 @import url('YourName/ffu-colorscheme.css')           -moz-pref("user.theme.YourName");
 
 /* Adding your Theme (Above) makes the colors available to websites & extensions -------------------------------- */
@@ -127,6 +129,11 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media -moz-pref("user.theme.ayu") {
     @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/ayu.jpg");}
     @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/FluentMonochrome-l.jpg");}
+}
+
+@media -moz-pref("user.theme.rose-pine") {
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/rose-pine-dawn.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/rose-pine.jpg");}
 }
 
 @media -moz-pref("user.theme.yourName") {

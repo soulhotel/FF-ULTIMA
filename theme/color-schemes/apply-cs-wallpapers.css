@@ -41,6 +41,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
     @media -moz-pref("user.theme.wallpaper.fluent.dark"){--uc-wallpaper: url("walls/FluentMonochrome-d.jpg") !important;}
     @media -moz-pref("user.theme.wallpaper.fluent.light"){--uc-wallpaper: url("walls/FluentMonochrome-l.jpg") !important;}
     @media -moz-pref("user.theme.wallpaper.kanagawa-wave"){--uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.rose-pine"){--uc-wallpaper: url("walls/rose-pine.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.rose-pine-dawn"){--uc-wallpaper: url("walls/rose-pine-dawn.jpg") !important;}
 }
 
 /* add cs wallpapers to menu -------------------------------------------------------------------- */
@@ -61,7 +63,9 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
        (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-blue")),
        (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown")),
        (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple")),
-       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow")) {
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand")) {
     body { background-image: var(--uc-wallpaper) !important; }
 }
 /* second, apply the actual wallpaper */
@@ -79,6 +83,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown") {--uc-wallpaper: url("walls/old.midnight.jpg") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple") {--uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;}
 @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow") {--uc-wallpaper: url("walls/green.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple") {--uc-wallpaper: url("walls/rose-pine.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand") {--uc-wallpaper: url("walls/rose-pine-dawn.jpg") !important;}
 
 /* third, match the wallpaper to the menu option */
 #blue {background-image: url("walls/fullmoon.jpg") !important;}
@@ -95,6 +101,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 #brown {background-image: url("walls/old.midnight.jpg") !important;}
 #light-purple {background-image: url("walls/kanagawa-wave.jpg") !important;}
 #yellow {background-image: url("walls/green.jpg") !important;}
+#blue-purple {background-image: url("walls/rose-pine.jpg") !important;}
+#light-sand {background-image: url("walls/rose-pine-dawn.jpg") !important;}
 
 /* fourth, quick styling for the menu */
 #solid-colors[class*="wallpaper-input"] {
