@@ -112,7 +112,7 @@ pinned tabs transparent background
     #sidebar-main .tab-label {
         white-space: wrap !important;
         word-wrap: break-word;
-        max-height: 120px !important;
+        max-height: 118px !important;
         margin-right: 15px !important;
     }
     @media not -moz-pref("ultima.tabs.closetabbutton.on.icon") {
