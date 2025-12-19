@@ -10,227 +10,124 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing)
-{
-  :root {
-    /* apply cs wallpapers --------------------------------------------------------------------------- */
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home), url(about:privatebrowsing) {  :root {
 
-    /* when a custom or uploaded wallpaper is not in use, firefoxs default wallpaper will be the Color Scheme Wallpaper */
+/* apply cs wallpapers --------------------------------------------------------------------------- */
+    
+/* when a custom or uploaded wallpaper is not in use, firefoxs default wallpaper will be the Color Scheme Wallpaper */
+    
+@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
+    /* wallpaper only applies if a custom wallpaper is NOT set */
+    body {background-image: var(--uc-wallpaper) !important;}
+}
 
-    @media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
-      /* wallpaper only applies if a custom wallpaper is NOT set */
-      body {
-        background-image: var(--uc-wallpaper) !important;
-      }
-    }
+/* override cs wallpapers ------------------------------------------------------------------------ */
+    
+/* override the default wallpaper with a different color scheme wallpaper */
 
-    /* override cs wallpapers ------------------------------------------------------------------------ */
+@media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
+    @media -moz-pref("user.theme.wallpaper.ayu"){--uc-wallpaper: url("walls/ayu.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.catppuccin"){--uc-wallpaper: url("walls/catppuccin.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.catppuccin-frappe"){--uc-wallpaper: url("walls/catppuccin-frappe.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.catppuccin-mocha"){--uc-wallpaper: url("walls/catppuccin-mocha.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.dusky"){--uc-wallpaper: url("walls/dusky.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.fullmoon"){--uc-wallpaper: url("walls/fullmoon.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.midnight"){--uc-wallpaper: url("walls/midnight.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.midnight2"){--uc-wallpaper: url("walls/old.midnight.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.green"){--uc-wallpaper: url("walls/green.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.gruvbox"){--uc-wallpaper: url("walls/gruvbox.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.gruvbox.light"){--uc-wallpaper: url("walls/gruvbox-l.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.gruvbox.flowers"){--uc-wallpaper: url("walls/gruvbox-3.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.fluent.dark"){--uc-wallpaper: url("walls/FluentMonochrome-d.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.fluent.light"){--uc-wallpaper: url("walls/FluentMonochrome-l.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.kanagawa-wave"){--uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.rose-pine"){--uc-wallpaper: url("walls/rose-pine.jpg") !important;}
+    @media -moz-pref("user.theme.wallpaper.rose-pine-dawn"){--uc-wallpaper: url("walls/rose-pine-dawn.jpg") !important;}
+}
 
-    /* override the default wallpaper with a different color scheme wallpaper */
+/* add cs wallpapers to menu -------------------------------------------------------------------- */
 
-    @media not -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper") {
-      @media -moz-pref("user.theme.wallpaper.ayu") {
-        --uc-wallpaper: url("walls/ayu.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.catppuccin") {
-        --uc-wallpaper: url("walls/catppuccin.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.catppuccin-frappe") {
-        --uc-wallpaper: url("walls/catppuccin-frappe.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.catppuccin-mocha") {
-        --uc-wallpaper: url("walls/catppuccin-mocha.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.dusky") {
-        --uc-wallpaper: url("walls/dusky.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.fullmoon") {
-        --uc-wallpaper: url("walls/fullmoon.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.midnight") {
-        --uc-wallpaper: url("walls/midnight.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.midnight2") {
-        --uc-wallpaper: url("walls/old.midnight.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.green") {
-        --uc-wallpaper: url("walls/green.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.gruvbox") {
-        --uc-wallpaper: url("walls/gruvbox.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.gruvbox.light") {
-        --uc-wallpaper: url("walls/gruvbox-l.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.gruvbox.flowers") {
-        --uc-wallpaper: url("walls/gruvbox-3.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.fluent.dark") {
-        --uc-wallpaper: url("walls/FluentMonochrome-d.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.fluent.light") {
-        --uc-wallpaper: url("walls/FluentMonochrome-l.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.kanagawa-wave") {
-        --uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.rose-pine") {
-        --uc-wallpaper: url("walls/rose-pine.jpg") !important;
-      }
-      @media -moz-pref("user.theme.wallpaper.rose-pine-dawn") {
-        --uc-wallpaper: url("walls/rose-pine-dawn.jpg") !important;
-      }
-    }
+/* this makes cs wallpapers available in the new tab page wallpaper menu, using the 'Solid Color' section */
 
-    /* add cs wallpapers to menu -------------------------------------------------------------------- */
+/* first apply cs wallpapers when one of the solid colors are selected */
+@media (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-green")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","green")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-blue")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-purple")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-green")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","red")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","orange")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","beige")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-pink")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-blue")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow")),
+			 (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple")),
+			 (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand")) {
+    body { background-image: var(--uc-wallpaper) !important; }
+}
+/* second, apply the actual wallpaper */
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue") {--uc-wallpaper: url("walls/fullmoon.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-green") {--uc-wallpaper: url("walls/dusky.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","green") {--uc-wallpaper: url("walls/FluentMonochrome-d.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-blue") {--uc-wallpaper: url("walls/catppuccin.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-purple") {--uc-wallpaper: url("walls/catppuccin-frappe.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-green") {--uc-wallpaper: url("walls/catppuccin-mocha.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","red") {--uc-wallpaper: url("walls/gruvbox.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","orange") {--uc-wallpaper: url("walls/gruvbox-3.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","beige") {--uc-wallpaper: url("walls/gruvbox-l.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-pink") {--uc-wallpaper: url("walls/ayu.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-blue") {--uc-wallpaper: url("walls/midnight-ui.gif") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown") {--uc-wallpaper: url("walls/old.midnight.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple") {--uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow") {--uc-wallpaper: url("walls/green.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple") {--uc-wallpaper: url("walls/rose-pine.jpg") !important;}
+@media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand") {--uc-wallpaper: url("walls/rose-pine-dawn.jpg") !important;}
 
-    /* this makes cs wallpapers available in the new tab page wallpaper menu, using the 'Solid Color' section */
+/* third, match the wallpaper to the menu option */
+#blue {background-image: url("walls/fullmoon.jpg") !important;}
+#light-green {background-image: url("walls/dusky.jpg") !important;}
+#green {background-image: url("walls/FluentMonochrome-d.jpg") !important;}
+#dark-blue {background-image: url("walls/catppuccin.jpg") !important;}
+#dark-purple {background-image: url("walls/catppuccin-frappe.jpg") !important;}
+#dark-green {background-image: url("walls/catppuccin-mocha.jpg") !important;}
+#red {background-image: url("walls/gruvbox.jpg") !important;}
+#orange {background-image: url("walls/gruvbox-3.jpg") !important;}
+#beige {background-image: url("walls/gruvbox-l.jpg") !important;}
+#light-pink {background-image: url("walls/ayu.jpg") !important;}
+#light-blue {background-image: url("walls/midnight-ui.gif") !important;}
+#brown {background-image: url("walls/old.midnight.jpg") !important;}
+#light-purple {background-image: url("walls/kanagawa-wave.jpg") !important;}
+#yellow {background-image: url("walls/green.jpg") !important;}
+#blue-purple {background-image: url("walls/rose-pine.jpg") !important;}
+#light-sand {background-image: url("walls/rose-pine-dawn.jpg") !important;}
 
-    /* first apply cs wallpapers when one of the solid colors are selected */
-    @media (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-green")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","green")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-blue")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-purple")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-green")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","red")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","orange")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","beige")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-pink")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-blue")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple")),
-      (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand")) {
-      body {
-        background-image: var(--uc-wallpaper) !important;
-      }
-    }
-    /* second, apply the actual wallpaper */
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue") {
-      --uc-wallpaper: url("walls/fullmoon.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-green") {
-      --uc-wallpaper: url("walls/dusky.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","green") {
-      --uc-wallpaper: url("walls/FluentMonochrome-d.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-blue") {
-      --uc-wallpaper: url("walls/catppuccin.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-purple") {
-      --uc-wallpaper: url("walls/catppuccin-frappe.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","dark-green") {
-      --uc-wallpaper: url("walls/catppuccin-mocha.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","red") {
-      --uc-wallpaper: url("walls/gruvbox.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","orange") {
-      --uc-wallpaper: url("walls/gruvbox-3.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","beige") {
-      --uc-wallpaper: url("walls/gruvbox-l.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-pink") {
-      --uc-wallpaper: url("walls/ayu.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-blue") {
-      --uc-wallpaper: url("walls/midnight-ui.gif") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown") {
-      --uc-wallpaper: url("walls/old.midnight.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple") {
-      --uc-wallpaper: url("walls/kanagawa-wave.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow") {
-      --uc-wallpaper: url("walls/green.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple") {
-      --uc-wallpaper: url("walls/rose-pine.jpg") !important;
-    }
-    @media -moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand") {
-      --uc-wallpaper: url("walls/rose-pine-dawn.jpg") !important;
-    }
-
-    /* third, match the wallpaper to the menu option */
-    #blue {
-      background-image: url("walls/fullmoon.jpg") !important;
-    }
-    #light-green {
-      background-image: url("walls/dusky.jpg") !important;
-    }
-    #green {
-      background-image: url("walls/FluentMonochrome-d.jpg") !important;
-    }
-    #dark-blue {
-      background-image: url("walls/catppuccin.jpg") !important;
-    }
-    #dark-purple {
-      background-image: url("walls/catppuccin-frappe.jpg") !important;
-    }
-    #dark-green {
-      background-image: url("walls/catppuccin-mocha.jpg") !important;
-    }
-    #red {
-      background-image: url("walls/gruvbox.jpg") !important;
-    }
-    #orange {
-      background-image: url("walls/gruvbox-3.jpg") !important;
-    }
-    #beige {
-      background-image: url("walls/gruvbox-l.jpg") !important;
-    }
-    #light-pink {
-      background-image: url("walls/ayu.jpg") !important;
-    }
-    #light-blue {
-      background-image: url("walls/midnight-ui.gif") !important;
-    }
-    #brown {
-      background-image: url("walls/old.midnight.jpg") !important;
-    }
-    #light-purple {
-      background-image: url("walls/kanagawa-wave.jpg") !important;
-    }
-    #yellow {
-      background-image: url("walls/green.jpg") !important;
-    }
-    #blue-purple {
-      background-image: url("walls/rose-pine.jpg") !important;
-    }
-    #light-sand {
-      background-image: url("walls/rose-pine-dawn.jpg") !important;
-    }
-
-    /* fourth, quick styling for the menu */
-    #solid-colors[class*="wallpaper-input"] {
-      background-image: url("../icons/cswallpaper.png");
-    }
-    .wallpaper-list.category {
-      padding-top: 5px !important;
-      background-color: transparent !important;
-      border-radius: 10px;
-    }
-    .home-section:has(.wallpaper-list.category) {
-      .wallpapers-section div .category-header,
-      .wallpapers-section
-        div
-        div[aria-label="Wallpaper category selection. Use arrow keys to navigate."],
-      .settings-toggles,
-      #settings-link {
+/* fourth, quick styling for the menu */
+#solid-colors[class*="wallpaper-input"] {
+    background-image: url('../icons/cswallpaper.png');
+}
+.wallpaper-list.category {
+    padding-top: 5px !important;
+    background-color: transparent !important;
+    border-radius: 10px;
+}
+.home-section:has(.wallpaper-list.category) {
+    .wallpapers-section div .category-header,
+    .wallpapers-section div div[aria-label="Wallpaper category selection. Use arrow keys to navigate."],
+    .settings-toggles,
+    #settings-link
+    {
         opacity: 0;
-      }
-      .arrow-button {
-        &::after {
-          content: " (Ultima Wallpapers)";
-          color: lightblue;
-        }
-      }
     }
-  }
-} /*END*/
+    .arrow-button {
+        &::after {
+            content:" (Ultima Wallpapers)";
+            color: lightblue;
+        }
+    }
+}
+
+ 
+}} /*END*/
