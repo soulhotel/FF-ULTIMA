@@ -64,8 +64,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
        (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","brown")),
        (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-purple")),
        (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","yellow")),
-			 (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple")),
-			 (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand")) {
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","blue-purple")),
+       (-moz-pref("browser.newtabpage.activity-stream.newtabWallpapers.wallpaper","light-sand")) {
     body { background-image: var(--uc-wallpaper) !important; }
 }
 /* second, apply the actual wallpaper */
