@@ -104,7 +104,7 @@ Custom Icons
   --toolbarbutton-active-background: var(--uc-button-selected) !important;
   --button-primary-bgcolor: var(--uc-accent-color-1) !important;
   --button-primary-hover-bgcolor: var(--uc-accent-color-1) !important;
-  --buttons-destructive-hover-bgcolor: #9d1c1c; /*red*/
+  --buttons-destructive-hover-bgcolor: #eb6f92; /*red*/
   --buttons-destructive-active-bgcolor: var(--uc-button-red); /*red*/
   --toolbarbutton-icon-fill: var(
     --uc-accent-color-2
@@ -151,10 +151,111 @@ Custom Icons
   --organizer-hover-background: var(--uc-accent-color-4) !important;
   --organizer-selected-background: var(--uc-button-selected) !important;
   --organizer-focus-selected-color: var(--uc-button-selected) !important;
-  --organizer-outline-color: rgb(0, 221, 255) !important;
+  --organizer-outline-color: rgb(156, 207, 216) !important;
   --organizer-toolbar-field-background: var(--uc-accent-color-4) !important;
   --organizer-toolbar-field-background-focused: var(
     --uc-accent-color-1
   ) !important;
   --content-select-background-image: none !important;
 }
+
+/* Applying variables  further to create the Theme --------------------------------*/
+
+/* If a section is empty, that means the style is defaulting to chrome/theme/ffu-internal-appearance.css */
+
+/* Main window adjustments ----------------------------------------*/
+
+/* URL Bar --------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    & #urlbar-zoom-button {
+        background-color: var(--uc-button-selected) !important;
+    }
+    & .urlbarView-row { &[selected] {
+        color: var(--uc-text) !important;
+    }}
+    & .urlbarView-row:hover {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-4) !important;
+    }
+    & .urlbarView-row:hover { @media (prefers-color-scheme: light) {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-3) !important;
+    }}
+    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-2) 10%, transparent)  !important;
+    }
+}
+
+/* Find bar -------------------------------------------------------*/
+
+/* Sidebars -------------------------------------------------------*/
+
+/*sidebar check boxes*/
+@layer input-common { #input {
+    accent-color: var(--uc-accent-color-4) !important;
+}}
+.sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
+.customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+    color: var(--uc-accent-color-4) !important;
+}
+
+/* Tabs -----------------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+  /* vert tabs background*/
+  #sidebar-main {
+    background: var(--uc-tabsbar-background) !important;
+  }
+  /* tabs container background */
+  & #tabbrowser-tabs {
+    background: transparent !important;
+  }
+  /*tabs - all other tabs */
+  & .tab-label-container:not([selected=""], [pinned]) {
+    color: var(--uc-text) !important;
+  }
+  & .tab-background {
+    .tabbrowser-tab:hover > .tab-stack > &:not([selected], [multiselected]) {
+      box-shadow: var(--uc-box-shadow) !important;
+    }
+  }
+  /* tabs preview container */
+  & .tab-preview-container {
+    background-color: var(--uc-tabsbar-background) !important;
+    color: var(--uc-text) !important;
+    width: 225px !important;
+    border: 1px solid var(--uc-panel-border) !important;
+  }
+}
+
+/* Button Adjustments ---------------------------------------------*/
+    
+/* Popups/Menus ---------------------------------------------------*/
+
+/* Context Menu ---------------------------------------------------*/
+
+#main-window:not([lwtheme]) {
+    menupopup:not(#ContentSelectDropdownPopup), panel:not(.autoscroller) {
+        color-scheme: light dark;
+        --panel-background: var(--uc-context-menu) !important;
+        --panel-border-radius: var(--uc-button-border-radius) !important;
+        --panel-border-color: var(--uc-panel-border-2) !important;
+        --panel-color: var(--uc-text) !important;
+    }
+    menupopup {--panel-shadow:none !important;}
+    menuitem:hover {
+        background-color: var(--uc-button-selected) !important;
+        --panel-color: var(--uc-accent-color-1) !important;
+        color: var(--uc-accent-color-2) !important;
+        border-radius: 6px !important;
+    }
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-2) !important;
+    }
+}
+
+/* Custom Icons ---------------------------------------------------*/
