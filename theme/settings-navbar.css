@@ -84,7 +84,7 @@ enable bookmark url editting (add bookmark menu)
         &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"]),      &:has(#editBookmarkPanel[panelopen="true"]),
         &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open]),
         &:has(#pageActionPanel[panelopen="true"]),              &:has(#permission-popup[panelopen="true"]),         &:has(#downloadsPanel[panelopen="true"]),
-        &:has(#backForwardMenu:hover)
+        &:has(#backForwardMenu:hover),                          &:has(#protections-popup[panelopen="true"])
         {
             #navigator-toolbox {
                 @media not -moz-pref("ultima.navbar.position","bottom") {top:0 !important;}
@@ -177,7 +177,7 @@ enable bookmark url editting (add bookmark menu)
         &:has(#full-page-translations-panel[panelopen="true"]), &:has(panel[id*="_-panel"][panelopen="true"]),      &:has(#editBookmarkPanel[panelopen="true"]),
         &:has(#feature-callout[panelopen="true"]),              &:has(#notification-popup[panelopen="true"]),       &:has(#window-modal-dialog[open]),
         &:has(#pageActionPanel[panelopen="true"]),              &:has(#permission-popup[panelopen="true"]),         &:has(#downloadsPanel[panelopen="true"]),
-        &:has(#backForwardMenu:hover)
+        &:has(#backForwardMenu:hover),                          &:has(#protections-popup[panelopen="true"])
         {
             #navigator-toolbox {
                 @media not -moz-pref("ultima.navbar.position","bottom") {top: 14px !important;}

@@ -1404,3 +1404,57 @@ lets see how many more borders we can hunt down.
         flex-direction: column-reverse;
     }
 }
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------- */
+/* some color-schemes stray away from the default theme appearance in a variety of ways,
+this setting compiles some of those differences and brings them back to standard */
+
+@media -moz-pref("user.theme.xtras.color-scheme.force.consistency") {
+    :root {
+        --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+        --uc-tab-border-radius: var(--uc-button-border-radius);
+    }
+    @media (prefers-color-scheme: light) {:root {
+        --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.1rem rgba(125,125,125,0.5);
+        --uc-tab-border-radius: var(--uc-button-border-radius);
+    }}
+
+    #main-window:not([lwtheme]) {
+        & #urlbar[open] {
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+        & #urlbar-container * {
+            --uc-button-border-radius: var(--uc-all-border-radius) !important;
+        }
+        & #urlbar {
+            margin-top: 0px !important;
+        }
+        & .urlbar-background, & #urlbar-background, & .searchmode-switcher, & #identity-icon-box,
+        & #page-action-buttons .urlbar-page-action {
+            border-radius: var(--uc-button-border-radius) !important;
+        }
+        & #urlbar-background, & #searchbar,
+        & #urlbar:is([focused="true"], & [open]) > .urlbar-background,
+        & #urlbar:is([focused="true"], & [open]) > #urlbar-background,
+        & #searchbar:focus-within {
+            background-color: var(--uc-urlbar-background) !important;
+            border-radius: var(--uc-button-border-radius) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+
+        }
+        @media -moz-pref("user.theme.kanagawa-wave") {
+            & #urlbar:not([open]) {
+                & #urlbar-background, & #searchbar, & .urlbar-background {
+                    background-color: var(--uc-tab-selected) !important;
+                    border-radius: var(--uc-button-border-radius) !important;
+                    box-shadow: var(--uc-box-shadow) !important;
+                }
+            }
+        }
+    }
+}
