@@ -156,15 +156,15 @@ we set these outlines with user.theme.xtras.tab.outline.color, then manipulate t
             pointer-events: none !important;
             background: var(--tab-selected-outline-color) !important;
             @media -moz-pref("user.theme.xtras.tab.outline.color","gradient") {
-                background: linear-gradient(
-                    90deg,
-                    var(--uc-accent-color-5) 0%,
-                    var(--uc-accent-color-2) 52.08%,
-                    #FFBD4F 100%,
-                    #9059FF 0%,
-                    #FF4AA2 52.08%,
-                    var(--uc-accent-color-4) 100%
-                ) !important;
+            background: linear-gradient(
+                90deg,
+                var(--uc-accent-color-5) 0%,
+                var(--uc-accent-color-2) 52.08%,
+                #FFBD4F 100%,
+                #9059FF 0%,
+                #FF4AA2 52.08%,
+                var(--uc-accent-color-4) 100%
+            ) !important;
                 animation: ffuGradientSlide 6s linear infinite, ffuHue 1s ease-in-out infinite alternate !important;    
             }
             background-size: 150% 100% !important;
@@ -172,7 +172,7 @@ we set these outlines with user.theme.xtras.tab.outline.color, then manipulate t
             background-repeat: repeat-x !important;
             will-change: background-position, filter !important;
             /* fade both ends to transparent so OS/window corner shapes never clash */
-            --uc-privatebar-edge-fade: 55px;
+            --uc-privatebar-edge-fade: 95px;
             mask-image: linear-gradient(90deg,
                 transparent 0,
                 #000 var(--uc-privatebar-edge-fade),
