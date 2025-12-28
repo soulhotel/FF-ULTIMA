@@ -1,0 +1,202 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         tab outline styles
+
+tab outline colors
+left empty
+full
+top
+
+setting user.theme.xtras.tab.outline can  be set to:
+- (left empty) - for no tab outline
+- full - basic 4 border outline
+- top - top sided outlines-style, similar to proton
+
+we set these outlines with user.theme.xtras.tab.outline.color, then manipulate them with the user.theme.xtras.tab.outline string for different "styles"
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* tab outline colors ------------------------------------------------------------------------------------------- */
+
+@media -moz-pref("user.theme.xtras.tab.outline.color","black") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: black !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","white") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: white !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","blue") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: #3d2bd9 !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","gold") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: gold !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","green") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: green !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","lightblue") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: lightblue !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","pink") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: pink !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","purple") {
+    #main-window[lwtheme], #main-window:not([lwtheme]) {
+        --tab-selected-outline-color: purple !important;
+    }
+}
+@media -moz-pref("user.theme.xtras.tab.outline.color","gradient") {
+    @media -moz-pref("user.theme.xtras.tab.outline","full") {
+        @keyframes filter{from{ filter: hue-rotate(0deg) } to { filter: hue-rotate(360deg) }}
+        .tabbrowser-tab[selected] > .tab-stack::after{
+            grid-area: 1/1;
+            content: "";
+            display: inherit;
+            border-radius:3px;
+            z-index: 0;
+            background-image: conic-gradient(
+                hsl(0 100% 70%),
+                hsl(60 100% 45%) 70deg,
+                hsl(120 100% 55%) 105deg,
+                hsl(160 100% 60%) 160deg,
+                hsl(200 100% 60%) 200deg,
+                hsl(240 100% 65%) 255deg,
+                hsl(300 100% 60%) 290deg,
+                hsl(360 100% 70%) 360deg);
+            mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KICA8cmVjdCB4PSIwIiB5PSIwIiByeD0iNCIgc3Ryb2tlPSJyZWQiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIi8+DQo8L3N2Zz4");
+            background-size: cover;
+            background-position: center;
+            animation: filter steps(30) 2s infinite;
+        }
+        .tab-content {
+            z-index: 1 !important;
+        }
+        #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected]:not([pinned]) > .tab-stack::after {
+            margin: -1px 11px;
+        }
+        #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected][pinned] > .tab-stack::after {
+            margin: 0px 5px 0px 5px;
+        }
+        #main-window[sidebar-expand-on-hover=""] #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected][pinned] > .tab-stack::after {
+            margin: 0px 9px -2px 9px;
+        }
+        @media (-moz-platform: windows) {
+            #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected]:not([pinned]) > .tab-stack::after {
+                margin: -1px 9px -1px 11px;
+            }
+            #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected][pinned] > .tab-stack::after {
+                margin: 0px 5px 0px 5px;
+            }
+            #main-window[sidebar-expand-on-hover=""] #tabbrowser-tabs[orient="vertical"] .tabbrowser-tab[selected][pinned] > .tab-stack::after {
+                margin: 0px 9px -1px 9px;
+            }
+        }
+    }
+}
+
+/* left empty ----------------------------------------------------------------------------------------------------- */
+
+/* simply leave it transparent when not empty or full */
+
+@media not -moz-pref("user.theme.xtras.tab.outline","full"),
+@media not -moz-pref("user.theme.xtras.tab.outline") {
+    .tab-background {
+        &:is([selected]) {
+            outline-color: transparent !important;
+        }
+    }
+}
+
+/* full ---------------------------------------------------------------------------------------------------------- */
+
+/* nothing to do, --tab-selected-outline-color simply gets applied with 'outline' */
+
+/* top ----------------------------------------------------------------------------------------------------------- */
+
+/* preferably manipulate outline, border, or :before/:afters on the .tab-background */
+
+@media -moz-pref("user.theme.xtras.tab.outline","top") {
+    #tabbrowser-tabs {
+        [orient="vertical"] {
+            .tabbrowser-tab[selected] .tab-background::before {
+                margin-inline:18px;
+                width: calc(100% - 36px);
+                top: -1px; 
+            }
+            .tabbrowser-tab[selected][pinned] .tab-background::before {
+                margin-inline:2.5%;
+                width: 90%;
+                top: -1px; 
+            }
+        }
+        [orient="horizontal"] {
+            .tabbrowser-tab[selected] .tab-background::before {
+                margin-inline:2.5%;
+                width: 95%;
+            }
+        }
+        .tabbrowser-tab[selected] .tab-background::before {
+            content:"";
+            position: absolute !important;
+            top: 1px; left: 0; height: 3px;
+            pointer-events: none !important;
+            background: var(--tab-selected-outline-color) !important;
+            @media -moz-pref("user.theme.xtras.tab.outline.color","gradient") {
+            background: linear-gradient(
+                90deg,
+                var(--uc-accent-color-5) 0%,
+                var(--uc-accent-color-2) 52.08%,
+                #FFBD4F 100%,
+                #9059FF 0%,
+                #FF4AA2 52.08%,
+                var(--uc-accent-color-4) 100%
+            ) !important;
+                animation: ffuGradientSlide 6s linear infinite, ffuHue 1s ease-in-out infinite alternate !important;    
+            }
+            background-size: 150% 100% !important;
+            background-position: 0% 0% !important;
+            background-repeat: repeat-x !important;
+            will-change: background-position, filter !important;
+            /* fade both ends to transparent so OS/window corner shapes never clash */
+            --uc-privatebar-edge-fade: 95px;
+            mask-image: linear-gradient(90deg,
+                transparent 0,
+                #000 var(--uc-privatebar-edge-fade),
+                #000 calc(100% - var(--uc-privatebar-edge-fade)),
+                transparent 100%
+            );
+            -webkit-mask-image: linear-gradient(90deg,
+                transparent 0,
+                #000 var(--uc-privatebar-edge-fade),
+                #000 calc(100% - var(--uc-privatebar-edge-fade)),
+                transparent 100%
+            );
+            z-index: 2 !important;
+        }
+    }
+    @keyframes ffuGradientSlide {
+        0%   { background-position:   0% 0%; }
+        100% { background-position: 200% 0%; }
+    }
+
+    @keyframes ffuHue {
+        0%   { filter: hue-rotate(0deg); }
+        100% { filter: hue-rotate(60deg); }
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */

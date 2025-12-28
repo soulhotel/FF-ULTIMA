@@ -17,6 +17,8 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 @import url(theme/color-schemes/apply-cs.css); /*color schemes*/
 
+@import url(theme/ffu-cs-standards.css);
+
 @import url(theme/settings-context-menus.css);
 @import url(theme/settings-extensions-panel.css);
 
@@ -27,6 +29,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/settings-findbar.css);
 @import url(theme/settings-sidebar-sidebery.css);
 @import url(theme/settings-TABS.css);
+@import url(theme/settings-tab-outlines.css);
 @import url(theme/settings-tabs-group-and-containers.css);
 
 @import url(theme/ffu-special-configs.css);
