@@ -4,8 +4,8 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Global Positioning for main elements of the browser
 
 This file handles the global positioning of main elements of the browser.
-It handles spacing & positioning of content & sidebars, and handles tracking of toolbar heights & more.
-The methods below enable the ability to have multiple conflicting settings that all work in harmony.
+It handles spacing/positioning of content & sidebars, tracking of toolbar heights & etc.
+Some of the methods below allow multiple conflicting settings to all work in harmony.
 
 Update Scrollbox
 Global variables
@@ -32,21 +32,14 @@ Vertical Tabs Hidden in Private
 
 /* The importance of "Update Scrollbox":
  * Tabs in Firefox, when closed, aren't actually "closed".
- * Closed Tabs are collapsed/hidden before being un-rendered, essentially put in a background state.
- * You can see this live with the Browser Toolbox.
-    * - When you close a tab without this code snippet active, there is a visible gap (maybe 2px) where the closed tab used to be.
-    * - With the code snippet active, there is no gap due to the forced collapse of the closed tab.
-    * - Tab shuffling animation can definitely hide the gap too.
-    * - Also `visibility: collapse` is native/safe behavior.
-* This codeblock basically forces tabs that don't "exist" anymore to not exist "properly". And forces the scrollbox to adjust it's calculation for the collapsed closed tab (no space).
+ * Closed Tabs are collapsed/hidden before being un-rendered, essentially put in a background state. You can see this within the Browser Toolbox.
+ * This codeblock basically forces tabs that don't "exist" anymore to not exist "properly". Forces the scrollbox to adjust it's calculation for the collapsed closed tab (no space).
 */
 .tabbrowser-tab:not([pinned], [fadein]) {
     max-width: 0.1px !important;
     min-width: 0.1px !important;
     visibility: collapse !important;
 }
-
-/* mark for removal - some code blocks from prior version (marked for removal) */
 
 /* Global variables --------------------------------------------------------------------- */
 
@@ -93,10 +86,7 @@ Vertical Tabs Hidden in Private
 
 /* Toolbar spacing ----------------------------------------------------------------------*/
 
-/*
-here we are overriding toolbar heights with their default values
-this allows us to track and work with them throughout the theme
-*/
+/* tracking toolbar heights here, allows us to properly depend on their value throughout the theme. */
 #main-window:not([chromehidden="menubar toolbar location directories status extrachrome "]) #navigator-toolbox
 {height: var(--uc-topbars-combined-height) !important; z-index:999 !important;}
 #toolbar-menubar {height: var(--uc-menubar-height) !important; z-index:998 !important;}
@@ -105,18 +95,14 @@ this allows us to track and work with them throughout the theme
 #TabsToolbar {min-height: var(--uc-tabbar-height) !important; z-index:996 !important;}
 #PersonalToolbar {height: var(--uc-bookbar-height) !important; z-index:995 !important;}
 
-/*
-even when the toolbar is not visible, we track
-*/
+/* even when the toolbar's not visible, we track */
 :root:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important;}
 :root:has(#PersonalToolbar[collapsed=""]) {--uc-bookbar-height: 0px !important;}
 :root:has(#toolbar-menubar[inactive="true"]) {--uc-menubar-height: 0px !important;}
 :root { @media -moz-pref("sidebar.verticalTabs") {--uc-tabbar-height: 0px !important;}}
 @media (-moz-os-version: macos), (-moz-platform: macos) { :root {--uc-menubar-height: 0px !important;}}
 
-/*
-even when fullscreen mode, we track
-*/
+/* even when fullscreen mode, we track */
 :root[inFullscreen="true"] {
     --uc-menubar-height: 0px !important;
     --uc-bookbar-height: 0px !important;
@@ -369,7 +355,7 @@ even when fullscreen mode, we track
 @media -moz-pref("ultima.spacing.relaxed") {
     :root, #main-window, body {--uc-content-margins: 15px 40px 40px 15px !important;}
     #sidebar-box {margin-top:15px !important; margin-bottom: 40px !important;}
-    /*wip design tbd - setting for the fullscreen/uw enjoyers */
+    /* not sure where i was going with this - marked for removal */
 }
 
 /* OS Window Control Spacing -------------------------------------------------------------*/
@@ -395,7 +381,7 @@ even when fullscreen mode, we track
     #toolbar-menubar:not([inactive="true"]) .titlebar-buttonbox-container {display:flex !important;}
     .titlebar-buttonbox-container{display:none !important;}
 }
-/* allow screen edge to toggle close button hover */
+/* accessibility: screen edge should be treated like close button hover */
 @media not (-moz-platform: macos) {
     .titlebar-close::after {
         content: "";background-color:none;position: absolute;
@@ -405,7 +391,7 @@ even when fullscreen mode, we track
 
 /* Title bar ----------------------------------------------------------------------------*/
 
-/* Reduce titlebar spacers */
+/* accessibility: Reduce titlebar spacers */
 .titlebar-spacer[type="pre-tabs"] {display: flex !important; width:4px !important;}
 .titlebar-spacer[type="post-tabs"] {width:1px !important;}
 #tabbrowser-tabs {border-inline-start: 0px !important;}
@@ -413,7 +399,7 @@ even when fullscreen mode, we track
 
 /* Nav bar ------------------------------------------------------------------------------*/
 
-/* reduce what's displayed on the navbar when the browser reaches smaller widths */
+/* accessibility:  reduce what's displayed on the navbar when the browser reaches smaller widths */
 @media (max-width: 700px) {
     #nav-bar[downloadsbuttonshown][unifiedextensionsbuttonshown] #urlbar-container {
         width: 120px !important;
@@ -424,7 +410,6 @@ even when fullscreen mode, we track
         display:none;
     }
 }
-
 /* infobar, need to figure out a proper way to link hidden state to visibility settings */
 .infobar {
     width: fit-content !important;
@@ -540,10 +525,11 @@ box-shadow: none !important;}}
 /* dragging empty space allows window drag on verttabs, except Windows (mac/linux handle this well) */
 #sidebar-main {
     @media not (-moz-platform: windows) {
-        -moz-window-dragging: drag;
+        /* windows really doesnt respond well to this, mac/linux fine */
+        -moz-window-dragging: drag; 
     }
 }
-/* full control of positioning in all scenarios requires this */
+/* better control of positioning in all scenarios requires this */
 :root[sidebar-expand-on-hover]:has(#sidebar-box[checked="true"]:not([sidebar-positionend])) {
     & #sidebar-main {
         position: absolute !important;
@@ -572,8 +558,8 @@ box-shadow: none !important;}}
 /* Other Sidebar resizeable bar (sidebar splitter) */
 #sidebar-splitter {
     border: var(--uc-accent-color-2) solid 1.75px !important;
-    margin-top: 55px !important;       /*controls height*/
-    margin-bottom: 55px !important;    /*controls height*/
+    margin-top: 55px !important;
+    margin-bottom: 55px !important;
     border-radius: 10px !important;
     opacity: 0 !important;
     width: 1px !important;
@@ -586,8 +572,8 @@ box-shadow: none !important;}}
     :root:not([inDOMFullscreen="true"]) #sidebar-launcher-splitter {
         @media -moz-pref("sidebar.revamp") {
             border: var(--uc-accent-color-2) solid 1.75px !important;
-            margin-top: 55px !important;       /*controls height*/
-            margin-bottom: 55px !important;    /*controls height*/
+            margin-top: 55px !important;
+            margin-bottom: 55px !important;
             border-radius: 10px !important;
             opacity: 0;
             width: 1px !important;

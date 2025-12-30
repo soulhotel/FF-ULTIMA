@@ -5,7 +5,7 @@
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
   
 ### <ins> Version Notes
-- Hey! it's been a while.. This update is a small one. Mostly focused on qol improvements and bug fixes. Two new settings were also added to the theme, as well as a new Color Scheme.
+- ...
 - Firefox 138+ required.
 - User.js not required.
 <!--
@@ -15,41 +15,25 @@
 -->
 
 ### <ins> Change Log
-- `fix • 🔴 •` Urlbar spacing in Brave Color Scheme 102a39a
-- `fix • 🔴 •` Default borders when using with horizontal tabs corrected
-- `fix • 🔴 •` Rounded borders were not respecting some full screen video scenarios, fixed
-- `fix • 🔴 •` Enforced animation for bookmarks autohide when using bookmarks.float #428 2a74bca
-- `fix • 🔴 •` An issue where sidebar seperator did not apply to the new tabbar autohiding #427 102a39a
-- `fix • 🔴 •` Unrelated to theme but, removed the black outline that would appear on some menu panels
-- `new • 🟢 •` New [`Brave Color Scheme`](https://ff-ultima.github.io/docs/color-schemes/brave) (brave browser-like theme) by @ann61c #422 #423
-- `new • 🟢 •` Setting [`ultima.tabbar.autohide+compact`](https://ff-ultima.github.io/docs/settings/tab-settings#ultimatabstabbarautohidecompact) for a Zen Browser style vert tabbar @shiyarou #432 29e476c
-- `new • 🟢 •` Setting [`ultima.navbar.position`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarposition) can position the nav bar at the `top` or `bottom` of the browser when combined with `navbar.autohide/navbar.float`
-- `qol • 🟡 •` Bookmarks toolbar now remains visible when using autohide, float, and viewing a folder #428 f0e79c1
-- `qol • 🟡 •` Setting [`ultima.navbar.bookmarks.scrollable`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarbookmarksscrollable) is no longer a default, users can opt-in after setup & discovery
-- `qol • 🟡 •` Restored `Open With` option via context menu's when [`ultima.contextmenu.reduce.options`](https://ff-ultima.github.io/docs/settings/context-menu-settings#de-clutter-the-context-menu) is off #431 fea3fb2
-- `qol • 🟡 •` When using horizontal tabs, [`bookmarks.float`](https://ff-ultima.github.io/docs/settings/topbar-settings#ultimanavbarbookmarksfloat) will adjust to the content (amount of bookmarks) within #428
-- `qol • 🟡 •` Tabbar autohiding now respects when preview labels & the tab container context menu are open 29e476c
-- `qol • 🟡 •` Include urlbar overflow menu panel (page actions) to navbar autohide exceptions list
-- `qol • 🟡 •` Adjustment to `contextmenu.compact`, reduction in arrow size and padding
-- `qol • 🟡 •` Style adjustments to the bookmarks sidebar
-- 4.3+
 - `fix • 🔴 •` enforce consistent colors for sidebar tree view icons/text/expansion arrow #434 4c02620
 - `fix • 🔴 •` queries for the url bars Tracking protection button (now #trust-container) #438 5591cdc
-- `fix • 🔴 •` Split tab - horizontal tabs, spacing correction #440 5591cdc
-- `new • 🟢 •` Setting `ultima.tabs.focus.unblur`, reduces the visibiliy of tabs unless they are hovered, selected, playing audio, or loading.
+- `fix • 🔴 •` Split tab - horizontal tabs, spacing correction #440 5591cdc c5a649c
+- `new • 🟢 •` New [`Rose Pine Color Scheme`](https://ff-ultima.github.io/docs/color-schemes/rose-pine) by @neyfua! #422 22640ef
+- `new • 🟢 •` Setting `ultima.tabs.focus.unblur` reduces the visibiliy of tabs unless they are hovered, selected, playing audio, or loading.
 - `new • 🟢 •` Setting `ultima.sidebar.compact.treeviews` compacts the tree view of the bookmarks/history sidebars ed9f73d
-- `qol • 🟡 •` Included the Ayu Color Scheme in wallpaper menu and override options #435 0cde2ff
+- `new • 🟢 •` Setting `ultima.urlbar.extension.label.hidden` hides the extension label in the urlbar, for extension webpages
+- `new • 🟢 •` ?? Setting `ultima.tabs.tab.outline` gives the selected tab an outline, `full` for basic 4 sided outline, `top` for a proton style top-sided outline
+- `qol • 🟡 •` Setting `ultima.tabs.tab.outline.color` (previously user.theme.xtras.tab.outline.color) controls the outline color above, from basic colors to `gradient`
+- `qol • 🟡 •` Bookmarks toolbar default positioning changed to `left` in user.js. User's can set centered upon discovery
+- `qol • 🟡 •` splitview content footer styled to match CS f55dd70
+- `qol • 🟡 •` multiline tabs see a minimal height adjustment 248c3ea
+- `qol • 🟡 •` included the Ayu Color Scheme in wallpaper menu and override options #435 0cde2ff
 - `qol • 🟡 •` Ayu Color Scheme adjustments to menu panel options on hover
-- `qol • 🟡 •` Extensions permission popup, downloads panel, backforward popup - added to navbar.autohide exclusion list
+- `qol • 🟡 •` extensions permission popup, downloads panel, backforward popup - added to navbar.autohide exclusion list b662b6d
+- `qol • 🟡 •` Some files have been cleaned up
 
-### <ins> Update Preview
+### <ins> Update Preview ??
 
 https://github.com/user-attachments/assets/071111d0-c345-4ec5-8042-969e84844382
-
-### <ins> New Tab Page
-
-This is a New Tab Page replacement called NT Ultra, currently in development/beta [here ->](https://nt-ultra.github.io/)
-
-https://github.com/user-attachments/assets/821317e2-2efe-41a7-8c47-55b6be031257
 
 > FF Ultima is reaching it's maturity, additional updates to the theme will most likely only focus on bugs, patches, and fine-tuning. If you'd like to see more features added to the list, feel free to fork or push via pull request. Contributors, like always - are always welcome. Otherwise, enjoy.

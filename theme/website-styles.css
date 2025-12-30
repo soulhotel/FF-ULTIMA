@@ -31,14 +31,11 @@ bing declutter
 /*--------------------------------------------------------------------------------*/
 
 /*bing declutter*/
-
 @-moz-document domain("bing.com") {
-
     .vs_cont .vs,
     .vs_cont .mc_caro {
         display: none !important;
     }
-
     .sb_feedback_button {
         opacity: 0.4 !important;
         border-radius: 10px !important;

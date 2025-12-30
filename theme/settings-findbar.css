@@ -4,6 +4,7 @@ FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Alternative Styles for the Find Bar
 
 findbar on top
+ultima.findbar.disable.background.image
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -40,8 +41,7 @@ findbar on top
 
 /* --------------------------------------------------------------------------- */
 
-/* findbar on top ------------------------------------------------------------ */
-/* findbar on top ------------------------------------------------------------ */
+/* ultima.findbar.disable.background.image https://ff-ultima.github.io/docs/settings/content-area-settings#ultimafindbardisablebackgroundimage */
 
 @media -moz-pref("ultima.findbar.disable.background.image") {
     #main-window[lwtheme] {

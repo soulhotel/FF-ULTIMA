@@ -50,8 +50,7 @@ enable bookmark url editting (add bookmark menu)
                     transition: bottom 0.3s ease 0.5s !important;
                 }
             }
-            /* we will append two hover zones */
-            /* a hot zone in the middle, for easy entry */
+            /* hover zone - hot zone */
             &::after {
                 content:""; background:none; position:absolute;
                 height:20px; border-radius:10px; text-align:center;
@@ -63,7 +62,7 @@ enable bookmark url editting (add bookmark menu)
                     bottom: var(--uc-topbars-combined-height);
                 }
             }
-            /* a full width zone that doesn't get in the way of sidebars */
+            /* hover zone - full width */
             &::before {
                 content:""; background:none; position:absolute;
                 left:0%;right:0%;
@@ -145,8 +144,7 @@ enable bookmark url editting (add bookmark menu)
                     transition: bottom 0.3s ease 0.5s !important;
                 }
             }
-            /* we will append two hover zones */
-            /* a hot zone in the middle, for easy entry */
+            /* hover zone - hot zone */
             &::after {
                 content:""; background:none; position:absolute;
                 left:0 ;right:0; height:30px; text-align:center;
@@ -157,7 +155,7 @@ enable bookmark url editting (add bookmark menu)
                     bottom: var(--uc-topbars-combined-height);
                 }
             }
-            /* a full width zone that doesn't get in the way of sidebars */
+            /* hover zone  */
             &::before {
                 content:"";background:none;position:absolute;
                 left:0%;right:0%;; height:18px;
@@ -242,14 +240,7 @@ enable bookmark url editting (add bookmark menu)
 }
 
 /* bookmarks scrollable ----------------------------------------------------------------------------- */
-/*
-    When the Browser Window reaches a small enough width, or amount of Bookmarks overlap the browser width,overlapping bookmark items are:
-        1. set as hidden.
-        2. duplicated into the overflow menu.
-    This style simply does the following...
-        1. enabling scrolling on the toolbar
-        2. restoring visibility of hidden bookmarks.
-*/
+
 @media -moz-pref("ultima.navbar.bookmarks.scrollable") {
     #PlacesToolbarItems {
         overflow-x: auto !important;
@@ -311,8 +302,6 @@ enable bookmark url editting (add bookmark menu)
     }
 }
 /* bookmarks centered ------------------------------------------------------------------------------- */
-
-/* can be simplified if using the new bool approach */
 
 @media -moz-pref("ultima.navbar.bookmarks.position","center") { 
     @media not -moz-pref("ultima.navbar.bookmarks.float") { 
@@ -376,7 +365,6 @@ enable bookmark url editting (add bookmark menu)
             --uc-bookbar-height:0px !important;
             #navigator-toolbox {transition: max-height, height, 0.9s ease 0.9s !important;}
             #PersonalToolbar {transition: max-height, height, 0.3s ease 0.9s !important;}
-
             /* visibility */
             #PlacesToolbarItems {
                 /* default */
@@ -434,7 +422,7 @@ enable bookmark url editting (add bookmark menu)
         & #PersonalToolbar {
             /*height:30px !important;*/
             height:36px !important;
-            width:200px !important;
+            width: 200px !important;
         }
     }
 }}
@@ -514,8 +502,7 @@ enable bookmark url editting (add bookmark menu)
 
 /* blur content when viewing bookmarks panel -------------------------------------------------------- */
 
-/* Made in the same style as ultima.urlbar.focus.blur from chrome/theme/settings-urlbar.css,
-mostly to preserve and re-use the ::before element used by the original setting */
+/* both this setting and ultima.urlbar.focus.blur share the same usage of #tabbrowser-tabpanels::before */
 
 @media -moz-pref("ultima.navbar.bookmarks.focus.blur") {
     #tabbrowser-tabpanels::before {

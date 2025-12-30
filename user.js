@@ -32,11 +32,11 @@ user_pref("user.theme.rose-pine", false);
 user_pref("ultima.navbar.autohide", false);
 user_pref("ultima.navbar.float", false);
 user_pref("ultima.navbar.float.fullsize", false);
-user_pref("ultima.navbar.position", "top");
+user_pref("ultima.navbar.position", "top"); // top or bottom
 user_pref("ultima.navbar.hide.buttons", true);
 user_pref("ultima.navbar.bookmarks.autohide", true);
 user_pref("ultima.navbar.bookmarks.compact", false);
-user_pref("ultima.navbar.bookmarks.position", "center");
+user_pref("ultima.navbar.bookmarks.position", "center"); // left right center
 user_pref("ultima.navbar.bookmarks.scrollable", false);
 user_pref("ultima.navbar.bookmarks.float", false);
 user_pref("ultima.navbar.bookmarks.hide.icons", false);
@@ -65,6 +65,8 @@ user_pref("ultima.urlbar.focus.blur", true);
 user_pref("ultima.urlbar.focus.blur.all", false);
 user_pref("ultima.urlbar.focus.text.aligns.left", false);
 user_pref("ultima.urlbar.hide.buttons.in.edge", false);
+user_pref("ultima.urlbar.extension.label.fullwidth", true);
+user_pref("ultima.urlbar.extension.label.hidden", true);
 user_pref("ultima.urlbar.hide.trackingprotection.icon", false);
 
 /* sidebar */
@@ -154,7 +156,8 @@ user_pref("user.theme.xtension.YT", false);
 user_pref("user.theme.xtension.reddit", false);
 user_pref("ultima.scrollbar.thin", false);
 user_pref("user.theme.xtension.swap.addon.colors", true);
-user_pref("user.theme.xtras.tab.outline.color", "none");
+user_pref("ultima.tabs.tab.outline", ""); // full, top, none
+user_pref("ultima.tabs.tab.outline.color", ""); // red blue green pink black white gradient none
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);

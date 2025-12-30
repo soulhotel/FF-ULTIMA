@@ -5,57 +5,61 @@ File Desc:         Private Browsing Modifications
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* private browsing indicator */
-
+/* menu button becomes private window indicator */
 :root[privatebrowsingmode="temporary"] #PanelUI-menu-button {
     list-style-image: url("chrome://global/skin/icons/indicator-private-browsing.svg") !important;
 }
-
-.private-browsing-indicator,
-.private-browsing-indicator-with-label {
+/* and remove the original */
+.private-browsing-indicator, .private-browsing-indicator-with-label {
     display: none !important;
 }
 
+/* cool little gradient border for private windows , suprisingly discreet, by https://github.com/he23251 */
 @media -moz-pref("ultima.privatebrowsing.gradient.border") {
-  :root[privatebrowsingmode="temporary"]::after {
-    content: '' !important;
-    position: fixed !important;
-    top: 0; left: 0; height: 3px; width: 100%;
-    pointer-events: none !important;
-    background: linear-gradient(
-      90deg,
-      #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%,
-      #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%
-    ) !important;
-    background-size: 200% 100% !important;
-    background-position: 0% 0% !important;
-    background-repeat: repeat-x !important;
-    animation: ffuGradientSlide 6s linear infinite, ffuHue 8s ease-in-out infinite alternate !important;
-    will-change: background-position, filter !important;
-    /* fade both ends to transparent so OS/window corner shapes never clash */
-    --uc-privatebar-edge-fade: 100px;
-    mask-image: linear-gradient(90deg,
-      transparent 0,
-      #000 var(--uc-privatebar-edge-fade),
-      #000 calc(100% - var(--uc-privatebar-edge-fade)),
-      transparent 100%
-    );
-    -webkit-mask-image: linear-gradient(90deg,
-      transparent 0,
-      #000 var(--uc-privatebar-edge-fade),
-      #000 calc(100% - var(--uc-privatebar-edge-fade)),
-      transparent 100%
-    );
-    z-index: 2147483647 !important;
-  }
-
-  @keyframes ffuGradientSlide {
-    0%   { background-position:   0% 0%; }
-    100% { background-position: 200% 0%; }
-  }
-  
-  @keyframes ffuHue {
-    0%   { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(60deg); }
-  }
+    :root[privatebrowsingmode="temporary"]::after {
+        content: '' !important;
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        pointer-events: none !important;
+        background: linear-gradient(90deg,
+            #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%,
+            #9059FF 0%, #FF4AA2 52.08%, #FFBD4F 100%) !important;
+        background-size: 200% 100% !important;
+        background-position: 0% 0% !important;
+        background-repeat: repeat-x !important;
+        animation: ffuGradientSlide 6s linear infinite, ffuHue 8s ease-in-out infinite alternate !important;
+        will-change: background-position, filter !important;
+        /* fade both ends to transparent so OS/window corner shapes never clash */
+        --uc-privatebar-edge-fade: 100px;
+        mask-image: linear-gradient(90deg,
+            transparent 0,
+            #000 var(--uc-privatebar-edge-fade),
+            #000 calc(100% - var(--uc-privatebar-edge-fade)),
+            transparent 100%);
+        -webkit-mask-image: linear-gradient(90deg,
+            transparent 0,
+            #000 var(--uc-privatebar-edge-fade),
+            #000 calc(100% - var(--uc-privatebar-edge-fade)),
+            transparent 100%);
+        z-index: 2147483647 !important;
+    }
+    @keyframes ffuGradientSlide {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 200% 0%;
+        }
+    }
+    @keyframes ffuHue {
+        0% {
+          filter: hue-rotate(0deg);
+        }
+        100% {
+          filter: hue-rotate(60deg);
+        }
+    }
 }

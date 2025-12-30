@@ -263,10 +263,9 @@ pinned tabs transparent background
 }
 
 /* tab focus blur ----------------------------------------------------------------------------------------------- */
-/* focus/hover over a tab, blurs other tabs */
 
-@media -moz-pref("ultima.tabs.focus.blur") {
-    
+/* focus/hover over a tab, blurs other tabs */
+@media -moz-pref("ultima.tabs.focus.blur") { 
     #main-window:has(.tabbrowser-tab:hover) {
         .tabbrowser-tab .tab-stack {
             transition: opacity 0.2s ease-out !important;
@@ -276,9 +275,7 @@ pinned tabs transparent background
             }
         }
     }
-    
 }
-
 /* all tabs are blurred unless hovered, selected, playing audio, or loading */
 @media -moz-pref("ultima.tabs.focus.unblur") {
     .tabbrowser-tab:not(:hover,[selected],[busy],[soundplaying]) .tab-stack {
@@ -296,7 +293,6 @@ pinned tabs transparent background
 /* tab counter -------------------------------------------------------------------------------------------------- */
 
 /* display the total # amount of tabs open in the current window, within the tab container */
-
 @media -moz-pref("ultima.tabs.tabCounter") {
     /* get count */
     #tabbrowser-tabs {

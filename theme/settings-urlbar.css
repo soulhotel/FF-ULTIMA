@@ -17,6 +17,8 @@ ultima.urlbar.scrollable
 ultima.urlbar.focus.blur
 ultima.urlbar.focus.blur.all
 ultima.urlbar.focus.align.left
+ultima.urlbar.extension.label.fullwidth
+ultima.urlbar.extension.label.hidden
 ultima.urlbar.hide.trackingprotection.icon
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
@@ -322,6 +324,15 @@ ultima.urlbar.hide.trackingprotection.icon
         }
         #urlbar-input {
             font-size: 11px !important;
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.extension.label.hidden") {
+    #urlbar:has(#identity-icon[tooltiptext*="extension"]) {
+        #identity-icon-box:not(:hover) {
+            opacity: 0;
+            transition: opacity 0.5s ease;
         }
     }
 }
