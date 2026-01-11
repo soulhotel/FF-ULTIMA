@@ -117,6 +117,8 @@ user_pref("ultima.tabs.splitview.content.outline", false);
 user_pref("ultima.tabs.splitview.focus.opacity", false);
 user_pref("ultima.tabs.splitview.focus.shrink", false);
 user_pref("ultima.tabs.splitview.gradient.background", false);
+user_pref("ultima.tabs.tab.outline", ""); // full, top, none
+user_pref("ultima.tabs.tab.outline.color", ""); // red blue green pink black white gradient none
 
 /* vertical tabs defaults */
 user_pref("sidebar.revamp", true);
@@ -156,8 +158,6 @@ user_pref("user.theme.xtension.YT", false);
 user_pref("user.theme.xtension.reddit", false);
 user_pref("ultima.scrollbar.thin", false);
 user_pref("user.theme.xtension.swap.addon.colors", true);
-user_pref("ultima.tabs.tab.outline", ""); // full, top, none
-user_pref("ultima.tabs.tab.outline.color", ""); // red blue green pink black white gradient none
 
 /* override wallpapers */
 user_pref("user.theme.wallpaper.catppuccin", false);

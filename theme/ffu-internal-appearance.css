@@ -1361,15 +1361,18 @@ lets see how many more borders we can hunt down.
     }
 }
 
-/* 12/14/2025 firefox 147-148 */
+/* 12/14/2025 firefox 147-148+ */
+/* the naming convention kind of bothers me, but
+deck-selected (currently selected tab content view)
+split-view-panel (is a split view) */
 @media -moz-pref("ultima.tabs.splitview.content.outline") {
-.browserSidebarContainer:not(.deck-selected) .browserContainer {
-  outline: none !important;
-  box-shadow: none !important;
-}    
+    .browserSidebarContainer:not(.deck-selected.split-view-panel) .browserContainer {
+        outline: none !important;
+        box-shadow: none !important;
+    }
 }
 @media not -moz-pref("ultima.tabs.splitview.content.outline") {
-    .browserContainer {
+.browserContainer {
         outline: none !important;
         box-shadow: none !important;
     }
