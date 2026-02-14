@@ -27,4 +27,4 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/color-schemes/apply-cs-extensions.css); /* apply colors to extensions */
 @import url(theme/color-schemes/apply-cs-wallpapers.css); /* apply colors to wallpapers */
 
-@import url(custom.css);
+@import url(customContent.css);

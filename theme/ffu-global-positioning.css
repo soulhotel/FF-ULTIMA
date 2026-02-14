@@ -116,8 +116,9 @@ Vertical Tabs Hidden in Private
 
 /* when not compact */
 @media not -moz-pref("ultima.spacing.compact") {
-    #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 0px 0 2px 0 !important;}
-    #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[pinned] {margin: -1px 0 2px 0 !important;}
+    #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 2px 0 2px 0 !important;}
+/*     #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab {margin: 0px 0 2px 0 !important;}
+    #tabbrowser-tabs[orient="horizontal"] .tabbrowser-tab[pinned] {margin: -1px 0 2px 0 !important;} */
     #tabbrowser-tabs[orient="horizontal"]:not([movingtab=""]) {max-height: var(--uc-tabbar-height) !important;padding-top:5px;padding-left:4px !important}
 }
 
