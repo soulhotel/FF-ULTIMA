@@ -303,13 +303,16 @@ enable bookmark url editting (add bookmark menu)
 }
 /* bookmarks centered ------------------------------------------------------------------------------- */
 
+/* relying on the collapsed state of the chevron seems like a stable indicator of when bm can be centered now */
 @media -moz-pref("ultima.navbar.bookmarks.position","center") { 
     @media not -moz-pref("ultima.navbar.bookmarks.float") { 
         @media not -moz-pref("ultima.navbar.float") {
             @media not -moz-pref("ultima.navbar.float.fullsize") {
                 #main-window, #main-window:not([lwtheme]) {
-                    #PlacesToolbarItems {
-                        @media only screen and (min-width: 1000px) {justify-content: center !important;}
+                    :has(#PlacesToolbar #PlacesChevron[collapsed]) {
+                        #PlacesToolbarItems {
+                            justify-content: center !important;
+                        }
                     }
                 }
             }
@@ -322,8 +325,10 @@ enable bookmark url editting (add bookmark menu)
             @media not -moz-pref("ultima.navbar.float") {
                 @media not -moz-pref("ultima.navbar.float.fullsize") {
                     #main-window, #main-window:not([lwtheme]) {
-                        #PlacesToolbarItems {
-                            @media only screen and (min-width: 1000px) {justify-content: center !important;}
+                        :has(#PlacesToolbar #PlacesChevron[collapsed]) {
+                            #PlacesToolbarItems {
+                                justify-content: center !important;
+                            }
                         }
                     }
                 }

@@ -90,25 +90,56 @@ tab-group { &[collapsed] > .tabbrowser-tab {visibility:collapse !important;}}
     margin: 0 !important;
 }
 
-/* 9/25?/2025 tab group counter adjustment to fix the unpleasant default spacing */
 
-.tab-group-label-container, .tab-group-overflow-count-container {
-  #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group:not([collapsed]) > &::after, #tabbrowser-tabs:is([orient="horizontal"], [orient="vertical"]:not([expanded])) tab-group[hasactivetab] > &::after, #tabbrowser-tabs[orient="vertical"] tab-group[hasactivetab][hasmultipletabs] > &.tab-group-overflow-count-container::after {
-    content: "SELECTED" !important;
-    top: 6px !important;
-    left: 36px;
-  }
-}
 
 /* 10/5/2025 tab group labels when using Light Mode need more visibility */
 /* font weight approach */
 @media (prefers-color-scheme: light) {
     .tab-group-label {
-        /* font-weight: 900 !important; */
         text-shadow: 1px 1px 1.3px rgba(45,45,45,0.7) !important;
         font-size: 1.05em;
     }
 }
+
+/* https://github.com/soulhotel/FF-ULTIMA/issues/453 removed the custom selected indicator for [collapsed][hasactivetab] tab groups, replaced with a subtle highlight on the default # indicator */
+
+#tabbrowser-tabs[orient="horizontal"] tab-group[collapsed][hasactivetab] {
+    ::after {
+        inset: unset !important;
+    }
+/*     .tab-group-label-hover-highlight {
+        background:rgba(100,100,100,0.5) !important;
+        border-radius: 10px !important;
+        height: 100%;
+    } */
+    .tab-group-label::after {
+        content: ""; position: absolute;
+        top: 0; left: 0;width: 85%; height: 100%;
+        border-radius: 6px; margin-left: 10%;
+        background: var(--uc-tab-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .tab-group-overflow-count {
+        z-index: 5;
+    }
+}
+#tabbrowser-tabs[orient="vertical"] tab-group[collapsed][hasactivetab] {
+    .tab-group-label-hover-highlight {
+        background: var(--uc-tab-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        border-radius: 10px !important;
+        height: 100%;
+        padding:15px 0 10px 0;
+        margin-inline: 5px !important;
+    } 
+    .tab-group-overflow-count {
+        display: none;
+    }
+    .tab-group-label-container::after {
+        background: transparent !important;
+    }
+}
+
 
 /* tab groups labels -------------------------------------------------------------------------------------------- */
 
