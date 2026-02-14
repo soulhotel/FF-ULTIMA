@@ -144,7 +144,7 @@ ultima.urlbar.hide.trackingprotection.icon
                       top: 20vh !important;
                   }
                   @media -moz-pref("ultima.navbar.position","bottom") {
-                      top: -50vh !important;
+                      top: 50vh !important;
                       height: fit-content !important;
                   }
               }
@@ -195,7 +195,7 @@ ultima.urlbar.hide.trackingprotection.icon
                     top: 20vh !important;
                 }
                 @media -moz-pref("ultima.navbar.position","bottom") {
-                    top: -50vh !important;
+                    top: 50vh !important;
                     height: fit-content !important;
                 }
             }
