@@ -132,8 +132,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 }
 
 @media -moz-pref("user.theme.rose-pine") {
-    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/rose-pine-dawn.jpg");}
-    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/rose-pine.jpg");}
+    @media (prefers-color-scheme: dark) {--uc-wallpaper: url("walls/rose-pine.jpg");}
+    @media (prefers-color-scheme: light) {--uc-wallpaper: url("walls/rose-pine-dawn.jpg");}
 }
 
 @media -moz-pref("user.theme.yourName") {
