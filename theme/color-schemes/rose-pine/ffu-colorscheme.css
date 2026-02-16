@@ -39,10 +39,27 @@ Custom Icons
     --uc-accent-color-6: rgb(49, 116, 143);
     --uc-accent-color-7: rgb(235, 111, 146);
     --uc-transparent: rgba(0, 0, 0, 0);
-    --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.3rem rgba(0, 0, 0, 0.3);
+    --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.3rem rgba(0, 0, 0, 0.4);
     --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25, 25, 25, 1);
     --uc-button-border-radius: 10px;
-    --uc-tab-border-radius: 20px;
+    --uc-tab-border-radius: 12px;
+  }
+  #downloads-button[progress] {
+    --downloads-progress-border-color: #e0def4 !important;
+    --downloads-progress-fill: #ebbcba !important;
+  }
+  #downloads-button {
+    --toolbarbutton-icon-fill-attention: var(
+      --downloads-progress-fill
+    ) !important;
+  }
+  #downloads-button
+    > .toolbarbutton-badge-stack
+    > #downloads-indicator-progress-outer {
+    border-color: #e0def4 !important;
+  }
+  .downloadProgress::-moz-progress-bar {
+    --download-progress-fill-color: #ebbcba;
   }
 }
 
@@ -73,10 +90,27 @@ Custom Icons
     --uc-accent-color-6: rgb(40, 105, 131);
     --uc-accent-color-7: rgb(180, 99, 122);
     --uc-transparent: rgba(0, 0, 0, 0);
-    --uc-box-shadow: 0.15rem 0.3rem 0.3rem -0.3rem rgba(0, 0, 0, 0.3);
-    --uc-box-shadow-panel: 0.15rem 0.3rem 0.3rem -0.1rem rgba(25, 25, 25, 0.3);
+    --uc-box-shadow: 0.1rem 0.3rem 0.4rem -0.3rem rgba(75, 75, 75, 0.3);
+    --uc-box-shadow-panel: 0.1rem 0.3rem 0.4rem -0.1rem rgba(65, 65, 65, 0.3);
     --uc-button-border-radius: 10px;
-    --uc-tab-border-radius: 20px;
+    --uc-tab-border-radius: 12px;
+  }
+  #downloads-button[progress] {
+    --downloads-progress-border-color: #575279 !important;
+    --downloads-progress-fill: #d7827e !important;
+  }
+  #downloads-button {
+    --toolbarbutton-icon-fill-attention: var(
+      --downloads-progress-fill
+    ) !important;
+  }
+  #downloads-button
+    > .toolbarbutton-badge-stack
+    > #downloads-indicator-progress-outer {
+    border-color: #575279 !important;
+  }
+  .downloadProgress::-moz-progress-bar {
+    --download-progress-fill-color: #d7827e;
   }
 }
 
@@ -168,24 +202,32 @@ Custom Icons
 /* URL Bar --------------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    & #urlbar-zoom-button {
-        background-color: var(--uc-button-selected) !important;
+  & #urlbar-zoom-button {
+    background-color: var(--uc-button-selected) !important;
+  }
+  & .urlbarView-row {
+    &[selected] {
+      color: var(--uc-text) !important;
     }
-    & .urlbarView-row { &[selected] {
-        color: var(--uc-text) !important;
-    }}
-    & .urlbarView-row:hover {
-        background-color: var(--uc-button-selected) !important;
-        color: var(--uc-accent-color-4) !important;
+  }
+  & .urlbarView-row:hover {
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-accent-color-4) !important;
+  }
+  & .urlbarView-row:hover {
+    @media (prefers-color-scheme: light) {
+      background-color: var(--uc-button-selected) !important;
+      color: var(--uc-accent-color-3) !important;
     }
-    & .urlbarView-row:hover { @media (prefers-color-scheme: light) {
-        background-color: var(--uc-button-selected) !important;
-        color: var(--uc-accent-color-3) !important;
-    }}
-    & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
-    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
-        outline-color: color-mix(in srgb, var(--uc-accent-color-2) 10%, transparent)  !important;
-    }
+  }
+  & #urlbar[focused]:not([suppress-focus-border]) > #urlbar-background,
+  & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+    outline-color: color-mix(
+      in srgb,
+      var(--uc-accent-color-2) 10%,
+      transparent
+    ) !important;
+  }
 }
 
 /* Find bar -------------------------------------------------------*/
@@ -193,12 +235,18 @@ Custom Icons
 /* Sidebars -------------------------------------------------------*/
 
 /*sidebar check boxes*/
-@layer input-common { #input {
+@layer input-common {
+  #input {
     accent-color: var(--uc-accent-color-4) !important;
-}}
-.sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
-.customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
-    color: var(--uc-accent-color-4) !important;
+  }
+}
+.sidebar-panel .text-link,
+.sidebar-panel a,
+.sidebar-panel ::part(support-link),
+.customize-group .text-link,
+.customize-group a,
+.customize-group ::part(support-link) {
+  color: var(--uc-accent-color-4) !important;
 }
 
 /* Tabs -----------------------------------------------------------*/
@@ -231,31 +279,34 @@ Custom Icons
 }
 
 /* Button Adjustments ---------------------------------------------*/
-    
+
 /* Popups/Menus ---------------------------------------------------*/
 
 /* Context Menu ---------------------------------------------------*/
 
 #main-window:not([lwtheme]) {
-    menupopup:not(#ContentSelectDropdownPopup), panel:not(.autoscroller) {
-        color-scheme: light dark;
-        --panel-background: var(--uc-context-menu) !important;
-        --panel-border-radius: var(--uc-button-border-radius) !important;
-        --panel-border-color: var(--uc-panel-border-2) !important;
-        --panel-color: var(--uc-text) !important;
-    }
-    menupopup {--panel-shadow:none !important;}
-    menuitem:hover {
-        background-color: var(--uc-button-selected) !important;
-        --panel-color: var(--uc-accent-color-1) !important;
-        color: var(--uc-accent-color-2) !important;
-        border-radius: 6px !important;
-    }
-    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
-    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
-        background-color: var(--uc-button-selected) !important;
-        color: var(--uc-accent-color-2) !important;
-    }
+  menupopup:not(#ContentSelectDropdownPopup),
+  panel:not(.autoscroller) {
+    color-scheme: light dark;
+    --panel-background: var(--uc-context-menu) !important;
+    --panel-border-radius: var(--uc-button-border-radius) !important;
+    --panel-border-color: var(--uc-panel-border-2) !important;
+    --panel-color: var(--uc-text) !important;
+  }
+  menupopup {
+    --panel-shadow: none !important;
+  }
+  menuitem:hover {
+    background-color: var(--uc-button-selected) !important;
+    --panel-color: var(--uc-accent-color-1) !important;
+    color: var(--uc-accent-color-2) !important;
+    border-radius: 6px !important;
+  }
+  menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+  menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-accent-color-2) !important;
+  }
 }
 
 /* Custom Icons ---------------------------------------------------*/

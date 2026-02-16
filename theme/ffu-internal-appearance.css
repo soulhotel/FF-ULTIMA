@@ -1206,6 +1206,22 @@ button[label="Stay on page"] {
 #downloads-button image:not(#downloads-indicator-icon) {
     fill: var(--uc-accent-color-2) !important;
 }
+#downloads-button image:not(#downloads-indicator-icon) {
+    fill: var(--uc-accent-color-2) !important;
+}
+#downloads-button[progress] {
+    --downloads-progress-border-color: var(--uc-accent-color-2) !important;
+    --downloads-progress-fill: var(--uc-accent-color-3) !important;
+}
+#downloads-button {
+    --toolbarbutton-icon-fill-attention: var(--downloads-progress-fill) !important;
+}
+#downloads-button > .toolbarbutton-badge-stack > #downloads-indicator-progress-outer {
+    border-color: var(--uc-accent-color-2) !important;
+}
+.downloadProgress::-moz-progress-bar {
+    --download-progress-fill-color: var(--uc-accent-color-3);
+}
 
 /* Status Panel --------------------------------------------------------------------------------------------- */
 
