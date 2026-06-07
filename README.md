@@ -41,7 +41,7 @@ If you can't find what you're looking for in the Documentation, post an [issue](
 ## Enjoy
 
 
-<!-- sponsors --><a href="https://github.com/AuRiMaS666"><img src="https:&#x2F;&#x2F;github.com&#x2F;AuRiMaS666.png" width="60px" alt="User avatar: " /></a><!-- sponsors -->
+<!-- sponsors --><!-- sponsors -->
 
 
 
