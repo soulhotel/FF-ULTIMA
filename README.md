@@ -1,3 +1,5 @@
+# Message from creator: The theme is going through a period of change. Update coming soon. Stay updated [here](https://github.com/soulhotel/FF-ULTIMA/issues/515). Thank you.
+
 <div align="center">
 
 # FF ULTIMA...
