@@ -206,7 +206,7 @@ Vertical Tabs Hidden in Private
                 @media -moz-pref("ultima.spacing.compact") {--uc-content-margins: 0px !important;}
             }
         }
-    }}
+    }
     /* when sidebar seperator is on */
     @media -moz-pref("ultima.sidebar.seperator") {
         :root:has(#sidebar-box[checked="true"]):has(#sidebar-main:not([sidebar-positionend=""])) {
