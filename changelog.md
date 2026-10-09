@@ -21,6 +21,7 @@
 - sidebar autohide setting restoration #490
 - sidebery autohide can use more adjustment to collapsed style
 - window control styles can be simplified by a lot, the old handling is too much now that i think about it
+- ALSO svgs for the window control icons! Much simpler to implement & lighter on users system
 - urlbar float is worth another extensive look. maybe a transform only approach on the right selector can kind of get around the anchors
 - need a release script
 

@@ -16,7 +16,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 About userChromeJS's role in FF Ultima:
 
 <p>
-    userChromeJS enables userChrome Companion. And userChrome Companion is a <a href="#">Firefox extension</a> built to bridge the gap between userChrome & custom -moz-preferences (about:config).
+    userChromeJS enables userChrome Companion. And userChrome Companion is a <a href="https://addons.mozilla.org/en-US/firefox/addon/userchrome-companion/">Firefox extension</a> built to bridge the gap between userChrome & custom -moz-preferences (about:config).
     UCC was originally created to provide a more smooth & comfortable experience for FF Ultima users. But it is not exclusive to one theme.
 </p>
 <ul>
