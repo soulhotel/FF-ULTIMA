@@ -157,9 +157,12 @@ Custom Icons
 
 #main-window:not([lwtheme]) {
     @media (-moz-content-prefers-color-scheme: dark) {
-        & #tabbrowser-tabpanels {
-            background: black;
+        & .browserContainer {
+            background: black !important;
         }
+	    & #nav-bar {
+	        background-color: black !important;
+    	}
     }
 }
 
