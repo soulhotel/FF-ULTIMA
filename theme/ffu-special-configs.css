@@ -187,9 +187,3 @@ Nightly Configurations
     
 }
 
-/* this block below is duct tape. need to find the issue making this required */
-@media not -moz-pref("ultima.spacing.compact") {
-    #main-window:has(#tabbrowser-tabs[orient="horizontal"]) #browser {
-        margin-left: 5px;
-    }
-}

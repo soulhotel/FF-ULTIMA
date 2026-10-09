@@ -458,8 +458,8 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
         --newtab-border-color:rgba(120,120,120,0.1) !important;
         --newtab-text-secondary-color: var(--mode-color) !important;
     }
-    /* hide website shortcuts when focused on awesome bar */
-    @media -moz-pref("browser.newtabpage.activity-stream.showSearch") {
+    /* hide website shortcuts when focused on awesome bar (broken)*/
+    /* @media -moz-pref("browser.newtabpage.activity-stream.showSearch") {
     .top-site-outer {
         opacity: 0 !important;
         pointer-events: none !important;
@@ -469,7 +469,7 @@ body:not(.inline-onboarding) .fixed-search .search-wrapper {
         opacity: 1 !important;
         pointer-events: auto !important;
     } 
-    }
+    } */
     /* style awesome bar */
     .search-wrapper .search-handoff-button, .search-wrapper input {
         background: var(--newtab-background-color-secondary) !important;
