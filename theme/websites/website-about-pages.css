@@ -1,0 +1,81 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         
+
+this catches all about:pages,
+skips "about:n" because we dont want conflicts with new tab pages styling,
+styles them to match theme and color schemes
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@-moz-document regexp("^about:(?!n).*") {
+  :root {
+    /* backgrounds */
+    --background-color-canvas: var(--uc-layered-background) !important;
+    --background-color-box: var(--uc-input-background) !important;
+    /* buttons */
+    --button-border: transparent !important;
+    --color-accent-primary: var(--uc-accent-color-2) !important;
+    --color-accent-primary-hover: var(--uc-accent-color-2) !important;
+    --color-accent-primary-active: var(--uc-accent-color-2) !important;
+    --color-accent-primary-selected: var(--uc-accent-color-2) !important;
+    --button-background-color-hover: var(--uc-accent-color-2) !important;
+    --button-background-color-active: var(--uc-accent-color-2) !important;
+     /* inputs */
+    --input-text-border: 1px solid var(--uc-outline-border) !important;
+    /* border */
+    --border-color: var(--uc-outline-border) !important;
+    /* sidebar */
+    --sidebar-width: 360px !important;
+    --size-sidebar: 360px !important;
+  }
+  /*aboutaddons sidebar*/
+  #sidebar categories-box moz-page-nav {
+    position: absolute !important;
+    inset: 20px !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    height: calc(100vh - 60px) !important;
+    overflow: hidden auto !important;
+    background-color: color-mix(in srgb, var(--uc-sidebar-background), black 8%) !important;
+    border-radius: var(--uc-menu-border-radius);
+    outline: 1px solid var(--uc-menu-border);
+    box-shadow: var(--uc-box-shadow);
+  }
+  /*settings sidebar*/
+  moz-page-nav[heading="Settings"] {
+    margin: 20px !important;
+    padding: 10px !important;
+    height: calc(100vh - 60px) !important;
+    overflow: hidden auto !important;
+    background-color: color-mix(in srgb, var(--uc-sidebar-background), black 8%) !important;
+    border-radius: var(--uc-menu-border-radius);
+    outline: 1px solid var(--uc-menu-border);
+    box-shadow: var(--uc-box-shadow);
+  }
+  panel-list {
+    /*--panel-list-background-color:;
+    --panel-list-text-color:;
+    --panel-list-border-color:;
+    --panel-list-border-radius:;
+    --panel-list-box-shadow:;*/
+    --panel-item-button-border-radius: var(--uc-button-border-radius) !important; /* these new buttons are all layered in nova and hosted, unfortunately cant target, maybe we can open this up on userchromejs side */
+    --button-background-color-menu-hover: var(--uc-button-selected) !important;
+    --button-text-color-menu-hover: var(--uc-accent-color-5) !important;
+    background-color: var(--uc-context-menu) !important;
+    color: var(--uc-text-color) !important;
+    border: 1px solid var(--uc-outline-border) !important;
+    border-radius: var(--uc-menu-border-radius) !important;
+    box-shadow: var(--uc-box-shadow) !important;
+  }
+  button {
+    border-radius: var(--uc-button-border-radius) !important;
+    cursor: pointer !important;
+    .button-background {background-color: transparent !important;}
+  }
+  moz-button {
+    cursor: pointer !important;
+  }
+  hr {opacity: 0.4;}
+}

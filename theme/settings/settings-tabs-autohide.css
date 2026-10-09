@@ -1,0 +1,96 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+
+Tab bar autohide setting, configured for both vertical and horizontal tabs.
+
+tabs.autohide configured for both vertical and horizontal tabs
+conflicts with expandOnHover (userChromeCompanion should trigger expandOnHover off)
+expandOnHover doesnt present too many issues when both are enabled,
+but theme spacing doesn't account for it being ON..
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@media (-moz-pref("ultima.tabs.autohide")) { 
+    @media not -moz-pref("sidebar.verticalTabs") {
+        @media not (-moz-pref("ultima.navbar.autohide")) or not (-moz-pref("ultima.navbar.float")) or not (-moz-pref("ultima.navbar.float.full")) {
+                {
+                :root:has(#navigator-toolbox:not(:hover)):not(:has([movingtab])) {
+                    --uc-tabbar-height: 0px !important;
+                    #navigator-toolbox {
+                        transition: height 0.4s ease 0.4s !important;
+                    }
+                    #tabbrowser-tabs[orient="horizontal"] {
+                        opacity: 0 !important;
+                        /* but of a lazy implementation */
+                        transition: opacity 0.4s ease 0.3s !important;
+                    }
+                }
+            }
+        }
+    }
+    @media (-moz-pref("sidebar.verticalTabs")) { 
+        :root {
+            /* fixed positioning */
+            #sidebar-container {
+                position: absolute !important;
+                top: 0; bottom: 0;
+                z-index: 100 !important;
+                &[sidebar-positionend=""] {
+                    @media not -moz-pref("ultima.sidebar.separator") { left: 0;}
+                    @media -moz-pref("ultima.sidebar.separator")     {right: 0;}
+                }
+            }
+            /*splitter positioning adjustment*/
+            #sidebar-launcher-splitter {
+                z-index: 101 !important;
+            }
+            &:has(#sidebar-container:not([sidebar-positionend=""])) {
+                :has(#sidebar-launcher-splitter:hover) #sidebar-container::after {
+                    left: 12px; transform: rotate(180deg);
+                }
+            }
+            &:has(#sidebar-container[sidebar-positionend=""]) {
+                :has(#sidebar-launcher-splitter:hover) #sidebar-container::after {
+                    right: 12px;transform: rotate(180deg);
+                }
+            }
+            /* we can do without this entire section above --- but it's (overlay) vs (pushing content to the side) and such */
+            /*hover zone*/
+            #sidebar-container {
+                overflow: visible !important;
+                z-index: 2;
+                &::before {
+                    content: ""; position: absolute;
+                    inset: 0 -4px 0 auto; margin-block: 55px;
+                    background-color: var(--uc-accent-color-2);
+                    width: 4px; border-radius: 33px;
+                    opacity: 0;
+                }
+            }
+            #sidebar-container[sidebar-positionend] {
+                &::before {
+                    inset: 0 auto 0 -4px;
+                }
+            }
+            /*transitions*/
+            #sidebar-container:hover {
+                transition: width ease 0.2s !important;
+            }
+            #sidebar-container:not(:hover) {
+                transition: width ease 0.3s !important;
+            }
+            /*autohide*/
+            &:has(#sidebar-container:not(:hover))
+            :has(#sidebar-launcher-splitter:not(:hover))
+            :has(#sidebar-launcher-splitter:not([state="dragging"]))
+            {
+                #sidebar-container {
+                    width: 0px !important;
+                    &::before {opacity: 0.4; transition: opacity ease 1s 0.8s !important;}
+                }
+
+            }
+        }
+    }
+}

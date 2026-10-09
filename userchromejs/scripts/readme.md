@@ -1,0 +1,5 @@
+- userChrome.js by default, loads any *.ucc.js script from within this folder.
+- Any script with standard userChrome.js compatibility can be placed in this folder. Just be sure to vet/review the script, if it isn't your own.
+- extension bridges should not be removed, they are what actually toggle -moz-prefs for userChrome Companion.
+- loader.ffu should not be removed, it is what loads ffu.js scripts from the ffu/ folder.
+- prefs.ffu is safe to remove, it simply acts as a mini user.js, safe to remove after first installing the theme.

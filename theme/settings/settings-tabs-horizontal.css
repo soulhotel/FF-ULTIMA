@@ -1,0 +1,51 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+
+./settings-tabs-general.css                for general tab settings
+./settings-tabs-vertical.css               for vertical tab specific settings.
+this file ->                               for horizontal tab specific settings.
+./settings-tabs-splitview.css              for split view styles
+./settings-tabs-groups-and-containers.css  for tab group & container styles
+./settings-tabs-outlines.css               for tab outline styles
+
+tabs below the url bar
+horizontal tabs take full width
+horizontal tabs take full width
+new tab button
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* tabs below the url bar --------------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.hori.belowURLbar") {
+    #toolbar-menubar            { order: 0 !important; }
+    #navigator-toolbox #nav-bar { order: 1 !important; }
+    #TabsToolbar                { order: 2 !important; }
+    #PersonalToolbar            { order: 3 !important; }
+    #TabsToolbar .titlebar-buttonbox-container {display: none !important;}
+    @media not -moz-pref("ultima.disable.titlebar.buttons") {
+        #nav-bar .titlebar-buttonbox-container {display: flex !important;}
+    }
+}
+
+/* hide vt sidebar when using horizontal tabs ------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.hori.hide.vtbar") {
+    #sidebar-container {
+        @media not -moz-pref("sidebar.verticalTabs") {
+            width: 0px !important;
+            @media -moz-pref("ultima.spacing.compact") {
+                width: 0px !important;
+            } 
+        }
+    }  
+}
+
+/* horizontal tabs take full width ------------------------------------------------------------------------------ */
+@media -moz-pref("ultima.tabs.hori.full-width-tabs") {
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tabbrowser-tab[fadein]:not([style^="max-width"]) {
+            max-width: 99vw !important;
+        }
+    }
+}

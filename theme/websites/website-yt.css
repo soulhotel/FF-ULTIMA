@@ -1,0 +1,244 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:        Theming YT through color schemes and subtle blur (ultima.enable.youtube-theme)
+
+main background colors
+sidebar
+search bar
+header dropdown
+homepage edits
+context menus
+video page
+video player
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@-moz-document domain("youtube.com") {
+@media (-moz-pref("ultima.enable.youtube-theme")) {  
+    
+    /*main background colors*/
+    ytd-app {
+        background-color: var(--uc-layered-background) !important;
+        /* theme has a lot of transparency, can be reduced with this*/
+        @media (-moz-pref("ultima.youtube.reduce.transparency")) {  
+            --transparency: transparent !important;
+        }
+    }
+    
+    /*get rid of the cinematic ambience*/
+    #cinematics-container canvas, #shorts-cinematic-container {
+        opacity: 0 !important; /* can keep this when i figure out a way to implement it */
+    }
+    /* header background when scrolled */
+    #background.ytd-masthead {
+        background-color: var(--uc-layered-background) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /* shorts page isnt full width, this right side container needs to match background */
+    .navigation-container {
+        background: var(--uc-layered-background) !important;
+    }
+    /*sidebar*/
+    ytd-app {
+        /*--app-drawer-width: 300px !important;*/
+        --app-drawer-content-container-background-color: transparent !important;
+    }
+    #contentContainer.tp-yt-app-drawer {
+        margin: 5px !important;
+        #guide-content.ytd-app {
+            border-radius: var(--uc-menu-border-radius);
+            backdrop-filter: blur(25px) !important;
+            background: transparent !important;
+            @media (-moz-pref("ultima.youtube.reduce.transparency")) {  
+                background: var(--uc-menu-background) !important;
+            }
+        }
+    }
+    /*search bar*/
+    /* first get rid of this freaking awful thing, wtf is this.. */
+    .ytWebScrimHostModernOverlay, .ytWebScrimHost, ytw-scrim, .ytSearchboxComponentScrimContainer {
+        pointer-events: none !important;
+        opacity: 0 !important
+    }
+    /*search bar*/
+    .ytSearchboxComponentInputContainer {
+        gap: 4px;
+    }
+    .ytSearchboxComponentInputBox {
+        background: var(--uc-input-background) !important;
+        outline: none !important;
+        border: none !important;
+        border-radius: 40px !important;
+        &:hover, &:focus-within {
+            outline: 2px solid var(--uc-accent-border) !important;
+        }
+        /*&:hover {
+            outline: 2px solid var(--uc-accent-border) !important;
+        }
+        &:focus-within {
+            background: transparent !important;
+        }*/
+    }
+    .ytSearchboxComponentInputWrapperIsFocused {
+        backdrop-filter: blur(35px);
+        background: color-mix(in srgb, var(--uc-input-background), transparent 30%) !important;
+    }
+    .ytSearchboxComponentInputContainerUnified {
+        background: transparent !important;
+    }
+    .ytSearchboxComponentSearchButton {
+        border-radius: 40px !important;
+        width: 40px !important;
+    }
+    .ytSearchboxComponentClearButtonWrapper {
+        margin-right: 4px !important;
+    }
+    /*search results*/
+    .ytSearchboxComponentSuggestionsContainerUnified {
+        border-radius: 0 0 20px 20px !important;
+    }
+    .ytSearchboxComponentSuggestionsContainer {
+        backdrop-filter: blur(35px);
+        background: color-mix(in srgb, var(--uc-input-background), transparent 30%) !important;
+        @media (-moz-pref("ultima.youtube.reduce.transparency")) {  
+            background: var(--uc-input-background) !important;
+        }
+        box-shadow: 0.1rem 0.4rem 1rem 0.6rem rgba(0, 0, 0, 0.2)  !important;
+        .ytSuggestionComponentSuggestion:hover {
+            background: var(--uc-button-selected) !important;
+        }
+    }  
+    /*header dropdown*/
+    #contentWrapper.tp-yt-iron-dropdown {
+        ytd-multi-page-menu-renderer {
+            backdrop-filter: blur(25px) !important;
+            background: color-mix(in srgb, var(--uc-menu-background), transparent 20%) !important;
+            outline: 1px solid var(--uc-menu-border) !important;
+            @media (-moz-pref("ultima.youtube.reduce.transparency")) {  
+                background: var(--uc-menu-background) !important;
+            }
+            padding-inline: 8px;
+            ytd-compact-link-renderer, ytd-toggle-theme-compact-link-renderer {
+                border-radius: 8px;
+            }
+            ytd-simple-menu-header-renderer {
+                background: transparent !important;
+            }
+            ytd-message-renderer {padding: 4px !important;}
+            ytd-notification-renderer:hover {
+                border-radius: 8px;
+                background: var(--uc-button-selected) !important;
+            }
+            ytd-compact-link-renderer:hover, ytd-toggle-theme-compact-link-renderer:hover {
+                border-radius: 8px;
+                background-color: var(--uc-button-selected) !important;
+            }
+        }
+    }
+    /*homepage edits*/
+    #frosted-glass.with-chipbar.ytd-app {
+        background: color-mix(in srgb, var(--uc-layered-background), transparent 40%) !important;
+    }
+    /*recommended topic chips*/
+    #chips.ytd-feed-filter-chip-bar-renderer {
+    }
+    ytd-button-renderer.ytd-feed-filter-chip-bar-renderer {
+        background: var(--uc-button-selected) !important;
+    }
+    /*context menus - should cover all of them btw*/
+    .ytd-popup-container {
+        yt-sheet-view-model {
+            max-width: fit-content !important;
+            max-height: 600px !important;
+                    yt-contextual-sheet-layout {
+                backdrop-filter: blur(35px);
+                background: color-mix(in srgb, var(--uc-menu-background), transparent 30%) !important;
+                @media (-moz-pref("ultima.youtube.reduce.transparency")) {  
+                    background: var(--uc-menu-background) !important;
+                }
+            }
+        }
+        yt-list-view-model {
+            padding: 0 6px;
+            border-radius: 8px !important;
+            & div {border-radius: 8px !important;} /*wont trust the current selectors (for menuitems), div is fine*/
+        }
+        yt-contextual-sheet-layout:has(yt-collections-stack) { /*save to playlist menu*/
+            min-height: 550px !important;
+        }
+    }
+    /*video page*/
+    /*dropdowns*/
+    #contentWrapper.tp-yt-iron-dropdown {
+        ytd-menu-popup-renderer {
+            backdrop-filter: blur(25px) !important;
+            background: var(--uc-menu-background) !important;
+            max-width: fit-content !important;
+            padding-inline: 8px;
+            tp-yt-paper-item {
+                border-radius: 8px;
+            }
+        }
+    }
+    ytd-menu-popup-renderer.ytd-popup-container {
+        box-shadow: var(--uc-box-shadow) !important;
+        outline: 1px solid var(--uc-menu-border) !important;
+    }
+    /* video title - larger */
+    ytd-watch-metadata[title-headline-xs] h1.ytd-watch-metadata {
+        font-size: 2.5rem !important; /* default is 2rem */
+    }
+    /*video player*/
+    :root {
+        --yt-sys-color-baseline--static-brand-red: var(--uc-accent-color-2) !important;
+    }
+    .ytp-play-progress {
+        z-index: 34;
+        background: var(--uc-accent-color-2) !important;
+    }
+    /*video player menus*/
+    .ytp-popup:not(.ytpa-ambientlight-settings-menu) {
+        /*backdrop-filter: blur(35px);*/
+        background: color-mix(in srgb, var(--uc-menu-background), transparent 10%) !important;
+        outline: 1px solid var(--uc-menu-border) !important;
+        outline-offset: -1px;
+        @media (-moz-pref("ultima.youtube.reduce.transparency")) {  
+            background: var(--uc-menu-background) !important;
+        }
+        box-shadow: 0.1rem 0.4rem 1rem 0.6rem rgba(0, 0, 0, 0.2)  !important;
+        .ytp-menuitem {
+            display: grid !important;
+            grid-template-columns: 60px minmax(0, 1fr) max-content !important;
+            align-content: center !important;
+            .ytp-menuitem-label, .ytp-menuitem-content {align-content: center !important;}
+            /* needed to adjust display first because theyre arranged in a table*/
+            border-radius: 8px !important;
+            outline: 1px solid transparent !important;
+        }
+    }
+    .ytp-popup.ytp-delhi-modern-contextmenu {
+        padding-inline: 2px !important;
+        .ytp-menuitem {
+            width: calc(100% - 4px) !important;
+        }
+    }
+    /*right side recommendeds*/
+    /*playlist,queue, comments sidebar*/
+    .header.ytd-playlist-panel-renderer {
+        background: var(--uc-input-background) !important;
+        color: var(--uc-text-color);
+        &.header {border-bottom: 1px solid var(--uc-outline-border) !important;}
+    }
+    .playlist-items.ytd-playlist-panel-renderer {
+        background: var(--uc-input-background) !important;
+    }
+    .ytd-engagement-panel-title-header-renderer,
+    .ytd-engagement-panel-section-list-renderer {
+        background: var(--uc-input-background) !important;
+    }
+    /*overflow menu button*/
+    .ytLockupMetadataViewModelMoveLockupOverflowMenuToBottomRight .ytLockupMetadataViewModelMenuButton::before {
+      background: transparent !important;
+    }
+}} /* end YT */

@@ -1,0 +1,197 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Catppuccin Mocha By Draff @ItsLogic
+
+All of these Variables - Control the color everywhere
+Applying variables further to create the Theme
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media (prefers-color-scheme: dark) { :root:not([lwtheme]) {
+    --uc-browser-color:        rgb(30, 30, 46);
+    --uc-text-color:           #f0c199;
+    --uc-layered-background:   rgb(24, 24, 37);
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:    rgb(24, 24, 37);
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-layered-background);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-tab-selected:         rgb(17 17 27);
+    --uc-tab-selected-text:    var(--uc-accent-color-5);
+    --uc-tab-selected-outline: var(--uc-accent-color-5);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-selected:      rgb(17 17 27);
+    --uc-button-color:         var(--uc-accent-color-1);
+    --uc-button-red:           #e75858;
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
+    --uc-context-menu:         rgb(39, 40, 58);
+    --uc-menu-background:      var(--uc-layered-background);
+    --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+    --uc-outline-border:       rgba(150, 150, 155, 0.2);
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-5) 10%, transparent)  !important;
+    --uc-accent-color-1:       rgb(203, 166, 247);
+    --uc-accent-color-2:       rgb(173, 128, 92);
+    --uc-accent-color-3:       rgb(186, 194, 222);
+    --uc-accent-color-4:       rgb(24, 24, 37);
+    --uc-accent-color-5:       rgb(166, 227, 161);
+    --uc-accent-color-6:       rgb(243, 139, 168);
+    --uc-accent-color-7:       rgb(44, 55, 80);
+    --uc-transparent:          rgba(0,0,0,0);
+    --uc-box-shadow:           0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+    --uc-light-box-shadow:     0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+    --uc-button-border-radius: 10px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+}}
+
+@media (prefers-color-scheme: light) { :root:not([lwtheme]) {
+    --uc-browser-color:      rgb(161, 158, 176);
+    --uc-text-color:         rgb(35, 35, 35);
+    --uc-layered-background: rgb(172, 168, 191);
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:  rgb(139, 142, 163);
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-layered-background);
+    --uc-sidebar-background: rgb(153, 152, 173);
+    --uc-tab-selected:       rgb(232, 232, 236);
+    --uc-tab-selected-text:    var(--uc-accent-color-5);
+    --uc-tab-selected-outline: var(--uc-accent-color-5);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-selected:    rgb(116, 113, 133);
+    --uc-button-color:         var(--uc-text-color);
+    --uc-button-red:         #f54e4e;
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,216,0.4));
+    --uc-context-menu:         var(--uc-layered-background);
+    --uc-menu-background:      var(--uc-layered-background);
+    --uc-menu-border:          rgba(125, 125, 125, 0.4);
+    --uc-outline-border:       rgba(125, 125, 125, 0.3);
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent);
+    --uc-accent-color-1:     rgb(70, 63, 77);
+    --uc-accent-color-2:     rgb(115, 81, 54);
+    --uc-accent-color-3:     rgb(186, 194, 222);
+    --uc-accent-color-4:     rgb(24, 24, 37);
+    --uc-accent-color-5:     #19083d;
+    --uc-accent-color-6:     #5f3787;
+    --uc-accent-color-7:     rgb(44, 55, 80);
+    --uc-transparent:        rgba(0,0,0,0);
+    --uc-box-shadow:           0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
+    --uc-light-box-shadow:     0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
+    --uc-button-border-radius: 10px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+}}
+
+
+/* Applying all variables to further create the Theme - If a section is empty, that means the style is defaulting to chrome/theme/globals/global-theme.css */
+ 
+/* Main window adjustments ----------------------------------------*/
+
+/* Title bar ------------------------------------------------------*/
+
+/* Nav Bar --------------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    #zoom-reset-button .toolbarbutton-text {
+        color: var(--uc-button-color) !important;
+    }
+}
+    
+/* URL Bar --------------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    .urlbar-background, #searchbar, .urlbarView-background {
+        background-color: var(--uc-urlbar-background) !important;
+        color: var(--uc-accent-color-1) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+        outline: 2px solid var(--uc-accent-border) !important;
+    }
+    .urlbarView-row {
+        color: var(--uc-text-color) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        &:hover, &[selected] {
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-accent-color-2) !important;
+        }
+    }
+    .urlbarView-button:hover {
+        color: var(--uc-accent-color-2) !important;
+        background-color: var(--uc-button-selected) !important;
+    }
+    #star-button[starred] {
+        fill-opacity: 1 !important;
+        fill: var(--uc-accent-color-1) !important;
+    }
+}
+
+/* Bookmark bar ---------------------------------------------------*/
+
+/* Popups/Menis ---------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    panel, menupopup {
+        --panel-text-color:               var(--uc-text-color) !important;
+        --panel-background-color:         var(--uc-menu-background) !important;
+        --panel-border-radius:            var(--uc-menu-border-radius) !important;
+        --panel-border-color:             var(--uc-outline-border) !important;
+        --panel-menuitem-border-radius:   var(--uc-button-border-radius) !important;
+        --button-background-color-menu-hover: var(--uc-button-selected) !important;
+        --panel-separator-color:          color-mix(in srgb, var(--uc-text-color), transparent 80%) !important;
+        --panel-banner-item-update-supported-bgcolor: var(--uc-accent-color-1) !important;
+    }
+    #appMenu-popup {
+        .toolbarbutton-icon {
+            stroke: transparent !important;
+            background-color: transparent !important;
+        }
+        toolbarbutton:hover {
+            background-color: var(--uc-button-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+        toolbarbutton:hover, toolbarbutton:hover .toolbarbutton-icon {
+            color: var(--uc-accent-color-5) !important;
+        }
+    }
+}
+
+/* Find bar -------------------------------------------------------*/
+
+/* Sidebars -------------------------------------------------------*/
+
+/* Tabs -----------------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    /* selected tab style */
+    .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    .tab-background[selected] {
+        background-color: var(--uc-tab-selected) !important;
+        outline: 2px solid var(--uc-tab-outline) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .tab-background[multiselected][selected] {
+        outline-color: var(--uc-tab-outline) !important;
+    }
+    .tab-background[multiselected]:not([selected]) {
+        background: var(--uc-tab-selected) !important;
+        outline-color: var(--uc-accent-border) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /* pinned tab style */
+    .tab-label-container[pinned] {
+        color: var(--uc-accent-color-6) !important;
+    }
+}
+

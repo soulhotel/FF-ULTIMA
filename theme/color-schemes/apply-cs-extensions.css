@@ -3,70 +3,125 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Automatically apply color scheme colors to extensions
 
-Ublock Origin - applying colors to extension
-Sidebery - applying colors to extension
+User Chrome Companion
+Ublock Origin
+Sidebery
 Another - applying colors to extension
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 
+/* User Chrome Companion - applying colors to extension -------------------------------- */
+
+@-moz-document regexp("moz-extension://.*/sidebar.html"), regexp("moz-extension://.*/settings.html") {
+@media (-moz-pref("ultima.extension.theme.ucc")) {
+    :root {
+        --background-color: var(--uc-sidebar-background, rgb(35, 35, 42)) !important;
+        --foreground-color: var(--uc-text-color, white) !important;
+        --opt-background: var(--uc-browser-color, rgb(43, 42, 51)) !important;
+        --opt-hover-background: var(color-mix(in srgb, var(--uc-browser-color, initial), grey 5%), color-mix(in srgb, var(--opt-background), grey 5%)) !important;
+        --opt-foreground-color: var(--uc-text-color, --foreground-color) !important;
+        --opt-selected-border: var(--accent-color) !important;
+        --btn-background: var(--uc-button-selected, rgb(35, 35, 42)) !important;
+        --btn-hover-background: var(--uc-button-selected, rgb(35, 35, 42)) !important;
+        --accent-color: var(--uc-accent-color-2, #7ea6e6) !important;
+    }
+    :root { @media (prefers-color-scheme: light) { 
+        --background-color: var(--uc-sidebar-background, rgb(242, 242, 248)) !important;
+        --foreground-color: var(--uc-text-color, #13151a) !important;
+        --opt-background: var(--uc-browser-color, rgb(250, 250, 255)) !important;
+        --opt-hover-background: var(color-mix(in srgb, var(--uc-browser-color, initial), grey 5%), color-mix(in srgb, var(--opt-background), grey 5%)) !important;
+        --opt-foreground-color: var(--uc-text-color, --foreground-color) !important;
+        --opt-selected-border: var(--accent-color) !important;
+        --btn-background: var(--uc-button-selected, #e0e0e0) !important;
+        --btn-hover-background: var(--uc-button-selected, --btn-background) !important;
+        --accent-color: var(--uc-accent-color-2, #525e70) !important;        
+    }}
+}
+}
+
+
 /* Ublock Origin - applying colors to extension ---------------------------------------- */
 
 @-moz-document regexp("moz-extension://.*/popup-fenix.html") {
-@media -moz-pref("user.theme.xtension.ublock") {
+@media (-moz-pref("ultima.extension.theme.ublock")) {
     :root {
         --surface-1: var(--uc-layered-background) !important;
         --popup-toolbar-surface: color-mix(in srgb, black 10%, var(--surface-1))  !important;
         --popup-toolbar-surface-hover: color-mix(in srgb, black 40%, var(--surface-1)) !important;
         --popup-power-ink: var(--uc-accent-color-5) !important;
+        .toolRibbon .tool:hover {
+            color: var(--uc-accent-color-1) !important;
+            fill: var(--uc-accent-color-1) !important;
+            border-radius: var(--uc-button-border-radius) !important;
+        }  
     }
-    .toolRibbon .tool:hover {
-        color: var(--uc-accent-i) !important;
-        fill: var(--uc-accent-i) !important;
-        border-radius: var(--uc-button-border-radius) !important;
-    }
-}}
+}
+}
 
 
 /* Sidebery - applying colors to extension --------------------------------------------- */
 
 @-moz-document regexp("moz-extension://.*/sidebar/sidebar.html") {
-@media -moz-pref("user.theme.xtension.sidebery") {
+@media (-moz-pref("ultima.extension.theme.sidebery")) {
 
+    /* background adjustments */
     @media (prefers-color-scheme: dark) { #root.root {
         --frame-bg: var(--uc-layered-background) !important;
         --toolbar-bg: var(--uc-layered-background) !important;
-        --frame-fg: var(--uc-text) !important;
-        --toolbar-fg: var(--uc-text) !important;
+        --frame-fg: var(--uc-text-color) !important;
+        --toolbar-fg: var(--uc-text-color) !important;
     }}
     @media (prefers-color-scheme: light) { #root.root {
         --frame-bg: var(--uc-layered-background) !important;
         --toolbar-bg: var(--uc-layered-background) !important;
-        --frame-fg: var(--uc-text) !important;
-        --toolbar-fg: var(--uc-text) !important;
+        --frame-fg: var(--uc-text-color) !important;
+        --toolbar-fg: var(--uc-text-color) !important;
     }}
-    /* Global (to Sidebery) Styles ---------------------------------*/
+    /* general styles */
     #root.root {
         --general-margin: 2px !important;
         --general-border-radius: var(--uc-button-border-radius) !important;
     }
-    /* Header Panel ------------------------------------------------*/
+    /* header panel */
     #root.root {
-        --toolbar-scrollbar-color: var(--uc-accent-i) !important;
+        --toolbar-scrollbar-color: var(--uc-accent-color-1) !important;
         --frame-el-overlay-selected-bg: var(--uc-button-selected) !important;
         --frame-el-overlay-selected-border: var(--uc-accent-color-1) !important;
         --frame-el-overlay-hover-bg: var(--uc-button-selected) !important;
-        --frame-scrollbar-color: var(--uc-accent-i) !important;
+        --frame-scrollbar-color: var(--uc-accent-color-1) !important;
         --toolbar-el-overlay-selected-bg: var(--uc-button-selected) !important;
         --toolbar-el-overlay-hover-bg: var(--uc-button-selected) !important;
         --toolbar-el-overlay-active-bg: var(--uc-button-selected) !important;
         --toolbar-el-overlay-active-border: var(--uc-accent-color-1) !important;
-        --nav-btn-fg: var(--uc-text) !important;
+        --nav-btn-fg: var(--uc-text-color) !important;
         --nav-btn-accent: color-mix(in srgb, var(--uc-accent-color-5) 40%, black 60%) !important;
         --nav-btn-active-shadow: var(--uc-box-shadow) !important;
     }
-    .NavigationBar .nav-item .audio { display: none !important; }
-    @media (max-width: 50px) { .BottomBar{padding-left:1px !important;}.static-btns{padding-left:3px !important;} }
+    /* remove header audio button */
+    .NavigationBar .nav-item .audio {
+        display: none !important;
+    }
+    /* collapsed header arrow */
+    /* instead of playing around with padding, just make sure #hidden_panels_btn is all that remains */
+    @media (max-width: 50px) {
+        #nav_bar {
+            .main-items, .static-btns .nav-item:not(#hidden_panels_btn) {
+                width: 0 !important;
+                overflow: hidden !important;
+                transition: all 0.2s ease !important;
+            }
+            .static-btns {width: 100% !important;}
+            #hidden_panels_btn {width: 100% !important;}
+        }
+    }
+    /* bottom panel adjustment */
+    @media (max-width: 50px) { 
+        .BottomBar{ padding-left: 5px !important;} 
+    }
+    .tool-btn[data-disabled="true"] > svg {
+        opacity: 0.15 !important;
+    }
     /* Pinned Tabs -----------------------------------------------*/
     #root.root {--tabs-pinned-width: 24vw !important; --tabs-pinned-height: 40px !important;}
     @media (max-width: 250px) {
@@ -86,9 +141,9 @@ Another - applying colors to extension
         #root.root {--tabs-pinned-width: 15px !important; --tabs-pinned-height: 19px !important;}
         .PinnedTabsBar[data-audible] svg.-loud, .PinnedTabsBar[data-muted] svg.-mute {display: none !important;} /* even smaller than smaller */
     }
-    /* Tabs ----------------------------------------------------*/
+    /* all tabs */
     #root.root {
-        --tabs-normal-fg: var(--uc-text) !important;
+        --tabs-normal-fg: var(--uc-text-color) !important;
         --tabs-normal-bg: transparent;
         --tabs-activated-bg: var(--uc-button-selected) !important;
         --tabs-activated-fg: var(--uc-accent-color-5) !important;
@@ -96,21 +151,52 @@ Another - applying colors to extension
         --tabs-activated-shadow: var(--uc-box-shadow) !important;
         --tabs-progress-bg: var(--uc-accent-color-5) !important;
         --tabs-height: 35px !important;
-
         --tabs-discarded-favicon-opacity: 0.05 !important;
         --tabs-discarded-title-opacity: 0.15 !important;
         @media not -moz-pref("ultima.sidebery.default.indent") {--tabs-indent: 30px !important;}
         --tabs-audio-btn-width: 30px !important;
         --ntb-border-radius: var(--uc-button-border-radius) !important;
+        --active-el-overlay-hover-bg: var(--uc-button-selected) !important;
     }
-    /* center favicon when collapsed */
+    /* tab spacing adjustment */
+    @media (min-width: 51px) {
+        .Tab[data-pin="false"] {
+            margin-bottom: 2px !important;
+        }
+        .Tab[data-pin="false"] .body {
+            width: calc(100% - 8px) !important;
+            margin-inline: auto !important;
+        }        
+    }    
+    /* tab appearance adjustment */
+    .Tab:hover .body::before {
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .Tab[data-selected="true"] .body::before {
+        box-shadow: var(--uc-box-shadow) !important;
+        outline: 2px solid var(--uc-accent-border) !important;
+        outline-offset: -2px;
+    }
+    /* tab favicon positioning adjustment */
     .Tab[data-pin="false"] .fav {margin-left: 10px !important;}
-    /* correct spacing of tab text label */
-    .Tab .t-box {margin: 0 10px 0 4px !important;}
+    /* tab text label spacing */
+    .Tab .t-box {margin-inline: 2px 10px !important;}
     /* hide tab text label when collapsed */ 
     @media screen and (max-width: 50px) {
         .Tab .t-box {opacity: 0 !important;}
     }
+    /* New tab button adjustment (resemble tab better) */
+    .new-tab-btns {
+        width: calc(100% - 8px) !important;
+        margin-inline: auto !important;
+        height: fit-content;
+        padding-block: 2px !important;
+        .new-tab-btn {
+            height: var(--tabs-height) !important;
+            &:hover {box-shadow: var(--uc-box-shadow) !important;}
+        }
+    }
+    
     /* Fix Tabs Tree --------------------------------------------*/
     @media screen and (max-width: 42px) {
         #root.root {
@@ -140,35 +226,36 @@ Another - applying colors to extension
     /* Popups ---------------------------------------------------*/
     #root.root {
         --ctx-menu-bg: var(--uc-context-menu) !important;
-        --ctx-menu-fg: var(--uc-text) !important;
+        --ctx-menu-fg: var(--uc-text-color) !important;
 
         --ctx-menu-padding: 5px !important;
-        --ctx-menu-border-radius: 8px !important;
+        --ctx-menu-border-radius: 10px !important;
         --ctx-menu-text-opt-inner-gap: 5px !important;
 
-        --ctx-menu-separator: var(--uc-layered-background) !important;
-        --ctx-menu-shadow: 0 0 0 2px var(--uc-accent-color-1), 0 1px 16px 0 rgba(0,0,0,0.5) !important;
-
+        --ctx-menu-opt-border-radius: calc(var(--uc-button-border-radius) - 3px) !important;
+        --ctx-menu-separator: var(--uc-menu-border) !important;
+        --ctx-menu-shadow: 0 0 0 2px var(--uc-menu-border), 0 1px 16px 0 rgba(0,0,0,0.5) !important;
+        @media -moz-pref("ultima.theme.gruvbox") {
+            --ctx-menu-shadow: 0 0 0 2px var(--uc-menu-border), 0 1px 16px 0 color-mix(in srgb, var(--uc-accent-color-1), transparent 80%) !important;
+        }
+        
         --popup-bg: var(--uc-context-menu) !important;
-        --popup-fg: var(--uc-text) !important;
+        --popup-fg: var(--uc-text-color) !important;
         --popup-scrollbar-color: var(--uc-accent-color-1)
 
         --notification-bg: var(--uc-context-menu) !important;
-        --notification-fg: var(--uc-text) !important;
+        --notification-fg: var(--uc-text-color) !important;
 
         --btn-border-radius: var(--uc-button-border-radius) !important;
         --scroll-color:  color-mix(in srgb, var(--uc-accent-color-1) 40%, transparent 60%) !important;
     }
-    @media -moz-pref("user.theme.dark.a"), @media -moz-pref("user.theme.dark.midnight") {
-        #root.root {
-                --ctx-menu-shadow: 0 0 0 1px rgb(56, 60, 64), 0 1px 16px 0 rgba(0,0,0,0.282) !important;
-            }
+    .CtxMenu .list-group .opt, .CtxMenu .inline-group .icon-opt {
+        &:not([data-separator="true"]):hover {
+            background-color: var(--uc-button-selected) !important;
+            border-radius: var(--ctx-menu-opt-border-radius) !important;
+        }
     }
-    @media -moz-pref("user.theme.light.a"), @media -moz-pref("user.theme.light.gruvbox") {
-        #root.root {
-                --ctx-menu-shadow: 0 0 0 1px var(--uc-accent-color-1), 0 1px 16px 0 rgba(100,100,100,0.282) !important;
-            }
-    }
+
 
 }}
 
@@ -176,7 +263,7 @@ Another - applying colors to extension
 /* Another - applying colors to extension ---------------------------------------------- */
 /*
 @-moz-document regexp("moz-extension://") {
-@media -moz-pref("user.theme.9.extension") {
+@media -moz-pref("ultima.extension.theme.name") {
 
 
 

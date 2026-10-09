@@ -1,0 +1,126 @@
+
+
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+
+Tab Settings are split between multiple files:
+
+./settings-tabs-general.css                for general tab settings
+this file ->                               for vertical tab specific settings.
+./settings-tabs-horizontal.css             for horizontal tab specific settings.
+./settings-tabs-splitview.css              for split view styles
+./settings-tabs-groups-and-containers.css  for tab group & container styles
+./settings-tabs-outlines.css               for tab outline styles
+
+hide vert tabs
+autohide vert tabs
+make the vertical tab bar float
+multiline tabs
+move bottom button strip under tabs
+new tab button on top
+hide bottom button strip
+hide vertical tab splitters
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* make the vertical tab bar float ------------------------------------------------------------------------------ */
+@media -moz-pref("ultima.tabs.vert.float") {
+    :root[lwtheme], :root:not([lwtheme]) {
+        &[sidebar-expand-on-hover] {
+            /* remove default background applications */
+            #sidebar-container[sidebar-launcher-expanded] {
+                background: none !important;
+                background-image: none !important;
+            }
+            /* apply background to inner container instead */
+            #sidebar-container[sidebar-launcher-expanded] sidebar-main {
+                background: var(--uc-tabbar-background) !important;
+                border-radius: var(--uc-border-radius);  
+            }
+            /* add padding to verttabs to emulate a floating style, can be done two ways*/
+            #sidebar-container[sidebar-launcher-expanded] {
+                padding: 2px 4px 4px 4px;
+            }
+            /*#sidebar-container[sidebar-launcher-expanded] sidebar-main {
+            margin: 2px 4px 4px 4px;
+        }*/
+        }
+    }
+}
+
+/* multiline tabs ----------------------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vert.multiline") {
+    #sidebar-container {
+        .tab-content {
+            contain: content !important;
+        }
+        .tab-label {
+            white-space: wrap !important;
+            word-wrap: break-word;
+            max-height: 118px !important;
+            margin-right: 15px !important;
+        }
+    }
+    @media not -moz-pref("ultima.tabs.close-tab-button.replace.favicon") {
+        #sidebar-container {
+            .tab-close-button {
+                position: absolute;
+                right: 18px;
+            }
+        }        
+    }
+}
+
+/* move bottom button strip under tabs -------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vert.buttonstrip.underTabs") {
+    #vertical-tabs[visible] {
+        /* just remove the grow */
+        flex-grow: 0 !important;
+    }
+}
+
+/* new tab button on top ---------------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vert.new-tab-button.ontop.1") {
+    #vertical-tabs-newtab-button {order: -1 !important;}
+    #tabbrowser-tabs[orient="horizontal"] > #vertical-tabs-newtab-button,
+    #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button {
+        display: flex !important;
+    }
+    #tabbrowser-tabs[orient="vertical"]:not([overflow]) > #vertical-tabs-newtab-button {
+        margin-top: 1px !important;
+    }
+    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}
+}
+@media -moz-pref("ultima.tabs.vert.new-tab-button.ontop.2") {
+    #pinned-tabs-container {order: -3 !important;}
+    #vertical-pinned-tabs-splitter {order: -2 !important;}
+    #vertical-tabs-newtab-button {order: -1 !important; display:flex !important;}
+    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button {visibility: collapse !important;}  
+}
+@media (-moz-pref("ultima.tabs.new-tab-button.ontop.1")) or (-moz-pref("ultima.tabs.new-tab-button.ontop.2")) {
+    #vertical-tabs-newtab-button {
+        margin-top: 6px !important;
+    }    
+}
+
+
+/* these two settings below are the first case of new method failure, :root cant be a declaration wrapper for shadow dom elements*/
+/* hide bottom button strip ------------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vert.hide.buttonstrip") {
+    .tools-and-extensions:not(:hover) {
+        opacity: 0 !important; /*shame*/ 
+    }
+}
+/* hide vertical tab splitters ---------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vert.hide.splitters") {
+    #vertical-pinned-tabs-splitter, #sidebar-tools-and-extensions-splitter {
+        &:not(:hover) {
+            opacity: 0; /*shame part 2*/ 
+        }
+    }
+}
+
+
+

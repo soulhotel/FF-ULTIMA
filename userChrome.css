@@ -11,27 +11,32 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-@import url(theme/ffu-global-positioning.css);
-@import url(theme/ffu-internal-appearance.css);
-@import url(theme/ffu-private-browsing.css);
+@import url(theme/globals/global-positioning.css);
+@import url(theme/globals/global-private-browsing.css);
+@import url(theme/globals/global-theme.css);
+@import url(theme/color-schemes/apply-cs.css);
 
-@import url(theme/color-schemes/apply-cs.css); /*color schemes*/
+@import url(theme/settings/settings-context-menus.css);
+@import url(theme/settings/settings-extensions-panel.css);
+@import url(theme/settings/settings-urlbar.css);
+@import url(theme/settings/settings-navbar.css);
+@import url(theme/settings/settings-navbar-windowcontrols.css);
+@import url(theme/settings/settings-bookmarks.css);
+@import url(theme/settings/settings-icons.css);
+@import url(theme/settings/settings-findbar.css);
 
-@import url(theme/ffu-cs-standards.css);
+@import url(theme/settings/settings-sidebar.css);
+@import url(theme/settings/settings-sidebery.css);
 
-@import url(theme/settings-context-menus.css);
-@import url(theme/settings-extensions-panel.css);
+@import url(theme/settings/settings-tabs-general.css);
+@import url(theme/settings/settings-tabs-autohide.css);
+@import url(theme/settings/settings-tabs-vertical.css);
+@import url(theme/settings/settings-tabs-horizontal.css);
+@import url(theme/settings/settings-tabs-splitview.css);
+@import url(theme/settings/settings-tabs-outlines.css);
+@import url(theme/settings/settings-tabs-group-and-containers.css);
 
-@import url(theme/settings-urlbar.css);
-@import url(theme/settings-navbar.css);
-@import url(theme/settings-navbar-windowcontrols.css);
-@import url(theme/settings-icons.css);
-@import url(theme/settings-findbar.css);
-@import url(theme/settings-sidebar-sidebery.css);
-@import url(theme/settings-TABS.css);
-@import url(theme/settings-tab-outlines.css);
-@import url(theme/settings-tabs-group-and-containers.css);
+@import url(theme/globals/global-special-configs.css);
 
-@import url(theme/ffu-special-configs.css);
-
+/* this file will never be overwriten by the theme, put whatever you want in it */
 @import url(customChrome.css);

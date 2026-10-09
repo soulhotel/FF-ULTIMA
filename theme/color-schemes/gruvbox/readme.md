@@ -5,9 +5,8 @@ By FF Ultima
 ```
 
 To use this color scheme:
-- Navigate to `about:config` page.
-- Search for `user.theme`.
-- Turn on `user.theme.gruvbox`
+- Open `userChrome Companion`, in the `Color Scheme Settings` section.
+- Turn on `theme.gruvbox`
 
 Preview:
 ![preview](./preview.png)

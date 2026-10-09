@@ -1,0 +1,126 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Kanagawa Wave by Pitchaya S @pitchaya-s https://github.com/soulhotel/FF-ULTIMA/commits?author=pitchaya-s
+
+All of these Variables - Control the color everywhere
+Applying variables further to create the Theme
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media (prefers-color-scheme: dark) { :root:not([lwtheme]) {
+    --uc-browser-color:        #1F1F28;
+    --uc-text-color:           #DCD7BA;
+    --uc-layered-background:   #1F1F28;
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:    var(--uc-layered-background);
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-layered-background);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-tab-selected:         #2A2A37;
+    --uc-tab-selected-text:    var(--uc-text-color);
+    --uc-tab-selected-outline: var(--uc-text-color);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-selected:      #363646;
+    --uc-button-color:         var(--uc-text-color);
+    --uc-button-red:           #C34043;
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
+    --uc-context-menu:         #2A2A37;
+    --uc-menu-background:      #2A2A37;
+    --uc-menu-border:          #1F1F2800;
+    --uc-outline-border:       #1F1F2800;
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
+    --uc-accent-color-1:       #DCD7BA; /*toolbar icons*/
+    --uc-accent-color-2:       var(--uc-text-color); /*sidebery tabs*/
+    --uc-accent-color-3:       #658594; /*url*/
+    --uc-accent-color-4:       #1F1F28; /*organizer toolbar*/
+    --uc-accent-color-5:       var(--uc-tab-selected-text);  /*sidebery active tab*/
+    --uc-accent-color-6:       var(--uc-text-color); /*pinned tab*/
+    --uc-transparent:          rgba(0,0,0,0);
+    --uc-box-shadow:           0 0.2rem 0.4rem -0.1rem #16161D00;
+    --uc-light-box-shadow:     0 0.2rem 0.4rem -0.1rem #16161D00;
+    --uc-button-border-radius: 8px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 0px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+}}
+
+@media (prefers-color-scheme: light) { :root:not([lwtheme]) {
+    --uc-browser-color:        #F2ECBC;
+    --uc-text-color:           #545464;
+    --uc-layered-background:   #F2ECBC;
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:    #ccc378;
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-layered-background);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-tab-selected:         #e4d794;
+    --uc-tab-selected-text:    var(--uc-accent-color-5);
+    --uc-tab-selected-outline: var(--uc-accent-color-5);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-selected:      #d5cea3;
+    --uc-button-color:         var(--uc-text-color);
+    --uc-button-red:           #C34043;
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,216,0.4));
+    --uc-context-menu:         #F2ECBC;
+    --uc-menu-background:      #F2ECBC;
+    --uc-menu-border:          rgba(125, 125, 125, 0.4);
+    --uc-outline-border:       rgba(125, 125, 125, 0.3);
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent);
+    --uc-accent-color-1:       #545464;
+    --uc-accent-color-2:       var(--uc-text-color);
+    --uc-accent-color-3:       #658594;
+    --uc-accent-color-4:       #F2ECBC;
+    --uc-accent-color-5:       var(--uc-tab-selected-text);
+    --uc-accent-color-6:       var(--uc-text-color);
+    --uc-transparent:          rgba(0,0,0,0);
+    --uc-box-shadow:           0 0 0.2rem 0 #1F1F2800;
+    --uc-light-box-shadow:     0 0 0.2rem 0 #1F1F2800;
+    --uc-button-border-radius: 8px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 0px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+}}
+
+/* Applying all variables to further create the Theme - If a section is empty, that means the style is defaulting to chrome/theme/globals/global-theme.css */
+ 
+/* Main window adjustments ----------------------------------------*/
+
+/* Title bar ------------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    /* titlebar buttons - min, max, close */
+    .titlebar-button, .titlebar-button .toolbarbutton-icon {
+        color: var(--uc-text-color) !important;
+        stroke: var(--uc-text-color) !important;
+        fill: var(--uc-text-color) !important;
+        &:hover {
+            color: var(--uc-text-color)  !important;
+            fill: var(--uc-text-color)  !important;
+            stroke: var(--uc-text-color) !important;
+        }
+    }
+    .titlebar-close:hover .toolbarbutton-icon {
+        color: var(--uc-text-color)  !important;
+    }
+}
+
+/* Nav Bar --------------------------------------------------------*/
+
+/* URL Bar --------------------------------------------------------*/
+
+/* Bookmark bar ---------------------------------------------------*/
+
+/* Popups/Menis ---------------------------------------------------*/
+
+/* Find bar -------------------------------------------------------*/
+
+/* Sidebars -------------------------------------------------------*/
+
+/* Tabs -----------------------------------------------------------*/

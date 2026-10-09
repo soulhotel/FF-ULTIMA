@@ -1,0 +1,308 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Fluent by @dreadbalaur
+
+All of these Variables - Control the color everywhere
+Applying variables further to create the Theme
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media (prefers-color-scheme: dark) { :root:not([lwtheme]) {
+    --uc-browser-color:        rgb(40, 40, 40);
+    --uc-text-color:           white;
+    --uc-layered-background:   rgb(30, 30, 30);
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:    var(--uc-layered-background);
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-layered-background);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-tab-selected:         rgb(60, 60, 60);
+    --uc-tab-selected-text:    var(--uc-accent-color-5);
+    --uc-tab-selected-outline: var(--uc-accent-color-5);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-selected:      rgb(53, 53, 53);
+    --uc-button-color:         var(--uc-text-color);
+    --uc-button-red:           rgb(229, 60, 60);
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
+    --uc-context-menu:         var(--uc-layered-background);
+    --uc-menu-background:      var(--uc-layered-background);
+    --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+    --uc-outline-border:       rgba(150, 150, 155, 0.2);
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent)  !important;
+    --uc-accent-color-1:      rgb(108, 184, 247);
+    --uc-accent-color-2:       var(--uc-accent-color-1);
+    --uc-accent-color-3:      white;
+    --uc-accent-color-4:       var(--uc-accent-color-5);
+    --uc-accent-color-5:      rgb(249, 166, 119);
+    --uc-transparent:         rgba(0,0,0,0);
+    --uc-box-shadow:           0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+    --uc-light-box-shadow:     0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+    --uc-button-border-radius: 10px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 2px);
+}
+
+@media (prefers-color-scheme: light) { :root:not([lwtheme]) {
+    --uc-browser-color:        rgb(228, 228, 228);
+    --uc-text-color:           rgb(45, 45, 45);
+    --uc-layered-background:   rgb(236, 236, 236);
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:    var(--uc-layered-background);
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-layered-background);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-tab-selected:         rgb(246, 246, 246);
+    --uc-tab-selected-text:    var(--uc-accent-color-3);
+    --uc-tab-selected-outline: var(--uc-accent-color-3);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-selected:      rgb(239, 239, 239);
+    --uc-button-color:         var(--uc-text-color);
+    --uc-button-red:           rgb(229, 60, 60);
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,216,0.4));
+    --uc-context-menu:         white;
+    --uc-menu-background:      white;
+    --uc-menu-border:          rgba(125, 125, 125, 0.4);
+    --uc-outline-border:       rgba(125, 125, 125, 0.3);
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent);
+    --uc-accent-color-1:     rgb(5, 90, 137);
+    --uc-accent-color-2:     rgb(213, 80, 80);
+    --uc-accent-color-3:     black;
+    --uc-accent-color-4:     rgba(10, 120, 212, 0.05);
+    --uc-accent-color-5:     rgb(100, 101, 169);
+    --uc-accent-color-6:     rgb(189, 189, 189);
+    --uc-transparent:          rgba(0,0,0,0);
+    --uc-box-shadow:           0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
+    --uc-light-box-shadow:     0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
+    --uc-button-border-radius: 10px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 2px);
+}
+
+
+/* Applying all variables to further create the Theme - If a section is empty, that means the style is defaulting to chrome/theme/globals/global-theme.css */
+    
+/* Main window adjustments ----------------------------------------*/
+
+/* Title bar ------------------------------------------------------*/
+
+:root:not([lwtheme]) {    
+    /* titlebar buttons - min, max, close */
+    .titlebar-button, .titlebar-button .toolbarbutton-icon {
+        color: var(--uc-text-color) !important;
+        stroke: var(--uc-text-color) !important;
+        fill: var(--uc-text-color) !important;
+        &:hover {
+            color: var(--uc-text-color)  !important;
+            fill: var(--uc-text-color)  !important;
+            stroke: var(--uc-text-color) !important;
+        }
+    }
+    .titlebar-close:hover .toolbarbutton-icon {
+        color: var(--uc-button-red)  !important;
+    }
+}
+
+/* Nav Bar --------------------------------------------------------*/
+
+:root:not([lwtheme]) {   
+    /*nav bar buttons*/
+    #navigator-toolbox {
+        background: var(--uc-navbar-background) !important;
+    }
+    #navigator-toolbox .toolbarbutton-1 {
+        --toolbarbutton-background-color-hover: var(--uc-button-selected) !important;
+        --toolbarbutton-background-color-active: var(--uc-button-selected) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    }
+}
+
+/* URL Bar --------------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    #urlbar-container * {
+        --uc-button-border-radius: 16px !important;
+    }
+    #urlbar, #searchbar {
+        color: var(--uc-text-color) !important;
+    }
+    .urlbar-background, #searchbar, .urlbarView-background {
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+    #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+        outline: 2px solid var(--uc-accent-border) !important;
+    }
+    .urlbarView-row {
+        color: var(--uc-text-color) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        &:hover, &[selected] {
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-text-color) !important;
+        }
+    }
+    .urlbarView-button:hover {
+        color: var(--uc-text-color) !important;
+        background-color: var(--uc-button-selected) !important;
+    }
+    #urlbar toolbarbutton, #urlbar box, .urlbar-page-action  {
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+    #star-button[starred] {
+        fill-opacity: 1 !important;
+        fill: var(--uc-accent-color-1) !important;
+    }
+    #urlbar-zoom-button {
+        background-color: transparent !important;
+    }
+    #identity-icon-box:not(:hover):not([open]) {
+        background-color: transparent !important;
+    }
+}
+
+/* Bookmark bar ---------------------------------------------------*/
+
+
+/* Popups/Menis ---------------------------------------------------*/
+
+:root:not([lwtheme]) {
+    panel, menupopup {
+        --panel-text-color:               var(--uc-text-color) !important;
+        --panel-background-color:         var(--uc-menu-background) !important;
+        --panel-border-radius:            var(--uc-button-border-radius) !important;
+        --panel-border-color:             var(--uc-outline-border) !important;
+        --panel-menuitem-border-radius:   var(--uc-button-border-radius) !important;
+        --button-background-color-menu-hover: var(--uc-button-selected) !important;
+        --panel-separator-color:          color-mix(in srgb, var(--uc-text-color), transparent 80%) !important;
+        --panel-separator-padding:        4px 8px  !important;
+        --panel-banner-item-update-supported-bgcolor: var(--uc-accent-color-1) !important;
+    }
+    #appMenu-popup {
+        .toolbarbutton-icon {
+            stroke: transparent !important;
+            background-color: transparent !important;
+        }
+        toolbarbutton:hover {
+            background-color: var(--uc-button-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+        toolbarbutton:hover, toolbarbutton:hover .toolbarbutton-icon {
+            color: var(--uc-accent-color-2) !important;
+        }
+    }
+    #appMenu-zoom-controls {
+        outline: 1px solid var(--uc-outline-border);
+        border-radius: 0 var(--uc-button-border-radius) 0 var(--uc-button-border-radius) !important;
+        background: var(--uc-input-background) !important;
+    }
+    menuitem:hover,
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-accent-color-5) !important;
+        border-radius: 6px !important;
+    }
+}
+    
+
+/* Find bar -------------------------------------------------------*/
+
+:root:not([lwtheme]) {    
+    .findbar-textbox {
+        background-color: var(--uc-layered-background) !important;
+        color: var(--uc-text-color) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        &:focus {outline: 2px solid var(--uc-accent-border) !important;}
+    }
+    .found-matches {
+        font-weight: 700;
+        text-shadow: var(--uc-text-shadow);
+        background: var(--uc-input-background);
+        outline: 1px solid var(--uc-outline-border);
+        border-radius: var(--uc-button-border-radius);
+        border-top-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }    
+}
+
+/* Sidebars -------------------------------------------------------*/
+
+:root:not([lwtheme]) {    
+    #sidebar {
+        background: var(--uc-sidebar-background) !important;
+    }
+}
+
+/* Tabs -----------------------------------------------------------*/
+
+:root:not([lwtheme]) {    
+    /* tab style */
+    .tab-background {
+        border-radius: var(--uc-tab-border-radius) !important;
+    }
+    /* selected tab style */
+    .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    .tab-background[selected] {
+        background-color: var(--uc-tab-selected) !important;
+        outline: 2px solid var(--uc-tab-outline) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .tab-background[multiselected][selected] {
+        outline-color: var(--uc-tab-outline) !important;
+    }
+    .tab-background[multiselected]:not([selected]) {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 60%, transparent)  !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /* hovered tab style */
+    .tabbrowser-tab:hover .tab-background {
+        background-color: var(--uc-tab-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .tabbrowser-tab:hover .tab-label-container {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    /* pinned tab style */
+    .tabbrowser-tab[pinned] {
+        .tab-background {
+            background-color: var(--uc-tab-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    .tab-label-container[pinned] {
+        color: var(--uc-accent-color-1) !important;
+    }
+    /* close tab button */
+    .tab-close-button {
+        border-radius: var(--uc-button-border-radius) !important;
+        &:hover {
+            background: var(--uc-button-selected) !important;
+            fill: var(--uc-button-text-color) !important;
+        }
+    }
+    /*new tab buttons*/
+    #vertical-tabs-newtab-button,
+    #tabs-newtab-button {
+        font-style: italic;
+    }
+    /* audio playing indicator*/
+    .tab-audio-button {
+        background-color: rgba(30,30,30,0.2) !important;
+        border-radius:100% !important;
+        --button-icon-fill:  var(--uc-text-color) !important;
+        &:hover {
+            --button-icon-fill: var(--uc-button-text-color) !important;
+        }
+    }
+}
+

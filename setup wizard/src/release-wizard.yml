@@ -1,0 +1,52 @@
+name: Build setup wizard
+
+# needs an update
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: 'setup wizard/go.mod'
+
+      - name: Build UI
+        working-directory: 'setup wizard/src'
+        run: |
+          npm install
+          npm run build
+
+      - name: Build binaries
+        working-directory: 'setup wizard'
+        env:
+          CGO_ENABLED: 0
+        run: |
+          mkdir -p ../dist
+          GOOS=linux   GOARCH=amd64 go build -o "../dist/FF Ultima Setup Wizard - Linux" .
+          GOOS=windows GOARCH=amd64 go build -ldflags "-H=windowsgui" -o "../dist/FF Ultima Setup Wizard - windows.exe" .
+          GOOS=darwin  GOARCH=arm64 go build -o "../dist/FF Ultima Setup Wizard - Mac Arm" .
+          GOOS=darwin  GOARCH=amd64 go build -o "../dist/FF Ultima Setup Wizard - Mac Intel" .
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: setup-wizard-binaries
+          path: dist/*
+
+      - name: Attach to the release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*

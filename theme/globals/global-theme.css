@@ -1,0 +1,1406 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+┏┓┏┓  ┳┳┓ ┏┳┓┳┳┳┓┏┓
+┣ ┣   ┃┃┃  ┃ ┃┃┃┃┣┫
+┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
+                   
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Global Appearance for internal elements of the browser
+
+This file is the foundation for FF Ultima's default appearance.
+It handles all internal positioning & appearance within the browser.
+Colors, border styles, visibility cursors, box shadows, custom icons, etc.
+Color schemes expand on this appearance by overriding the defined color variables.
+
+Control the color everywhere
+Control the color of ADD ON Themes
+Overwriting existing variables
+Setting the default Appearance
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+:root {
+    --uc-browser-color:        var(--toolbox-background-color);
+    --uc-text-color:           var(--toolbox-text-color);
+    --uc-layered-background:   color-mix(in srgb, var(--uc-browser-color) 90%, grey);
+    --uc-navbar-background:    var(--uc-browser-color);
+    --uc-urlbar-background:    var(--uc-layered-background);
+    --uc-bookbar-background:   var(--uc-browser-color);
+    --uc-tabbar-background:    var(--uc-browser-color);
+    --uc-findbar-background:   var(--uc-browser-color);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-tab-selected:         var(--uc-layered-background);
+    --uc-tab-selected-text:    var(--uc-accent-color-5);
+    --uc-tab-selected-outline: var(--uc-accent-color-5);
+    --uc-tab-background:       transparent;
+    --uc-tab-outline:          transparent;
+    --uc-button-color:         var(--uc-text-color);
+    --uc-button-selected:      var(--uc-layered-background);
+    --uc-button-red:           #f54e4e;
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
+    --uc-context-menu:         color-mix(in srgb, var(--uc-layered-background) 80%, black);
+    --uc-menu-background:      color-mix(in srgb, var(--uc-layered-background) 80%, black);
+    --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+    --uc-outline-border:       rgba(150, 150, 155, 0.2);
+    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent);
+    --uc-accent-color-1:       AccentColor;
+    --uc-accent-color-2:       var(--uc-text-color);
+    --uc-accent-color-3:       AccentColor;
+    --uc-accent-color-4:       AccentColor;
+    --uc-accent-color-5:       AccentColor;
+    --uc-transparent:          rgba(0,0,0,0);
+    --uc-text-shadow:          2px 2px 2px rgba(33,33,33,0.3);
+    --uc-box-shadow:           0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+    --uc-light-box-shadow:     0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.1);
+    --uc-border-radius:        10px; /* used for main elements */
+    --uc-button-border-radius: 10px;
+    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+}
+
+@media (prefers-color-scheme: light) { :root {
+    --uc-layered-background:   color-mix(in srgb, var(--uc-browser-color) 20%, white);
+    --uc-sidebar-background:   var(--uc-layered-background);
+    --uc-button-selected:      color-mix(in srgb, var(--uc-layered-background) 60%, rgba(200,200,216,0.4));
+    --uc-context-menu:         color-mix(in srgb, var(--uc-layered-background) 80%, white);
+    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,216,0.4));
+    --uc-menu-background:      color-mix(in srgb, var(--uc-layered-background) 80%, white);
+    --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+    --uc-box-shadow:       0.1rem 0.3rem 0.3rem -0.1rem rgba(125,125,125,0.5);
+    --uc-light-box-shadow: 0.1rem 0.3rem 0.3rem -0.1rem rgba(125,125,125,0.3);
+}}
+
+/* All of these Variables - Control the color of ADD ON Themes. For light mode and dark mode. Allowing most/all customization to be done in one place */
+
+@media (prefers-color-scheme: dark) {
+    [lwtheme] {
+        --uc-browser-color:        var(--toolbox-background-color);
+        --uc-text-color:           var(--toolbox-text-color);
+        --uc-layered-background:   color-mix(in srgb, var(--uc-browser-color) 90%, grey);
+        --uc-navbar-background:    var(--uc-browser-color);
+        --uc-urlbar-background:    var(--uc-layered-background);
+        --uc-bookbar-background:   var(--uc-browser-color);
+        --uc-tabbar-background:    var(--uc-browser-color);
+        --uc-findbar-background:   var(--uc-browser-color);
+        --uc-sidebar-background:   var(--uc-layered-background);
+        --uc-tab-selected:         var(--tab-background-color-selected);
+        --uc-tab-selected-text:    var(--lwt-text-color);
+        --uc-tab-selected-outline: var(--tab-border-color-selected);
+        --uc-tab-background:       transparent;
+        --uc-tab-outline:          var(--tab-border-color);
+        --uc-button-color:         var(--color-accent-primary);
+        --uc-button-selected:      color-mix(in srgb, var(--uc-browser-color) 80%, grey);
+        --uc-button-red:           #f54e4e;
+        --uc-context-menu:         color-mix(in srgb, var(--uc-layered-background) 80%, black);
+        --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
+        --uc-menu-background:      color-mix(in srgb, var(--uc-layered-background) 80%, black);
+        --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+        --uc-outline-border:       color-mix(in srgb, var(--tab-border-color-selected) 20%, transparent);
+        --uc-accent-border:        color-mix(in srgb, var(--lwt-tab-line-color) 20%, transparent);
+        --uc-accent-color-1:       var(--lwt-accent-color);
+        --uc-accent-color-2:       var(--lwt-tab-line-color);
+        --uc-accent-color-3:       AccentColor;
+        --uc-accent-color-4:       var(--lwt-tab-line-color);
+        --uc-accent-color-5:       var(--color-accent-primary);
+        --uc-transparent:          rgba(0,0,0,0);
+        --uc-box-shadow:           0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+        --uc-light-box-shadow:     0.15rem 0.3rem 0.2rem -0.1rem rgba(0,0,0,0.2);
+        --uc-border-radius:        10px;
+        --uc-button-border-radius: 10px !important;
+        --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+        --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+        --button-border-radius:    var(--uc-button-border-radius) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+        --panel-item-hover-bgcolor: var(--uc-layered-background) !important;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    [lwtheme] {
+        --uc-browser-color:        var(--toolbox-background-color);
+        --uc-text:                 var(--toolbox-text-color);
+        --uc-layered-background:   color-mix(in srgb, var(--uc-browser-color) 20%, white);
+        --uc-navbar-background:    var(--uc-browser-color);
+        --uc-urlbar-background:    var(--uc-layered-background);
+        --uc-bookbar-background:   var(--uc-browser-color);
+        --uc-tabbar-background:    var(--uc-browser-color);
+        --uc-findbar-background:   var(--uc-browser-color);
+        --uc-sidebar-background:   var(--uc-layered-background);
+        --uc-tab-selected:         var(--tab-background-color-selected);
+        --uc-tab-selected-text:    var(--lwt-text-color);
+        --uc-tab-selected-outline: var(--tab-border-color-selected);
+        --uc-tab-background:       transparent;
+        --uc-tab-outline:          var(--tab-border-color);
+        --uc-button-color:         var(--color-accent-primary);
+        --uc-button-selected:      color-mix(in srgb, var(--uc-layered-background) 60%, rgba(200,200,208,0.4));
+        --uc-button-red:           #f54e4e;
+        --uc-context-menu:         color-mix(in srgb, var(--uc-layered-background) 80%, white);
+        --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,208,0.4));
+        --uc-menu-background:      color-mix(in srgb, var(--uc-layered-background) 80%, white);
+        --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+        --uc-outline-border:       rgba(150, 150, 155, 0.2);
+        --uc-accent-border:        color-mix(in srgb, var(--lwt-tab-line-color) 20%, transparent);
+        --uc-accent-color-1:       var(--lwt-accent-color);
+        --uc-accent-color-2:       var(--lwt-tab-line-color);
+        --uc-accent-color-3:       AccentColor;
+        --uc-accent-color-4:       var(--lwt-tab-line-color);
+        --uc-accent-color-5:       var(--color-accent-primary);
+        --uc-transparent:          rgba(0,0,0,0);
+        --uc-box-shadow:           0.1rem 0.3rem 0.3rem -0.1rem rgba(125,125,125,0.5);
+        --uc-light-box-shadow:     0.15rem 0.3rem 0.3rem -0.1rem rgba(125,125,125,0.3);
+        --uc-border-radius:        10px;
+        --uc-button-border-radius: 10px !important;
+        --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+        --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+        --button-border-radius:    var(--uc-button-border-radius) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+        --panel-item-hover-bgcolor: red !important;
+    }
+}
+
+[privatebrowsingmode] {
+    &[lwtheme] {
+        --uc-accent-color-1:       #b58cde !important;
+        --uc-accent-color-2:       #b58cde !important;
+        --uc-accent-color-3:       AccentColor;
+        --uc-accent-color-4:       #b58cde !important;
+        --uc-accent-color-5:       #b58cde !important;      
+    }
+}
+
+/* Detailed customization - Overwriting existing variables. Everything below applies the custom variables to elements of the Browser, with some adjustments. */
+
+:root {
+    accent-color: var(--uc-accent-color-1) !important;
+    --color-accent-primary: var(--uc-accent-color-2) !important;
+    --toolbar-background-color: var(--uc-browser-color);
+    --toolbox-background-color-inactive: var(--toolbox-background-color) !important;
+    --toolbox-text-color-inactive: var(--toolbox-text-color) !important;
+    --chrome-content-separator-color: transparent !important;
+    --panel-separator-color: var(--uc-menu-border) !important;
+    --input-text-background-color: var(--uc-input-background) !important;
+    /*---*/
+    --background-color-box: var(--uc-layered-background) !important;
+    /*---*/
+    --button-border-radius:    var(--uc-button-border-radius) !important;
+    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    --panel-item-hover-bgcolor: pink !important;
+    --toolbarbutton-active-background: pink !important;
+    --tab-selected-bgcolor:  pink !important;
+    --tab-selected-outline-color: pink !important;
+    /*---*/
+    --button-icon-fill: var(--uc-button-color) !important;
+    --button-icon-stroke: var(--uc-button-color) !important;
+    --button-text-color-ghost-hover: var(--uc-button-color) !important;
+    --button-background-color-ghost-hover: var(--button-selected) !important;
+    /*---*/
+    --button-background-color-active: transparent !important;
+    --button-background-color: transparent !important;
+    --button-background-color-primary: transparent !important;
+    --button-text-color: var(--uc-text-color) !important;
+    --button-text-color-primary: var(--uc-text-color) !important;
+    --button-text-color-hover: var(--uc-text-color) !important;
+    --button-text-color-primary-hover: var(--uc-button-color) !important;
+    --button-border: 1px solid var(--uc-outline-border) !important;
+    --button-border-color: var(--uc-outline-border) !important;
+    --button-border-color-hover: var(--uc-outline-border) !important;
+    --button-border-color-primary: var(--uc-outline-border) !important;
+    --button-border-color-primary-hover: var(--uc-outline-border) !important;
+    --button-background-color-hover: var(--uc-button-selected) !important;
+    --button-background-color-primary-hover: var(--uc-button-selected) !important;
+    /*--color-accent-primary: var(--uc-accent-color-1) !important;*/
+    & toolbarseparator { color: var(--uc-outline-border) !important;}
+}
+
+:root:not([lwtheme]) {
+    --toolbarbutton-icon-fill: var(--uc-button-color) !important;
+}
+
+/* Applying all variables - Setting up the default Appearance - while also making theme related adjustments to borders, shadows, visual accessibilities, etc. */
+
+/* Main window adjustments ---------------------------------------------------------------------------------- */
+
+:root:not([lwtheme]) {
+    body:has(#browser) {background-color: var(--uc-browser-color) !important;}
+    #browser           {background-color: transparent !important;}
+    #navigator-toolbox {background-color: transparent !important;}
+    #navigator-toolbox {color: var(--uc-text-color) !important;}
+    /* gradients and images are applied to #browser */
+    &[theme-image-in-toolbox] {
+        #navigator-toolbox, #browser {
+          background-image: var(--toolbox-background-image) !important;
+          background-repeat: var(--toolbox-background-repeat) !important;
+          background-position: var(--toolbox-background-position) !important;
+          background-size: var(--toolbox-background-size) !important;
+        }
+    } 
+    &:not([theme-image-in-toolbox]) {
+        #navigator-toolbox, #browser {
+          background-image: var(--toolbox-background-image) !important;
+          background-repeat: var(--toolbox-background-repeat) !important;
+          background-position: var(--toolbox-background-position) !important;
+          background-size: var(--toolbox-background-size) !important;
+        } 
+    }
+    &[sidebar-expand-on-hover] #sidebar-container:not([sidebar-launcher-expanded],[sidebar-ongoing-animations]) {
+        background: transparent !important;
+        background-image: none !important;
+    }
+}
+/*add on theme style*/
+
+/* this ensures Nova Gradients dont overpower color schemes */
+:root:not([lwtheme]) {
+    &[theme-image-in-toolbox], &:not([theme-image-in-toolbox]) {
+        body:has(#browser), #browser, #navigator-toolbox, #customization-container, #customization-container {background-image: none !important;}
+    }    
+}
+
+
+/* universal styles ------------------------------------------------------------ */
+/* mostly inactive window adjustment */
+:root {
+    --inactive-titlebar-opacity: 1 !important;
+    --toolbox-background-color-inactive: var(--uc-browser-color) !important;
+    --toolbox-non-lwt-textcolor-inactive:var(--text-color) !important;
+}
+#navigator-toolbox toolbar {background-color: transparent !important;}
+#navigator-toolbox toolbar:-moz-window-inactive {background-color: transparent !important;}
+/* #navigator-toolbox:-moz-window-inactive {background-color: red !important;} */
+/* body:-moz-window-inactive {background-color: var(--uc-browser-color) !important;} */
+/* scrollbars */
+* {
+    scrollbar-width: auto !important;
+    scrollbar-color:rgba(70, 70, 80, 0.2) transparent !important;
+}
+
+/* Title bar ------------------------------------------------------------------------------------------------ */
+/*themed*/
+:root:not([lwtheme]) {
+    /* titlebar buttons - min, max, close */
+    .titlebar-button, .titlebar-button .toolbarbutton-icon,
+    .titlebar-button:hover, .titlebar-button .toolbarbutton-icon:hover {
+        color: var(--uc-button-color) !important;
+        stroke: var(--uc-button-color) !important;
+        fill: var(--uc-button-color) !important;
+        transition: background-color ease 0.2s;
+    }
+    .titlebar-close:hover .toolbarbutton-icon {
+        color: var(--uc-button-red)  !important;
+    }
+}
+/*add on theme*/
+[lwtheme] {
+    /* titlebar buttons - min, max, close */
+    .titlebar-button, .titlebar-button .toolbarbutton-icon,
+    .titlebar-button:hover, .titlebar-button .toolbarbutton-icon:hover {
+        color: var(--toolbarbutton-icon-fill) !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+        fill: var(--toolbarbutton-icon-fill) !important;
+        transition: background-color ease 0.2s;
+    }
+    .titlebar-close:hover .toolbarbutton-icon {
+        color: var(--uc-button-red)  !important;
+    }
+}
+
+/* Menu bar ------------------------------------------------------------------------------------------------- */
+/*universal styles*/
+#main-menubar menu {
+    border-radius: var(--uc-button-border-radius) !important;
+}
+#menubar-items {
+    background: var(--uc-border-radius) !important;
+    color: var(--uc-text-color) !important;
+    border-radius: var(--uc-border-radius) !important;
+}
+#toolbar-menubar:not([inactive="true"]) #main-menubar > menu { &[_moz-menuactive] {
+    background-color: var(--uc-button-selected) !important;
+    color: var(--uc-text-color) !important;
+    border-radius: calc(var(--uc-button-border-radius) - 2px) !important;
+}}
+
+/* Notification Deck ---------------------------------------------------------------------------------------- */
+/*universal styles*/
+#notifications-toolbar {
+    background-color: var(--browser-color) !important;
+    color: var(--uc-text-color) !important;
+}
+.notificationbox-stack, notification-message {
+    border: 0 !important;
+    box-shadow: 0 !important;
+}
+moz-button[data-l10n-id="moz-message-bar-close-button"] {
+    fill: var(--uc-text-color) !important;
+    color: var(--uc-text-color) !important;
+    stroke: var(--uc-text-color) !important;
+    background-color: var(--button-selected) !important;
+}
+
+/* Nav bar -------------------------------------------------------------------------------------------------- */
+/*themed*/
+:root:not([lwtheme]) {
+    /*buttons*/
+    #navigator-toolbox .toolbarbutton-1 {
+        --toolbarbutton-background-color-hover: var(--uc-button-selected) !important;
+        --toolbarbutton-background-color-active: var(--uc-button-selected) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+        color: var(--uc-button-color) !important;
+        fill: var(--uc-button-color) !important;
+    }
+}
+/*add on theme*/
+[lwtheme] {
+    /*buttons*/
+    #navigator-toolbox .toolbarbutton-1 {
+        --toolbarbutton-background-color-hover: var(--uc-button-selected) !important;
+        --toolbarbutton-background-color-active: var(--uc-button-selected) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    }
+}
+
+/* universal styles ------------------------------------------------------------ */
+/*nav has a bottom border, not anymore*/
+#nav-bar {border: 0 !important;}
+/* hide full screen notify */
+#fullscreen-warning {
+    & * {border-radius: var(--uc-button-border-radius) !important;}
+    &, *.pointerlockfswarning {border-radius: 20px !important; opacity: 0 !important;}
+}
+/* download button*/
+#downloads-button image:not(#downloads-indicator-icon) {
+    fill: var(--uc-accent-color-2) !important;
+}
+/*remove navbar zoom control separators*/
+#zoom-controls separator {
+    display: none !important;
+}
+/*alternative color for percentage*/
+#zoom-reset-button .toolbarbutton-text {
+    color: var(--uc-accent-color-5) !important;
+}
+/* bookmarks import button */
+#import-button {display: none !important;}
+/* bookmarks submenu */
+#editBookmarkPanel { min-width: 25vw !important; }
+#editBMPanel_folderTree { min-height: 35vh !important; }
+/* spacers */
+spacer[part="overflow-end-indicator"],
+spacer[part="overflow-start-indicator"] {
+    background-image: none !important;
+}
+/* update notify */
+#appMenu-update-available-notification {
+    border: 0 !important;
+    background: var(--uc-layered-background) !important;
+    & moz-button:hover {cursor: pointer;}
+}
+.popup-notification-body-container,
+.popup-notification-header-container,
+.popup-notification-body {
+    background: var(--uc-menu-background) !important;
+}
+
+/* Url bar -------------------------------------------------------------------------------------------------- */
+/*themed & add on theme*/
+:root:not([lwtheme]), [lwtheme] {
+    .urlbar, #searchbar, .urlbar-input-container {
+        color: var(--uc-text-color) !important;
+    }
+    & .urlbar-background, & #searchbar, & .urlbarView-background {
+        border: 0 !important;
+        background-color: var(--uc-urlbar-background) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & .urlbar-input-container {
+        outline: none !important;
+    }
+    & #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+        outline: 2px solid var(--uc-accent-border)  !important;
+    }
+    & #urlbar[popover-open] {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+    }
+    & #urlbar[popover-open] {
+        .urlbar-background {
+            margin-top: 6px !important;
+        }
+        /*idk wtf this urlbar style is, will just undo it.*/
+        /*.urlbar-background {
+            inset: 0 !important;
+            border: 0 !important;
+            clip-path: initial !important;
+            border-radius: var(--uc-button-border-radius) var(--uc-button-border-radius) 0 0 !important;
+        }
+        .urlbarView {
+            overflow: clip !important;
+            overflow-clip-margin: 1px !important;
+            border-radius: 0 0 var(--uc-button-border-radius) var(--uc-button-border-radius) !important;
+            margin: 0 0 0 1px !important;
+        } 
+        .urlbarView-background {
+            clip-path: none !important;
+            margin: 0 !important;
+        }*/
+        /*seems like theyre reverting a lot of nova changes*/
+    }
+    /* back to styling */
+    & .urlbarView {
+        /* padding: 4px !important;
+        box-shadow: var(--uc-box-shadow) !important; */
+    } 
+    & .urlbarView-row {
+        color: var(--uc-text-color) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+    }
+    & .urlbarView-row:hover, .urlbarView-row[selected] {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-text-color) !important;
+    }
+    .urlbarView-button:hover {
+        color: var(--uc-text-color) !important;
+        background-color: var(--uc-button-selected) !important;
+    }
+    & #urlbar toolbarbutton, #urlbar box, .urlbar-page-action  {
+        border-radius: calc(var(--uc-urlbar-border-radius) - 2px) !important;
+    }
+    & #star-button[starred] {
+        fill-opacity: 1 !important;
+        fill: var(--uc-accent-color-1) !important;
+    }
+    & #urlbar-zoom-button {
+        background-color: var(--uc-button-selected) !important;
+    }
+}
+/* universal styles ------------------------------------------------------------ */
+/* searchmode switcher is shadowed domed.. */
+#main-button[popovertarget] .button-background.labelled {
+    background: var(--uc-button-selected) !important;
+    border-radius: calc(var(--uc-urlbar-border-radius) - 2px) !important;
+    box-shadow: var(--uc-light-box-shadow);
+    border: 0 !important;
+    &:hover, &[open], &[focused] {
+        background-color: var(--uc-button-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+}
+/* urlbar boxes */
+#identity-icon-box {
+    background: none !important;
+}
+.searchmode-switcher, #tracking-protection-icon-container,
+#identity-box, #trust-icon-container, #urlbar-label-box {
+    height: 80% !important;
+    border: 0 !important;
+    border-radius: calc(var(--uc-urlbar-border-radius) - 2px) !important;
+}
+/* visual pointers/shadows */
+#urlbar toolbarbutton,
+#urlbar box[role="button"],
+#urlbar hbox[role="button"],
+#urlbar .identity-box-button,
+#urlbar .urlbar-page-action,
+.urlbarView-button-menu,
+.urlbarView-action {
+    &:hover {
+        cursor: pointer !important;
+        box-shadow: var(--uc-box-shadow);
+        background-color: var(--uc-button-selected) !important;
+    }
+}
+.search-one-offs button {
+    cursor: pointer !important;
+    &:hover {transform: scale(1.1);}
+}
+
+/* Bookmark bar --------------------------------------------------------------------------------------------- */
+/*universal styles*/
+#PersonalToolbar, #personal-bookmarks {
+    background: transparent !important;
+    color: var(--uc-text-color) !important;
+}
+.bookmark-item {
+    fill: var(--uc-button-color) !important;
+    color: var(--uc-button-color) !important;
+    &:hover, &[open] {
+        background-color: var(--uc-button-selected) !important;
+    }
+}
+
+/* Popups/Menus --------------------------------------------------------------------------------------------- */
+/* universal style */
+/* menus, panels, hamburgermenu */
+panel, menupopup {
+    --panel-text-color:               var(--uc-text-color) !important;
+    --panel-background-color:         var(--uc-menu-background) !important;
+    --panel-border-radius:            var(--uc-menu-border-radius) !important;
+    --panel-border-color:             var(--uc-outline-border) !important;
+    --panel-background-color-dimmed:  var(--uc-menu-background) !important;
+    --panel-background-color-dimmed-further: var(--uc-menu-background) !important;
+    --panel-box-shadow:               0 !important;
+    --panel-menuitem-border-radius:   var(--uc-button-border-radius) !important;
+    /*--panel-menuitem-margin:          0 4px !important;
+    --panel-menuitem-padding:         8px !important; */
+    /*--panel-menuitem-margin:          0 4px !important;
+    --panel-menuitem-padding:         8px 8px !important*/
+    /*--panel-padding:                16px !important;*/
+    --button-background-color-menu-hover: var(--uc-button-selected) !important;
+    --panel-separator-color:          color-mix(in srgb, var(--uc-text-color), transparent 80%) !important;
+    --panel-separator-padding:        4px 8px  !important;
+    --panel-banner-item-update-supported-bgcolor: var(--uc-accent-color-1) !important;
+}
+/* navbar menu panel interior --- */
+/* firefox update popup */
+#appMenu-update-banner {
+    color: var(--uc-text-color) !important;
+    background-color: var(--uc-layered-background) !important;
+    border: 1px solid var(--uc-outline-border) !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-bottom: 12px !important;
+    font-weight: 700 !important;
+    text-shadow: var(--uc-text-shadow);
+}
+/* buttons */
+:root:not([lwtheme]) {
+    #appMenu-popup toolbarbutton:hover {
+        background-color: var(--uc-button-selected) !important;
+        color: var(--uc-button-color) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+}
+[lwtheme] {
+    #appMenu-popup toolbarbutton:hover {
+        background-color: var(--uc-layered-background) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+}
+/* zoom controls*/
+#appMenu-zoom-controls {
+    margin-top: 4px !important;
+    outline: 1px solid var(--uc-outline-border);
+    border-radius: 0 var(--uc-button-border-radius) 0 var(--uc-button-border-radius) !important;
+    background: var(--uc-input-background) !important;
+    & toolbarbutton { cursor: pointer; }
+}
+/* promo cards */
+moz-promo {
+    --panel-banner-item-update-supported-bgcolor: var(--uc-text-color) !important;
+    --promo-message-text-color: var(--uc-text-color) !important;
+    --promo-heading-text-color: var(--uc-text-color) !important;
+    /*--promo-background-color: var(--uc-accent-color-2) !important; */
+    --promo-border-color: var(--uc-outline-border) !important;
+    color: var(--uc-text-color) !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    font-weight: 700 !important;
+    text-shadow: var(--uc-text-shadow);
+    --border-radius-medium: var(--uc-button-border-radius) !important;
+}
+/*window dialog*/
+:root[dialogroot] {
+    --in-content-page-background: var(--uc-menu-background) !important;
+    --background-color-canvas: var(--uc-menu-background) !important;
+    color: var(--uc-text-color)  !important;
+}
+/*edit bookmark menu --- */
+#editBookmarkPanelContent {
+    input, menulist {
+        background-color: var(--uc-input-background) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        border: none !important;
+        outline: 1px solid var(--uc-outline-border) !important;
+        &:focus {outline: 2px solid var(--uc-accent-border)  !important;}
+    }
+    button {
+        border-radius: var(--uc-button-border-radius) !important;
+        cursor: pointer;
+    }
+}
+#editBMPanel_folderTreeRow {
+    padding-top: 10px !important;
+    & #editBMPanel_folderTree {
+        border: 0 !important;
+    }
+    & tree {
+        outline: 2px dashed var(--uc-outline-border) !important;
+        border-radius: var(--uc-button-border-radius) !important;
+        background: var(--uc-input-background) !important;
+    }
+    & treechildren {
+        color: var(--uc-text-color);
+        padding: 6px 4px !important;
+        &::-moz-tree-row {
+            height: 35px !important;
+            padding: 4px !important;
+            border-radius: var(--uc-tab-border-radius) !important;
+        }
+        &::-moz-tree-row(hover),
+        &::-moz-tree-row(selected) {
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-accent-color-1) !important;
+        }
+        &::-moz-tree-image(selected),
+        &::-moz-tree-twisty(selected),
+        &::-moz-tree-cell-text(selected) {
+            color: var(--uc-accent-color-1) !important;
+        }
+    }
+}
+#editBMPanel_newFolderButton {margin-top: 0.2rem !important;}
+/*extensions menu*/
+#unified-extensions-panel {
+    .subviewbutton:hover .toolbarbutton-icon {
+        background: var(--uc-button-selected) !important;
+    }
+}
+
+/* Browser Content ------------------------------------------------------------------------------------------ */
+/*universal styles*/
+.browserContainer {
+    background-color: transparent !important;
+}
+.browserContainer:has(.devtools-toolbox-iframe) { browser, .devtools-toolbox-iframe {
+    border: 0 !important;
+    border-radius: var(--uc-border-radius) !important;
+}}
+.browserContainer:has(findbar) { browser {
+    border: 0 !important;
+    border-radius: var(--uc-border-radius) !important;
+}}
+/*status panel*/
+#statuspanel {
+    &:not([hidden]) {
+        max-width: calc(100% - 1vw);
+        position: absolute;
+        bottom: 1vh !important; left: 1vw !important;
+        border-radius: 7px !important;
+        padding-block: 2px !important;
+        pointer-events: none;
+    }
+    & #statuspanel-label {
+        border: none !important;
+        margin: 1px 0 !important;
+        padding: 6px !important;
+        outline: 1px solid var(--uc-menu-border) !important;
+        border-radius: var(--uc-button-border-radius) !important;
+        background-color: var(--uc-browser-color) !important;
+        color: var(--uc-text-color) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: var(--uc-box-shadow) !important;
+        text-shadow: var(--uc-text-shadow) !important;
+        /*font-style: italic !important;*/
+        font-size: 1.1em !important;
+    }
+}
+
+/* Findbar -------------------------------------------------------------------------------------------------- */
+/*themed & add on theme*/
+:root:not([lwtheme]) {
+    findbar {
+        background: transparent !important;
+        background-color: transparent !important;
+    }
+}
+:root[lwtheme] {
+    &[style*="--lwt-additional-images: linear-gradient"] {
+        findbar {
+            background: transparent !important;
+            background-color: transparent !important;
+        }  
+    }
+    &:not([lwtheme-image],[theme-image-in-toolbox],[style*="additional-images"]) {
+        findbar {
+            background: transparent !important;
+            background-color: transparent !important;
+        }
+    }
+}
+
+/* universal styles ------------------------------------------------------------ */
+findbar {
+    border: 0 !important;
+    border-radius: var(--uc-border-radius) !important;
+    & .findbar-textbox {
+        background-color: var(--uc-urlbar-background) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        min-width: 250px !important;
+        width: 15vw !important;
+        &:focus {outline: 2px solid var(--uc-accent-border)  !important;}
+    }
+    & .findbar-closebutton {
+        border-radius: var(--uc-button-border-radius) !important;
+        padding: 4px !important;
+        &:hover {
+            background: var(--uc-button-selected) !important;
+        }
+    }
+    & .checkbox-check:not([checked]) {
+        appearance: none !important;
+        background: var(--uc-input-background) !important;
+        border: 1px solid var(--uc-text-color);
+        border-radius: calc(var(--uc-button-border-radius) - 5px);
+        opacity: 0.8;
+    }
+    & .found-matches {
+        font-weight: 700;
+        text-shadow: var(--uc-text-shadow);
+        background: var(--uc-input-background);
+        outline: 1px solid var(--uc-outline-border);
+        border-radius: var(--uc-button-border-radius);
+        border-top-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+}
+
+/* Side bars ------------------------------------------------------------------------------------------------ */
+/*themed & add on theme*/
+:root:not([lwtheme]), :root[lwtheme] {
+    #sidebar-box {
+        background: transparent !important;
+    }
+    #sidebar {
+        background: var(--uc-sidebar-background) !important;
+    }
+}
+/*add on theme*/
+:root[lwtheme] {
+    & #sidebar-box {background-image: none !important;}
+}
+/* universal styles ------------------------------------------------------------ */
+/*sidebar header spacing*/
+#webextpanels-window #sidebar-panel-header {
+     padding: 32px var(--space-large) 16px var(--space-large) !important;
+/*     margin: 0 !important; padding-top: 18px !important; */
+    color: var(--uc-text-color) !important;
+}
+/*all inputs ----------------------------------- */
+#input[placeholder="Search bookmarks"],
+#input[placeholder="Search history"],
+#input[placeholder="Search tabs"] {
+    appearance: none !important;
+    border: none !important;
+    height:2.5em !important;
+    color: var(--uc-text-color) !important;
+    background-color: rgba(25,25,25,0.25) !important;
+    border-radius: var(--uc-urlbar-border-radius) !important;
+    box-shadow: var(--uc-box-shadow) !important;
+    position: relative !important;
+    &:focus {outline: 2px solid var(--uc-accent-border)  !important;}
+}
+
+
+/*all main sidebar button-----------------------*/
+button[title="Close"] .button-background,
+button[title="Close sidebar"] .button-background,
+button[title="Open menu"] .button-background {
+    cursor: pointer !important;
+    border-radius: var(--uc-button-border-radius) !important;
+    margin-top: 1px;
+    &:hover {
+        background: var(--uc-button-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+}
+/*all links-----------------------------------*/
+.sidebar-panel .text-link, .sidebar-panel a, .sidebar-panel ::part(support-link),
+.customize-group .text-link, .customize-group a, .customize-group ::part(support-link) {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--uc-accent-color-5) !important;
+}
+/*settings sidebar related------------------- */
+/*check box color*/
+@layer input-common { #input {
+    accent-color: var(--uc-accent-color-5) !important;
+}}
+/* list fieldset headers */
+fieldset legend, .customize-group h4 {
+    font-weight: 700 !important;
+}
+/* list fieldset containers */
+fieldset #inputs, .customize-group [role="list"] {
+    background: var(--uc-input-background);
+    border-radius: var(--uc-border-radius) !important;
+}
+/* list fieldset borders */
+moz-checkbox, .extension-item {
+  &:not(:last-of-type) {
+    border-bottom: 0.5px solid var(--uc-menu-border) !important;
+  }
+}
+/* bookmark sidebar related ---------------- */
+/* bookmarks tree view */
+#fxview-tab-list {
+    .bookmark-folder-title, details summary,
+    details summary::before, .bookmark-folder-label::before {
+        color: var(--uc-accent-color-2) !important;
+        fill: var(--uc-accent-color-2) !important;
+        stroke: var(--uc-accent-color-2) !important;
+    }
+    details > summary, sidebar-bookmark-row, .bookmark-folder-label {
+        color: var(--uc-text-color) !important;
+        @media (prefers-color-scheme: light) {color: var(--uc-accent-color-1) !important;}
+        margin: 2px !important;
+        padding: 5px 35px !important; /*also conveniently places chevron inside folder icons*/
+        height: 25px !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+        &:hover {
+            background-color: var(--uc-button-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+        &::before {
+            color: var(--uc-text-color) !important;
+        }
+    }
+}
+
+/* history sidebar, password sidebar, other devices sidebar related --- */
+/*list containers*/
+moz-card[class="date-card"], moz-card[class="site-card"],
+moz-card[data-l10n-attrs="heading"], moz-card[class="phone"] {
+    background-color: transparent !important;
+    border: none !important;
+}
+/*header*/
+article[aria-labelledby="heading"] summary {
+    color: var(--uc-accent-color-2) !important;
+    border-radius: var(--uc-tab-border-radius) !important;
+    height: 25px !important;
+    align-content: center !important;
+    margin-bottom: 5px;
+    &:hover {
+        background-color: var(--uc-button-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+}
+/*entries*/
+#fxview-tab-list {
+    border-radius: 0 !important;
+    sidebar-tab-row {
+        color: var(--uc-text-color) !important;
+        margin: 2px !important;
+        padding: 5px 0 !important;
+        height: 25px !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+        &:hover {
+            background-color: var(--uc-button-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+}
+/* sidebar empty state */
+card-container[isemptystate] .selectedTab {
+    border-color: var(--uc-outline-border) !important;
+    background: var(--uc-input-background) !important;
+    border-radius: 0 var(--uc-tab-border-radius) 0 var(--uc-tab-border-radius) !important;
+}
+
+/* Overall Tabs Appearance  --------------------------------------------------------------------------------- */
+/* themed */
+:root:not([lwtheme]) {
+    /* tabs container */
+    & #tabbrowser-tabs {
+        background: transparent !important;
+        color: var(--uc-text-color) !important;
+        --tab-text-color: var(--uc-text-color) !important;
+        --tab-text-color-hover: var(--uc-text-color) !important;
+        --tab-text-color-selected: var(--uc-text-color) !important;
+        --tab-close-button-text-color: var(--uc-text-color) !important;
+    }
+    /* tab style */
+    & .tab-background {
+        background-color: transparent !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+        outline-offset: -1px !important;
+        outline: 2px solid transparent !important;
+    }    
+    /* selected tab style */
+    & .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    & .tab-background[selected] {
+        background: none !important;
+        background-color: var(--uc-tab-selected) !important;
+        outline-color: var(--uc-tab-outline) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .tab-background[multiselected][selected] {
+        outline-color: var(--uc-accent-border) !important;
+    }
+    & .tab-background[multiselected]:not([selected]) {
+        background-color: color-mix(in srgb, var(--uc-tab-selected), transparent 80%) !important;
+        outline-color: var(--uc-accent-border) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /* hovered tab style */
+    & .tabbrowser-tab:hover .tab-background {
+        background-color: var(--uc-tab-selected) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & .tabbrowser-tab:hover .tab-label-container {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    /* pinned tab style */
+    & .tabbrowser-tab[pinned] {
+        .tab-background {
+            background-color: var(--uc-tab-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    & .tab-label-container[pinned] {
+        color: var(--uc-accent-color-1) !important;
+    }
+    /* close tab button */
+    .tab-close-button {
+        border-radius: var(--uc-button-border-radius) !important;
+        &:hover {background: var(--uc-accent-color-1) !important;}
+    }
+    /* new tab buttons */
+    #vertical-tabs-newtab-button:hover,
+    #tabbrowser-tabs[orient="vertical"] #tabs-newtab-button:hover,
+    #tabbrowser-tabs[orient="horizontal"] #tabs-newtab-button:hover image
+    {
+        cursor: pointer !important;
+        background-color: var(--uc-tab-selected) !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /* tabs preview container */
+    & #tab-preview-panel {
+        --panel-background-color: var(--uc-menu-background) !important;
+        --panel-border-radius: var(--uc-menu-border-radius) !important;
+        --panel-border-color: var(--uc-menu-border) !important;
+        --panel-box-shadow: 0 !important;
+        --panel-padding: 0 !important;
+    }
+    & #tab-preview-panel { .tab-preview-thumbnail-container {
+        order: 1 !important;
+    }}
+    & .tab-preview-thumbnail-container canvas {
+        border-radius: 0 var(--uc-tab-border-radius) 0 var(--uc-tab-border-radius) !important;
+        border: 2px solid var(--uc-menu-border);
+        padding-inline: 1px !important;
+        outline-offset: 0px;
+    }
+    & .tab-preview-text-container {
+        /*background: var(--uc-input-background);*/
+        /*border-radius: var(--uc-tab-border-radius) 0 var(--uc-tab-border-radius) 0 !important;
+        outline: 1px solid var(--uc-outline-border);
+        margin: 1px !important;
+        padding: 10px !important;*/
+        padding: 2px 0;
+    }
+}
+/* add on theme */
+[lwtheme] {
+    /* tabs container */
+    & #tabbrowser-tabs {
+        color: var(--uc-text-color) !important;
+        --tab-close-button-text-color: var(--uc-text-color) !important;
+    }
+    /* tab style */
+    & .tab-background {
+        border-radius: var(--uc-tab-border-radius) !important;
+    }    
+    /* selected tab style */
+    & .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    & .tab-background[selected] {
+        background-color: var(--uc-tab-selected) !important;
+        outline-color: var(--uc-tab-selected-outline) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & .tab-background[multiselected] {
+        outline-offset: -1px !important;
+        outline: 2px solid color-mix(in srgb, var(--uc-accent-color-3) 40%, transparent) !important;
+    }
+    /* hovered tab style */
+    & .tabbrowser-tab:not([selected]):hover .tab-background {
+        background-color: var(--tab-background-color-hover) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    & .tabbrowser-tab:hover .tab-label-container {
+        color: var(--tab-text-color-hover) !important;
+    }
+    /* pinned tab style */
+    & .tabbrowser-tab[pinned], #vertical-tabs .tabbrowser-tab[pinned] {
+        .tab-background {
+            background-color: var(--uc-tab-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    & .tab-label-container[pinned] {
+        color: var(--uc-text-color) !important;
+    }
+    /* close tab button */
+    .tab-close-button {
+        border-radius: var(--uc-button-border-radius) !important;
+        &:hover {background: var(--uc-accent-color-1) !important;}
+    }
+    /*new tab buttons*/
+    #tabs-newtab-button:hover,
+    #vertical-tabs-newtab-button:hover {
+        cursor: pointer !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        border-radius: var(--uc-tab-border-radius) !important;
+    }
+    & #tab-preview-panel {
+        --panel-background-color: var(--uc-menu-background) !important;
+        --panel-border-radius: var(--uc-menu-border-radius) !important;
+        --panel-border-color: var(--uc-menu-border) !important;
+        --panel-box-shadow: 0 !important;
+        --panel-padding: 0 !important;
+    }
+    & #tab-preview-panel { .tab-preview-thumbnail-container {
+        order: 1 !important;
+    }}
+    & .tab-preview-thumbnail-container canvas {
+        border-radius: 0 var(--uc-tab-border-radius) 0 var(--uc-tab-border-radius) !important;
+        border: 2px solid var(--uc-menu-border);
+        padding-inline: 1px !important;
+        outline-offset: 0px;
+    }
+    & .tab-preview-text-container {
+        /*background: var(--uc-input-background);*/
+        /*border-radius: var(--uc-tab-border-radius) 0 var(--uc-tab-border-radius) 0 !important;
+        outline: 1px solid var(--uc-outline-border);
+        margin: 1px !important;
+        padding: 10px !important;*/
+        padding: 2px 0;
+    }    
+
+    & #TabsToolbar-customization-target {
+        background: transparent !important;
+    }
+    & #tabbrowser-tabs {
+        background: transparent !important;
+        color: var(--arrowpanel-border-color) !important;
+        --tab-text-color: var(--arrowpanel-border-color) !important;
+        --tab-close-button-text-color: var(--arrowpanel-border-color) !important;
+    }   
+}
+/* universal styles ------------------------------------------------------------ */
+/* tab background easier transition */
+/* .tab-background {
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+} */
+/* tab audio playing indicator */
+.tab-audio-button {
+    position:absolute !important;
+    margin-top:-18px !important;
+    margin-left:8px !important;
+    background-color: rgba(30,30,30,0.2) !important;
+    border-radius:100% !important;
+    --button-icon-fill:  var(--uc-button-color) !important;
+    --button-size-icon-small: 15px !important;
+    --button-min-height-small: 15px !important;
+}
+/* tab spacer end */
+spacer[part="overflow-end-indicator"] {
+    border-left: none !important;
+}
+.tab-audio-button:hover {--button-icon-fill: var(--tab-loading-fill) !important;}
+/* unloaded tabs opacity */
+@media -moz-pref("browser.tabs.fadeOutUnloadedTabs") {
+    .tabbrowser-tab[pending] .tab-content {
+        opacity: 0.15 !important;
+    }
+    tab-group .tabbrowser-tab[pending] .tab-content {
+        opacity: 0.2 !important;
+    }
+    .tab-icon-image[pending] {
+        filter: grayscale(60%) !important;
+    }
+    @media (prefers-color-scheme: light) {
+        .tabbrowser-tab[pending] .tab-content {
+            opacity: 0.2 !important;
+        }
+        tab-group .tabbrowser-tab[pending] .tab-content {
+            opacity: 0.3 !important;
+        }
+    }
+}
+
+/* Split View Tabs ------------------------------------------------------------------------------------------ */
+/*tabbar appearance*/
+tab-split-view-wrapper {
+    transition: background 0.5s ease;
+    background-color: rgba(99,99,102,0.1) !important;
+    border-radius: var(--uc-tab-border-radius) !important;
+    &[hasactivetab] {
+        background-color: rgba(99,99,102,0.3) !important;
+    }
+    &:not([hasactivetab]):hover {
+       background-color: rgba(99,99,102,0.3) !important;
+    }
+}
+/* spacing adjustments */
+#tabbrowser-tabs[orient="vertical"] tab-split-view-wrapper {
+    padding-bottom: 4px !important;
+}
+#tabbrowser-tabs[orient="horizontal"] tab-split-view-wrapper {
+    padding: 3px 2px !important;
+}
+/* tab browser content adjustments */
+#tabbrowser-tabpanels {
+    &[splitview] {
+        & .split-view-splitter { /* splitter match sidebar style */
+            background-color: var(--uc-accent-color-2) !important;
+            border-radius: 10px !important;
+            margin-top: 5%;
+            height: 90%;
+            opacity: 0;
+            &:hover { opacity: 1; }
+        }
+        & .browserStack { /* outline match primary accent of cs */
+            .deck-selected > .browserContainer > & {
+                outline: var(--focus-outline) !important;
+                /*outline: var(--uc-accent-color-2) !important;*/
+            }
+        }
+    }
+}
+split-view-footer {
+    border: 0 !important;
+    margin: 5px 4px !important;
+    border-radius: calc(var(--uc-border-radius) - 4px) !important;
+    background-color: var(--uc-browser-color) !important;
+    backdrop-filter: blur(10px);
+    color: var(--uc-text-color) !important;
+    box-shadow: var(--uc-box-shadow) !important;
+    text-shadow: var(--uc-text-shadow) !important;
+    font-size: 1.2rem;
+}
+toolbarbutton[data-l10n-id="urlbar-split-view-button"]:hover {
+    appearance: none !important; cursor: pointer;
+    border-radius: var(--uc-button-border-radius) !important;
+}
+
+/* Vertical Tabs Appearance --------------------------------------------------------------------------------- */
+
+:root:not([lwtheme]) {
+    #sidebar-container {
+        background: var(--uc-browser-color) !important;
+    }
+}
+#sidebar-container {
+    border-radius: var(--uc-border-radius) !important;
+}
+/*pinned tab splitter & bottom strip splitter*/
+#vertical-pinned-tabs-splitter,
+#sidebar-tools-and-extensions-splitter {
+    min-height: 4px !important;
+    margin: 0 10px !important;
+    background-image: none !important;
+    border-bottom: 1px dashed var(--uc-accent-color-2) !important;
+    opacity: 0.3;
+    &:hover {
+        border-radius: var(--uc-button-border-radius) !important;
+        background-color:  var(--uc-accent-color-2) !important;
+    }
+}
+/* tab strip border*/
+:root {--tabstrip-inner-border: 0 !important;}
+/*new tab button*/
+#vertical-tabs-newtab-button,
+#tabs-newtab-button {
+    font-style: italic;
+}
+/*bottom button strip*/
+.tools-and-extensions[orientation="horizontal"] {
+    margin-inline: auto;
+}
+.tools-and-extensions {
+    & > moz-button {
+        --button-icon-fill: var(--uc-button-color) !important;
+        --button-background-color-selected: var(--uc-button-selected) !important;
+        --button-border-color-selected: transparent !important;
+        --button-attention-dot-color: var(--uc-accent-color-2);  
+    }
+}
+#main-button .button-background[type="icon"],
+#main-button .button-background[type="icon ghost"] {
+    border: 0 !important;
+    border-radius: var(--uc-button-border-radius) !important;
+    &:hover {
+        background-color: var(--uc-button-selected) !important;
+        /*color: var(--uc-button-color) !important;
+        fill: var(--uc-button-color) !important;
+        stroke: var(--uc-button-color) !important;*/
+        /*box-shadow: var(--uc-box-shadow) !important;*/
+    }
+}
+
+/* Context Menu --------------------------------------------------------------------------------------------- */
+:root:not([lwtheme]) {
+    menupopup {
+        --menuitem-border-radius: var(--uc-button-border-radius) !important;
+        --panel-separator-color: var(--uc-menu-border) !important;
+        --panel-background-color: var(--uc-context-menu) !important;
+        menuitem:hover {
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-accent-color-5) !important;
+            border-radius: 7px !important;
+        }
+        menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+        menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-accent-color-5) !important;
+            border-radius: 7px !important;
+        }
+    }
+}
+[lwtheme] {
+    menupopup {
+        --menuitem-border-radius: var(--uc-button-border-radius) !important;
+        --panel-separator-color: var(--uc-menu-border) !important;
+        --panel-background-color: var(--uc-context-menu) !important;
+        menuitem:hover {
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-text-color) !important;
+            border-radius: 7px !important;
+        }
+        menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+        menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-text-color) !important;
+            border-radius: 7px !important;
+        }
+    }
+}
+
+/* Other UI Elements - catch-all styling for repeatable instances ----------------------------------------- */
+/*checkboxes*/
+.checkbox-check:not([checked]),
+input[type="checkbox"]:not(:checked),
+menuitem[type="checkbox"]:not([checked]) img,
+menuitem[type="radio"]:not([checked]) img {
+    appearance: none !important; opacity: 0.8;
+    background: var(--uc-input-background) !important;
+    border: 1px solid var(--uc-text-color);
+    border-radius: calc(var(--uc-button-border-radius) - 5px);   
+}
+input[type="checkbox"]:disabled,
+menuitem[type="checkbox"]:disabled img,
+menuitem[type="radio"]:disabled img{
+    appearance: none !important; opacity: 0.1;
+    background: var(--uc-input-background) !important;
+    border: 1px solid var(--uc-text-color);
+    border-radius: calc(var(--uc-button-border-radius) - 5px);
+}
+menuitem[type="radio"] img {border-radius: 50% !important;}
+/*radio btn*/
+/*buttons*/
+.button-background {
+    button:hover > &, &[type~="ghost"] {
+        {
+         background-color: var(--uc-accent-color-1) !important;
+         border-color: var(--uc-accent-color-1) !important;
+         color: var(--button-text-color-hover) !important;
+        }
+    }
+}
+/*we'll see*/
+button[label="Leave page"] {
+  background-color: pink !important;
+  color: var(--uc-text-color) !important;
+}
+button[label="Stay on page"] {
+  background-color: pink !important;
+  color: var(--uc-text-color) !important;
+}
+
+
+
+/* Misc Element - styling for misc elements, pages, etc --------------------------------------------------- */
+
+/* customize toolbar page ---------------------- */
+/*themed*/
+:root:not([lwtheme]) {
+    &[theme-image-in-toolbox], &:not([theme-image-in-toolbox]) {
+        #customization-container {
+          background-color: var(--uc-browser-color) !important;
+          background-image: var(--toolbox-background-image) !important;
+          background-repeat: var(--toolbox-background-repeat) !important;
+          background-position: var(--toolbox-background-position) !important;
+          background-size: var(--toolbox-background-size) !important;
+        }
+    }
+}
+/*add on theme style*/
+:root[lwtheme] {
+    &[theme-image-in-toolbox], &[style*="--lwt-additional-images"] {
+        #customization-container {background-color: var(--uc-browser-color) !important;}
+        #customization-container {         /* allows gradients to fill background */
+            background-image: var(--toolbox-background-image) !important;
+            background-repeat: var(--toolbox-background-repeat) !important;
+            background-position: var(--toolbox-background-position) !important;
+            background-size: var(--toolbox-background-size) !important; }
+    }
+    &:not([theme-image-in-toolbox]), &:not([theme-image-in-toolbox]):not(:has([style*="--lwt-additional-images"])) {
+        body               {background-color: var(--uc-browser-color) !important;}
+        #browser           {background-color: transparent !important;}
+        #navigator-toolbox {background-color: transparent !important;}
+        #navigator-toolbox {color: var(--uc-text-color) !important;}  
+        #browser {         /* allows gradients to fill background */
+            background-image: var(--toolbox-background-image) !important;
+            background-repeat: var(--toolbox-background-repeat) !important;
+            background-position: var(--toolbox-background-position) !important;
+            background-size: var(--toolbox-background-size) !important;
+        }
+    }
+}
+/* PiP Video Player -------------------------- */
+/*seek bar progress bar*/
+#scrubber::-moz-range-progress {
+    background-color: var(--uc-accent-color-1) !important;
+} #scrubber::-moz-range-thumb {
+    background-color: var(--uc-accent-color-1) !important;
+    border: 3px solid var(--uc-accent-color-1) !important;
+}
+/*close and PIP buttons are hovered*/
+#close, #unpip {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    fill: #fff !important;
+}
+#close:is(:hover, :focus-visible), #unpip:is(:hover, :focus-visible) {
+    background-color: var(--uc-accent-color-1) !important;
+    fill: var(--uc-text-color) !important;
+}
+.player-holder #browser { border-radius: 0 !important; }
+.control-button, .control-item { border-radius: 10px !important; }
+
+/* keep audio slider visible */
+@media (width <= 630px) {
+    #audio-scrubber {
+        display: block !important;  position: fixed !important;
+        bottom: 38x !important;     right: 122px !important;
+        transform: translateX(-50%) !important;
+    }
+}
+@media (width <= 580px) {
+    #audio-scrubber {
+        display: block !important;  position: fixed !important;
+        top: 25px !important;       left: 50vw !important;
+        transform: translateX(-50%) !important;
+    }
+}
+@media (width <= 290px) {
+    #audio-scrubber {
+        display: block !important;  position: fixed !important;
+        top: 16% !important;        left: 50vw !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
+

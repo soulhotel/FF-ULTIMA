@@ -1,0 +1,178 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         tab outline styles
+
+Tab Settings are split between multiple files:
+
+./settings-tabs-general.css                for general tab settings
+./settings-tabs-vertical.css               for vertical tab specific settings.
+./settings-tabs-horizontal.css             for horizontal tab specific settings.
+./settings-tabs-splitview.css              for split view styles
+./settings-tabs-groups-and-containers.css  for tab group & container styles
+./settings-tabs-outlines.css               for tab outline styles
+
+tab outline colors
+tab outline style: full
+tab outline style: top sided glow
+
+setting a tab outline is as simply as picking a style (full border, top sided glow), then picking a color
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* tab outline colors ------------------------------------------------------------------------------------------- */
+@media (-moz-pref("ultima.tabs.outline.style.border")) or (-moz-pref("ultima.tabs.outline.style.top")) {
+    :root[lwtheme], :root:not([lwtheme]) {
+        @media -moz-pref("ultima.tabs.outline.color.black")     {--uc-tab-outline: black !important;}
+        @media -moz-pref("ultima.tabs.outline.color.white")     {--uc-tab-outline: white !important;}
+        @media -moz-pref("ultima.tabs.outline.color.red")       {--uc-tab-outline: rgb(194, 51, 51) !important;}
+        @media -moz-pref("ultima.tabs.outline.color.blue")      {--uc-tab-outline: #163eb8 !important;}
+        @media -moz-pref("ultima.tabs.outline.color.gold")      {--uc-tab-outline: #ffe49c !important;}
+        @media -moz-pref("ultima.tabs.outline.color.green")     {--uc-tab-outline: rgb(71, 176, 71) !important;}
+        @media -moz-pref("ultima.tabs.outline.color.lightblue") {--uc-tab-outline: #5584c2 !important;}
+        @media -moz-pref("ultima.tabs.outline.color.pink")      {--uc-tab-outline: pink !important;}
+        @media -moz-pref("ultima.tabs.outline.color.purple")    {--uc-tab-outline: rgb(160, 80, 160) !important;}
+    }
+}
+
+/* tab outline style: full ----------------------------------------------------------------------------------------- */
+
+/* outline */
+@media -moz-pref("ultima.tabs.outline.style.border") {
+    .tabbrowser-tab:is([selected]:not([multiselected]), [movingtab]) {
+        .tab-background {
+            outline-color: var(--uc-tab-outline) !important;
+        }
+    }
+}
+
+/* gradient handling */
+@keyframes rotateoutline {
+    from { filter: hue-rotate(0deg) }
+    to   { filter: hue-rotate(360deg) }
+}
+@media (-moz-pref("ultima.tabs.outline.style.border")) and (-moz-pref("ultima.tabs.outline.color.gradient")) {
+    /* style */
+    .tabbrowser-tab:is([selected], [multiselected]) {
+        .tab-background {
+            outline: none !important;
+        }
+        .tab-background::after {
+            /* container */
+            content: ""; position: absolute; z-index: 1; 
+            border-radius: var(--uc-tab-border-radius); inset: 0;
+            /* gradient */
+            background-image: conic-gradient(
+                hsl(0 100% 70%),         hsl(60 100% 45%) 70deg,
+                hsl(120 100% 55%) 105deg,hsl(160 100% 60%) 160deg,
+                hsl(200 100% 60%) 200deg,hsl(240 100% 65%) 255deg,
+                hsl(300 100% 60%) 290deg,hsl(360 100% 70%) 360deg
+            );
+            /* outline shape */
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude; padding: 2px;
+            /* animate */
+            animation: rotateoutline 6s linear infinite !important;
+        }  
+    }
+    /* vertical tabs adjustment */
+    #tabbrowser-tabs[orient="vertical"] {
+        .tabbrowser-tab:is([selected], [multiselected]):not([pinned]) {
+            .tab-background::after {inset: 0 7px 0 7px;}
+        }
+        /* split view */
+        tab-split-view-wrapper  {
+            .tabbrowser-tab:is([selected], [multiselected]):not([pinned]) {
+                .tab-background::after {inset: 0;}
+            }
+        }
+    }
+    /* horizontal tabs adjustment */
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tabbrowser-tab:is([selected], .tabbrowser-tab[multiselected]) {
+            .tab-background::after {inset: 4px -2px;}
+        }
+        /* split view */
+        tab-split-view-wrapper {
+            .tabbrowser-tab:is([selected], .tabbrowser-tab[multiselected]) {
+                .tab-background::after {inset: 0;}
+            }
+        }  
+    }
+}
+        
+    
+
+
+/* top sided glow style ------------------------------------------------------------------------------------------- */
+
+/* 
+a proton style top sided border, that adopts @He23251's faded outline effect
+recommended by @AuRiMaS666 https://github.com/soulhotel/FF-ULTIMA/issues/445
+*/
+
+@keyframes rotateoutlinehue {
+    from { filter: hue-rotate(0deg) }
+    to   { filter: hue-rotate(360deg) }
+}
+@media -moz-pref("ultima.tabs.outline.style.top") {
+    :root[lwtheme], :root:not([lwtheme]) {
+        .tabbrowser-tab:is([selected], [multiselected]) {
+            .tab-background {
+                outline: none !important;
+            }
+            .tab-background::before {
+                content:""; position: absolute !important; z-index: 1;
+                inset: 2px 12px 0 12px; height: 2.5px;
+                background: var(--uc-tab-outline) !important;
+                /* fade both ends to transparent so OS/window corner shapes never clash */
+                --uc-privatebar-edge-fade: min(55px,50%);
+                mask-image: linear-gradient(90deg,
+                    transparent 0,
+                    #000 var(--uc-privatebar-edge-fade),
+                    #000 calc(100% - var(--uc-privatebar-edge-fade)),
+                    transparent 100%
+                );
+                -webkit-mask-image: linear-gradient(90deg,
+                    transparent 0,
+                    #000 var(--uc-privatebar-edge-fade),
+                    #000 calc(100% - var(--uc-privatebar-edge-fade)),
+                    transparent 100%
+                );
+
+            }  
+        }
+        /* vertical tabs adjustment */
+        #tabbrowser-tabs[orient="vertical"]:not([expanded]) {
+            .tabbrowser-tab:is([selected], [multiselected]) {
+                .tab-background::before {inset: 3px 12px 0 12px;}
+            }
+        }
+        /* horizontal tabs adjustment */
+        #tabbrowser-tabs[orient="horizontal"] {
+            .tabbrowser-tab:is([selected], [multiselected]) {
+                .tab-background::before {inset: 6px 6px 0 6px;}
+            }
+            /* split view */
+            tab-split-view-wrapper {
+                .tabbrowser-tab:is([selected], [multiselected]) {
+                    .tab-background::before {inset: 0;}
+                }
+            }  
+        }
+        @media (-moz-pref("ultima.tabs.outline.color.gradient")) {
+        /* gradient color handling */
+            .tabbrowser-tab:is([selected], [multiselected]) {
+                .tab-background::before {
+                    background: linear-gradient(90deg,
+                        hsl(0 100% 70%),
+                        hsl(60 100% 45%) 20%,
+                        hsl(120 100% 55%) 35%,
+                        hsl(160 100% 60%) 50%
+                    ) !important;
+                    animation: rotateoutlinehue 6s linear infinite !important;
+                }  
+            }         
+        }        
+    } 
+}

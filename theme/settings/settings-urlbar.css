@@ -1,0 +1,270 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Alternative Styles for the URL Bar
+
+urlbar.float
+urlbar.animate.open
+urlbar.text.centered
+urlbar.transparent
+urlbar.hide.buttons.in.edge
+urlbar.hide.searchsuggestions
+urlbar.centered
+urlbar.hide.buttons
+ultima.urlbar.hide.buttons.in.edge
+ultima.urlbar.drags.window
+ultima.urlbar.scrollable
+ultima.urlbar.focus.blur
+ultima.urlbar.focus.blur.window
+ultima.urlbar.focus.align.left
+ultima.urlbar.extension.label.fullwidth
+ultima.urlbar.extension.label.hidden
+ultima.urlbar.hide.trackingprotection.icon
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+@media -moz-pref("ultima.urlbar.float") {
+    #navigator-toolbox {
+        z-index: 999 !important;
+        overflow-y: unset !important;
+    }
+    #urlbar-container:has(#urlbar[popover-open]) #urlbar {
+        top: 0 !important;
+        max-width: 50vw !important;
+        /* careful with setting max-width on this */
+        align-items: start !important;
+    }
+    
+    #urlbar-container:has(#urlbar[popover-open]) #urlbar {
+        position: relative !important;
+        top: 20vh !important; left: 0 !important; 
+        transform: scale(1.1) !important;
+        transition: all 0.18s linear !important;
+        & .urlbarView {transition: all 0.18s linear !important;}
+        & .urlbarView {margin-top: 0 !important; transform: scale(1.1) !important;}
+        & .urlbar-background {
+            margin: 0 !important;
+            border: 1px solid var(--uc-accent-border) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+            inset-block: -5px -55px !important;
+        }
+        .urlbarView-background {
+            border: 1px solid var(--uc-accent-border) !important;
+            clip-path: 0 !important;
+            inset-block: -20px 0 !important;
+            margin-top: 15px !important;
+        }
+        .urlbarView {
+            padding-top: 20px !important;
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.animate.open") {
+    .urlbarView  {
+        max-height: 0 !important;
+        transition: max-height 0.8s ease-out !important;
+        will-change: max-height;
+    }
+    #urlbar-container:has(#urlbar[popover-open]) {
+        .urlbarView {
+            /* I* just chose a value big enough to cover the tallest state */
+            max-height: 600px !important;
+            /*
+            this transition just fails with teh new Nova url bar
+            the url bar is clipped to oblivion to achieve an attempt at a "modern" style
+            the style is bad, just styling the url bar requires 2 step seperation for bar vs view
+            animations fail to display in sync when accounting for the seperation
+            */
+            /*transition: max-height 2s ease !important;*/
+        }
+    }
+    @media -moz-pref("ultima.urlbar.float") {
+        .urlbarView, .urlbarView-background, #urlbar-results {
+            overflow: clip !important;
+        }
+        .urlbarView-background, #urlbar-results {
+            max-height: 0 !important;
+            transition: max-height 0.3s ease-out !important;
+            will-change: max-height;
+            
+        }
+        #urlbar-container:has(#urlbar[popover-open]) {
+            
+            .urlbarView-background, #urlbar-results {
+                max-height: 600px !important;
+            }
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.text-centered") {
+    #urlbar .urlbar-input-box {
+        text-align: center;
+    }
+    #urlbar .urlbar-input {
+        text-overflow: ellipsis !important;
+        overflow: hidden;
+        white-space: nowrap; 
+    }
+}
+
+@media -moz-pref("ultima.urlbar.transparent") {
+    #urlbar:not([open]) {
+        & #urlbar-background,
+        & .urlbar-background, & #searchbar {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.hide.buttons") {
+    #urlbar:not(:hover) {
+        #identity-box, #page-action-buttons, .urlbar-revert-button-container, #trust-icon-container {
+           opacity: 0 !important;
+           transition: opacity 1.2s ease 0.8s !important;
+        }
+    }
+    #urlbar:hover {
+        #identity-box, #page-action-buttons, .urlbar-revert-button-container, #trust-icon-container {
+           opacity: 1 !important;
+            transition: opacity 0.4s ease !important;
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.hide.search-suggestions") {
+    #urlbar .search-one-offs:not([hidden]),
+    .searchmode-switcher,
+    .urlbarView-row[label*="Trending "],
+    .urlbarView-row[label="Firefox Suggest"],
+    .urlbarView-row:has([src="chrome://global/skin/icons/trending.svg"]),
+    .urlbarView-row:has([data-l10n-id="urlbar-result-suggestion-recommended"]) {
+        display: none !important;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.drags.window") {
+    #urlbar-container, .urlbar-input-box, .urlbar-input {
+      -moz-window-dragging: drag;
+      cursor: default;
+    }
+    .urlbar-input-container > box,
+    #page-action-buttons, #urlbar-container:focus-within,
+    #urlbar-container:focus-within :is(#urlbar-container, .urlbar-input-box, .urlbar-input) {
+      -moz-window-dragging: no-drag;
+      cursor: auto;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.hide.tracking-protection-icon") {
+    #trust-icon-container {
+        display: none !important;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.scrollable") {
+    #urlbar-results {
+        max-height: 360px !important;
+        overflow-y: auto;
+    }
+    .urlbarView-no-wrap{
+        position: relative;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.focus.blur") {
+    #tabbrowser-tabpanels::before {
+        content: "";
+        backdrop-filter: blur(25px);
+        background-color:rgba(1,1,1,0.1);
+
+        z-index: 999;
+        position: fixed;
+        top: 0; bottom: 0; left: 0; right: 0;
+
+        border-radius: 10px;
+        margin: var(--uc-content-margins);
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.7s ease;
+    }
+    :root:has(#urlbar[popover-open]) {
+        #tabbrowser-tabpanels::before {
+            opacity: 1;
+        }
+        browser[type] {
+            backdrop-filter: blur(25px);
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.focus.blur.window") {
+    /* Add the base state for the browser with transitions */
+    #browser {
+        filter: blur(0px);
+        transition: 
+            scale     100ms ease-in,
+            filter    300ms ease-out !important;
+    }
+    /* Base state for the overlay */
+    #browser::before {
+        content: '';
+        position: absolute;
+        background: rgba(0, 0, 0, 0);
+        pointer-events: none;
+        z-index: 999;
+        transition: background-color 200ms ease-in-out;
+    }
+    /* Active state with blur and overlay */
+    :root:not([inDOMFullscreen="true"]):not([chromehidden~="location"]):not([chromehidden~="toolbar"]) {
+        &:has(#urlbar:is([popover-open], [usertyping][focused])) {
+            #browser {
+                filter: blur(6px);
+                pointer-events: none;
+                scale: 1.03 !important;
+                &::before {
+                    background: rgba(0, 0, 0, 0.3);
+                }
+            }
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.focus.text-aligns-left") {
+    /* Center URL within the address bar */
+    .urlbar-input-box {
+      text-align: center !important;
+      justify-content: center !important;
+    }
+    /* Align text to the left when the urlbar or its input is focused */
+    #urlbar:focus-within .urlbar-input-box, #urlbar-input:focus {
+      text-align: left !important;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.extension-label.fullwidth") {
+    #urlbar:has(#identity-icon[tooltiptext*="extension"]) {
+        #identity-icon-box {
+            max-width: fit-content !important;
+            #identity-icon[tooltiptext*="extension"] {
+                visibility: collapse !important;
+            }
+        }
+        #urlbar-input {
+            font-size: 11px !important;
+        }
+    }
+}
+
+@media -moz-pref("ultima.urlbar.hide.extension-label") {
+    #urlbar:has(#identity-icon[tooltiptext*="extension"]) {
+        #identity-icon-box:not(:hover) {
+            display: none !important;
+        }
+    }
+}
+

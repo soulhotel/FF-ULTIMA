@@ -11,10 +11,9 @@ Rename 'ffu-colorscheme.thinkpad.css' to 'ffu-colorscheme.css' to use that versi
 *There is no set wallpapers yet, since my homepage/new tab is managed by HexagonTabs. The wallpapers in the previews are just photos I took.*"
 
 To use this color scheme:
-- Navigate to `about:config` page.
-- Search for `user.theme`.
-- Turn on `user.theme.fluent`
-- Or `user.theme.fluent.thinkpad` 🫡 
+- Open `userChrome Companion`, in the `Color Scheme Settings` section.
+- Turn on `theme.fluent`
+- Or `theme.fluent-thinkpad` 🫡 
 
 Preview:
 ![preview1](./p1.jpg)

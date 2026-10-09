@@ -11,20 +11,18 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/* 
-- Dont like a websites styling? remove the line associated below.
-*/
 
-@import url(theme/website-aboutconfig.css); /*        styling for aboutconfig */
-@import url(theme/website-aboutaddons.css); /*        styling for aboutaddons */
-@import url(theme/website-styles.css); /*       styling for multiple websites */
-@import url(theme/website-newtab.css); /*                        new tab page */
-@import url(theme/website-reddit.css); /*                              reddit */
-@import url(theme/website-yt.css); /*                                 youtube */
-@import url(theme/website-private.css); /*               private new tab page */
+@import url(theme/websites/website-aboutconfig.css); /*        styling for aboutconfig */
+@import url(theme/websites/website-aboutaddons.css); /*        styling for aboutaddons */
+@import url(theme/websites/website-styles.css); /*       styling for multiple websites */
+@import url(theme/websites/website-newtab.css); /*                        new tab page */
+@import url(theme/websites/website-reddit.css); /*                              reddit */
+@import url(theme/websites/website-yt.css); /*                                 youtube */
+@import url(theme/websites/website-private.css); /*               private new tab page */
 
 @import url(theme/color-schemes/apply-cs.css);            /* import color scheme colors */
 @import url(theme/color-schemes/apply-cs-extensions.css); /* apply colors to extensions */
 @import url(theme/color-schemes/apply-cs-wallpapers.css); /* apply colors to wallpapers */
 
-@import url(customContent.css);
+/* this file will never be overwriten by the theme, put whatever you want in it */
+@import url(customContent.css); 

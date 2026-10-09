@@ -5,9 +5,8 @@ By FF ULTIMA
 ```
 
 To use this color scheme:
-- Navigate to `about:config` page.
-- Search for `user.theme`.
-- Turn on `user.theme.0.default`
+- Open `userChrome Companion`, in the `Color Scheme Settings` section.
+- Turn on `theme.default`
 
 Preview:
 ![preview1](./p1.png)

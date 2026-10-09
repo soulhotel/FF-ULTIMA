@@ -1,0 +1,50 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Sidebar & Sidebery Settings
+
+note: sidebar  -  refers to all sidebars  (including sidebery) (not vertical tabs)
+note: sidebery -  refers to only sidebery (not other sidebars) (not vertical tabs)
+
+sidebar hide new header
+sidebar Seperator
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* sidebar hide new header -------------------------------------------------------------- */
+
+@media -moz-pref("ultima.sidebar.hide.header") {
+    #sidebar-panel-header {
+      display: none !important;
+    }
+}
+
+/* sidebar extended width --------------------------------------------------------------- */
+/* sidebar hide new header -------------------------------------------------------------- */
+
+@media -moz-pref("ultima.sidebar.width.unlocked") {
+    #sidebar-box {
+      min-width: 40px !important;
+      max-width: 90vw !important;
+    }
+}
+
+/* sidebar Seperator --------------------------------------------------------------------*/
+
+@media -moz-pref("ultima.sidebar.separator") {
+    /*vert tabs left, sidebar right*/
+    #sidebar-box[checked="true"]:not([sidebar-positionend]) {
+        order: 7 !important;
+        ~ #sidebar-splitter {
+            order:6 !important;
+        }
+    }
+    
+    /*vert tabs right, sidebar left*/
+    #sidebar-box[checked="true"][sidebar-positionend] {
+        order: 1 !important; 
+        ~ #sidebar-splitter {
+            order: 2 !important;
+        }
+    }
+}

@@ -1,0 +1,370 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+ 
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         New Tab Page Overhaul, inspired by @hachikoharuno https://github.com/hachikoharuno/Beautiful-newtab-Firefox
+
+[Index: ctrl+f a line to find a section]
+variables
+background adjustment
+website shortcuts
+search bar & logo
+widgets
+context menu
+customize menu
+home sections
+latest activity
+recommended section
+awesome bar
+new tab rounded tweaks
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@import url('all-color-schemes-wallpapers.css');
+
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) { @media -moz-pref("ultima.enable.newtab-theme") {
+
+/* variables ------------------------------------------------------------------- */     
+
+/* overwrite these variables */
+
+:root {
+    --color-accent-primary: var(--uc-accent-color-2) !important;
+    --color-accent-primary-hover: var(--uc-accent-color-2) !important;
+    --button-background-color-hover: var(--uc-accent-color-2) !important;
+    --button-background-color-active: transparent !important;
+    --lists-button-background: var(--uc-accent-color-1) !important;
+    --button-text-color: var(--mode-color) !important;
+    --button-border-color: transparent !important;
+    --button-text-color-primary: var(--uc-text-color)  !important;
+    --newtab-contextual-text-primary-color: var(--mode-color) !important;
+    --newtab-button-static-hover-background: transparent !important;
+    --button-background-color-ghost-hover: transparent !important;
+    --newtab-background-color: var(--uc-browser-color) !important;
+    --newtab-background-color-secondary: var(--uc-browser-color) !important;
+    --customize-menu-bg:  var(--uc-browser-color) !important;
+    --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+}
+/* our custom variables */
+:root {
+    --uc-newtab-rounding: 18px;
+    /* all radius's will be calculated off this number ^ */
+    --uc-newtab-boxshadow: 0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.15);
+    @media (-moz-pref("ultima.newtab.rounded")) { --uc-newtab-rounding: 33px; }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --uc-newtab-shortcut-background: color-mix(in srgb, var(--uc-browser-color), transparent 95%) !important;
+        --uc-newtab-menu-background: color-mix(in srgb, var(--uc-browser-color) 40%, transparent);
+        --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
+        --mode-color: var(--uc-text-color, white);
+    }
+}  
+@media (prefers-color-scheme: light) { 
+    :root {
+        --uc-newtab-shortcut-background: color-mix(in srgb, var(--uc-browser-color), transparent 65%) !important;
+        --uc-newtab-menu-background: color-mix(in srgb, var(--uc-browser-color) 60%, transparent);
+        --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
+        --mode-color: var(--uc-text-color, black);
+    }
+}  
+
+/* body background adjustment -------------------------------------------------- */ 
+
+body {
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+/*.section-title-container, .widgets-title-container {
+    visibility: hidden !important;
+}*/
+  
+/* website shortcuts ----------------------------------------------------------- */ 
+    
+/* site shortcuts */  
+.top-site-outer .tile {
+    background: var(--uc-newtab-shortcut-background) !important;
+    color: var(--mode-color) !important;
+    border-radius: var(--uc-newtab-rounding) !important;
+    box-shadow: var(--uc-newtab-boxshadow) !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    /* placeholder letter */
+    font-size: 32px !important;
+    font-weight: 200;
+    text-transform: uppercase;
+    /* size adjustment */
+    height: calc(var(--size-item-large) * 2) !important;
+    width: calc(var(--size-item-large) * 2) !important;
+    /* icon adjustments*/
+    & .icon-wrapper {
+        border-radius: calc(var(--uc-newtab-rounding) - 7px) !important;
+        .top-site-icon{ background-color: transparent !important; }
+    }
+}
+/* hover effect */
+.top-site-outer {
+    &:hover .tile { transform: scale(1.15); }
+    &:not(:hover) .tile { transition: all 0.4s ease !important; }
+    @media (-moz-pref("ultima.newtab.hide.shortcut-titles")) {
+        /* titles hidden til hovered */
+        .title { opacity: 0 !important; }
+        &:hover .title { opacity: 1 !important; }
+        &:not(:hover) .title { transition: all 0.8s ease !important; }
+    }
+    /* pinned state hidden til hovered */
+    .icon-pin-small { opacity: 0 !important; }
+    &:hover .icon-pin-small { opacity: 1 !important; }
+     &:not(:hover) .icon-pin-small { transition: all 0.8s ease !important; }
+}
+/* force consistent size */    
+.top-site-outer .default-icon {
+    width: 101% !important;
+    height: 101% !important;
+    background-size: 75% !important;
+}
+    
+/* context menu */  
+.top-site-outer, .card-outer {
+    .context-menu-button  {
+        inset: 0 -2px auto auto !important;
+        background-color: transparent !important;
+        fill: var(--mode-color) !important;
+        border-radius: 50% !important;
+        transform: scale(1.3);
+        &:is(:hover, :focus) {
+            fill: var(--mode-color) !important;
+        }
+        &:hover {transform: scale(1.7);}
+    }
+    &.active .context-menu-button {
+        transform: scale(1.7);
+    }
+}
+
+/* fine tuning */
+.top-site-outer .title {
+    font-weight: bold !important;
+    text-transform: capitalize !important;
+    color: var(--mode-color) !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    & .sponsored-label {
+        color: var(--mode-color) !important;
+        opacity: 0.5;
+    }
+}
+.top-site-outer:is(:focus-within), .card-outer:is(.active,:focus-within) {
+    .tile, .card {
+        /*background-color: var(--uc-accent-color-2) !important;*/
+        transform: scale(1.15);
+        box-shadow: none !important;
+    }
+    .title {
+        text-decoration: underline !important;
+        opacity:1 !important;
+    }
+}
+.top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    background: transparent !important;
+}
+.add-button {
+    --button-background-color-primary: transparent !important;    
+}
+    
+    
+/* context menu ---------------------------------------------------------------- */ 
+
+/*menu*/    
+/*panel-list[id*="menu"], panel-list[class*="menu"] {*/
+panel-list {
+    background-color: var(--uc-newtab-menu-background)  !important;
+    border-radius: calc(var(--uc-newtab-rounding) - 10px) !important;
+    padding: 0.4rem 0.1em;
+    margin:1% 1% 0% 0% !important;
+    position: relative;
+    box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+    display: flex;
+    line-height: 26px;
+}
+
+/*menu items*/
+panel-list {
+    --button-background-color-menu-hover: var(--uc-button-selected) !important;
+    --button-text-color-menu-hover: var(--uc-accent-color-2) !important;
+    --panel-item-button-border-radius: calc(var(--uc-newtab-rounding) - 10px) !important;
+    --panel-menuitem-border-radius: calc(var(--uc-newtab-rounding) - 10px) !important;
+}
+
+
+/* modals ---------------------------------------------------------------------- */ 
+    
+.modalOverlayOuter {
+    background: var(--uc-newtab-menu-background)  !important;
+    backdrop-filter: blur(20px) !important;
+    color: var(--uc-text-color) !important;
+    border: 1px solid var(--uc-outline-border) !important;
+    & input[type="text"] {
+        background: none !important;
+        border-radius: var(--border-radius-small) !important;
+        border: 1px solid var(--uc-outline-border) !important;
+    }
+    .top-site-button .tile {
+
+        border: 1px solid var(--uc-outline-border) !important;
+    }
+}
+ 
+/* search bar & logo ----------------------------------------------------------- */
+
+/* logo */
+@media (-moz-pref("ultima.newtab.hide.logo")) {
+    .logo {display: none !important;}       
+}
+.logo-and-wordmark .wordmark {
+    fill: var(--mode-color) !important;
+}  
+/* search bar */
+:root:not([lwtheme]), :root[lwtheme] {
+    .search-inner-wrapper {
+        .searchmode-switcher {
+            --button-background-color-muted: color-mix(in srgb, var(--uc-button-selected), transparent 50%) !important;
+            --button-background-color-muted-hover: var(--uc-button-selected) !important;
+        }
+        .urlbar-input {
+            text-align: center;
+            margin-left: -55px !important;
+        }
+        .urlbar-background {
+            outline: none !important;
+            border: none !important;
+            background-color: rgba(50, 50, 50, 0.1) !important;
+            backdrop-filter: blur(33px);
+            border-radius: calc(var(--uc-newtab-rounding) + 9px) !important;
+            /*box-shadow: var(--uc-box-shadow) !important;*/
+            box-shadow: 0 10px 15px rgb(0 0 0 / 20%) !important;
+        }
+        .urlbarView-background {
+            background-color: rgba(50, 50, 50, 0.1) !important;
+            backdrop-filter: blur(33px);
+        }
+        .urlbar-input-container { outline: none !important;}
+    }
+}
+    
+/* widgets --------------------------------------------------------------------- */ 
+
+/*widgets*/
+.widget-wrapper article, article[class*="widget"] {
+    background: var(--uc-newtab-shortcut-background) !important;
+    color: var(--mode-color) !important;
+    border-radius: var(--uc-newtab-rounding) !important;
+    box-shadow: var(--uc-newtab-boxshadow) !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.lists .lists-add-button {
+    --lists-button-background: var(--uc-accent-color-4) !important;
+}    
+    
+.widgets-row-toggle {
+    --button-background-color-muted-hover: var(--uc-button-selected) !important;
+    --button-background-color-muted: var(--uc-button-selected) !important;
+    --button-text-color-muted: var(--mode-color) !important;
+    --button-text-color-muted-hover: var(--uc-accent-color-2) !important;
+}
+ 
+    
+/* stories --------------------------------------------------------------------- */ 
+
+.ds-card {
+    background: color-mix(in srgb, var(--uc-browser-color), transparent 55%) !important;
+    color: var(--mode-color) !important;
+    border-radius: var(--uc-newtab-rounding) !important;
+    box-shadow: var(--uc-newtab-boxshadow) !important;
+    filter: saturate(100%) !important;
+    backdrop-filter: blur(33px);
+    /* placeholder letter */
+    font-size: 32px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+
+}    
+    
+    
+/* customize menu -------------------------------------------------------------- */ 
+ 
+.open-customization-button {
+    cursor: pointer !important;
+    --button-background-color-primary: transparent !important;
+}       
+
+.customize-menu {
+    background-color: var(--uc-newtab-menu-background) !important;
+    border-radius: calc(var(--uc-newtab-rounding) - 9px) !important;
+    position: relative;
+    backdrop-filter: blur(33px);
+    background-blend-mode: overlay;
+}
+    
+/* home sections --------------------- */ 
+
+.home-section .divider { 
+    border-color: var(--uc-outline-border) !important;
+}
+
+.toggle-button, .selector {
+    cursor: pointer !important;
+}
+
+.home-section .section .selector {
+    display: contents !important;
+    border-radius: 11px !important;
+    border: 1px solid color-mix(in srgb, var(--mode-color), transparent 50%) !important;
+    padding-block: 5px;
+    padding-inline: 2px;
+}
+
+/* final touches --------------------- */
+
+.sections-mgmt-panel, .widgets-mgmt-panel, .themes-mgmt-panel {
+    background-color: var(--uc-layered-background) !important;
+    /*backdrop-filter: blur(33px);*/
+} 
+    
+.wallpaper-input {
+    border-radius: calc(var(--uc-newtab-rounding) - 10px) !important;
+}
+    
+    
+    
+/* grid adjustment over 1700px ------------------------------------------------- */
+   
+@media -moz-pref("user.theme.xtension.newtab.compact") {
+    /* got this idea from https://www.reddit.com/r/FirefoxCSS/comments/1m6u88z/comment/n4n9d70/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button */
+    @media (min-width: 1700px) {
+        .top-sites-list:has(.top-site-outer:nth-of-type(9)) {
+            grid-template-columns: repeat(12, 1fr) !important;
+        }
+    }    
+    /* and further reductions in spacing */      
+    .top-site-outer {
+        margin-block-end: 1px !important;
+    }      
+    .top-site-outer .top-site-inner > a {
+        padding: 1px 1px 1px !important;
+    }
+    .top-site-outer {
+        width: 110px !important;
+    }  
+}
+
+
+
+
+}} /*fin*/

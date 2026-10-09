@@ -5,9 +5,8 @@ A Transparent Adaptive Color Scheme, adapted to support Mica & Blur
 ```
 
 To use this color scheme:
-- Navigate to `about:config` page.
-- Search for `user.theme`.
-- Turn on `user.theme.transparent`
+- Open `userChrome Companion`, in the `Color Scheme Settings` section.
+- Turn on `theme.transparent`
 - Visit the Transparent Theme [Wiki](https://github.com/soulhotel/FF-ULTIMA/wiki/Transparent-Theming).
 
 Preview:

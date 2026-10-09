@@ -1,0 +1,15 @@
+{
+  "name": "ff-ultima-setup-wizard",
+  "private": true,
+  "scripts": {
+    "build": "esbuild index.js --bundle --minify --loader:.js=jsx --jsx=automatic --outfile=dist/bundle.js",
+    "watch": "esbuild index.js --bundle --loader:.js=jsx --jsx=automatic --outfile=dist/bundle.js --watch"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

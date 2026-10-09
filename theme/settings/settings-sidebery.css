@@ -1,0 +1,316 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Sidebar & Sidebery Settings
+
+sidebery hide vertical tabs
+sidebery expand on in-active windows
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* sidebar hide new header -------------------------------------------------------------------------- */
+
+/* sidebery hide vertical tabs ---------------------------------------------------------------------- */
+
+/* any time sidebery is active, the vertical tabs bar will be hidden */
+@media -moz-pref("ultima.tabs.hide-for-sidebery") {
+    :root:has(#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) {
+        /* hide vt */
+        #sidebar-container, #sidebar-splitter-launcher {
+            display: none !important;
+        }
+        /* hide hori tabs */
+        #tabbrowser-tabs[orient="horizontal"] {
+            display: none !important;
+        }
+        /* track hori tabs height*/
+        --uc-tabbar-height: 0px !important;
+    }    
+}
+
+
+/* sidebery expand on inactive windows -------------------------------------------------------------- */
+
+@media -moz-pref("ultima.sidebery.expandon.inactive-windows") {
+    #sidebar-box:-moz-window-inactive:not(:hover) {
+        max-width: unset !important;
+    }
+}
+
+/* sidebery autohide -------------------------------------------------------------------------------- */
+
+
+@media (-moz-pref("ultima.sidebery.autohide")) {
+    :root:has(#sidebar-box[checked][sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) {
+        /*
+        we need to position the sidebar box as absolute,
+        but we cant really identify the right inline position because
+        we cant properly access vertical tabs width at any given moment.
+        so either we hide the sidebar container...
+        or we can eventually "always" track vertical tab with: userchromejs watcher + --vt-width-tracker variable
+        */
+        /* for now */
+        /*#sidebar-container, #sidebar-launcher-splitter {
+            display: none !important;
+        }*/
+        /* eventually/maybe */
+        /*#sidebar-box {
+            left: calc(var(--vt-width-tracker) + (slightmargin) )
+            right: calc(var(--vt-width-tracker) + (slightmargin) )
+        }*/
+        /*even better would be to wrap #sidebar-box into a non-conforming container,
+        positioned relative, with the sidebar positioned absolutely to it,
+        would skip the need to track verttab widths, and really require*/
+        /*#ultima-sidebar-wrapper {
+            position: relative;
+            width: 50px or 0px;
+        }*/
+        
+        /*
+        preserved spacing for sidebar when collapsed,
+        #browser before/after elements take up this spacing,
+        the sidebar sits inside of it
+        if the above implementations proof successful, the #browser before/after can be replaced with the sidebar-wrapper
+        */
+
+/*         --sb-autohide-preserved-margin: 4px;
+        --sb-autohide-preserved-width: 50px;
+        @media -moz-pref("ultima.spacing.compact") {
+            --sb-autohide-preserved-margin: 0px;
+        }
+        
+        &:has(#sidebar-box:not([sidebar-positionend])) {
+            #browser::before {
+                content: "";
+                background-color: var(--uc-accent-color-2);
+                width: calc(var(--sb-autohide-preserved-width) + (var(--sb-autohide-preserved-margin) *2));
+                height: 100%;
+                @media -moz-pref("ultima.spacing.compact") {width: 45px;}
+                opacity: 1;
+            }            
+        }
+        &:has(#sidebar-box[sidebar-positionend]) {
+            #browser::after {
+                content: "";
+                background-color: var(--uc-accent-color-2);
+                width: calc(var(--sb-autohide-preserved-width) + (var(--sb-autohide-preserved-margin) *2));
+                height: 100%;
+                opacity: 1;
+                order: 3;
+            }            
+        } */
+
+        /* fixed positioning */
+/*         #sidebar-box { */
+            /* fixed positioning */
+/*             position: absolute !important;
+            top: 0; bottom: 0;
+            z-index: 100 !important; */
+            /* adopt wrapper spacing */
+/*             margin-inline: var(--sb-autohide-preserved-margin) !important;
+            min-width: var(--sb-autohide-preserved-width) !important;
+            &[sidebar-positionend] {
+                right: 0; left: unset !important;
+                @media not -moz-pref("ultima.sidebar.separator") { left: 0;}
+                @media -moz-pref("ultima.sidebar.separator")     {right: 0 !important;}
+            }
+        } */
+        /*splitter positioning adjustment*/
+/*         #sidebar-splitter {
+            z-index: 101 !important;
+        }
+        &:has(#sidebar-box:not([sidebar-positionend=""])) {
+            #sidebar-splitter {
+                order: -1 !important;
+            }
+            :has(#sidebar-splitter:hover) #sidebar-box::after {
+                left: 12px; transform: rotate(180deg);
+            }
+        }
+        &:has(#sidebar-box[sidebar-positionend=""]) {
+            :has(#sidebar-splitter:hover) #sidebar-box::after {
+                right: 12px;transform: rotate(180deg);
+            }
+        } */
+        /* we can do without this entire section above --- but it's (overlay) vs (pushing content to the side) and such */
+        /*hover zone*/
+/*         #sidebar-box {
+            overflow: visible !important;
+            z-index: 2;
+            &::before {
+                content: ""; position: absolute;
+                inset: 0 -4px 0 auto; margin-block: 55px;
+                background-color: var(--uc-accent-color-2);
+                width: 4px; border-radius: 33px;
+                opacity: 0;
+            }
+        }
+        #sidebar-box[sidebar-positionend] {
+            &::before {
+                inset: 0 auto 0 -4px;
+            }
+        }
+         */
+        
+        /* there is one more method... (below) */
+        
+        /* preserve sidebar spacing for various conditions */
+        --sb-autohide-preserved-margin: 0px;
+        --sb-autohide-preserved-width: 40px; /* < collapsed width */
+        --vt-collapsed-width: 50px;          /* < dont touch      */
+        @media -moz-pref("ultima.tabs.hide-for-sidebery") {
+            --sb-autohide-preserved-margin: 4px;
+        }
+        @media -moz-pref("ultima.spacing.compact") {
+            --sb-autohide-preserved-margin: 0px;
+        }
+        /* hide vt when expanded, means we only need to factor in a collapsed vt width or non existent vt */
+        @media not -moz-pref("ultima.tabs.hide-for-sidebery") {
+            #sidebar-container[sidebar-launcher-expanded] {
+                ~ #sidebar-box, ~ #sidebar-launcher-splitter {
+                    display: none !important;
+                }
+            }            
+        }
+        /* preserve spacing for a non-existent vt (hide-for-sidebery)  */
+        @media -moz-pref("ultima.tabs.hide-for-sidebery") {
+            &:has(#sidebar-box:not([sidebar-positionend])) {
+                #browser::before {
+                    content: "";
+                    background-color: var(--uc-accent-color-2);
+                    width: calc(var(--sb-autohide-preserved-width) + (var(--sb-autohide-preserved-margin) *1));
+                    height: 100%;
+                    order: 2;
+                    @media -moz-pref("ultima.sidebar.separator") {order: 6;}
+                    opacity: 0;
+                }                    
+            }
+            &:has(#sidebar-box[sidebar-positionend]) {
+                #browser::after {
+                    content: "";
+                    background-color: var(--uc-accent-color-2);
+                    width: calc(var(--sb-autohide-preserved-width) + (var(--sb-autohide-preserved-margin) *1));
+                    height: 100%;
+                    order: 6;
+                    @media -moz-pref("ultima.sidebar.separator") {order: 2;}
+                    opacity: 0;
+                }                       
+            }
+        }
+        /* preserve spacing if vt is expanded - we dont care about this because ^ (hide vt when expanded)
+        /* ... */
+        /* preserve spacing for an existing vt (no hide-for-sidebery), when vt is not expanded */
+        @media not -moz-pref("ultima.tabs.hide-for-sidebery") {
+            &:has(#sidebar-container:not([sidebar-launcher-expanded])) {
+                /* #browser before/after elements take up the spacing that the sidebar sits inside of */
+                &:has(#sidebar-box:not([sidebar-positionend])) {
+                    #browser::before {
+                        content: "";
+                        background-color: var(--uc-accent-color-2);
+                        width: calc(var(--sb-autohide-preserved-width) + (var(--sb-autohide-preserved-margin) *1));
+                        height: 100%;
+                        order: 2;
+                        @media -moz-pref("ultima.sidebar.separator") {order: 6;}
+                        opacity: 0;
+                    }                    
+                }
+                &:has(#sidebar-box[sidebar-positionend]) {
+                    #browser::after {
+                        content: "";
+                        background-color: var(--uc-accent-color-2);
+                        width: calc(var(--sb-autohide-preserved-width) + (var(--sb-autohide-preserved-margin) *1));
+                        height: 100%;
+                        order: 6;
+                        @media -moz-pref("ultima.sidebar.separator") {order: 2;}
+                        opacity: 0;
+                    }                       
+                }
+            }            
+        }
+        /* adjust splitter to sit in an accessibility position */
+        #sidebar-box {
+            &:not([sidebar-positionend]) ~ #sidebar-splitter {
+                z-index: 111 !important;
+                order: 1 !important;
+                /* adjust splitter image position - match splitter */
+                &::after {}         
+            }
+            &[sidebar-positionend] ~ #sidebar-splitter {
+                z-index: 111 !important;
+                /* adjust splitter image position - match splitter */
+                &::after {}  
+            }
+        }
+        /* fixed positioning for sidebar */
+        #sidebar-box {
+            /* fixed positioning */
+            position: absolute !important;
+            top: 0; bottom: 0;
+            z-index: 100 !important;
+            /* adopt wrapper spacing */
+            margin-inline: 0 !important;
+            min-width: var(--sb-autohide-preserved-width) !important;
+        }
+        /* conditional left/rights */
+        #sidebar-box {
+            @media not -moz-pref("sidebar.verticalTabs") {
+                &:not([sidebar-positionend]) {
+                    @media not -moz-pref("ultima.sidebar.separator")  {left: 0px !important;}
+                    @media -moz-pref("ultima.sidebar.separator")     {right: 0px !important;}
+                }
+                &[sidebar-positionend] {
+                    @media not -moz-pref("ultima.sidebar.separator") {right: 0px !important;}
+                    @media -moz-pref("ultima.sidebar.separator")      {left: 0px !important;}
+                }
+            }
+            @media not -moz-pref("ultima.tabs.hide-for-sidebery") {
+                &:not([sidebar-positionend]) {
+                    @media not -moz-pref("ultima.sidebar.separator")  {left: var(--vt-collapsed-width);}
+                    @media -moz-pref("ultima.sidebar.separator")     {right: 0;}
+                }
+                &[sidebar-positionend]      {
+                    @media not -moz-pref("ultima.sidebar.separator") {right: var(--vt-collapsed-width);}
+                    @media -moz-pref("ultima.sidebar.separator")      {left: 0;}
+                }
+            }
+            @media -moz-pref("ultima.tabs.hide-for-sidebery") {
+                &:not([sidebar-positionend]) {
+                    @media not -moz-pref("ultima.sidebar.separator")  {left: var(--sb-autohide-preserved-margin);}
+                    @media -moz-pref("ultima.sidebar.separator")     {right: var(--sb-autohide-preserved-margin);}
+                }
+                &[sidebar-positionend]      {
+                    @media not -moz-pref("ultima.sidebar.separator")  {right: var(--sb-autohide-preserved-margin);}
+                    @media -moz-pref("ultima.sidebar.separator")     {left: var(--sb-autohide-preserved-margin);}
+                }
+            }
+        }        
+        /*transitions*/
+        #sidebar-box:hover {
+            transition: width ease 0.2s !important;
+        }
+        #sidebar-box:not(:hover) {
+            transition: width ease 0.3s !important;
+        }
+        /*autohide*/
+        &:has(#sidebar-box:not(:hover))
+        :has(#sidebar-splitter:not(:hover))
+        :has(#sidebar-splitter:not([state="dragging"]))
+        {
+            #sidebar-box {
+                width: var(--sb-autohide-preserved-width) !important;
+                &::before {opacity: 0.4; transition: opacity ease 1s 0.8s !important;}
+            }
+
+        }
+        /*well, good enough. preserved width is pretty flexible here, we can even create some new settings by just manipulating it*/
+        @media -moz-pref("ultima.sidebery.autohide.4px") {
+            --sb-autohide-preserved-width: 4px !important;
+        }
+        @media -moz-pref("ultima.sidebery.autohide.120px") {
+            --sb-autohide-preserved-width: 120px !important;
+        }
+    }
+
+}
+
+

@@ -1,0 +1,117 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Settings for Menus, Panels, Context Menus
+
+compact menu spacing
+custom context menu spacing
+icon visibility
+restore unload tab option
+remove excess options
+hide seperators
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* compact menu spacing -------------------------------------------- */
+
+/* originally ultima.spacing.compact.menupanel, this captures multiple menu panels - making them compact */
+
+@media (-moz-pref("ultima.spacing.menus.compact")) {
+    panel, panelview {
+        --panel-menuitem-padding: 6px !important;
+        --panel-separator-padding: 2px 4px !important;
+    }
+    panelview:not(#unified-extensions-view) {
+        width: 22rem !important;
+        min-width: 22px !important;
+    }
+}
+
+/* custom context menu spacing ------------------------------------- */
+
+@media (-moz-pref("ultima.spacing.contextmenu.compact")) {
+    menupopup {
+        --panel-padding: 3px !important;
+        menugroup .menuitem-iconic { padding: 0 0 !important; }                             /* applies to < > ↻ ★ button */
+        menuitem:not(.menuitem-iconic), menu { padding: 3px 4px !important; }               /* applies to text menuitems */
+        .menuitem-iconic[image*="moz-extension"] { padding: 6px 3px !important; }           /* applies to extension icon */
+        .menuitem-iconic[image*="moz-extension"] .menu-icon {margin-right: 5px !important;} /* applies to extension icon */
+    }
+}
+@media (-moz-pref("ultima.spacing.contextmenu.relaxed")) {
+    menupopup {
+        --panel-padding: 6px !important;
+        menugroup .menuitem-iconic { padding: 2px 12px !important; }                         /* applies to < > ↻ ★ button */
+        menuitem:not(.menuitem-iconic), menu { padding: 6px 10px !important; }               /* applies to text menuitems */
+        .menuitem-iconic[image*="moz-extension"] { padding: 6px 10px !important; }           /* applies to extension icon */
+        .menuitem-iconic[image*="moz-extension"] .menu-icon {margin-right: 12px !important;} /* applies to extension icon */
+    }   
+}
+
+/* icon visibility ------------------------------------------------- */
+
+/* hide context menu icons (except for top navigation) */
+@media (-moz-pref("ultima.contextmenu.hide.extension-icons")) {
+    menupopup {
+         .menu-icon:not(menugroup *, .bookmark-item .menu-icon) {
+            visibility: collapse !important;
+        }
+    }
+}
+/* hide all context menu icons */
+@media (-moz-pref("ultima.contextmenu.hide.navigation-icons")) {
+    menupopup {
+        menugroup .menu-icon, #context-sep-navigation {
+            visibility: collapse !important;
+        }
+    }
+}
+
+/* hide seperators ------------------------------------------------ */
+
+@media (-moz-pref("ultima.contextmenu.hide.separators")) {
+    menupopup {
+        menuseparator, toolbarseparator {
+            display: none;
+        }
+    }
+}
+
+/* restore unload tab option --------------------------------------- */
+
+/* #context_unloadTab {
+  display: initial;
+} */
+
+/* remove excess options ------------------------------------------- */
+
+@media (-moz-pref("ultima.contextmenu.reduce.options")) {
+    #context-sep-screenshots,
+    #context-sendimage,
+    #context-openlinkinusercontext-menu,
+    #context-viewsource,
+    #toolbar-context-selectAllTabs,
+    #toolbar-context-bookmarkSelectedTab,
+    #context_selectAllTabs,
+    #context-ask-chat,
+    #context_askChat,
+    #context_aiSeparator,
+    #context-inspect-a11y,
+    #context_closeTabOptions,
+    #tabContextMenu #context_duplicateTab,         
+    #tabContextMenu #context_duplicateTabs,
+    #tabContextMenu #context_bookmarkSelectedTabs,
+    #context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"]
+    {
+        display: none !important;
+    }
+    #context-sendimage,
+    #context-openlinkinusercontext-menu {
+        display: none !important;
+    }
+    #tabContextMenu #context_bookmarkSelectedTabs,
+    #context_openANewTab[data-l10n-id="tab-context-new-tab-open-vertical"] {
+        display: none !important;
+    }
+}
+

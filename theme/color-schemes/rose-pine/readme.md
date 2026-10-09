@@ -5,9 +5,8 @@ By neyfua https://github.com/neyfua
 ```
 
 To use this color scheme:
-- Navigate to `about:config` page.
-- Search for `user.theme`.
-- Turn on `user.theme.rose-pine`
+- Open `userChrome Companion`, in the `Color Scheme Settings` section.
+- Turn on `theme.rose-pine`
 
 Preview:
 ![preview](./dark-preview.png)

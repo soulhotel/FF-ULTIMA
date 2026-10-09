@@ -5,9 +5,8 @@ By FF Ultima
 ```
 
 To use this color scheme:
-- Navigate to `about:config` page.
-- Search for `user.theme`.
-- Turn on `user.theme.scarlet`
+- Open `userChrome Companion`, in the `Color Scheme Settings` section.
+- Turn on `theme.scarlet`
 
 Preview:
 ![preview](./preview.png)

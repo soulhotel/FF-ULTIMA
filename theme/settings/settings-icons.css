@@ -1,0 +1,91 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Setting to override ultima.theme.icons
+
+All Custom Icons
+every color scheme can have different icons if it chooses to, but with this file...
+themed icons can be overridden with either default icons or other icon sets
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* All Custom Icons ---------------------------------------------------- */
+
+@media (-moz-pref("ultima.enable.icon-theme")) {
+    .tab-icon-image[src="chrome\:\/\/branding\/content\/icon32\.png"] {
+        content: url("../icons/firefox.svg");
+        fill: var(--tab-text-color) !important;
+    }
+    .tabbrowser-tab[selected] .tab-icon-image[src="chrome\:\/\/branding\/content\/icon32\.png"] {
+        fill: var(--uc-tab-selected-text) !important;
+    }
+    @media (-moz-pref("ultima.theme.default")) {
+        .tab-icon-image[src="chrome\:\/\/branding\/content\/icon32\.png"] {
+            content: url("../icons/ultimafox.png");
+        }
+    }
+    #unified-extensions-button {
+        list-style-image: url("../icons/extensions.svg") !important;
+        fill: var(--uc-text-color) !important;
+    }
+    [lwtheme] #unified-extensions-button {
+        fill: var(--toolbarbutton-icon-fill) !important;
+    }
+    .bookmark-item[container=true] {
+        list-style-image: url("../icons/bm.svg") !important;
+    }
+    #ublock0_raymondhill_net-BAP image{
+        list-style-image: url("../icons/ublock.svg") !important;
+        fill: var(--uc-accent-color-2) !important;
+    }
+    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {
+        list-style-image: url("../icons/ublock.svg") !important;
+        fill: var(--uc-button-red) !important;
+    }
+    #forward-button image {
+        list-style-image: url("chrome://global/skin/icons/arrow-right.svg") !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
+    #back-button image {
+        list-style-image: url("chrome://global/skin/icons/arrow-left.svg") !important;
+        stroke: var(--toolbarbutton-icon-fill) !important;
+    }
+    #nav-bar-overflow-button {
+        list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+    }
+    #alltabs-button {
+        list-style-image: url("chrome://global/skin/icons/arrow-down-12.svg") !important;
+    }
+    #PlacesChevron, #nav-bar-overflow-button {
+        list-style-image: url("chrome://global/skin/icons/more.svg") !important;
+    }
+}
+
+/* extension icon default 🧩 ------------------------------------------- */
+
+@media (-moz-pref("ultima.default.extension-icon")) {
+    #unified-extensions-button {
+        list-style-image: url("chrome://mozapps/skin/extensions/extension.svg") !important;
+    }
+}
+
+/* bookmark icon default 🖿 -------------------------------------------- */
+
+@media (-moz-pref("ultima.default.bookmark-folder-icon")) {
+    .bookmark-item[container=true] {
+        list-style-image: url("chrome://global/skin/icons/folder.svg") !important;
+    }
+}
+
+/* ublock icon default 🛡️ --------------------------------------------- */
+
+@media (-moz-pref("ultima.default.ublock-icon")) {
+    /* ublock on */
+    #ublock0_raymondhill_net-BAP image{
+        list-style-image: var(--webextension-toolbar-image, inherit) !important;
+    }
+    /* ublock off */
+    #ublock0_raymondhill_net-BAP[tooltiptext="uBlock Origin (off)"] image {
+        list-style-image: var(--webextension-toolbar-image, inherit) !important;
+    }
+}

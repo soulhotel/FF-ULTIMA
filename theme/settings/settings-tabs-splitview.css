@@ -1,0 +1,101 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Split View Tabs styles for tabs in the tabbar, and split view content
+
+Tab Settings are split between multiple files:
+
+./settings-tabs-general.css                for general tab settings
+./settings-tabs-vertical.css               for vertical tab specific settings.
+./settings-tabs-horizontal.css             for horizontal tab specific settings.
+this file ->                               for split view styles
+./settings-tabs-groups-and-containers.css  for tab group & container styles
+./settings-tabs-outlines.css               for tab outline styles
+
+split view seperator line
+split view gradient tabs background
+split view content outline
+split view focus opacity
+split view focus shrink
+keep vertical tab splitview tabs vertical
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* split view seperator line ------------------------------------------------------------------------------------ */
+/* toggle the visibility of the splitview tab seperator line in tabbar */
+@media -moz-pref("ultima.tabs.splitview.hide.separator") {
+    /*tabbar slit/border removal*/
+    #tabbrowser-tabs[orient="vertical"]:not([expanded]) tab-split-view-wrapper .tabbrowser-tab:first-child,
+    tab-split-view-wrapper .tabbrowser-tab:last-child {
+        border: 0 !important;
+    }
+}
+
+/* split view gradient tabs background -------------------------------------------------------------------------- */
+/* split view tabs in the tabbar have a gradient background*/
+@media -moz-pref("ultima.tabs.splitview.gradient.background") {
+    #tabbrowser-tabs {
+        tab-split-view-wrapper {
+            background: linear-gradient(-80deg, rgba(238,119,82,0.03), rgba(131,60,126,0.1), rgba(35,250,213,0.004)) !important;
+            background-size: 100% !important;
+            &:has(.tabbrowser-tab[selected]) {
+                background: linear-gradient(-80deg, rgba(238,119,82,0.7), rgba(131,60,126,0.7), rgba(35,250,213,0.7)) !important;
+            }
+        }
+    }
+}
+
+/* split view content outline ----------------------------------------------------------------------------------- */
+/* toggle the visibility of default splitview content outline */
+@media -moz-pref("ultima.tabs.splitview.content.outline") {
+    #tabbrowser-tabpanels[splitview] .split-view-panel.deck-selected {
+        .browserContainer {
+            outline: 2px solid var(--uc-accent-color-2) !important;
+            outline-offset: 0px;
+        }  
+    } 
+}
+
+/* split view focus opacity ------------------------------------------------------------------------------------- */
+/* when using split tabs, the unfocused view becomes less opaque */
+@media -moz-pref("ultima.tabs.splitview.focus.opacity") {
+    #tabbrowser-tabpanels[splitview] {
+        & .browserStack {
+            .split-view-panel:not(.deck-selected) > .browserContainer > & {
+                filter: brightness(70%);
+                opacity:0.6;
+                transition: opacity 1s ease, filter 0.6s ease;
+                &:hover {
+                    filter: initial !important;
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+}
+
+/* split view focus shrink -------------------------------------------------------------------------------------- */
+/* when using split tabs, the second view shrinks into a portrait size when not focused */
+@media -moz-pref("ultima.tabs.splitview.focus.shrink") {
+    .split-view-panel {
+        transition: width 0.2s linear, min-width 0.2s linear, max-width 0.2s linear !important;
+    }
+    #tabbrowser-tabpanels[splitview]:has(.split-view-panel[column="1"]:not(:hover)) {
+        & .split-view-panel[column="0"] {
+            min-width: 70% !important;
+
+        }
+        & .split-view-panel[column="1"] {
+            max-width: 30% !important;
+        }
+    }
+}
+
+
+/* keep vertical tab splitview tabs vertical --------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.vert.splitview.stay.vertical") {
+    #tabbrowser-tabs[orient="vertical"][expanded] tab-split-view-wrapper {
+        grid-template-columns: 1fr !important; /* or auto, whatever works */
+    }
+}
+

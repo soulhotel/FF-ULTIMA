@@ -1,0 +1,3 @@
+content userchromejs ./
+resource userchromejs ../scripts/
+content userscripts ../scripts/

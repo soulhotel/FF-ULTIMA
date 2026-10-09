@@ -1,0 +1,58 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Alternative Styles for the Find Bar
+
+findbar on top (broken since firefox (?))
+disable findback background image
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* findbar on top ------------------------------------------------------------ */
+/*by he (https://github.com/he23251) */
+
+@media (-moz-pref("ultima.findbar.position.top")) {
+    /* Show searchbox at the top */
+    .browserContainer > findbar {
+        order: -1;
+        margin-top: 10px;
+    }
+
+    /* Limit the searchbox width */
+    .browserContainer > findbar .findbar-textbox {
+        max-width: 200px;
+    }
+
+    /* Improve searchbox visibility and look */
+    .found-matches {
+        border-radius: var(--toolbarbutton-border-radius) !important;
+        border: solid 2px var(--uc-accent-color-2) !important;
+/*         background-color: var(--uc-accent-color-4) !important; */
+        @media (prefers-color-scheme: light) {
+            background-color: color-mix(in srgb,  var(--uc-accent-color-2) 30%, transparent) !important;
+            border: solid 2px color-mix(in srgb,  var(--uc-accent-color-2) 30%, transparent) !important;
+        }
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        line-height: 1.7 !important;
+        font-weight: 600 !important;
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+
+/* disable findback background image */
+/* note: with the introduction of Nova, and many more background gradients being used
+   best way to handle this (on top of the theme) is to simply give the findbar a background
+best way to handle this is to simply give the findbar a background */
+
+@media (-moz-pref("ultima.findbar.disable.background.image")) {
+    :root[lwtheme], :root:not([lwtheme]) {
+        findbar {
+            background: var(--uc-browser-color) !important;
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------- */
+

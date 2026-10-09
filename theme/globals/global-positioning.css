@@ -1,0 +1,487 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+┏┓┏┓  ┳┳┓ ┏┳┓┳┳┳┓┏┓
+┣ ┣   ┃┃┃  ┃ ┃┃┃┃┣┫
+┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
+                   
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Global Positioning for main elements of the browser
+
+This file handles the global positioning of main elements of the browser.
+It handles spacing/positioning of content & sidebars, tracking of toolbar heights & etc.
+Some of the methods below allow multiple conflicting settings to all work in harmony.
+
+Global variables
+Toolbar spacing
+Notification Deck
+Title bar
+Menu bar
+Nav bar
+Url bar
+Bookmark bar
+Browser Content
+Browser Content child elements
+Findbar
+Horizontal tabs
+Split View tabs
+Vertical tab bar
+Sidebar
+Main Browser Spacing
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Global variables --------------------------------------------------------------------- */
+
+:root {
+    --uc-menubar-height:            40px;
+    --uc-navbar-height:             40px;
+    --uc-tabbar-height:             40px;
+    --uc-bookbar-height:            40px;
+    --uc-notify-height:             40px;
+    --uc-topbars-combined-height:   calc(var(--uc-menubar-height) + var(--uc-navbar-height) + var(--uc-tabbar-height) + var(--uc-bookbar-height) + var(--uc-notify-height));
+    --uc-findbar-height:            40px;
+
+    --uc-content-margins:           4px;
+    --uc-vt-inline-margins:         0px;
+    --uc-vt-topdown-margins:        0px;
+    --uc-sb-inline-margins:         0px;
+    --uc-sb-topdown-margins:        4px;
+
+    --uc-collapsed-tabs-width:      41px;
+    --uc-tab-padding:               2px;
+    /*--tab-min-width:              55px;*/ /* overwrite default */
+    --tab-min-width-pref:           55px !important;
+    --uc-vertical-collapsed-width:  55px;
+    --uc-vertical-expanded-width:   250px;
+    /*individual tabs*/
+    --tab-min-height:               35px;
+    --tab-block-margin:             2px;
+    --tab-overflow-pinned-tabs-width: initial !important; /*dont touch*/
+}
+
+/* Toolbar spacing ----------------------------------------------------------------------*/
+
+/* define toolbar heights - all of these are defaults except for menubar (default is usually 29px) */
+#toolbar-menubar       {min-height: var(--uc-menubar-height) !important}
+#nav-bar               {min-height: var(--uc-navbar-height)  !important}
+#TabsToolbar           {min-height: var(--uc-tabbar-height)  !important}
+#PersonalToolbar       {height:     var(--uc-bookbar-height) !important}
+#notifications-toolbar {min-height: var(--uc-notify-height)  !important}
+
+/* tracking toolbar heights here, allows us to properly depend on their value throughout the theme. */
+#main-window:not([chromehidden="menubar toolbar location directories status extrachrome "]) {
+    #navigator-toolbox {height: var(--uc-topbars-combined-height) !important;}
+}
+
+:root { /* even when a toolbar's not visible, we track */
+    &:has(#toolbar-menubar[inactive="true"])  {--uc-menubar-height: 0px !important}
+    @media (-moz-os-version: macos)           {--uc-menubar-height: 0px !important} /*  macos - no menubar    */
+    @media -moz-pref("sidebar.verticalTabs")  {--uc-tabbar-height:  0px !important} /*  verttabs - no tabbar  */
+    &:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important}
+    &:has(#PersonalToolbar[collapsed=""])     {--uc-bookbar-height: 0px !important}
+    &:not(:has(notification-message))         {--uc-notify-height:  0px !important}
+}/*#tab-notification-deck*/
+
+/* even when fullscreen mode, we track */
+:root[inFullscreen="true"] {
+    --uc-menubar-height: 0px !important;
+    @media -moz-pref("sidebar.verticalTabs") {
+     --uc-tabbar-height: 0px !important;
+    }
+    --uc-bookbar-height: 0px !important;
+    /*--uc-notify-height:  0 !important;*/
+}
+
+/* note: the use of "0px" instead of "0" is required for future calculation parsing */
+
+/* Title bar ----------------------------------------------------------------------------*/
+
+/* accessibility: Reduce titlebar spacers */
+.titlebar-spacer[type="pre-tabs"]  {width: 4px !important;} /*default 40px*/
+.titlebar-spacer[type="post-tabs"] {width: 4px !important;} /*default 40px*/
+#tabbrowser-tabs { border: 0 !important;}
+#TabsToolbar {margin: 0 !important;}
+
+/* Menu bar -----------------------------------------------------------------------------*/
+
+#toolbar-menubar {
+    max-height: var(--uc-menubar-height) !important;
+    height: var(--uc-menubar-height);
+    margin-left: 6px !important;
+    align-items: center;
+}
+#menubar-items {
+    justify-content: center !important;
+}
+#menubar-items menu[open] {
+    border-bottom: 0 !important;
+}
+
+/* Nav bar ------------------------------------------------------------------------------*/
+
+/* accessibility:  reduce what's displayed on the navbar when the browser reaches smaller widths */
+@media (max-width: 700px) {
+    #nav-bar[downloadsbuttonshown][unifiedextensionsbuttonshown] #urlbar-container {
+        max-width: 240px !important;
+    }
+}
+@media (max-width: 600px) {
+    #unified-extensions-button, #PanelUI-button {
+        display:none;
+    }
+}
+/* testing this top padding */
+/* @media
+    not (-moz-pref("ultima.navbar.autohide")),
+    not (-moz-pref("ultima.navbar.float")),
+    not (-moz-pref("ultima.navbar.float.full")) {
+        #nav-bar { padding-top: 1px !important; }
+} */
+/* infobar, need to figure out a proper way to link hidden state to visibility settings */
+/* .infobar {
+    width: fit-content !important;
+    left: 40px !important;
+    box-shadow: var(--uc-box-shadow) !important;
+    background-color: var(--uc-browser-color) !important;
+    border-radius: 8px !important;
+} */
+
+/* Url bar ------------------------------------------------------------------------------*/
+
+.urlbar[breakout-extend] .urlbar-background {
+    margin-top: 6px !important;
+    /*inset:  unset !important;*/
+}
+
+/* Bookmark bar ------------------------------------------------------------------------ */
+
+#PersonalToolbar { 
+    border: 0 !important;
+    padding: 2px 4px !important;
+    & .bookmark-item {
+        padding: 8px !important;
+        border-radius: var(--uc-button-border-radius) !important;
+        & .toolbarbutton-icon {
+            margin-right: 6px !important;
+        }
+    }
+}
+
+/* Notification Stack -------------------------------------------------------------------*/
+
+#notifications-toolbar {
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+.notificationbox-stack, notification-message {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    --message-bar-container-gap: 6px !important;
+}
+notification-message {
+    display: contents !important;
+    align-items: center !important;
+}
+.container:has(.actions.active, [data-l10n-id="moz-message-bar-close-button"]) {
+    padding-inline: 12px !important;
+    align-items: center !important;
+}
+
+/* Browser Content ----------------------------------------------------------------------*/
+
+/* borders & outlines & borders & outlines & */
+#appcontent, #tabbrowser-tabbox, .browserContainer {
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+}
+
+.browserContainer {
+    border-radius: var(--uc-border-radius) !important;
+    margin: var(--uc-content-margins) !important;
+    /* going to experiment with a static 4px margin on this container.
+    all top level elements warping around Content should make things much
+    easier to debug, easier to maintain, future-proof, easier to work with */
+}
+:root[inDOMFullscreen] {
+    .browserContainer {border-radius: 0 !important;}    
+}
+@media -moz-pref("ultima.spacing.compact"), -moz-pref("ultima.spacing.compact.on.fullscreen") {
+    .browserContainer {border-radius: 0 !important;}    
+}
+
+/* Browser Content child elements -------------------------------------------------------*/
+
+/* browser toolbox splitter */
+.devtools-toolbox-splitter {
+    margin: 0 55px !important;
+    height: 4px !important;
+    opacity: 0 !important;
+    border-radius: var(--uc-border-radius) !important;    
+    &:hover { opacity: 0.5 !important; }    
+}
+/* splitter arrow overlay */   
+.browserContainer:has(.devtools-toolbox-splitter:hover) {
+    ::after {
+        content:"";
+        position: fixed; display: flex; z-index: 99999;
+        bottom: 40%; left: 50%;
+        transform: rotate(90deg) translateX(-50%);
+        height: 28px; width: 28px;
+        background: url("../icons/splitter-r.gif") center center no-repeat;
+        background-size: contain;
+        background-color: var(--uc-accent-color-2);
+        border-radius:100%;
+        transition: opacity ease-in-out 1s, background-color ease 1s;
+        pointer-events: none;
+    }
+}
+
+/* Findbar ----------------------------------------------------------------------------- */
+
+.browserContainer {
+    & findbar {
+        border: 0;
+        margin: 0;
+        margin-top: 4px !important;
+        padding: 0 0 2px 8px !important;
+        align-items: center !important;
+        height: var(--uc-findbar-height) !important;
+    }
+    & .findbar-container {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: 40px !important;
+    }
+    & .findbar-textbox {
+        border: 0 !important;
+        min-height: 32px !important;
+    }
+    & findbar .found-matches {
+        min-height: 32px !important;
+        padding-inline: 10px;
+        text-align:center;
+        align-content: center;
+    }
+}
+
+/* Horizontal tabs --------------------------------------------------------------------- */
+
+#TabsToolbar {
+    align-items: center;
+}
+/* force scrollbox to update / un-render ghost tabs */
+.tabbrowser-tab:not([pinned], [fadein]) {
+    max-width: 0.1px;
+    min-width: 0.1px;
+    visibility: collapse;
+}
+
+/* Split View Tabs ----------------------------------------------------------------------*/
+
+#tabbrowser-tabpanels[splitview] .split-view-panel.split-view-panel-active {
+    margin: 0 !important;
+}
+#tabbrowser-tabpanels[splitview] .split-view-splitter {
+    border: 0 !important;
+    width: 3px;
+    z-index: 999;
+    margin-inline: -4px !important;
+}
+
+/* Vertical tab bar ---------------------------------------------------------------------*/
+
+#tabbrowser-tabs[orient="vertical"] {
+    margin-inline: var(--uc-vt-inline-margins) !important;
+    margin-block: var(--uc-vt-topdown-margins) !important;
+}
+#sidebar-container {
+    border: 0 !important;
+}
+/* dragging empty space in vertical tab bar allows window drag */
+#sidebar-container { @media not (-moz-platform: windows) {
+    -moz-window-dragging: drag; /* windows doesnt respond well to this, mac/linux fine */
+}}
+
+/* splitter style could be split into global-theme but the overall approach
+is crucial for maintaining "positioning" (since they take up vital amount of width) */
+/* vertical tabs splitter */
+#sidebar-launcher-splitter {
+    width: 4px !important;   /* width + margin-inline make up our spacing */
+    margin-inline: -2px !important;
+    @media (-moz-pref("ultima.spacing.compact")) {
+        margin-inline: 0px !important;
+    }
+    margin-block: 55px !important;
+    background: var(--uc-accent-color-2) !important;
+    border-radius: var(--uc-border-radius) !important;
+    border: 0 !important;
+    opacity: 0 !important;
+    &:hover { opacity: 0.5 !important; }
+}
+/* splitter arrow overlay */   
+:root:not([inDOMFullscreen="true"]) {
+    &:has(#sidebar-launcher-splitter:hover) #sidebar-container::after {
+        content:"";
+        position: fixed; display: flex; z-index: 99999;
+        top: 45vh;
+        height: 28px; width: 28px;
+        background: url("../icons/splitter-r.gif") center center no-repeat;
+        background-size: contain;
+        background-color: var(--uc-accent-color-2);
+        border-radius:100%;
+        transition: opacity ease-in-out 1s, background-color ease 1s;
+        pointer-events: none;
+    }
+    &:has(#sidebar-container:not([sidebar-positionend=""])) {
+        :has(#sidebar-launcher-splitter:hover) #sidebar-container::after {
+            right: 12px;
+        }
+    }
+    &:has(#sidebar-container[sidebar-positionend=""]) {
+        :has(#sidebar-launcher-splitter:hover) #sidebar-container::after {
+            left: 12px;
+        }
+    }
+}
+
+/* Sidebar ------------------------------------------------------------------------------*/
+
+#sidebar-box {
+    margin-inline: var(--uc-sb-inline-margins);
+    margin-block: var(--uc-sb-topdown-margins) !important;
+/* inline not-important to avoid conflict with expandonhover margin-inline */
+}
+#sidebar { 
+    border-radius: var(--uc-border-radius) !important;
+    @media (-moz-pref("ultima.spacing.compact")) {border-radius: 0 !important;}
+}
+#sidebar-box {
+    border: 0 !important;
+}
+/* sidebar splitter */
+#sidebar-splitter {
+    width: 4px !important; /* width + margin-inline make up our spacing */
+    margin-inline: -2px !important;
+    @media (-moz-pref("ultima.spacing.compact")) {
+        margin-inline: -2px !important;
+    }
+    margin-block: 55px !important;
+    background: var(--uc-accent-color-2) !important;
+    border-radius: var(--uc-border-radius) !important;
+    border: 0 !important;
+    opacity: 0 !important;
+    &:hover { opacity: 0.5 !important; }
+}
+/* splitter arrow overlay */   
+:root:not([inDOMFullscreen="true"]) {
+    &:has(#sidebar-splitter:hover) #sidebar-box::after {
+        content:"";
+        position: fixed; display: flex; z-index: 99999;
+        top: 45vh;
+        height: 28px; width: 28px;
+        background: url("../icons/splitter-r.gif") center center no-repeat;
+        background-size: contain;
+        background-color: var(--uc-accent-color-2);
+        border-radius:100%;
+        transition: opacity ease-in-out 1s, background-color ease 1s;
+        pointer-events: none;
+    }
+    &:has(#sidebar-container:not([sidebar-positionend=""])) {
+        :has(#sidebar-splitter:hover) #sidebar-box::after {
+            right: 12px;
+        }
+    }
+    &:has(#sidebar-container[sidebar-positionend=""]) {
+        :has(#sidebar-launcher-splitter:hover) #sidebar-box::after {
+            left: 12px;
+        }
+    }
+}
+
+
+/* Main Browser Spacing -----------------------------------------------------------------*/
+/*
+vertical tabbar, sidebar, findbar, navigatortoolbox...
+are all *main elements*, existing *around* Browser Content...
+So they will also adjust position when needed - to cater to Browser Content.
+*/
+
+/* below are the only cases where Browser Content needs adjustment: overlayed navbar (autohide) means uniform margin */
+
+:root {
+    @media -moz-pref("ultima.spacing.compact") {
+        --uc-content-margins: 0 !important;
+    }
+    &[inDOMFullscreen] {
+        --uc-content-margins: 0 !important;
+    }
+    @media (-moz-pref("ultima.navbar.autohide")) or (-moz-pref("ultima.navbar.bottom")) or (-moz-pref("ultima.navbar.float")) or (-moz-pref("ultima.navbar.autohide")) {
+        --uc-content-margins: 4px 4px 4px 4px;
+    }
+    @media (not (-moz-pref("ultima.navbar.autohide"))) and (not (-moz-pref("ultima.navbar.float"))) and (not (-moz-pref("ultima.navbar.float.full"))) {
+        --uc-content-margins: 2px 4px 4px 4px;
+        --uc-sb-topdown-margins: 2px 4px;
+    }
+}
+
+/* Vert tabbar positioning ---------------------------------------- */
+
+/* vtabs, by default, have bad spacing. consuming margin like this centers the container horizontally. */
+:root:has(#sidebar-container[sidebar-launcher-expanded]:not([sidebar-positionend]) #tabbrowser-tabs[orient="vertical"][expanded]) {
+    --uc-vt-inline-margins:  0 -4px;
+}
+:root:has(#sidebar-container[sidebar-launcher-expanded][sidebar-positionend] #tabbrowser-tabs[orient="vertical"][expanded]) {
+    --uc-vt-inline-margins: -4px 0;
+}
+:root[sidebar-expand-on-hover]:has(#sidebar-container[sidebar-launcher-expanded] #tabbrowser-tabs[orient="vertical"][expanded]) {
+    --uc-vt-inline-margins:  0;
+}
+
+/* Sidebar positioning -------------------------------------------- */
+
+/* below covers any case of sidebar margins needing adjustment */
+@media -moz-pref("ultima.spacing.compact") { :root {
+    --uc-sb-topdown-margins: 0 !important;
+    --uc-sb-inline-margins: 0 !important;
+}}
+/* below covers sidebar margine-inline adjustments, when vert tabs are present */
+:root:not([sidebar-expand-on-hover]):has(#sidebar-container[sidebar-launcher-expanded]):has(#sidebar-box:not([sidebar-positionend])) {
+    --uc-sb-inline-margins:  4px 0px;
+    @media -moz-pref("ultima.sidebar.separator") {--uc-sb-inline-margins: 0 4px;}
+}
+:root:not([sidebar-expand-on-hover]):has(#sidebar-container[sidebar-launcher-expanded]):has(#sidebar-box[sidebar-positionend]) {
+    --uc-sb-inline-margins:  0 4px;
+    @media -moz-pref("ultima.sidebar-.separator") {--uc-sb-inline-margins: 4px 0px;}
+}
+
+/* sidebar margine-inline adjustments, when vert tabs are expandOnHover */
+/* :root[sidebar-expand-on-hover]:has( #sidebar-container:hover:not([sidebar-positionend]) )
+{
+    #sidebar-box {margin-inline: var(--sidebar-launcher-collapsed-width) 0 !important;}
+} */
+/* :root:has(#sidebar-box[sidebar-launcher-expanded][sidebar-launcher-hovered][sidebar-positionend], [sidebar-ongoing-animations]) {
+    #sidebar-box {margin-inline: 0 var(--sidebar-launcher-collapsed-width) !important;}
+} */
+
+
+
+
+
+
+
+
+/* menu panels usually popout at the corner of buttons, instead of center of button
+this below keeps them (somewhat*) centered, without leaking through the window */
+/* panel[position="bottomleft topleft"] {} */
+/* actually nevermind, selectors arent accurate enough to target all*/
+#appMenu-popup[position="bottomright topright"] {
+    margin-inline: -100px !important;
+}
+
+
+

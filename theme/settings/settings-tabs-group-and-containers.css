@@ -1,0 +1,336 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Styles for Tab Groups and Container Tabs
+
+Tab Settings are split between multiple files:
+
+./settings-tabs-general.css                for general tab settings
+./settings-tabs-vertical.css               for vertical tab specific settings.
+./settings-tabs-horizontal.css             for horizontal tab specific settings.
+./settings-tabs-splitview.css              for split view styles
+this file ->                               for tab group & container styles
+./settings-tabs-outlines.css               for tab outline styles
+
+tab groups adjustments
+tab groups labels
+tab groups backgrounds
+tab groups background transitions
+tab containers
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* tab groups adjustments --------------------------------------------------------------------------------------- */
+
+/* default adjustments */
+.tab-group-label {
+    cursor: pointer !important;
+}
+/* adjust label text positioning */
+.tab-group-label {
+    text-align: left !important;
+    align-self: auto !important;
+    align-content: center !important;
+}
+/* make collapse actually collapse */
+tab-group[collapsed] {
+    .tabbrowser-tab { visibility: collapse !important; }
+    .tab-group-overflow-count-container { visibility:collapse !important; }
+}
+/* remove double background */
+.tab-group-label-hover-highlight {
+    background: none !important;
+}
+/* remove indentation */
+#tabbrowser-tabs[orient="vertical"][expanded] {
+  tab-group .tabbrowser-tab {
+    margin-inline-start: 0 !important;
+  }
+}
+/* remove container padding (causes content to shift when collapsed) */
+.tab-group-label-container {
+    padding-block-end: 0 !important;
+}
+/* remove group outline */
+.tab-group-line, .tab-group-label-container::after {
+    opacity:0 !important;
+}
+/* tab group styles can re-enable */
+
+/* tab groups labels -------------------------------------------------------------------------------------------- */
+
+@media -moz-pref("ultima.tabs.tabgroups.label.tthornton") {
+    #tabbrowser-tabs[orient="vertical"][expanded] .tab-group-label {
+        align-self: start !important;
+    }
+    .tab-group-label {
+        max-width: 150px !important;
+        border-radius: 2px !important;
+    }
+}
+
+@media -moz-pref("ultima.tabs.tabgroups.label.circular") {
+    .tab-group-label {
+        border-radius: 33px !important;
+        padding-inline: 10px !important;
+    }
+    .tab-group-label[aria-description="Unnamed Group — Tab Group"] {
+        max-width: 25px !important;
+    }
+}
+
+@media -moz-pref("ultima.tabs.tabgroups.label.pill") {
+    /* shrink label */
+    .tab-group-label-container, .tab-group-label {
+        max-height: 15px !important;
+        max-width: 110px !important;
+        line-height: 0 !important;
+    }
+    /* adjust spacing */
+    .tab-group-label-container {
+        margin-block: 5px;
+    }
+    /* style */
+    .tab-group-label {
+        border-radius: 33px !important;
+        padding-left: 12px !important;
+        &:hover {transform:scale(1.1); transition: transform ease 0.4s;}
+    }
+    /* no text visible on collapsed sidebar */
+    #sidebar-container:not([sidebar-launcher-expanded]) .tab-group-label {
+        color: transparent !important;
+    }
+}
+
+@media -moz-pref("ultima.tabs.tabgroups.label.ultima") {
+    /* replicate themes tab style */
+    .tab-group-label {
+        border-radius: var(--uc-tab-border-radius) !important;
+        background-color: var(--uc-tab-selected) !important;
+        color: var(--uc-text-color) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        padding-inline: 10px !important;
+        min-width: calc(100% + 5px) !important; height: var(--tab-min-height) !important;
+    }
+    /* outline when active tab */
+    tab-group:is([hasactivetab]) .tab-group-label {
+        outline: 2px solid var(--uc-accent-border);
+    }
+    /* adjust spacing */
+    #tabbrowser-tabs[orient="vertical"] .tab-group-label {
+        margin-inline-start: -3px !important;
+    }
+    #tabbrowser-tabs[orient="vertical"] .tab-group-label-container {
+        margin-bottom: 5px !important;
+    }
+    #tabbrowser-tabs[orient="horizontal"] .tab-group-label-container {
+        margin-right: 5px !important;
+    }
+    #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-group-label {
+        padding: 3px 0 0 13px !important;
+    }
+    /* arrow indicator */
+    #tabbrowser-tabs[orient="vertical"][expanded], #tabbrowser-tabs[orient="horizontal"] {
+        .tab-group-label {
+            background-image: url("chrome://global/skin/icons/arrow-left-12.svg");
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            -moz-context-properties: fill; fill: var(--tab-group-background-color);
+            padding-right: 32px !important; /* reserved space for arrow indicator */
+        }
+    }
+    /* vertical tabs arrow */
+    #tabbrowser-tabs[orient="vertical"][expanded] {
+        .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-left-12.svg");}
+        tab-group[collapsed] .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-down-12.svg");}
+    }
+    /* horizontal tabs arrow */
+    #tabbrowser-tabs[orient="horizontal"] {
+        .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-left-12.svg");}
+        tab-group[collapsed] .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-right-12.svg");}
+    }
+}
+
+@media -moz-pref("ultima.tabs.tabgroups.label.arrow") {
+    /* tabs.tabgroups.label.ultima styling works really well for positioning, reusing it here */
+    .tab-group-label {
+        border-radius: var(--uc-tab-border-radius) !important;
+        background-color: transparent !important;
+        color: var(--tab-group-background-color) !important;
+        padding-inline: 10px !important;
+        min-width: calc(100% + 5px) !important; height: var(--tab-min-height) !important;
+    }
+    tab-group:has(.tab-group-label:hover, [movingtab]) {
+        .tab-group-label {
+            background-color: var(--uc-tab-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    /* adjust spacing */
+    #tabbrowser-tabs[orient="vertical"] .tab-group-label {
+        margin-inline-start: -3px !important;
+    }
+    #tabbrowser-tabs[orient="vertical"] .tab-group-label-container {
+        margin-bottom: 5px !important;
+    }
+    #tabbrowser-tabs[orient="horizontal"] .tab-group-label-container {
+        margin-right: 5px !important;
+    }
+    /* arrow indicator */
+    .tab-group-label {
+        background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+        background-repeat: no-repeat;
+        background-position: left 10px top 50%;
+        -moz-context-properties: fill; fill: var(--tab-group-background-color);
+        padding-left: 32px !important; /* text makes space for arrow indicator */
+    }
+    tab-group[collapsed] .tab-group-label {
+        background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
+    }
+    /* hacky adjustment for arrow taking up collapsed space */
+    #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-group-label {
+        padding-left: 62px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+}
+/*var(--tab-group-color-invert)*/
+
+/* tab groups backgrounds --------------------------------------------------------------------------------------- */
+
+/* full color-mix background */
+@media -moz-pref("ultima.tabs.tabgroups.background.full") {
+    tab-group[style*="blue"],   tab-group[style*="purple"], tab-group[style*="cyan"], 
+    tab-group[style*="orange"], tab-group[style*="yellow"], tab-group[style*="pink"],
+    tab-group[style*="green"],  tab-group[style*="red"],    tab-group[style*="gray"] {
+        .tabbrowser-tab {
+            background: color-mix(in lab, var(--tab-group-background-color), transparent 60%) !important;
+        }
+    }
+    /* ease animation */
+    .tabbrowser-tab {
+        transition: background 2s ease 0.1s !important;
+    }
+    /* this next part makes it so that we dont need to further alter content positioning to make up for 4px border appearance*/
+    #sidebar-container[sidebar-launcher-expanded]:not([sidebar-ongoing-animations]), #sidebar-container[sidebar-launcher-expanded]:not([sidebar-ongoing-animations]) #vertical-tabs {
+        /*overflow-x:  unset !important;
+        overflow-y: clip !important;*/
+    }
+    /* then again overflow really doest even work like this.. unfortunately */
+}
+
+/* animated blurry border */
+@media -moz-pref("ultima.tabs.tabgroups.background.blurry") {
+    .tab-background {
+        overflow: clip !important;
+    }
+    .tab-context-line {
+        width:  min(20px,20%) !important; height: 100% !important;
+        background-color: var(--tab-group-color-invert) !important;
+        filter: blur(13px) !important; opacity: 0.5 !important;
+        align-self: end !important;   
+    }
+    @media (prefers-color-scheme: light) {
+        .tab-context-line {opacity: 0.8 !important;}
+    }
+    /* animations */
+    .tab-context-line {
+        transition: background-color 2s ease 0.5s, opacity 2s ease 0.5s, width 2s ease 0.1s !important;
+    }
+    tab-group .tabbrowser-tab:hover .tab-context-line {
+        transition: width 0.3s ease 0.1s !important;
+        width: 90% !important;
+    }
+}
+
+/* re-enable the default border line */
+@media -moz-pref("ultima.tabs.tabgroups.background.line") {
+    .tab-group-line, .tab-group-label-container::after {
+        opacity: 1 !important;
+    }
+    /* ease animation */
+    .tab-group-line, .tab-group-label-container::after {
+       transition: opacity 1.4s ease;
+    }
+}
+
+@media -moz-pref("ultima.tabs.tabgroups.background.dash") {
+    #tabbrowser-tabs[orient="vertical"] {
+        tab-group tab:last-of-type {
+            border-bottom: 1px var(--tab-group-color) dashed !important;
+        }
+    }
+    #tabbrowser-tabs[orient="horizontal"] {
+        tab-group tab:first-of-type {
+            border-left: 1px var(--tab-group-color) dashed !important;
+        }
+        tab-group tab:last-of-type {
+            border-right: 1px var(--tab-group-color) dashed !important;
+        }
+    }
+    /* ease animation */
+    tab-group tab:last-of-type, tab-group tab:first-of-type {
+        transition: border 1.4s ease;
+    }
+}
+
+/* tab containers ----------------------------------------------------------------------------------------------- */
+
+/* A modification of 3 styles originally by Kaedriz @ https://github.com/Kaedriz */
+
+/* Container Style 1, Tab adopts Group line with subtle backdrop */
+@media -moz-pref("ultima.tabs.tabContainer.1") {
+    @media not -moz-pref("ultima.tabs.tabgroups.background.line") {
+        .tab-context-line {display: none !important;}
+    } 
+    .tabbrowser-tab[usercontextid] {
+        & .tab-group-line {
+            opacity: 1 !important;
+            display: flex !important;
+            margin-inline-start: 0px !important;
+            background: var(--identity-icon-color) !important;
+            margin-bottom: -2px !important;
+            transition: width 0.4s ease 0s, opacity 0.7s ease 0.3s !important;
+        }
+        & :hover .tab-group-line {
+            width: 100% !important;
+            opacity: 0 !important;
+            margin-bottom: -4px !important;
+            transition: width 0.4s ease 0.1s, opacity 0.7s ease 0.3s !important;
+        }
+    }
+}
+
+/* Container Style 2, Tab Border becomes container color */
+@media -moz-pref("ultima.tabs.tabContainer.2") {
+    .tabbrowser-tab[usercontextid] {
+        & .tab-background {
+            border: 2px solid var(--identity-icon-color) !important;
+        }
+        & .tab-context-line {
+            display: none !important;
+        }
+    }
+}
+
+/* Container Style 3, tab becomes container color */
+@media -moz-pref("ultima.tabs.tabContainer.3") {
+    .tabbrowser-tab[usercontextid] {
+        & .tab-context-line {
+            width: 100% !important;
+            height: 100% !important;
+            margin: 0 !important;
+            opacity:  0.0;
+        }
+        & .tab-context-line {
+            display: none !important;
+        }
+        & .tab-background {
+            background:color-mix(in lab, var(--identity-icon-color) 90%, var(--uc-browser-color) 40%) !important;
+        }
+        &:not(:hover) .tab-text[selected] {
+            color: var(--uc-browser-color) !important;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+# i download source files sometimes, they dont need to end up on the github
+firefox source files/
+
+# setup wiz
+setup wizard/src/dist/
+setup wizard/src/node_modules/
+
+# built setup binaries don't need to sit in the source
+Setup Wizard -*
+
+# custom css files
+customChrome.css
+customContent.css
+

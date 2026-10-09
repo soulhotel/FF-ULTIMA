@@ -1,0 +1,82 @@
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(35, 35, 42);
+        --foreground-color: white;
+        --muted-foreground-color: #9a9aa8;
+        --layered-background: rgb(35, 35, 42);
+        --box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        --button-background: rgb(30, 30, 38);
+        --accent-color: rgb(90, 121, 156);
+        --border-color:  rgb(43,42,51);
+        --outline-color:  rgba(150, 150, 155, 0.2);
+        --accented-color:  color-mix(in srgb, var(--accent-color) 10%, transparent);
+        --ok: #74e8b0;
+        --err: #f6b150;
+        --up: rgb(151, 80, 151);
+        --button-border-radius: 10px;
+        --modal-border-radius:  10px;
+    }
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-color: rgb(250, 250, 255);
+        --foreground-color: rgb(45, 45, 45);
+        --muted-foreground-color: #666677;
+        --layered-background: rgb(242, 242, 248);
+        --button-background: rgb(220, 220, 228);
+        --box-shadow: 0 10px 40px rgba(75,75,75,0.3);
+        --accent-color: rgb(90, 121, 156);
+        --border-color:  rgb(200, 200, 208);
+        --outline-color:  rgba(150, 150, 155, 0.2);
+        --accented-color:  color-mix(in srgb, var(--accent-color) 10%, transparent);
+        --ok: #a9ffd6;
+        --err: #fad6a3;
+        --up: rgb(231, 149, 231);
+        --button-border-radius: 10px;
+        --modal-border-radius:  10px;
+    }
+}
+
+[dark] {
+    --background-color: rgb(35, 35, 42);
+    --foreground-color: white;
+    --muted-foreground-color: #9a9aa8;
+    --layered-background: rgb(35, 35, 42);
+    --box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    --button-background: rgb(30, 30, 38);
+    --accent-color: rgb(90, 121, 156);
+    --border-color:  rgb(43,42,51);
+    --outline-color:  rgba(150, 150, 155, 0.2);
+    --accented-color:  color-mix(in srgb, var(--accent-color) 10%, transparent);
+    --ok: #74e8b0;
+    --err: #f6b150;
+    --up: rgb(151, 80, 151);
+    --button-border-radius: 10px;
+    --modal-border-radius:  10px;
+}
+
+[light] {
+    --background-color: rgb(250, 250, 255);
+    --foreground-color: rgb(55, 55, 55);
+    --muted-foreground-color: #666677;
+    --layered-background: rgb(242, 242, 248);
+    --button-background: rgb(220, 220, 228);
+    --box-shadow: 0 10px 40px rgba(75,75,75,0.3);
+    --accent-color: rgb(90, 121, 156);
+    --border-color:  rgb(200, 200, 208);
+    --outline-color:  rgba(150, 150, 155, 0.2);
+    --accented-color:  color-mix(in srgb, var(--accent-color) 10%, transparent);
+    --ok: #a9ffd6;
+    --err: #fad6a3;
+    --up: rgb(231, 149, 231);
+    --button-border-radius: 10px;
+    --modal-border-radius:  10px;
+}
+
+[glass] {
+   --border-color: var(--outline-color);
+   --layered-background: transparent;
+   --button-background: rgba(11,11,11,0.007);
+   --blur: blur(20px);
+}

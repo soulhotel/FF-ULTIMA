@@ -1,0 +1,11 @@
+* {box-sizing: border-box;border: none;background: none; margin: 0; transition: none; user-select: none;}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--background-color) url('../assets/theme-preview.gif') center / cover no-repeat fixed;
+  color: var(--foreground-color);
+  font-size: 1rem;
+}
+
+main { display: flex; flex-direction: column; width: 100vw; height: 100vh;}
+
