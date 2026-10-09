@@ -15,6 +15,10 @@ Nightly Configurations
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*
+At the moment this setting simply looks any userchromejs styling behind it.
+These styles need more confirmation, not sure if they kept up with firefox changes while I've been gone.
+*/
 @media -moz-pref("ultima.enable.js.config") {
     
 /* Autoconfig Configurations -------------------------------------------------------------------------------- */
