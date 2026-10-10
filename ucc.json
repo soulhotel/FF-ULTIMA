@@ -278,8 +278,6 @@
         { "pref": "ucc.expandonhover.toggle",                   "description": "Right click vertical tabs for an expand on hover toggle" },
         { "pref": "ucc.memory.usage",                           "description": "Adds Memory Usage statistics to the Nav Bar" }
       ]
-    },
-    { "pref": "test.pref", "description": "A test preference", "conflicts": ["test.pref.2"] },
-    { "pref": "test.pref.2", "description": "Another test preference", "conflicts": ["test.pref"] }
+    }
   ]
 }
