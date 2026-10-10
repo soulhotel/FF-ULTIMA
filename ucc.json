@@ -270,13 +270,13 @@
     {
       "folder": "userChrome JS",
       "options": [
-        { "pref": "ucc.chrome.watcher",                         "description": "Watch & Live Reload userChrome chrome/ folder" },
-        { "pref": "ucc.clear.restart",                          "description": "Fully Restart Firefox" },
-        { "pref": "ucc.navbar.menu",                            "description": "Enable Navbar Styles menu in nav bar", "on": true },
-        { "pref": "ucc.navbar.btn",                             "description": "Enable Navbar autohide buttons in nav bar" },
-        { "pref": "ucc.container.picker",                       "description": "Tab Container Picker in URL Bar" },
-        { "pref": "ucc.expandonhover.toggle",                   "description": "Right click vertical tabs for an expand on hover toggle" },
-        { "pref": "ucc.memory.usage",                           "description": "Adds Memory Usage statistics to the Nav Bar" }
+        { "pref": "ffu.chrome.watcher",                         "description": "Watch & Live Reload userChrome chrome/ folder" },
+        { "pref": "ffu.clear.restart",                          "description": "Fully Restart Firefox" },
+        { "pref": "ffu.navbar.menu",                            "description": "Enable Navbar Styles menu in nav bar", "on": true },
+        { "pref": "ffu.navbar.btn",                             "description": "Enable Navbar autohide buttons in nav bar" },
+        { "pref": "ffu.container.picker",                       "description": "Tab Container Picker in URL Bar" },
+        { "pref": "ffu.expandonhover.toggle",                   "description": "Right click vertical tabs for an expand on hover toggle" },
+        { "pref": "ffu.memory.usage",                           "description": "Adds Memory Usage statistics to the Nav Bar" }
       ]
     }
   ]

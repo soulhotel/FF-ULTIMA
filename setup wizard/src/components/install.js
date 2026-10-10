@@ -4,10 +4,18 @@ import { CheckIcon, XIcon, FolderIcon, SpinnerIcon } from '../assets/Svg.jsx';
 import { api, useSetupState, useCountdown } from '../hooks and such/useProgress.js';
 
 export const Status = ({ state }) =>
-  state === 'done' ?    <span className="ok">      <CheckIcon />  </span>
+  state === 'warn' ?    <span className="err">     <XIcon />      </span>
+: state === 'done' ?    <span className="ok">      <CheckIcon />  </span>
 : state === 'error' ?   <span className="err">     <XIcon />      </span>
 : state === 'running' ? <span className="accented"><SpinnerIcon /></span>
 : null;
+
+// util, will eventually use more of these
+const Msg = ({ text }) =>
+  text.split(/(\[[^\]]+\]\(https?:\/\/[^)\s]+\))/g).map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)$/);
+    return m ? <a key={i} href={m[2]} target="_blank" rel="noreferrer">{m[1]}</a> : part;
+  });
 
 export const Check = ({ ok }) => <Status state={ok ? 'done' : 'error'} />;
 
@@ -31,40 +39,40 @@ export function InstallModal({ onClose, onFinish }) {
   const [ffPath, setFfPath] = useState('');
   const [err, setErr] = useState('');
   const [cd, startCD, cancelCD, restartNow] = useCountdown(() => api('restart', {}).catch(() => {}));
-
+ 
   const checksOK = !!(S && S.chromeOK && S.profileOK && S.firefoxOK);
   const finished = !!(S && !S.running && S.steps.length > 0);
-  const fin = finished && S.steps.every(s => s.state === 'done');
+  const fin = finished && S.steps.every(s => s.state === 'done' || s.state === 'warn');
   const bad = finished && S.steps.some(s => s.state === 'error');
-
+ 
   useEffect(() => {
     if (phase !== 'run' || !checksOK || editFF || begun || S.steps.length) return;
     setBegun(true);
     api('install', {}).then(refresh).catch(e => setErr(e.message));
   }, [phase, checksOK, editFF, begun]);
-
+ 
   // poll progress while running
   useEffect(() => {
     if (!begun || finished) return;
     const id = setInterval(refresh, 400);
     return () => clearInterval(id);
   }, [begun, finished]);
-
+ 
   useEffect(() => { if (fin) startCD(); }, [fin]);
-
+ 
   useEffect(() => {
     if (cd !== 0) return;
     const t = setTimeout(() => onFinish(true), 3000);
     return () => clearTimeout(t);
   }, [cd]);
-
+ 
   const next = () => { setPhase('run'); refresh(); };
   const openFF = () => { setFfPath(S.firefoxDir || ''); setEditFF(!editFF); };
   const saveFF = async () => {
     try { await api('firefox', { path: ffPath }); setEditFF(false); setErr(''); refresh(); }
     catch (e) { setErr(e.message); }
   };
-
+ 
   if (phase === 'info') {
     return (
       <Modal
@@ -93,11 +101,11 @@ export function InstallModal({ onClose, onFinish }) {
       </Modal>
     );
   }
-
+ 
   if (!S) return <Modal className="install-modal step-2" title="FF Ultima Setup Wizard"><p><SpinnerIcon/></p></Modal>;
-
+ 
   const ff = S.firefoxName || firefoxName(S.firefoxDir);
-
+ 
   const footer =
     fin && cd !== 0 ? (<>
       {cd > 0 && <button className="alt" onClick={() => { cancelCD(); onFinish(false); }}>Wait</button>}
@@ -105,9 +113,9 @@ export function InstallModal({ onClose, onFinish }) {
     </>)
   : bad ? <button className="primary" onClick={onClose}>Close</button>
   : null;
-
+ 
   const closeX = cd === 0 ? null : (!begun || finished) ? (fin ? () => onFinish(false) : onClose) : null;
-
+ 
   return (
     <Modal
       className="install-modal step-2"
@@ -143,7 +151,7 @@ export function InstallModal({ onClose, onFinish }) {
             <Status state={s.state} />
             {s.state === 'done' && s.msg && <span className="muted">{s.msg}</span>}
           </div>
-          {s.msg && s.state !== 'done' && <div className={'msg ' + (s.state === 'error' ? 'err' : 'muted')}>{s.msg}</div>}
+          {s.msg && s.state !== 'done' && <div className={'msg ' + (s.state === 'error' || s.state === 'warn' ? 'err' : 'muted')}><Msg text={s.msg} /></div>}
         </div>
       ))}
       {fin && (
