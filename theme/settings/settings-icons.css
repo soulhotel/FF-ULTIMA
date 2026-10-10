@@ -9,6 +9,16 @@ themed icons can be overridden with either default icons or other icon sets
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*
+vpn button the icon is 48x16, visually: shield | state, to replace/cover all states:
+shield checkmark
+shield x icon
+shield info icon
+shield questionmark
+shield pause icon
+
+*/
+
 /* All Custom Icons ---------------------------------------------------- */
 
 @media (-moz-pref("ultima.enable.icon-theme")) {
