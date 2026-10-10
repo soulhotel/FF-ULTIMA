@@ -39,7 +39,6 @@ export function InstallModal({ onClose, onFinish }) {
   const [ffPath, setFfPath] = useState('');
   const [err, setErr] = useState('');
   const [cd, startCD, cancelCD, restartNow] = useCountdown(() => api('restart', {}).catch(() => {}));
- 
   const checksOK = !!(S && S.chromeOK && S.profileOK && S.firefoxOK);
   const finished = !!(S && !S.running && S.steps.length > 0);
   const fin = finished && S.steps.every(s => s.state === 'done' || s.state === 'warn');
@@ -73,6 +72,11 @@ export function InstallModal({ onClose, onFinish }) {
     catch (e) { setErr(e.message); }
   };
  
+  const pickProfile = async dir => {
+    try { await api('profile', { dir }); setErr(''); refresh(); }
+    catch (e) { setErr(e.message); }
+  };
+
   if (phase === 'info') {
     return (
       <Modal
@@ -80,23 +84,27 @@ export function InstallModal({ onClose, onFinish }) {
         title="FF Ultima Setup Wizard"
         onClose={onClose}
         footer={<>
-          <button className="alt" onClick={onClose}>Back</button>
-          <button className="primary" onClick={next}>Next</button>
-        </>}
+                <button className="alt" onClick={onClose}>Back</button>
+                <button className="primary" onClick={next}>Next</button>
+              </>}
       >
         <p>
-            FF Ultima Setup Wizard will install FF Ultima into this profiles <code>chrome</code> folder. 
-            Then Setup userChromeCompanion & userChromeJS. 
-            Please ensure the Wizard is operating within your target chrome folder. 
-            1 minute and 1 click, is all you need.
+          FF Ultima Setup Wizard will install FF Ultima into this profiles <code>chrome</code> folder. 
+          Then Setup userChromeCompanion & userChromeJS. 
+          Please ensure the Wizard is operating within your target chrome folder. 
+          1 minute and 1 click, is all you need.
         </p>
-        <p>Setup:</p>
-        <ul>
-            <li>chrome folder</li>
-            <li>ff ultima</li>
-            <li>userchromecompanion</li>
-            <li>userchromejs</li>
-        </ul>
+        {S && (S.profiles || []).length > 0 && (
+          <p>
+            Target profile:{' '}
+            <select value={S.profileDir} onChange={e => pickProfile(e.target.value)}>
+              {S.profiles.map(p => (
+                <option key={p.dir} value={p.dir}>{p.name}{p.hasChrome ? '' : ' (no chrome folder yet)'}</option>
+              ))}
+            </select>
+          </p>
+        )}
+        {err && <div className="msg err">{err}</div>}
         <p className="note">Note: the Theme is downloaded through Github direct link (github.com/soulhotel/FF-Ultima/archive/refs/heads/main.zip). Git or other dependencies are not required.</p>
       </Modal>
     );

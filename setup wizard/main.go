@@ -29,8 +29,6 @@ import (
 	"time"
 )
 
-// the built UI, compiled into the binary. Run `npm run build` in src/ before `go build`.
-//
 //go:embed src/index.html src/dist src/css src/assets
 var uiFiles embed.FS
 
@@ -52,6 +50,13 @@ type Step struct {
 	Pct   int    `json:"pct"` // -1 = unknown
 }
 
+// one entry of profiles.ini, for the profile picker
+type ProfileInfo struct {
+	Name      string `json:"name"`
+	Dir       string `json:"dir"`
+	HasChrome bool   `json:"hasChrome"`
+}
+
 type State struct {
 	ChromeDir   string `json:"chromeDir"`
 	ChromeOK    bool   `json:"chromeOK"`
@@ -63,6 +68,9 @@ type State struct {
 	FirefoxName    string `json:"firefoxName"`
 	FirefoxVersion string `json:"firefoxVersion"`
 	FirefoxNote    string `json:"firefoxNote"`
+	// the profile being targeted, and every profile in the same profiles.ini
+	ProfileDir string        `json:"profileDir"`
+	Profiles   []ProfileInfo `json:"profiles"`
 	Steps       []Step `json:"steps"`
 	Running     bool   `json:"running"`
 }
@@ -77,6 +85,7 @@ var (
 	profileDir      string
 	token           string
 	exeInfo         fs.FileInfo
+	profilesRoot    string // folder holding profiles.ini, kept so switching profiles keeps working
 )
 
 // ---------- detection ----------
@@ -98,6 +107,7 @@ func locate(flagChrome string) {
 	chromeOK = chromeDir != "" && filepath.Base(chromeDir) == "chrome"
 	if chromeOK {
 		profileDir = filepath.Dir(chromeDir)
+		detectProfilesRoot()
 	}
 }
 
@@ -128,9 +138,63 @@ func parseINI(p string) map[string]map[string]string {
 }
 
 // profiles.ini sits one level above the profile on Linux, two on Windows/macOS
+// profiles.ini is one level above the profile on Linux, two on Windows/macOS. Found once at startup.
+func profilesRoots() []string {
+	if profilesRoot != "" {
+		return []string{profilesRoot}
+	}
+	return []string{filepath.Dir(profileDir), filepath.Dir(filepath.Dir(profileDir))}
+}
+
+func detectProfilesRoot() {
+	base := filepath.Base(profileDir)
+	for _, dir := range profilesRoots() {
+		for sec, kv := range parseINI(filepath.Join(dir, "profiles.ini")) {
+			if strings.HasPrefix(sec, "Profile") && filepath.Base(filepath.FromSlash(kv["Path"])) == base {
+				profilesRoot = dir
+				return
+			}
+		}
+	}
+}
+
+// every profile in that profiles.ini
+func listProfiles() []ProfileInfo {
+	if profilesRoot == "" {
+		return nil
+	}
+	var out []ProfileInfo
+	for sec, kv := range parseINI(filepath.Join(profilesRoot, "profiles.ini")) {
+		if !strings.HasPrefix(sec, "Profile") || kv["Path"] == "" {
+			continue
+		}
+		dir := filepath.FromSlash(kv["Path"])
+		if kv["IsRelative"] != "0" {
+			dir = filepath.Join(profilesRoot, dir)
+		}
+		name := kv["Name"]
+		if name == "" {
+			name = filepath.Base(dir)
+		}
+		out = append(out, ProfileInfo{Name: name, Dir: dir, HasChrome: exists(filepath.Join(dir, "chrome"))})
+	}
+	sort.Slice(out, func(i, j int) bool { return out[i].Name < out[j].Name })
+	return out
+}
+
+// switch the target to another profile. Its chrome folder is created when the job starts.
+func selectProfile(dir string) {
+	mu.Lock()
+	defer mu.Unlock()
+	profileDir = dir
+	chromeDir = filepath.Join(dir, "chrome")
+	chromeOK = true
+	firefoxOverride = "" // a manually set Firefox folder belonged to the previous profile
+}
+
 func findProfile() (string, bool) {
 	base := filepath.Base(profileDir)
-	for _, dir := range []string{filepath.Dir(profileDir), filepath.Dir(filepath.Dir(profileDir))} {
+	for _, dir := range profilesRoots() {
 		for sec, kv := range parseINI(filepath.Join(dir, "profiles.ini")) {
 			if strings.HasPrefix(sec, "Profile") && filepath.Base(filepath.FromSlash(kv["Path"])) == base {
 				if kv["Name"] != "" {
@@ -307,6 +371,7 @@ func currentState() State {
 	s := State{ChromeDir: chromeDir, ChromeOK: chromeOK}
 	if chromeOK {
 		s.ProfileName, s.ProfileOK = findProfile()
+		s.ProfileDir, s.Profiles = profileDir, listProfiles()
 		s.FirefoxDir, s.FirefoxOK = firefoxPath()
 		if s.FirefoxOK {
 			s.FirefoxName, s.FirefoxVersion, s.FirefoxNote = describeFirefox(s.FirefoxDir)
@@ -892,6 +957,10 @@ func runJob(full bool) {
 	src := filepath.Join(tmp, "src")
 
 	setStep("download", "running", "", -1)
+	if err := os.MkdirAll(chromeDir, 0o755); err != nil { // a profile that has no chrome folder yet gets one
+		setStep("download", "error", friendly(err, chromeDir).Error(), 0)
+		return
+	}
 	if err := download(filepath.Join(tmp, "ff-ultima.zip")); err != nil {
 		setStep("download", "error", err.Error(), 0)
 		return
@@ -1171,6 +1240,25 @@ func main() {
 	})
 	mux.HandleFunc("/api/state", guard(func(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, 200, currentState())
+	}))
+	mux.HandleFunc("/api/profile", guard(func(w http.ResponseWriter, r *http.Request) {
+		var body struct{ Dir string }
+		json.NewDecoder(r.Body).Decode(&body)
+		mu.Lock()
+		busy := running
+		mu.Unlock()
+		if busy {
+			writeJSON(w, 409, map[string]string{"error": "wait for the current job to finish"})
+			return
+		}
+		for _, p := range listProfiles() {
+			if p.Dir == body.Dir { // only profiles listed in profiles.ini can be picked
+				selectProfile(p.Dir)
+				writeJSON(w, 200, map[string]bool{"ok": true})
+				return
+			}
+		}
+		writeJSON(w, 400, map[string]string{"error": "unknown profile"})
 	}))
 	mux.HandleFunc("/api/firefox", guard(func(w http.ResponseWriter, r *http.Request) {
 		var body struct{ Path string }
