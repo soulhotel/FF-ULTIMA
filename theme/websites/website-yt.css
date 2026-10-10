@@ -241,4 +241,20 @@ video player
     .ytLockupMetadataViewModelMoveLockupOverflowMenuToBottomRight .ytLockupMetadataViewModelMenuButton::before {
       background: transparent !important;
     }
+    /* a little bonus to any crazy individuals that might not be using UBlock*/
+    /* Make the skip ad button absolutely massive lol */
+    .ytp-skip-ad-button {
+        inset: 50% auto auto 50% !important;
+        transform: translate(-50%, -50%) !important;
+        height: 250px !important;
+        aspect-ratio: 1 !important;
+        padding: 0 !important;
+        justify-content: center !important;
+        border-radius: 50% !important;
+        background: var(--uc-layered-background) !important;
+        & .ytp-skip-ad-button__text {font-size: 64px !important;}
+    }
+    :root:has(.ytp-skip-ad-button) .ytp-skip-ad-button {
+        opacity: 0.9 !important;
+    }
 }} /* end YT */
