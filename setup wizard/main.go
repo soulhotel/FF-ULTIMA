@@ -35,7 +35,6 @@ var uiFiles embed.FS
 const (
 	repoZip = "https://github.com/soulhotel/FF-Ultima/archive/refs/heads/main.zip"
 	extID   = "userChromeCompanion@soulhotel.net"
-	// AMO's API says where the current signed file is (and its checksum); the plain "latest" redirect is the fallback
 	amoAPIURL    = "https://addons.mozilla.org/api/v5/addons/addon/userchrome-companion/"
 	amoLatestURL = "https://addons.mozilla.org/firefox/downloads/latest/userchrome-companion/"
 	amoPageURL   = "https://addons.mozilla.org/en-US/firefox/addon/userchrome-companion/"
@@ -45,12 +44,12 @@ const (
 type Step struct {
 	ID    string `json:"id"`
 	Label string `json:"label"`
-	State string `json:"state"` // pending | running | done | error
+	State string `json:"state"`
 	Msg   string `json:"msg"`
 	Pct   int    `json:"pct"` // -1 = unknown
 }
 
-// one entry of profiles.ini, for the profile picker
+// profile.ini
 type ProfileInfo struct {
 	Name      string `json:"name"`
 	Dir       string `json:"dir"`
@@ -64,11 +63,11 @@ type State struct {
 	ProfileOK   bool   `json:"profileOK"`
 	FirefoxDir  string `json:"firefoxDir"`
 	FirefoxOK   bool   `json:"firefoxOK"`
-	// from application.ini: a second opinion on what is installed there
+	// application.ini
 	FirefoxName    string `json:"firefoxName"`
 	FirefoxVersion string `json:"firefoxVersion"`
 	FirefoxNote    string `json:"firefoxNote"`
-	// the profile being targeted, and every profile in the same profiles.ini
+	// profile dir
 	ProfileDir string        `json:"profileDir"`
 	Profiles   []ProfileInfo `json:"profiles"`
 	Steps       []Step `json:"steps"`
@@ -85,11 +84,11 @@ var (
 	profileDir      string
 	token           string
 	exeInfo         fs.FileInfo
-	profilesRoot    string // folder holding profiles.ini, kept so switching profiles keeps working
+	profilesRoot    string // tracked so switching profiles keeps working
 )
 
 // ---------- detection ----------
-
+// util
 func locate(flagChrome string) {
 	exeDir := ""
 	if exe, err := os.Executable(); err == nil {
@@ -110,7 +109,7 @@ func locate(flagChrome string) {
 		detectProfilesRoot()
 	}
 }
-
+// util
 func parseINI(p string) map[string]map[string]string {
 	out := map[string]map[string]string{}
 	f, err := os.Open(p)
@@ -137,15 +136,14 @@ func parseINI(p string) map[string]map[string]string {
 	return out
 }
 
-// profiles.ini sits one level above the profile on Linux, two on Windows/macOS
-// profiles.ini is one level above the profile on Linux, two on Windows/macOS. Found once at startup.
+// util
 func profilesRoots() []string {
 	if profilesRoot != "" {
 		return []string{profilesRoot}
 	}
 	return []string{filepath.Dir(profileDir), filepath.Dir(filepath.Dir(profileDir))}
 }
-
+// util
 func detectProfilesRoot() {
 	base := filepath.Base(profileDir)
 	for _, dir := range profilesRoots() {
@@ -189,7 +187,7 @@ func selectProfile(dir string) {
 	profileDir = dir
 	chromeDir = filepath.Join(dir, "chrome")
 	chromeOK = true
-	firefoxOverride = "" // a manually set Firefox folder belonged to the previous profile
+	firefoxOverride = ""
 }
 
 func findProfile() (string, bool) {
@@ -227,25 +225,26 @@ func firefoxPath() (string, bool) {
 // Default pref files are read in reverse alphabetical order and later reads override earlier ones, so the
 // alphabetically first file wins: "config-prefs.js" beats "local-settings.js", and a copy named "0-config-prefs.js"
 // beats a vendor pointer with any letter name (e.g. "autoconfig.js").
+// names or paths
 const (
-	ourPointerFile = "defaults/pref/config-prefs.js" // inside userchromejs/firefox and inside the install
+	ourPointerFile = "defaults/pref/config-prefs.js"
 	ourPointerCopy = "defaults/pref/0-config-prefs.js"
 	ourConfigFile  = "config.js"
 )
-
+// util ? this could very well sit with the above.
 var (
 	cfgFilenameRe = regexp.MustCompile(`general\.config\.filename["']\s*,\s*["']([^"']+)["']`)
 	cfgObscureRe  = regexp.MustCompile(`general\.config\.obscure_value["']\s*,\s*(\d+)`)
 )
 
-// another AutoConfig already set up in the install
+// If another AutoConfig
 type otherConfig struct {
-	cfg   string // path of the config file its pointer names, e.g. .../librewolf.cfg
-	plain bool   // readable as text (obscure_value 0); an obfuscated file can't be merged
+	cfg   string
+	plain bool
 }
 
 func findOtherConfig(ffDir string) *otherConfig {
-	files, _ := filepath.Glob(filepath.Join(ffDir, "defaults", "pref", "*.js")) // sorted by name
+	files, _ := filepath.Glob(filepath.Join(ffDir, "defaults", "pref", "*.js"))
 	for _, f := range files {
 		if base := filepath.Base(f); base == "config-prefs.js" || base == "0-config-prefs.js" {
 			continue // ours
@@ -271,9 +270,7 @@ func findOtherConfig(ffDir string) *otherConfig {
 	return nil
 }
 
-// Copies our Firefox-side files into a temp folder and, when the install already has an AutoConfig, adjusts them:
-// a second copy of our pointer that sorts first, and a config.js that has the other config's text above ours.
-// Re-running is safe: it always starts from the repo's files, never from the installed config.js.
+// self explanatory
 func stageFirefoxFiles(src, ffDir string) (stage, note string, err error) {
 	stage, err = os.MkdirTemp("", "ffu-firefox-*")
 	if err != nil {
@@ -296,7 +293,7 @@ func stageFirefoxFiles(src, ffDir string) (stage, note string, err error) {
 	}
 	theirs, err := os.ReadFile(oc.cfg)
 	if err != nil {
-		return stage, "", nil // the named file isn't there: nothing to merge
+		return stage, "", nil
 	}
 	ours, err := os.ReadFile(filepath.Join(stage, ourConfigFile))
 	if err != nil {
@@ -311,7 +308,7 @@ func stageFirefoxFiles(src, ffDir string) (stage, note string, err error) {
 	return stage, "merged " + filepath.Base(oc.cfg), nil
 }
 
-// application.ini (next to omni.ja) says what is really installed in a folder
+// application.ini (next to omni.ja) says what is really installed in a folder, most reliable
 type appInfo struct {
 	Name, Display, Vendor, RemotingName, Version, BuildID, ID string
 }
@@ -333,8 +330,7 @@ func readAppInfo(dir string) (appInfo, bool) {
 	return a, true
 }
 
-// Cross-checks the install folder against the profile. Nothing here blocks the wizard, it only informs:
-// a version mismatch is normal when Firefox was updated since the profile last ran.
+// cross-checks the install folder against the profile
 func describeFirefox(dir string) (name, version, note string) {
 	app, ok := readAppInfo(dir)
 	if !ok {
@@ -345,7 +341,7 @@ func describeFirefox(dir string) (name, version, note string) {
 		notes = append(notes, app.Display+" does not use Firefox's application ID, double-check this is the right folder.")
 	}
 	if last := parseINI(filepath.Join(profileDir, "compatibility.ini"))["Compatibility"]["LastVersion"]; last != "" {
-		lv, _, _ := strings.Cut(last, "/") // "131.0_20240926/20240926" -> "131.0_20240926"
+		lv, _, _ := strings.Cut(last, "/")
 		ver, build, _ := strings.Cut(lv, "_")
 		if ver != "" && (ver != app.Version || (build != "" && app.BuildID != "" && build != app.BuildID)) {
 			notes = append(notes, fmt.Sprintf("This profile last ran %s, the install in this folder is %s (normal if it was updated since).", ver, app.Version))
@@ -354,7 +350,6 @@ func describeFirefox(dir string) (name, version, note string) {
 	return app.Display, app.Version, strings.Join(notes, " ")
 }
 
-// the browser's executable inside its install folder, using the names application.ini gives
 func findBinary(dir string, app appInfo, suffix string) string {
 	for _, n := range []string{strings.ToLower(app.Name), app.RemotingName, "firefox"} {
 		if n == "" {
@@ -384,8 +379,10 @@ func currentState() State {
 	return s
 }
 
-// ---------- steps ----------
+// these may as well all live amongst themselves as utils. as long as steps are seperated and names/paths are mapped in centralized place.
 
+
+// util
 func setStep(id, state, msg string, pct int) {
 	mu.Lock()
 	defer mu.Unlock()
@@ -411,7 +408,11 @@ func (c *counter) Write(p []byte) (int, error) {
 	return len(p), nil
 }
 
-// Go's default User-Agent ("Go-http-client/1.1") is refused by some CDNs, so every request sends our own.
+
+// if utils is a cumulative list/file, io.go is as well, for the below
+
+
+// user agent for cdn
 type uaTransport struct{ next http.RoundTripper }
 
 func (t uaTransport) RoundTrip(r *http.Request) (*http.Response, error) {
@@ -422,7 +423,6 @@ func (t uaTransport) RoundTrip(r *http.Request) (*http.Response, error) {
 
 var httpClient = &http.Client{Transport: uaTransport{http.DefaultTransport}}
 
-// The current signed file of the companion according to AMO's API: its direct URL and sha256.
 func companionFile() (fileURL, sum string, err error) {
 	req, err := http.NewRequest("GET", amoAPIURL, nil)
 	if err != nil {
@@ -441,7 +441,7 @@ func companionFile() (fileURL, sum string, err error) {
 		CurrentVersion struct {
 			File struct {
 				URL  string `json:"url"`
-				Hash string `json:"hash"` // "sha256:<hex>"
+				Hash string `json:"hash"`
 			} `json:"file"`
 		} `json:"current_version"`
 	}
@@ -470,7 +470,6 @@ func sha256File(p string) (string, error) {
 
 func download(dst string) error { return downloadTo(repoZip, dst, "download") }
 
-// true if the zip carries a Mozilla signature (META-INF/)
 func isSignedXPI(p string) bool {
 	zr, err := zip.OpenReader(p)
 	if err != nil {
@@ -506,7 +505,6 @@ func downloadTo(url, dst, id string) error {
 	return err
 }
 
-// extracts zip into dest, dropping the top-level "FF-Ultima-main/" folder
 func unzip(zipPath, dest string) error {
 	zr, err := zip.OpenReader(zipPath)
 	if err != nil {
@@ -573,7 +571,6 @@ func copyFile(src, dst string) error {
 	return err
 }
 
-// copy + overwrite; never overwrites the running wizard binary
 func copyTree(src, dst string, skip func(rel string) bool) error {
 	return filepath.WalkDir(src, func(p string, d fs.DirEntry, err error) error {
 		if err != nil {
@@ -607,7 +604,6 @@ func friendly(err error, where string) error {
 	return err
 }
 
-// relaunches this binary with admin rights to run one tree operation (--copy-tree or --remove-list) on the Firefox dir
 func elevatedTree(op, src, dst string) error {
 	exe, err := os.Executable()
 	if err != nil {
@@ -634,12 +630,9 @@ func elevatedTree(op, src, dst string) error {
 	}
 	return nil
 }
-
-// ---------- uninstall: the repo's file list comes from one GitHub tree API request, nothing is downloaded ----------
-
+// names/paths
 const repoTreeURL = "https://api.github.com/repos/soulhotel/FF-Ultima/git/trees/main?recursive=1"
 
-// one file or folder of the repo: path relative to the repo root, forward slashes
 type item struct {
 	rel string
 	dir bool
@@ -682,8 +675,7 @@ func fetchRepoTree() ([]item, error) {
 	return items, nil
 }
 
-// Removes from dst every listed file that exists there (content is ignored), then the listed folders
-// that are now empty. Anything that is not on the list is left alone.
+// Anything that is not on the list is left alone.
 func removeListed(items []item, dst string) error {
 	var dirs []string
 	for _, it := range items {
@@ -703,7 +695,7 @@ func removeListed(items []item, dst string) error {
 		}
 		fi, err := os.Lstat(t)
 		if err != nil || fi.IsDir() {
-			continue // not there (or not a file): nothing to remove
+			continue
 		}
 		if exeInfo != nil && os.SameFile(fi, exeInfo) {
 			continue // never delete the running wizard
@@ -714,12 +706,11 @@ func removeListed(items []item, dst string) error {
 	}
 	sort.Slice(dirs, func(a, b int) bool { return len(dirs[a]) > len(dirs[b]) }) // deepest first
 	for _, d := range dirs {
-		os.Remove(d) // only succeeds when the folder is empty
+		os.Remove(d)
 	}
 	return nil
 }
 
-// list file for the elevated helper: "f<TAB>path" for a file, "d<TAB>path" for a folder, one per line
 func removeElevated(items []item, dst string) error {
 	f, err := os.CreateTemp("", "ffu-remove-*.txt")
 	if err != nil {
@@ -759,17 +750,14 @@ func uninstallSteps() []Step {
 	}
 }
 
-// Where the repo keeps the files that go into the Firefox install (config.js, defaults/). Forward slashes.
 const firefoxFilesDir = "userchromejs/firefox"
 
-// on disk (install): that folder under root
 func findFirefoxFiles(root string) (string, bool) {
 	p := filepath.Join(root, filepath.FromSlash(firefoxFilesDir))
 	fi, err := os.Stat(p)
 	return p, err == nil && fi.IsDir()
 }
 
-// in the repo listing (uninstall): the files in that folder, relative to it
 func firefoxItems(items []item) ([]item, bool) {
 	var out []item
 	for _, it := range items {
@@ -791,7 +779,6 @@ func runUninstall() {
 	}
 	setStep("list", "done", "", 100)
 
-	// Firefox install first: it is the step that can need admin approval, so cancelling leaves everything intact
 	setStep("ucjs", "running", "", -1)
 	ff, ok := firefoxPath()
 	if !ok {
@@ -803,7 +790,7 @@ func runUninstall() {
 		setStep("ucjs", "error", "userChromeJS files not found in the repo", 0)
 		return
 	}
-	ffItems = append(ffItems, item{rel: ourPointerCopy}) // only exists where another AutoConfig was found
+	ffItems = append(ffItems, item{rel: ourPointerCopy})
 	err = removeListed(ffItems, ff)
 	if errors.Is(err, fs.ErrPermission) {
 		setStep("ucjs", "running", "Waiting for administrator approval...", -1)
@@ -822,7 +809,7 @@ func runUninstall() {
 			return true
 		}
 		switch top {
-		case "dev", "setup wizard", ".github": // never installed by us (or can't tell who owns it)
+		case "dev", "setup wizard", ".github":
 			return true
 		}
 		return false
@@ -842,9 +829,7 @@ func runUninstall() {
 
 func exists(p string) bool { _, err := os.Stat(p); return err == nil }
 
-// user.js is read by Firefox at every startup and never rewritten by it. Install adds this block so the first launch
-// after the install already loads userChrome.css (flipping the pref at runtime only takes effect on the next start).
-// The block is removed again by ffu-userjs-cleanup.uc.js once Firefox is up.
+// reminder to perform a cleanup on the userchromejs side
 const (
 	userJSBegin = "// FF Ultima"
 	userJSEnd   = "// End - FF Ultima"
@@ -852,7 +837,6 @@ const (
 
 var stylesheetPrefRe = regexp.MustCompile(`user_pref\(\s*["']toolkit\.legacyUserProfileCustomizations\.stylesheets["']\s*,\s*(true|false)\s*\)`)
 
-// the last value a file assigns to the pref ("" when it never does), ignoring commented-out lines
 func lastStylesheetValue(text string) string {
 	var code []string
 	for _, line := range strings.Split(text, "\n") {
@@ -867,7 +851,6 @@ func lastStylesheetValue(text string) string {
 	return all[len(all)-1][1]
 }
 
-// Adds the user.js block unless the pref is already going to be true at startup. alreadyOn reports that case.
 func addStylesheetPref(profile string) (alreadyOn bool, err error) {
 	userPath := filepath.Join(profile, "user.js")
 	userData, readErr := os.ReadFile(userPath)
@@ -876,10 +859,9 @@ func addStylesheetPref(profile string) (alreadyOn bool, err error) {
 	}
 	userText := string(userData)
 	if strings.Contains(userText, userJSBegin) && strings.Contains(userText, userJSEnd) {
-		return true, nil // our block is already there
+		return true, nil
 	}
 
-	// effective value at startup: prefs.js first, then user.js on top of it
 	on := false
 	if prefs, e := os.ReadFile(filepath.Join(profile, "prefs.js")); e == nil {
 		on = lastStylesheetValue(string(prefs)) == "true"
@@ -918,8 +900,6 @@ func newSteps(full bool) []Step {
 	return st
 }
 
-// full: install (theme files + companion + userChromeJS). !full: update (theme files only).
-// Downloads the signed companion from AMO into <profile>/extensions/. A failure here never stops the install.
 func installCompanion(tmp string) (note string, err error) {
 	extDir := filepath.Join(profileDir, "extensions")
 	dst := filepath.Join(extDir, extID+".xpi")
@@ -929,7 +909,7 @@ func installCompanion(tmp string) (note string, err error) {
 	}
 	xpiURL, wantSum, apiErr := companionFile()
 	if apiErr != nil {
-		xpiURL, wantSum = amoLatestURL, "" // API unreachable: fall back to the redirect URL
+		xpiURL, wantSum = amoLatestURL, ""
 	}
 	xpi := filepath.Join(tmp, "companion.xpi")
 	if err := downloadTo(xpiURL, xpi, "companion"); err != nil {
@@ -957,7 +937,7 @@ func runJob(full bool) {
 	src := filepath.Join(tmp, "src")
 
 	setStep("download", "running", "", -1)
-	if err := os.MkdirAll(chromeDir, 0o755); err != nil { // a profile that has no chrome folder yet gets one
+	if err := os.MkdirAll(chromeDir, 0o755); err != nil {
 		setStep("download", "error", friendly(err, chromeDir).Error(), 0)
 		return
 	}
@@ -978,9 +958,9 @@ func runJob(full bool) {
 			return true
 		}
 		switch top {
-		case "dev", "setup wizard": // repo-only folders, never copied
+		case "dev", "setup wizard":
 			return true
-		case ".github": // install keeps an existing one, update never touches it
+		case ".github":
 			return !full || exists(filepath.Join(chromeDir, ".github"))
 		}
 		return false
@@ -990,7 +970,7 @@ func runJob(full bool) {
 		return
 	}
 	copyNote := ""
-	if full { // installs only, an update never touches user.js
+	if full {
 		switch on, err := addStylesheetPref(profileDir); {
 		case err != nil:
 			copyNote = "could not write user.js, userChrome.css may need a second restart"
@@ -1007,7 +987,6 @@ func runJob(full bool) {
 
 	setStep("companion", "running", "", -1)
 	if note, err := installCompanion(tmp); err != nil {
-		// not fatal: nothing after this depends on it, so the install carries on
 		fmt.Println("companion install failed:", err)
 		setStep("companion", "warn", "failed to install, you can still install the extension straight from the [Firefox Add On Store]("+amoPageURL+")", 0)
 	} else {
@@ -1061,10 +1040,9 @@ func guard(h http.HandlerFunc) http.HandlerFunc {
 	}
 }
 
-// waits for the profile to be released after a quit request
 func waitForExit() {
 	if runtime.GOOS == "linux" {
-		for i := 0; i < 30; i++ { // up to ~15s for the profile lock to clear
+		for i := 0; i < 30; i++ {
 			if _, err := os.Lstat(filepath.Join(profileDir, "lock")); err != nil {
 				break
 			}
@@ -1095,8 +1073,6 @@ func clearStartupCache() {
 	}
 }
 
-// Linux: the pid of the Firefox that has this profile open. Firefox keeps a "lock" symlink in the
-// profile that points at "<ip>:+<pid>", so only the instance using this profile is ever touched.
 func profilePID() (int, bool) {
 	target, err := os.Readlink(filepath.Join(profileDir, "lock"))
 	if err != nil {
@@ -1110,8 +1086,6 @@ func profilePID() (int, bool) {
 	return pid, err == nil && pid > 0
 }
 
-// Quits only the Firefox this wizard is pointed at (never other editions or other profiles on Linux),
-// waits for it to exit, clears the startup cache and relaunches the profile with the same install.
 func restartFirefox() {
 	ff, _ := firefoxPath()
 	app, _ := readAppInfo(ff)
@@ -1122,7 +1096,6 @@ func restartFirefox() {
 		if exe == "" {
 			exe = filepath.Join(ff, "firefox.exe")
 		}
-		// close only processes that run from the target install (Nightly, Developer Edition... are left alone)
 		ps := fmt.Sprintf("Get-Process '%s' -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq '%s' } | ForEach-Object { taskkill /PID $_.Id | Out-Null }",
 			strings.ReplaceAll(strings.TrimSuffix(filepath.Base(exe), ".exe"), "'", "''"), strings.ReplaceAll(exe, "'", "''"))
 		exec.Command("powershell", "-NoProfile", "-Command", ps).Run()
@@ -1138,7 +1111,7 @@ func restartFirefox() {
 				proc.Signal(syscall.SIGTERM)
 			}
 		}
-		bin := findBinary(ff, app, "") // the target install's own binary, not whichever firefox is first on PATH
+		bin := findBinary(ff, app, "")
 		if bin == "" {
 			if p, err := exec.LookPath("firefox"); err == nil {
 				bin = p
@@ -1151,7 +1124,6 @@ func restartFirefox() {
 	start.Start()
 }
 
-// the UI is src/ next to the binary (binary in "setup wizard/"), or setup wizard/src (binary in the repo root / chrome/)
 func findUIDir() string {
 	exe, _ := os.Executable()
 	if r, err := filepath.EvalSymlinks(exe); err == nil {
@@ -1185,7 +1157,6 @@ func openBrowser(url string) {
 }
 
 func main() {
-	// elevated helper mode: only ever copies into a real Firefox directory
 	if len(os.Args) == 4 && (os.Args[1] == "--copy-tree" || os.Args[1] == "--remove-list") {
 		if !exists(filepath.Join(os.Args[3], "omni.ja")) {
 			fmt.Fprintln(os.Stderr, "refusing: destination is not a Firefox directory")
@@ -1252,7 +1223,7 @@ func main() {
 			return
 		}
 		for _, p := range listProfiles() {
-			if p.Dir == body.Dir { // only profiles listed in profiles.ini can be picked
+			if p.Dir == body.Dir {
 				selectProfile(p.Dir)
 				writeJSON(w, 200, map[string]bool{"ok": true})
 				return

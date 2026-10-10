@@ -71,7 +71,7 @@
         { "pref": "ultima.bookmarks.autohide",                  "description": "Make bookmakrs bar autohide off hover",           "conflicts": ["ultima.bookmarks.float"] },
         { "pref": "ultima.bookmarks.float",                     "description": "Make bookmarks bar float and autohide",           "conflicts": ["ultima.bookmarks.autohide"] },
         { "pref": "ultima.bookmarks.centered",                  "description": "Center bookmarks bar content", "on": true },
-        { "pref": "ultima.bookmarks.compact",                   "description": "Reduce the height of the bookmarks toolbar" },
+        { "pref": "ultima.bookmarks.compact",                   "description": "Reduce the height of the bookmarks toolbar", "on": true },
         { "pref": "ultima.bookmarks.scrollable",                "description": "Scrollable Bookmarks Bar (shift+scroll, horizontal scroll)" },
         { "pref": "ultima.bookmarks.hide.icons",                "description": "Hide bookmark toolbar website favicons" },
         { "pref": "ultima.bookmarks.text-lowercase",            "description": "Makes bookmark text lowercase", "on": true },
