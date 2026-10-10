@@ -1,0 +1,20 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         
+
+# todo
+
+# restore "compact addon page" style
+
+# we wont be using the MrOtherGuy style anymore, i have a pretty good grasp on grid manipulation now
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@-moz-document url(about:addons) {
+
+    @media (-moz-pref("ultima.aboutaddons.compact-grid")) {
+        
+    }
+
+}
