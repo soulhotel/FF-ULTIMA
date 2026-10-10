@@ -241,7 +241,7 @@ video player
     .ytLockupMetadataViewModelMoveLockupOverflowMenuToBottomRight .ytLockupMetadataViewModelMenuButton::before {
       background: transparent !important;
     }
-    /* a little bonus to any crazy individuals that might not be using UBlock*/
+    /* a little bonus to any crazy individuals that might not be using UBlock */
     /* Make the skip ad button absolutely massive lol */
     .ytp-skip-ad-button {
         inset: 50% auto auto 50% !important;
