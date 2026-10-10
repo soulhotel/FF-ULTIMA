@@ -193,8 +193,9 @@ video player
     :root {
         --yt-sys-color-baseline--static-brand-red: var(--uc-accent-color-2) !important;
     }
-    .ytp-play-progress {
-        z-index: 34;
+    .ytp-play-progress,
+    .ytProgressBarLineProgressBarPlayed,
+    .ytProgressBarPlayheadProgressBarPlayheadDot {
         background: var(--uc-accent-color-2) !important;
     }
     /*video player menus*/
@@ -222,6 +223,12 @@ video player
         .ytp-menuitem {
             width: calc(100% - 4px) !important;
         }
+    }
+    /*video player main settings menu - adjusting height */
+    @media (-moz-pref("ultima.youtube.bigger.settings.menu")) {
+        .ytp-settings-menu .ytp-panel {
+            min-height: 550px !important;
+        }        
     }
     /*right side recommendeds*/
     /*playlist,queue, comments sidebar*/
@@ -256,5 +263,13 @@ video player
     }
     :root:has(.ytp-skip-ad-button) .ytp-skip-ad-button {
         opacity: 0.9 !important;
+    }
+    /* an extra bonus, hide AD video recommendations in the video player sidebar/recommended */
+    ytd-ad-slot-renderer.ytd-item-section-renderer {
+        display: none !important;
+    }
+    /* and the one on homepages */
+    ytd-ad-slot-renderer {
+        opacity: 0.1 !important;
     }
 }} /* end YT */

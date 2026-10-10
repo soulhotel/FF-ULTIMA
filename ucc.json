@@ -246,6 +246,7 @@
         { "pref": "ultima.newtab.rounded",                      "description": "Theme New Tab Page (rounded theme)" },
         { "pref": "ultima.enable.youtube-theme",                "description": "Theme Youtube", "on": true },
         { "pref": "ultima.youtube.reduce.transparency",         "description": "Reduce transparency for Youtube theme" },
+        { "pref": "ultima.youtube.bigger.settings.menu",        "description": "Force Youtube video player settings menu bigger height", "on": true },
         { "pref": "ultima.enable.reddit-theme",                 "description": "Theme Reddit", "on": true }
       ]
     },
