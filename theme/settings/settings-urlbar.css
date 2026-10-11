@@ -29,39 +29,50 @@ ultima.urlbar.hide.trackingprotection.icon
         z-index: 999 !important;
         overflow-y: unset !important;
     }
-    #urlbar-container:has(#urlbar[popover-open]) #urlbar {
-        top: 0 !important;
-        max-width: 50vw !important;
-        /* careful with setting max-width on this */
-        align-items: start !important;
+    #urlbar-results {
+        scrollbar-width: none !important;
     }
-    
-    #urlbar-container:has(#urlbar[popover-open]) #urlbar {
-        position: relative !important;
-        top: 20vh !important; left: 0 !important; 
-        transform: scale(1.1) !important;
-        transition: all 0.18s linear !important;
-        & .urlbarView {transition: all 0.18s linear !important;}
-        & .urlbarView {margin-top: 0 !important; transform: scale(1.1) !important;}
+    /*ive figured this out*/
+    #urlbar-container:has(#urlbar[popover-open]) {
+        /*floating style*/
+        /*this reliably moves .urlbar-background with it*/
+        #urlbar {transform: translate(0, 300px) !important;}
+        /*this is the anchored element thats been giving us problems*/ 
+        .urlbarView {transform: translate(0, 300px) !important;}
+        /*30vh would be the better choice, although signs of the anchored element bleed through*/
+        
+        /*adjustments*/
+        /*center #urlbars relative to its #urlbar-container container*/
+        justify-content: center !important;
+        /*urlbar within*/
+        #urlbar {
+            max-width: 50vw !important;
+            /* acknowledgement for users with higher resolutions */
+            @media (min-width: 2250px) {max-width: 30vw !important;}
+        }
+        /*transition*/
+        #urlbar, .urlbarView {
+            transition: all 0.14s linear !important;
+            @media -moz-pref("ultima.urlbar.animate.open") {
+                transition: transform 0.3s ease, width 0.28s ease, max-height 0.6s ease-in !important;
+            }
+        }
+        /*styling*/
         & .urlbar-background {
             margin: 0 !important;
             border: 1px solid var(--uc-accent-border) !important;
             box-shadow: var(--uc-box-shadow) !important;
-            inset-block: -5px -55px !important;
         }
         .urlbarView-background {
             border: 1px solid var(--uc-accent-border) !important;
-            clip-path: 0 !important;
-            inset-block: -20px 0 !important;
-            margin-top: 15px !important;
-        }
-        .urlbarView {
-            padding-top: 20px !important;
         }
     }
 }
 
 @media -moz-pref("ultima.urlbar.animate.open") {
+    #urlbar-results {
+        scrollbar-width: none !important;
+    }
     .urlbarView  {
         max-height: 0 !important;
         transition: max-height 0.8s ease-out !important;
@@ -71,30 +82,6 @@ ultima.urlbar.hide.trackingprotection.icon
         .urlbarView {
             /* I* just chose a value big enough to cover the tallest state */
             max-height: 600px !important;
-            /*
-            this transition just fails with teh new Nova url bar
-            the url bar is clipped to oblivion to achieve an attempt at a "modern" style
-            the style is bad, just styling the url bar requires 2 step seperation for bar vs view
-            animations fail to display in sync when accounting for the seperation
-            */
-            /*transition: max-height 2s ease !important;*/
-        }
-    }
-    @media -moz-pref("ultima.urlbar.float") {
-        .urlbarView, .urlbarView-background, #urlbar-results {
-            overflow: clip !important;
-        }
-        .urlbarView-background, #urlbar-results {
-            max-height: 0 !important;
-            transition: max-height 0.3s ease-out !important;
-            will-change: max-height;
-            
-        }
-        #urlbar-container:has(#urlbar[popover-open]) {
-            
-            .urlbarView-background, #urlbar-results {
-                max-height: 600px !important;
-            }
         }
     }
 }
