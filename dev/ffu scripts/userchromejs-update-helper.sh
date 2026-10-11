@@ -25,11 +25,12 @@ if [ -f "$USERCHROME_FILE" ]; then
   echo "updating $USERCHROME_FILE..."
   sed -i -E "s/scriptsDir:[[:space:]]*'[^']*'/scriptsDir: 'userchromejs\/scripts'/g" "$USERCHROME_FILE"
   if ! grep -q "chromedir\.appendRelativePath(_uc\.scriptsDir)" "$USERCHROME_FILE"; then
-    sed -i "s/chromedir\.append(_uc\.scriptsDir)/chromedir.appendRelativePath(_uc.scriptsDir)/" "$USERCHROME_FILE"
+    sed -i -E "s|_uc\.chromedir\.append(RelativePath)?\(_uc\.scriptsDir\);|for (const segment of _uc.scriptsDir.split('/')) _uc.chromedir.append(segment);|" "$USERCHROME_FILE"
   fi
 else
   echo "error: cant find $USERCHROME_FILE" >&2
 fi
+
 
 mkdir -p "$(dirname "$MANIFEST_FILE")"
 cat << 'EOF' > "$MANIFEST_FILE"

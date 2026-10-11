@@ -141,7 +141,17 @@ video player
         background: color-mix(in srgb, var(--uc-layered-background), transparent 40%) !important;
     }
     /*recommended topic chips*/
-    #chips.ytd-feed-filter-chip-bar-renderer {
+    #chips-wrapper.ytd-feed-filter-chip-bar-renderer {
+        background: color-mix(in srgb, var(--uc-layered-background), transparent 40%) !important;
+        backdrop-filter: blur(25px) !important;
+    }
+    #left-arrow-button.ytd-feed-filter-chip-bar-renderer,
+    #right-arrow-button.ytd-feed-filter-chip-bar-renderer,
+    #right-arrow.ytd-feed-filter-chip-bar-renderer::before,
+    #left-arrow.ytd-feed-filter-chip-bar-renderer::after
+    {background: transparent !important;}
+    ytd-button-renderer.ytd-feed-filter-chip-bar-renderer {
+        background: var(--uc-button-selected) !important;
     }
     ytd-button-renderer.ytd-feed-filter-chip-bar-renderer {
         background: var(--uc-button-selected) !important;

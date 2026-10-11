@@ -809,7 +809,7 @@ func runUninstall() {
 			return true
 		}
 		switch top {
-		case "dev", "setup wizard", ".github":
+		case "dev", "setup wizard", ".git", ".github": // names/paths as an exclusion list
 			return true
 		}
 		return false
@@ -958,10 +958,8 @@ func runJob(full bool) {
 			return true
 		}
 		switch top {
-		case "dev", "setup wizard":
+		case "dev", "setup wizard", ".git", ".github":
 			return true
-		case ".github":
-			return !full || exists(filepath.Join(chromeDir, ".github"))
 		}
 		return false
 	}
