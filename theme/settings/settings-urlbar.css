@@ -24,7 +24,7 @@ ultima.urlbar.hide.trackingprotection.icon
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-@media -moz-pref("ultima.urlbar.float") {
+@media (-moz-pref("ultima.urlbar.float")) {
     #navigator-toolbox {
         z-index: 999 !important;
         overflow-y: unset !important;
@@ -53,23 +53,23 @@ ultima.urlbar.hide.trackingprotection.icon
         /*transition*/
         #urlbar, .urlbarView {
             transition: all 0.14s linear !important;
-            @media -moz-pref("ultima.urlbar.animate.open") {
-                transition: transform 0.3s ease, width 0.28s ease, max-height 0.6s ease-in !important;
+            @media (-moz-pref("ultima.urlbar.animate.open")) {
+                transition: transform 0.3s ease, width 0.28s ease, max-height 0.4s ease-in !important;
             }
         }
         /*styling*/
         & .urlbar-background {
             margin: 0 !important;
-            border: 1px solid var(--uc-accent-border) !important;
+            outline: 2px solid var(--uc-accent-border) !important;
             box-shadow: var(--uc-box-shadow) !important;
         }
         .urlbarView-background {
-            border: 1px solid var(--uc-accent-border) !important;
+            outline: 2px solid var(--uc-accent-border) !important;
         }
     }
 }
 
-@media -moz-pref("ultima.urlbar.animate.open") {
+@media (-moz-pref("ultima.urlbar.animate.open")) {
     #urlbar-results {
         scrollbar-width: none !important;
     }
