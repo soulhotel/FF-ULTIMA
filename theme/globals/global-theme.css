@@ -555,6 +555,11 @@ panel, menupopup {
     --panel-separator-padding:        4px 8px  !important;
     --panel-banner-item-update-supported-bgcolor: var(--uc-accent-color-1) !important;
 }
+/* captures dropdowns rendered inside of content (like firefox autocomplete password in #PopupAutoComplete) */
+richlistbox {
+    color: var(--uc-text-color) !important;
+    background: var(--uc-menu-background) !important;
+}
 /* navbar menu panel interior --- */
 /* firefox update popup */
 #appMenu-update-banner {

@@ -303,7 +303,7 @@ const UserChrome_js = {
 };
 
 if (!Services.appinfo.inSafeMode) {
-  _uc.chromedir.appendRelativePath(_uc.scriptsDir);
+  for (const segment of _uc.scriptsDir.split('/')) _uc.chromedir.append(segment);
   _uc.getScripts();
   const windows = Services.wm.getEnumerator(null);
   while (windows.hasMoreElements()) {
