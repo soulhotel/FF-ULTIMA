@@ -1306,6 +1306,7 @@ menuitem[type="radio"]:disabled img{
 menuitem[type="radio"] img {border-radius: 50% !important;}
 /*radio btn*/
 /*buttons*/
+/*
 .button-background {
     button:hover > &, &[type~="ghost"] {
         background-color: var(--uc-accent-color-1) !important;
@@ -1313,6 +1314,7 @@ menuitem[type="radio"] img {border-radius: 50% !important;}
         color: var(--button-text-color-hover) !important;
     }
 }
+*/
 /*we'll see*/
 button[label="Leave page"] {
   background-color: pink !important;
