@@ -19,6 +19,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"reflect"
 	"regexp"
 	"runtime"
 	"sort"
@@ -604,6 +605,22 @@ func friendly(err error, where string) error {
 	return err
 }
 
+// those fields only exist in Windows builds of syscall, so they are set by name to keep one file compiling everywhere
+func hideWindow(cmd *exec.Cmd) {
+	if runtime.GOOS != "windows" {
+		return
+	}
+	attr := &syscall.SysProcAttr{}
+	v := reflect.ValueOf(attr).Elem()
+	if f := v.FieldByName("HideWindow"); f.IsValid() {
+		f.SetBool(true)
+	}
+	if f := v.FieldByName("CreationFlags"); f.IsValid() {
+		f.SetUint(0x08000000) // CREATE_NO_WINDOW
+	}
+	cmd.SysProcAttr = attr
+}
+
 func elevatedTree(op, src, dst string) error {
 	exe, err := os.Executable()
 	if err != nil {
@@ -624,6 +641,7 @@ func elevatedTree(op, src, dst string) error {
 	default:
 		cmd = exec.Command("pkexec", exe, op, src, dst)
 	}
+	hideWindow(cmd)
 	out, err := cmd.CombinedOutput()
 	if err != nil {
 		return fmt.Errorf("administrator action failed or was cancelled: %s", strings.TrimSpace(string(out)))
@@ -809,7 +827,8 @@ func runUninstall() {
 			return true
 		}
 		switch top {
-		case "dev", "setup wizard", ".git", ".github": // names/paths as an exclusion list
+		// names/paths as an exclusion list
+		case "dev", "setup wizard", ".git", ".github":
 			return true
 		}
 		return false
@@ -1096,7 +1115,9 @@ func restartFirefox() {
 		}
 		ps := fmt.Sprintf("Get-Process '%s' -ErrorAction SilentlyContinue | Where-Object { $_.Path -eq '%s' } | ForEach-Object { taskkill /PID $_.Id | Out-Null }",
 			strings.ReplaceAll(strings.TrimSuffix(filepath.Base(exe), ".exe"), "'", "''"), strings.ReplaceAll(exe, "'", "''"))
-		exec.Command("powershell", "-NoProfile", "-Command", ps).Run()
+		kill := exec.Command("powershell", "-NoProfile", "-Command", ps)
+		hideWindow(kill)
+		kill.Run()
 		start = exec.Command(exe, "-profile", profileDir)
 	case "darwin":
 		app := filepath.Dir(filepath.Dir(ff)) // .../Firefox Nightly.app
