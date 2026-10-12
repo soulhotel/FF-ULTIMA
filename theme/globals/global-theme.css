@@ -451,10 +451,10 @@ spacer[part="overflow-start-indicator"] {
         /*seems like theyre reverting a lot of nova changes*/
     }
     /* back to styling */
-    & .urlbarView {
-        /* padding: 4px !important;
-        box-shadow: var(--uc-box-shadow) !important; */
-    } 
+    /*& .urlbarView {
+        padding: 4px !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }*/
     & .urlbarView-row {
         color: var(--uc-text-color) !important;
         border-radius: var(--uc-urlbar-border-radius) !important;
@@ -1116,7 +1116,7 @@ spacer[part="overflow-end-indicator"] {
 }
 .tab-audio-button:hover {--button-icon-fill: var(--tab-loading-fill) !important;}
 /* unloaded tabs opacity */
-@media -moz-pref("browser.tabs.fadeOutUnloadedTabs") {
+@media (-moz-pref("browser.tabs.fadeOutUnloadedTabs")) {
     .tabbrowser-tab[pending] .tab-content {
         opacity: 0.15 !important;
     }
@@ -1308,11 +1308,9 @@ menuitem[type="radio"] img {border-radius: 50% !important;}
 /*buttons*/
 .button-background {
     button:hover > &, &[type~="ghost"] {
-        {
-         background-color: var(--uc-accent-color-1) !important;
-         border-color: var(--uc-accent-color-1) !important;
-         color: var(--button-text-color-hover) !important;
-        }
+        background-color: var(--uc-accent-color-1) !important;
+        border-color: var(--uc-accent-color-1) !important;
+        color: var(--button-text-color-hover) !important;
     }
 }
 /*we'll see*/

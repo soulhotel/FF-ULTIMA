@@ -21,13 +21,14 @@ new tab rounded tweaks
 
 @import url('all-color-schemes-wallpapers.css');
 
-@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) { @media -moz-pref("ultima.enable.newtab-theme") {
+@-moz-document url(chrome://browser/content/browser.xul), url(about:newtab), url(about:home) { @media (-moz-pref("ultima.enable.newtab-theme")) {
 
 /* variables ------------------------------------------------------------------- */     
 
 /* overwrite these variables */
 
 :root {
+    --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
     --color-accent-primary: var(--uc-accent-color-2) !important;
     --color-accent-primary-hover: var(--uc-accent-color-2) !important;
     --button-background-color-hover: var(--uc-accent-color-2) !important;
@@ -42,7 +43,8 @@ new tab rounded tweaks
     --newtab-background-color: var(--uc-browser-color) !important;
     --newtab-background-color-secondary: var(--uc-browser-color) !important;
     --customize-menu-bg:  var(--uc-browser-color) !important;
-    --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+    --button-background-color-primary-hover: var(--uc-button-selected) !important;
+    --button-background-color-primary-active: var(--uc-button-selected) !important;
 }
 /* our custom variables */
 :root {
@@ -53,6 +55,7 @@ new tab rounded tweaks
 }
 @media (prefers-color-scheme: dark) {
     :root {
+        --uc-newtab-searchbar: background-color: rgba(50, 50, 50, 0.1) !important;
         --uc-newtab-shortcut-background: color-mix(in srgb, var(--uc-browser-color), transparent 95%) !important;
         --uc-newtab-menu-background: color-mix(in srgb, var(--uc-browser-color) 40%, transparent);
         --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
@@ -61,6 +64,7 @@ new tab rounded tweaks
 }  
 @media (prefers-color-scheme: light) { 
     :root {
+        --uc-newtab-searchbar: background-color: rgba(65, 65, 65, 0.1) !important;
         --uc-newtab-shortcut-background: color-mix(in srgb, var(--uc-browser-color), transparent 65%) !important;
         --uc-newtab-menu-background: color-mix(in srgb, var(--uc-browser-color) 60%, transparent);
         --newtab-element-secondary-hover-color: var(--newtab-element-hover-color) !important;
@@ -213,7 +217,6 @@ panel-list {
         border: 1px solid var(--uc-outline-border) !important;
     }
     .top-site-button .tile {
-
         border: 1px solid var(--uc-outline-border) !important;
     }
 }
@@ -228,6 +231,22 @@ panel-list {
     fill: var(--mode-color) !important;
 }  
 /* search bar */
+/*default search bar is now a button so..*/
+.search-handoff-button {
+    background-color: var(--uc-newtab-searchbar) !important;
+    /*--newtab-search-icon no longer works because of the root*/
+    background-image: url("chrome://global/skin/icons/search-glass.svg") !important;
+    background-size: 20px auto !important;
+    backdrop-filter: blur(33px);
+}
+/* userchromejs note:
+another case of making shadow root elements more accessible on the css side.
+since this next declaration does nothing without it.
+ */
+content-search-handoff-ui[fakefocus] .search-handoff-button  {
+    border: 2px solid var(--uc-accent-border) !important;
+}
+/*non handoff searchbar reuses similar elements as urlbar*/
 :root:not([lwtheme]), :root[lwtheme] {
     .search-inner-wrapper {
         .searchmode-switcher {
@@ -278,6 +297,11 @@ panel-list {
     --button-text-color-muted: var(--mode-color) !important;
     --button-text-color-muted-hover: var(--uc-accent-color-2) !important;
 }
+
+/*weather widget is a lil special..........*/
+.weather-widget .weather-anchor {
+    backdrop-filter: blur(33px);
+}
  
     
 /* stories --------------------------------------------------------------------- */ 
@@ -305,11 +329,16 @@ panel-list {
 }       
 
 .customize-menu {
+    --customize-menu-bg: var(--uc-newtab-menu-background) !important;
     background-color: var(--uc-newtab-menu-background) !important;
     border-radius: calc(var(--uc-newtab-rounding) - 9px) !important;
     position: relative;
     backdrop-filter: blur(33px);
     background-blend-mode: overlay;
+}
+.customize-menu-content .manage-settings-footer {
+    background: transparent !important;
+    &::Before {opacity: 0 !important;}
 }
     
 /* home sections --------------------- */ 

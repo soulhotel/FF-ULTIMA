@@ -19,7 +19,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 
 /* The list below makes color schemes available to the Browser --------------------------------------------------- */
 
-@import url('default/theme-default.css')                       -moz-pref("ultima.theme.default");
+@import url('default/theme-default.css');
 @import url('transparent/theme-transparent.css')               -moz-pref("ultima.theme.transparent");
 @import url('catppuccin/theme-catppuccin.css')                 -moz-pref("ultima.theme.catppuccin");
 @import url('catppuccin-frappe/theme-catppuccin-frappe.css')   -moz-pref("ultima.theme.catppuccin-frappe");
@@ -41,7 +41,7 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 
 @-moz-document url(about:newtab), url(about:home), url(about:privatebrowsing), url-prefix("file://"), regexp("moz-extension://.*") {
 
-@import url('default/theme-default.css')                       -moz-pref("ultima.theme.default");
+@import url('default/theme-default.css');
 @import url('transparent/theme-transparent.css')               -moz-pref("ultima.theme.transparent");
 @import url('catppuccin/theme-catppuccin.css')                 -moz-pref("ultima.theme.catppuccin");
 @import url('catppuccin-frappe/theme-catppuccin-frappe.css')   -moz-pref("ultima.theme.catppuccin-frappe");

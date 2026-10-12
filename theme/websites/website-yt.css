@@ -236,8 +236,11 @@ video player
     }
     /*video player main settings menu - adjusting height */
     @media (-moz-pref("ultima.youtube.bigger.settings.menu")) {
+        .ytp-settings-menu {
+            height: calc(100% - (var(--yt-delhi-bottom-controls-height)) *1.65) !important;
+        }
         .ytp-settings-menu .ytp-panel {
-            min-height: 550px !important;
+            min-height: 100% !important;
         }        
     }
     /*right side recommendeds*/

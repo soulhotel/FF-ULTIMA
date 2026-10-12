@@ -29,11 +29,6 @@ shield pause icon
     .tabbrowser-tab[selected] .tab-icon-image[src="chrome\:\/\/branding\/content\/icon32\.png"] {
         fill: var(--uc-tab-selected-text) !important;
     }
-    @media (-moz-pref("ultima.theme.default")) {
-        .tab-icon-image[src="chrome\:\/\/branding\/content\/icon32\.png"] {
-            content: url("../icons/ultimafox.png");
-        }
-    }
     #unified-extensions-button {
         list-style-image: url("../icons/extensions.svg") !important;
         fill: var(--uc-text-color) !important;

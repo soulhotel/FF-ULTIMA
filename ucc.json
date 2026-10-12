@@ -239,15 +239,20 @@
     {
       "folder": "Website Themes",
       "options": [
-        { "pref": "ultima.enable.newtab-theme",                 "description": "Theme the New Tab Page", "on": true },
-        { "pref": "ultima.newtab.hide.logo",                    "description": "Hide newtab Firefox logo", "on": true },
-        { "pref": "ultima.newtab.hide.shortcut-titles",         "description": "Hide newtab shortcut titles until hovered", "on": true },
-        { "pref": "ultima.newtab.compact",                      "description": "Theme New Tab Page (compact theme)" },
-        { "pref": "ultima.newtab.rounded",                      "description": "Theme New Tab Page (rounded theme)" },
         { "pref": "ultima.enable.youtube-theme",                "description": "Theme Youtube", "on": true },
         { "pref": "ultima.youtube.reduce.transparency",         "description": "Reduce transparency for Youtube theme" },
-        { "pref": "ultima.youtube.bigger.settings.menu",        "description": "Force Youtube video player settings menu bigger height", "on": true },
-        { "pref": "ultima.enable.reddit-theme",                 "description": "Theme Reddit", "on": true }
+        { "pref": "ultima.youtube.bigger.settings.menu",        "description": "Force Youtube video player settings menu bigger height", "on": false },
+        { "pref": "ultima.enable.reddit-theme",                 "description": "Theme Reddit", "on": true },
+        {
+          "folder": "New Tab Page",
+          "options": [
+            { "pref": "ultima.enable.newtab-theme",                 "description": "Theme the New Tab Page", "on": true },
+            { "pref": "ultima.newtab.hide.logo",                    "description": "Hide newtab Firefox logo", "on": true },
+            { "pref": "ultima.newtab.hide.shortcut-titles",         "description": "Hide newtab shortcut titles until hovered", "on": true },
+            { "pref": "ultima.newtab.rounded",                      "description": "New Tab Page (rounded theme)" },
+            { "pref": "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", "description": "Enable New Tab Page search bar", "on": true }
+          ]
+        }
       ]
     },
     {
@@ -265,7 +270,8 @@
         { "pref": "findbar.highlightAll",                       "description": "Highlight all findbar results at the same time", "on": true },
         { "pref": "browser.tabs.insertAfterCurrent",            "description": "Insert new tabs after the currently selected", "on": true },
         { "pref": "browser.search.context.loadInBackground",    "description": "Delay loading newly opened tabs until visited", "on": true },
-        { "pref": "browser.bookmarks.openInTabClosesMenu",      "description": "Bookmarks menu stays open until clicking away", "on": false }
+        { "pref": "browser.bookmarks.openInTabClosesMenu",      "description": "Bookmarks menu stays open until clicking away", "on": false },
+        { "pref": "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", "description": "Enable New Tab Page search bar", "on": true }
       ]
     },
     {

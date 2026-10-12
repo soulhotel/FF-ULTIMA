@@ -10,86 +10,88 @@ Applying variables further to create the Theme
 
 /* All of these Variables - Control the color everywhere. For light mode and dark mode. Allowing most/all customization to be done in one place */
 
-@media (prefers-color-scheme: dark) { :root:not([lwtheme]) {
-    --uc-browser-color:        rgb(30, 30, 46);
-    --uc-text-color:           #f0c199;
-    --uc-layered-background:   rgb(24, 24, 37);
-    --uc-navbar-background:    var(--uc-browser-color);
-    --uc-urlbar-background:    rgb(24, 24, 37);
-    --uc-bookbar-background:   var(--uc-browser-color);
-    --uc-tabbar-background:    var(--uc-browser-color);
-    --uc-findbar-background:   var(--uc-layered-background);
-    --uc-sidebar-background:   var(--uc-layered-background);
-    --uc-tab-selected:         rgb(17 17 27);
-    --uc-tab-selected-text:    var(--uc-accent-color-5);
-    --uc-tab-selected-outline: var(--uc-accent-color-5);
-    --uc-tab-background:       transparent;
-    --uc-tab-outline:          transparent;
-    --uc-button-selected:      rgb(17 17 27);
-    --uc-button-color:         var(--uc-accent-color-1);
-    --uc-button-red:           #e75858;
-    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
-    --uc-context-menu:         rgb(39, 40, 58);
-    --uc-menu-background:      var(--uc-layered-background);
-    --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
-    --uc-outline-border:       rgba(150, 150, 155, 0.2);
-    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-5) 10%, transparent)  !important;
-    --uc-accent-color-1:       rgb(203, 166, 247);
-    --uc-accent-color-2:       rgb(173, 128, 92);
-    --uc-accent-color-3:       rgb(186, 194, 222);
-    --uc-accent-color-4:       rgb(24, 24, 37);
-    --uc-accent-color-5:       rgb(166, 227, 161);
-    --uc-accent-color-6:       rgb(243, 139, 168);
-    --uc-accent-color-7:       rgb(44, 55, 80);
-    --uc-transparent:          rgba(0,0,0,0);
-    --uc-box-shadow:           0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
-    --uc-light-box-shadow:     0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
-    --uc-button-border-radius: 10px;
-    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
-    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
-    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
-}}
-
-@media (prefers-color-scheme: light) { :root:not([lwtheme]) {
-    --uc-browser-color:      rgb(161, 158, 176);
-    --uc-text-color:         rgb(35, 35, 35);
-    --uc-layered-background: rgb(172, 168, 191);
-    --uc-navbar-background:    var(--uc-browser-color);
-    --uc-urlbar-background:  rgb(139, 142, 163);
-    --uc-bookbar-background:   var(--uc-browser-color);
-    --uc-tabbar-background:    var(--uc-browser-color);
-    --uc-findbar-background:   var(--uc-layered-background);
-    --uc-sidebar-background: rgb(153, 152, 173);
-    --uc-tab-selected:       rgb(232, 232, 236);
-    --uc-tab-selected-text:    var(--uc-accent-color-5);
-    --uc-tab-selected-outline: var(--uc-accent-color-5);
-    --uc-tab-background:       transparent;
-    --uc-tab-outline:          transparent;
-    --uc-button-selected:    rgb(116, 113, 133);
-    --uc-button-color:         var(--uc-text-color);
-    --uc-button-red:         #f54e4e;
-    --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,216,0.4));
-    --uc-context-menu:         var(--uc-layered-background);
-    --uc-menu-background:      var(--uc-layered-background);
-    --uc-menu-border:          rgba(125, 125, 125, 0.4);
-    --uc-outline-border:       rgba(125, 125, 125, 0.3);
-    --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent);
-    --uc-accent-color-1:     rgb(70, 63, 77);
-    --uc-accent-color-2:     rgb(115, 81, 54);
-    --uc-accent-color-3:     rgb(186, 194, 222);
-    --uc-accent-color-4:     rgb(24, 24, 37);
-    --uc-accent-color-5:     #19083d;
-    --uc-accent-color-6:     #5f3787;
-    --uc-accent-color-7:     rgb(44, 55, 80);
-    --uc-transparent:        rgba(0,0,0,0);
-    --uc-box-shadow:           0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
-    --uc-light-box-shadow:     0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
-    --uc-button-border-radius: 10px;
-    --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
-    --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
-    --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
-}}
-
+:root:not([lwtheme]) {
+    @media (prefers-color-scheme: dark) {
+        --uc-browser-color:        rgb(30, 30, 46);
+        --uc-text-color:           #f0c199;
+        --uc-layered-background:   rgb(24, 24, 37);
+        --uc-navbar-background:    var(--uc-browser-color);
+        --uc-urlbar-background:    rgb(24, 24, 37);
+        --uc-bookbar-background:   var(--uc-browser-color);
+        --uc-tabbar-background:    var(--uc-browser-color);
+        --uc-findbar-background:   var(--uc-layered-background);
+        --uc-sidebar-background:   var(--uc-layered-background);
+        --uc-tab-selected:         rgb(17 17 27);
+        --uc-tab-selected-text:    var(--uc-accent-color-5);
+        --uc-tab-selected-outline: var(--uc-accent-color-5);
+        --uc-tab-background:       transparent;
+        --uc-tab-outline:          transparent;
+        --uc-button-selected:      rgb(17 17 27);
+        --uc-button-color:         var(--uc-accent-color-1);
+        --uc-button-red:           #e75858;
+        --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 90%, black);
+        --uc-context-menu:         rgb(39, 40, 58);
+        --uc-menu-background:      var(--uc-layered-background);
+        --uc-menu-border:          color-mix(in srgb, var(--uc-menu-background), grey 10%);
+        --uc-outline-border:       rgba(150, 150, 155, 0.2);
+        --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-5) 10%, transparent)  !important;
+        --uc-accent-color-1:       rgb(203, 166, 247);
+        --uc-accent-color-2:       rgb(173, 128, 92);
+        --uc-accent-color-3:       rgb(186, 194, 222);
+        --uc-accent-color-4:       rgb(24, 24, 37);
+        --uc-accent-color-5:       rgb(166, 227, 161);
+        --uc-accent-color-6:       rgb(243, 139, 168);
+        --uc-accent-color-7:       rgb(44, 55, 80);
+        --uc-transparent:          rgba(0,0,0,0);
+        --uc-box-shadow:           0.15rem 0.3rem 0.3rem -0.1rem rgba(0,0,0,0.4);
+        --uc-light-box-shadow:     0.15rem 0.3rem 0.3rem -0.1rem rgba(25,25,25,1);
+        --uc-border-radius:        10px; /* used for main elements */
+        --uc-button-border-radius: 10px;
+        --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+        --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+        --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+    }
+    @media (prefers-color-scheme: light) {
+        --uc-browser-color:      rgb(161, 158, 176);
+        --uc-text-color:         rgb(35, 35, 35);
+        --uc-layered-background: rgb(172, 168, 191);
+        --uc-navbar-background:    var(--uc-browser-color);
+        --uc-urlbar-background:  rgb(139, 142, 163);
+        --uc-bookbar-background:   var(--uc-browser-color);
+        --uc-tabbar-background:    var(--uc-browser-color);
+        --uc-findbar-background:   var(--uc-layered-background);
+        --uc-sidebar-background: rgb(153, 152, 173);
+        --uc-tab-selected:       rgb(232, 232, 236);
+        --uc-tab-selected-text:    var(--uc-accent-color-5);
+        --uc-tab-selected-outline: var(--uc-accent-color-5);
+        --uc-tab-background:       transparent;
+        --uc-tab-outline:          transparent;
+        --uc-button-selected:    rgb(116, 113, 133);
+        --uc-button-color:         var(--uc-text-color);
+        --uc-button-red:         #f54e4e;
+        --uc-input-background:     color-mix(in srgb, var(--uc-layered-background) 80%, rgba(200,200,216,0.4));
+        --uc-context-menu:         var(--uc-layered-background);
+        --uc-menu-background:      var(--uc-layered-background);
+        --uc-menu-border:          rgba(125, 125, 125, 0.4);
+        --uc-outline-border:       rgba(125, 125, 125, 0.3);
+        --uc-accent-border:        color-mix(in srgb, var(--uc-accent-color-3) 10%, transparent);
+        --uc-accent-color-1:     rgb(70, 63, 77);
+        --uc-accent-color-2:     rgb(115, 81, 54);
+        --uc-accent-color-3:     rgb(186, 194, 222);
+        --uc-accent-color-4:     rgb(24, 24, 37);
+        --uc-accent-color-5:     #19083d;
+        --uc-accent-color-6:     #5f3787;
+        --uc-accent-color-7:     rgb(44, 55, 80);
+        --uc-transparent:        rgba(0,0,0,0);
+        --uc-box-shadow:           0.1rem 0.3rem 0.4rem -0.1rem rgba(75,75,75,0.3);
+        --uc-light-box-shadow:     0.1rem 0.3rem 0.4rem -0.1rem rgba(65,65,65,0.3);
+        --uc-border-radius:        10px; /* used for main elements */
+        --uc-button-border-radius: 10px;
+        --uc-urlbar-border-radius: calc(var(--uc-button-border-radius) - 0px);
+        --uc-menu-border-radius:   calc(var(--uc-button-border-radius) - 2px);
+        --uc-tab-border-radius:    calc(var(--uc-button-border-radius) - 0px);
+    }
+}
 
 /* Applying all variables to further create the Theme - If a section is empty, that means the style is defaulting to chrome/theme/globals/global-theme.css */
  
