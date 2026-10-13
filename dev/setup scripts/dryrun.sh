@@ -15,4 +15,4 @@ cd ..
 
 # you can dry run with or without -dev. removing -dev will serve the webapp embed in the binary.
 # keeping -dev serves the webapp using "../../setup wizard/src/" files, allowing live refresh & editting.
-"../Setup Wizard - Linux" -dry-run -dev
+"../setup-wizard-lin" -dry-run -dev

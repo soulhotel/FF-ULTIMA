@@ -3,17 +3,11 @@ FF ULTIMA
 Fluent Edition
 By @dreadbalaur
 ```
-Designed based Microsoft's Fluent colours, with the aim of matching niivu's Fluent theme for Windows 10.
 
-*"I'm a Thinkpad user, so the alternative Thinkpad version just replaces all accent colours with reds. 
-Rename 'ffu-colorscheme.thinkpad.css' to 'ffu-colorscheme.css' to use that version.*
+This color scheme  is available in two versions, `theme.fluent` & `theme.fluent-thinkpad`.It can be found and used in `userChrome Companions` > `Color Schemes` folder.
 
-*There is no set wallpapers yet, since my homepage/new tab is managed by HexagonTabs. The wallpapers in the previews are just photos I took.*"
-
-To use this color scheme:
-- Open `userChrome Companion`, in the `Color Scheme Settings` section.
-- Turn on `theme.fluent`
-- Or `theme.fluent-thinkpad` 🫡 
+The design is based on Microsoft's Fluent colours, with the aim of matching niivu's Fluent theme for Windows 10. I'm a Thinkpad user, so the alternative Thinkpad version just replaces all accent colours with reds.
+There is no set wallpapers yet, since my homepage/new tab is managed by HexagonTabs. The wallpapers in the previews are just photos I took. 🫡
 
 Preview:
 ![preview1](./p1.jpg)

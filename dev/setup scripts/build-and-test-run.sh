@@ -20,11 +20,11 @@ go mod tidy
 export CGO_ENABLED=0
 
 # just build for your system if you are personally testing
-GOOS=linux   GOARCH=amd64 go build -o "../Setup Wizard - Linux" .
-# GOOS=windows GOARCH=amd64 go build -ldflags "-H=windowsgui" -o "../Setup Wizard - windows.exe" .
-# GOOS=darwin  GOARCH=arm64 go build -o "../Setup Wizard - Mac Arm" .
-# GOOS=darwin  GOARCH=amd64 go build -o "../Setup Wizard - Mac Intel" .
+GOOS=linux   GOARCH=amd64 go build -o "../setup-wizard - Linux" .
+# GOOS=windows GOARCH=amd64 go build -ldflags "-H=windowsgui" -o "../setup-wizard - windows.exe" .
+# GOOS=darwin  GOARCH=arm64 go build -o "../setup-wizard - Mac Arm" .
+# GOOS=darwin  GOARCH=amd64 go build -o "../setup-wizard - Mac Intel" .
 
 # dry run
-"../Setup Wizard - Linux" -dry-run
+"../setup-wizard - Linux" -dry-run
 

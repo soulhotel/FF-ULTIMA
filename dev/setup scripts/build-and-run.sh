@@ -20,13 +20,13 @@ go mod tidy
 export CGO_ENABLED=0
 
 # just build for your system if you are personally testing
-GOOS=linux   GOARCH=amd64 go build -o "../Setup Wizard - Linux" .
-# GOOS=windows GOARCH=amd64 go build -ldflags "-H=windowsgui" -o "../Setup Wizard - windows.exe" .
-# GOOS=darwin  GOARCH=arm64 go build -o "../Setup Wizard - Mac Arm" .
-# GOOS=darwin  GOARCH=amd64 go build -o "../Setup Wizard - Mac Intel" .
+GOOS=linux   GOARCH=amd64 go build -o "../setup-wizard-lin" .
+# GOOS=windows GOARCH=amd64 go build -ldflags "-H=windowsgui" -o "../setup-wizard-win.exe" .
+# GOOS=darwin  GOARCH=arm64 go build -o "../setup-wizard-mac" .
+# GOOS=darwin  GOARCH=amd64 go build -o "../setup-wizard-mac-intel" .
 
 # normal run, edit to match your build
-"../Setup Wizard - Linux" "$@"
+"../setup-wizard - Linux" "$@"
 
 # setup wizard operates on the chrome folder it's placed in,
 # so if you are developing/testing & dont want to accidentally install/update/uninstall ff ultima in this profile...

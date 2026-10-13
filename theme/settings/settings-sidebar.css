@@ -19,7 +19,70 @@ sidebar Seperator
     }
 }
 
-/* sidebar extended width --------------------------------------------------------------- */
+/* sidebar autohide --------------------------------------------------------------------- */
+
+@media (-moz-pref("ultima.sidebar.autohide")) {
+    :root:has(#sidebar-box[checked]) {   
+        /* preserve sidebar spacing */
+        --sb-autohide-preserved-width: 40px; /* < collapsed width */
+        @media -moz-pref("ultima.sidebar.autohide.4px") {
+            --sb-autohide-preserved-width: 4px !important;
+        }
+        @media -moz-pref("ultima.sidebar.autohide.120px") {
+            --sb-autohide-preserved-width: 120px !important;
+        }
+        #sidebar-box {
+            min-width: var(--sb-autohide-preserved-width) !important;
+        }
+        /* we wont overlay the sidebar - because tracking varius vt widths is complex. */
+        /*transitions*/
+        #sidebar-box:hover {
+            transition: width ease 0.2s !important;
+        }
+        #sidebar-box:not(:hover) {
+            transition: width ease 0.3s !important;
+        }
+        /*autohide*/
+        &:has(#sidebar-box:not(:hover))
+        :has(#sidebar-splitter:not(:hover))
+        :has(#sidebar-splitter:not([state="dragging"]))
+        {
+            #sidebar-box {
+                width: var(--sb-autohide-preserved-width) !important;
+                &::before {opacity: 0.4; transition: opacity ease 1s 0.8s !important;}
+            }
+        }
+        /*additional styling for 4px sidebar*/
+        @media -moz-pref("ultima.sidebar.autohide.4px") {
+            #sidebar-box::before {
+                content:"";
+                position: fixed;
+                inset: 0;
+                inset-block: 55px;
+                z-index: 1;
+                background: red;
+                border-radius: 10px;
+                background-color: transparent;
+                pointer-events: none;
+                opacity: 0.4;
+            }
+            &:has(#sidebar-box:not(:hover))
+            :has(#sidebar-splitter:not(:hover))
+            :has(#sidebar-splitter:not([state="dragging"])) {
+                #sidebar-box:not(:hover) {
+                    & * { opacity: 0 !important; }
+                    &::before {
+                        background-color: var(--uc-accent-color-2);
+                        transition: background-color 0.3s ease !important;
+                    }
+                }              
+            }
+        }
+    }
+}
+
+
+
 /* sidebar hide new header -------------------------------------------------------------- */
 
 @media -moz-pref("ultima.sidebar.width.unlocked") {

@@ -1,10 +1,9 @@
 ### <ins> FF Ultima Version 5.0 Beta
-- Grab the Setup Wizard to begin.
-- **⬇️ [Manual Download](https://github.com/soulhotel/FF-ULTIMA/releases/download/latest/)** direct link.
+- ⬇️ Download for [`Windows`](https://github.com/soulhotel/FF-ULTIMA/releases/download/latest/setup-wizard-win), [`Linux`](https://github.com/soulhotel/FF-ULTIMA/releases/download/latest/setup-wizard-lin), or [`Mac`](https://github.com/soulhotel/FF-ULTIMA/releases/download/latest/setup-wizard-mac).
 - 🗨️ [Submit an issue](https://github.com/soulhotel/FF-ULTIMA/issues/new/choose) or ask questions not answered in [the Wiki](https://ff-ultima.github.io/docs/getting-started).
 - ⚙️ [Change settings](https://ff-ultima.github.io/docs/category/settings), tab size, autohiding, spacing, and more.
 - ⚙️ [How to Update](https://ff-ultima.github.io/docs/how-to/how-to-update) the theme to a new version.
-  
+
 ### <ins> Change Log 
 - A lot has changed, if you are a **returning User**, read [here](https://github.com/soulhotel/FF-ULTIMA/issues/515) before proceeding.
 - ALL Issues are now closed & resolved. 

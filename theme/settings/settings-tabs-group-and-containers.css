@@ -127,6 +127,7 @@ tab-group[collapsed] {
         margin-right: 5px !important;
     }
     #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-group-label {
+        margin-inline-start: -2px !important;
         padding: 3px 0 0 13px !important;
     }
     /* arrow indicator */

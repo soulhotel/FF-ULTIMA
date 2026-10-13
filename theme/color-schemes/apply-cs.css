@@ -135,8 +135,8 @@ Tutorial:          https://github.com/soulhotel/FF-ULTIMA/wiki/Create-a-Color-Sc
 }
 
 @media -moz-pref("ultima.theme.YourName") {
-    @media (prefers-color-scheme: dark)  { --uc-wallpaper: url("walls/YourName.jpg"); }
-    @media (prefers-color-scheme: light) { --uc-wallpaper: url("walls/YourName.jpg"); }
+    @media (prefers-color-scheme: dark)  { --uc-wallpaper: url("walls/YourWallpaper.jpg"); }
+    @media (prefers-color-scheme: light) { --uc-wallpaper: url("walls/YourWallpaper.jpg"); }
 }
 
 }} /*end*/

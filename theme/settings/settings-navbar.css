@@ -124,6 +124,11 @@ navbar text for icons
 }
 
 /* accessibility: light top border clearly seperates the navbar background from browser, and width adjustments for smaller windows */
+:root:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
+    #navigator-toolbox {
+        border-top: 0px solid transparent !important;
+    }    
+}
 @media (-moz-pref("ultima.navbar.float")), (-moz-pref("ultima.navbar.float.full")) {
     :root:is([sizemode="normal"],[sizemode="maximized"]):not([customizing=""])  {
         #navigator-toolbox {
