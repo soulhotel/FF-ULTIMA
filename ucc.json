@@ -24,18 +24,18 @@
     {
       "folder": "Window Control Themes",
       "options": [
-        { "pref": "ultima.titlebar-buttons.carl",               "description": "Carl traffic light themed buttons",                "conflicts": ["folder"] },
-        { "pref": "ultima.titlebar-buttons.trafficlights",      "description": "Basic traffic light themed buttons",               "conflicts": ["folder"] },
-        { "pref": "ultima.titlebar-buttons.whiteout",           "description": "revisit",                                          "conflicts": ["folder"] },
-        { "pref": "ultima.titlebar-buttons.fluent",             "description": "Fluent Styled buttons",                            "conflicts": ["folder"] }
+        { "pref": "ultima.titlebar-buttons.carl",               "description": "Carl traffic light buttons",                       "conflicts": ["folder"] },
+        { "pref": "ultima.titlebar-buttons.trafficlights",      "description": "Basic traffic light buttons",                      "conflicts": ["folder"] },
+        { "pref": "ultima.titlebar-buttons.fluent",             "description": "Fluent Styled buttons",                            "conflicts": ["folder"] },
+        { "pref": "ultima.titlebar-buttons.metro",              "description": "Metro Style buttons",                              "conflicts": ["folder"] }
       ]
     },
     {
       "folder": "Nav Bar Settings",
       "options": [
-        { "pref": "ultima.navbar.autohide",                     "description": "Navbar Autohides (off hover)",                    "conflicts": ["ultima.navbar.float", "ultima.navbar.float.full"] },
-        { "pref": "ultima.navbar.float",                        "description": "Makes the Navbar Autohide & Float",               "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float.full"] },
-        { "pref": "ultima.navbar.float.full",                   "description": "Navbar Float, in a larger width",                 "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float"] },
+        { "pref": "ultima.navbar.autohide",                     "description": "Navbar Autohides (off hover)",                     "conflicts": ["ultima.navbar.float", "ultima.navbar.float.full"] },
+        { "pref": "ultima.navbar.float",                        "description": "Makes the Navbar Autohide & Float",                "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float.full"] },
+        { "pref": "ultima.navbar.float.full",                   "description": "Navbar Float, in a larger width",                  "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float"] },
         { "separator":true },
         { "pref": "ultima.navbar.bottom",                       "description": "Position the Navbar Bottom of screen" },
         { "pref": "ultima.hide.titlebar-buttons",               "description": "Hide Titlebar buttons (min, max, close)", "on": true },
@@ -59,8 +59,8 @@
         { "pref": "ultima.urlbar.drags.window",                 "description": "Mouse drag the Urlbar can move the Window", "on": true },
         { "pref": "ultima.urlbar.hide.tracking-protection-icon","description": "Hide tracking protection icon", "on": true },
         { "pref": "ultima.urlbar.scrollable",                   "description": "Urlbar becomes fixed-width & scrollable" },
-        { "pref": "ultima.urlbar.focus.blur",                   "description": "Blur content when Urlbar focused",                "conflicts": ["ultima.urlbar.focus.blur.window"], "on": true },
-        { "pref": "ultima.urlbar.focus.blur.window",            "description": "Blur window when Urlbar focused",                 "conflicts": ["ultima.urlbar.focus.blur"] },
+        { "pref": "ultima.urlbar.focus.blur",                   "description": "Blur content when Urlbar focused",                 "conflicts": ["ultima.urlbar.focus.blur.window"], "on": true },
+        { "pref": "ultima.urlbar.focus.blur.window",            "description": "Blur window when Urlbar focused",                  "conflicts": ["ultima.urlbar.focus.blur"] },
         { "pref": "ultima.urlbar.focus.text-aligns-left",       "description": "Force Urlbar text left when focused" },
         { "pref": "ultima.urlbar.extension-label.fullwidth",    "description": "Makes extension webpages label larger", "on": false },
         { "pref": "ultima.urlbar.hide.extension-label",         "description": "Hide extension webpage labels", "on": true }
@@ -69,8 +69,8 @@
     {
       "folder": "Bookmark Bar Settings",
       "options": [
-        { "pref": "ultima.bookmarks.autohide",                  "description": "Make bookmakrs bar autohide off hover",           "conflicts": ["ultima.bookmarks.float"] },
-        { "pref": "ultima.bookmarks.float",                     "description": "Make bookmarks bar float and autohide",           "conflicts": ["ultima.bookmarks.autohide"] },
+        { "pref": "ultima.bookmarks.autohide",                  "description": "Make bookmakrs bar autohide off hover",            "conflicts": ["ultima.bookmarks.float"] },
+        { "pref": "ultima.bookmarks.float",                     "description": "Make bookmarks bar float and autohide",            "conflicts": ["ultima.bookmarks.autohide"] },
         { "pref": "ultima.bookmarks.centered",                  "description": "Center bookmarks bar content", "on": true },
         { "pref": "ultima.bookmarks.compact",                   "description": "Reduce the height of the bookmarks toolbar", "on": true },
         { "pref": "ultima.bookmarks.scrollable",                "description": "Scrollable Bookmarks Bar (shift+scroll, horizontal scroll)" },
@@ -84,8 +84,8 @@
       "folder": "Sidebar Settings",
       "options": [
         { "pref": "ultima.sidebar.autohide",                   "description": "Autohide the Sidebar" },
-        { "pref": "ultima.sidebar.autohide.4px",               "description": "Sidebar Autohides into a 4px bar",              "conflicts": ["ultima.sidebar.autohide.120px"] },
-        { "pref": "ultima.sidebar.autohide.120px",             "description": "Sidebar Autohides into a 120px bar",            "conflicts": ["ultima.sidebar.autohide.4px"] },
+        { "pref": "ultima.sidebar.autohide.4px",               "description": "Sidebar Autohides into a 4px bar",                  "conflicts": ["ultima.sidebar.autohide.120px"] },
+        { "pref": "ultima.sidebar.autohide.120px",             "description": "Sidebar Autohides into a 120px bar",                "conflicts": ["ultima.sidebar.autohide.4px"] },
         { "separator":true },
         { "pref": "ultima.sidebar.hide.header",                 "description": "Hide Sidebar header", "on": true },
         { "pref": "ultima.sidebar.width.unlocked",              "description": "Sidebar width unlocked, from 40px to 90% of screen", "on": true },
@@ -96,10 +96,10 @@
       "folder": "Sidebery Settings",
       "options": [
         { "pref": "ultima.extension.theme.sidebery",            "description": "Theme Sidebery", "on": true },
-        { "pref": "ultima.sidebery.autohide",                   "description": "Autohide Sidebery",                              "conflicts": ["ultima.tabs.autohide"], "on": true },
+        { "pref": "ultima.sidebery.autohide",                   "description": "Autohide Sidebery",                                "conflicts": ["ultima.tabs.autohide"], "on": true },
         { "pref": "ultima.tabs.hide-for-sidebery",              "description": "Completely hide tabs (for Sidebery setups)", "on": true },
-        { "pref": "ultima.sidebery.autohide.4px",               "description": "Sidebery Autohides into a 4px bar",              "conflicts": ["ultima.sidebery.autohide.120px"] },
-        { "pref": "ultima.sidebery.autohide.120px",             "description": "Sidebery Autohides into a 120px bar",            "conflicts": ["ultima.sidebery.autohide.4px"] },
+        { "pref": "ultima.sidebery.autohide.4px",               "description": "Sidebery Autohides into a 4px bar",                "conflicts": ["ultima.sidebery.autohide.120px"] },
+        { "pref": "ultima.sidebery.autohide.120px",             "description": "Sidebery Autohides into a 120px bar",              "conflicts": ["ultima.sidebery.autohide.4px"] },
         { "pref": "ultima.sidebery.expandon.inactive-windows",  "description": "Expand Sidebery panel when window is inactive" }
       ]
     },
@@ -113,7 +113,7 @@
     {
       "folder": "Tab Settings",
       "options": [
-        { "pref": "ultima.tabs.autohide",                       "description": "Autohide Tab Bar (vertical & horizontal)",        "conflicts": ["sidebar.expandOnHover", "ultima.sidebery.autohide"], "on": false },
+        { "pref": "ultima.tabs.autohide",                       "description": "Autohide Tab Bar (vertical & horizontal)",         "conflicts": ["ultima.sidebery.autohide"], "on": false },
         { "separator":true },
         { "pref": "ultima.spacing.tabs.compact",                "description": "Compact tab spacing" },
         { "pref": "ultima.tabs.not.a.progress.bar",             "description": "Enable Tab loading indicator", "on": true },
@@ -132,11 +132,11 @@
     {
       "folder": "Vertical Tab Settings",
       "options": [
-        { "pref": "ultima.tabs.vert.float",                     "description": "Autohide Vert Tab Bar (floating style)",          "conflicts": ["ultima.tabs.autohide"] },
+        { "pref": "ultima.tabs.vert.float",                     "description": "Autohide Vert Tab Bar (floating style)",           "conflicts": ["ultima.tabs.autohide"] },
         { "pref": "ultima.tabs.vert.multiline",                 "description": "Vertical tabs span multiple lines", "on": true },
         { "pref": "ultima.tabs.vert.buttonstrip.underTabs",     "description": "Move bottom button strip under tabs" },
-        { "pref": "ultima.tabs.vert.new-tab-button.ontop.1",    "description": "New tab button on top of tabs",                   "conflicts": ["ultima.tabs.vert.new-tab-button.ontop.2"] },
-        { "pref": "ultima.tabs.vert.new-tab-button.ontop.2",    "description": "New tab button on top, under pinned tabs",        "conflicts": ["ultima.tabs.vert.new-tab-button.ontop.1"] },
+        { "pref": "ultima.tabs.vert.new-tab-button.ontop.1",    "description": "New tab button on top of tabs",                    "conflicts": ["ultima.tabs.vert.new-tab-button.ontop.2"] },
+        { "pref": "ultima.tabs.vert.new-tab-button.ontop.2",    "description": "New tab button on top, under pinned tabs",         "conflicts": ["ultima.tabs.vert.new-tab-button.ontop.1"] },
         { "pref": "ultima.tabs.vert.hide.buttonstrip",          "description": "Hide bottom button strip" },
         { "pref": "ultima.tabs.vert.hide.splitters",            "description": "Hide splitter/seperators" },
         { "pref": "ultima.tabs.vert.splitview.stay.vertical",   "description": "Separator line between splitview tabs", "on": true }

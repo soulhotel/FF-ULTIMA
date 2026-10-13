@@ -32,7 +32,7 @@ pinned tabs transparent background
         margin-block: -0.3px !important;
     }
     .tabbrowser-tab {
-        padding-block: 0 !important;
+        padding-block: 1px !important;
     }
 }
 
@@ -207,6 +207,9 @@ pinned tabs transparent background
             }
             .tab-close-button {
                 margin-inline: -2px 4px !important;
+            }
+            .tabbrowser-tab:hover .tab-close-button {
+                background: var(--uc-tab-selected) !important;
             }
         }
         #tabbrowser-tabs[orient="horizontal"] {
