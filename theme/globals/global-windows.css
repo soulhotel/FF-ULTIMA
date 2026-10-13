@@ -1,0 +1,33 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+┏┓┏┓  ┳┳┓ ┏┳┓┳┳┳┓┏┓
+┣ ┣   ┃┃┃  ┃ ┃┃┃┃┣┫
+┻ ┻   ┗┛┗┛ ┻ ┻┛ ┗┛┗
+                   
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:
+
+Eventually I'll go in depth on styling additional windows (anything other than #main-window)
+such as places windows, popups, etc.
+
+the places window itself (manage bookmarks, manage history), is pretty straight forward.
+We've worked with the same treecolumns before, just need to remember how exactly I had it before.
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+window[id="places"] {
+    background: var(--uc-browser-color) !important;
+    #placesToolbar, /*header*/
+    #placesList, /*sidebar*/
+    #placesView, /*body*/
+    #placeContent /*body content*/
+    {
+        background: var(--uc-browser-color) !important;
+    }
+    splitter[persist="state"] {
+        background-color: var(--uc-accent-color-2) !important;
+    }
+    #placeContentColumns {
+
+    }
+}
