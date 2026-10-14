@@ -6,7 +6,7 @@ setup wizard/src/dist/
 setup wizard/src/node_modules/
 
 # built setup binaries don't need to sit in the source
-Setup Wizard -*
+setup-wizard-*
 
 # custom css files
 customChrome.css
