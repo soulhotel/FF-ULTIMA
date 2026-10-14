@@ -26,7 +26,8 @@ keep vertical tab splitview tabs vertical
 @media -moz-pref("ultima.tabs.splitview.hide.separator") {
     /*tabbar slit/border removal*/
     #tabbrowser-tabs[orient="vertical"]:not([expanded]) tab-split-view-wrapper .tabbrowser-tab:first-child,
-    tab-split-view-wrapper .tabbrowser-tab:last-child {
+    tab-split-view-wrapper .tabbrowser-tab:last-child,
+    tab-split-view-wrapper .tab-stack:last-child {
         border: 0 !important;
     }
 }
@@ -36,10 +37,11 @@ keep vertical tab splitview tabs vertical
 @media -moz-pref("ultima.tabs.splitview.gradient.background") {
     #tabbrowser-tabs {
         tab-split-view-wrapper {
-            background: linear-gradient(-80deg, rgba(238,119,82,0.03), rgba(131,60,126,0.1), rgba(35,250,213,0.004)) !important;
+            outline: 2px solid var(--uc-accent-border);
+            background: linear-gradient(-80deg, rgba(238,119,82,0.05), rgba(131,60,126,0.15), rgba(35,250,213,0.02)) !important;
             background-size: 100% !important;
             &:has(.tabbrowser-tab[selected]) {
-                background: linear-gradient(-80deg, rgba(238,119,82,0.7), rgba(131,60,126,0.7), rgba(35,250,213,0.7)) !important;
+                background: linear-gradient(-80deg, rgba(238,119,82,0.6), rgba(131,60,126,0.5), rgba(35,250,213,0.4)) !important;
             }
         }
     }

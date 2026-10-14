@@ -59,7 +59,7 @@ tab-group[collapsed] {
 
 /* tab groups labels -------------------------------------------------------------------------------------------- */
 
-@media -moz-pref("ultima.tabs.tabgroups.label.tthornton") {
+@media (-moz-pref("ultima.tabs.tabgroups.label.tthornton")) {
     #tabbrowser-tabs[orient="vertical"][expanded] .tab-group-label {
         align-self: start !important;
     }
@@ -69,7 +69,7 @@ tab-group[collapsed] {
     }
 }
 
-@media -moz-pref("ultima.tabs.tabgroups.label.circular") {
+@media (-moz-pref("ultima.tabs.tabgroups.label.circular")) {
     .tab-group-label {
         border-radius: 33px !important;
         padding-inline: 10px !important;
@@ -79,7 +79,7 @@ tab-group[collapsed] {
     }
 }
 
-@media -moz-pref("ultima.tabs.tabgroups.label.pill") {
+@media (-moz-pref("ultima.tabs.tabgroups.label.pill")) {
     /* shrink label */
     .tab-group-label-container, .tab-group-label {
         max-height: 15px !important;
@@ -102,7 +102,7 @@ tab-group[collapsed] {
     }
 }
 
-@media -moz-pref("ultima.tabs.tabgroups.label.ultima") {
+@media (-moz-pref("ultima.tabs.tabgroups.label.ultima")) {
     /* replicate themes tab style */
     .tab-group-label {
         border-radius: var(--uc-tab-border-radius) !important;
@@ -152,7 +152,7 @@ tab-group[collapsed] {
     }
 }
 
-@media -moz-pref("ultima.tabs.tabgroups.label.arrow") {
+@media (-moz-pref("ultima.tabs.tabgroups.label.arrow")) {
     /* tabs.tabgroups.label.ultima styling works really well for positioning, reusing it here */
     .tab-group-label {
         border-radius: var(--uc-tab-border-radius) !important;
@@ -201,7 +201,7 @@ tab-group[collapsed] {
 /* tab groups backgrounds --------------------------------------------------------------------------------------- */
 
 /* modern background that I found on reddit and simplified a bit */
-@media -moz-pref("ultima.tabs.tabgroups.background.modern") {
+@media (-moz-pref("ultima.tabs.tabgroups.background.modern")) {
     :root:not(:has([movingtab])) {
         tab-group {
             display: block !important;
@@ -241,7 +241,7 @@ tab-group[collapsed] {
     }
 }
 
-@media -moz-pref("ultima.tabs.tabgroups.background.modern.test") {
+@media (-moz-pref("ultima.tabs.tabgroups.background.modern.test")) {
     tab-group:not([collapsed]) {
         display: block !important;
         box-sizing: content-box !important;
@@ -256,7 +256,7 @@ tab-group[collapsed] {
 }
 
 /* simple background that only accents the tabs within the group */
-@media -moz-pref("ultima.tabs.tabgroups.background.simple") {
+@media (-moz-pref("ultima.tabs.tabgroups.background.simple")) {
     .tabbrowser-tab {
         background: color-mix(in lab, var(--tab-group-background-color), transparent 60%) !important;
         transition: background 2s ease 0.1s !important;
@@ -264,7 +264,7 @@ tab-group[collapsed] {
 }
 
 /* an animated/blurred accent on the edge of tab group tabs */
-@media -moz-pref("ultima.tabs.tabgroups.background.edge") {
+@media (-moz-pref("ultima.tabs.tabgroups.background.edge")) {
     .tab-background {
         overflow: clip !important;
     }
@@ -287,7 +287,7 @@ tab-group[collapsed] {
 }
 
 /* a style that basically re-enables the default border line */
-@media -moz-pref("ultima.tabs.tabgroups.background.line") {
+@media (-moz-pref("ultima.tabs.tabgroups.background.line")) {
     .tab-group-line, .tab-group-label-container::after {
         opacity: 1 !important;
     }
@@ -297,7 +297,7 @@ tab-group[collapsed] {
 }
 
 
-@media -moz-pref("ultima.tabs.tabgroups.background.dash") {
+@media (-moz-pref("ultima.tabs.tabgroups.background.dash")) {
     /* our background layer */
     tab-group {
         display: block !important;
@@ -349,7 +349,7 @@ tab-group[collapsed] {
 }
 
 /* Container Style 2, Tab Border becomes container color */
-@media -moz-pref("ultima.tabs.tabContainer.2") {
+@media (-moz-pref("ultima.tabs.tabContainer.2")) {
     .tabbrowser-tab[usercontextid] {
         & .tab-background {
             border: 2px solid var(--identity-icon-color) !important;
@@ -361,7 +361,7 @@ tab-group[collapsed] {
 }
 
 /* Container Style 3, tab becomes container color */
-@media -moz-pref("ultima.tabs.tabContainer.3") {
+@media (-moz-pref("ultima.tabs.tabContainer.3")) {
     .tabbrowser-tab[usercontextid] {
         & .tab-context-line {
             width: 100% !important;
@@ -381,46 +381,3 @@ tab-group[collapsed] {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
