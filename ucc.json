@@ -270,7 +270,7 @@
         { "pref": "ultima.enable.nightly.config",               "description": "Enable nightly config" },
         { "pref": "ultima.enable.js.config",                    "description": "Enable JS userScript config" },
         { "pref": "ultima.privatebrowsing.gradient.border",     "description": "Gradient border in private browsing mode" },
-        { "pref": "ultima.privatebrowsing.hide.indicator",     "description": "Gradient border in private browsing mode" }
+        { "pref": "ultima.privatebrowsing.hide.indicator",     "description": "Hide default private browsing mode indicator" }
       ]
     },
     {

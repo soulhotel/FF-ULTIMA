@@ -16,28 +16,25 @@ It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima
 */
 
 @media (-moz-pref("ultima.navbar.unified")) {
-    :root:not([customizing]) {
+    :root[ultima-navbar-unified]:not([customizing]) {
         --uc-navbar-height: 2px !important;
+        #sidebar-container {
+            position: relative;
+        }
+        #ultima-unified-navbar {
+            position: absolute;
+            top: 0;
+            inset-inline-start: 0;
+            width: var(--ultima-sidebar-width);
+            z-index: 1;
+            padding-block: 4px;
+            padding-inline: 8px;
+        }
+        #sidebar-container sidebar-main {
+            box-sizing: border-box;
+            padding-top: var(--ultima-navbar-height); /* tracked in ucjs */
+        }
     }
-
-    /* container adjustments */
-    #sidebar-container {
-        position: relative;
-    }
-    :root[ultima-navbar-unified] #ultima-unified-navbar {
-        position: absolute;
-        top: 0;
-        inset-inline-start: 0;
-        width: var(--ultima-sidebar-width);
-        z-index: 1;
-        padding-block: 4px;
-        padding-inline: 8px;
-    }
-    :root[ultima-navbar-unified] #sidebar-container sidebar-main {
-        box-sizing: border-box;
-        padding-top: var(--ultima-navbar-height); /* tracked in ucjs */
-    }
-
     /* navbar adjustments */
     #ultima-unified-navbar > #nav-bar {
         position: relative;
@@ -76,19 +73,19 @@ It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima
         container-type: inline-size;
     }
     @container (max-width: 150px) {
-    #urlbar-container::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: url("chrome://global/skin/icons/search-glass.svg") center / var(--toolbarbutton-icon-size, 16px) no-repeat;
-        -moz-context-properties: fill, fill-opacity;
-        fill: currentColor;
-        fill-opacity: var(--toolbarbutton-icon-fill-opacity, 1);
-        pointer-events: none;
-    }
-    #urlbar:not([popover-open]) {
-        opacity: 0;
-    }
+        #urlbar-container::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("chrome://global/skin/icons/search-glass.svg") center / var(--toolbarbutton-icon-size, 16px) no-repeat;
+            -moz-context-properties: fill, fill-opacity;
+            fill: currentColor;
+            fill-opacity: var(--toolbarbutton-icon-fill-opacity, 1);
+            pointer-events: none;
+        }
+        #urlbar:not([popover-open]) {
+            opacity: 0;
+        }
     }
     @container (max-width: 50px) {
         #ultima-unified-navbar:has(#sidebar-button) {
