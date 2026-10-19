@@ -102,7 +102,7 @@ tab-group[collapsed] {
     }
 }
 
-@media (-moz-pref("ultima.tabs.tabgroups.label.ultima")) {
+@media -moz-pref("ultima.tabs.tabgroups.label.ultima") {
     /* replicate themes tab style */
     .tab-group-label {
         border-radius: var(--uc-tab-border-radius) !important;
@@ -133,7 +133,7 @@ tab-group[collapsed] {
     /* arrow indicator */
     #tabbrowser-tabs[orient="vertical"][expanded], #tabbrowser-tabs[orient="horizontal"] {
         .tab-group-label {
-            background-image: url("chrome://global/skin/icons/arrow-left-12.svg");
+            background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
             background-repeat: no-repeat;
             background-position: right 10px top 50%;
             -moz-context-properties: fill; fill: var(--tab-group-background-color);
@@ -142,8 +142,8 @@ tab-group[collapsed] {
     }
     /* vertical tabs arrow */
     #tabbrowser-tabs[orient="vertical"][expanded] {
-        .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-left-12.svg");}
-        tab-group[collapsed] .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-down-12.svg");}
+        .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-down-12.svg");}
+        tab-group[collapsed] .tab-group-label {background-image: url("chrome://global/skin/icons/arrow-left-12.svg");}
     }
     /* horizontal tabs arrow */
     #tabbrowser-tabs[orient="horizontal"] {
@@ -152,7 +152,7 @@ tab-group[collapsed] {
     }
 }
 
-@media (-moz-pref("ultima.tabs.tabgroups.label.arrow")) {
+@media -moz-pref("ultima.tabs.tabgroups.label.arrow") {
     /* tabs.tabgroups.label.ultima styling works really well for positioning, reusing it here */
     .tab-group-label {
         border-radius: var(--uc-tab-border-radius) !important;
@@ -179,14 +179,14 @@ tab-group[collapsed] {
     }
     /* arrow indicator */
     .tab-group-label {
-        background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
+        background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
         background-repeat: no-repeat;
         background-position: left 10px top 50%;
         -moz-context-properties: fill; fill: var(--tab-group-background-color);
         padding-left: 32px !important; /* text makes space for arrow indicator */
     }
     tab-group[collapsed] .tab-group-label {
-        background-image: url("chrome://global/skin/icons/arrow-down-12.svg");
+        background-image: url("chrome://global/skin/icons/arrow-right-12.svg");
     }
     /* hacky adjustment for arrow taking up collapsed space */
     #tabbrowser-tabs[orient="vertical"]:not([expanded]) .tab-group-label {

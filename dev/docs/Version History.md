@@ -3,6 +3,19 @@ sidebar_position: 6
 description: Version History
 ---
 
+### <ins> FF Ultima Version 5.0 Beta
+
+### <ins> Change Log
+- A lot has changed, if you are a **returning User**, read [here](https://github.com/soulhotel/FF-ULTIMA/issues/515) before proceeding.
+- FF Ultima 5.0 Beta requires a full reinstall. View the [Installation Guide here](https://ff-ultima.github.io/docs/how-to/how-to-install#installation).
+- I want you guys to find out how much better the theme has become on your own. Once you grab the theme, try out all the settings (old and new) and enjoy!
+- Documentation is still a wip.
+- `fix • 🔴 •` 
+- `new • 🟢 •` 
+- `qol • 🟡 •` 
+-->
+-->
+
 ## <ins> 4.2 </ins>
 
 - `fix • 🔴 •` Sidebery tab text labels, spacing and visibility when collapsed b56ec63
