@@ -1,13 +1,8 @@
-> [!WARNING]
-> ### Note from developer
-> FF Ultima 5.0 is now live! If you are a Returning User, please make sure you've seen [this discussion](https://github.com/soulhotel/FF-ULTIMA/issues/515) before you continue.
-
-
 <div align="center">
 
 # FF ULTIMA...
 
-###### . . . The theme with too many options. And a sequel to [FF Perfection CSS](https://github.com/soulhotel/Perfection-Firefox-CSS-Theme).
+###### . . . The theme with too many options.
 
 
 <!--![GitHub Release](https://img.shields.io/github/v/release/soulhotel/FF-CSS-ULTIMA?style=for-the-badge)
