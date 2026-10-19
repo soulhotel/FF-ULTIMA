@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 set -eu
 
-PROJECT_DIR="FF-ULTIMA"
+# PROJECT_DIR="FF-ULTIMA"
 CHANGELOG_FILE="changelog.md"
 ATTACHMENT_PATTERN="setup-wizard-*"
 VERSION_PATTERN='[0-9]+(\.[0-9]+)*'
-
-cd "$PROJECT_DIR"
 
 if [ ! -f "$CHANGELOG_FILE" ]; then
     echo "error: $CHANGELOG_FILE not found in $PROJECT_DIR" >&2
