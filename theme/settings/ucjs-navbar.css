@@ -1,0 +1,116 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         Nav Bar & Top Bar Settings - specific to userChromeJS
+
+ultima.navbar.unified
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*
+ultima.navbar.unified
+
+This modification relies on ultima.navbar.unified, a Zen(?) style navbar that sits on top of the Vertical Tab Bar.
+It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima-unified-navbar element placed inside of #sidebar-container
+*/
+
+@media (-moz-pref("ultima.navbar.unified")) {
+    :root:not([customizing]) {
+        --uc-navbar-height: 2px !important;
+    }
+
+    /* container adjustments */
+    #sidebar-container {
+        position: relative;
+    }
+    :root[ultima-navbar-unified] #ultima-unified-navbar {
+        position: absolute;
+        top: 0;
+        inset-inline-start: 0;
+        width: var(--ultima-sidebar-width);
+        z-index: 1;
+        padding-block: 4px;
+        padding-inline: 8px;
+    }
+    :root[ultima-navbar-unified] #sidebar-container sidebar-main {
+        box-sizing: border-box;
+        padding-top: var(--ultima-navbar-height); /* tracked in ucjs */
+    }
+
+    /* navbar adjustments */
+    #ultima-unified-navbar > #nav-bar {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        padding-bottom: calc(var(--urlbar-min-height, 32px) + 12px) !important;
+    }
+
+    /* buttons */
+    #ultima-unified-navbar #nav-bar-customization-target {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        flex: 1 1 0;
+        min-width: 0;
+        align-items: center;
+        overflow-x: clip;
+        overflow-y: visible;
+    }
+    #ultima-unified-navbar #nav-bar-customization-target > :not(#urlbar-container) {
+        flex: none !important;
+    }
+
+    /* urlbar */
+    #ultima-unified-navbar #urlbar-container {
+        position: absolute !important;
+        inset-inline: 4px;
+        bottom: 4px;
+        margin: 0 !important;
+        width: auto !important;
+        min-width: 0;
+        max-width: none;
+    }
+
+    /* collapsed width adjustments need a container */
+    #ultima-unified-navbar {
+        container-type: inline-size;
+    }
+    @container (max-width: 150px) {
+    #urlbar-container::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("chrome://global/skin/icons/search-glass.svg") center / var(--toolbarbutton-icon-size, 16px) no-repeat;
+        -moz-context-properties: fill, fill-opacity;
+        fill: currentColor;
+        fill-opacity: var(--toolbarbutton-icon-fill-opacity, 1);
+        pointer-events: none;
+    }
+    #urlbar:not([popover-open]) {
+        opacity: 0;
+    }
+    }
+    @container (max-width: 50px) {
+        #ultima-unified-navbar:has(#sidebar-button) {
+            #nav-bar toolbaritem:not(#urlbar-container),
+            #nav-bar toolbarbutton:not(#sidebar-button),
+            #nav-bar .titlebar-buttonbox-container {
+                display: none !important;
+            }
+
+        }
+    }
+
+    /* no springs, spacers*/
+    #ultima-unified-navbar toolbarspring,
+    #ultima-unified-navbar toolbarspacer,
+    #ultima-unified-navbar toolbarseparator {
+        display: none !important;
+    }
+    #ultima-unified-navbar #nav-bar-overflow-button,
+    #ultima-unified-navbar #PanelUI-menu-button {
+        flex: none;
+        margin-inline-start: auto;
+    }
+}
+

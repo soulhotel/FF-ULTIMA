@@ -10,6 +10,13 @@
 - I want you guys to find out how much better the theme has become on your own. Once you grab the theme, try out all the settings (old and new) and enjoy!
 - Documentation is still a wip.
 
+
+<!--
+
+ultima.navbar.unified still experimental, conflicts with browser.fullscreen.autohide, ultima.navbar.autohide, ultima.navbar.float.*, should be added to navbar styles
+
+ -->
+
 <!--
 - `fix • 🔴 •` 
 - `new • 🟢 •` 
