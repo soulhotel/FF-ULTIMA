@@ -124,7 +124,7 @@
         { "pref": "ultima.tabs.disable.close-tab-button",       "description": "Hide Close Tab button",     "conflicts": ["ultima.tabs.close-tab-button.replace.favicon"] },
         { "pref": "ultima.tabs.close-tab-button.replace.favicon","description": "Move close tab button to favicon" },
         { "pref": "ultima.tabs.reverse.content.order",          "description": "Reverse tab content order", "conflicts": ["ultima.tabs.close-tab-button.replace.favicon"] },
-        { "pref": "ultima.tabs.focus.blur",                     "description": "Blur page content on tab focus" },
+        { "pref": "ultima.tabs.focus.blur",                     "description": "Blur other tabs when hovering another tab" },
         { "pref": "ultima.tabs.pinned.always.visible",          "description": "Keep pinned tabs always visible", "on": true },
         { "pref": "ultima.tabs.pinned.transparent.background",  "description": "Pinned tabs - transparent background" }
       ]
@@ -134,10 +134,11 @@
       "options": [
         { "pref": "ultima.tabs.vert.float",                     "description": "Autohide Vert Tab Bar (floating style)",           "conflicts": ["ultima.tabs.autohide"] },
         { "pref": "ultima.tabs.vert.multiline",                 "description": "Vertical tabs span multiple lines", "on": true },
-        { "pref": "ultima.tabs.vert.buttonstrip.underTabs",     "description": "Move bottom button strip under tabs" },
+        { "pref": "ultima.tabs.vert.buttonstrip.underTabs",     "description": "Bottom button strip sits under tabs" },
         { "pref": "ultima.tabs.vert.new-tab-button.ontop.1",    "description": "New tab button on top of tabs",                    "conflicts": ["ultima.tabs.vert.new-tab-button.ontop.2"] },
         { "pref": "ultima.tabs.vert.new-tab-button.ontop.2",    "description": "New tab button on top, under pinned tabs",         "conflicts": ["ultima.tabs.vert.new-tab-button.ontop.1"] },
         { "pref": "ultima.tabs.vert.hide.buttonstrip",          "description": "Hide bottom button strip" },
+        { "pref": "ultima.tabs.vert.hide.buttonstrip.except.settings", "description": "Hide bottom button strip except for Settings Button" },
         { "pref": "ultima.tabs.vert.hide.splitters",            "description": "Hide splitter/seperators" },
         { "pref": "ultima.tabs.vert.splitview.stay.vertical",   "description": "Separator line between splitview tabs", "on": true }
       ]
@@ -177,12 +178,11 @@
         { "pref": "ultima.tabs.tabgroups.label.arrow",          "description": "Tab groups label - Arrow Indicator Style",        "conflicts": ["ultima.tabs.tabgroups.label.*"] },
         { "pref": "ultima.tabs.tabgroups.label.tthornton",      "description": "Tab groups label - Tthornton style",              "conflicts": ["ultima.tabs.tabgroups.label.*"] },
         { "separator":true },
-        { "pref": "ultima.tabs.tabgroups.background.modern",    "description": "Tab groups - Modern background",                  "conflicts": ["ultima.tabs.tabgroups.background.simple", "ultima.tabs.tabgroups.background.dash"], "on": true },
-        { "pref": "ultima.tabs.tabgroups.background.simple",    "description": "Tab groups - Simple background",                  "conflicts": ["ultima.tabs.tabgroups.background.modern", "ultima.tabs.tabgroups.background.dash"] },
-        { "pref": "ultima.tabs.tabgroups.background.dash",      "description": "Tab groups - Dashed border box",                  "conflicts": ["ultima.tabs.tabgroups.background.modern", "ultima.tabs.tabgroups.background.simple"] },
+        { "pref": "ultima.tabs.tabgroups.background.modern",    "description": "Tab groups - Modern background (experimental)",   "conflicts": ["ultima.tabs.tabgroups.background.simple", "ultima.tabs.tabgroups.background.dash"], "on": false },
+        { "pref": "ultima.tabs.tabgroups.background.simple",    "description": "Tab groups - Simple background",                  "conflicts": ["ultima.tabs.tabgroups.background.modern", "ultima.tabs.tabgroups.background.dash"], "on": true },
+        { "pref": "ultima.tabs.tabgroups.background.dash",      "description": "Tab groups - Dashed border box (experimental)",   "conflicts": ["ultima.tabs.tabgroups.background.modern", "ultima.tabs.tabgroups.background.simple"] },
         { "pref": "ultima.tabs.tabgroups.background.edge",      "description": "Tab groups - Animated edge background" },
         { "pref": "ultima.tabs.tabgroups.background.line",      "description": "Tab groups - Default border line" },
-        { "pref": "ultima.tabs.tabgroups.background.modern.test","description": "Modern Background Test",                         "conflicts": ["ultima.tabs.tabgroups.background.modern", "ultima.tabs.tabgroups.background.dash"] },
         { "separator":true },
         { "pref": "ultima.tabs.tabContainer.1",                 "description": "Tab container style - Animated border line", "on": true },
         { "pref": "ultima.tabs.tabContainer.2",                 "description": "Tab container style - Full border" },
@@ -223,8 +223,7 @@
         { "pref": "ultima.bookmarks.compact",                   "description": "Reduce the height of the bookmarks toolbar", "on": true },
         { "pref": "ultima.spacing.menus.compact",               "description": "Compact menu spacing" },
         { "pref": "ultima.spacing.contextmenu.compact",         "description": "Compact context menu spacing",               "conflicts": ["ultima.spacing.contextmenu.relaxed"] },
-        { "pref": "ultima.spacing.contextmenu.relaxed",         "description": "Relaxed context menu spacing",               "conflicts": ["ultima.spacing.contextmenu.compact"] },
-        { "pref": "ultima.spacing.compact.addonmanager",        "description": "Compact layout for Add-ons Manager" }
+        { "pref": "ultima.spacing.contextmenu.relaxed",         "description": "Relaxed context menu spacing",               "conflicts": ["ultima.spacing.contextmenu.compact"] }
       ]
     },
     {
@@ -247,6 +246,7 @@
     {
       "folder": "Website Themes",
       "options": [
+        { "pref": "ultima.aboutaddons.compact-grid",            "description": "Add-ons Manager - Compact layout", "on": true },
         { "pref": "ultima.enable.youtube-theme",                "description": "Theme Youtube", "on": true },
         { "pref": "ultima.youtube.reduce.transparency",         "description": "Reduce transparency for Youtube theme" },
         { "pref": "ultima.youtube.bigger.settings.menu",        "description": "Force Youtube video player settings menu bigger height", "on": false },

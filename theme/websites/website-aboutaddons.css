@@ -3,18 +3,91 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         
 
-# todo
+add ons page (theme, extensions, plugins, etc)
 
-# restore "compact addon page" style
-
-# we wont be using the MrOtherGuy style anymore, i have a pretty good grasp on grid manipulation now
+the only modifications here are the ultima.aboutaddons.compact-grid style.
+it's limited to addon-list[type="extension"] for now,
+adjustments should be made for the other listed contexts,
+like themes being split into two columns instead of grid,
+will get to that eventually.
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
 @-moz-document url(about:addons) {
-
     @media (-moz-pref("ultima.aboutaddons.compact-grid")) {
-        
-    }
+         #main:has(addon-list[type="extension"]) {
+            max-width: unset !important;
+        }
+        @media (max-width: 950px) {
+            :root {
+                --sidebar-width: 90px !important;
+                --size-sidebar: 90px !important;
+            }
+        }
+        addon-list[type="extension"] {
+            --tile-w: 300px;
+            --tile-h: 90px;
+        }
+        @media (max-width: 730px) {
+            addon-list[type="extension"] {
+                --tile-w: 100%;
+                --tile-h: 90px;
+            }
+        }
 
+        addon-list[type="extension"] > section {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, var(--tile-w));
+            justify-content: start;
+            gap: 8px;
+            padding-block: 0 24px;
+        }
+        addon-list[type="extension"] > section > .list-section-heading {
+            grid-column: 1 / -1;
+        }
+
+        addon-list[type="extension"] .addon.card {
+            box-sizing: border-box !important;
+            height: var(--tile-h) !important;
+            max-height: var(--tile-h) !important;
+            margin-bottom: 0 !important;
+        }
+        addon-list[type="extension"] .card-heading-icon {
+            margin-inline: 0 12px !important;
+        }
+        addon-list[type="extension"] .card-contents {
+            width: 100% !important;
+            min-width: 0 !important;
+            white-space: normal !important;
+        }
+        addon-list[type="extension"] .addon-name-container .spacer {
+            display: none !important;
+        }
+        addon-list[type="extension"] .addon-name {
+            flex: 1 1 0 !important;
+            min-width: 0 !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        addon-list[type="extension"] .addon-badge,
+        addon-list[type="extension"] .extension-enable-button,
+        addon-list[type="extension"] .more-options-button {
+            flex-shrink: 0;
+        }
+        addon-card:not([expanded]) .addon-badge-verified,
+        addon-card:not([expanded]) .addon-badge-recommended,
+        addon-card:not([expanded]) .addon-description,
+        addon-card:not([expanded]) .addon-card-message button[action],
+        addon-card:not([expanded]):not(:hover) .addon-card-message {
+            display: none !important;
+        }
+
+        addon-card:not([expanded]):has(.addon-card-message[type="warning"]) .card {
+            outline: 2px solid rgba(245, 161, 66, 0.3) !important;
+        }
+        addon-card:not([expanded]):not([panelopen]) > .addon.card[active="false"]:not(:focus-within):not(:hover) {
+            opacity: 0.4 !important;
+        }        
+    }
 }

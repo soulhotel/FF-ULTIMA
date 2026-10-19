@@ -25,6 +25,9 @@ ultima.urlbar.hide.trackingprotection.icon
 
 
 @media (-moz-pref("ultima.urlbar.float")) {
+    :root {
+        --uc-urlbar-floating-outline: 2px solid color-mix(in srgb, var(--uc-accent-border), grey 20%, transparent 50%);
+    }
     #navigator-toolbox {
         z-index: 999 !important;
         overflow-y: unset !important;
@@ -60,11 +63,11 @@ ultima.urlbar.hide.trackingprotection.icon
         /*styling*/
         & .urlbar-background {
             margin: 0 !important;
-            outline: 2px solid var(--uc-accent-border) !important;
+            outline: var(--uc-urlbar-floating-outline) !important;
             box-shadow: var(--uc-box-shadow) !important;
         }
         .urlbarView-background {
-            outline: 2px solid var(--uc-accent-border) !important;
+            outline: var(--uc-urlbar-floating-outline) !important;
         }
     }
 }

@@ -12,6 +12,7 @@ this file ->                               for general tab settings
 ./settings-tabs-outlines.css               for tab outline styles
 
 compact tabs
+remove box shadow from tabs
 tab/page progress bar
 tab counter
 disable "all tabs" button
@@ -32,8 +33,21 @@ pinned tabs transparent background
         margin-block: -0.3px !important;
     }
     .tabbrowser-tab {
-        padding-block: 1px !important;
+        padding-block: 2px !important;
     }
+}
+
+/* remove box shadow from tabs ---------------------------------------------------------------------------------- */
+@media -moz-pref("ultima.tabs.remove.shadows") {
+    [lwtheme], :root:not([lwtheme]) {
+        .tab-background,
+        .tab-background[selected],
+        .tab-background[multiselected]:not([selected]),
+        .tabbrowser-tab:hover .tab-background,
+        .tabbrowser-tab[pinned] .tab-background {
+            box-shadow: none !important;
+        }
+    }    
 }
 
 /* tab/page progress bar ---------------------------------------------------------------------------------------- */

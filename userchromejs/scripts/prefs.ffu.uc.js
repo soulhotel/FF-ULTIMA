@@ -14,9 +14,9 @@
   const HANDLED = 'handled';
 
   const recommendedPrefs = [
-    ['ffu.userChromeCompanion.enabled', true],
-    ['toolkit.legacyUserProfileCustomizations.stylesheets', true],
-    ['browser.aboutConfig.showWarning', false],
+    ['ffu.userChromeCompanion.enabled', true], /*triggers */
+    ['toolkit.legacyUserProfileCustomizations.stylesheets', true], /* the idea was to ensure css is enabled in browser, but these scripts operate at a later threshold than runtime, so setupwizard handles this now instead */
+    ['browser.aboutConfig.showWarning', false], /* this is everything below it are mostly qol */
     ['devtools.debugger.remote-enabled', true],
     ['devtools.chrome.enabled', true],
     ['devtools.debugger.prompt-connection', false],
@@ -27,6 +27,8 @@
     ['widget.gtk.native-context-menus', false],
     ['sidebar.animation.expand-on-hover.duration-ms', 200],
     ['sidebar.animation.expand-on-hover.delay-duration-ms', 0],
+    ['browser.newtabpage.activity-stream.newtabWallpapers.user.enabled']
+    
   ];
 
   const prefs = Services.prefs;

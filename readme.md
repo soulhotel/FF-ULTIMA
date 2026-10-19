@@ -1,8 +1,7 @@
 > [!WARNING]
 > ### Note from developer
-> For anyone discovering this theme for the first time: FF Ultima is currently going through a massive update, expected to land in the upcoming days. I've been away for a couple of months and need to catch up on changes, documentation, & more. If you are using Firefox 156+, disable Nova and use at your own discretion or wait a couple of days.
->
-> Updates coming soon. Stay updated [here](https://github.com/soulhotel/FF-ULTIMA/issues/515). Thank you.
+> FF Ultima 5.0 is now live! If you are a Returning User, please make sure you've seen [this discussion](https://github.com/soulhotel/FF-ULTIMA/issues/515) before you continue.
+
 
 <div align="center">
 

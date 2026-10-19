@@ -6,25 +6,9 @@
 
 ### <ins> Change Log 
 - A lot has changed, if you are a **returning User**, read [here](https://github.com/soulhotel/FF-ULTIMA/issues/515) before proceeding.
-- ALL Issues are now closed & resolved. 
-- FF Ultima 5.0 Beta requires a full reinstall. View the installation Guide here.
-- I want you guys to find out how much better the theme has become on your own. Once you grab the theme, try out all the settings (new and old) and enjoy!
+- FF Ultima 5.0 Beta requires a full reinstall. View the [Installation Guide here](https://ff-ultima.github.io/docs/how-to/how-to-install#installation).
+- I want you guys to find out how much better the theme has become on your own. Once you grab the theme, try out all the settings (old and new) and enjoy!
 - Documentation at is still a wip.
-
-### after setup testing...
-- doc website comes first, hopefully testing is 100%, if so, https://github.com/soulhotel/FF-ULTIMA/issues/515
-- need to also restore the brave color scheme
-- need to finalize transparent color scheme
-- revisit global-private-browsing
-- modularize setup wizard
-- sidebar autohide setting restoration #490
-- sidebery autohide can use more adjustment to collapsed style
-- window control styles can be simplified by a lot, the old handling is too much now that i think about it
-- ALSO svgs for the window control icons! Much simpler to implement & lighter on users system
-- urlbar float is worth another extensive look. maybe a transform only approach on the right selector can kind of get around the anchors
-- need a release script
-
-
 
 <!--
 - `fix • 🔴 •` 

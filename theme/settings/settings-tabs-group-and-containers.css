@@ -201,28 +201,14 @@ tab-group[collapsed] {
 /* tab groups backgrounds --------------------------------------------------------------------------------------- */
 
 /* modern background that I found on reddit and simplified a bit */
-@media (-moz-pref("ultima.tabs.tabgroups.background.modern")) {
-    :root:not(:has([movingtab])) {
-        tab-group {
-            display: block !important;
-            position: relative;
-        }
-        tab-group:not([collapsed])::before {
-            content:"";
-            position: absolute;
-            inset: 1px 6px;
-            z-index: -1;
-            background-color: color-mix(in srgb, var(--tab-group-color), transparent 90%) !important;
-            outline: 2px solid color-mix(in srgb, var(--tab-group-color), transparent 50%) !important;
-            border-radius: 12px !important;
-        }
-    }
-    /* because of how buggy this style is, "position: relative on tab-groups" we have to swap out the background layer whenever tabs are moving */
-    :root:has([movingtab]) {
-        tab-group:not(:has(.tabbrowser-tab[dragtarget])) {
-            display: block !important;
-            position: relative;
-            &:not([collapsed])::before {
+@media -moz-pref("ultima.tabs.tabgroups.background.modern") {
+    :root:has(#tabbrowser-tabs[orient="vertical"]) {
+        &:not(:has([movingtab])) {
+            tab-group {
+                display: block !important;
+                position: relative;
+            }
+            tab-group:not([collapsed])::before {
                 content:"";
                 position: absolute;
                 inset: 1px 6px;
@@ -232,16 +218,32 @@ tab-group[collapsed] {
                 border-radius: 12px !important;
             }
         }
-        /* swap out for a reliable background here */
-        tab-group:has(.tabbrowser-tab[dragtarget]) {
-            .tabbrowser-tab {
-                background-color: color-mix(in srgb, var(--tab-group-color), transparent 90%) !important;
+        /* because of how buggy this style is, "position: relative on tab-groups" we have to swap out the background layer whenever tabs are moving */
+        &:has([movingtab]) {
+            tab-group:not(:has(.tabbrowser-tab[dragtarget])) {
+                display: block !important;
+                position: relative;
+                &:not([collapsed])::before {
+                    content:"";
+                    position: absolute;
+                    inset: 1px 6px;
+                    z-index: -1;
+                    background-color: color-mix(in srgb, var(--tab-group-color), transparent 90%) !important;
+                    outline: 2px solid color-mix(in srgb, var(--tab-group-color), transparent 50%) !important;
+                    border-radius: 12px !important;
+                }
+            }
+            /* swap out for a reliable background here */
+            tab-group:has(.tabbrowser-tab[dragtarget]) {
+                .tabbrowser-tab {
+                    background-color: color-mix(in srgb, var(--tab-group-color), transparent 90%) !important;
+                }
             }
         }
     }
 }
 
-@media (-moz-pref("ultima.tabs.tabgroups.background.modern.test")) {
+@media -moz-pref("ultima.tabs.tabgroups.background.modern.test") {
     tab-group:not([collapsed]) {
         display: block !important;
         box-sizing: content-box !important;
@@ -254,6 +256,7 @@ tab-group[collapsed] {
         border-radius: 18px / 13px !important;
     }
 }
+/* ^ this style breaks horizontal tabs, if i really want to keep this, perhaps a wrapper on the entire tab-group in userchromejs ----------------------- */
 
 /* simple background that only accents the tabs within the group */
 @media (-moz-pref("ultima.tabs.tabgroups.background.simple")) {

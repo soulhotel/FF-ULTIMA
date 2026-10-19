@@ -106,13 +106,25 @@ hide vertical tab splitters
 }
 
 
-/* these two settings below are the first case of new method failure, :root cant be a declaration wrapper for shadow dom elements*/
+/* these two/three settings below are the first case of new method failure, :root cant be a declaration wrapper for shadow dom elements*/
 /* hide bottom button strip ------------------------------------------------------------------------------------- */
 @media -moz-pref("ultima.tabs.vert.hide.buttonstrip") {
-    .tools-and-extensions:not(:hover) {
-        opacity: 0 !important; /*shame*/ 
+    .buttons-wrapper:has(.tools-and-extensions) {
+        &:not(:hover) {
+            transition: opacity 0.6s ease-in 0.8s;
+            opacity: 0;
+        }
     }
 }
+@media -moz-pref("ultima.tabs.vert.hide.buttonstrip.except.settings") {
+    .buttons-wrapper:has(.tools-and-extensions):not(:hover) {
+        & moz-button:not([view="viewCustomizeSidebar"]) {display:none !important;}
+        & moz-button[view="viewCustomizeSidebar"] {
+            margin-top:5px;
+        }
+    }
+}
+
 /* hide vertical tab splitters ---------------------------------------------------------------------------------- */
 @media -moz-pref("ultima.tabs.vert.hide.splitters") {
     #vertical-pinned-tabs-splitter, #sidebar-tools-and-extensions-splitter {

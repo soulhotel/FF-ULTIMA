@@ -942,7 +942,7 @@ card-container[isemptystate] .selectedTab {
         outline-color: var(--uc-accent-border) !important;
     }
     & .tab-background[multiselected]:not([selected]) {
-        background-color: color-mix(in srgb, var(--uc-tab-selected), transparent 80%) !important;
+        background-color: var(--uc-tab-selected) !important;
         outline-color: var(--uc-accent-border) !important;
         box-shadow: var(--uc-box-shadow) !important;
     }
