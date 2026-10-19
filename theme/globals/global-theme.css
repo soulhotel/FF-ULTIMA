@@ -188,8 +188,8 @@ Setting the default Appearance
     /*---*/
     --button-border-radius:    var(--uc-button-border-radius) !important;
     --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
-    --panel-item-hover-bgcolor: pink !important;
-    --toolbarbutton-active-background: pink !important;
+    --panel-item-hover-bgcolor: var(--uc-button-selected) !important;
+    --toolbarbutton-active-background: var(--uc-button-selected) !important;
     --tab-selected-bgcolor:  pink !important;
     --tab-selected-outline-color: pink !important;
     /*---*/
@@ -1317,12 +1317,14 @@ menuitem[type="radio"] img {border-radius: 50% !important;}
 */
 /*we'll see*/
 button[label="Leave page"] {
-  background-color: pink !important;
+  background-color: var(--uc-button-selected) !important;
   color: var(--uc-text-color) !important;
+  cursor: pointer;
 }
 button[label="Stay on page"] {
-  background-color: pink !important;
+  background-color: var(--uc-button-selected) !important;
   color: var(--uc-text-color) !important;
+  cursor: pointer;
 }
 
 

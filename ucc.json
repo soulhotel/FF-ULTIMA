@@ -116,6 +116,7 @@
         { "pref": "ultima.tabs.autohide",                       "description": "Autohide Tab Bar (vertical & horizontal)",         "conflicts": ["ultima.sidebery.autohide"], "on": false },
         { "separator":true },
         { "pref": "ultima.spacing.tabs.compact",                "description": "Compact tab spacing" },
+        { "pref": "ultima.tabs.remove.shadows",                 "description": "Remove shadows from tabs" },
         { "pref": "ultima.tabs.not.a.progress.bar",             "description": "Enable Tab loading indicator", "on": true },
         { "pref": "ultima.tabs.tabCounter",                     "description": "Enable tab counter", "on": true },
         { "pref": "ultima.tabs.disable.all-tabs-button",        "description": "Hide all tabs button", "on": true },
