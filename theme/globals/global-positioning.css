@@ -222,7 +222,10 @@ notification-message {
     height: 4px !important;
     opacity: 0 !important;
     border-radius: var(--uc-border-radius) !important;    
-    &:hover { opacity: 0.5 !important; }    
+    &:hover { opacity: 0.5 !important; }
+    &.docked-left, &.docked-right {
+        margin: 55px 0 !important;
+    }   
 }
 /* splitter arrow overlay */   
 .browserContainer:has(.devtools-toolbox-splitter:hover) {
