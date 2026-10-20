@@ -93,222 +93,217 @@ Applying variables further to create the Theme
 
 /* Applying all variables to further create the Theme - If a section is empty, that means the style is defaulting to chrome/theme/globals/global-theme.css */
 
-:root:not([lwtheme]) {
-    
 /* Main window adjustments ----------------------------------------*/
-
-/* main browser window background color */    
-body {background-color: var(--uc-browser-color) !important;}
-
-/* firefoxs Nova themes all have gradient backgrounds, so dont touch this */
-&[theme-image-in-toolbox], &:not([theme-image-in-toolbox]) {
-    body, #browser, #navigator-toolbox, #customization-container {background-image: none !important;}
-}
 
 /* Title bar ------------------------------------------------------*/
 
-/* titlebar buttons - min, max, close */
-.titlebar-button, .titlebar-button .toolbarbutton-icon {
-    color: var(--uc-text-color) !important;
-    stroke: var(--uc-text-color) !important;
-    fill: var(--uc-text-color) !important;
-    &:hover {
-        color: var(--uc-text-color)  !important;
-        fill: var(--uc-text-color)  !important;
+:root:not([lwtheme]) {
+    /* titlebar buttons - min, max, close */
+    .titlebar-button, .titlebar-button .toolbarbutton-icon {
+        color: var(--uc-text-color) !important;
         stroke: var(--uc-text-color) !important;
+        fill: var(--uc-text-color) !important;
+        &:hover {
+            color: var(--uc-text-color)  !important;
+            fill: var(--uc-text-color)  !important;
+            stroke: var(--uc-text-color) !important;
+        }
+    }
+    .titlebar-close:hover .toolbarbutton-icon {
+        color: var(--uc-button-red)  !important;
     }
 }
-.titlebar-close:hover .toolbarbutton-icon {
-    color: var(--uc-button-red)  !important;
-}
-  
 
 /* Nav Bar --------------------------------------------------------*/
 
-/*nav bar buttons*/
-#navigator-toolbox {
-    background: var(--uc-navbar-background) !important;
+:root:not([lwtheme]) {
+    /*nav bar buttons*/
+    #navigator-toolbox {
+        background: var(--uc-navbar-background) !important;
+    }
+    #navigator-toolbox .toolbarbutton-1 {
+        --toolbarbutton-background-color-hover: var(--uc-button-selected) !important;
+        --toolbarbutton-background-color-active: var(--uc-button-selected) !important;
+        --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
+    }
 }
-#navigator-toolbox .toolbarbutton-1 {
-    --toolbarbutton-background-color-hover: var(--uc-button-selected) !important;
-    --toolbarbutton-background-color-active: var(--uc-button-selected) !important;
-    --toolbarbutton-border-radius: var(--uc-button-border-radius) !important;
-}
-
 
 /* URL Bar --------------------------------------------------------*/
 
-& #urlbar-container * {
-    --uc-button-border-radius: 16px !important;
-}
-#urlbar, #searchbar {
-    color: var(--uc-text-color) !important;
-}
-.urlbar-background, #searchbar, .urlbarView-background {
-    border-radius: var(--uc-button-border-radius) !important;
-}
-#urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
-    outline: 2px solid var(--uc-accent-border) !important;
-}
-.urlbarView-row {
-    color: var(--uc-text-color) !important;
-    border-radius: var(--uc-urlbar-border-radius) !important;
-    &:hover, &[selected] {
-        background-color: var(--uc-button-selected) !important;
+:root:not([lwtheme]) {
+    #urlbar-container * {
+        --uc-button-border-radius: 16px !important;
+    }
+    #urlbar, #searchbar {
         color: var(--uc-text-color) !important;
     }
+    .urlbar-background, #searchbar, .urlbarView-background {
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+    #urlbar[focused]:not([suppress-focus-border]) > .urlbar-background {
+        outline: 2px solid var(--uc-accent-border) !important;
+    }
+    .urlbarView-row {
+        color: var(--uc-text-color) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        &:hover, &[selected] {
+            background-color: var(--uc-button-selected) !important;
+            color: var(--uc-text-color) !important;
+        }
+    }
+    .urlbarView-button:hover {
+        color: var(--uc-text-color) !important;
+        background-color: var(--uc-button-selected) !important;
+    }
+    #urlbar toolbarbutton, #urlbar box, .urlbar-page-action  {
+        border-radius: var(--uc-button-border-radius) !important;
+    }
+    #star-button[starred] {
+        fill-opacity: 1 !important;
+        fill: var(--uc-accent-color-1) !important;
+    }
+    #urlbar-zoom-button {
+        background-color: transparent !important;
+    }
+    #identity-icon-box:not(:hover):not([open]) {
+        background-color: transparent !important;
+    }
 }
-.urlbarView-button:hover {
-    color: var(--uc-text-color) !important;
-    background-color: var(--uc-button-selected) !important;
-}
-#urlbar toolbarbutton, #urlbar box, .urlbar-page-action  {
-    border-radius: var(--uc-button-border-radius) !important;
-}
-#star-button[starred] {
-    fill-opacity: 1 !important;
-    fill: var(--uc-accent-color-1) !important;
-}
-#urlbar-zoom-button {
-    background-color: transparent !important;
-}
-#identity-icon-box:not(:hover):not([open]) {
-    background-color: transparent !important;
-}
-
 
 /* Bookmark bar ---------------------------------------------------*/
 
 
 /* Popups/Menis ---------------------------------------------------*/
 
-panel, menupopup {
-    --panel-text-color:               var(--uc-text-color) !important;
-    --panel-background-color:         var(--uc-menu-background) !important;
-    --panel-border-radius:            var(--uc-button-border-radius) !important;
-    --panel-border-color:             var(--uc-outline-border) !important;
-    --panel-menuitem-border-radius:   var(--uc-button-border-radius) !important;
-    --button-background-color-menu-hover: var(--uc-button-selected) !important;
-    --panel-separator-color:          color-mix(in srgb, var(--uc-text-color), transparent 80%) !important;
-    --panel-separator-padding:        4px 8px  !important;
-    --panel-banner-item-update-supported-bgcolor: var(--uc-accent-color-1) !important;
-}
-#appMenu-popup {
-    .toolbarbutton-icon {
-        stroke: transparent !important;
-        background-color: transparent !important;
+:root:not([lwtheme]) {
+    panel, menupopup {
+        --panel-text-color:               var(--uc-text-color) !important;
+        --panel-background-color:         var(--uc-menu-background) !important;
+        --panel-border-radius:            var(--uc-button-border-radius) !important;
+        --panel-border-color:             var(--uc-outline-border) !important;
+        --panel-menuitem-border-radius:   var(--uc-button-border-radius) !important;
+        --button-background-color-menu-hover: var(--uc-button-selected) !important;
+        --panel-separator-color:          color-mix(in srgb, var(--uc-text-color), transparent 80%) !important;
+        --panel-separator-padding:        4px 8px  !important;
+        --panel-banner-item-update-supported-bgcolor: var(--uc-accent-color-1) !important;
     }
-    toolbarbutton:hover {
+    #appMenu-popup {
+        .toolbarbutton-icon {
+            stroke: transparent !important;
+            background-color: transparent !important;
+        }
+        toolbarbutton:hover {
+            background-color: var(--uc-button-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+        toolbarbutton:hover, toolbarbutton:hover .toolbarbutton-icon {
+            color: var(--uc-accent-color-2) !important;
+        }
+    }
+    #appMenu-zoom-controls {
+        outline: 1px solid var(--uc-outline-border);
+        border-radius: 0 var(--uc-button-border-radius) 0 var(--uc-button-border-radius) !important;
+        background: var(--uc-input-background) !important;
+    }
+    menuitem:hover,
+    menu:where([_moz-menuactive="true"]:not([disabled="true"])),
+    menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
         background-color: var(--uc-button-selected) !important;
-        box-shadow: var(--uc-box-shadow) !important;
-    }
-    toolbarbutton:hover, toolbarbutton:hover .toolbarbutton-icon {
-        color: var(--uc-accent-color-2) !important;
+        color: var(--uc-accent-color-5) !important;
+        border-radius: 6px !important;
     }
 }
-#appMenu-zoom-controls {
-    outline: 1px solid var(--uc-outline-border);
-    border-radius: 0 var(--uc-button-border-radius) 0 var(--uc-button-border-radius) !important;
-    background: var(--uc-input-background) !important;
-}
-menuitem:hover,
-menu:where([_moz-menuactive="true"]:not([disabled="true"])),
-menuitem:where([_moz-menuactive="true"]:not([disabled="true"])){
-    background-color: var(--uc-button-selected) !important;
-    color: var(--uc-accent-color-5) !important;
-    border-radius: 6px !important;
-}
-
 
 /* Find bar -------------------------------------------------------*/
 
-.findbar-textbox {
-    background-color: var(--uc-layered-background) !important;
-    color: var(--uc-text-color) !important;
-    border-radius: var(--uc-urlbar-border-radius) !important;
-    box-shadow: var(--uc-box-shadow) !important;
-    &:focus {outline: 2px solid var(--uc-accent-border) !important;}
+:root:not([lwtheme]) {
+    .findbar-textbox {
+        background-color: var(--uc-layered-background) !important;
+        color: var(--uc-text-color) !important;
+        border-radius: var(--uc-urlbar-border-radius) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+        &:focus {outline: 2px solid var(--uc-accent-border) !important;}
+    }
+    .found-matches {
+        font-weight: 700;
+        text-shadow: var(--uc-text-shadow);
+        background: var(--uc-input-background);
+        outline: 1px solid var(--uc-outline-border);
+        border-radius: var(--uc-button-border-radius);
+        border-top-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
 }
-.found-matches {
-    font-weight: 700;
-    text-shadow: var(--uc-text-shadow);
-    background: var(--uc-input-background);
-    outline: 1px solid var(--uc-outline-border);
-    border-radius: var(--uc-button-border-radius);
-    border-top-left-radius: 0px !important;
-    border-bottom-right-radius: 0px !important;
-}    
- 
 
 /* Sidebars -------------------------------------------------------*/
 
-#sidebar {
-    background: var(--uc-sidebar-background) !important;
+:root:not([lwtheme]) {
+    #sidebar {
+        background: var(--uc-sidebar-background) !important;
+    }
 }
-
 
 /* Tabs -----------------------------------------------------------*/
 
-/* tab style */
-.tab-background {
-    border-radius: var(--uc-tab-border-radius) !important;
-}
-/* selected tab style */
-.tab-label-container[selected] {
-    color: var(--uc-tab-selected-text) !important;
-}
-.tab-background[selected] {
-    background-color: var(--uc-tab-selected) !important;
-    outline: 2px solid var(--uc-tab-outline) !important;
-    box-shadow: var(--uc-box-shadow) !important;
-}
-.tab-background[multiselected][selected] {
-    outline-color: var(--uc-tab-outline) !important;
-}
-.tab-background[multiselected]:not([selected]) {
-    outline-color: color-mix(in srgb, var(--uc-accent-color-3) 60%, transparent)  !important;
-    box-shadow: var(--uc-box-shadow) !important;
-}
-/* hovered tab style */
-.tabbrowser-tab:hover .tab-background {
-    background-color: var(--uc-tab-selected) !important;
-    box-shadow: var(--uc-box-shadow) !important;
-}
-.tabbrowser-tab:hover .tab-label-container {
-    color: var(--uc-tab-selected-text) !important;
-}
-/* pinned tab style */
-.tabbrowser-tab[pinned] {
+:root:not([lwtheme]) {
+    /* tab style */
     .tab-background {
+        border-radius: var(--uc-tab-border-radius) !important;
+    }
+    /* selected tab style */
+    .tab-label-container[selected] {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    .tab-background[selected] {
+        background-color: var(--uc-tab-selected) !important;
+        outline: 2px solid var(--uc-tab-outline) !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    .tab-background[multiselected][selected] {
+        outline-color: var(--uc-tab-outline) !important;
+    }
+    .tab-background[multiselected]:not([selected]) {
+        outline-color: color-mix(in srgb, var(--uc-accent-color-3) 60%, transparent)  !important;
+        box-shadow: var(--uc-box-shadow) !important;
+    }
+    /* hovered tab style */
+    .tabbrowser-tab:hover .tab-background {
         background-color: var(--uc-tab-selected) !important;
         box-shadow: var(--uc-box-shadow) !important;
     }
-}
-.tab-label-container[pinned] {
-    color: var(--uc-accent-color-1) !important;
-}
-/* close tab button */
-.tab-close-button {
-    border-radius: var(--uc-button-border-radius) !important;
-    &:hover {
-        background: var(--uc-button-selected) !important;
-        fill: var(--uc-button-text-color) !important;
+    .tabbrowser-tab:hover .tab-label-container {
+        color: var(--uc-tab-selected-text) !important;
+    }
+    /* pinned tab style */
+    .tabbrowser-tab[pinned] {
+        .tab-background {
+            background-color: var(--uc-tab-selected) !important;
+            box-shadow: var(--uc-box-shadow) !important;
+        }
+    }
+    .tab-label-container[pinned] {
+        color: var(--uc-accent-color-1) !important;
+    }
+    /* close tab button */
+    .tab-close-button {
+        border-radius: var(--uc-button-border-radius) !important;
+        &:hover {
+            background: var(--uc-button-selected) !important;
+            fill: var(--uc-button-text-color) !important;
+        }
+    }
+    /*new tab buttons*/
+    #vertical-tabs-newtab-button,
+    #tabs-newtab-button {
+        font-style: italic;
+    }
+    /* audio playing indicator*/
+    .tab-audio-button {
+        background-color: rgba(30,30,30,0.2) !important;
+        border-radius:100% !important;
+        --button-icon-fill:  var(--uc-text-color) !important;
+        &:hover {
+            --button-icon-fill: var(--uc-button-text-color) !important;
+        }
     }
 }
-/*new tab buttons*/
-#vertical-tabs-newtab-button,
-#tabs-newtab-button {
-    font-style: italic;
-}
-/* audio playing indicator*/
-.tab-audio-button {
-    background-color: rgba(30,30,30,0.2) !important;
-    border-radius:100% !important;
-    --button-icon-fill:  var(--uc-text-color) !important;
-    &:hover {
-        --button-icon-fill: var(--uc-button-text-color) !important;
-    }
-}
-
-
-}/*end*/
