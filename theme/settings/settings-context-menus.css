@@ -41,7 +41,7 @@ hide seperators
 @media (-moz-pref("ultima.spacing.contextmenu.relaxed")) {
     menupopup {
         --panel-padding: 6px !important;
-        menugroup .menuitem-iconic { padding: 2px 12px !important; }                         /* applies to < > ↻ ★ button */
+        menugroup .menuitem-iconic { padding: 2px 6px !important; }                          /* applies to < > ↻ ★ button */
         menuitem:not(.menuitem-iconic), menu { padding: 6px 10px !important; }               /* applies to text menuitems */
         .menuitem-iconic[image*="moz-extension"] { padding: 6px 10px !important; }           /* applies to extension icon */
         .menuitem-iconic[image*="moz-extension"] .menu-icon {margin-right: 12px !important;} /* applies to extension icon */
