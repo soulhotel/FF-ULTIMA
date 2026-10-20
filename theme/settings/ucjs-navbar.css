@@ -73,7 +73,7 @@ It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima
         container-type: inline-size;
     }
     @container (max-width: 150px) {
-        #urlbar-container::before {
+/*         #urlbar-container::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -85,16 +85,31 @@ It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima
         }
         #urlbar:not([popover-open]) {
             opacity: 0;
+        } */
+        #urlbar-container #urlbar:not([popover-open]) .urlbar-input-container *:not(.urlbar-input-box, .urlbar-input-box *) {
+            display: none !important;
         }
     }
-    @container (max-width: 50px) {
+    @container (max-width: 55px) {
         #ultima-unified-navbar:has(#sidebar-button) {
             #nav-bar toolbaritem:not(#urlbar-container),
             #nav-bar toolbarbutton:not(#sidebar-button),
             #nav-bar .titlebar-buttonbox-container {
                 display: none !important;
             }
-
+        }
+        #urlbar-container #urlbar:not([popover-open]) .urlbar-input-box {
+            color: transparent !important;
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: url("chrome://global/skin/icons/search-glass.svg") center / var(--toolbarbutton-icon-size, 16px) no-repeat;
+                -moz-context-properties: fill, fill-opacity;
+                fill: var(--uc-text-color);
+                fill-opacity: var(--toolbarbutton-icon-fill-opacity, 1);
+                pointer-events: none;                
+            }
         }
     }
 
