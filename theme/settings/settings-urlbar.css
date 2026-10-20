@@ -40,8 +40,11 @@ ultima.urlbar.hide.trackingprotection.icon
         /*floating style*/
         /*this reliably moves .urlbar-background with it*/
         #urlbar {transform: translate(0, 300px) !important;}
-        /*this is the anchored element thats been giving us problems*/ 
-        .urlbarView {transform: translate(0, 300px) !important;}
+        /*this is the anchored element thats been giving us problems*/
+        /*firefox 160.0a1 */
+        @media not (-moz-pref("ultima.enable.nightly.config")) {
+            .urlbarView {transform: translate(0, 300px) !important;}
+        }
         /*30vh would be the better choice, although signs of the anchored element bleed through*/
         
         /*adjustments*/
@@ -54,7 +57,7 @@ ultima.urlbar.hide.trackingprotection.icon
             @media (min-width: 2250px) {max-width: 30vw !important;}
         }
         /*transition*/
-        #urlbar, .urlbarView {
+        #urlbar {
             transition: all 0.14s linear !important;
             @media (-moz-pref("ultima.urlbar.animate.open")) {
                 transition: transform 0.3s ease, width 0.28s ease, max-height 0.4s ease-in !important;
@@ -165,33 +168,26 @@ ultima.urlbar.hide.trackingprotection.icon
     }
 }
 
-@media -moz-pref("ultima.urlbar.focus.blur") {
-    #tabbrowser-tabpanels::before {
+@media (-moz-pref("ultima.urlbar.focus.blur")) {
+    #tabbrowser-tabbox::before {
         content: "";
-        backdrop-filter: blur(25px);
-        background-color:rgba(1,1,1,0.1);
-
         z-index: 999;
         position: fixed;
-        top: 0; bottom: 0; left: 0; right: 0;
-
-        border-radius: 10px;
+        inset: -1px;
+        border-radius: var(--uc-border-radius);
         margin: var(--uc-content-margins);
-
-        opacity: 0;
         pointer-events: none;
-        transition: opacity 0.7s ease;
+        transition: backdrop-filter 0.5s ease;
+        backdrop-filter: blur(0px);
     }
     :root:has(#urlbar[popover-open]) {
-        #tabbrowser-tabpanels::before {
-            opacity: 1;
-        }
-        browser[type] {
+        #tabbrowser-tabbox, #tabbrowser-tabbox::before {
             backdrop-filter: blur(25px);
         }
     }
 }
 
+/* needs a rework */
 @media -moz-pref("ultima.urlbar.focus.blur.window") {
     /* Add the base state for the browser with transitions */
     #browser {
