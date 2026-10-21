@@ -189,14 +189,17 @@ navbar text for icons
 /* nav bar hide titlebar buttons (off hover)  ------------------------------------------------------- */
 
 @media (-moz-pref("ultima.hide.titlebar-buttons")) {
-    .titlebar-buttonbox:not(:hover) {
-        width: 6px;
-        transform: scale(1.7);
-        transition: all 0.5s ease 1s;
-    }
-    .titlebar-buttonbox:hover {
-        width: 115px; 
-        transition: all 1s ease;
+    /* macos needs diffeerent handling, will get to this soon */
+    @media not (-moz-platform: macos) {
+        .titlebar-buttonbox:not(:hover) {
+            width: 6px;
+            transform: scale(1.7);
+            transition: all 0.5s ease 1s;
+        }
+        .titlebar-buttonbox:hover {
+            width: 115px; 
+            transition: all 1s ease;
+        }
     }
 }
 
