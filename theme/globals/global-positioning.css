@@ -76,7 +76,7 @@ Main Browser Spacing
 
 :root { /* even when a toolbar's not visible, we track */
     &:has(#toolbar-menubar[inactive="true"])  {--uc-menubar-height: 0px !important}
-    @media (-moz-os-version: macos)           {--uc-menubar-height: 0px !important} /*  macos - no menubar    */
+    @media (-moz-platform: macos)           {--uc-menubar-height: 0px !important} /*  macos - no menubar    */
     @media -moz-pref("sidebar.verticalTabs")  {--uc-tabbar-height:  0px !important} /*  verttabs - no tabbar  */
     &:has(#PersonalToolbar[collapsed="true"]) {--uc-bookbar-height: 0px !important}
     &:has(#PersonalToolbar[collapsed=""])     {--uc-bookbar-height: 0px !important}
