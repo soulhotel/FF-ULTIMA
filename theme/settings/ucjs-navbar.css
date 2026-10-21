@@ -17,7 +17,17 @@ It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima
 
 @media (-moz-pref("ultima.navbar.unified")) {
     :root[ultima-navbar-unified]:not([customizing]) {
-        --uc-navbar-height: 2px !important;
+        /* allow dragging from the empty toolbox & collapse height when not hovered */
+        #navigator-toolbox {
+            -moz-window-dragging: drag;
+        }
+        &:has(#navigator-toolbox:not(:hover)) {
+            --uc-navbar-height: 2px !important;
+            @media (moz-pref("ultima.spacing.compact")) {
+                --uc-navbar-height: 1px !important;
+            }
+        }
+        /* container baseline */
         #sidebar-container {
             position: relative;
         }
