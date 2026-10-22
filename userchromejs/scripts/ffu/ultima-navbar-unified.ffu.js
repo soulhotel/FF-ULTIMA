@@ -82,6 +82,9 @@
 
     unified.remove();
     unified = anchor = null;
+
+    clearTimeout(resizeTimer);
+    lastWidth = 0;
   }
 
   function update() {

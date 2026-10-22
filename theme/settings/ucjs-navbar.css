@@ -237,3 +237,30 @@ placed inside of #sidebar-container, styled here
     }
 }
 
+/* url bar popover positioning */
+
+@media (-moz-pref("ultima.urlbar.float")) {
+    :root:has(#urlbar[popover-open]) {
+        /* allow overflow for this scenario */
+        #sidebar-container {
+            overflow-x: visible !important;
+            z-index: 999 !important;
+        }
+        /* so we can display the urlbar with a bit of offset */
+        #urlbar-container:has(#urlbar[popover-open]) {
+            #urlbar {transform: translate(var(--ultima-sidebar-width), 100px) !important;}
+            @media not (-moz-pref("ultima.enable.nightly.config")) {
+                .urlbarView {transform: translate(var(--ultima-sidebar-width), 100px) !important;}
+            }        
+            #urlbar {
+                min-width: 40vw !important;
+                /* acknowledgement for users with higher resolutions */
+                @media (min-width: 2250px) {min-width: 20vw !important;}
+            }
+        }
+        /* it could be safe to actually force min-width for this scenario */
+        /* should also account for a right sided vertical tab bar */
+    }
+}
+
+/* non-floating urlbar can probably just adopt allowed overflow + a min-width enforcement */
