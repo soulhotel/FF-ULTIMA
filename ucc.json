@@ -33,9 +33,10 @@
     {
       "folder": "Nav Bar Settings",
       "options": [
-        { "pref": "ultima.navbar.autohide",                     "description": "Navbar Autohides (off hover)",                     "conflicts": ["ultima.navbar.float", "ultima.navbar.float.full"] },
-        { "pref": "ultima.navbar.float",                        "description": "Makes the Navbar Autohide & Float",                "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float.full"] },
-        { "pref": "ultima.navbar.float.full",                   "description": "Navbar Float, in a larger width",                  "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float"] },
+        { "pref": "ultima.navbar.autohide",                     "description": "Navbar Autohides (off hover)",                     "conflicts": ["ultima.navbar.float", "ultima.navbar.float.full", "ffu.navbar.unified"] },
+        { "pref": "ultima.navbar.float",                        "description": "Makes the Navbar Autohide & Float",                "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float.full", "ffu.navbar.unified"] },
+        { "pref": "ultima.navbar.float.full",                   "description": "Navbar Float, in a larger width",                  "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float", "ffu.navbar.unified"] },
+        { "pref": "ffu.navbar.unified",                         "description": "Navbar Unified (Experimental)",                    "conflicts": ["ultima.navbar.autohide", "ultima.navbar.float", "ultima.navbar.float.full"] },
         { "separator":true },
         { "pref": "ultima.navbar.bottom",                       "description": "Position the Navbar Bottom of screen" },
         { "pref": "ultima.hide.titlebar-buttons",               "description": "Hide Titlebar buttons (min, max, close)", "on": true },

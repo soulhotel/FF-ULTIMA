@@ -3,19 +3,120 @@
 FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
 File Desc:         Nav Bar & Top Bar Settings - specific to userChromeJS
 
-ultima.navbar.unified
+ffu.navbar.menu
+ffu.navbar.unified
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*  ffu.navbar.menu - navbar styles menu button/panel */
+
+.navbar-menu-container {
+    display: flex;
+    flex-direction: column;
+    --menu-gap: 4px;
+    gap: var(--menu-gap);
+}
+.navbar-menu-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding-block: 0 12px;
+    margin-block: 0 var(--menu-gap);
+    border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+}
+.navbar-menu-row {
+    display: flex;
+    gap: var(--menu-gap);
+}
+.navbar-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--menu-gap) - 2px);
+    cursor: pointer;
+    padding: 4px;
+    padding-top: calc(var(--menu-gap) + 6px);
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+.navbar-card:hover {
+    background: var(--button-background-color-menu-hover);
+}
+.navbar-card.selected {
+    background: var(--button-background-color-menu-hover);
+}
+.navbar-preview {
+    position: relative;
+    width: 96px;
+    height: 60px;
+    border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.navbar-bar {
+    position: absolute;
+    height: 7px;
+    top: 7px;
+    border: 1px solid currentColor;
+    box-sizing: border-box;
+}
+.navbar-bar.autohide {
+    left: 6px;
+    right: 6px;
+    border-radius: 2px;
+}
+.navbar-bar.default {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    border: none;
+    border-bottom: 1px solid color-mix(in srgb, currentColor 85%, transparent);
+    border-radius: 0;
+}
+.navbar-bar.pill {
+    border-radius: 999px;
+}
+.navbar-sidebar {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    width: 24px;
+    border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.navbar-sidebar-bar {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    height: 1px;
+    background: currentColor;
+    border-radius: 1px;
+}
+.navbar-arrow {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    line-height: 1;
+}
+.navbar-label {
+    font-size: 13px;
+    text-align: center;
+}
 
 /*
-ultima.navbar.unified
-
-This modification relies on ultima.navbar.unified, a Zen(?) style navbar that sits on top of the Vertical Tab Bar.
-It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima-unified-navbar element placed inside of #sidebar-container
+ffu.navbar.unified - a Zen(?) style navbar that sits on top of the Vertical Tab Bar.
+on ucjs side, we basically move the entire nav bar into a custom #ultima-unified-navbar element
+placed inside of #sidebar-container, styled here
 */
 
-@media (-moz-pref("ultima.navbar.unified")) {
+@media (-moz-pref("ffu.navbar.unified")) {
     :root[ultima-navbar-unified]:not([customizing]) {
         /* allow dragging from the empty toolbox & collapse height when not hovered */
         #navigator-toolbox {
@@ -118,7 +219,7 @@ It relies on ucjs, ucjs basically moves the entire nav bar into a custom #ultima
                 -moz-context-properties: fill, fill-opacity;
                 fill: var(--uc-text-color);
                 fill-opacity: var(--toolbarbutton-icon-fill-opacity, 1);
-                pointer-events: none;                
+                pointer-events: none;
             }
         }
     }

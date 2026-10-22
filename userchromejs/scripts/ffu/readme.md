@@ -1,4 +1,4 @@
 - ../loader.ffu.uc.js loads any scripts found in the same directory as it, or this directory, ending in *.ffu.js.
-- any script that follows ffu.js format can be placed in here. format:
+- any script that follows ffu.js format can be placed in here. here is the contracted format:
   - A `@pref` in header. Allows the script to be toggled on/off via -moz-pref.
   - A `ffuDisableScript` function. That cleans the script up on destroy/unload (many userchromejs scripts dont cleanup after themselves, which isn't good, leads to memory leaks).

@@ -10,6 +10,7 @@
 (function () {
   const SUFFIX = /\.ffu\.js$/i;
   const entries = [];
+  const observed = new Set();
   let currentCleanups = null;
 
   const isOn = pref => {
@@ -20,20 +21,126 @@
     }
   };
 
+  const readPref = file => {
+    const head = _uc.readFile(file, true);
+    return (head.match(/^\/\/\s*@pref\s+(\S+)\s*$/m) || [])[1];
+  };
+
+  const observer = {
+    observe(_subject, topic, data) {
+      if (topic === 'nsPref:changed') entries.filter(e => e.pref === data).forEach(sync);
+    },
+  };
+
+  function observePref(pref) {
+    if (observed.has(pref)) return;
+    Services.prefs.addObserver(pref, observer);
+    observed.add(pref);
+  }
+
+  // dropped if script deleted or maybe editted with a @pref change
+  function pruneObservers() {
+    for (const pref of [...observed]) {
+      if (entries.some(e => e.pref === pref)) continue;
+      try { Services.prefs.removeObserver(pref, observer); } catch {}
+      observed.delete(pref);
+    }
+  }
+
   // our scripts call ffuDisableScript?.(fn) at load time to register cleanups
   window.ffuDisableScript = fn => {
     if (currentCleanups && typeof fn === 'function') currentCleanups.push(fn);
   };
 
-  // scripts like userChromeWatcher, can call this to ensure a clean rebuild
-  window.ffuReloadScript = (filePath) => {
-    const entry = entries.find((e) => e.file.path === filePath);
-    if (!entry) return;
+  function subpathFor(file) {
+    const dir = file.parent;
+    if (!dir) return null;
+    if (dir.equals(_uc.chromedir)) return '';
+    const ffuDir = _uc.chromedir.clone();
+    ffuDir.append('ffu');
+    return dir.equals(ffuDir) ? 'ffu/' : null;
+  }
+
+  // validate/register as an entry, dont load
+  function addEntry(file, subpath) {
+    if (entries.some(e => e.file.equals(file))) return null;
+    if (entries.some(e => e.file.leafName === file.leafName)) {
+      console.warn(`[FF Ultima Loader][discovery] script skipped, duplicate ${file.leafName} in scripts/ and scripts/ffu/, skipping the second one`);
+      return null;
+    }
+    let pref;
+    try {
+      pref = readPref(file);
+    } catch (ex) {
+      console.error(`[FF Ultima Loader][discovery] could not read ${file.leafName}`, ex);
+      return null;
+    }
+    if (!pref) {
+      console.warn(`[FF Ultima Loader][discovery] ${file.leafName} has no @pref header, skipped`);
+      return null;
+    }
+    const entry = {file, pref, active: false, cleanups: [], subpath};
+    entries.push(entry);
+    return entry;
+  }
+
+  function removeEntry(entry) {
     unload(entry);
-    load(entry);
+    const i = entries.indexOf(entry);
+    if (i !== -1) entries.splice(i, 1);
+    pruneObservers();
+  }
+
+  // scripts like userChromeWatcher call this with an absolute path whenever a change is discovered.
+  window.ffuReloadScript = filePath => {
+    let file;
+    try {
+      file = Cc['@mozilla.org/file/local;1'].createInstance(Ci.nsIFile);
+      file.initWithPath(filePath);
+    } catch (ex) {
+      console.warn(`[FF Ultima Loader] invalid path passed to ffuReloadScript, ${filePath}`);
+      return;
+    }
+    const entry = entries.find(e => e.file.equals(file));
+    // script deleted?
+    if (!file.exists()) {
+      if (!entry) return;
+      removeEntry(entry);
+      console.log(`[FF Ultima Loader] script removed, ${file.leafName}`);
+      return;
+    }
+    // new script?
+    if (!entry) {
+      if (!SUFFIX.test(file.leafName)) return;
+      const subpath = subpathFor(file);
+      if (subpath === null) {
+        console.warn(`[FF Ultima Loader][discovery] ${file.leafName} is outside scripts/ and scripts/ffu/, ignored`);
+        return;
+      }
+      const added = addEntry(file, subpath);
+      if (!added) return;
+      observePref(added.pref);
+      sync(added);
+      console.log(`[FF Ultima Loader] script discovered, ${file.leafName}`);
+      return;
+    }
+    // edited? unload, re-register
+    unload(entry);
+    let pref;
+    try { pref = readPref(entry.file); } catch {}
+    if (!pref) {
+      console.warn(`[FF Ultima Loader] ${entry.file.leafName} lost its @pref header, removed`);
+      removeEntry(entry);
+      return;
+    }
+    if (pref !== entry.pref) {
+      entry.pref = pref;
+      observePref(pref);
+      pruneObservers();
+    }
+    sync(entry);
     console.log(`[FF Ultima Loader] script reloaded, ${entry.file.leafName}`);
   };
-
 
   function scanDir(dir, subpath) {
     if (!dir.exists() || !dir.isDirectory()) return;
@@ -41,17 +148,7 @@
     while (files.hasMoreElements()) {
       const file = files.getNext().QueryInterface(Ci.nsIFile);
       if (!SUFFIX.test(file.leafName)) continue;
-      if (entries.some(e => e.file.leafName === file.leafName)) {
-        console.warn(`[FF Ultima Loader][discovery] script skipped, duplicate ${file.leafName} in scripts/ and scripts/ffu/, skipping the second one`);
-        continue;
-      }
-      const head = _uc.readFile(file, true);
-      const pref = (head.match(/^\/\/\s*@pref\s+(\S+)\s*$/m) || [])[1];
-      if (!pref) {
-        console.warn(`[FF Ultima Loader][discovery] ${file.leafName} has no @pref header, skipped`);
-        continue;
-      }
-      entries.push({file, pref, active: false, cleanups: [], subpath});
+      addEntry(file, subpath);
     }
   }
 
@@ -98,19 +195,17 @@
   }
 
   discovery();
-
-  const observer = {
-    observe(_subject, topic, data) {
-      if (topic === 'nsPref:changed') entries.filter(e => e.pref === data).forEach(sync);
-    },
-  };
-  const prefs = [...new Set(entries.map(e => e.pref))];
-  prefs.forEach(p => Services.prefs.addObserver(p, observer));
+  entries.forEach(e => observePref(e.pref));
   entries.forEach(sync);
 
   window.addEventListener(
     'unload',
-    () => prefs.forEach(p => Services.prefs.removeObserver(p, observer)),
+    () => {
+      for (const p of observed) {
+        try { Services.prefs.removeObserver(p, observer); } catch {}
+      }
+      observed.clear();
+    },
     {once: true}
   );
 })();

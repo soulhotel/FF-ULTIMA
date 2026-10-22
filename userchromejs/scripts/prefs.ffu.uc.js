@@ -27,7 +27,7 @@
     ['widget.gtk.native-context-menus', false],
     ['sidebar.animation.expand-on-hover.duration-ms', 200],
     ['sidebar.animation.expand-on-hover.delay-duration-ms', 0],
-    ['browser.newtabpage.activity-stream.newtabWallpapers.user.enabled'],
+    ['browser.newtabpage.activity-stream.newtabWallpapers.user.enabled', false],
     ['widget.macos.native-context-menus', false]
   ];
 

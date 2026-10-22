@@ -1,16 +1,19 @@
 // ==UserScript==
-// @pref            ffu.unified.navbar
+// @pref            ffu.navbar.unified
 // @name            Unified Nav bar
 // @description     Puts the nav bar in the Vertical Tab Bar
 // @include         main
 // ==/UserScript==
 
-// will adjust this for ffu when it's in a comfortable place
+// chrome/theme/settings/ucjs-navbar.css for style
 
 (() => {
   const ROOT = document.documentElement;
-  let navbar, unified, anchor, origParent, origNext, ro;
+  const STARTUP_TOPIC = "browser-delayed-startup-finished";
+
+  let navbar, unified, anchor, origParent, origNext, ro, mo, startupObs;
   let customizing = false;
+  let destroyed = false;
 
   // only apply to vertical tab usage
   const isVertical = () =>
@@ -22,6 +25,7 @@
     ROOT.style.setProperty("--ultima-navbar-height", unified.getBoundingClientRect().height + "px");
   }
 
+  // can also experiment with inserting in sidebar-box for sidebery setups (gated by ultima.tabs.hide-for-sidebery). for the future..
   function attach() {
     if (customizing || unified || !isVertical()) return;
 
@@ -35,8 +39,9 @@
     unified.addEventListener("command", e => { // somewhere in internal function prevents normal menu/panel behavior, this is not a recommended fix, but it works
       const id = e.target.closest("toolbarbutton")?.id;
       setTimeout(() => {
+        if (destroyed || !unified) return;
         const dl = document.getElementById("downloadsPanel");
-        if (id === "downloads-button" && !["open", "showing"].includes(dl.state)) DownloadsPanel.showPanel();
+        if (id === "downloads-button" && dl && !["open", "showing"].includes(dl.state)) DownloadsPanel.showPanel();
         if (id === "unified-extensions-button" && !["open", "showing"].includes(gUnifiedExtensions.panel.state)) gUnifiedExtensions.togglePanel();
       }, 50);
     });
@@ -55,7 +60,7 @@
   function detach() {
     if (!unified) return;
 
-    ro.disconnect();
+    ro?.disconnect();
     ROOT.removeAttribute("ultima-navbar-unified");
     ROOT.style.removeProperty("--ultima-sidebar-width");
     ROOT.style.removeProperty("--ultima-navbar-height");
@@ -68,41 +73,77 @@
   }
 
   function update() {
+    if (destroyed) return;
     if (isVertical() && !customizing) attach();
     else detach();
   }
 
+  const onCustomizeStart = () => {
+    customizing = true;
+    detach();
+  };
+  const onCustomizeEnd = () => {
+    customizing = false;
+    update();
+  };
+
+  // need this ready, if we're not dealing with a sidebery setup (no ultima.tabs.hide-for-sidebery)
+  function ensureVertical() {
+    if (isVertical()) return;
+    try {
+      Services.prefs.setBoolPref("sidebar.revamp", true);
+      Services.prefs.setBoolPref("sidebar.verticalTabs", true);
+    } catch (e) {
+      console.error("[FF Ultima][unified navbar] could not enable vertical tabs", e);
+    }
+  }
+
+  // need sidebar ready if ultima.tabs.hide-for-sidebery (future)
+  // function ensureSidebar() {
+
+  // }
+
   function init() {
+    if (destroyed) return;
     navbar = document.getElementById("nav-bar");
     const tabs = document.getElementById("tabbrowser-tabs");
     if (!navbar || !tabs) return;
-
+    // enabled while customize mode is open is ifne
+    customizing = ROOT.hasAttribute("customizing");
     ro = new ResizeObserver(sync);
+    mo = new MutationObserver(update);
+    mo.observe(tabs, { attributes: true, attributeFilter: ["orient"] });
 
-    new MutationObserver(update).observe(tabs, {
-      attributes: true,
-      attributeFilter: ["orient"],
-    });
+    gNavToolbox.addEventListener("customizationstarting", onCustomizeStart);
+    gNavToolbox.addEventListener("aftercustomization", onCustomizeEnd);
 
-    gNavToolbox.addEventListener("customizationstarting", () => {
-      customizing = true;
-      detach();
-    });
-    gNavToolbox.addEventListener("aftercustomization", () => {
-      customizing = false;
-      update();
-    });
-
+    ensureVertical();
     update();
   }
 
   if (gBrowserInit.delayedStartupFinished) init();
   else {
-    const obs = (subject, topic) => {
+    startupObs = (subject, topic) => {
       if (subject !== window) return;
-      Services.obs.removeObserver(obs, topic);
+      Services.obs.removeObserver(startupObs, topic);
+      startupObs = null;
       init();
     };
-    Services.obs.addObserver(obs, "browser-delayed-startup-finished");
+    Services.obs.addObserver(startupObs, STARTUP_TOPIC);
   }
+
+  window.ffuDisableScript?.(() => {
+    destroyed = true;
+    if (startupObs) {
+      try { Services.obs.removeObserver(startupObs, STARTUP_TOPIC); } catch (e) {}
+      startupObs = null;
+    }
+    mo?.disconnect();
+    try {
+      gNavToolbox.removeEventListener("customizationstarting", onCustomizeStart);
+      gNavToolbox.removeEventListener("aftercustomization", onCustomizeEnd);
+    } catch (e) {}
+    detach();
+    ro = mo = navbar = null;
+  });
 })();

@@ -5,12 +5,16 @@
 // @include         main
 // ==/UserScript==
 
+// chrome/theme/settings/ucjs-navbar.css for style
+// some remnants of the inline style, like svg, icon style and such are still present here, will move eventually
+
 (function () {
   const WIDGET_ID = 'ultima-navbar-menu-button';
   const PANEL_ID = 'ultima-navbar-menu';
   const P_AUTO = 'ultima.navbar.autohide';
   const P_FLOAT = 'ultima.navbar.float';
   const P_FULL = 'ultima.navbar.float.full';
+  const P_UNIFIED = 'ffu.navbar.unified';
   const HTML_NS = 'http://www.w3.org/1999/xhtml';
 
   const prefs = Services.prefs;
@@ -28,6 +32,7 @@
   };
 
   function currentMode() {
+    if (getBool(P_UNIFIED)) return 'unified';
     if (getBool(P_FLOAT) && getBool(P_FULL)) return 'floatFull';
     if (getBool(P_FLOAT)) return 'float';
     if (getBool(P_AUTO)) return 'autohide';
@@ -35,6 +40,7 @@
   }
 
   function selectMode(mode) {
+    if (mode !== 'unified') setBool(P_UNIFIED, false);
     switch (mode) {
       case 'default':
         setBool(P_AUTO, false);
@@ -55,6 +61,12 @@
         setBool(P_AUTO, false);
         setBool(P_FLOAT, true);
         setBool(P_FULL, true);
+        break;
+      case 'unified':
+        setBool(P_AUTO, false);
+        setBool(P_FLOAT, false);
+        setBool(P_FULL, false);
+        setBool(P_UNIFIED, true);
         break;
     }
   }
@@ -95,90 +107,110 @@
     panel.setAttribute('noautofocus', 'true');
     panel.setAttribute('position', 'after_start');
 
-    const style = h(doc, 'style');
-    style.textContent = `
-      .navbar-menu-container {
-        display: flex;
-        flex-direction: column;
-        --menu-gap: 8px;
-        gap: var(--menu-gap);
-      }
-      .navbar-menu-header {
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-align: center;
-        padding-block: 0 12px;
-        margin-block: 0 var(--menu-gap);
-        border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
-      }    
-      .navbar-menu-row {
-        display: flex;
-        gap: var(--menu-gap);
-      }
-      .navbar-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: calc(var(--menu-gaps) - 2px);
-        cursor: pointer;
-        padding: 4px;
-        padding-top: calc(var(--menu-gaps) + 6px);
-        border-radius: 8px;
-        border: 2px solid transparent;
-      }
-      .navbar-card:hover {
-        background: var(--button-background-color-menu-hover);
-      }
-      .navbar-card.selected {
-        background: var(--button-background-color-menu-hover);
-      }
-      .navbar-preview {
-        position: relative;
-        width: 96px;
-        height: 60px;
-        border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
-        border-radius: 6px;
-        box-sizing: border-box;
-        overflow: hidden;
-      }
-      .navbar-bar {
-        position: absolute;
-        height: 7px;
-        top: 7px;
-        border: 1px solid currentColor;
-        box-sizing: border-box;
-      }
-      .navbar-bar.autohide {
-        left: 6px;
-        right: 6px;
-        border-radius: 2px;
-      }
-      .navbar-bar.default {
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 10px;
-        border: none;
-        border-bottom: 1px solid color-mix(in srgb, currentColor 35%, transparent);
-        border-radius: 0;
-      }
-      .navbar-bar.pill {
-        border-radius: 999px;
-      }
-      .navbar-arrow {
-        position: absolute;
-        top: 22px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 12px;
-        line-height: 1;
-      }
-      .navbar-label {
-        font-size: 13px;
-        text-align: center;
-      }
-    `;
-    panel.appendChild(style);
+    // chrome/theme/settings/ucjs-navbar.css for style
+    // const style = h(doc, 'style');
+    // style.textContent = `
+    //   .navbar-menu-container {
+    //     display: flex;
+    //     flex-direction: column;
+    //     --menu-gap: 8px;
+    //     gap: var(--menu-gap);
+    //   }
+    //   .navbar-menu-header {
+    //     font-size: 1.5rem;
+    //     font-weight: 500;
+    //     text-align: center;
+    //     padding-block: 0 12px;
+    //     margin-block: 0 var(--menu-gap);
+    //     border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+    //   }
+    //   .navbar-menu-row {
+    //     display: flex;
+    //     gap: var(--menu-gap);
+    //   }
+    //   .navbar-card {
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     gap: calc(var(--menu-gaps) - 2px);
+    //     cursor: pointer;
+    //     padding: 4px;
+    //     padding-top: calc(var(--menu-gaps) + 6px);
+    //     border-radius: 8px;
+    //     border: 2px solid transparent;
+    //   }
+    //   .navbar-card:hover {
+    //     background: var(--button-background-color-menu-hover);
+    //   }
+    //   .navbar-card.selected {
+    //     background: var(--button-background-color-menu-hover);
+    //   }
+    //   .navbar-preview {
+    //     position: relative;
+    //     width: 96px;
+    //     height: 60px;
+    //     border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    //     border-radius: 6px;
+    //     box-sizing: border-box;
+    //     overflow: hidden;
+    //   }
+    //   .navbar-bar {
+    //     position: absolute;
+    //     height: 7px;
+    //     top: 7px;
+    //     border: 1px solid currentColor;
+    //     box-sizing: border-box;
+    //   }
+    //   .navbar-bar.autohide {
+    //     left: 6px;
+    //     right: 6px;
+    //     border-radius: 2px;
+    //   }
+    //   .navbar-bar.default {
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 10px;
+    //     border: none;
+    //     border-bottom: 1px solid color-mix(in srgb, currentColor 85%, transparent);
+    //     border-radius: 0;
+    //   }
+    //   .navbar-bar.pill {
+    //     border-radius: 999px;
+    //   }
+    //   .navbar-sidebar {
+    //     position: absolute;
+    //     top: 5px;
+    //     bottom: 5px;
+    //     left: 5px;
+    //     width: 24px;
+    //     border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    //     border-radius: 4px;
+    //     box-sizing: border-box;
+    //   }
+    //   .navbar-sidebar-bar {
+    //     position: absolute;
+    //     top: 4px;
+    //     left: 4px;
+    //     right: 4px;
+    //     height: 1px;
+    //     background: currentColor;
+    //     border-radius: 1px;
+    //   }
+    //   .navbar-arrow {
+    //     position: absolute;
+    //     top: 22px;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     font-size: 12px;
+    //     line-height: 1;
+    //   }
+    //   .navbar-label {
+    //     font-size: 13px;
+    //     text-align: center;
+    //   }
+    // `;
+    // panel.appendChild(style);
 
     const content = h(doc, 'div');
     content.className = 'navbar-menu-container';
@@ -230,6 +262,17 @@
         bar.style.left = '14px';
         bar.style.right = '14px';
         preview.appendChild(bar);
+      })
+    );
+
+    row.appendChild(
+      buildCard(doc, 'unified', 'Unified (experimental)', preview => {
+        const sidebar = h(doc, 'div');
+        sidebar.className = 'navbar-sidebar';
+        const bar = h(doc, 'div');
+        bar.className = 'navbar-sidebar-bar';
+        sidebar.appendChild(bar);
+        preview.appendChild(sidebar);
       })
     );
 

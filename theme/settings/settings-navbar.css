@@ -154,21 +154,6 @@ navbar text for icons
     #urlbar-container:has(#urlbar[popover-open]) {
         position: relative !important;
     }
-    /* for some odd reason bottom is an anchor on height,
-    so i cant actually control height without utilizing it...*/
-    /*#urlbar[popover-open] {
-        position: absolute !important;
-        width: 100% !important;
-        inset: auto auto 0 0 !important;
-    }*/
-    /* it was in-fact anchoring, this is the closest ive gotten to pure solution */
-    /*.urlbarView:popover-open {
-        position-area: block-start center !important;
-    }
-    .urlbarView, .urlbarView-background, #urlbar-results {
-        border-radius: 20px !important;
-    }*/
-    /* i give up, navbar.bottom will adopt urlbar.float style */
     #urlbar-container {
         top: 0 !important;
         max-width: 50vw !important;
