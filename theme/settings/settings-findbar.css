@@ -11,7 +11,7 @@ disable findback background image
 /* findbar on top ------------------------------------------------------------ */
 /*by he (https://github.com/he23251) */
 
-@media (-moz-pref("ultima.findbar.position.top")) {
+@media (-moz-pref("ultima.findbar.position.top.disabled")) {
     /* Show searchbox at the top */
     .browserContainer > findbar {
         order: -1;
@@ -46,7 +46,7 @@ disable findback background image
    best way to handle this (on top of the theme) is to simply give the findbar a background
 best way to handle this is to simply give the findbar a background */
 
-@media (-moz-pref("ultima.findbar.disable.background.image")) {
+@media (-moz-pref("ultima.findbar.disable.background.image.disabled")) {
     :root[lwtheme], :root:not([lwtheme]) {
         findbar {
             background: var(--uc-browser-color) !important;
