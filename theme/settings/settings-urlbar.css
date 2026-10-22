@@ -240,9 +240,6 @@ ultima.urlbar.hide.trackingprotection.icon
                 visibility: collapse !important;
             }
         }
-        #urlbar-input {
-            font-size: 11px !important;
-        }
     }
 }
 
