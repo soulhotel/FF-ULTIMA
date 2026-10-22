@@ -260,6 +260,7 @@ placed inside of #sidebar-container, styled here
         }
         /* it could be safe to actually force min-width for this scenario */
         /* should also account for a right sided vertical tab bar */
+        /* should also adjust for translation for collapsed state */
     }
 }
 
