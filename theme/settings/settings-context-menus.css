@@ -17,11 +17,11 @@ hide seperators
 /* originally ultima.spacing.compact.menupanel, this captures multiple menu panels - making them compact */
 
 @media (-moz-pref("ultima.spacing.menus.compact")) {
-    panel, panelview {
+    panel, panelview:not([extension]) {
         --panel-menuitem-padding: 6px !important;
         --panel-separator-padding: 2px 4px !important;
     }
-    panelview:not(#unified-extensions-view) {
+    panelview:not(#unified-extensions-view, [extension]) {
         width: 22rem !important;
         min-width: 22px !important;
     }
