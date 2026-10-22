@@ -107,111 +107,6 @@
     panel.setAttribute('noautofocus', 'true');
     panel.setAttribute('position', 'after_start');
 
-    // chrome/theme/settings/ucjs-navbar.css for style
-    // const style = h(doc, 'style');
-    // style.textContent = `
-    //   .navbar-menu-container {
-    //     display: flex;
-    //     flex-direction: column;
-    //     --menu-gap: 8px;
-    //     gap: var(--menu-gap);
-    //   }
-    //   .navbar-menu-header {
-    //     font-size: 1.5rem;
-    //     font-weight: 500;
-    //     text-align: center;
-    //     padding-block: 0 12px;
-    //     margin-block: 0 var(--menu-gap);
-    //     border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
-    //   }
-    //   .navbar-menu-row {
-    //     display: flex;
-    //     gap: var(--menu-gap);
-    //   }
-    //   .navbar-card {
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     gap: calc(var(--menu-gaps) - 2px);
-    //     cursor: pointer;
-    //     padding: 4px;
-    //     padding-top: calc(var(--menu-gaps) + 6px);
-    //     border-radius: 8px;
-    //     border: 2px solid transparent;
-    //   }
-    //   .navbar-card:hover {
-    //     background: var(--button-background-color-menu-hover);
-    //   }
-    //   .navbar-card.selected {
-    //     background: var(--button-background-color-menu-hover);
-    //   }
-    //   .navbar-preview {
-    //     position: relative;
-    //     width: 96px;
-    //     height: 60px;
-    //     border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
-    //     border-radius: 6px;
-    //     box-sizing: border-box;
-    //     overflow: hidden;
-    //   }
-    //   .navbar-bar {
-    //     position: absolute;
-    //     height: 7px;
-    //     top: 7px;
-    //     border: 1px solid currentColor;
-    //     box-sizing: border-box;
-    //   }
-    //   .navbar-bar.autohide {
-    //     left: 6px;
-    //     right: 6px;
-    //     border-radius: 2px;
-    //   }
-    //   .navbar-bar.default {
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     height: 10px;
-    //     border: none;
-    //     border-bottom: 1px solid color-mix(in srgb, currentColor 85%, transparent);
-    //     border-radius: 0;
-    //   }
-    //   .navbar-bar.pill {
-    //     border-radius: 999px;
-    //   }
-    //   .navbar-sidebar {
-    //     position: absolute;
-    //     top: 5px;
-    //     bottom: 5px;
-    //     left: 5px;
-    //     width: 24px;
-    //     border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
-    //     border-radius: 4px;
-    //     box-sizing: border-box;
-    //   }
-    //   .navbar-sidebar-bar {
-    //     position: absolute;
-    //     top: 4px;
-    //     left: 4px;
-    //     right: 4px;
-    //     height: 1px;
-    //     background: currentColor;
-    //     border-radius: 1px;
-    //   }
-    //   .navbar-arrow {
-    //     position: absolute;
-    //     top: 22px;
-    //     left: 50%;
-    //     transform: translateX(-50%);
-    //     font-size: 12px;
-    //     line-height: 1;
-    //   }
-    //   .navbar-label {
-    //     font-size: 13px;
-    //     text-align: center;
-    //   }
-    // `;
-    // panel.appendChild(style);
-
     const content = h(doc, 'div');
     content.className = 'navbar-menu-container';
     panel.appendChild(content);
@@ -318,9 +213,18 @@
       label: 'Toggle Navbar Styles',
       tooltiptext: 'Choose Navbar Style',
       onCommand(event) {
-        const doc = event.target.ownerDocument;
+        const btn = event.target;
+        const doc = btn.ownerDocument;
         const panel = getOrCreatePanel(doc);
-        panel?.openPopup(event.target, 'after_end');
+        if (!panel) return;
+        // overflowed buttons shouldnt anchor to themselves - reminder to go over and apply the same to other custom buttons
+        if (btn.hasAttribute('overflowedItem')) {
+          const anchor = doc.getElementById(btn.getAttribute('cui-anchorid') || 'nav-bar-overflow-button');
+          doc.getElementById('widget-overflow')?.hidePopup();
+          setTimeout(() => panel.openPopup(anchor, 'after_end'), 0);
+        } else {
+          panel.openPopup(btn, 'after_end');
+        }
       },
     });
   } catch (e) {}
