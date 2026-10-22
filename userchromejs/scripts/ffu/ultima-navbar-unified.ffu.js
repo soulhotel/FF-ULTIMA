@@ -14,6 +14,8 @@
   let navbar, unified, anchor, origParent, origNext, ro, mo, startupObs;
   let customizing = false;
   let destroyed = false;
+  let lastWidth = 0;
+  let resizeTimer = 0;
 
   // only apply to vertical tab usage
   const isVertical = () =>
@@ -21,8 +23,18 @@
 
   function sync() {
     if (!anchor || !unified) return;
-    ROOT.style.setProperty("--ultima-sidebar-width", anchor.getBoundingClientRect().width + "px");
+    const w = anchor.getBoundingClientRect().width;
+    ROOT.style.setProperty("--ultima-sidebar-width", w + "px");
     ROOT.style.setProperty("--ultima-navbar-height", unified.getBoundingClientRect().height + "px");
+    // the toolbar's overflow logic listens to window resize, which doesn't fire when only the sidebar changes
+    const rounded = Math.round(w);
+    if (rounded !== lastWidth) {
+      lastWidth = rounded;
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        if (!destroyed && unified) window.dispatchEvent(new Event("resize"));
+      }, 50);
+    }
   }
 
   // can also experiment with inserting in sidebar-box for sidebery setups (gated by ultima.tabs.hide-for-sidebery). for the future..
