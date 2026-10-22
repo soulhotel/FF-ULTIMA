@@ -15,6 +15,8 @@
 
 ultima.navbar.unified still experimental, conflicts with browser.fullscreen.autohide, ultima.navbar.autohide, ultima.navbar.float.*, should be added to navbar styles
 
+If you haven't checked out the Navbar Styles Menu yet, you may want to now. `ultima.navbar.unified` is a new style that brings zen/modern style unified Nav Bar to FF Ultima. It's still in the very early stages (experimental). I'm still working out the most practical approach when dealing with collapsed/expanded state, how the urlbar should generally be displayed, also hunting down any edge cases that I haven't accounted for already in terms of menu's, buttons, behaviors within the nav bar that might be disrupted by the implementation. The implementation itself is pretty straight forward, the entire #nav-bar was simply moved into a container that sits inside of #sidebar-container (vert tabs), gated by vertical tab checks and ultima.navbar.unified, meaning it can be triggered via userChrome Companion & the Nav Bar Styles Menu. ultima-navbar-unified.ffu.js
+
  -->
 
 <!--
