@@ -111,7 +111,13 @@ sidebery expand on in-active windows
                     @media -moz-pref("ultima.sidebar.separator") {order: 2;}
                     opacity: 0;
                 }                       
-            }   
+            }
+            /* exempt spacing for fullscreen mode (or restore) */
+            &[inDOMFullscreen] {
+                #browser::before, #browser::after {
+                    width: 0px !important;
+                }
+            }
             /* adjust splitter to sit in a trackable position - browser edge */
             #sidebar-box {
                 &:not([sidebar-positionend]) ~ #sidebar-splitter {
