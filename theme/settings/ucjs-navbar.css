@@ -130,6 +130,12 @@ placed inside of #sidebar-container, styled here
                 min-height: 2px !important;
             }            
         }
+        /* nav bar already draggable, but less empty space conflicts with drag space, buttons can also allow drag */
+        #nav-bar {
+            toolbarbutton, toolbaritem {
+                -moz-window-dragging: drag;
+            }
+        }
         /* container baseline */
         #sidebar-container {
             position: relative;
