@@ -122,11 +122,13 @@ placed inside of #sidebar-container, styled here
         #navigator-toolbox {
             -moz-window-dragging: drag;
         }
-        &:has(#navigator-toolbox:not(:hover)) {
-            --uc-navbar-height: 2px !important;
-            @media (moz-pref("ultima.spacing.compact")) {
-                --uc-navbar-height: 1px !important;
-            }
+        /* nav bar height untracked */
+        --uc-navbar-height: 0px !important;
+        /* navigator toolbox 2px minimum to blend in with browser borders */
+        @media not (-moz-pref("ultima.spacing.compact")) {
+            #navigator-toolbox {
+                min-height: 2px !important;
+            }            
         }
         /* container baseline */
         #sidebar-container {
