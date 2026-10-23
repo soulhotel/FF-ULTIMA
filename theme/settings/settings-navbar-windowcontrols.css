@@ -88,7 +88,27 @@ metro style
     /* transitions*/
     .titlebar-button, .titlebar-button .toolbarbutton-icon {
         transition: background 2s ease, filter 0.5s ease, outline 1.5s ease !important;
-    } 
+    }
+    /*
+    windows uses ::before elements with font/alt characters to render the icons..
+    instead of forcing backgrounds,icons,sizeadjustments onto this before element,
+    we'll just restore the original icon which is in a hidden state for windows
+    */
+    @media (-moz-platform: windows) {
+        .titlebar-button {
+            .toolbarbutton-icon {
+                display: initial !important;
+                width:  var(--uc-titlebarbtn-size) !important;
+                height: var(--uc-titlebarbtn-size) !important;
+            }
+            &::before {
+                display: none !important;
+            }
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
 }
 
 /* icon replacement styles follow this format ------------------------------------------------------- */
@@ -124,6 +144,26 @@ metro style
     /* transitions*/
     .titlebar-button, .titlebar-button .toolbarbutton-icon {
         transition: background 0.2s ease, outline 0.2s ease !important;
+    }
+    /*
+    windows uses ::before elements with font/alt characters to render the icons..
+    instead of forcing backgrounds,icons,sizeadjustments onto this before element,
+    we'll just restore the original icon which is in a hidden state for windows
+    */
+    @media (-moz-platform: windows) {
+        .titlebar-button {
+            .toolbarbutton-icon {
+                display: initial !important;
+                width:  var(--uc-titlebarbtn-size) !important;
+                height: var(--uc-titlebarbtn-size) !important;
+            }
+            &::before {
+                display: none !important;
+            }
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
     }
 }
 
@@ -168,5 +208,22 @@ metro style
     /* transitions*/
     .titlebar-button, .titlebar-button .toolbarbutton-icon {
         transition: background 0.4s ease, outline 0.2s ease !important;
+    }
+    /*
+    windows uses ::before elements with font/alt characters to render the icons..
+    instead of forcing backgrounds,icons,sizeadjustments onto this before element,
+    we'll just restore the original icon which is in a hidden state for windows
+    */
+    @media (-moz-platform: windows) {
+        .titlebar-button {
+            .toolbarbutton-icon {
+                display: initial !important;
+                width:  var(--uc-titlebarbtn-size) !important;
+                height: var(--uc-titlebarbtn-size) !important;
+            }
+            &::before {
+                display: none !important;
+            }
+        }
     }
 }
