@@ -197,7 +197,7 @@ navbar text for icons
                 toolbarbutton:not(.titlebar-button, #customizationui-widget-panel *),
                 .toolbarbutton-text:not(#customizationui-widget-panel .toolbarbutton-text) {
                     transition: opacity ease 2s 2s;
-                    opacity: 0;
+                    opacity: 0 !important;
                 }
             }
             &:is(:focus-within, &:hover) {
