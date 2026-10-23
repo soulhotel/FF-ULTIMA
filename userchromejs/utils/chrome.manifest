@@ -1,3 +1,5 @@
 content userchromejs ./
 resource userchromejs ../scripts/
 content userscripts ../scripts/
+skin userstyles classic/1.0 ../CSS/
+content userchrome ../resources/

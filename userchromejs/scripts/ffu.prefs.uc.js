@@ -14,14 +14,21 @@
   const HANDLED = 'handled';
 
   const recommendedPrefs = [
-    ['ffu.userChromeCompanion.enabled', true], /*triggers */
-    ['toolkit.legacyUserProfileCustomizations.stylesheets', true], /* the idea was to ensure css is enabled in browser, but these scripts operate at a later threshold than runtime, so setupwizard handles this now instead */
+    // extension perm check
+    ['ffu.userChromeCompanion.enabled', true],
+    // stylesheets - pointless to have this here but..
+    ['toolkit.legacyUserProfileCustomizations.stylesheets', true],
+    // css necessities
+    ['svg.context-properties.content.enabled', true],
+    ['layout.css.has-selector.enabled', true],
+    // qol aboutconfig/browser toolbox behavior
     ['browser.aboutConfig.showWarning', false], /* this is everything below it are mostly qol */
     ['devtools.debugger.remote-enabled', true],
     ['devtools.chrome.enabled', true],
     ['devtools.debugger.prompt-connection', false],
-    ['svg.context-properties.content.enabled', true],
-    ['layout.css.has-selector.enabled', true],
+    // extra qol
+    ['xpinstall.signatures.required', false],
+    ['extensions.install_origins.enabled', false],
     ['widget.gtk.ignore-bogus-leave-notify', 1],
     ['widget.gtk.rounded-bottom-corners.enabled', true],
     ['widget.gtk.native-context-menus', false],

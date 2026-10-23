@@ -1,0 +1,13 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:
+
+This file imports all modifications that are specific to userchromejs.
+userChromeJS modifications should generally be gated by preferences, like "ffu.feature.name".
+Or gated by custom elements that are unique to the browser.
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+@import url(../settings/ucjs-navbar.css);         /* nav bar styles menu & unified nav bar */
+@import url(../settings/ucjs-second-sidebar.css); /* second sidebar (optional) integration into the theme */

@@ -1,5 +1,10 @@
-- userChrome.js by default, loads any *.ucc.js script from within this folder.
-- Any script with standard userChrome.js compatibility can be placed in this folder. Just be sure to vet/review the script, if it isn't your own.
-- extension bridges should not be removed, they are what actually toggle -moz-prefs for userChrome Companion.
-- loader.ffu should not be removed, it is what loads ffu.js scripts from the ffu/ folder.
-- prefs.ffu is safe to remove, it simply acts as a mini user.js, safe to remove after first installing the theme.
+# About userchromejs/scripts/
+
+Any uc.js scripts compatible can be placed in this folder.
+
+# Scripts in this folder
+
+- ffu.loader.uc.js - loads custom ffu.js scripts optimized for FF Ultima.
+- ffu.prefs.uc.js - a one time setup script that acts like a mini-user.js, appliesrecommended preferences for first time theme installs.
+- ffu.prefs.migration.uc.js - a one time setup script that automatically discards old ff ultima theme preferences that no longer exist within the theme.
+- ucc.uc.js - works with both the `userChromeCompanion` extension and `ucc/` folder, to allow users to toggle theme settings or any mozilla preferences from within userChromeCompanion

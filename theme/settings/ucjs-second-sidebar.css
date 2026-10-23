@@ -1,0 +1,39 @@
+/*///////////////////////////////////////////////////////////////////////////////////////\
+
+FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
+File Desc:         
+
+This file styles aminought's Second Sidebar https://github.com/aminought/firefox-second-sidebar,
+allowing it to fit right in - into the theme. Optional for Users of Second Sidebar.
+
+\////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#sb2-wrapper {
+    #sb2-main {
+        background: var(--uc-browser-color) !important;
+        padding: var(--space-small) var(--space-small) var(--space-small) 4px !important;
+    }
+    #sb2-box[pinned="true"] {
+        outline: 1px solid var(--uc-outline-border);
+        outline-offset: -1px;
+        border-radius: var(--uc-border-radius) !important;
+        @media not (-moz-pref("ultima.spacing.compact")) {
+            inset: 4px -4px !important;
+            height: calc(100% - 8px) !important;
+        }
+    }
+}
+
+.sb2-webpanels-window .browserContainer {
+    margin: 0 !important;
+}
+
+#sb2-box #sb2-toolbar {
+    min-height: 36px !important;
+    background: var(--uc-browser-color) !important;
+}
+
+#sb2-splitter, #sb2-after-splitter {
+    margin-block: 55px !important;
+}

@@ -1,5 +1,5 @@
 // ==UserScript==
-// @pref            ffu.container.picker
+// @pref            ffu.urlbar.container.picker
 // @name            Container Selection Picker for Firefox
 // @description     Click the container indicator in the urlbar for a container list: left-click reopens the tab in that container, middle/right-click opens a new tab in it
 // @include         main

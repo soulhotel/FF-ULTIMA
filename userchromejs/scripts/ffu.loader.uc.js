@@ -1,13 +1,9 @@
-// this is a script loader for ffu.js scripts.
-
-// The ffu/ folder contains various scripts sourced from the userChrome JS community, or created by me
-// The scripts have been optimized for FF Ultima, either in functionality or general cleanup (many lacked destroy logic to prevent memory leaks)
-// The scripts also feature a @pref (moz-pref) entry in their headers, allowing them to be enabled/disabled via about:config or the UCC extension
-
-// If you want a custom script, button, functionality added to FF Ultima. Simple create it like any other uc.js script.
-// Give it the ffu.js file extension, and a @pref to toggle it on/off. Files in ffu/ can serve as examples.
+// This is a script loader for ffu.js scripts found in the ffu/ folder. Refer to ffu/readme.md for more info.
 
 (function () {
+  const scriptsDir = UC_API.FileSystem.getScriptDir().entry();
+  const readHead = file => UC_API.FileSystem.readFileSync(file, {metaOnly: true}).content();
+
   const SUFFIX = /\.ffu\.js$/i;
   const entries = [];
   const observed = new Set();
@@ -22,7 +18,7 @@
   };
 
   const readPref = file => {
-    const head = _uc.readFile(file, true);
+    const head = readHead(file);
     return (head.match(/^\/\/\s*@pref\s+(\S+)\s*$/m) || [])[1];
   };
 
@@ -55,8 +51,8 @@
   function subpathFor(file) {
     const dir = file.parent;
     if (!dir) return null;
-    if (dir.equals(_uc.chromedir)) return '';
-    const ffuDir = _uc.chromedir.clone();
+    if (dir.equals(scriptsDir)) return '';
+    const ffuDir = scriptsDir.clone();
     ffuDir.append('ffu');
     return dir.equals(ffuDir) ? 'ffu/' : null;
   }
@@ -153,9 +149,9 @@
   }
 
   function discovery() {
-    const ucDir = _uc.chromedir.clone();
+    const ucDir = scriptsDir.clone();
     ucDir.append('ffu');
-    scanDir(_uc.chromedir.clone(), '');
+    scanDir(scriptsDir.clone(), '');
     scanDir(ucDir, 'ffu/');
   }
 

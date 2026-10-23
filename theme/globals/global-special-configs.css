@@ -1,24 +1,9 @@
 /*///////////////////////////////////////////////////////////////////////////////////////\
 
-FF Ultima:         https://github.com/soulhotel/FF-ULTIMA
-Wiki:              Todo
-File Desc:         Handle Configurations for Nightly, Autoconfig, ...
-
-Autoconfig Configurations
-  - Animate the Container label
-  - Sidebar button
-  - URL bar toggle button
-  - urlbar input ONLY in the private
-  - Reveal #urlbar
-Second Sidebar compatibility
-Nightly Configurations
+this file is no longer imported by the theme, marked for removal.
 
 \////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*
-At the moment this setting simply looks any userchromejs styling behind it.
-These styles need more confirmation, not sure if they kept up with firefox changes while I've been gone.
-*/
 @media -moz-pref("ultima.enable.js.config") {
     
 /* Autoconfig Configurations -------------------------------------------------------------------------------- */

@@ -8,9 +8,9 @@ console.log("[userChromeCompanion][bridge] loaded");
 // register communication bridge
 try {
   ChromeUtils.registerWindowActor("UCCBridge", {
-    parent: { esModuleURI: "resource://userchromejs/extensionBridgeParent.ucc.sys.mjs" },
+    parent: { esModuleURI: "resource://userchromejs/ucc/extensionBridgeParent.sys.mjs" },
     child: {
-      esModuleURI: "resource://userchromejs/extensionBridgeChild.ucc.sys.mjs",
+      esModuleURI: "resource://userchromejs/ucc/extensionBridgeChild.sys.mjs",
       events: {
         DOMContentLoaded: {},
         uccPing: { wantUntrusted: true },
@@ -19,13 +19,10 @@ try {
         uccGetPrefValues: { wantUntrusted: true },
       },
     },
-    // child will identify and only operate within UCC
+    // bridgeChild will only operate within our signed extensions environment
     matches: ["moz-extension://*/*"],
     allFrames: true,
     safeForUntrustedWebProcess: true,
   });
   console.log("[userChromeCompanion][bridge] registered successfully");
 } catch (ex) { console.error("[userChromeCompanion][bridge] registration error ", ex); }
-
-// i know wildcarding all extensions is risky, however UCC is generally safe,
-// UCCBridge is single responsibility, read preference -> toggle preference.

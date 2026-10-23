@@ -20,12 +20,10 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/settings/settings-extensions-panel.css);
 @import url(theme/settings/settings-urlbar.css);
 @import url(theme/settings/settings-navbar.css);
-@import url(theme/settings/ucjs-navbar.css);
 @import url(theme/settings/settings-navbar-windowcontrols.css);
 @import url(theme/settings/settings-bookmarks.css);
 @import url(theme/settings/settings-icons.css);
 @import url(theme/settings/settings-findbar.css);
-
 @import url(theme/settings/settings-sidebar.css);
 @import url(theme/settings/settings-sidebery.css);
 
@@ -37,7 +35,7 @@ License:           https://github.com/soulhotel/FF-ULTIMA/blob/main/LICENSE MPL 
 @import url(theme/settings/settings-tabs-outlines.css);
 @import url(theme/settings/settings-tabs-group-and-containers.css);
 
-@import url(theme/globals/global-special-configs.css);
+@import url(theme/globals/global-userchromejs.css);
 
 /* this file will never be overwriten by the theme, put whatever you want in it */
 @import url(customChrome.css);

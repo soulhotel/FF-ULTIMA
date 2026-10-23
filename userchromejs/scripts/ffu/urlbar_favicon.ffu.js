@@ -27,7 +27,7 @@
   Object.assign(img.style, {
     width: '18px',
     height: '18px',
-    margin: 'auto 3px',
+    margin: 'auto 10px',
     borderRadius: '4px',
   });
 
