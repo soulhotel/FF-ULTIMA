@@ -15,7 +15,7 @@ Any uc.js scripts compatible with autoconfig should remain compatible with this 
 
 # Legacy Extension Support
 
-fx-autoconfig does not ship with legacy extension support, support is added via two modifications sourced from onemen's https://github.com/onemen/firefox-scripts. Allows support for extensions like TabMixPlus. Allows minimal maintenance cost for userchromejs as a whole. The sourced utility scripts also remain unmodified. 
+fx-autoconfig does not ship with legacy extension support, support is added via two modifications sourced from onemen's https://github.com/onemen/firefox-scripts. Allows support for extensions like TabMixPlus. Allows minimal maintenance cost for userchromejs as a whole. Allows integration without touching the fx-autoconfig base. The sourced utility scripts also remain unmodified. 
 - The `firefox/config.js` that belongs in the Firefox install directory has been modified to include bootstraploader `Services.scriptloader.loadSubScript('chrome://userchromejs/content/BootstrapLoader.js');`
 - `BootstrapLoader.js`, `RDFManifestConverter.sys.mjs`, & `RDFDataSource.sys.mjs` utilities have been added to `chrome/userchromejs/utils`
 
