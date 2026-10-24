@@ -25,6 +25,10 @@ hide seperators
         width: 22rem !important;
         min-width: 22px !important;
     }
+    /* so far this only accounts for rich list such as the downloads panel (download info) allowing the right sided download button in the list to remain visible */
+    panelview richlistbox {
+        width: calc(100% - 22rem) !important;
+    }
 }
 
 /* custom context menu spacing ------------------------------------- */
