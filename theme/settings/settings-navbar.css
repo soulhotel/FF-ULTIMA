@@ -185,6 +185,11 @@ navbar text for icons
             width: 115px; 
             transition: all 1s ease;
         }
+        /* universally keep these buttons inaccessible off hover */
+        .titlebar-buttonbox:not(:hover) {
+            opacity: 0 !important;
+            toolbarbutton {pointer-events: none;}
+        }
     }
 }
 
