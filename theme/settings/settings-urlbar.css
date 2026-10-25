@@ -25,52 +25,51 @@ ultima.urlbar.hide.trackingprotection.icon
 
 
 @media (-moz-pref("ultima.urlbar.float")) {
-    :root {
-        --uc-urlbar-floating-outline: 2px solid color-mix(in srgb, var(--uc-accent-border), grey 20%, transparent 50%);
-    }
-    #navigator-toolbox {
-        z-index: 999 !important;
-        overflow-y: unset !important;
-    }
+    /*styling*/
     #urlbar-results {
         scrollbar-width: none !important;
     }
-    /*ive figured this out*/
     #urlbar-container:has(#urlbar[popover-open]) {
-        /*floating style*/
-        /*this reliably moves .urlbar-background with it*/
-        #urlbar {transform: translate(0, 300px) !important;}
-        /*this is the anchored element thats been giving us problems*/
-        /*firefox 160.0a1 */
-        @media not (-moz-pref("ultima.enable.nightly.config")) {
-            .urlbarView {transform: translate(0, 300px) !important;}
-        }
-        /*30vh would be the better choice, although signs of the anchored element bleed through*/
-        
-        /*adjustments*/
-        /*center #urlbars relative to its #urlbar-container container*/
-        justify-content: center !important;
-        /*urlbar within*/
-        #urlbar {
-            max-width: 50vw !important;
-            /* acknowledgement for users with higher resolutions */
-            @media (min-width: 2250px) {max-width: 30vw !important;}
-        }
-        /*transition*/
-        #urlbar {
-            transition: all 0.14s linear !important;
-            @media (-moz-pref("ultima.urlbar.animate.open")) {
-                transition: transform 0.3s ease, width 0.28s ease, max-height 0.4s ease-in !important;
-            }
-        }
-        /*styling*/
-        & .urlbar-background {
-            margin: 0 !important;
+        --uc-urlbar-floating-outline: 2px solid color-mix(in srgb, var(--uc-accent-border), grey 20%, transparent 50%);
+        .urlbar-background {
             outline: var(--uc-urlbar-floating-outline) !important;
             box-shadow: var(--uc-box-shadow) !important;
         }
         .urlbarView-background {
             outline: var(--uc-urlbar-floating-outline) !important;
+        }
+    }
+    /*float behavior*/
+    :root:not([ultima-navbar-unified]) {
+        /*allow overflow for this specific scenario*/
+        #navigator-toolbox:has([popover-open]) {
+            z-index: 999 !important;
+            overflow-y: unset !important;
+        }
+        #urlbar-container:has(#urlbar[popover-open]) {
+            justify-content: center !important;
+            /*this reliably moves .urlbar-background with it*/
+            #urlbar {transform: translate(0, 300px) !important;}
+            /*this is the anchored element thats been giving us problems*/
+            /*firefox 160.0a1 breaking changes*/
+            @media not (-moz-pref("ultima.enable.nightly.config")) {
+                .urlbarView {transform: translate(0, 300px) !important;}
+            }
+            /*width adjustment*/
+            #urlbar {
+                max-width: 50vw !important;
+                /* acknowledgement for users with higher resolutions */
+                @media (min-width: 2250px) {max-width: 30vw !important;}
+            }
+            /*no margins here*/
+            .urlbar-background { margin: 0 !important; }
+            /*transition*/
+            #urlbar {
+                transition: all 0.14s linear !important;
+                @media (-moz-pref("ultima.urlbar.animate.open")) {
+                    transition: transform 0.3s ease, width 0.28s ease, max-height 0.4s ease-in !important;
+                }
+            }
         }
     }
 }

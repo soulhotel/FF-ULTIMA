@@ -192,19 +192,6 @@ placed inside of #sidebar-container, styled here
         container-type: inline-size;
     }
     @container (max-width: 150px) {
-/*         #urlbar-container::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: url("chrome://global/skin/icons/search-glass.svg") center / var(--toolbarbutton-icon-size, 16px) no-repeat;
-            -moz-context-properties: fill, fill-opacity;
-            fill: currentColor;
-            fill-opacity: var(--toolbarbutton-icon-fill-opacity, 1);
-            pointer-events: none;
-        }
-        #urlbar:not([popover-open]) {
-            opacity: 0;
-        } */
         #urlbar-container #urlbar:not([popover-open]) .urlbar-input-container *:not(.urlbar-input-box, .urlbar-input-box *) {
             display: none !important;
         }
@@ -246,25 +233,49 @@ placed inside of #sidebar-container, styled here
     
     /* url bar popover positioning */
     @media (-moz-pref("ultima.urlbar.float")) {
-        :root:has(#urlbar[popover-open]) {
-            /* allow overflow for this scenario */
+        :root[ultima-navbar-unified] {
+            --ultima-float-width: 30vw;
+            @media (min-width: 2250px) { --ultima-float-width: 20vw; }
+            --ultima-float-x: calc((100vw - var(--ultima-float-width)) / 2 - var(--ultima-urlbar-left, 12px));
+        }
+        :root[ultima-navbar-unified]:has(#urlbar[popover-open]) {
+            /* due to the moved container location, this container should allow overflow - just for this scenario */
             #sidebar-container {
                 overflow-x: visible !important;
                 z-index: 999 !important;
             }
-            /* so we can display the urlbar with a bit of offset */
+            /* offset the floating position & adjust width */
+            /* this needs to be handled only 1 of 2 ways:
+               - either keep the offset minimal, to not pull the bar away from mouse position (<- we are here)
+               - or ditch this approach and position the popover urlbar center of screen
+            */
             #urlbar-container:has(#urlbar[popover-open]) {
-                #urlbar {transform: translate(var(--ultima-sidebar-width), 100px) !important;}
+                justify-content: start !important;
+                #urlbar {transform: translate(6px, 12px) !important;}
                 @media not (-moz-pref("ultima.enable.nightly.config")) {
-                    .urlbarView {transform: translate(var(--ultima-sidebar-width), 100px) !important;}
+                    .urlbarView {transform: translate(6px, 12px) !important;}
                 }        
                 #urlbar {
-                    min-width: 40vw !important;
-                    /* acknowledgement for users with higher resolutions */
-                    @media (min-width: 2250px) {min-width: 20vw !important;}
+                    min-width: var(--ultima-float-width) !important;
                 }
             }
-            /* it could be safe to actually force min-width for this scenario */
+            /* position the popover urlbar center of screen */
+            /* #urlbar-container:has(#urlbar[popover-open]) {
+                justify-content: start !important;
+                #urlbar {
+                    width: var(--ultima-float-width) !important;
+                    min-width: var(--ultima-float-width) !important;
+                    max-width: none !important;
+                    transform: translate(var(--ultima-float-x), 12px) !important;
+                }
+                @media not (-moz-pref("ultima.enable.nightly.config")) {
+                    .urlbarView { transform: translate(var(--ultima-float-x), 12px) !important; }
+                }
+            } */
+            /* cancel out the default urlbar.float transition */
+            #urlbar-container:has(#urlbar[popover-open]) #urlbar {
+                transition: none !important;
+            }
             /* should also account for a right sided vertical tab bar */
             /* should also adjust for translation for collapsed state */
         }
