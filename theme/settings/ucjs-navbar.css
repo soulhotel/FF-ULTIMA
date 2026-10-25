@@ -147,14 +147,18 @@ placed inside of #sidebar-container, styled here
             width: var(--ultima-sidebar-width);
             z-index: 1;
             padding-block: 4px;
-            padding-inline: 8px;
+            padding-inline: 4px;
+        }
+        #nav-bar-customization-target {
+            padding-inline: 4px;
         }
         #sidebar-container sidebar-main {
             box-sizing: border-box;
             padding-top: var(--ultima-navbar-height); /* tracked in ucjs */
         }
     }
-    /* navbar adjustments */
+    
+    /* custom navbar adjustments */
     #ultima-unified-navbar > #nav-bar {
         position: relative;
         width: 100%;
@@ -175,7 +179,18 @@ placed inside of #sidebar-container, styled here
     #ultima-unified-navbar #nav-bar-customization-target > :not(#urlbar-container) {
         flex: none !important;
     }
-
+    #nav-bar-customization-target  > :is(toolbarbutton:first-child, toolbaritem:first-child) {
+        padding-inline-start: 0 !important;
+    }
+    
+    /* overflow menu */
+    #widget-overflow[position="bottomright topright"] {
+        margin-inline: -120px !important;
+    }
+    #widget-overflow panelview {
+        min-width: 260px !important;
+        min-width: 260px !important;
+    }
     /* urlbar */
     #ultima-unified-navbar #urlbar-container {
         position: absolute !important;
