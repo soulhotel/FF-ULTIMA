@@ -17,8 +17,7 @@ ffu.navbar.unified
     gap: var(--menu-gap);
 }
 .navbar-menu-header {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1rem;
     text-align: center;
     padding-block: 0 12px;
     margin-block: 0 var(--menu-gap);
@@ -26,16 +25,17 @@ ffu.navbar.unified
 }
 .navbar-menu-row {
     display: flex;
+    flex-direction: column;
     gap: var(--menu-gap);
 }
 .navbar-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: calc(var(--menu-gap) - 2px);
+    justify-content: flex-start;
+    gap: 10px;
     cursor: pointer;
-    padding: 4px;
-    padding-top: calc(var(--menu-gap) + 6px);
+    padding: 6px 8px;
     border-radius: 8px;
     border: 2px solid transparent;
 }
@@ -49,6 +49,7 @@ ffu.navbar.unified
     position: relative;
     width: 96px;
     height: 60px;
+    zoom: 0.7;
     border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
     border-radius: 6px;
     box-sizing: border-box;
@@ -62,17 +63,14 @@ ffu.navbar.unified
     box-sizing: border-box;
 }
 .navbar-bar.autohide {
-    left: 6px;
-    right: 6px;
-    border-radius: 2px;
+    inset-inline: 6px;
+    border-radius: 4px;
 }
 .navbar-bar.default {
-    top: 0;
-    left: 0;
-    right: 0;
+    inset: 0 0 auto 0;
     height: 10px;
     border: none;
-    border-bottom: 1px solid color-mix(in srgb, currentColor 85%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, currentColor 45%, transparent);
     border-radius: 0;
 }
 .navbar-bar.pill {
@@ -80,9 +78,7 @@ ffu.navbar.unified
 }
 .navbar-sidebar {
     position: absolute;
-    top: 5px;
-    bottom: 5px;
-    left: 5px;
+    inset: 5px 5px 5px;
     width: 24px;
     border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
     border-radius: 4px;
@@ -90,24 +86,17 @@ ffu.navbar.unified
 }
 .navbar-sidebar-bar {
     position: absolute;
-    top: 4px;
-    left: 4px;
-    right: 4px;
+    inset: 4px 4px auto 4px;
     height: 1px;
     background: currentColor;
     border-radius: 1px;
 }
 .navbar-arrow {
     position: absolute;
-    top: 22px;
-    left: 50%;
+    top: 22px; left: 50%;
     transform: translateX(-50%);
-    font-size: 12px;
+    font-size: 1.5rem;
     line-height: 1;
-}
-.navbar-label {
-    font-size: 13px;
-    text-align: center;
 }
 
 /*
