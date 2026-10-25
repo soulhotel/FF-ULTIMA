@@ -113,7 +113,7 @@
 
     const header = h(doc, 'div');
     header.className = 'navbar-menu-header';
-    header.textContent = 'Nav Bar Styles';
+    header.textContent = 'Nav Bar Style';
     content.appendChild(header);
 
     const row = h(doc, 'div');

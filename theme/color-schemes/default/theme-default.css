@@ -209,7 +209,7 @@ Applying variables further to create the Theme
 /* Popups/Menis ---------------------------------------------------*/
 
 :root:not([lwtheme]) {
-    panel, menupopup {
+    panel, menupopup:not(#ContentSelectDropdownPopup) {
         --panel-text-color:               var(--uc-text-color) !important;
         --panel-background-color:         var(--uc-menu-background) !important;
         --panel-border-radius:            var(--uc-menu-border-radius) !important;

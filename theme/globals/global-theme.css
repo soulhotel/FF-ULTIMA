@@ -536,7 +536,7 @@ spacer[part="overflow-start-indicator"] {
 /* Popups/Menus --------------------------------------------------------------------------------------------- */
 /* universal style */
 /* menus, panels, hamburgermenu */
-panel, menupopup {
+panel, menupopup:not(#ContentSelectDropdownPopup) {
     --panel-text-color:               var(--uc-text-color) !important;
     --panel-background-color:         var(--uc-menu-background) !important;
     --panel-border-radius:            var(--uc-menu-border-radius) !important;
