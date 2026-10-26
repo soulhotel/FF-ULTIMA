@@ -150,8 +150,11 @@ pinned tabs transparent background
 }
 
 /* disable "all tabs" button ------------------------------------------------------------------------------------ */
-@media -moz-pref("ultima.tabs.disable.all-tabs-button") { 
-    #alltabs-button {display: none !important;}
+@media -moz-pref("ultima.tabs.disable.all-tabs-button") {
+    /* hides the all tabs submenu button when tabs are not overflowing */
+    :root:has(#tabbrowser-tabs:not([overflow])) {
+        #alltabs-button {display: none !important;}
+    }
 }
 
 /* disable tab update dot --------------------------------------------------------------------------------------- */
