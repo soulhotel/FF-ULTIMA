@@ -173,7 +173,7 @@ makes the bookmarks bar scrollable instead of collapsing into an overflow menu
 
 @media (-moz-pref("ultima.bookmarks.compact")) { 
     :root {
-        --uc-bookbar-height:28px !important;
+        --uc-bookbar-height:28px;
     }
 }
 
