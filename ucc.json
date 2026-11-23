@@ -57,6 +57,7 @@
         { "pref": "ultima.urlbar.transparent",                  "description": "Makes Urlbar transparent" },
         { "pref": "ultima.urlbar.hide.buttons",                 "description": "Hide the overlayed buttons on Urlbar" },
         { "pref": "ultima.urlbar.hide.search-suggestions",      "description": "Hide search suggestions", "on": true },
+        { "pref": "ultima.urlbar.hide.search-engine-suggestions","description": "Hide search engine suggestions", "on": true },
         { "pref": "ultima.urlbar.drags.window",                 "description": "Mouse drag the Urlbar can move the Window", "on": true },
         { "pref": "ultima.urlbar.hide.tracking-protection-icon","description": "Hide tracking protection icon", "on": true },
         { "pref": "ultima.urlbar.scrollable",                   "description": "Urlbar becomes fixed-width & scrollable" },
