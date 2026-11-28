@@ -128,12 +128,17 @@ ultima.urlbar.hide.trackingprotection.icon
 }
 
 @media -moz-pref("ultima.urlbar.hide.search-suggestions") {
-    #urlbar .search-one-offs:not([hidden]),
-    .searchmode-switcher,
     .urlbarView-row[label*="Trending "],
     .urlbarView-row[label="Firefox Suggest"],
     .urlbarView-row:has([src="chrome://global/skin/icons/trending.svg"]),
     .urlbarView-row:has([data-l10n-id="urlbar-result-suggestion-recommended"]) {
+        display: none !important;
+    }
+}
+
+@media -moz-pref("ultima.urlbar.hide.search-engine-suggestions") {
+    #urlbar .search-one-offs:not([hidden]),
+    #urlbar:not([searchmode]) .searchmode-switcher {
         display: none !important;
     }
 }

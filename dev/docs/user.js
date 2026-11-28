@@ -54,6 +54,7 @@ user_pref("ultima.urlbar.text-centered", true);
 user_pref("ultima.urlbar.transparent", false);
 user_pref("ultima.urlbar.hide.buttons", false);
 user_pref("ultima.urlbar.hide.search-suggestions", true);
+user_pref("ultima.urlbar.hide.search-engine-suggestions", true);
 user_pref("ultima.urlbar.drags.window", true);
 user_pref("ultima.urlbar.hide.tracking-protection-icon", true);
 user_pref("ultima.urlbar.scrollable", false);
